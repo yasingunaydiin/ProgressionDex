@@ -1,0 +1,319 @@
+/* Header */
+
+.main-header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: #FFB346;
+	padding: 10px;
+	display: flex;
+	justify-content: space-between;
+	font-size: 8px;
+	z-index: 1000;
+	font-weight: 700;
+	letter-spacing: 1px;
+}
+#female {
+	color: pink;
+}
+/* Pokeicon */
+
+.pokeicon {
+	height: 40px;
+}
+.pokeicon.legendary {
+	height: 30px;
+	margin-right: 5px;
+	margin-left: 5px;
+}
+.egoodsitems {
+	display: flex;
+	align-items: flex-end;
+}
+/* Logo Container */
+
+.icon-small {
+	height: 25px;
+	margin-left: 5px;
+}
+.logo-container {
+	margin-top: -13px;
+	z-index: 2000;
+	position: fixed;
+}
+/* Links */
+
+a {
+	text-decoration: none;
+	color: #fff;
+}
+.header-left, .header-right {
+	margin: 0;
+	color: #fff;
+}
+.header-list {
+	position: absolute;
+	font-size: 12px;
+	margin-top: 2px;
+	left: 250px;
+}
+.legendaries {
+	display: flex;
+	flex-direction: column;
+}
+.legendaries-rightrow {
+	margin-left: 40px;
+}
+.legendaries-rowcontainer {
+	display: flex;
+	align-items: flex-start;
+}
+.giftpokemon {
+	display: flex;
+	flex-direction: column;
+}
+.giftpokemon-rightrow {
+	margin-left: 40px;
+}
+.giftpokemon-rowcontainer {
+	display: flex;
+	align-items: flex-start;
+}
+.ingametrades {
+	display: flex;
+	flex-direction: column;
+}
+.ingametrades-rightrow {
+	margin-left: 40px;
+}
+.ingametrades-rowcontainer {
+	display: flex;
+	align-items: flex-start;
+}
+.unown {
+	display: flex;
+	flex-direction: column;
+}
+.unown-middlerow {
+	margin-left: 40px;
+	margin-right: 40px;
+}
+.unown-rowcontainer {
+	display: flex;
+	align-items: flex-start;
+}
+.pokeathlon {
+	display: flex;
+	flex-direction: column;
+}
+.pokeathlon-rightrow {
+	margin-left: 40px;
+}
+.pokeathlon-rowcontainer {
+	display: flex;
+	align-items: flex-start;
+}
+.ribbons {
+	display: flex;
+	flex-direction: column;
+}
+.ribbons-rightrow {
+	margin-left: 40px;
+}
+.ribbons-rowcontainer {
+	display: flex;
+	align-items: flex-start;
+}
+.tms {
+	display: flex;
+	flex-direction: column;
+}
+.tms-middlerow {
+	margin-left: 40px;
+	margin-right: 40px;
+}
+.tms-rowcontainer {
+	display: flex;
+	align-items: flex-start;
+}
+.battlefrontier {
+	display: flex;
+	flex-direction: column;
+}
+.battlefrontier-rightrow {
+	margin-left: 40px;
+}
+.battlefrontier-rowcontainer {
+	display: flex;
+	align-items: flex-start;
+}
+.battles {
+	display: flex;
+	flex-direction: column;
+}
+.battles-rightrow {
+	margin-left: 40px;
+}
+.battles-rowcontainer {
+	display: flex;
+	align-items: flex-start;
+}
+/* Body */
+
+body {
+	margin: 0;
+	padding: 0;
+	background: #ffffff url(../../images/patterns/pattern-heartgold.png) repeat center center;
+	/* Icons Vectors by Vecteezy */
+	background-size: 500px 250px;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+/* Page Container */
+
+.page-container {
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	align-items: baseline;
+}
+/* Span */
+
+span {
+	pointer-events: none;
+}
+/* Wide Panel */
+
+.wide-panel {
+	text-align: center;
+	padding: 20px;
+	border-radius: 8px;
+	width: 500px;
+	margin: 30px;
+	box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+	background-color: white;
+	margin-top: 150px;
+	border: 2px solid #FFB346;
+}
+.wide-panel.more {
+	margin-bottom: 50px;
+	margin-top: 50px;
+}
+.wide-panel.contests {
+	margin-bottom: 50px;
+	margin-top: 50px;
+}
+img {
+	margin-left: -5px;
+}
+/* Panel Label */
+
+.panel-label {
+	display: block;
+	margin-bottom: 10px;
+	font-size: 25px;
+	font-weight: 1000;
+	color: #FFB346;
+}
+/* Panel Content */
+
+.panel-content {
+	text-align: left;
+}
+/* Checkbox Group */
+
+.checkbox-group {
+	margin-top: 15px;
+}
+.row1, .row2, .row3 {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.moverow2 {
+	display: flex;
+	flex-direction: column;
+}
+.right-row {
+	display: flex;
+	flex-direction: column;
+	margin-right: 40px;
+}
+/* Checkbox Item */
+
+.checkbox-item {
+	margin-bottom: 10px;
+	display: flex;
+	align-items: center;
+}
+.big-text {
+	font-size: 20px;
+}
+.small-text {
+	font-size: 14px;
+}
+/* Footer */
+
+footer {
+	height: 50px;
+	background: #FFB346;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1vw;
+}
+footer ul {
+	display: flex;
+	list-style: circle;
+	padding: 0;
+}
+footer li {
+	margin-right: 10px;
+	text-decoration: none;
+	list-style: none;
+	font-size: 15px;
+}
+/* Checkbox Item Label */
+
+.checkbox-item label {
+	position: relative;
+	display: inline-block;
+}
+.checkbox-item input {
+	margin-right: 5px;
+}
+.checkbox-item label::before {
+	content: attr(data-tooltip);
+	visibility: hidden;
+	width: 200px;
+	background-color: #333;
+	color: #fff;
+	text-align: center;
+	border-radius: 6px;
+	padding: 5px; 
+	position: absolute;
+	z-index: 1;
+	bottom: 125%;
+	/* Position the tooltip above the text */
+	left: 50%;
+	margin-left: -100px;
+	/* Center the tooltip */
+	opacity: 0;
+	transition: opacity 0.3s;
+	cursor: pointer;
+}
+.checkbox-item label:hover::before {
+	visibility: visible;
+	opacity: 1;
+}
+/* Event container */
+
+.event-right {
+	display: flex;
+	flex-direction: column;
+}

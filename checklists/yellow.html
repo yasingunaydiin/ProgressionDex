@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>Progression Track | Yellow</title>
+	<link href="../checklists/css/yellow.css" rel="stylesheet">
+	<link href="../images/icons/favicontab.ico" rel="icon" type="image/x-icon">
+	<link href="../images/icons/favicontab.ico" rel="shortcut icon" type="image/x-icon">
+	<style>
+	      @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans&display=swap');
+	      * {font-family: 'Alegreya Sans';}
+	</style>
+	<style>
+	      @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@700&display=swap');
+	      h1 {font-family: 'Alegreya Sans';}
+	</style>
+</head>
+<body>
+	<header class="main-header">
+		<h1 class="header-left"><a href="../index/index.html">PROGRESSION TRACKER</a></h1>
+		<h1 class="header-list" id="list"><a href="../list/list.html">Back to the list</a></h1>
+		<h1 class="header-right">yasingunaydiin</h1>
+	</header>
+	<div class="page-container">
+		<div class="logo-container"><img src="../images/logos/yellow-logo.webp" style="height: 130px;"></div>
+		<div class="wide-panel pokedex" id="pokedex">
+			<label class="panel-label" id="title">Pokédex</label>
+			<div class="panel-content">
+				<div class="completepokedex">
+					<div class="checkbox-item">
+						<span class="title"><label class="big-text">Complete the Kanto Pokédex</label></span>
+					</div>
+					<div class="checkbox-item">
+						<input id="checkbox3" type="checkbox"> <img class="pokeicon" src="../images/icons/pokemon/gen1/bulbasaur.png"> <label class="small-text" data-tooltip="A girl in Cerulean City is willing to give you her Bulbasaur if your Pikachu is in good spirits." for="checkbox3">Obtain Bulbasaur</label>
+					</div>
+					<div class="checkbox-item">
+						<input id="checkbox105" type="checkbox"> <img class="pokeicon" src="../images/icons/pokemon/gen1/charmender.png"> <label class="small-text" data-tooltip="Route 24, a trainer on a plateau is ready to offer you his Charmander." for="checkbox105">Obtain Charmender</label>
+					</div>
+					<div class="checkbox-item">
+						<input id="checkbox106" type="checkbox"> <img class="pokeicon" src="../images/icons/pokemon/gen1/squirtle.png"> <label class="small-text" data-tooltip="In Vermillion City, Officer Jenny will present you with a Squirtle once you have obtained the Thunderbadge." for="checkbox106">Obtain Squirtle</label>
+					</div>
+					<div class="checkbox-item">
+						<input id="checkbox4" type="checkbox"> <label class="small-text" data-tooltip="After catching all Pokemon, go to the Game Freak Headquarters in Celadon Condominiums and speak with the lead developer." for="checkbox4">Get Certificate</label>
+					</div>
+					<div class="legendaries">
+						<div class="checkbox-item">
+							<span class="title"><label class="big-text">Catch all Legendaries</label></span>
+						</div>
+						<div class="legendaries-rowcontainer">
+							<div class="legendaries-leftrow">
+								<div class="checkbox-item">
+									<input id="checkbox5" type="checkbox"> <img class="pokeicon legendary" src="../images/icons/pokemon/gen1/zapdos.png"> <label class="small-text" data-tooltip="Zapdos appears at the end of the Power Plant in the room with the exit." for="checkbox5">Catch Zapdos</label>
+								</div>
+								<div class="checkbox-item">
+									<input id="checkbox6" type="checkbox"> <img class="pokeicon legendary" src="../images/icons/pokemon/gen1/moltres.png"> <label class="small-text" data-tooltip="Moltres appears in the middle of the Victory Road." for="checkbox6">Catch Moltres</label>
+								</div>
+								<div class="checkbox-item">
+									<input id="checkbox7" type="checkbox"> <img class="pokeicon legendary" src="../images/icons/pokemon/gen1/articuno.png"> <label class="small-text" data-tooltip="Articuno appears at the bottom of Seafoam Islands." for="checkbox7">Catch Articuno</label>
+								</div>
+							</div>
+							<div class="legendaries-rightrow">
+								<div class="checkbox-item">
+									<input id="checkbox8" type="checkbox"> <img class="pokeicon legendary" src="../images/icons/pokemon/gen1/mewtwo.png"> <label class="small-text" data-tooltip="Mewtwo appears in Cerulean Cave." for="checkbox8">Catch Mewtwo</label>
+								</div>
+								<div class="checkbox-item">
+									<input id="checkbox8-2" type="checkbox"> <img class="pokeicon" src="../images/icons/pokemon/gen1/mew.png"> <label class="small-text" data-tooltip="A quick Google research shows that Mew is only catchable through glitches." for="checkbox8-2">Catch Mew</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="giftpokemon">
+					<div class="checkbox-item">
+						<span class="title"><label class="big-text">Obtain all In-Game Gift Pokemon</label></span>
+					</div>
+					<div class="giftpokemon-rowcontainer">
+						<div class="giftpokemon-leftrow">
+							<div class="checkbox-item">
+								<input id="checkbox10" type="checkbox"> <img class="pokeicon" src="../images/icons/pokemon/gen1/hitmonlee.png"> <label class="small-text" data-tooltip="Received at the Fighting Dojo gym in Saffron City upon defeating the Karate King." for="checkbox10">Obtain Hitmonlee</label>
+							</div>
+							<div class="checkbox-item">
+								<input id="checkbox11" type="checkbox"> <img class="pokeicon" src="../images/icons/pokemon/gen1/hitmonchan.png"> <label class="small-text" data-tooltip="Received at the Fighting Dojo gym in Saffron City upon defeating the Karate King." for="checkbox11">Obtain Hitmonchan</label>
+							</div>
+							<div class="checkbox-item">
+								<input id="checkbox12" type="checkbox"> <img class="pokeicon" src="../images/icons/pokemon/gen1/lapras.png"> <label class="small-text" data-tooltip="Given at Saffron City in the Siph Co. room with your rival." for="checkbox12">Obtain Lapras</label>
+							</div>
+							<div class="checkbox-item">
+								<input id="checkbox13" type="checkbox"> <img class="pokeicon" src="../images/icons/pokemon/gen1/eevee.png"> <label class="small-text" data-tooltip="At the roof of the Celadon Mansion." for="checkbox13">Obtain Eevee</label>
+							</div>
+						</div>
+						<div class="giftpokemon-rightrow">
+							<div class="checkbox-item">
+								<input id="checkbox14" type="checkbox"> <img class="pokeicon" src="../images/icons/pokemon/gen1/omanyte.png"> <label class="small-text" data-tooltip="At the end of Mt. Moon" for="checkbox14">Obtain Omanyte</label>
+							</div>
+							<div class="checkbox-item">
+								<input id="checkbox15" type="checkbox"> <img class="pokeicon" src="../images/icons/pokemon/gen1/kabuto.png"> <label class="small-text" data-tooltip="At the end of Mt. Moon" for="checkbox15">Obtain Kabuto</label>
+							</div>
+							<div class="checkbox-item">
+								<input id="checkbox16" type="checkbox"> <img class="pokeicon" src="../images/icons/pokemon/gen1/aerodactyl.png" style="margin-right: 5px;"> <label class="small-text" data-tooltip="You need the Old Amber, which is found in the Pewter City museum." for="checkbox16">Obtain Aerodactyl</label>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="ingametrades">
+					<div class="checkbox-item">
+						<span class="title"><label class="big-text">Complete all In-Game Trades</label></span>
+					</div>
+					<div class="row3">
+						<div class="trade-rowleft">
+							<div class="checkbox-item">
+								<input id="checkbox18" type="checkbox"> <label class="small-text" data-tooltip="Route 2. Outside Diglett's Cave." for="checkbox18">Trade Clefairy for Mr. Mime</label>
+							</div>
+							<div class="checkbox-item">
+								<input id="checkbox19" type="checkbox"> <label class="small-text" data-tooltip="Route 5. Underground tunnel, north exit." for="checkbox19">Trade Cubone for Machoke</label>
+							</div>
+							<div class="checkbox-item">
+								<input id="checkbox20" type="checkbox"> <label class="small-text" data-tooltip="Route 11. Inside the gatehouse." for="checkbox20">Trade Lickitung for Dugtrio</label>
+							</div>
+							<div class="checkbox-item">
+								<input id="checkbox21" type="checkbox"> <label class="small-text" data-tooltip="Route 18. Inside the gatehouse." for="checkbox21">Trade Tangela for Parasect</label>
+							</div>
+						</div>
+						<div class="trade-rowright">
+							<div class="checkbox-item">
+								<input id="checkbox22" type="checkbox"> <label class="small-text" data-tooltip="Cinnabar Island. By the Pokemon Center." for="checkbox22">Trade Golduck for Rhydon</label>
+							</div>
+							<div class="checkbox-item">
+								<input id="checkbox23" type="checkbox"> <label class="small-text" data-tooltip="Cinnabar Island. By the Pokemon Center." for="checkbox23">Trade Growlithe for Dewgong</label>
+							</div>
+							<div class="checkbox-item">
+								<input id="checkbox24" type="checkbox"> <label class="small-text" data-tooltip="Cinnabar Island. Inside the laboratory." for="checkbox24">Trade Kangaskhan for Muk</label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="wide-panel items" id="items">
+			<label class="panel-label" id="title">Items</label>
+			<div class="panel-content">
+				<div class="checkbox-item">
+					<span class="title"><label class="big-text">Locations of TM's (20 items max)</label></span>
+				</div>
+				<div class="tms">
+					<div class="tms-rowcontainer">
+						<div class="tms-leftrow">
+							<div class="checkbox-item">
+								<input id="checkbox-tm01" type="checkbox"> <label class="small-text" data-tooltip="Mt. Moon, Celadon City Store" for="checkbox-tm01">Mega Punch (TM01)</label>
+							</div>
+							<div class="checkbox-item">
+								<input id="checkbox-tm02" type="checkbox"> <label class="small-text" data-tooltip="Celadon City Store, Game Corner" for="checkbox-tm02">Razor Wind (TM02)</label>
+							</div>
+							<div class="checkbox-item">
+								<input id="checkbox-tm03" type="checkbox"> <label class="small-text" data-tooltip="Silph Co." for="checkbox-tm03">Swords Dance (TM03)</label>
+							</div>
+							<div class="checkbox-item">
+								<input id="checkbox-tm04" type="checkbox"> <label class="small-text" data-tooltip="Route 4" for="checkbox-tm04">Whirlwind (TM04)</label>
+							</div>
+							<div class="checkbox-item">
+								<input id="checkbox-tm05" type="checkbox"> <label class="small-text" data-tooltip="Victory Road, Celadon City Store" for="checkbox-tm05">Mega Kick (TM05)</label>
+							</div>
+							<div class="checkbox-item">
+								<input id="checkbox-tm06" type="checkbox"> <label class="small-text" data-tooltip="Fuchsia City - Gym" for="checkbox-tm06">Toxic (TM06)</label>
+							</div>
+							<div class="checkbox-item">
+								<input id="checkbox-tm07" type="checkbox"> <label class="small-text" data-tooltip="Celadon City Store, Game Corner" for="checkbox-tm07">Horn Drill (TM07)</label>
+							</div>
+							<div class="checkbox-item">
+								<input id="checkbox-tm08" type="checkbox"> <label class="small-text" data-tooltip="S.S. Anne" for="checkbox-tm08">Body Slam (TM08)</label>
+							</div>
+							<div class="checkbox-item">
+								<input id="checkbox-tm09" type="checkbox"> <label class="small-text" data-tooltip="Saffron City, Celadon City Store" for="checkbox-tm09">Take Down (TM09)</label>
+							</div>
+							<div class="checkbox-item">
+								<input id="checkbox-tm10" type="checkbox"> <label class="small-text" data-tooltip="Celadon City - Game Corner" for="checkbox-tm10">Double Edge (TM10)</label>
+							</div>
+							<div class="checkbox-item">
+								<input id="checkbox-tm11" type="checkbox"> <label class="small-text" data-tooltip="Cerulean City - Gym" for="checkbox-tm11">Bubble Beam (TM11)</label>
+							</div>
+							<div class="checkbox-item">
+								<input id="checkbox-tm12" type="checkbox"> <label class="small-text" data-tooltip="Mt. Moon" for="checkbox-tm12">Water Gun (TM12)</label>
+							</div>
+							<div class="checkbox-item">
+								<input id="checkbox-tm13" type="checkbox"> <label class="small-text" data-tooltip="Celadon City Store Roof" for="checkbox-tm13">Ice Beam (TM13)</label>
+							</div>
+							<div class="checkbox-item">
+								<input id="checkbox-tm14" type="checkbox"> <label class="small-text" data-tooltip="Pokemon Mansion" for="checkbox-tm14">Blizzard (TM14)</label>
+							</div>
+							<div class="checkbox-item">
+								<input id="checkbox-tm15" type="checkbox"> <label class="small-text" data-tooltip="Celadon City - Game Corner" for="checkbox-tm15">Hyper Beam (TM15)</label>
+							</div>
+							<div class="checkbox-item">
+								<input id="checkbox-tm16" type="checkbox"> <label class="small-text" data-tooltip="Mt. Moon" for="checkbox-tm16">Pay Day (TM16)</label>
+							</div>
+							<div class="checkbox-item">
+								<input id="checkbox-tm17" type="checkbox"> <label class="small-text" data-tooltip="Victory Road, Celadon City Store" for="checkbox-tm17">Submission (TM17)</label>
+							</div>
+							<div class="checkbox-item">
+								<input id="checkbox-tm18" type="checkbox"> <label class="small-text" data-tooltip="Celadon City Store" for="checkbox-tm18">Counter (TM18)</label>
+							</div>
+							<div class="checkbox-item">
+								<input id="checkbox-tm19" type="checkbox"> <label class="small-text" data-tooltip="Route 25" for="checkbox-tm19">Seismic Toss (TM19)</label>
+							</div>
+							<div class="checkbox-item">
+								<input id="checkbox-tm20" type="checkbox"> <label class="small-text" data-tooltip="Route 15" for="checkbox-tm20">Rage (TM20)</label>
+							</div>
+							<div class="checkbox-item">
+								<input id="checkbox-tm21" type="checkbox"> <label class="small-text" data-tooltip="Celadon City - Gym" for="checkbox-tm21">Mega Drain (TM21)</label>
+							</div>
+							<div class="checkbox-item">
+								<input id="checkbox-tm22" type="checkbox"> <label class="small-text" data-tooltip="Pokemon Mansion" for="checkbox-tm22">Solar Beam (TM22)</label>
+							</div>
+							<div class="checkbox-item">
+								<input id="checkbox-tm23" type="checkbox"> <label class="small-text" data-tooltip="Celadon City - Game Corner" for="checkbox-tm23">Dragon Rage (TM23)</label>
+							</div>
+							<div class="checkbox-item">
+								<input id="checkbox-tm24" type="checkbox"> <label class="small-text" data-tooltip="Vermillion City - Gym" for="checkbox-tm24">Thunderbolt (TM24)</label>
+							</div>
+							<div class="checkbox-item">
+								<input id="checkbox-tm25" type="checkbox"> <label class="small-text" data-tooltip="Power Plant" for="checkbox-tm25">Thunder (TM25)</label>
+							</div>
+							<div class="checkbox-item">
+								<input id="checkbox-tm26" type="checkbox"> <label class="small-text" data-tooltip="Silph Co." for="checkbox-tm26">Earthquake (TM26)</label>
+							</div>
+							<div class="checkbox-item">
+								<input id="checkbox-tm27" type="checkbox"> <label class="small-text" data-tooltip="Viridian City - Gym" for="checkbox-tm27">Fissure (TM27)</label>
+							</div>
+							<div class="checkbox-item">
+								<input id="checkbox-tm28" type="checkbox"> <label class="small-text" data-tooltip="Cerulean City" for="checkbox-tm28">Dig (TM28)</label>
+							</div>
+							<div class="checkbox-item">
+								<input id="checkbox-tm29" type="checkbox"> <label class="small-text" data-tooltip="Saffron City" for="checkbox-tm29">Psychic (TM29)</label>
+							</div>
+							<div class="checkbox-item">
+								<input id="checkbox-tm30" type="checkbox"> <label class="small-text" data-tooltip="Route 9" for="checkbox-tm30">Teleport (TM30)</label>
+							</div>
+						</div>
+						<div class="tms-rightrow">
+							<div class="checkbox-item">
+								<input id="checkbox-tm31" type="checkbox"> <label class="small-text" data-tooltip="Saffron City" for="checkbox-tm31">Mimic (TM31)</label>
+							</div>
+							<div class="checkbox-item">
+								<input id="checkbox-tm32" type="checkbox"> <label class="small-text" data-tooltip="Fuchsia City, Celadon City Store" for="checkbox-tm32">Double Team (TM32)</label>
+							</div>
+							<div class="checkbox-item">
+								<input id="checkbox-tm33" type="checkbox"> <label class="small-text" data-tooltip="Power Plant, Celadon City Store" for="checkbox-tm33">Reflect (TM33)</label>
+							</div>
+							<div class="checkbox-item">
+								<input id="checkbox-tm34" type="checkbox"> <label class="small-text" data-tooltip="Pewter City - Gym" for="checkbox-tm34">Bide (TM34)</label>
+							</div>
+							<div class="checkbox-item">
+								<input id="checkbox-tm35" type="checkbox"> <label class="small-text" data-tooltip="Cinnabar Island" for="checkbox-tm35">Metronome (TM35)</label>
+							</div>
+							<div class="checkbox-item">
+								<input id="checkbox-tm36" type="checkbox"> <label class="small-text" data-tooltip="Silph Co." for="checkbox-tm36">Self Destruct (TM36)</label>
+							</div>
+							<div class="checkbox-item">
+								<input id="checkbox-tm37" type="checkbox"> <label class="small-text" data-tooltip="Fuchsia City, Celadon City Store" for="checkbox-tm37">Egg Bomb (TM37)</label>
+							</div>
+							<div class="checkbox-item">
+								<input id="checkbox-tm38" type="checkbox"> <label class="small-text" data-tooltip="Cinnabar Island - Gym" for="checkbox-tm38">Fire Blast (TM38)</label>
+							</div>
+							<div class="checkbox-item">
+								<input id="checkbox-tm39" type="checkbox"> <label class="small-text" data-tooltip="Route 12" for="checkbox-tm39">Swift (TM39)</label>
+							</div>
+							<div class="checkbox-item">
+								<input id="checkbox-tm40" type="checkbox"> <label class="small-text" data-tooltip="Fuchsia City - Safari Zone" for="checkbox-tm40">Skull Bash (TM40)</label>
+							</div>
+							<div class="checkbox-item">
+								<input id="checkbox-tm41" type="checkbox"> <label class="small-text" data-tooltip="Celadon City" for="checkbox-tm41">Softboiled (TM41)</label>
+							</div>
+							<div class="checkbox-item">
+								<input id="checkbox-tm42" type="checkbox"> <label class="small-text" data-tooltip="Viridian City" for="checkbox-tm42">Dream Eater (TM42)</label>
+							</div>
+							<div class="checkbox-item">
+								<input id="checkbox-tm43" type="checkbox"> <label class="small-text" data-tooltip="Victory Road" for="checkbox-tm43">Sky Attack (TM43)</label>
+							</div>
+							<div class="checkbox-item">
+								<input id="checkbox-tm44" type="checkbox"> <label class="small-text" data-tooltip="S.S. Anne" for="checkbox-tm44">Rest (TM44)</label>
+							</div>
+							<div class="checkbox-item">
+								<input id="checkbox-tm45" type="checkbox"> <label class="small-text" data-tooltip="Route 24" for="checkbox-tm45">Thunder Wave (TM45)</label>
+							</div>
+							<div class="checkbox-item">
+								<input id="checkbox-tm46" type="checkbox"> <label class="small-text" data-tooltip="Saffron City - Gym" for="checkbox-tm46">Psywave (TM46)</label>
+							</div>
+							<div class="checkbox-item">
+								<input id="checkbox-tm47" type="checkbox"> <label class="small-text" data-tooltip="Victory Road" for="checkbox-tm47">Explosion (TM47)</label>
+							</div>
+							<div class="checkbox-item">
+								<input id="checkbox-tm48" type="checkbox"> <label class="small-text" data-tooltip="Celadon City Store" for="checkbox-tm48">Rock Slide (TM48)</label>
+							</div>
+							<div class="checkbox-item">
+								<input id="checkbox-tm49" type="checkbox"> <label class="small-text" data-tooltip="Celadon City Store" for="checkbox-tm49">Tri Attack (TM49)</label>
+							</div>
+							<div class="checkbox-item">
+								<input id="checkbox-tm50" type="checkbox"> <label class="small-text" data-tooltip="Celadon City - Game Corner" for="checkbox-tm50">Substitute (TM50)</label>
+							</div>
+							<div class="checkbox-item">
+								<input id="checkbox-hm01" type="checkbox"> <label class="small-text" data-tooltip="S.S. Anne" for="checkbox-hm01">Cut (HM01)</label>
+							</div>
+							<div class="checkbox-item">
+								<input id="checkbox-hm02" type="checkbox"> <label class="small-text" data-tooltip="Route 16" for="checkbox-hm02">Fly (HM02)</label>
+							</div>
+							<div class="checkbox-item">
+								<input id="checkbox-hm03" type="checkbox"> <label class="small-text" data-tooltip="Fuchsia City - Safari Zone" for="checkbox-hm03">Surf (HM03)</label>
+							</div>
+							<div class="checkbox-item">
+								<input id="checkbox-hm04" type="checkbox"> <label class="small-text" data-tooltip="Fuchsia City" for="checkbox-hm04">Strength (HM04)</label>
+							</div>
+							<div class="checkbox-item">
+								<input id="checkbox-hm05" type="checkbox"> <label class="small-text" data-tooltip="Route 2" for="checkbox-hm05">Flash (HM05)</label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<ul>
+			<li>
+				<a href="../index/index.html">Progression Track</a>
+			</li>
+			<li>
+				<a href="#">Twitter</a>
+			</li>
+			<li>
+				<a href="https://github.com/yasingunaydiin">GitHub</a>
+			</li>
+		</ul>
+	</footer>
+	<script src="../checklists/js/script.js">
+	</script> 
+	<script>
+	       document.addEventListener('DOMContentLoaded', function() {
+	   const completepokedexCheckboxes = document.querySelectorAll('.completepokedex input[type="checkbox"]');
+	   const legendariesCheckboxes = document.querySelectorAll('.legendaries input[type="checkbox"]');
+	   const giftpokemonCheckboxes = document.querySelectorAll('.giftpokemon input[type="checkbox"]');
+	   const ingametradesCheckboxes = document.querySelectorAll('.ingametrades input[type="checkbox"]');
+
+
+
+	   function updateStyle(checkboxes, label) {
+	       const allChecked = [...checkboxes].every(checkbox => checkbox.checked);
+	       label.style.textDecoration = allChecked ? 'line-through' : 'none';
+	   }
+
+	   function initializeCheckboxes(checkboxes, label) {
+	       checkboxes.forEach(checkbox => {
+	           checkbox.addEventListener('change', function() {
+	               updateStyle(checkboxes, label);
+	           });
+	       });
+	       updateStyle(checkboxes, label);
+	   }
+	   initializeCheckboxes(completepokedexCheckboxes, document.querySelector('.completepokedex .title label'));
+	   initializeCheckboxes(legendariesCheckboxes, document.querySelector('.legendaries .title label'));
+	   initializeCheckboxes(giftpokemonCheckboxes, document.querySelector('.giftpokemon .title label'));
+	   initializeCheckboxes(ingametradesCheckboxes, document.querySelector('.ingametrades .title label'));
+
+	});
+
+	</script>
+</body>
+</html>

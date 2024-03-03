@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>Progression Track | Ruby and Sapphire</title>
+	<link href="../checklists/css/rubysapphire.css" rel="stylesheet">
+	<link href="../images/icons/favicontab.ico" rel="icon" type="image/x-icon">
+	<link href="../images/icons/favicontab.ico" rel="shortcut icon" type="image/x-icon">
+	<style>
+	            @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans&display=swap');
+	            * {font-family: 'Alegreya Sans';}
+	</style>
+	<style>
+	            @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@700&display=swap');
+	            h1 {font-family: 'Alegreya Sans';}
+	</style>
+</head>
+<body>
+	<header class="main-header">
+		<h1 class="header-left"><a href="../index/index.html">PROGRESSION TRACKER</a></h1>
+		<h1 class="header-list" id="list"><a href="../list/list.html">Back to the list</a></h1>
+		<h1 class="header-right">yasingunaydiin</h1>
+	</header>
+	<div class="page-container">
+		<div class="logo-container"><img id="ruby-logo" src="../images/logos/ruby-logo.webp" style="height: 130px;"> <img id="sapphire-logo" src="../images/logos/sapphire-logo.webp" style="height: 130px;"></div>
+		<div class="page-container-left">
+			<div class="wide-panel pokedex" id="pokedex">
+				<label class="panel-label" id="title">Pokédex</label>
+				<div class="panel-content">
+					<div class="completepokedex">
+						<div class="checkbox-item">
+							<span class="title"><label class="big-text">Complete the Hoenn Pokédex</label></span>
+						</div>
+						<div class="checkbox-item">
+							<input id="checkbox-trade" type="checkbox"> <label class="small-text" data-tooltip="Trade them from Ruby/Sapphire." for="checkbox-trade">Trade all version exclusives</label>
+						</div>
+						<div class="checkbox-item">
+							<input id="checkbox-starters" type="checkbox"> <label class="small-text" data-tooltip="Trade them from Ruby/Sapphire." for="checkbox-starters">Obtain all starters</label>
+						</div>
+						<div class="checkbox-item">
+							<input id="checkbox-national-pokedex" type="checkbox"> <label class="small-text" data-tooltip="There are a total of 386 Pokemon in the National Dex." for="checkbox-national-pokedex">Complete the National Pokedex</label>
+						</div>
+						<div class="checkbox-item">
+							<input id="checkbox-certificate" type="checkbox"> <label class="small-text" data-tooltip="The lead developer is on the top floor of the Cove Lily Motel in Lilycove City." for="checkbox-certificate">Get Certificate</label>
+						</div>
+					</div>
+					<div class="legendaries">
+						<div class="checkbox-item">
+							<span class="title"><label class="big-text">Obtain all Legendaries</label></span>
+						</div>
+						<div class="legendaries-rowcontainer">
+							<div class="legendaries-leftrow">
+								<div class="checkbox-item">
+									<input id="checkbox-kyogre" type="checkbox"> <img class="pokeicon legendary" src="../images/icons/pokemon/gen3/kyogre.png"> <label class="small-text" data-tooltip="Cave of Origin." for="checkbox-kyogre">Catch Kyogre</label>
+								</div>
+								<div class="checkbox-item">
+									<input id="checkbox-groudon" type="checkbox"> <img class="pokeicon legendary" src="../images/icons/pokemon/gen3/groudon.png"> <label class="small-text" data-tooltip="Cave of Origin." for="checkbox-groudon">Catch Groudon</label>
+								</div>
+								<div class="checkbox-item">
+									<input id="checkbox-rayquaza" type="checkbox"> <img class="pokeicon legendary" src="../images/icons/pokemon/gen3/rayquaza.png"> <label class="small-text" data-tooltip="Sky Pillar." for="checkbox-rayquaza">Catch Rayquaza</label>
+								</div>
+								<div class="checkbox-item">
+									<input id="checkbox-latias" type="checkbox"> <img class="pokeicon legendary" src="../images/icons/pokemon/gen3/latias.png"> <label class="small-text" data-tooltip="You can find Latias roaming after the Pokemon League." for="checkbox-latias">Catch Latias</label> <label class="small-text" data-tooltip="In Ruby you can find Latias on the Southern Island if you have the Eon Ticket."><img class="icon-small" src="../images/icons/other/moreinfo.png"></label>
+								</div>
+								<div class="checkbox-item">
+									<input id="checkbox-latios" type="checkbox"> <img class="pokeicon legendary" src="../images/icons/pokemon/gen3/latios.png"> <label class="small-text" data-tooltip="You can find Latios roaming after the Pokemon League." for="checkbox-latios">Catch Latios</label> <label class="small-text" data-tooltip="In Sapphire you can find Latios on the Southern Island if you have the Eon Ticket."><img class="icon-small" src="../images/icons/other/moreinfo.png"></label>
+								</div>
+							</div>
+							<div class="legendaries-rightrow">
+								<div class="checkbox-item">
+									<input id="checkbox-regirock" type="checkbox"> <img class="pokeicon legendary" src="../images/icons/pokemon/gen3/regirock.png"> <label class="small-text" data-tooltip="Desert Tomb." for="checkbox-regirock">Catch Regirock</label>
+								</div>
+								<div class="checkbox-item">
+									<input id="checkbox-regice" type="checkbox"> <img class="pokeicon legendary" src="../images/icons/pokemon/gen3/regice.png"> <label class="small-text" data-tooltip="Island Cave." for="checkbox-regice">Catch Regice</label>
+								</div>
+								<div class="checkbox-item">
+									<input id="checkbox-registeel" type="checkbox"> <img class="pokeicon legendary" src="../images/icons/pokemon/gen3/registeel.png"> <label class="small-text" data-tooltip="Ancient Tomb." for="checkbox-registeel">Catch Registeel</label>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="giftpokemon">
+						<div class="checkbox-item">
+							<span class="title"><label class="big-text">Obtain all In-Game Gift Pokemon</label></span>
+						</div>
+						<div class="giftpokemon-rowcontainer">
+							<div class="giftpokemon-leftrow">
+								<div class="checkbox-item">
+									<input id="checkbox-lileep" type="checkbox"> <img class="pokeicon" src="../images/icons/pokemon/gen3/lileep.png"> <label class="small-text" data-tooltip="Route 111, Only one can be chosen." for="checkbox-lileep">Obtain Lileep</label>
+								</div>
+								<div class="checkbox-item">
+									<input id="checkbox-anorith" type="checkbox"> <img class="pokeicon" src="../images/icons/pokemon/gen3/anorith.png"> <label class="small-text" data-tooltip="Route 111, Only one can be chosen." for="checkbox-anorith">Obtain Anorith</label>
+								</div>
+								<div class="checkbox-item">
+									<input id="checkbox-castform" type="checkbox"> <img class="pokeicon" src="../images/icons/pokemon/gen3/castform.png"> <label class="small-text" data-tooltip="Weather Institute." for="checkbox-castform">Obtain Castform</label>
+								</div>
+							</div>
+							<div class="giftpokemon-rightrow">
+								<div class="checkbox-item">
+									<input id="checkbox-wynaut" type="checkbox"> <img class="pokeicon" src="../images/icons/pokemon/gen3/wynaut.png"> <label class="small-text" data-tooltip="Lavaridge Town." for="checkbox-wynaut">Obtain Wynaut</label>
+								</div>
+								<div class="checkbox-item">
+									<input id="checkbox-beldum" type="checkbox"> <img class="pokeicon" src="../images/icons/pokemon/gen3/beldum.png"> <label class="small-text" data-tooltip="Lavaridge Town after defeating the Champion." for="checkbox-beldum">Obtain Beldum</label>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="ingametrades">
+						<div class="checkbox-item">
+							<span class="title"><label class="big-text">Complete all In-Game Trades</label></span>
+						</div>
+						<div class="checkbox-item">
+							<input id="checkbox-slakoth" type="checkbox"> <label class="small-text" data-tooltip="Rustoboro City." for="checkbox-slakoth">Trade Slakoth for Makuhita</label>
+						</div>
+						<div class="checkbox-item">
+							<input id="checkbox-pikachu" type="checkbox"> <label class="small-text" data-tooltip="Fortree City." for="checkbox-pikachu">Trade Pikachu for Skitty</label>
+						</div>
+						<div class="checkbox-item">
+							<input id="checkbox-bellossum" type="checkbox"> <label class="small-text" data-tooltip="Pacifidlog Town." for="checkbox-bellossum">Trade Bellossum for Corsola</label>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="wide-panel more" id="more">
+				<label class="panel-label" id="title">Post Game</label>
+				<div class="panel-content">
+					<div class="trainercard">
+						<div class="checkbox-item">
+							<span class="title"><label class="big-text">4 Stars Golden Trainer Card</label></span>
+						</div>
+						<div class="checkbox-item">
+							<input id="checkbox-pokemon-league-champion" type="checkbox"> <label class="small-text" for="checkbox-pokemon-league-champion" style="pointer-events: none;">Defeat the Pokemon League Champion.</label>
+						</div>
+						<div class="checkbox-item">
+							<input id="checkbox-master-rank-contests" type="checkbox"> <label class="small-text" for="checkbox-master-rank-contests" style="pointer-events: none;">Win all five Master Rank contests.</label>
+						</div>
+						<div class="checkbox-item">
+							<input id="checkbox-50-trainer-challenge" type="checkbox"> <label class="small-text" for="checkbox-50-trainer-challenge" style="pointer-events: none;">Defeat the 50 trainer challenge in Battle Tower.</label>
+						</div>
+						<div class="checkbox-item">
+							<input id="checkbox-hoenn-pokedex" type="checkbox"> <label class="small-text" for="checkbox-hoenn-pokedex" style="pointer-events: none;">Complete the Hoenn Pokedex.</label>
+						</div>
+					</div>
+				</div>
+				<div class="battletower">
+					<div class="checkbox-item">
+						<span class="title"><label class="big-text">Master the Battle Tower</label></span>
+					</div>
+					<div class="checkbox-item">
+						<input id="checkbox-singles" type="checkbox"> <label class="small-text" for="checkbox-singles" style="pointer-events: none;">Singles</label>
+					</div>
+					<div class="checkbox-item">
+						<input id="checkbox-doubles" type="checkbox"> <label class="small-text" for="checkbox-doubles" style="pointer-events: none;">Doubles</label>
+					</div>
+					<div class="checkbox-item">
+						<input id="checkbox-multi" type="checkbox"> <label class="small-text" for="checkbox-multi" style="pointer-events: none;">Multi</label>
+					</div>
+				</div>
+				<div class="trickhouse">
+					<div class="trickhouse-leftrow">
+						<div class="checkbox-item">
+							<span class="title"><label class="big-text">Trick House</label></span>
+						</div>
+						<div class="checkbox-item">
+							<input id="checkbox-chamber1" type="checkbox"> <label class="small-text" for="checkbox-chamber1" style="pointer-events: none;">Chamber 1</label>
+						</div>
+						<div class="checkbox-item">
+							<input id="checkbox-chamber2" type="checkbox"> <label class="small-text" for="checkbox-chamber2" style="pointer-events: none;">Chamber 2</label>
+						</div>
+						<div class="checkbox-item">
+							<input id="checkbox-chamber3" type="checkbox"> <label class="small-text" for="checkbox-chamber3" style="pointer-events: none;">Chamber 3</label>
+						</div>
+						<div class="checkbox-item">
+							<input id="checkbox-chamber4" type="checkbox"> <label class="small-text" for="checkbox-chamber4" style="pointer-events: none;">Chamber 4</label>
+						</div>
+					</div>
+					<div class="trickhouse-rightrow">
+						<div class="checkbox-item">
+							<input id="checkbox-chamber5" type="checkbox"> <label class="small-text" for="checkbox-chamber5" style="pointer-events: none;">Chamber 5</label>
+						</div>
+						<div class="checkbox-item">
+							<input id="checkbox-chamber6" type="checkbox"> <label class="small-text" for="checkbox-chamber6" style="pointer-events: none;">Chamber 6</label>
+						</div>
+						<div class="checkbox-item">
+							<input id="checkbox-chamber7" type="checkbox"> <label class="small-text" for="checkbox-chamber7" style="pointer-events: none;">Chamber 7</label>
+						</div>
+						<div class="checkbox-item">
+							<input id="checkbox-chamber8" type="checkbox"> <label class="small-text" for="checkbox-chamber8" style="pointer-events: none;">Chamber 8</label>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="page-container-right">
+			<div class="wide-panel items" id="items">
+				<label class="panel-label" id="title">Items</label>
+				<div class="panel-content">
+					<div class="checkbox-item">
+						<span class="title"><label class="big-text">Collect all 50 TM's</label></span>
+					</div>
+					<div class="tms">
+						<div class="tms-rowcontainer">
+							<div class="tms-leftrow">
+								<div class="checkbox-item">
+									<input id="checkbox-tm01" type="checkbox"> <label class="small-text" data-tooltip="Route 115" for="checkbox-tm01">Focus Punch (TM01)</label>
+								</div>
+								<div class="checkbox-item">
+									<input id="checkbox-tm02" type="checkbox"> <label class="small-text" data-tooltip="Meteor Falls" for="checkbox-tm02">Dragon Claw (TM02)</label>
+								</div>
+								<div class="checkbox-item">
+									<input id="checkbox-tm03" type="checkbox"> <label class="small-text" data-tooltip="Sootopolis Gym" for="checkbox-tm03">Water Pulse (TM03)</label>
+								</div>
+								<div class="checkbox-item">
+									<input id="checkbox-tm04" type="checkbox"> <label class="small-text" data-tooltip="Mossdeep Gym" for="checkbox-tm04">Calm Mind (TM04)</label>
+								</div>
+								<div class="checkbox-item">
+									<input id="checkbox-tm05" type="checkbox"> <label class="small-text" data-tooltip="Route 114" for="checkbox-tm05">Roar (TM05)</label>
+								</div>
+								<div class="checkbox-item">
+									<input id="checkbox-tm06" type="checkbox"> <label class="small-text" data-tooltip="Fiery Path" for="checkbox-tm06">Toxic (TM06)</label>
+								</div>
+								<div class="checkbox-item">
+									<input id="checkbox-tm07" type="checkbox"> <label class="small-text" data-tooltip="Shoal Cave" for="checkbox-tm07">Hail (TM07)</label>
+								</div>
+								<div class="checkbox-item">
+									<input id="checkbox-tm08" type="checkbox"> <label class="small-text" data-tooltip="Dewford Gym" for="checkbox-tm08">Bulk Up (TM08)</label>
+								</div>
+								<div class="checkbox-item">
+									<input id="checkbox-tm09" type="checkbox"> <label class="small-text" data-tooltip="Route 104" for="checkbox-tm09">Bullet Seed (TM09)</label>
+								</div>
+								<div class="checkbox-item">
+									<input id="checkbox-tm10" type="checkbox"> <label class="small-text" data-tooltip="Slateport/Fortree City" for="checkbox-tm10">Hidden Power (TM10)</label>
+								</div>
+								<div class="checkbox-item">
+									<input id="checkbox-tm11" type="checkbox"> <label class="small-text" data-tooltip="Scorched Slab" for="checkbox-tm11">Sunny Day (TM11)</label>
+								</div>
+								<div class="checkbox-item">
+									<input id="checkbox-tm12" type="checkbox"> <label class="small-text" data-tooltip="Trick House" for="checkbox-tm12">Taunt (TM12)</label>
+								</div>
+								<div class="checkbox-item">
+									<input id="checkbox-tm13" type="checkbox"> <label class="small-text" data-tooltip="Mauville/Abandoned Ship" for="checkbox-tm13">Ice Beam (TM13)</label>
+								</div>
+								<div class="checkbox-item">
+									<input id="checkbox-tm14" type="checkbox"> <label class="small-text" data-tooltip="Lilycove Dept. Store" for="checkbox-tm14">Blizzard (TM14)</label>
+								</div>
+								<div class="checkbox-item">
+									<input id="checkbox-tm15" type="checkbox"> <label class="small-text" data-tooltip="Lilycove Dept. Store" for="checkbox-tm15">Hyper Beam (TM15)</label>
+								</div>
+								<div class="checkbox-item">
+									<input id="checkbox-tm16" type="checkbox"> <label class="small-text" data-tooltip="Lilycove Dept. Store" for="checkbox-tm16">Light Screen (TM16)</label>
+								</div>
+								<div class="checkbox-item">
+									<input id="checkbox-tm17" type="checkbox"> <label class="small-text" data-tooltip="Lilycove Dept. Store" for="checkbox-tm17">Protect (TM17)</label>
+								</div>
+								<div class="checkbox-item">
+									<input id="checkbox-tm18" type="checkbox"> <label class="small-text" data-tooltip="Abandoned Ship" for="checkbox-tm18">Rain Dance (TM18)</label>
+								</div>
+								<div class="checkbox-item">
+									<input id="checkbox-tm19" type="checkbox"> <label class="small-text" data-tooltip="Route 123" for="checkbox-tm19">Giga Drain (TM19)</label>
+								</div>
+								<div class="checkbox-item">
+									<input id="checkbox-tm20" type="checkbox"> <label class="small-text" data-tooltip="Lilcove Dept. Store" for="checkbox-tm20">Safeguard (TM20)</label>
+								</div>
+								<div class="checkbox-item">
+									<input id="checkbox-tm21" type="checkbox"> <label class="small-text" data-tooltip="Pacifidlog Town" for="checkbox-tm21">Frustration (TM21)</label>
+								</div>
+								<div class="checkbox-item">
+									<input id="checkbox-tm22" type="checkbox"> <label class="small-text" data-tooltip="Safari Zone" for="checkbox-tm22">Solar Beam (TM22)</label>
+								</div>
+								<div class="checkbox-item">
+									<input id="checkbox-tm23" type="checkbox"> <label class="small-text" data-tooltip="Meteor Falls" for="checkbox-tm23">Iron Tail (TM23)</label>
+								</div>
+								<div class="checkbox-item">
+									<input id="checkbox-tm24" type="checkbox"> <label class="small-text" data-tooltip="Mauville Game Corner" for="checkbox-tm24">Thunderbolt (TM24)</label>
+								</div>
+								<div class="checkbox-item">
+									<input id="checkbox-tm25" type="checkbox"> <label class="small-text" data-tooltip="Lilcove Dept. Store" for="checkbox-tm25">Thunder (TM25)</label>
+								</div>
+								<div class="checkbox-item">
+									<input id="checkbox-tm26" type="checkbox"> <label class="small-text" data-tooltip="Seafloor Cavern" for="checkbox-tm26">Earthquake (TM26)</label>
+								</div>
+								<div class="checkbox-item">
+									<input id="checkbox-tm27" type="checkbox"> <label class="small-text" data-tooltip="Fallarbor/Pacifidlog" for="checkbox-tm27">Return (TM27)</label>
+								</div>
+								<div class="checkbox-item">
+									<input id="checkbox-tm28" type="checkbox"> <label class="small-text" data-tooltip="Route 114" for="checkbox-tm28">Dig (TM28)</label>
+								</div>
+								<div class="checkbox-item">
+									<input id="checkbox-tm29" type="checkbox"> <label class="small-text" data-tooltip="Mauville/Victory Road" for="checkbox-tm29">Psychic (TM29)</label>
+								</div>
+								<div class="checkbox-item">
+									<input id="checkbox-tm30" type="checkbox"> <label class="small-text" data-tooltip="Mt. Pyre" for="checkbox-tm30">Shadow Ball (TM30)</label>
+								</div>
+							</div>
+							<div class="tms-rightrow">
+								<div class="checkbox-item">
+									<input id="checkbox-tm31" type="checkbox"> <label class="small-text" data-tooltip="Sootopolis City" for="checkbox-tm31">Brick Break (TM31)</label>
+								</div>
+								<div class="checkbox-item">
+									<input id="checkbox-tm32" type="checkbox"> <label class="small-text" data-tooltip="Mauville Game Corner" for="checkbox-tm32">Double Team (TM32)</label>
+								</div>
+								<div class="checkbox-item">
+									<input id="checkbox-tm33" type="checkbox"> <label class="small-text" data-tooltip="Lilycove Dept. Store" for="checkbox-tm33">Reflect (TM33)</label>
+								</div>
+								<div class="checkbox-item">
+									<input id="checkbox-tm34" type="checkbox"> <label class="small-text" data-tooltip="Mauville Gym" for="checkbox-tm34">Shock Wave (TM34)</label>
+								</div>
+								<div class="checkbox-item">
+									<input id="checkbox-tm35" type="checkbox"> <label class="small-text" data-tooltip="Mauville Game Corner" for="checkbox-tm35">Flamethrower (TM35)</label>
+								</div>
+								<div class="checkbox-item">
+									<input id="checkbox-tm36" type="checkbox"> <label class="small-text" data-tooltip="Dewford Town" for="checkbox-tm36">Sludge Bomb (TM36)</label>
+								</div>
+								<div class="checkbox-item">
+									<input id="checkbox-tm37" type="checkbox"> <label class="small-text" data-tooltip="Route 111" for="checkbox-tm37">Sandstorm (TM37)</label>
+								</div>
+								<div class="checkbox-item">
+									<input id="checkbox-tm38" type="checkbox"> <label class="small-text" data-tooltip="Lilycove Dept. Store" for="checkbox-tm38">Fire Blast (TM38)</label>
+								</div>
+								<div class="checkbox-item">
+									<input id="checkbox-tm39" type="checkbox"> <label class="small-text" data-tooltip="Rustboro Gym" for="checkbox-tm39">Rock Tomb (TM39)</label>
+								</div>
+								<div class="checkbox-item">
+									<input id="checkbox-tm40" type="checkbox"> <label class="small-text" data-tooltip="Foretree Gym" for="checkbox-tm40">Aerial Ace (TM40)</label>
+								</div>
+								<div class="checkbox-item">
+									<input id="checkbox-tm41" type="checkbox"> <label class="small-text" data-tooltip="Slateport City" for="checkbox-tm41">Torment (TM41)</label>
+								</div>
+								<div class="checkbox-item">
+									<input id="checkbox-tm42" type="checkbox"> <label class="small-text" data-tooltip="Petalburg City" for="checkbox-tm42">Facade (TM42)</label>
+								</div>
+								<div class="checkbox-item">
+									<input id="checkbox-tm43" type="checkbox"> <label class="small-text" data-tooltip="Slateport/Route 111" for="checkbox-tm43">Secret Power (TM43)</label>
+								</div>
+								<div class="checkbox-item">
+									<input id="checkbox-tm44" type="checkbox"> <label class="small-text" data-tooltip="Lilycove City" for="checkbox-tm44">Rest (TM44)</label>
+								</div>
+								<div class="checkbox-item">
+									<input id="checkbox-tm45" type="checkbox"> <label class="small-text" data-tooltip="Vendanturf Town" for="checkbox-tm45">Attract (TM45)</label>
+								</div>
+								<div class="checkbox-item">
+									<input id="checkbox-tm46" type="checkbox"> <label class="small-text" data-tooltip="Slateport City" for="checkbox-tm46">Thief (TM46)</label>
+								</div>
+								<div class="checkbox-item">
+									<input id="checkbox-tm47" type="checkbox"> <label class="small-text" data-tooltip="Granite Cave" for="checkbox-tm47">Steel Wing (TM47)</label>
+								</div>
+								<div class="checkbox-item">
+									<input id="checkbox-tm48" type="checkbox"> <label class="small-text" data-tooltip="Mt. Pyre" for="checkbox-tm48">Skill Swap (TM48)</label>
+								</div>
+								<div class="checkbox-item">
+									<input id="checkbox-tm49" type="checkbox"> <label class="small-text" data-tooltip="S.S. Tidal" for="checkbox-tm49">Snatch (TM49)</label>
+								</div>
+								<div class="checkbox-item">
+									<input id="checkbox-tm50" type="checkbox"> <label class="small-text" data-tooltip="Lavaridge Gym" for="checkbox-tm50">Overheat (TM50)</label>
+								</div>
+								<div class="checkbox-item">
+									<input id="checkbox-hm01" type="checkbox"> <label class="small-text" data-tooltip="Rustboro City" for="checkbox-hm01">Cut (HM01)</label>
+								</div>
+								<div class="checkbox-item">
+									<input id="checkbox-hm02" type="checkbox"> <label class="small-text" data-tooltip="Route 119" for="checkbox-hm02">Fly (HM02)</label>
+								</div>
+								<div class="checkbox-item">
+									<input id="checkbox-hm03" type="checkbox"> <label class="small-text" data-tooltip="Petalburg City" for="checkbox-hm03">Surf (HM03)</label>
+								</div>
+								<div class="checkbox-item">
+									<input id="checkbox-hm04" type="checkbox"> <label class="small-text" data-tooltip="Rusturf Tunnel" for="checkbox-hm04">Strength (HM04)</label>
+								</div>
+								<div class="checkbox-item">
+									<input id="checkbox-hm05" type="checkbox"> <label class="small-text" data-tooltip="Granite Cave" for="checkbox-hm05">Flash (HM05)</label>
+								</div>
+								<div class="checkbox-item">
+									<input id="checkbox-hm06" type="checkbox"> <label class="small-text" data-tooltip="Mauville City" for="checkbox-hm06">Rock Smash (HM06)</label>
+								</div>
+								<div class="checkbox-item">
+									<input id="checkbox-hm07" type="checkbox"> <label class="small-text" data-tooltip="Cave of Origin" for="checkbox-hm07">Waterfall (HM07)</label>
+								</div>
+								<div class="checkbox-item">
+									<input id="checkbox-hm08" type="checkbox"> <label class="small-text" data-tooltip="Mossdeep City" for="checkbox-hm08">Dive (HM08)</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="wide-panel contests" id="contests">
+				<label class="panel-label" id="title">Contests and Battles</label>
+				<div class="panel-content">
+					<div class="ribbons">
+						<div class="ribbons-rowcontainer">
+							<div class="ribbons-leftrow">
+								<div class="beautycontest">
+									<div class="checkbox-item">
+										<span class="title"><label class="big-text">Beauty Contests</label></span>
+									</div>
+									<div class="checkbox-item">
+										<input id="checkbox-beauty-normal" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/items/gen3/ribbons/beauty-ribbon-hoenn.png"> <label class="small-text" data-tooltip="Beauty Contest Normal Rank Winner!" for="checkbox-beauty-normal">Normal Ribbon</label>
+									</div>
+									<div class="checkbox-item">
+										<input id="checkbox-beauty-super" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/items/gen3/ribbons/beauty-ribbon-super-hoenn.png"> <label class="small-text" data-tooltip="Beauty Contest Super Rank Winner!" for="checkbox-beauty-super">Super Ribbon</label>
+									</div>
+									<div class="checkbox-item">
+										<input id="checkbox-beauty-hyper" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/items/gen3/ribbons/beauty-ribbon-hyper-hoenn.png"> <label class="small-text" data-tooltip="Beauty Contest Super Rank Winner!" for="checkbox-beauty-hyper">Hyper Ribbon</label>
+									</div>
+									<div class="checkbox-item">
+										<input id="checkbox-beauty-master" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/items/gen3/ribbons/beauty-ribbon-master-hoenn.png"> <label class="small-text" data-tooltip="Beauty Contest Super Rank Winner!" for="checkbox-beauty-master">Master Ribbon</label>
+									</div>
+								</div>
+								<div class="thoughcontest">
+									<div class="checkbox-item">
+										<span class="title"><label class="big-text">Though Contests</label></span>
+									</div>
+									<div class="checkbox-item">
+										<input id="checkbox-though-normal" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/items/gen3/ribbons/tough-ribbon-hoenn.png"> <label class="small-text" data-tooltip="Though Contest Normal Rank Winner!" for="checkbox-though-normal">Normal Ribbon</label>
+									</div>
+									<div class="checkbox-item">
+										<input id="checkbox-though-super" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/items/gen3/ribbons/tough-ribbon-super-hoenn.png"> <label class="small-text" data-tooltip="Though Contest Super Rank Winner!" for="checkbox-though-super">Super Ribbon</label>
+									</div>
+									<div class="checkbox-item">
+										<input id="checkbox-though-hyper" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/items/gen3/ribbons/tough-ribbon-hyper-hoenn.png"> <label class="small-text" data-tooltip="Though Contest Hyper Rank Winner!" for="checkbox-though-hyper">Hyper Ribbon</label>
+									</div>
+									<div class="checkbox-item">
+										<input id="checkbox-though-master" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/items/gen3/ribbons/tough-ribbon-master-hoenn.png"> <label class="small-text" data-tooltip="Though Contest Master Rank Winner!" for="checkbox-though-master">Master Ribbon</label>
+									</div>
+								</div>
+								<div class="smartnesscontest">
+									<div class="checkbox-item">
+										<span class="title"><label class="big-text">Smartness Contests</label></span>
+									</div>
+									<div class="checkbox-item">
+										<input id="checkbox-smartness-normal" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/items/gen3/ribbons/smart-ribbon-hoenn.png"> <label class="small-text" data-tooltip="Smart Contest Normal Rank Winner!" for="checkbox-smartness-normal">Normal Ribbon</label>
+									</div>
+									<div class="checkbox-item">
+										<input id="checkbox-smartness-super" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/items/gen3/ribbons/smart-ribbon-super-hoenn.png"> <label class="small-text" data-tooltip="Smart Contest Super Rank Winner!" for="checkbox-smartness-super">Super Ribbon</label>
+									</div>
+									<div class="checkbox-item">
+										<input id="checkbox-smartness-hyper" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/items/gen3/ribbons/smart-ribbon-hyper-hoenn.png"> <label class="small-text" data-tooltip="Smart Contest Hyper Rank Winner!" for="checkbox-smartness-hyper">Hyper Ribbon</label>
+									</div>
+									<div class="checkbox-item">
+										<input id="checkbox-smartness-master" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/items/gen3/ribbons/smart-ribbon-master-hoenn.png"> <label class="small-text" data-tooltip="Smart Contest Master Rank Winner!" for="checkbox-smartness-master">Master Ribbon</label>
+									</div>
+								</div>
+							</div>
+							<div class="ribbons-rightrow">
+								<div class="cutenesscontest">
+									<div class="checkbox-item">
+										<span class="title"><label class="big-text">Cuteness Contests</label></span>
+									</div>
+									<div class="checkbox-item">
+										<input id="checkbox-cuteness-normal" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/items/gen3/ribbons/cute-ribbon-hoenn.png"> <label class="small-text" data-tooltip="Cute Contest Normal Rank Winner!" for="checkbox-cuteness-normal">Normal Ribbon</label>
+									</div>
+									<div class="checkbox-item">
+										<input id="checkbox-cuteness-super" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/items/gen3/ribbons/cute-ribbon-super-hoenn.png"> <label class="small-text" data-tooltip="Cute Contest Super Rank Winner!" for="checkbox-cuteness-super">Super Ribbon</label>
+									</div>
+									<div class="checkbox-item">
+										<input id="checkbox-cuteness-hyper" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/items/gen3/ribbons/cute-ribbon-hyper-hoenn.png"> <label class="small-text" data-tooltip="Cute Contest Hyper Rank Winner!" for="checkbox-cuteness-hyper">Hyper Ribbon</label>
+									</div>
+									<div class="checkbox-item">
+										<input id="checkbox-cuteness-master" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/items/gen3/ribbons/cute-ribbon-master-hoenn.png"> <label class="small-text" data-tooltip="Cute Contest Master Rank Winner!" for="checkbox-cuteness-master">Master Ribbon</label>
+									</div>
+								</div>
+								<div class="coolnesscontest">
+									<div class="checkbox-item">
+										<span class="title"><label class="big-text">Coolness Contests</label></span>
+									</div>
+									<div class="checkbox-item">
+										<input id="checkbox-coolness-normal" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/items/gen3/ribbons/cool-ribbon-hoenn.png"> <label class="small-text" data-tooltip="Cool Contest Normal Rank Winner!" for="checkbox-coolness-normal">Normal Ribbon</label>
+									</div>
+									<div class="checkbox-item">
+										<input id="checkbox-coolness-super" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/items/gen3/ribbons/cool-ribbon-super-hoenn.png"> <label class="small-text" data-tooltip="Cool Contest Super Rank Winner!" for="checkbox-coolness-super">Super Ribbon</label>
+									</div>
+									<div class="checkbox-item">
+										<input id="checkbox-coolness-hyper" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/items/gen3/ribbons/cool-ribbon-hyper-hoenn.png"> <label class="small-text" data-tooltip="Cool Contest Hyper Rank Winner!" for="checkbox-coolness-hyper">Hyper Ribbon</label>
+									</div>
+									<div class="checkbox-item">
+										<input id="checkbox-coolness-master" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/items/gen3/ribbons/cool-ribbon-master-hoenn.png"> <label class="small-text" data-tooltip="Cool Contest Master Rank Winner!" for="checkbox-coolness-master">Master Ribbon</label>
+									</div>
+								</div>
+								<div class="moreribbons">
+									<div class="checkbox-item">
+										<span class="title"><label class="big-text">More Ribbons</label></span>
+									</div>
+									<div class="checkbox-item">
+										<input id="checkbox-winning-ribbon" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/items/gen3/ribbons/winning-ribbon.png"> <label class="small-text" data-tooltip="Ribbon for clearing LV50 at the Battle Tower." for="checkbox-winning-ribbon">Winning Ribbon</label>
+									</div>
+									<div class="checkbox-item">
+										<input id="checkbox-victory-ribbon" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/items/gen3/ribbons/victory-ribbon.png"> <label class="small-text" data-tooltip="Won for clearing LV100 at the Battle Tower." for="checkbox-victory-ribbon">Victory Ribbon</label>
+									</div>
+									<div class="checkbox-item">
+										<input id="checkbox-artist-ribbon" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/items/gen3/ribbons/artist-ribbon.png"> <label class="small-text" data-tooltip="Ribbon for being chosen as a super sketch model." for="checkbox-artist-ribbon">Artist Ribbon</label>
+									</div>
+									<div class="checkbox-item">
+										<input id="checkbox-champion-ribbon" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/items/gen3/ribbons/champion-ribbon.png"> <label class="small-text" data-tooltip="Champion-beating, Hall of Fame Member Ribbon." for="checkbox-champion-ribbon">Champion Ribbon</label>
+									</div>
+									<div class="checkbox-item">
+										<input id="checkbox-effort-ribbon" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/items/gen3/ribbons/effort-ribbon.png"> <label class="small-text" data-tooltip="Ribbon awarded for being a hard worker." for="checkbox-effort-ribbon">Effort Ribbon</label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="trainerseye">
+						<div class="checkbox-item">
+							<span class="title"><label class="big-text">Trainer's Eye</label></span>
+						</div>
+						<div class="checkbox-item">
+							<input id="checkbox-trainers-eye" type="checkbox"> <label class="small-text" for="checkbox-trainers-eye" style="pointer-events: none;">Register all 69 trainers</label>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer>
+			<ul>
+				<li>
+					<a href="../index/index.html">Progression Track</a>
+				</li>
+				<li>
+					<a href="#">Twitter</a>
+				</li>
+				<li>
+					<a href="https://github.com/yasingunaydiin">GitHub</a>
+				</li>
+			</ul>
+		</footer>
+		<script src="../checklists/js/script.js">
+		</script> 
+		<script>
+		                 document.addEventListener("DOMContentLoaded", function() {  
+		                 var rubyLogo = document.getElementById("ruby-logo");
+		                 var sapphireLogo = document.getElementById("sapphire-logo");
+		                 
+		                 var mainHeader = document.querySelector(".main-header");
+		                 var widePanels = document.querySelectorAll(".wide-panel");
+		                 var footer = document.querySelector("footer");
+		                 var titleText = document.querySelectorAll(".panel-label");
+		                 var backgroundIcons = document.querySelector("body");
+
+		                 rubyLogo.addEventListener("click", function() {
+		                     mainHeader.style.backgroundColor = "#b13131";
+		                     footer.style.background = "#b13131";
+		                     backgroundIcons.style.backgroundImage = 'url(../../images/patterns/pattern-ruby.png)';
+
+		                     titleText.forEach(function(text) {
+		                         text.style.color = "#b13131";
+		                     });
+
+		                     widePanels.forEach(function(panel) {
+		                         panel.style.border = "2px solid #b13131";
+		                     });
+		                 });
+
+		                 sapphireLogo.addEventListener("click", function() {
+		                     mainHeader.style.backgroundColor = "#065A9C";
+		                     footer.style.background = "#065A9C";
+		                     backgroundIcons.style.backgroundImage = 'url(../../images/patterns/pattern-sapphire.png)';
+
+		                     titleText.forEach(function(text) {
+		                         text.style.color = "#065A9C";
+		                     });
+
+		                     widePanels.forEach(function(panel) {
+		                         panel.style.border = "2px solid #065A9C";
+		                     });
+		                 });
+		              });
+		</script> 
+		<script>
+		                  document.addEventListener('DOMContentLoaded', function() {
+		              const completepokedexCheckboxes = document.querySelectorAll('.completepokedex input[type="checkbox"]');
+		              const legendariesCheckboxes = document.querySelectorAll('.legendaries input[type="checkbox"]');
+		              const giftpokemonCheckboxes = document.querySelectorAll('.giftpokemon input[type="checkbox"]');
+		              const ingametradesCheckboxes = document.querySelectorAll('.ingametrades input[type="checkbox"]');
+		              const trainercardCheckboxes = document.querySelectorAll('.trainercard input[type="checkbox"]');
+		              const battletowerCheckboxes = document.querySelectorAll('.battletower input[type="checkbox"]');
+		              const trickhouseCheckboxes = document.querySelectorAll('.trickhouse input[type="checkbox"]');
+		              const beautycontestCheckboxes = document.querySelectorAll('.beautycontest input[type="checkbox"]');
+		              const thoughcontestCheckboxes = document.querySelectorAll('.thoughcontest input[type="checkbox"]');
+		              const smartnesscontestCheckboxes = document.querySelectorAll('.smartnesscontest input[type="checkbox"]');
+		              const cutenesscontestCheckboxes = document.querySelectorAll('.cutenesscontest input[type="checkbox"]');
+		              const coolnesscontestCheckboxes = document.querySelectorAll('.coolnesscontest input[type="checkbox"]');
+		              const trainerseyeCheckboxes = document.querySelectorAll('.trainerseye input[type="checkbox"]');
+		              const moreribbonsCheckboxes = document.querySelectorAll('.moreribbons input[type="checkbox"]');
+
+
+		              function updateStyle(checkboxes, label) {
+		                  const allChecked = [...checkboxes].every(checkbox => checkbox.checked);
+		                  label.style.textDecoration = allChecked ? 'line-through' : 'none';
+		              }
+
+		              function initializeCheckboxes(checkboxes, label) {
+		                  checkboxes.forEach(checkbox => {
+		                      checkbox.addEventListener('change', function() {
+		                          updateStyle(checkboxes, label);
+		                      });
+		                  });
+		                  updateStyle(checkboxes, label);
+		              }
+		              initializeCheckboxes(completepokedexCheckboxes, document.querySelector('.completepokedex .title label'));
+		              initializeCheckboxes(legendariesCheckboxes, document.querySelector('.legendaries .title label'));
+		              initializeCheckboxes(giftpokemonCheckboxes, document.querySelector('.giftpokemon .title label'));
+		              initializeCheckboxes(ingametradesCheckboxes, document.querySelector('.ingametrades .title label'));
+		              initializeCheckboxes(trainercardCheckboxes, document.querySelector('.trainercard .title label'));
+		              initializeCheckboxes(battletowerCheckboxes, document.querySelector('.battletower .title label'));
+		              initializeCheckboxes(trickhouseCheckboxes, document.querySelector('.trickhouse .title label'));
+		              initializeCheckboxes(beautycontestCheckboxes, document.querySelector('.beautycontest .title label'));
+		              initializeCheckboxes(thoughcontestCheckboxes, document.querySelector('.thoughcontest .title label'));
+		              initializeCheckboxes(smartnesscontestCheckboxes, document.querySelector('.smartnesscontest .title label'));
+		              initializeCheckboxes(cutenesscontestCheckboxes, document.querySelector('.cutenesscontest .title label'));
+		              initializeCheckboxes(coolnesscontestCheckboxes, document.querySelector('.coolnesscontest .title label'));
+		              initializeCheckboxes(trainerseyeCheckboxes, document.querySelector('.trainerseye .title label'));
+		              initializeCheckboxes(moreribbonsCheckboxes, document.querySelector('.moreribbons .title label'));
+
+		            });
+		</script>
+	</div>
+</body>
+</html>

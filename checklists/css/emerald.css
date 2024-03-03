@@ -1,0 +1,278 @@
+.legendaries {
+	display: flex;
+	flex-direction: column;
+}
+.legendaries-rightrow {
+	margin-left: 40px;
+}
+.legendaries-rowcontainer {
+	display: flex;
+	align-items: flex-start; 
+}
+.tms {
+	display: flex;
+	flex-direction: column;
+}
+.tms-rightrow, .tms-middlerow {
+	margin-left: 40px;
+}
+.tms-rowcontainer {
+	display: flex;
+	align-items: flex-start; 
+}
+.giftpokemon {
+	display: flex;
+	flex-direction: column;
+}
+.giftpokemon-rightrow {
+	margin-left: 40px;
+}
+.giftpokemon-rowcontainer {
+	display: flex;
+	align-items: flex-start; 
+}
+.ribbons {
+	display: flex;
+	flex-direction: column;
+}
+.ribbons-rightrow {
+	margin-left: 40px;
+}
+.ribbons-rowcontainer {
+	display: flex;
+	align-items: flex-start; 
+}
+.battlefrontier {
+	display: flex;
+	flex-direction: column;
+}
+.battlefrontier-rightrow {
+	margin-left: 40px;
+}
+.battlefrontier-rowcontainer {
+	display: flex;
+	align-items: flex-start; 
+}
+
+/* Header */
+
+.main-header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: #588E47;
+	padding: 10px;
+	display: flex;
+	justify-content: space-between;
+	font-size: 8px;
+	z-index: 1000;
+	font-weight: 700;
+	letter-spacing: 1px;
+}
+#female {
+	color: pink;
+}
+/* Pokeicon */
+
+.pokeicon { 
+	height: 40px;
+}
+.pokeicon.legendary {
+	height: 30px;
+	margin-right: 5px;
+	margin-left: 5px;
+}
+/* Logo Container */
+
+.logo-container {
+	margin-top: -13px;
+	z-index: 2000;
+	position: fixed;
+}
+/* Links */
+
+a {
+	text-decoration: none;
+	color: #fff;
+}
+.header-left, .header-right {
+	margin: 0;
+	color: #fff;
+}
+.header-list {
+	position: absolute;
+	font-size: 12px;
+	margin-top: 2px;
+	left: 250px;
+}
+/* Body */
+
+body {
+	margin: 0;
+	padding: 0;
+	background: #ffffff url(../../images/patterns/pattern-emerald.png) repeat center center; /* Icons Vectors by Vecteezy */
+	background-size: 500px 250px;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+/* Page Container */
+
+.page-container {
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	align-items: baseline;
+}
+/* Span */
+
+span {
+	pointer-events: none;
+}
+/* Wide Panel */
+
+.wide-panel {
+	text-align: center;
+	padding: 20px;
+	border-radius: 8px;
+	width: 500px;
+	margin: 30px;
+	box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+	background-color: white;
+	margin-top: 150px;
+	border: 2px solid #588E47;
+}
+.wide-panel.more {
+	margin-bottom: 50px;
+	margin-top: 50px;
+}
+.wide-panel.contests {
+	margin-bottom: 50px;
+	margin-top: 50px;
+}
+.battletower {
+	margin-top: 20px;
+}
+img {
+	margin-left: -5px;
+}
+/* Panel Label */
+
+.panel-label {
+	display: block;
+	margin-bottom: 10px;
+	font-size: 25px;
+	font-weight: 1000;
+	color: #588E47;
+}
+/* Panel Content */
+
+.panel-content {
+	text-align: left;
+}
+/* Checkbox Group */
+
+.checkbox-group {
+	margin-top: 15px;
+}
+.row1, .row2, .row3 {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.trickhouse {
+	margin-top: 20px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between
+}
+.trickhouse-rightrow{
+    margin-right: 200px;
+}
+.moverow2 {
+	display: flex;
+	flex-direction: column;
+	margin-right: 111px;
+}
+.right-row {
+	display: flex;
+	flex-direction: column;
+	margin-right: 40px;
+}
+/* Checkbox Item */
+
+.checkbox-item {
+	margin-bottom: 10px;
+	display: flex;
+	align-items: center;
+}
+.big-text {
+	font-size: 20px;
+}
+.small-text {
+	font-size: 14px;
+}
+/* Footer */
+
+footer {
+	height: 50px;
+	background: #588E47;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1vw;
+}
+footer ul {
+	display: flex;
+	list-style: circle;
+	padding: 0;
+}
+footer li {
+	margin-right: 10px;
+	text-decoration: none;
+	list-style: none;
+	font-size: 15px;
+}
+/* Checkbox Item Label */
+
+.checkbox-item label {
+	position: relative;
+	display: inline-block;
+}
+.checkbox-item input {
+	margin-right: 5px;
+}
+.checkbox-item label::before {
+	content: attr(data-tooltip);
+	visibility: hidden;
+	width: 200px;
+	background-color: #333;
+	color: #fff;
+	text-align: center;
+	border-radius: 6px;
+	padding: 5px;
+	position: absolute;
+	z-index: 1;
+	bottom: 125%;
+	/* Position the tooltip above the text */
+	left: 50%;
+	margin-left: -100px;
+	/* Center the tooltip */
+	opacity: 0;
+	transition: opacity 0.3s;
+	cursor: pointer;
+}
+.checkbox-item label:hover::before {
+	visibility: visible;
+	opacity: 1;
+}
+/* Event container */
+
+.event-right {
+	display: flex;
+	flex-direction: column;
+}

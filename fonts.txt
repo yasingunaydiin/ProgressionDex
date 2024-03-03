@@ -1,0 +1,21 @@
+https://www.schemecolor.com/gardevoir-pokemon-colors.php
+pastel colors: https://www.schemecolor.com/search/pastel+red
+
+Buttons: #065A9C
+index.Background: #79AD75 // Green
+index.Title: #FBFBFC //White
+list.Header: #79AD75 // Light green
+list.Title: #DEECD8 // white
+
+
+Pokemon Red:
+F8858B // light red
+C23A22 // dark red
+
+Pokemon Blue:
+065A9C // blue
+0077BC // lighter blue
+
+Pokemon Yellow: 
+E19720 darkyellow
+FAD61D yellow

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>ProgressionDex | Log your 100% progression</title>
+	<link href="index.css" rel="stylesheet">
+	<link href="../images/icons/favicontab.ico" rel="icon" type="image/x-icon">
+	<link href="../images/icons/favicontab.ico" rel="shortcut icon" type="image/x-icon">
+	<style>
+	            @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans&display=swap');
+	            * {font-family: 'Alegreya Sans';}
+	</style>
+	<style>
+	            @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@700&display=swap');
+	            h1 {font-family: 'Alegreya Sans';}
+	</style>
+</head>
+<body>
+	<div class="logo-container">
+		<!-- <span class="logo-icon"></span> -->
+		<h1 class="logo-text">PROGRESSION DEX</h1>
+		<h4 class="small-text-under-logo">A tool for tracking your 100% progress!</h4>
+	</div>
+	<div class="middle-container">
+		<div class="boxcontainer">
+			<div class="upperbox-container">
+				<div class="box">
+					<a href="../list/list.html#gen1">
+					<h1>Generation I</h1><img class="pokeicon gen1" src="../images/icons/pokemon/starters/grass/bulbasaur.png"></a>
+				</div>
+				<div class="box">
+					<a href="../list/list.html#gen2">
+					<h1>Generation II</h1><img class="pokeicon gen2" src="../images/icons/pokemon/starters/grass/chikorita.png"></a>
+				</div>
+				<div class="box">
+					<a href="../list/list.html#gen3">
+					<h1>Generation III</h1><img class="pokeicon gen3" src="../images/icons/pokemon/starters/grass/treecko.png"></a>
+				</div>
+				<div class="box">
+					<a href="../list/list.html#gen4">
+					<h1>Generation IV</h1><img class="pokeicon gen4" src="../images/icons/pokemon/starters/grass/turtwig.png"></a>
+				</div>
+			</div>
+			<div class="lowerbox-container">
+				<div class="box">
+					<a href="../list/list.html#gen5">
+					<h1>Generation V</h1><img class="pokeicon gen5" src="../images/icons/pokemon/starters/grass/snivy.png"></a>
+				</div>
+				<div class="box">
+					<a href="../list/list.html#gen6">
+					<h1>Generation VI</h1><img class="pokeicon gen6" src="../images/icons/pokemon/starters/grass/chespin.png"></a>
+				</div>
+				<div class="box">
+					<a href="../list/list.html#gen7">
+					<h1>Generation VII</h1><img class="pokeicon gen7" src="../images/icons/pokemon/starters/grass/rowlet.png"></a>
+				</div>
+				<div class="box">
+					<a href="../list/list.html#gen8">
+					<h1>Generation VIII</h1><img class="pokeicon gen8" src="../images/icons/pokemon/starters/grass/grookey.png"></a>
+				</div>
+				<div class="box">
+					<a href="../list/list.html#gen9">
+					<h1>Generation IX</h1><img class="pokeicon gen9" src="../images/icons/pokemon/starters/grass/sprigatito.png"></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<h4 class="small-text" style="font-style:italic;margin-top: 50px;">Work in progress</h4>
+	<div class="button-container">
+		<button id="login">Login</button> <button id="register">Register</button> <a href="../list/list.html">
+		<h2 id="continue">Continue without creating an account</h2></a>
+	</div>
+    
+	<script>
+	             // Array of image URLs
+	             var images = [
+	                 "../images/icons/pokemon/gen8/gigantamax/alcremie-gigantamax.png",
+	                 "../images/icons/pokemon/gen8/gigantamax/appletun-gigantamax.png",
+	                 "../images/icons/pokemon/gen8/gigantamax/blastoise-gigantamax.png",
+	                 "../images/icons/pokemon/gen8/gigantamax/butterfree-gigantamax.png",
+	                 "../images/icons/pokemon/gen8/gigantamax/centiskorch-gigantamax.png",
+	                 "../images/icons/pokemon/gen8/gigantamax/charizard-gigantamax.png",
+	                 "../images/icons/pokemon/gen8/gigantamax/cinderace-gigantamax.png",
+	                 "../images/icons/pokemon/gen8/gigantamax/coalossal-gigantamax.png",
+	                 "../images/icons/pokemon/gen8/gigantamax/copperajah-gigantamax.png",
+	                 "../images/icons/pokemon/gen8/gigantamax/eevee-gigantamax.png",
+	                 "../images/icons/pokemon/gen8/gigantamax/flapple-gigantamax.png",
+	                 "../images/icons/pokemon/gen8/gigantamax/garbodor-gigantamax.png",
+	                 "../images/icons/pokemon/gen8/gigantamax/gengar-gigantamax.png",
+	                 "../images/icons/pokemon/gen8/gigantamax/grimmsnarl-gigantamax.png",
+	                 "../images/icons/pokemon/gen8/gigantamax/hatterene-gigantamax.png",
+	                 "../images/icons/pokemon/gen8/gigantamax/inteleon-gigantamax.png",
+	                 "../images/icons/pokemon/gen8/gigantamax/lapras-gigantamax.png",
+	                 "../images/icons/pokemon/gen8/gigantamax/machamp-gigantamax.png",
+	                 "../images/icons/pokemon/gen8/gigantamax/melmetal-gigantamax.png",
+	                 "../images/icons/pokemon/gen8/gigantamax/meowth-gigantamax.png",
+	                 "../images/icons/pokemon/gen8/gigantamax/orbeetle-gigantamax.png",
+	                 "../images/icons/pokemon/gen8/gigantamax/pikachu-gigantamax.png",
+	                 "../images/icons/pokemon/gen8/gigantamax/rillaboom-gigantamax.png",
+	                 "../images/icons/pokemon/gen8/gigantamax/sandaconda-gigantamax.png",
+	                 "../images/icons/pokemon/gen8/gigantamax/snorlax-gigantamax.png",
+	                 "../images/icons/pokemon/gen8/gigantamax/toxtricity-gigantamax.png",
+	                 "../images/icons/pokemon/gen8/gigantamax/urshifu-gigantamax-rapid-strike.png",
+	                 "../images/icons/pokemon/gen8/gigantamax/urshifu-gigantamax-single-strike.png"
+	                     ];
+	         
+	             // Function to change the image
+	             const changeImage = () => {
+	             document.getElementById('dynamicImage').src = images[Math.floor(Math.random() * images.length)];
+	         };
+	         
+	             // Call changeImage function when page loads
+	             window.onload = changeImage;
+	</script>
+
+
+
+	<div class="social">
+		<a href="https://github.com/yasingunaydiin" target="_blank"><img alt="" class="github" src="../images/icons/github-mark.png"></a>
+	</div>
+	<footer>
+		Made with <img id="dynamicImage" style="margin: 8px; height: 40px"> in a Cafe
+	</footer>
+</body>
+</html>
