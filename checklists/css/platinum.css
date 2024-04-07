@@ -1,82 +1,42 @@
-.legendaries {
+* {font-family: 'Alegreya Sans';}
+
+.legendaries, .poketch, .tms, .egoodsitems, .ribbons, .battlefrontier, .resort, .trainercard, .completepokedex, .giftpokemon, .ingametrades, .battletower, .rivalbattle {
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 }
-.legendaries-rightrow {
+.legendaries-rightrow, .ribbons-rightrow, .battlefrontier-rightrow, .giftpokemon-rightrow, .ingametrades-rightrow {
 	margin-left: 40px;
 }
-.legendaries-rowcontainer {
-	display: flex;
-	align-items: flex-start; 
-}
-.poketch {
-	display: flex;
-	flex-direction: column;
-}
-.poketch-rightrow {
-	margin-left: 40px;
-} 
-.poketch-rowcontainer {
-	display: flex;
-	align-items: flex-start; 
-}
-.tms {
-	display: flex;
-	flex-direction: column;
-}
-.tms-rightrow, .tms-middlerow {
-	margin-left: 40px;
-}
-.tms-rowcontainer {
-	display: flex;
-	align-items: flex-start; 
-}
-.egoodsitems {
-	display: flex;
-	flex-direction: column;
-}
-.egoodsitems-rightrow, .egoodsitems-middlerow {
-	margin-left: 40px;
-}
-.egoodsitems-rowcontainer {
-	display: flex;
-	align-items: flex-start; 
-}
-.ribbons {
-	display: flex;
-	flex-direction: column;
-}
-.ribbons-rightrow {
-	margin-left: 40px;
-}
-.ribbons-rowcontainer {
-	display: flex;
-	align-items: flex-start; 
-}
-.battlefrontier {
-	display: flex;
-	flex-direction: column;
-}
-.battlefrontier-rightrow {
-	margin-left: 40px;
-}
-.battlefrontier-rowcontainer {
-	display: flex;
-	align-items: flex-start; 
-}
-.resort {
-	display: flex;
-	flex-direction: column;
-}
-.resort-rightrow {
-	margin-left: 40px;
-}
-.resort-rowcontainer {
+.legendaries-rowcontainer, .resort-rowcontainer, .poketch-rowcontainer, .tms-rowcontainer, .egoodsitems-rowcontainer, .ribbons-rowcontainer, .battlefrontier-rowcontainer, .giftpokemon-rowcontainer, .ingametrades-rowcontainer {
 	display: flex;
 	align-items: flex-start; 
 }
 
+.tms-middlerow, .egoodsitems-middlerow, .poketch-middlerow, .resort-middlerow {
+	margin-left: 40px;
+	margin-right: 40px;
+} 
+
 /* Header */
+
+
+.collapsible {
+    background-color: #f1f1f1;
+    cursor: pointer;
+    padding: 18px;
+    width: 500px;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+	margin: 5px;
+  }
+
+  .content {
+    padding: 0 18px;
+	display: none;
+  }
 
 .main-header {
 	position: fixed;
@@ -170,16 +130,9 @@ span {
 	margin-top: 150px;
 	border: 2px solid #CEA435;
 }
-.wide-panel.more {
+.wide-panel.more, .wide-panel.contests {
 	margin-bottom: 50px;
 	margin-top: 50px;
-}
-.wide-panel.contests {
-	margin-bottom: 50px;
-	margin-top: 50px;
-}
-.battletower {
-	margin-top: 20px;
 }
 img {
 	margin-left: -5px;
@@ -198,28 +151,6 @@ img {
 .panel-content {
 	text-align: left;
 }
-/* Checkbox Group */
-
-.row1, .row2, .row3 {
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
-}
-.more-rightrow {
-	display: flex;
-	align-items: flex-end;
-}
-.moverow2 {
-	display: flex;
-	flex-direction: column;
-	margin-right: 50px;
-}
-.right-row {
-	display: flex;
-	flex-direction: column;
-	margin-right: 40px;
-}
-/* Checkbox Item */
 
 .checkbox-item {
 	margin-bottom: 10px;
@@ -295,4 +226,53 @@ footer li {
 .event-right {
 	display: flex;
 	flex-direction: column;
+}
+
+@media only screen and (max-width: 768px) {
+	/* Constant */
+    .main-header {
+        padding: 12px;
+        font-size: 7px;
+    }
+    footer {
+        height: 50px;
+        font-size: 12px;
+    }
+
+	/* Variable */
+
+	.logo-container {
+		display: flex;
+		align-items: center;
+		margin-top: 30px;
+	  }
+
+	  .panel-content {
+		width: 300px;
+	  }
+
+	  .wide-panel {
+		margin-top: 180px;
+		width: 300px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: center;
+	  }
+	  .wide-panel.items {
+		margin-top: 0px;
+	  }
+
+	 
+	 
+
+	  .egoodsitems-rightrow, .egoodsitems-middlerow {
+		margin-left:10px;
+	}
+	  
+
+	.legendaries, .tms,  .poketch, .egoodsitems, .battlefrontier, .resort {
+		align-items: center;
+	  }
+
 }

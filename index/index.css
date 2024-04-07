@@ -77,6 +77,9 @@ body {
 	margin-top: 70px;
 	font-size: 60px;
 }
+.description {
+	margin-top: -30px;
+}
 /* Button Container and the texts */
 
 @keyframes fallDown {
@@ -173,4 +176,35 @@ footer li {
 footer li a {
 	color: #79AD75;
 	text-decoration: none;
+}
+/* Media queries for responsiveness */
+@media only screen and (max-width: 768px) {
+	.box {
+        width: 80px;
+        height: 80px;
+    }
+	.pokeicon {
+        max-width: 40px; 
+        max-height: 40px;
+    }
+    
+    .box h1 {
+        font-size: 10px;
+    }
+    .logo-text {
+        font-size: 40px;
+    }
+    
+    .small-text {
+        font-size: 12px;
+    }
+    
+    .button-container button {
+        font-size: 14px;
+        padding: 10px 30px;
+    }
+	footer {
+        height: 50px;
+        font-size: 12px;
+    }
 }

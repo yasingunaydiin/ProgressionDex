@@ -1,4 +1,5 @@
 /* Header */
+* {font-family: 'Alegreya Sans';}
 
 .main-header {
 	position: fixed;
@@ -14,10 +15,29 @@
 	font-weight: 700;
 	letter-spacing: 1px;
 } 
+
 #female {
 	color: pink;
 }
 /* Pokeicon */
+
+
+.collapsible {
+    background-color: #f1f1f1;
+    cursor: pointer;
+    padding: 18px;
+    width: 500px;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+	margin: 5px;
+  }
+
+  .content {
+    padding: 0 18px;
+	display: none;
+  }
 
 .pokeicon {
 	height: 40px;
@@ -29,10 +49,7 @@
 	margin-right: 5px;
 	margin-left: 5px;
 }
-.egoodsitems {
-	display: flex;
-	align-items: flex-end;
-}
+
 /* Logo Container */
 
 .icon-small {
@@ -102,58 +119,28 @@ span {
 	margin-bottom: 50px;
 	margin-top: 50px;
 }
-.wide-panel.contests {
-	margin-bottom: 50px;
-	margin-top: 50px;
-}
+
 img {
 	margin-left: -5px;
 }
-.completepokedex {
+.completepokedex, .tms, .opower, .legendaries, .ingametrades, .vivillion, .battlemaison, .mega, .photographs, .restaurants, .giftpokemon, .trainercard, .battleinstitute, .battlechateau, .battles, .supertraining {
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 }
-.completepokedex-rowcontainer {
+.completepokedex-rowcontainer, .tms-rowcontainer, .opower-rowcontainer, .legendaries-rowcontainer, .ingametrades-rowcontainer, .vivillion-rowcontainer, .battlemaison-rowcontainer, .mega-rowcontainer, .photographs-rowcontainer, .restaurants-rowcontainer {
 	display: flex;
 	align-items: flex-start;
 }
-.completepokedex-rightrow {
-	margin-left: 20px;
+.completepokedex-rightrow, .opower-rightrow, .legendaries-rightrow, .ingametrades-rightrow, .battlemaison-rightrow, .photographs-rightrow {
+	margin-left: 40px;
 }
-.tms {
-	display: flex;
-	flex-direction: column;
-}
-.tms-rowcontainer {
-	display: flex;
-	align-items: flex-start;
-}
-.tms-middlerow {
+
+.tms-middlerow, .vivillion-middlerow, .mega-middlerow, .restaurants-middlerow {
 	margin-left: 40px;
 	margin-right: 40px;
 }
-.opower {
-	display: flex;
-	flex-direction: column;
-}
-.opower-rightrow {
-	margin-left: 20px;
-}
-.opower-rowcontainer {
-	display: flex;
-	align-items: flex-start;
-}
-.legendaries {
-	display: flex;
-	flex-direction: column;
-}
-.legendaries-rightrow {
-	margin-left: 20px;
-}
-.legendaries-rowcontainer {
-	display: flex;
-	align-items: flex-start;
-}
+
 /* Panel Label */
 
 .panel-label {
@@ -170,87 +157,13 @@ img {
 }
 /* Checkbox Group */
 
-.row1, .row2, .row3 {
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
-}
-.moverow2 {
-	display: flex;
-	flex-direction: column;
-}
-.ingametrades {
-	display: flex;
-	flex-direction: column;
-}
-.ingametrades-rightrow {
-	margin-left: 20px;
-}
-.ingametrades-rowcontainer {
-	display: flex;
-	align-items: flex-start;
-}
-.vivillion {
-	display: flex;
-	flex-direction: column;
-}
-.vivillion-rightrow {
-	margin-left: 20px;
-}
-.vivillion-middlerow {
-	margin-left: 20px;
-}
-.vivillion-rowcontainer {
-	display: flex;
-	align-items: flex-start;
-}
-.battlemaison {
-	display: flex;
-}
-.battlemaison-rightrow {
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-end;
-}
-.mega {
-	display: flex;
-	flex-direction: column;
-}
-.mega-rightrow {
-	margin-left: 20px;
-}
-.mega-middlerow {
-	margin-left: 20px;
-}
-.mega-rowcontainer {
-	display: flex;
-	align-items: flex-start;
-}
-.photographs {
-	display: flex;
-}
-.photographs-rightrow {
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-end;
-}
+
+ 
 .pokeicon.item {
 	height: 30px;
 }
-.pokeicon.mega {
-	height: 30px;
-}
-.restaurants {
-	display: flex;
-	flex-direction: column;
-}
-.restaurants-rightrow, .restaurants-middlerow {
-	margin-left: 20px;
-}
-.restaurants-rowcontainer {
-	display: flex;
-	align-items: flex-start;
-}
+
+
 /* Checkbox Item */
 
 .checkbox-item {
@@ -300,7 +213,7 @@ footer li {
 .checkbox-item label::before {
 	content: attr(data-tooltip);
 	visibility: hidden;
-	width: 200px;
+	width: 100px;
 	background-color: #333;
 	color: #fff;
 	text-align: center;
@@ -320,4 +233,64 @@ footer li {
 .checkbox-item label:hover::before {
 	visibility: visible;
 	opacity: 1;
+}
+
+@media only screen and (max-width: 768px) {
+	/* Constant */
+    .main-header {
+        padding: 12px;
+        font-size: 7px;
+    }
+    footer {
+        height: 50px;
+        font-size: 12px;
+    }
+
+	/* Variable */
+
+	.logo-container {
+		display: flex;
+		align-items: center;
+		margin-top: 30px;
+	  }
+
+
+
+	  .panel-content {
+		width: 300px;
+	  }
+
+	  .wide-panel {
+		margin-top: 180px;
+		width: 350px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: center;
+		
+	  }
+		  .wide-panel.items {
+			margin-top: 0px;
+		  }
+
+		  .collapsible {
+		width: 290px;
+	}
+
+
+	.vivillion-rightrow, .vivillion-middlerow {
+		margin-left: 0px;
+	}
+	
+
+	.mega-rightrow, .mega-middlerow {
+		margin-left: 0px;
+	}
+	
+	.pokeicon.item {
+		height: 20px;
+	}
+	.giftpokemon, .tms, .legendaries, .ingametrades, .mega, .opower, .vivillion, .battlemaison, .restaurants, .photographs {
+		align-items: center;
+	}
 }

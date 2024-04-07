@@ -1,4 +1,21 @@
- /* Common font family */
+.collapsible {
+    background-color: #f1f1f1;
+    cursor: pointer;
+    padding: 18px;
+    width: 500px;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+	margin: 5px;
+  }
+
+  .content {
+    padding: 0 18px;
+	display: none;
+  }
+
+/* Common font family */
  * {font-family: 'Alegreya Sans';}
  
 /* Header */
@@ -26,14 +43,20 @@
 	margin-right: 5px;
 	margin-left: 5px;
 }
+.pokeicon.small {
+	height: 60px;
+	margin-right: -5px;
+	margin-left: -5px;
+	margin-bottom: -10px;
+}
 .pokeicon.legendary {
 	height: 30px;
 	margin-right: 3px;
 	margin-left: 3px;
 }
-.pokeicon.legendarysmall {
-	margin-right: 0px;
-	margin-left: 0px;
+
+.pokeicon.gigantamax {
+	height: 30px;
 }
 .egoodsitems {
 	display: flex;
@@ -140,30 +163,29 @@ img {
 }
 
 /* Checkbox Group */
-.ingametrades, .legendaries, .sidequests, .tms, .pokepelago, .giftpokemon, .z-crystals, .mega, .battletree, .restaurants, .completepokedex, .minior, .ultrabeasts, .trainerpassport, .alolanforms, .battle, .giftpokemon-totem, .ultrawormhole, .mantinesurf {
+.ingametrades, .legendaries, .gigantamax, .leaguecard, .leaguecard-customizations, .sidequests, .ribbons, .tms, .pokepelago, .giftpokemon, .z-crystals, .mega, .battletree, .restaurants, .completepokedex, .minior, .currydex, .trainerpassport, .galarianforms, .battletower, .giftpokemon-totem, .ultrawormhole, .mantinesurf {
 	display: flex;
 	flex-direction: column;
 }
-.legendaries-rightrow, .trainerpassport-rightrow, .ultrabeasts-rightrow, .ingametrades-rightrow, .battletree-rightrow, .tms-middlerow, .tms-rightrow, .z-crystals-rightrow, .battle-rightrow, .alolanforms-rightrow, .giftpokemon-totem-rightrow, .z-crystals-middlerow, .mantinesurf-rightrow, .ultrawormhole-rightrow, .mega-rightrow, .mega-middlerow, .restaurants-rightrow, .pokepelago-rightrow, .pokepelago-middlerow, .opower-rightrow, .completepokedex-rightrow, .completepokedex-rightrow {
+.legendaries-rightrow, .trainerpassport-rightrow, .gigantamax-rightrow, .leaguecard-customizations-rightrow, .ribbons-rightrow, .currydex-rightrow, .battletree-rightrow, .tms-middlerow, .tms-rightrow, .z-crystals-rightrow, .battletower-rightrow, .galarianforms-rightrow, .giftpokemon-totem-rightrow, .z-crystals-middlerow, .mantinesurf-rightrow, .ultrawormhole-rightrow, .mega-rightrow, .mega-middlerow, .restaurants-rightrow, .pokepelago-rightrow, .pokepelago-middlerow, .opower-rightrow, .completepokedex-rightrow {
 	margin-left: 40px;
 }
 .giftpokemon-rightrow {
 	margin-left: 10px;
 }
+.ingametrades-rightrow {
+	margin-left: -10px;
+}
+
 
 
 .minior-rightrow, .minior-leftrow  {
 	margin-left: 20px;
 }
- .sidequests-middlerow {
-	margin-left: 15px;
-	
-
-}
 .sidequests-rightrow {
-	margin-left: 0px;
+	margin-left: 10px;
 }
-.legendaries-rowcontainer, .trainerpassport-rowcontainer, .sidequests-rowcontainer, .ultrabeasts-rowcontainer, .tms-rowcontainer, .battletree-rowcontainer, .pokepelago-rowcontainer, .giftpokemon-rowcontainer, .battle-rowcontainer, .giftpokemon-totem-rowcontainer, .z-crystals-rowcontainer, .mantinesurf-rowcontainer, .ultrawormhole-rowcontainer, .mega-rowcontainer, .completepokedex-rowcontainer, .minior-rowcontainer, .ingametrades-rowcontainer, .alolanforms-rowcontainer {
+.legendaries-rowcontainer, .leaguecard-customizations-rowcontainer, .gigantamax-rowcontainer, .trainerpassport-rowcontainer, .leaguecard-rowcontainer, .ribbons-rowcontainer, .sidequests-rowcontainer, .currydex-rowcontainer, .tms-rowcontainer, .battletree-rowcontainer, .pokepelago-rowcontainer, .giftpokemon-rowcontainer, .battletower-rowcontainer, .giftpokemon-totem-rowcontainer, .z-crystals-rowcontainer, .mantinesurf-rowcontainer, .ultrawormhole-rowcontainer, .mega-rowcontainer, .completepokedex-rowcontainer, .minior-rowcontainer, .ingametrades-rowcontainer, .galarianforms-rowcontainer {
 	display: flex;
 	align-items: flex-start; 
 }
@@ -172,17 +194,27 @@ img {
 	margin-right: 5px;
 	margin-left: 5px;
 }
+.leaguecard-leftrow, .leaguecard-leftmiddlerow, .leaguecard-rightrow, .leaguecard-rightmiddlerow {
+	margin-right: 18px;
+	white-space: nowrap;
+}
 
 .pokeicon.npc {
-	height: 35px;
+	height: 30px;
+	margin-left: -5px;
+	margin-right: -5px;
 }
 .colorpokemon {
 	display: flex;
 }
-.pokeicon.totem {
-    height: 30px;
-	
+.wide-panel.leaguecards {
+	width: 1000px;
+	margin-top: 0px;
 }
+.pokeicon.leaguecard {
+	height: 180px;
+}
+
 /* Checkbox Item */
 .checkbox-item {
 	margin-bottom: 10px;
@@ -251,4 +283,100 @@ footer li {
 .checkbox-item label:hover::before {
 	visibility: visible;
 	opacity: 1;
+}
+
+@media only screen and (max-width: 768px) {
+	/* Constant */
+    .main-header {
+        padding: 12px;
+        font-size: 7px;
+    }
+    footer {
+        height: 50px;
+        font-size: 12px;
+    }
+
+	/* Variable */
+
+	.logo-container {
+		display: flex;
+		align-items: center;
+		margin-top: 30px;
+	  }
+
+
+
+	  .panel-content {
+		width: 300px;
+	  }
+
+	  .wide-panel {
+		margin-top: 180px;
+		width: 350px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: center;
+		
+	  }
+	  .tms, .trs {
+		align-items: center;
+	}
+		  .wide-panel.items {
+			margin-top: 0px;
+		  }
+
+		  .collapsible {
+		width: 290px;
+	}
+
+
+	.pokeicon.item {
+		height: 20px;
+	}
+	
+
+	/* Two rows */
+	.completepokedex, .battle, .legendaries, .trainerpassport, .mega, .leaguecard, .galarianforms, .other, .ingametrades, .giftpokemon, .gigantamax, .battletower, .ribbons, .campingtoys, .sidequests, .currydex {
+		align-items: center;
+	}
+	/* One row */
+	
+	.giftpokemon-rowcontainer {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	  }
+	  
+	 .galarianforms-rightrow, .giftpokemon-rightrow {
+		margin-left: 0px;
+	}
+	.galarianforms-rowcontainer {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	  }
+	.sidequests-rightrow {
+		margin-left: -40px;
+	}
+
+	.ingametrades-rowcontainer {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	  }
+	.ingametrades-rightrow {
+		margin-left: 0px;
+	}
+	
+	.leaguecard-rowcontainer {
+		display: flex;
+		flex-direction: column;
+		margin-left: 60px;
+		
+	  }
+	 .pokeicon.leaguecard {
+		height: 200px;
+	 }
+
 }

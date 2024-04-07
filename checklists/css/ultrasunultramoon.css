@@ -1,4 +1,20 @@
- /* Header */
+.collapsible {
+    background-color: #f1f1f1;
+    cursor: pointer;
+    padding: 18px;
+    width: 500px;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+	margin: 5px;
+  }
+
+  .content {
+    padding: 0 18px;
+	display: none;
+  }
+/* Header */
 .main-header {
 	position: fixed;
 	top: 0;
@@ -236,7 +252,7 @@ footer li {
 	bottom: 125%;
 	/* Position the tooltip above the text */
 	left: 50%;
-	margin-left: -100px;
+	margin-left: -140px;
 	/* Center the tooltip */
 	opacity: 0;
 	transition: opacity 0.3s;
@@ -246,3 +262,86 @@ footer li {
 	visibility: visible;
 	opacity: 1;
 }
+
+@media only screen and (max-width: 768px) {
+	/* Constant */
+    .main-header {
+        padding: 12px;
+        font-size: 7px;
+    }
+    footer {
+        height: 50px;
+        font-size: 12px;
+    }
+
+	/* Variable */
+
+	.logo-container {
+		display: flex;
+		align-items: center;
+		margin-top: 30px;
+	  }
+
+
+
+	  .panel-content {
+		width: 300px;
+	  }
+
+	  .wide-panel {
+		margin-top: 180px;
+		width: 350px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: center;
+		
+	  }
+		  .wide-panel.items {
+			margin-top: 0px;
+		  }
+
+		  .collapsible {
+		width: 290px;
+	}
+
+
+
+	.mega-rightrow, .mega-middlerow, .z-crystals-rightrow, .z-crystals-middlerow {
+		margin-left: 0px;
+	}
+	
+
+	.pokeicon.item {
+		height: 20px;
+	}
+	
+
+	/* Two rows */
+	.giftpokemon, .completepokedex, .tms, .mantinesurf, .legendaries, .trainerpassport, .mega, .giftpokemon-totem, .alolanforms, .ultrabeasts, .z-crystals, .battletree, .other, .ingametrades, .sidequests {
+		align-items: center;
+	}
+	/* One row */
+	.pokemonamie, .foodcourtbattles, .trainercard, .ingametrades, .pokemoncontest, .bikes, .capturetheflag {
+		margin-left: -20px;
+	}
+	
+
+	.colorpokemon {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	  }
+
+	
+	  .alolanforms-rowcontainer img {
+		display: none;
+	  }
+	  
+	
+
+	 
+	
+
+}
+

@@ -1,59 +1,33 @@
-.legendaries {
+* {
+	font-family: 'Alegreya Sans';
+}
+.legendaries, .tms, .giftpokemon, .ribbons, .battlefrontier, .trickhouse, .rematches, .trainercard, .ingametrades, .completepokedex, .battletent, .trainerhill, .matchcall {
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 }
-.legendaries-rightrow {
+.legendaries-rightrow, .giftpokemon-rightrow, .ribbons-rightrow, .battlefrontier-rightrow, .trickhouse-rightrow, .tms-rightrow, .ingametrades-rightrow, .trainerhill-rightrow {
 	margin-left: 40px;
 }
-.legendaries-rowcontainer {
+.legendaries-rowcontainer, .tms-rowcontainer, .giftpokemon-rowcontainer, .ribbons-rowcontainer, .battlefrontier-rowcontainer, .trickhouse-rowcontainer, .ingametrades-rowcontainer, .trainerhill-rowcontainer {
 	display: flex;
-	align-items: flex-start; 
+	align-items: flex-start;
 }
-.tms {
-	display: flex;
-	flex-direction: column;
+.collapsible {
+	background-color: #f1f1f1;
+	cursor: pointer;
+	padding: 18px;
+	width: 500px;
+	border: none;
+	text-align: left;
+	outline: none;
+	font-size: 15px;
+	margin: 5px;
 }
-.tms-rightrow, .tms-middlerow {
-	margin-left: 40px;
+.content {
+	padding: 0 18px;
+	display: none;
 }
-.tms-rowcontainer {
-	display: flex;
-	align-items: flex-start; 
-}
-.giftpokemon {
-	display: flex;
-	flex-direction: column;
-}
-.giftpokemon-rightrow {
-	margin-left: 40px;
-}
-.giftpokemon-rowcontainer {
-	display: flex;
-	align-items: flex-start; 
-}
-.ribbons {
-	display: flex;
-	flex-direction: column;
-}
-.ribbons-rightrow {
-	margin-left: 40px;
-}
-.ribbons-rowcontainer {
-	display: flex;
-	align-items: flex-start; 
-}
-.battlefrontier {
-	display: flex;
-	flex-direction: column;
-}
-.battlefrontier-rightrow {
-	margin-left: 40px;
-}
-.battlefrontier-rowcontainer {
-	display: flex;
-	align-items: flex-start; 
-}
-
 /* Header */
 
 .main-header {
@@ -75,7 +49,7 @@
 }
 /* Pokeicon */
 
-.pokeicon { 
+.pokeicon {
 	height: 40px;
 }
 .pokeicon.legendary {
@@ -111,7 +85,8 @@ a {
 body {
 	margin: 0;
 	padding: 0;
-	background: #ffffff url(../../images/patterns/pattern-emerald.png) repeat center center; /* Icons Vectors by Vecteezy */
+	background: #ffffff url(../../images/patterns/pattern-emerald.png) repeat center center;
+	/* Icons Vectors by Vecteezy */
 	background-size: 500px 250px;
 	height: 100vh;
 	display: flex;
@@ -151,9 +126,6 @@ span {
 	margin-bottom: 50px;
 	margin-top: 50px;
 }
-.battletower {
-	margin-top: 20px;
-}
 img {
 	margin-left: -5px;
 }
@@ -166,42 +138,6 @@ img {
 	font-weight: 1000;
 	color: #588E47;
 }
-/* Panel Content */
-
-.panel-content {
-	text-align: left;
-}
-/* Checkbox Group */
-
-.checkbox-group {
-	margin-top: 15px;
-}
-.row1, .row2, .row3 {
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
-}
-.trickhouse {
-	margin-top: 20px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between
-}
-.trickhouse-rightrow{
-    margin-right: 200px;
-}
-.moverow2 {
-	display: flex;
-	flex-direction: column;
-	margin-right: 111px;
-}
-.right-row {
-	display: flex;
-	flex-direction: column;
-	margin-right: 40px;
-}
-/* Checkbox Item */
-
 .checkbox-item {
 	margin-bottom: 10px;
 	display: flex;
@@ -249,7 +185,7 @@ footer li {
 .checkbox-item label::before {
 	content: attr(data-tooltip);
 	visibility: hidden;
-	width: 200px;
+	width: 100px;
 	background-color: #333;
 	color: #fff;
 	text-align: center;
@@ -272,7 +208,37 @@ footer li {
 }
 /* Event container */
 
-.event-right {
-	display: flex;
-	flex-direction: column;
+@media only screen and (max-width: 768px) {
+	/* Constant */
+	.main-header {
+		padding: 12px;
+		font-size: 7px;
+	}
+	footer {
+		height: 50px;
+		font-size: 12px;
+	}
+	/* Variable */
+	.logo-container {
+		display: flex;
+		align-items: center;
+		margin-top: 30px;
+	}
+	.panel-content {
+		width: 300px;
+	}
+	.wide-panel {
+		margin-top: 180px;
+		width: 300px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: center;
+	}
+	.wide-panel.items {
+		margin-top: 0px;
+	}
+	.legendaries, .giftpokemon, .trickhouse, .battlefrontier, .tms {
+		align-items: center;
+	}
 }

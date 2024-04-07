@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>ProgressionDex | Log your 100% progression</title>
 	<link href="index.css" rel="stylesheet">
 	<link href="../images/icons/favicontab.ico" rel="icon" type="image/x-icon">
@@ -20,8 +20,9 @@
 	<div class="logo-container">
 		<!-- <span class="logo-icon"></span> -->
 		<h1 class="logo-text">PROGRESSION DEX</h1>
-		<h4 class="small-text-under-logo">A tool for tracking your 100% progress!</h4>
+		<h4 class="description">A tool for tracking your 100% progress!</h4>
 	</div>
+	<!--
 	<div class="middle-container">
 		<div class="boxcontainer">
 			<div class="upperbox-container">
@@ -65,7 +66,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 	<h4 class="small-text" style="font-style:italic;margin-top: 50px;">Work in progress</h4>
 	<div class="button-container">
 		<button id="login">Login</button> <button id="register">Register</button> <a href="../list/list.html">
@@ -75,34 +76,37 @@
 	<script>
 	             // Array of image URLs
 	             var images = [
-	                 "../images/icons/pokemon/gen8/gigantamax/alcremie-gigantamax.png",
-	                 "../images/icons/pokemon/gen8/gigantamax/appletun-gigantamax.png",
-	                 "../images/icons/pokemon/gen8/gigantamax/blastoise-gigantamax.png",
-	                 "../images/icons/pokemon/gen8/gigantamax/butterfree-gigantamax.png",
-	                 "../images/icons/pokemon/gen8/gigantamax/centiskorch-gigantamax.png",
-	                 "../images/icons/pokemon/gen8/gigantamax/charizard-gigantamax.png",
-	                 "../images/icons/pokemon/gen8/gigantamax/cinderace-gigantamax.png",
-	                 "../images/icons/pokemon/gen8/gigantamax/coalossal-gigantamax.png",
-	                 "../images/icons/pokemon/gen8/gigantamax/copperajah-gigantamax.png",
-	                 "../images/icons/pokemon/gen8/gigantamax/eevee-gigantamax.png",
-	                 "../images/icons/pokemon/gen8/gigantamax/flapple-gigantamax.png",
-	                 "../images/icons/pokemon/gen8/gigantamax/garbodor-gigantamax.png",
-	                 "../images/icons/pokemon/gen8/gigantamax/gengar-gigantamax.png",
-	                 "../images/icons/pokemon/gen8/gigantamax/grimmsnarl-gigantamax.png",
-	                 "../images/icons/pokemon/gen8/gigantamax/hatterene-gigantamax.png",
-	                 "../images/icons/pokemon/gen8/gigantamax/inteleon-gigantamax.png",
-	                 "../images/icons/pokemon/gen8/gigantamax/lapras-gigantamax.png",
-	                 "../images/icons/pokemon/gen8/gigantamax/machamp-gigantamax.png",
-	                 "../images/icons/pokemon/gen8/gigantamax/melmetal-gigantamax.png",
-	                 "../images/icons/pokemon/gen8/gigantamax/meowth-gigantamax.png",
-	                 "../images/icons/pokemon/gen8/gigantamax/orbeetle-gigantamax.png",
-	                 "../images/icons/pokemon/gen8/gigantamax/pikachu-gigantamax.png",
-	                 "../images/icons/pokemon/gen8/gigantamax/rillaboom-gigantamax.png",
-	                 "../images/icons/pokemon/gen8/gigantamax/sandaconda-gigantamax.png",
-	                 "../images/icons/pokemon/gen8/gigantamax/snorlax-gigantamax.png",
-	                 "../images/icons/pokemon/gen8/gigantamax/toxtricity-gigantamax.png",
-	                 "../images/icons/pokemon/gen8/gigantamax/urshifu-gigantamax-rapid-strike.png",
-	                 "../images/icons/pokemon/gen8/gigantamax/urshifu-gigantamax-single-strike.png"
+	                 "../images/icons/pokemon/gen8/swordshield/swordshield/gigantamax/alcremie-gigantamax.png",
+	                 "../images/icons/pokemon/gen8/swordshield/gigantamax/appletun-gigantamax.png",
+	                 "../images/icons/pokemon/gen8/swordshield/gigantamax/blastoise-gigantamax.png",
+	                 "../images/icons/pokemon/gen8/swordshield/gigantamax/butterfree-gigantamax.png",
+	                 "../images/icons/pokemon/gen8/swordshield/gigantamax/centiskorch-gigantamax.png",
+	                 "../images/icons/pokemon/gen8/swordshield/gigantamax/charizard-gigantamax.png",
+	                 "../images/icons/pokemon/gen8/swordshield/gigantamax/cinderace-gigantamax.png",
+	                 "../images/icons/pokemon/gen8/swordshield/gigantamax/coalossal-gigantamax.png",
+	                 "../images/icons/pokemon/gen8/swordshield/gigantamax/copperajah-gigantamax.png",
+	                 "../images/icons/pokemon/gen8/swordshield/gigantamax/eevee-gigantamax.png",
+	                 "../images/icons/pokemon/gen8/swordshield/gigantamax/flapple-gigantamax.png",
+	                 "../images/icons/pokemon/gen8/swordshield/gigantamax/garbodor-gigantamax.png",
+	                 "../images/icons/pokemon/gen8/swordshield/gigantamax/gengar-gigantamax.png",
+	                 "../images/icons/pokemon/gen8/swordshield/gigantamax/grimmsnarl-gigantamax.png",
+	                 "../images/icons/pokemon/gen8/swordshield/gigantamax/hatterene-gigantamax.png",
+	                 "../images/icons/pokemon/gen8/swordshield/gigantamax/inteleon-gigantamax.png",
+	                 "../images/icons/pokemon/gen8/swordshield/gigantamax/lapras-gigantamax.png",
+	                 "../images/icons/pokemon/gen8/swordshield/gigantamax/machamp-gigantamax.png",
+	                 "../images/icons/pokemon/gen8/swordshield/gigantamax/melmetal-gigantamax.png",
+	                 "../images/icons/pokemon/gen8/swordshield/gigantamax/meowth-gigantamax.png",
+	                 "../images/icons/pokemon/gen8/swordshield/gigantamax/orbeetle-gigantamax.png",
+	                 "../images/icons/pokemon/gen8/swordshield/gigantamax/pikachu-gigantamax.png",
+	                 "../images/icons/pokemon/gen8/swordshield/gigantamax/rillaboom-gigantamax.png",
+	                 "../images/icons/pokemon/gen8/swordshield/gigantamax/sandaconda-gigantamax.png",
+	                 "../images/icons/pokemon/gen8/swordshield/gigantamax/snorlax-gigantamax.png",
+	                 "../images/icons/pokemon/gen8/swordshield/gigantamax/toxtricity-gigantamax.png",
+	                 "../images/icons/pokemon/gen8/swordshield/gigantamax/urshifu-gigantamax-rapid-strike.png",
+					 "../images/icons/pokemon/gen8/swordshield/gigantamax/venusaur-gigantamax.png",
+					 "../images/icons/pokemon/gen8/swordshield/gigantamax/kingler-gigantamax.png",
+					 "../images/icons/pokemon/gen8/swordshield/gigantamax/corviknight-gigantamax.png",
+	                 "../images/icons/pokemon/gen8/swordshield/gigantamax/urshifu-gigantamax-single-strike.png"
 	                     ];
 	         
 	             // Function to change the image

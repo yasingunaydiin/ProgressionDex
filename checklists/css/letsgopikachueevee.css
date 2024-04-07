@@ -19,12 +19,33 @@
 #female {
 	color: pink;
 }
+.collapsible {
+    background-color: #f1f1f1;
+    cursor: pointer;
+    padding: 18px;
+    width: 500px;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+	margin: 5px;
+  }
 
+  .content {
+    padding: 0 18px;
+	display: none;
+  }
 /* Pokeicon */
 .pokeicon {
 	height: 40px;
 	margin-right: 5px;
 	margin-left: 5px;
+}
+.pokeicon.small{
+	height: 50px;
+	margin-right: -5px;
+	margin-left: -5px;
+
 }
 .pokeicon.legendary {
 	height: 30px;
@@ -251,4 +272,90 @@ footer li {
 .checkbox-item label:hover::before {
 	visibility: visible;
 	opacity: 1;
+}
+
+
+@media only screen and (max-width: 768px) {
+	/* Constant */
+    .main-header {
+        padding: 12px;
+        font-size: 7px;
+    }
+    footer {
+        height: 50px;
+        font-size: 12px;
+    }
+
+	/* Variable */
+
+	.logo-container {
+		display: flex;
+		align-items: center;
+		margin-top: 30px;
+	  }
+
+
+
+	  .panel-content {
+		width: 300px;
+	  }
+
+	  .wide-panel {
+		margin-top: 180px;
+		width: 350px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: center;
+		
+	  }
+		  .wide-panel.items {
+			margin-top: 0px;
+		  }
+
+		  .collapsible {
+		width: 290px;
+	}
+
+
+
+	.mega-rightrow, .mega-middlerow, .battle-rightrow {
+		margin-left: 0px;
+	}
+	
+
+	.pokeicon.item {
+		height: 20px;
+	}
+	
+
+	/* Two rows */
+	.completepokedex, .battle, .legendaries, .trainerpassport, .mega, .alolanforms, .other, .ingametrades, .giftpokemon {
+		align-items: center;
+	}
+	/* One row */
+	
+	.giftpokemon-rowcontainer {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	  }
+	.giftpokemon-rightrow {
+		margin-left: -135px;
+	}
+	.alolanforms-rowcontainer {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	  }
+	.alolanforms-rightrow {
+		margin-left: -85px;
+	}
+	
+.tms {
+	align-items: center;
+}
+	 
+	
+
 }

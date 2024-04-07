@@ -1,63 +1,41 @@
-.legendaries {
+.legendaries, .tms, .poketch, .egoodsitems, .ribbons, .battletower, .trainercard, .ingametrades, .giftpokemon, .completepokedex {
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 }
-.legendaries-rightrow {
+.legendaries-rightrow, .ribbons-rightrow, .ingametrades-rightrow {
 	margin-left: 40px;
 }
-.legendaries-rowcontainer {
+.legendaries-rowcontainer, .tms-rowcontainer, .poketch-rowcontainer, .egoodsitems-rowcontainer, .ribbons-rowcontainer, .ingametrades-rowcontainer {
 	display: flex;
-	align-items: flex-start; 
+	align-items: flex-start;
 }
-.tms {
-	display: flex;
-	flex-direction: column;
-}
-.tms-middlerow {
+.tms-middlerow, .egoodsitems-middlerow, .poketch-middlerow {
 	margin-left: 40px;
 	margin-right: 40px;
-} 
-.tms-rowcontainer {
-	display: flex;
-	align-items: flex-start; 
 }
-.poketch {
-	display: flex;
-	flex-direction: column;
-}
-.poketch-rightrow {
-	margin-left: 40px;
-}
-.poketch-rowcontainer {
-	display: flex;
-	align-items: flex-start; 
-}
-.egoodsitems {
-	display: flex;
-	flex-direction: column;
-}
-.egoodsitems-rightrow, .egoodsitems-middlerow {
-	margin-left: 40px;
-}
-.egoodsitems-rowcontainer {
-	display: flex;
-	align-items: flex-start; 
+* {
+	font-family: 'Alegreya Sans';
 }
 .pokeicon.trophy {
 	height: 20px;
 	margin-right: 5px;
 	margin-left: 5px;
 }
-.ribbons {
-	display: flex;
-	flex-direction: column;
+.collapsible {
+	background-color: #f1f1f1;
+	cursor: pointer;
+	padding: 18px;
+	width: 500px;
+	border: none;
+	text-align: left;
+	outline: none;
+	font-size: 15px;
+	margin: 5px;
 }
-.ribbons-rightrow {
-	margin-left: 40px;
-}
-.ribbons-rowcontainer {
-	display: flex;
-	align-items: flex-start; 
+.content {
+	padding: 0 18px;
+	display: none;
 }
 /* Header */
 
@@ -88,7 +66,6 @@
 	margin-right: 5px;
 	margin-left: 5px;
 }
-
 /* Logo Container */
 
 .logo-container {
@@ -117,7 +94,8 @@ a {
 body {
 	margin: 0;
 	padding: 0;
-	background: #ffffff url(../../images/patterns/pattern-diamond.png) repeat center center; /* Icons Vectors by Vecteezy */
+	background: #ffffff url(../../images/patterns/pattern-diamond.png) repeat center center;
+	/* Icons Vectors by Vecteezy */
 	background-size: 500px 250px;
 	height: 100vh;
 	display: flex;
@@ -149,23 +127,13 @@ span {
 	margin-top: 150px;
 	border: 2px solid #7A95C4;
 }
-.wide-panel.more {
+.wide-panel.more, .wide-panel.contests {
 	margin-bottom: 50px;
 	margin-top: 50px;
-}
-.wide-panel.contests {
-	margin-bottom: 50px;
-	margin-top: 50px;
-}
-.battletower {
-	margin-top: 20px;
 }
 img {
 	margin-left: -5px;
 }
-
-/* Panel Label */ 
-
 .panel-label {
 	display: block;
 	margin-bottom: 10px;
@@ -173,33 +141,6 @@ img {
 	font-weight: 1000;
 	color: #7A95C4;
 }
-/* Panel Content */
-
-.panel-content {
-	text-align: left;
-}
-/* Checkbox Group */
-
-.checkbox-group {
-	margin-top: 15px;
-}
-.row1, .row2, .row3 {
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
-}
-.moverow2 {
-	display: flex;
-	flex-direction: column;
-	margin-right: 50px;
-}
-.right-row {
-	display: flex;
-	flex-direction: column;
-	margin-right: 40px;
-}
-/* Checkbox Item */
-
 .checkbox-item {
 	margin-bottom: 10px;
 	display: flex;
@@ -215,7 +156,7 @@ img {
 
 footer {
 	height: 50px;
-	background: #7A95C4;
+	background: #86BFF3;
 	bottom: 0;
 	width: 100%;
 	text-align: center;
@@ -270,7 +211,40 @@ footer li {
 }
 /* Event container */
 
-.event-right {
-	display: flex;
-	flex-direction: column;
+@media only screen and (max-width: 768px) {
+	/* Constant */
+	.main-header {
+		padding: 12px;
+		font-size: 7px;
+	}
+	footer {
+		height: 50px;
+		font-size: 12px;
+	}
+	/* Variable */
+	.logo-container {
+		display: flex;
+		align-items: center;
+		margin-top: 30px;
+	}
+	.panel-content {
+		width: 300px;
+	}
+	.wide-panel {
+		margin-top: 180px;
+		width: 300px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: center;
+	}
+	.wide-panel.items {
+		margin-top: 0px;
+	}
+	.egoodsitems-rightrow, .egoodsitems-middlerow {
+		margin-left: 10px;
+	}
+	.legendaries, .poketch, .egoodsitems, .tms {
+		align-items: center;
+	}
 }

@@ -1,59 +1,28 @@
-.legendaries {
+* {font-family: 'Alegreya Sans';}
+
+.legendaries, .giftpokemon, .tms, .ingametrades, .unown, .completepokedex, .battle {
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 }
-.legendaries-rightrow {
+.legendaries-rightrow, .giftpokemon-rightrow, .ingametrades-rightrow, .tms-rightrow {
 	margin-left: 40px;
 }
-.legendaries-rowcontainer {
+.legendaries-rowcontainer, .giftpokemon-rowcontainer, .tms-rowcontainer, .ingametrades-rowcontainer, .unown-rowcontainer, .tms-rowcontainer {
 	display: flex;
 	align-items: flex-start; 
 }
-.giftpokemon {
-	display: flex;
-	flex-direction: column;
-}
-.giftpokemon-rightrow {
-	margin-left: 40px;
-}
-.giftpokemon-rowcontainer {
-	display: flex;
-	align-items: flex-start; 
-}
-.tms {
-	display: flex;
-	flex-direction: column;
-}
-.tms-rightrow, .tms-middlerow {
-	margin-left: 40px;
-}
-.tms-rowcontainer {
-	display: flex;
-	align-items: flex-start; 
-}
-.ingametrades {
-	display: flex;
-	flex-direction: column;
-}
-.ingametrades-rightrow {
-	margin-left: 40px;
-}
-.ingametrades-rowcontainer {
-	display: flex;
-	align-items: flex-start; 
-}
-.unown {
-	display: flex;
-	flex-direction: column;
-}
+
 .unown-middlerow {
-	margin-left: 40px;
-	margin-right: 40px;
+	margin-left: 50px;
+	margin-right: 50px;
 }
-.unown-rowcontainer {
-	display: flex;
-	align-items: flex-start; 
+
+.icon-small {
+	height: 25px;
+	margin-left: 5px;
 }
+
 .main-header {
 	position: fixed;
 	top: 0;
@@ -75,7 +44,7 @@
 	height: 40px;
 }
 .pokeicon.unown {
-	height: 40px;
+	height: 30px;
 }
 .pokeicon.legendaries {
 	height: 30px;
@@ -115,20 +84,24 @@ body {
 .page-container {
 	display: flex;
 	justify-content: space-evenly;
-	flex-wrap: wrap;
 	align-items: baseline;
+	flex-wrap: wrap;
+
 }
+
+
 /* page */
 
 .wide-panel {
 	text-align: center;
-	padding: 20px;
-	border-radius: 8px;
-	width: 500px;
-	margin: 30px;
-	box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
-	background-color: white;
-	margin-top: 150px;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 100%; /* Set maximum width to prevent overflow */
+    width: 500px; /* Allow the width to adjust based on content */
+    margin: 30px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    background-color: white;
+    margin-top: 150px;
 	border: 2px solid #E3C07D;
 }
 .wide-panel.quests {
@@ -141,41 +114,13 @@ body {
 	font-size: 25px;
 	font-weight: 1000;
 	color: #E3C07D;
+
 }
-.panel-content {
-	text-align: left;
+.page-container-left {
+	align-items: center;
 }
 .checkbox-group {
 	margin-bottom: 15px;
-}
-.row1, .row2, .row3 {
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
-}
-.moverow2 {
-	display: flex;
-	flex-direction: column;
-	margin-right: 111px;
-}
-.legendaries {
-	display: flex;
-	flex-direction: column;
-	margin-right: 111px;
-	margin-top: 15px;
-}
-.middle-row {
-	display: flex;
-	flex-direction: column;
-}
-.right-row {
-	display: flex;
-	flex-direction: column;
-}
-.trade-rowright {
-	display: flex;
-	flex-direction: column;
-	margin-right: 8px;
 }
 .checkbox-item {
 	margin-bottom: 10px;
@@ -219,8 +164,9 @@ footer li {
 }
 .checkbox-item label::before {
 	content: attr(data-tooltip);
+	white-space: pre-line;
 	visibility: hidden;
-	width: 200px;
+	width: 100px;
 	background-color: #333;
 	color: #fff;
 	text-align: center;
@@ -240,4 +186,59 @@ footer li {
 .checkbox-item label:hover::before {
 	visibility: visible;
 	opacity: 1;
+}
+
+@media only screen and (max-width: 768px) {
+	/* Constant */
+    .main-header {
+        padding: 12px;
+        font-size: 7px;
+    }
+    footer {
+        height: 50px;
+        font-size: 12px;
+    }
+
+	/* Variable */
+
+	.logo-container {
+		display: flex;
+		align-items: center;
+		margin-top: 30px;
+	  }
+
+	  .panel-content {
+		width: 300px;
+	  }
+
+	  .wide-panel {
+		margin-top: 180px;
+		width: 300px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: center;
+		
+	  }
+
+	  .unown {
+		white-space: nowrap;
+		align-items: center;
+	}
+		  .unown-middlerow {
+			margin-left: 10px;
+			margin-right: 10px;
+			
+		  }
+	
+		  .wide-panel.items {
+			margin-top: 0px;
+		  }
+
+		  .legendaries, .giftpokemon, .ingametrades, .tms  {
+			align-items: center;
+		  }
+
+
+
 }

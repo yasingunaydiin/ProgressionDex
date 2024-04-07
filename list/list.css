@@ -8,7 +8,7 @@ a {
 	position: fixed;
 	top: 0;
 	left: 0;
-	right: 0;
+	right: 0; 
 	background-color: #79AD75;
 	padding: 10px 10px 10px 10px;
 	display: flex;
@@ -29,38 +29,11 @@ body {
 	padding: 0;
 	background: #ffffff url(../images/patterns/pattern-list.png) repeat center center;
 	background-size: 500px 250px;
-	height: 140vh;
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
 }
-.generation-header {
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Center horizontally */
-    margin-bottom: 700px;
-    padding: 3px;
-    border: 2px solid #558951;
-    background: #79AD75;
-    font-weight: normal;
-    font-size: 11px;
-    position: fixed;
-    border-radius: 20px;
-    z-index: 1000;
-    top: 50%; /* Position at the vertical center of the viewport */
-    left: 50%; /* Position at the horizontal center of the viewport */
-    transform: translate(-50%, -850%); /* Adjust for horizontal and vertical centering */
-    width: 90%;
-    text-align: center; /* Center the text horizontally */
-}
-
-.generation-header h1 {
-	margin: 5px 15px 5px 2vh;
-	font-size: 20px;
-	color: #DEECD8;
-}
 img {
-	width: 250px;
 	height: 139.706px;
 	flex-shrink: 0;
 }
@@ -82,7 +55,7 @@ button {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin-top: 4100px;
+	margin-top: 0px;
 }
 .gen-row {
 	display: flex;
@@ -91,34 +64,27 @@ button {
 	margin: auto;
 	margin-bottom: 30px;
 	flex-wrap: wrap;
-	background-color: white;
 	position: relative;
 	padding-top: 80px;
+	
 }
-.gen-h1 {
+
+.gen-title {
 	position: absolute;
 	font-size: 1rem;
-	left: 8%;
-	transform: translateX(-50%);
-	margin-top: -380px;
 	padding: 2px;
 	border: 2px solid #ebebeb;
 	background: rgb(241, 241, 241);
 	color: #949494;
 	font-weight: normal;
 }
-.gen-h1-singlebox {
-	position: absolute;
-	font-size: 1rem;
-	left: 25%;
-	transform: translateX(-50%);
-	margin-top: -240px;
-	padding: 2px;
-	border: 2px solid #ebebeb;
-	background: rgb(241, 241, 241);
-	color: #949494;
-	font-weight: normal;
+
+.gen-title {
+    position: absolute;
+    top: 40px; /* Adjust as needed */
+    
 }
+
 
 .gen-item {
 	display: flex;
@@ -132,6 +98,7 @@ button {
 	box-sizing: border-box;
 	margin: 10px;
 	box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+	background-color: white;
 }
 /* Footer COPY*/
 
@@ -167,3 +134,26 @@ footer a {
 }
 
 
+
+/* Media queries for responsiveness */
+@media only screen and (max-width: 768px) {
+  /* Constant */
+  .main-header {
+	padding: 12px;
+	font-size: 7px;
+}
+footer {
+	height: 50px;
+	font-size: 12px;
+}
+    
+    .gen-item {
+        min-width: 350px;
+        min-height: 200px;
+    }
+    
+    footer {
+        height: 50px;
+        font-size: 12px;
+    }
+}
