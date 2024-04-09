@@ -1,3 +1,5 @@
+* {font-family: 'Alegreya Sans';}
+
 .collapsible {
     background-color: #f1f1f1;
     cursor: pointer;
@@ -44,14 +46,7 @@
 	margin-right: 3px;
 	margin-left: 3px;
 }
-.pokeicon.legendarysmall {
-	margin-right: 0px;
-	margin-left: 0px;
-}
-.egoodsitems {
-	display: flex;
-	align-items: flex-end;
-}
+
 
 /* Logo Container */
 .icon-small {
@@ -121,23 +116,9 @@ span {
 	margin-bottom: 50px;
 	margin-top: 50px;
 }
-.wide-panel.contests {
-	margin-bottom: 50px;
-	margin-top: 50px;
-}
 img {
 	margin-left: -5px;
 }
-.opower {
-	display: flex;
-}
-.opower-rightrow {
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-end;
-	margin-left: 10px;
-}
-
 /* Panel Label */
 .panel-label {
 	display: block;
@@ -153,46 +134,47 @@ img {
 }
 
 /* Checkbox Group */
-.ingametrades, .legendaries, .sidequests, .tms, .pokepelago, .giftpokemon, .z-crystals, .mega, .battletree, .restaurants, .completepokedex, .minior, .ultrabeasts, .trainerpassport, .alolanforms, .other, .giftpokemon-totem, .ultrawormhole, .mantinesurf {
+.ingametrades, .legendaries, .pokefinder, .battleroyal, .sidequests, .tms, .pokepelago, .giftpokemon, .z-crystals, .mega, .battletree, .completepokedex, .minior, .ultrabeasts, .trainerpassport, .alolanforms, .other, .giftpokemon-totem, .ultrawormhole, .mantinesurf {
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 }
-.legendaries-rightrow, .trainerpassport-rightrow, .ultrabeasts-rightrow, .ingametrades-rightrow, .battletree-rightrow, .tms-middlerow, .tms-rightrow, .z-crystals-rightrow, .other-rightrow, .giftpokemon-totem-rightrow, .z-crystals-middlerow, .mantinesurf-rightrow, .ultrawormhole-rightrow, .mega-rightrow, .mega-middlerow, .restaurants-rightrow, .pokepelago-rightrow, .pokepelago-middlerow, .giftpokemon-rightrow, .opower-rightrow, .completepokedex-rightrow, .completepokedex-rightrow {
+.legendaries-rightrow, .trainerpassport-rightrow, .pokefinder-rightrow, .ultrabeasts-rightrow, .ingametrades-rightrow, .battletree-rightrow, .other-rightrow, .giftpokemon-totem-rightrow, .z-crystals-middlerow, .mantinesurf-rightrow, .ultrawormhole-rightrow, .pokepelago-rightrow, .pokepelago-middlerow, .giftpokemon-rightrow, .completepokedex-rightrow, .completepokedex-rightrow {
 	margin-left: 40px;
 }
-.alolanforms-middlerow, .alolanforms-rightrow {
-	margin-left: 20px;
-}
-.minior-rightrow, .minior-leftrow  {
-	margin-left: 20px;
-}
- .sidequests-middlerow {
-	margin-left: 15px;
-	
-
-}
-.sidequests-rightrow {
-	margin-left: 0px;
-}
-.legendaries-rowcontainer, .trainerpassport-rowcontainer, .sidequests-rowcontainer, .ultrabeasts-rowcontainer, .tms-rowcontainer, .battletree-rowcontainer, .pokepelago-rowcontainer, .giftpokemon-rowcontainer, .other-rowcontainer, .giftpokemon-totem-rowcontainer, .z-crystals-rowcontainer, .mantinesurf-rowcontainer, .ultrawormhole-rowcontainer, .mega-rowcontainer, .completepokedex-rowcontainer, .minior-rowcontainer, .ingametrades-rowcontainer, .alolanforms-rowcontainer {
+.legendaries-rowcontainer, .trainerpassport-rowcontainer, .sidequests-rowcontainer, .pokefinder-rowcontainer, .ultrabeasts-rowcontainer, .tms-rowcontainer, .battletree-rowcontainer, .pokepelago-rowcontainer, .giftpokemon-rowcontainer, .other-rowcontainer, .giftpokemon-totem-rowcontainer, .z-crystals-rowcontainer, .mantinesurf-rowcontainer, .ultrawormhole-rowcontainer, .mega-rowcontainer, .completepokedex-rowcontainer, .minior-rowcontainer, .ingametrades-rowcontainer, .alolanforms-rowcontainer {
 	display: flex;
 	align-items: flex-start; 
 }
-.pokeicon.item, .pokeicon.mega {
+
+
+.colorpokemon {
+	display: flex;
+}
+.oricorio {
+	margin-right: 20px;
+}
+.minior-rightrow {
+	margin-left: 20px;
+}
+
+
+.alolanforms-middlerow {
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+ .sidequests-middlerow, .mega-middlerow, .z-crystals-middlerow, .tms-middlerow {
+	margin-left: 40px;
+	margin-right: 40px;
+}
+
+.pokeicon.item, .pokeicon.mega, .pokeicon.totem, .pokeicon.z-crystal {
 	height: 30px;
 	margin-right: 5px;
 	margin-left: 5px;
 }
-.pokeicon.z-crystal {
-	height: 25px;
-}
-.colorpokemon {
-	display: flex;
-}
-.pokeicon.totem {
-    height: 30px;
-	
-}
+
 /* Checkbox Item */
 .checkbox-item {
 	margin-bottom: 10px;
