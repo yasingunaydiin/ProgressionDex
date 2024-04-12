@@ -3,18 +3,16 @@
 <head>
 	<meta charset="UTF-8">
 	<meta content="width=device-width, initial-scale=1.0" name="viewport">
-	<title>Progression Dex | The Crown Tundra</title><!-- External CSS -->
-	<link href="../checklists/css/crowntundra.css" rel="stylesheet"><!-- Favicon -->
+	<title>ProgressionDex | The Crown Tundra</title>
+	<link href="../checklists/css/crowntundra.css" rel="stylesheet">
 	<link href="../images/icons/favicontab.ico" rel="icon" type="image/x-icon">
-	<link href="../images/icons/favicontab.ico" rel="shortcut icon" type="image/x-icon"><!-- Google Fonts -->
+	<link href="../images/icons/favicontab.ico" rel="shortcut icon" type="image/x-icon">
 	<link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@700&display=swap" rel="stylesheet"><!-- Internal Styles -->
+	<link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-	<!-- Header -->
 	<header class="main-header">
-		<!-- Logo -->
-		<h1 class="header-left"><a href="../index/index.html">PROGRESSION DEX</a></h1><!-- Back to list link -->
+		<h1 class="header-left"><a href="../index/index.html">PROGRESSION DEX</a></h1>
 		<h1 class="header-right">yasingunaydiin</h1>
 	</header>
 	<div class="page-container">
@@ -160,7 +158,7 @@
 			<div class="wide-panel items" id="items">
 				<label class="panel-label" id="title">Items</label>
 				<div class="panel-content">
-					<button class="collapsible" >Collect all Technical Records</button>
+					<button class="collapsible">Collect all Technical Records</button>
 					<div class="content">
 						<div class="trs">
 							<div class="trs-rowcontainer">
@@ -257,7 +255,7 @@
 	<footer>
 		<ul>
 			<li>
-				<a href="../index/index.html">Progression Dex</a>
+				<a href="../index/index.html">ProgressionDex</a>
 			</li>
 			<li>
 				<a href="#">Twitter</a>
@@ -270,52 +268,52 @@
 	<script src="../checklists/js/script.js">
 	</script> 
 	<script>
-	         //TM, TR Dropdown
-	                
-	         document.addEventListener('DOMContentLoaded', function() {
-	          document.querySelectorAll('.collapsible').forEach(collapsible => {
-	            collapsible.addEventListener('click', () => {
-	              collapsible.classList.toggle('active');
-	              collapsible.nextElementSibling.style.display = (collapsible.nextElementSibling.style.display === 'block') ? 'none' : 'block';
+	            //TM, TR Dropdown
+	                   
+	            document.addEventListener('DOMContentLoaded', function() {
+	             document.querySelectorAll('.collapsible').forEach(collapsible => {
+	               collapsible.addEventListener('click', () => {
+	                 collapsible.classList.toggle('active');
+	                 collapsible.nextElementSibling.style.display = (collapsible.nextElementSibling.style.display === 'block') ? 'none' : 'block';
+	               });
+	             });
 	            });
-	          });
-	         });
 
 
 	</script> 
 	<script>
-	                                           document.addEventListener('DOMContentLoaded', function() {
-	                                       const completepokedexCheckboxes = document.querySelectorAll('.completepokedex input[type="checkbox"]');
-	                                       const legendariesCheckboxes = document.querySelectorAll('.legendaries input[type="checkbox"]');
-	                                       const galarianformsCheckboxes = document.querySelectorAll('.galarianforms input[type="checkbox"]');
-	                                       const leaguecardCheckboxes = document.querySelectorAll('.leaguecard input[type="checkbox"]');
-	                                       const legendarythreestoryCheckboxes = document.querySelectorAll('.legendarythreestory input[type="checkbox"]');
-	                                       const terribletitansstoryCheckboxes = document.querySelectorAll('.terribletitansstory input[type="checkbox"]');
-	                                       const ultrabeyondstoryCheckboxes = document.querySelectorAll('.ultrabeyondstory input[type="checkbox"]');
-	                                       const footprintsCheckboxes = document.querySelectorAll('.footprints input[type="checkbox"]');
+	                                              document.addEventListener('DOMContentLoaded', function() {
+	                                          const completepokedexCheckboxes = document.querySelectorAll('.completepokedex input[type="checkbox"]');
+	                                          const legendariesCheckboxes = document.querySelectorAll('.legendaries input[type="checkbox"]');
+	                                          const galarianformsCheckboxes = document.querySelectorAll('.galarianforms input[type="checkbox"]');
+	                                          const leaguecardCheckboxes = document.querySelectorAll('.leaguecard input[type="checkbox"]');
+	                                          const legendarythreestoryCheckboxes = document.querySelectorAll('.legendarythreestory input[type="checkbox"]');
+	                                          const terribletitansstoryCheckboxes = document.querySelectorAll('.terribletitansstory input[type="checkbox"]');
+	                                          const ultrabeyondstoryCheckboxes = document.querySelectorAll('.ultrabeyondstory input[type="checkbox"]');
+	                                          const footprintsCheckboxes = document.querySelectorAll('.footprints input[type="checkbox"]');
 
-	                                       function updateStyle(checkboxes, label) {
-	                                           const allChecked = [...checkboxes].every(checkbox => checkbox.checked);
-	                                           label.style.textDecoration = allChecked ? 'line-through' : 'none';
-	                                       }
+	                                          function updateStyle(checkboxes, label) {
+	                                              const allChecked = [...checkboxes].every(checkbox => checkbox.checked);
+	                                              label.style.textDecoration = allChecked ? 'line-through' : 'none';
+	                                          }
 
-	                                       function initializeCheckboxes(checkboxes, label) {
-	                                           checkboxes.forEach(checkbox => {
-	                                               checkbox.addEventListener('change', function() {
-	                                                   updateStyle(checkboxes, label);
-	                                               });
-	                                           });
-	                                           updateStyle(checkboxes, label);
-	                                       }
-	                                       initializeCheckboxes(completepokedexCheckboxes, document.querySelector('.completepokedex .title label'));
-	                                       initializeCheckboxes(legendariesCheckboxes, document.querySelector('.legendaries .title label'));
-	                                       initializeCheckboxes(galarianformsCheckboxes, document.querySelector('.galarianforms .title label'));
-	                                       initializeCheckboxes(leaguecardCheckboxes, document.querySelector('.leaguecard .title label'));
-	                                       initializeCheckboxes(legendarythreestoryCheckboxes, document.querySelector('.legendarythreestory .title label'));
-	                                       initializeCheckboxes(terribletitansstoryCheckboxes, document.querySelector('.terribletitansstory .title label'));
-	                                       initializeCheckboxes(ultrabeyondstoryCheckboxes, document.querySelector('.ultrabeyondstory .title label'));
-	                                       initializeCheckboxes(footprintsCheckboxes, document.querySelector('.footprints .title label'));
-	                                    });
+	                                          function initializeCheckboxes(checkboxes, label) {
+	                                              checkboxes.forEach(checkbox => {
+	                                                  checkbox.addEventListener('change', function() {
+	                                                      updateStyle(checkboxes, label);
+	                                                  });
+	                                              });
+	                                              updateStyle(checkboxes, label);
+	                                          }
+	                                          initializeCheckboxes(completepokedexCheckboxes, document.querySelector('.completepokedex .title label'));
+	                                          initializeCheckboxes(legendariesCheckboxes, document.querySelector('.legendaries .title label'));
+	                                          initializeCheckboxes(galarianformsCheckboxes, document.querySelector('.galarianforms .title label'));
+	                                          initializeCheckboxes(leaguecardCheckboxes, document.querySelector('.leaguecard .title label'));
+	                                          initializeCheckboxes(legendarythreestoryCheckboxes, document.querySelector('.legendarythreestory .title label'));
+	                                          initializeCheckboxes(terribletitansstoryCheckboxes, document.querySelector('.terribletitansstory .title label'));
+	                                          initializeCheckboxes(ultrabeyondstoryCheckboxes, document.querySelector('.ultrabeyondstory .title label'));
+	                                          initializeCheckboxes(footprintsCheckboxes, document.querySelector('.footprints .title label'));
+	                                       });
 	</script>
 </body>
 </html>

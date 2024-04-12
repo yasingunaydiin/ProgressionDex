@@ -1,25 +1,26 @@
 .collapsible {
-    background-color: #f1f1f1;
-    cursor: pointer;
-    padding: 18px;
-    width: 500px;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
+	background-color: #f1f1f1;
+	cursor: pointer;
+	padding: 18px;
+	width: 500px;
+	border: none;
+	text-align: left;
+	outline: none;
+	font-size: 15px;
 	margin: 5px;
-  }
-
-  .content {
-    padding: 0 18px;
+}
+.content {
+	padding: 0 18px;
 	display: none;
-  }
-
+}
 /* Common font family */
- * {font-family: 'Alegreya Sans';}
- 
+
+* {
+	font-family: 'Alegreya Sans';
+}
 /* Header */
- .main-header {
+
+.main-header {
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -36,8 +37,8 @@
 #female {
 	color: pink;
 }
-
 /* Pokeicon */
+
 .pokeicon {
 	height: 40px;
 	margin-right: 5px;
@@ -54,16 +55,11 @@
 	margin-right: 3px;
 	margin-left: 3px;
 }
-
 .pokeicon.gigantamax {
 	height: 30px;
 }
-.egoodsitems {
-	display: flex;
-	align-items: flex-end;
-}
-
 /* Logo Container */
+
 .icon-small {
 	height: 25px;
 	margin-left: 0px;
@@ -73,8 +69,8 @@
 	z-index: 2000;
 	position: fixed;
 }
-
 /* Links */
+
 a {
 	text-decoration: none;
 	color: #fff;
@@ -89,8 +85,8 @@ a {
 	margin-top: 2px;
 	left: 250px;
 }
-
 /* Body */
+
 body {
 	margin: 0;
 	padding: 0;
@@ -101,21 +97,21 @@ body {
 	display: flex;
 	flex-direction: column;
 }
-
 /* Page Container */
+
 .page-container {
 	display: flex;
 	justify-content: space-evenly;
 	flex-wrap: wrap;
 	align-items: baseline;
 }
-
 /* Span */
+
 span {
 	pointer-events: none;
 }
-
 /* Wide Panel */
+
 .wide-panel {
 	text-align: center;
 	padding: 20px;
@@ -131,24 +127,11 @@ span {
 	margin-bottom: 50px;
 	margin-top: 50px;
 }
-.wide-panel.contests {
-	margin-bottom: 50px;
-	margin-top: 50px;
-}
 img {
 	margin-left: -5px;
 }
-.opower {
-	display: flex;
-}
-.opower-rightrow {
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-end;
-	margin-left: 10px;
-}
-
 /* Panel Label */
+
 .panel-label {
 	display: block;
 	margin-bottom: 10px;
@@ -156,38 +139,24 @@ img {
 	font-weight: 1000;
 	color: #181369;
 }
-
 /* Panel Content */
+
 .panel-content {
 	text-align: left;
 }
-
 /* Checkbox Group */
-.ingametrades, .legendaries, .gigantamax, .leaguecard, .leaguecard-customizations, .sidequests, .ribbons, .tms, .pokepelago, .giftpokemon, .z-crystals, .mega, .battletree, .restaurants, .completepokedex, .minior, .currydex, .trainerpassport, .galarianforms, .battletower, .giftpokemon-totem, .ultrawormhole, .mantinesurf {
+
+.ingametrades, .legendaries, .gigantamax, .leaguecard, .leaguecard-customizations, .sidequests, .ribbons, .tms, .trs, .giftpokemon, .completepokedex, .currydex, .galarianforms, .battletower, .campingtoys, .other {
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 }
-.legendaries-rightrow, .trainerpassport-rightrow, .gigantamax-rightrow, .leaguecard-customizations-rightrow, .ribbons-rightrow, .currydex-rightrow, .battletree-rightrow, .tms-middlerow, .tms-rightrow, .z-crystals-rightrow, .battletower-rightrow, .galarianforms-rightrow, .giftpokemon-totem-rightrow, .z-crystals-middlerow, .mantinesurf-rightrow, .ultrawormhole-rightrow, .mega-rightrow, .mega-middlerow, .restaurants-rightrow, .pokepelago-rightrow, .pokepelago-middlerow, .opower-rightrow, .completepokedex-rightrow {
+.legendaries-rightrow, .gigantamax-rightrow, .leaguecard-customizations-rightrow, .ribbons-rightrow, .currydex-rightrow, .battletower-rightrow, .other-rightrow, .galarianforms-rightrow, .completepokedex-rightrow, .giftpokemon-rightrow, .ingametrades-rightrow, .campingtoys-rightrow {
 	margin-left: 40px;
 }
-.giftpokemon-rightrow {
-	margin-left: 10px;
-}
-.ingametrades-rightrow {
-	margin-left: -10px;
-}
-
-
-
-.minior-rightrow, .minior-leftrow  {
-	margin-left: 20px;
-}
-.sidequests-rightrow {
-	margin-left: 10px;
-}
-.legendaries-rowcontainer, .leaguecard-customizations-rowcontainer, .gigantamax-rowcontainer, .trainerpassport-rowcontainer, .leaguecard-rowcontainer, .ribbons-rowcontainer, .sidequests-rowcontainer, .currydex-rowcontainer, .tms-rowcontainer, .battletree-rowcontainer, .pokepelago-rowcontainer, .giftpokemon-rowcontainer, .battletower-rowcontainer, .giftpokemon-totem-rowcontainer, .z-crystals-rowcontainer, .mantinesurf-rowcontainer, .ultrawormhole-rowcontainer, .mega-rowcontainer, .completepokedex-rowcontainer, .minior-rowcontainer, .ingametrades-rowcontainer, .galarianforms-rowcontainer {
+.legendaries-rowcontainer, .leaguecard-customizations-rowcontainer, .campingtoys-rowcontainer, .gigantamax-rowcontainer, .trainerpassport-rowcontainer, .leaguecard-rowcontainer, .other-rowcontainer, .ribbons-rowcontainer, .sidequests-rowcontainer, .currydex-rowcontainer, .tms-rowcontainer, .trs-rowcontainer, .giftpokemon-rowcontainer, .battletower-rowcontainer, .completepokedex-rowcontainer, .ingametrades-rowcontainer, .galarianforms-rowcontainer {
 	display: flex;
-	align-items: flex-start; 
+	align-items: flex-start;
 }
 .pokeicon.item, .pokeicon.mega {
 	height: 30px;
@@ -198,14 +167,14 @@ img {
 	margin-right: 18px;
 	white-space: nowrap;
 }
-
+.tms-middlerow, .trs-middlerow {
+	margin-left: 40px;
+	margin-right: 40px;
+}
 .pokeicon.npc {
 	height: 30px;
 	margin-left: -5px;
 	margin-right: -5px;
-}
-.colorpokemon {
-	display: flex;
 }
 .wide-panel.leaguecards {
 	width: 1000px;
@@ -214,8 +183,8 @@ img {
 .pokeicon.leaguecard {
 	height: 180px;
 }
-
 /* Checkbox Item */
+
 .checkbox-item {
 	margin-bottom: 10px;
 	display: flex;
@@ -227,8 +196,8 @@ img {
 .small-text {
 	font-size: 14px;
 }
-
 /* Footer */
+
 footer {
 	height: 50px;
 	background: #181369;
@@ -251,8 +220,8 @@ footer li {
 	list-style: none;
 	font-size: 15px;
 }
-
 /* Checkbox Item Label */
+
 .checkbox-item label {
 	position: relative;
 	display: inline-block;
@@ -284,99 +253,80 @@ footer li {
 	visibility: visible;
 	opacity: 1;
 }
-
 @media only screen and (max-width: 768px) {
 	/* Constant */
-    .main-header {
-        padding: 12px;
-        font-size: 7px;
-    }
-    footer {
-        height: 50px;
-        font-size: 12px;
-    }
-
+	.main-header {
+		padding: 12px;
+		font-size: 7px;
+	}
+	footer {
+		height: 50px;
+		font-size: 12px;
+	}
 	/* Variable */
-
 	.logo-container {
 		display: flex;
 		align-items: center;
 		margin-top: 30px;
-	  }
-
-
-
-	  .panel-content {
+	}
+	.panel-content {
 		width: 300px;
-	  }
-
-	  .wide-panel {
+	}
+	.wide-panel {
 		margin-top: 180px;
 		width: 350px;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-evenly;
 		align-items: center;
-		
-	  }
-	  .tms, .trs {
+	}
+	.tms, .trs {
 		align-items: center;
 	}
-		  .wide-panel.items {
-			margin-top: 0px;
-		  }
-
-		  .collapsible {
+	.wide-panel.items {
+		margin-top: 0px;
+	}
+	.collapsible {
 		width: 290px;
 	}
-
-
 	.pokeicon.item {
 		height: 20px;
 	}
-	
-
-	/* Two rows */
-	.completepokedex, .battle, .legendaries, .trainerpassport, .mega, .leaguecard, .galarianforms, .other, .ingametrades, .giftpokemon, .gigantamax, .battletower, .ribbons, .campingtoys, .sidequests, .currydex {
-		align-items: center;
+	.pokeicon.tm {
+		height: 20px;
+	}
+	.trs-middlerow, .tms-middlerow {
+		margin-left: 0px;
+		margin-right: 0px;
 	}
 	/* One row */
-	
 	.giftpokemon-rowcontainer {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-	  }
-	  
-	 .galarianforms-rightrow, .giftpokemon-rightrow {
+	}
+	.galarianforms-rightrow, .giftpokemon-rightrow {
 		margin-left: 0px;
 	}
 	.galarianforms-rowcontainer {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-	  }
-	.sidequests-rightrow {
-		margin-left: -40px;
 	}
-
 	.ingametrades-rowcontainer {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-	  }
+	}
 	.ingametrades-rightrow {
 		margin-left: 0px;
 	}
-	
 	.leaguecard-rowcontainer {
 		display: flex;
 		flex-direction: column;
 		margin-left: 60px;
-		
-	  }
-	 .pokeicon.leaguecard {
+	}
+	.pokeicon.leaguecard {
 		height: 200px;
-	 }
-
+	}
 }

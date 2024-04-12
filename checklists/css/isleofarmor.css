@@ -117,26 +117,17 @@ img {
 	font-weight: 1000;
 	color: #f6ce31;
 }
-/* Panel Content */
-
-.panel-content {
-	text-align: left;
-}
 /* Checkbox Group */
 
-.legendaries, .leaguecard, .quests, .galarianforms, .trs, .ingametrades, .diglettquest, .gigantamax {
+.legendaries, .leaguecard, .quests, .galarianforms, .trs, .ingametrades, .diglettquest, .gigantamax, .completepokedex, .giftpokemon, .specialitems {
 	display: flex;
 	flex-direction: column;
-	white-space: nowrap;
+	align-items: center;
 }
 .legendaries-rightrow, .quests-rightrow, .trs-rightrow, .diglettquest-rightrow, .gigantamax-rightrow {
 	margin-left: 40px;
 }
-.trs-rowcontainer {
-	display: flex;
-	justify-content: space-around;
-}
-.legendaries-rowcontainer, .leaguecard-rowcontainer, .quests-rowcontainer, .ingametrades-rowcontainer, .diglettquest-rowcontainer, .gigantamax-rowcontainer {
+.legendaries-rowcontainer, .leaguecard-rowcontainer, .quests-rowcontainer, .ingametrades-rowcontainer, .diglettquest-rowcontainer, .gigantamax-rowcontainer, .trs-rowcontainer {
 	display: flex;
 	align-items: flex-start;
 }
@@ -232,68 +223,48 @@ footer li {
 	visibility: visible;
 	opacity: 1;
 }
-
 @media only screen and (max-width: 768px) {
 	/* Constant */
-    .main-header {
-        padding: 12px;
-        font-size: 7px;
-    }
-    footer {
-        height: 50px;
-        font-size: 12px;
-    }
-
+	.main-header {
+		padding: 12px;
+		font-size: 7px;
+	}
+	footer {
+		height: 50px;
+		font-size: 12px;
+	}
 	/* Variable */
-
 	.logo-container {
 		display: flex;
 		align-items: center;
 		margin-top: 30px;
-	  }
-
-
-
-	  .panel-content {
+	}
+	.panel-content {
 		width: 300px;
-	  }
-
-	  .wide-panel {
+	}
+	.wide-panel {
 		margin-top: 180px;
 		width: 350px;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-evenly;
 		align-items: center;
-		
-	  }
-	  .trs {
+	}
+	.trs {
 		align-items: center;
 	}
-		  .wide-panel.items {
-			margin-top: 0px;
-		  }
-
-		  .collapsible {
+	.wide-panel.items {
+		margin-top: 0px;
+	}
+	.collapsible {
 		width: 290px;
 	}
-
-
 	.pokeicon.item {
 		height: 20px;
 	}
-	
-
 	/* Two rows */
-	.completepokedex, .legendaries, .quests, .leaguecard, .galarianforms, .ingametrades, .diglettquest, .gigantamax, .specialitems {
-		align-items: center;
-		white-space: normal;
-	}
 	/* One row */
-	
-	
-	  
-	 .galarianforms-rightrow, .giftpokemon-rightrow {
+	.galarianforms-rightrow, .giftpokemon-rightrow {
 		margin-left: 0px;
 	}
 	.quests-rowcontainer {
@@ -305,21 +276,16 @@ footer li {
 	.diglettquest-rightrow {
 		margin-left: 0px;
 	}
-	
 	.leaguecard-rowcontainer {
 		display: flex;
 		flex-direction: column;
 		margin-left: 60px;
-		
-	  }
-	  .ingametrades-rowcontainer {
+	}
+	.ingametrades-rowcontainer {
 		display: flex;
 		flex-direction: column;
-		
-	  }
-	 
-	 .pokeicon.leaguecard {
+	}
+	.pokeicon.leaguecard {
 		height: 200px;
-	 }
-
+	}
 }
