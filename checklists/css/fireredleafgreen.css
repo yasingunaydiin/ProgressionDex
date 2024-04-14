@@ -1,4 +1,4 @@
-* {font-family: 'Alegreya Sans';}
+* {font-family: system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue;}
 
 .legendaries, .tms, .giftpokemon, .ingametrades, .unown, .trainercardstickers, .completepokedex, .trainercard, .trainertower {
 	display: flex;
@@ -264,7 +264,9 @@ footer li {
 		align-items: center;
 		margin-top: 30px;
 	  }
-
+	  .collapsible {
+		width: 290px;
+	}
 	  .panel-content {
 		width: 300px;
 	  }
@@ -296,8 +298,19 @@ footer li {
 	  }
 
 	  
-	  .legendaries, .giftpokemon, .tms, .ingametrades, .trainercardstickers  {
-		align-items: center;
-	  }
 
+}
+
+@media only screen and (max-width: 400px) { /* Normal phones */
+	.wide-panel {
+		margin-top: 180px;
+		width: 300px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: center;
+	}
+	.pokeicon.unown {
+		height: 20px;
+	}
 }

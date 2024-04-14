@@ -1,4 +1,4 @@
-* {font-family: 'Alegreya Sans';}
+* {font-family: system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue;}
 
 .collapsible {
     background-color: #f1f1f1;
@@ -287,12 +287,19 @@ footer li {
 		width: 290px;
 	}
 
+	.giftpokemon-totem-rightrow {
+		margin-left: 10px;
+	}
 
 
-	.mega-rightrow, .mega-middlerow, .z-crystals-rightrow, .z-crystals-middlerow {
+	.mega-middlerow {
 		margin-left: 0px;
+		margin-right: 0px;
 	}
 	
+	.pokeicon.megastone, .pokeicon.tm, .pokeicon.z-crystal {
+		display: none;
+	}
 
 	.pokeicon.item {
 		height: 20px;
@@ -300,13 +307,9 @@ footer li {
 	
 
 	/* Two rows */
-	.giftpokemon, .completepokedex, .tms, .mantinesurf, .legendaries, .trainerpassport, .mega, .giftpokemon-totem, .alolanforms, .ultrabeasts, .z-crystals, .battletree, .other, .ingametrades, .sidequests {
-		align-items: center;
-	}
+	
 	/* One row */
-	.pokemonamie, .foodcourtbattles, .trainercard, .ingametrades, .pokemoncontest, .bikes, .capturetheflag {
-		margin-left: -20px;
-	}
+	
 	
 
 	.colorpokemon {
@@ -321,9 +324,36 @@ footer li {
 	  }
 	  
 	
+	
 
 	 
 	
 
 }
 
+@media only screen and (max-width: 400px) { /* Normal phones */
+	.wide-panel {
+		margin-top: 180px;
+		width: 300px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: center;
+	}
+
+	.ultrawormhole-leftrow {
+		margin-left: 20px;
+		margin-right: -30px;
+		
+	}
+	.giftpokemon-totem-rightrow {
+		margin-left: 0px;
+		margin-right: 0px;
+	  }
+	  .sidequests-middlerow {
+		margin-left: 10px;
+		margin-right: 10px;
+	  }
+	 
+	 
+}

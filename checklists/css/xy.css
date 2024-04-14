@@ -1,5 +1,5 @@
 /* Header */
-* {font-family: 'Alegreya Sans';}
+* {font-family: system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue;}
 
 .main-header {
 	position: fixed;
@@ -255,7 +255,6 @@ footer li {
 	  }
 
 
-
 	  .panel-content {
 		width: 300px;
 	  }
@@ -273,24 +272,34 @@ footer li {
 			margin-top: 0px;
 		  }
 
-		  .collapsible {
+	.collapsible {
 		width: 290px;
 	}
 
 
-	.vivillion-rightrow, .vivillion-middlerow {
+	.vivillion-middlerow, .mega-middlerow, .tms-middlerow {
 		margin-left: 0px;
+		margin-right: 0px;
 	}
-	
-
-	.mega-rightrow, .mega-middlerow {
-		margin-left: 0px;
-	}
-	
-	.pokeicon.item {
+	.pokeicon.vivillion {
 		height: 20px;
 	}
-	.giftpokemon, .tms, .legendaries, .ingametrades, .mega, .opower, .vivillion, .battlemaison, .restaurants, .photographs {
+
+	.pokeicon.item, .pokeicon.tm {
+		display: none;
+	}
+	
+	
+}
+
+@media only screen and (max-width: 400px) { /* Normal phones */
+	.wide-panel {
+		margin-top: 180px;
+		width: 300px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
 		align-items: center;
 	}
+
 }
