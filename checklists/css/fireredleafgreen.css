@@ -6,7 +6,7 @@
 	align-items: center;
 }
 .legendaries-rightrow, .tms-rightrow, .giftpokemon-rightrow, .ingametrades-rightrow, .trainercardstickers-rightrow, .trainertower-rightrow {
-	margin-left: 40px;
+	margin-left: 30px;
 }
 .legendaries-rowcontainer, .tms-rowcontainer, .giftpokemon-rowcontainer, .ingametrades-rowcontainer, .unown-rowcontainer, .trainercardstickers-rowcontainer, .trainertower-rowcontainer {
 	display: flex;
@@ -15,6 +15,12 @@
 .unown-middlerow {
 	margin-left: 40px;
 	margin-right: 40px;
+}
+.trainercardstickershalloffame {
+	display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
 }
  
 

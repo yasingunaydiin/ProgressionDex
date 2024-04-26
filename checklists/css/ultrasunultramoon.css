@@ -134,7 +134,7 @@ img {
 }
 
 /* Checkbox Group */
-.ingametrades, .legendaries, .pokefinder, .battleroyal, .sidequests, .tms, .pokepelago, .giftpokemon, .z-crystals, .mega, .battletree, .completepokedex, .minior, .ultrabeasts, .trainerpassport, .alolanforms, .other, .giftpokemon-totem, .ultrawormhole, .mantinesurf {
+.ingametrades, .legendaries, .pokefinder, .battleroyal, .sidequests, .tms, .pokepelago, .giftpokemon, .z-crystals, .mega, .charms, .battletree, .completepokedex, .minior, .ultrabeasts, .trainerpassport, .alolanforms, .other, .giftpokemon-totem, .ultrawormhole, .mantinesurf {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -169,7 +169,7 @@ img {
 	margin-right: 40px;
 }
 
-.pokeicon.item, .pokeicon.mega, .pokeicon.totem, .pokeicon.z-crystal {
+.pokeicon.item, .pokeicon.megastone, .pokeicon.totem, .pokeicon.z-crystal {
 	height: 30px;
 	margin-right: 5px;
 	margin-left: 5px;

@@ -123,7 +123,7 @@ span {
 img {
 	margin-left: -5px;
 }
-.completepokedex, .tms, .opower, .legendaries, .ingametrades, .vivillion, .battlemaison, .mega, .photographs, .restaurants, .giftpokemon, .trainercard, .battleinstitute, .battlechateau, .battles, .supertraining {
+.completepokedex, .tms, .opower, .legendaries, .ingametrades, .vivillion, .battlemaison, .mega, .photographs, .restaurants, .giftpokemon, .trainercard, .battleinstitute, .battlechateau, .other, .supertraining, .charms {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -268,7 +268,7 @@ footer li {
 		align-items: center;
 		
 	  }
-		  .wide-panel.items {
+		  .wide-panel.collectibles {
 			margin-top: 0px;
 		  }
 

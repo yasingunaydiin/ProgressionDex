@@ -139,7 +139,7 @@ img {
 }
 
 /* Checkbox Group */
-.ingametrades, .legendaries, .tms, .pokepelago, .giftpokemon, .z-crystals, .mega, .battletree, .completepokedex, .minior, .ultrabeasts, .trainerpassport, .alolanforms, .other, .pokefinder {
+.ingametrades, .legendaries, .tms, .pokepelago, .giftpokemon, .z-crystals, .mega, .battletree, .completepokedex, .minior, .ultrabeasts, .trainerpassport, .alolanforms, .other, .pokefinder, .charms {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -283,7 +283,7 @@ footer li {
 		align-items: center;
 		
 	  }
-		  .wide-panel.items {
+		  .wide-panel.collectibles {
 			margin-top: 0px;
 		  }
 

@@ -20,33 +20,19 @@
 				<label class="panel-label" id="title">Pokédex</label>
 				<div class="panel-content">
 					<div class="completepokedex">
-						<div>
+						<div class="checkbox-item">
 							<span class="title"><label class="big-text">Complete the Galar Pokédex</label></span>
 						</div>
-						<div class="completepokedex-rowcontainer">
-							<div class="completepokedex-leftrow">
 								<div class="checkbox-item">
 									<input id="checkbox-galar-pokedex" type="checkbox"> <label class="small-text" data-tooltip="There are a total of 400 Pokemon in the Galar Dex." for="checkbox-galar-pokedex">Complete Galar Pokedex</label>
 								</div>
-								<div class="checkbox-item">
-									<input id="checkbox-starters" type="checkbox"> <label class="small-text" data-tooltip="Trade them." for="checkbox-starters">Obtain all starters</label>
-								</div>
-							</div>
-							<div class="completepokedex-rightrow">
-								<div class="checkbox-item">
-									<input id="checkbox-shiny-charm" type="checkbox"> <img class="pokeicon item" src="../images/icons/miscellaneous/gen8/swordshield/charms/shiny-charm.png"> <label class="small-text" data-tooltip="Circhester from the Game Freak game director after obtaining all the Pokémon." for="checkbox-shiny-charm">Get Shiny Charm</label>
-								</div>
-								<div class="checkbox-item">
-									<input id="checkbox-oval-charm" type="checkbox"> <img class="pokeicon item" src="../images/icons/miscellaneous/gen8/swordshield/charms/oval-charm.png"> <label class="small-text" data-tooltip="Circhester from Morimoto after defeating him for the first time." for="checkbox-oval-charm">Get Oval Charm</label>
-								</div>
-								<div class="checkbox-item">
-									<input id="checkbox-catching-charm" type="checkbox"> <img class="pokeicon item" src="../images/icons/miscellaneous/gen8/swordshield/charms/catching-charm.png"> <label class="small-text" data-tooltip="Circhester from the Game Freak director in the western building of Hotel Ionia." for="checkbox-catching-charm">Get Catching Charm</label>
-								</div>
-							</div>
-						</div>
+
+							
+						
+							
 					</div>
 					<div class="legendaries">
-						<div>
+						<div class="checkbox-item">
 							<span class="title"><label class="big-text">Obtain all Legendaries</label></span>
 						</div>
 						<div class="checkbox-item">
@@ -60,7 +46,7 @@
 						</div>
 					</div>
 					<div class="giftpokemon">
-						<div>
+						<div class="checkbox-item">
 							<span class="title"><label class="big-text">Obtain all In-Game Gift Pokemon</label></span>
 						</div>
 						<div class="giftpokemon-rowcontainer">
@@ -86,7 +72,7 @@
 						</div>
 					</div>
 					<div class="galarianforms">
-						<div>
+						<div class="checkbox-item">
 							<span class="title"><label class="big-text">Catch all Galarian Forms</label></span>
 						</div>
 						<div class="galarianforms-rowcontainer">
@@ -130,7 +116,7 @@
 						</div>
 					</div>
 					<div class="ingametrades">
-						<div>
+						<div class="checkbox-item">
 							<span class="title"><label class="big-text">In-Game Trades</label></span>
 						</div>
 						<div class="ingametrades-rowcontainer">
@@ -168,7 +154,7 @@
 						</div>
 					</div>
 					<div class="gigantamax">
-						<div>
+						<div class="checkbox-item">
 							<span class="title"><label class="big-text">Gigantamax Pokemon</label></span>
 						</div>
 						<div class="gigantamax-rowcontainer">
@@ -260,8 +246,8 @@
 			</div>
 		</div>
 		<div class="page-container-right">
-			<div class="wide-panel items">
-				<label class="panel-label" id="title">Items</label>
+			<div class="wide-panel collectibles">
+				<label class="panel-label" id="title">Collectibles</label>
 				<div class="panel-content">
 					<button class="collapsible">Collect all Technical Machines</button>
 					<div class="content">
@@ -575,7 +561,8 @@
 								</div>
 							</div>
 						</div>
-					</div><button class="collapsible">Collect all Technical Records</button>
+					</div>
+					<button class="collapsible">Collect all Technical Records</button>
 					<div class="content">
 						<div class="trs">
 							<div class="trs-rowcontainer">
@@ -888,18 +875,32 @@
 							</div>
 						</div>
 					</div>
+					<div class="charms">
+						<div class="checkbox-item">
+							<span class="title"><label class="big-text">Charms</label></span>
+						</div>
+						<div class="checkbox-item">
+							<input id="checkbox-shiny-charm" type="checkbox"> <img class="pokeicon item" src="../images/icons/miscellaneous/gen8/swordshield/charms/shiny-charm.png"> <label class="small-text" data-tooltip="Circhester from the Game Freak game director after obtaining all the Pokémon." for="checkbox-shiny-charm">Get Shiny Charm</label>
+						</div>
+						<div class="checkbox-item">
+							<input id="checkbox-oval-charm" type="checkbox"> <img class="pokeicon item" src="../images/icons/miscellaneous/gen8/swordshield/charms/oval-charm.png"> <label class="small-text" data-tooltip="Circhester from Morimoto after defeating him for the first time." for="checkbox-oval-charm">Get Oval Charm</label>
+						</div>
+						<div class="checkbox-item">
+							<input id="checkbox-catching-charm" type="checkbox"> <img class="pokeicon item" src="../images/icons/miscellaneous/gen8/swordshield/charms/catching-charm.png"> <label class="small-text" data-tooltip="Circhester from the Game Freak director in the western building of Hotel Ionia." for="checkbox-catching-charm">Get Catching Charm</label>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="wide-panel more">
 				<label class="panel-label" id="title">Post Game</label>
 				<div class="panel-content">
 					<div class="battletower">
-						<div>
+						<div class="checkbox-item">
 							<span class="title"><label class="big-text">Battle Tower</label></span>
 						</div>
 						<div class="battletower-rowcontainer">
 							<div class="battletower-leftrow">
-								<div>
+								<div class="checkbox-item">
 									<span class="title"><label class="big-text">Single Tier</label></span>
 								</div>
 								<div class="checkbox-item">
@@ -916,7 +917,7 @@
 								</div>
 							</div>
 							<div class="battletower-rightrow">
-								<div>
+								<div class="checkbox-item">
 									<span class="title"><label class="big-text">Double Tier</label></span>
 								</div>
 								<div class="checkbox-item">
@@ -1170,7 +1171,7 @@
 								<input id="checkbox-leaguecard-bede-rare" type="checkbox"> <img class="pokeicon leaguecard" src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Bede_rare.png"> <label class="small-text" data-tooltip="Ballonlea Stadium." for="checkbox-leaguecard-bede-rare">Bede Rare</label>
 							</div>
 							<div class="leaguecard-customizations">
-								<div>
+								<div class="checkbox-item">
 									<span class="title"><label class="big-text">Customizations</label></span>
 								</div>
 								<div class="leaguecard-customizations-rowcontainer">

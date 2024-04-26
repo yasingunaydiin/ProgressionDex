@@ -121,7 +121,7 @@ img {
 
 /* Checkbox Group */
 
-.legendaries, .leaguecard, .quests, .galarianforms, .trs {
+.legendaries, .leaguecard, .quests, .galarianforms, .trs, .completepokedex {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -248,7 +248,7 @@ footer li {
 	.trs {
 		align-items: center;
 	}
-	.wide-panel.items {
+	.wide-panel.collectibles {
 		margin-top: 0px;
 	}
 	.collapsible {

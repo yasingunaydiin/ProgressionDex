@@ -15,9 +15,14 @@
 /* Common font family */
 
 * {
-	font-family: 'Alegreya Sans';
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue;
 }
 /* Header */
+
+.leaguecard-leftrow, .leaguecard-leftmiddlerow, .leaguecard-rightrow, .leaguecard-rightmiddlerow {
+	margin-right: 18px;
+	white-space: nowrap;
+}
 
 .main-header {
 	position: fixed;
@@ -253,7 +258,7 @@ footer li {
 	.trs {
 		align-items: center;
 	}
-	.wide-panel.items {
+	.wide-panel.collectibles {
 		margin-top: 0px;
 	}
 	.collapsible {

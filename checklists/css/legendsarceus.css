@@ -166,6 +166,11 @@ img {
 	margin-left: 5px;
 }
 
+.unown-middlerow {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
 
 /* Checkbox Item */
 .checkbox-item {
@@ -266,7 +271,7 @@ footer li {
 		align-items: center;
 	}
 	
-	.wide-panel.items {
+	.wide-panel.collectibles {
 		margin-top: 0px;
 	}
 	.collapsible {
