@@ -1,0 +1,260 @@
+
+/* Common font family */
+
+* {
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue;
+}
+/* Header */
+
+
+.ingametrades, .legendaries, .tms, .giftpokemon, .completepokedex, .legendaries-ramanas, .trainercard, .poketch, .items, .outfits, .ribbons, .battletower, .rematches, .gymleaders {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.legendaries-rightrow, .completepokedex-rightrow, .giftpokemon-rightrow, .ingametrades-rightrow, .legendaries-ramanas-rightrow, .trainercard-rightrow, .items-rightrow, .outfits-rightrow, .ribbons-rightrow, .battletower-rightrow, .gymleaders-rightrow {
+	margin-left: 40px;
+}
+.legendaries-rowcontainer, .tms-rowcontainer, .giftpokemon-rowcontainer, .completepokedex-rowcontainer, .ingametrades-rowcontainer, .legendaries-ramanas-rowcontainer, .trainercard-rowcontainer, .ribbons-rowcontainer, .poketch-rowcontainer, .items-rowcontainer, .gymleaders-rowcontainer, .outfits-rowcontainer, .battletower-rowcontainer {
+	display: flex;
+	align-items: flex-start;
+}
+
+
+.main-header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: #174b7d;
+	padding: 10px;
+	display: flex;
+	justify-content: space-between;
+	font-size: 8px;
+	z-index: 1000;
+	font-weight: 700;
+	letter-spacing: 1px;
+}
+
+/* Pokeicon */
+
+.pokeicon {
+	height: 40px;
+	margin-right: 5px;
+	margin-left: 5px;
+}
+
+
+/* Logo Container */
+
+
+.logo-container {
+	margin-top: 10px;
+	z-index: 2000;
+	position: fixed;
+}
+/* Links */
+
+a {
+	text-decoration: none;
+	color: #fff;
+}
+.header-left, .header-right {
+	margin: 0;
+	color: #fff;
+}
+.header-list {
+	position: absolute;
+	font-size: 12px;
+	margin-top: 2px;
+	left: 250px;
+}
+/* Body */
+
+body {
+	margin: 0;
+	padding: 0;
+	background: #ffffff url(../../images/patterns/pattern-brilliantdiamond.png) repeat center center;
+	/* Icons Vectors by Vecteezy */
+	background-size: 500px 250px;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+/* Page Container */
+
+.page-container {
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	align-items: baseline;
+}
+/* Span */
+
+span {
+	pointer-events: none;
+}
+/* Wide Panel */
+
+.wide-panel {
+	text-align: center;
+	padding: 20px;
+	border-radius: 8px;
+	width: 500px;
+	margin: 30px;
+	box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+	background-color: white;
+	margin-top: 150px;
+	border: 2px solid #174b7d;
+}
+.wide-panel.more {
+	margin-bottom: 50px;
+	margin-top: 50px;
+}
+img {
+	margin-left: -5px;
+}
+/* Panel Label */
+
+.panel-label {
+	display: block;
+	margin-bottom: 10px;
+	font-size: 25px;
+	font-weight: 1000;
+	color: #174b7d;
+}
+/* Panel Content */
+
+.panel-content {
+	text-align: left;
+}
+/* Checkbox Group */
+
+
+
+
+/* Checkbox Item */
+
+.checkbox-item {
+	margin-bottom: 10px;
+	display: flex;
+	align-items: center;
+}
+.big-text {
+	font-size: 20px;
+}
+.small-text {
+	font-size: 14px;
+}
+/* Footer */
+
+footer {
+	height: 50px;
+	background: #174b7d;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1vw;
+}
+footer ul {
+	display: flex;
+	list-style: circle;
+	padding: 0;
+}
+footer li {
+	margin-right: 10px;
+	text-decoration: none;
+	list-style: none;
+	font-size: 15px;
+}
+/* Checkbox Item Label */
+
+.checkbox-item label {
+	position: relative;
+	display: inline-block;
+}
+.checkbox-item input {
+	margin-right: 5px;
+}
+.checkbox-item label::before {
+	content: attr(data-tooltip);
+	visibility: hidden;
+	width: 200px;
+	background-color: #333;
+	color: #fff;
+	text-align: center;
+	border-radius: 6px;
+	padding: 5px;
+	position: absolute;
+	z-index: 1;
+	bottom: 125%;
+	/* Position the tooltip above the text */
+	left: 50%;
+	margin-left: -100px;
+	/* Center the tooltip */
+	opacity: 0;
+	transition: opacity 0.3s;
+	cursor: pointer;
+}
+.checkbox-item label:hover::before {
+	visibility: visible;
+	opacity: 1;
+}
+@media only screen and (max-width: 768px) {
+	/* Constant */
+	.main-header {
+		padding: 12px;
+		font-size: 7px;
+	}
+	footer {
+		height: 50px;
+		font-size: 12px;
+	}
+	/* Variable */
+	.logo-container {
+		display: flex;
+		align-items: center;
+		margin-top: 30px;
+	}
+	.panel-content {
+		width: 300px;
+	}
+	.wide-panel {
+		margin-top: 180px;
+		width: 350px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: center;
+	}
+	
+	.wide-panel.collectibles {
+		margin-top: 0px;
+	}
+	
+	.checkbox-item label::before { 
+		margin-left: -140px;
+	}
+
+
+
+}
+
+@media only screen and (max-width: 400px) {
+	/* Normal phones */
+	.wide-panel {
+		margin-top: 180px;
+		width: 300px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: center;
+	}
+	
+}
+
+
+

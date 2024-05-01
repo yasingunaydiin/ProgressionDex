@@ -1,1 +1,142 @@
-https://www.serebii.net/pokemonhome/researchtasks.shtml
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>Progression Dex | Pokemon Home</title>
+	<link href="../checklists/css/pokemonhome.css" rel="stylesheet">
+	<link href="../images/icons/favicontab.ico" rel="icon" type="image/x-icon">
+	<link href="../images/icons/favicontab.ico" rel="shortcut icon" type="image/x-icon">
+</head>
+<body>
+	<header class="main-header">
+		<h1 class="header-left"><a href="../index.html">Progression Dex</a></h1>
+		<h1 class="header-right">yasingunaydiin</h1>
+	</header>
+	<div class="page-container">
+		<div class="logo-container"><img id="crowntundra-logo" src="../images/logos/crowntundra-logo.webp" style="height: 130px;"></div>
+		<div class="page-container-left">
+			<div class="wide-panel pokedex">
+				<label class="panel-label" id="title">Pokédex</label>
+				<div class="panel-content">
+					<div class="completepokedex">
+						<div class="checkbox-item">
+							<span class="title"><label class="big-text">Complete the Crown Tundra Pokédex</label></span>
+						</div>
+						<div class="checkbox-item">
+							<input id="checkbox-crowntundra-pokedex" type="checkbox"> <label class="small-text" data-tooltip="There are a total of 210 Pokemon in the Crown Tundra Dex." for="checkbox-crowntundra-pokedex">Complete Crown Tundra Pokedex</label>
+						</div>
+					</div>
+					<div class="legendaries">
+						<div class="checkbox-item">
+							<span class="title"><label class="big-text">Obtain all Legendaries</label></span>
+						</div>
+						<div class="legendaries-rowcontainer">
+							<div class="legendaries-leftrow">
+								<div class="checkbox-item">
+									<input id="checkbox-calyrex" type="checkbox"> <img class="pokeicon legendary" src="../images/icons/pokemon/gen8/swordshield/crowntundra/calyrex.png"> <label class="small-text" data-tooltip="Follow the Calyrex Story." for="checkbox-calyrex">Catch Calyrex</label>
+								</div>
+								<div class="checkbox-item">
+									<input id="checkbox-cosmog" type="checkbox"> <img class="pokeicon legendary" src="../images/icons/pokemon/gen8/swordshield/crowntundra/cosmog.png"> <label class="small-text" data-tooltip="Freezington, save the village from Glastrier or Spectrier." for="checkbox-cosmog" style="white-space: normal;">Catch Cosmog</label>
+								</div>
+								<div class="checkbox-item">
+									<input id="checkbox-glastrier-spectrier" type="checkbox"> <img class="pokeicon legendary" src="../images/icons/pokemon/gen8/swordshield/crowntundra/glastrier.png"> <img class="pokeicon legendary" src="../images/icons/pokemon/gen8/swordshield/crowntundra/spectrier.png"> <label class="small-text" data-tooltip="Follow the Calyrex Story." for="checkbox-glastrier-spectrier">Obtain Glastrier or Spectrier</label>
+								</div>
+							</div>
+							<div class="legendaries-rightrow">
+								<div class="checkbox-item">
+									<input id="checkbox-regigigas" type="checkbox"> <img class="pokeicon legendary" src="../images/icons/pokemon/gen8/swordshield/crowntundra/regigigas.png"> <label class="small-text" data-tooltip="Giant's Bed." for="checkbox-regigigas">Catch Regigigas</label>
+								</div>
+								<div class="checkbox-item">
+									<input id="checkbox-poipole" type="checkbox"> <img class="pokeicon legendary" src="../images/icons/pokemon/gen8/swordshield/crowntundra/poipole.png"> <label class="small-text" data-tooltip="Max Lair, start the Ultra Beast story." for="checkbox-poipole">Catch Poipole</label>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					
+				</div>
+			</div>
+		</div>
+		<div class="page-container-right">
+			<div class="wide-panel collectibles">
+				<label class="panel-label" id="title">Collectibles</label>
+				<div class="panel-content">
+				
+					
+				</div>
+			</div>
+			<div class="wide-panel leaguecards">
+				<label class="panel-label" id="title">League Cards</label>
+				<div class="panel-content">
+					
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<ul>
+			<li>
+				<a href="../index/index.html">Progression Dex</a>
+			</li>
+			<li>
+				<a href="#">Twitter</a>
+			</li>
+			<li>
+				<a href="https://github.com/yasingunaydiin">GitHub</a>
+			</li>
+		</ul>
+	</footer>
+	<script src="../checklists/js/script.js">
+	</script> 
+	<script>
+	            //TM, TR Dropdown
+	                   
+	            document.addEventListener('DOMContentLoaded', function() {
+	             document.querySelectorAll('.collapsible').forEach(collapsible => {
+	               collapsible.addEventListener('click', () => {
+	                 collapsible.classList.toggle('active');
+	                 collapsible.nextElementSibling.style.display = (collapsible.nextElementSibling.style.display === 'block') ? 'none' : 'block';
+	               });
+	             });
+	            });
+
+
+	</script> 
+	<script>
+	                                              document.addEventListener('DOMContentLoaded', function() {
+	                                          const completepokedexCheckboxes = document.querySelectorAll('.completepokedex input[type="checkbox"]');
+	                                          const legendariesCheckboxes = document.querySelectorAll('.legendaries input[type="checkbox"]');
+	                                          const galarianformsCheckboxes = document.querySelectorAll('.galarianforms input[type="checkbox"]');
+	                                          const leaguecardCheckboxes = document.querySelectorAll('.leaguecard input[type="checkbox"]');
+	                                          const legendarythreestoryCheckboxes = document.querySelectorAll('.legendarythreestory input[type="checkbox"]');
+	                                          const terribletitansstoryCheckboxes = document.querySelectorAll('.terribletitansstory input[type="checkbox"]');
+	                                          const ultrabeyondstoryCheckboxes = document.querySelectorAll('.ultrabeyondstory input[type="checkbox"]');
+	                                          const footprintsCheckboxes = document.querySelectorAll('.footprints input[type="checkbox"]');
+
+	                                          function updateStyle(checkboxes, label) {
+	                                              const allChecked = [...checkboxes].every(checkbox => checkbox.checked);
+	                                              label.style.textDecoration = allChecked ? 'line-through' : 'none';
+	                                          }
+
+	                                          function initializeCheckboxes(checkboxes, label) {
+	                                              checkboxes.forEach(checkbox => {
+	                                                  checkbox.addEventListener('change', function() {
+	                                                      updateStyle(checkboxes, label);
+	                                                  });
+	                                              });
+	                                              updateStyle(checkboxes, label);
+	                                          }
+	                                          initializeCheckboxes(completepokedexCheckboxes, document.querySelector('.completepokedex .title label'));
+	                                          initializeCheckboxes(legendariesCheckboxes, document.querySelector('.legendaries .title label'));
+	                                          initializeCheckboxes(galarianformsCheckboxes, document.querySelector('.galarianforms .title label'));
+	                                          initializeCheckboxes(leaguecardCheckboxes, document.querySelector('.leaguecard .title label'));
+	                                          initializeCheckboxes(legendarythreestoryCheckboxes, document.querySelector('.legendarythreestory .title label'));
+	                                          initializeCheckboxes(terribletitansstoryCheckboxes, document.querySelector('.terribletitansstory .title label'));
+	                                          initializeCheckboxes(ultrabeyondstoryCheckboxes, document.querySelector('.ultrabeyondstory .title label'));
+	                                          initializeCheckboxes(footprintsCheckboxes, document.querySelector('.footprints .title label'));
+	                                       });
+	</script>
+</body>
+</html>

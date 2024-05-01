@@ -24,6 +24,10 @@
 	height: 30px;
 }
 
+.pokeicon.itemidentifier {
+	height: 12px;
+} 
+
 .main-header {
 	position: fixed;
 	top: 0;
@@ -160,6 +164,7 @@ img {
 	display: flex;
 	align-items: flex-start;
 }
+
 .pokeicon.item {
 	height: 30px;
 	margin-right: 5px;
@@ -272,6 +277,7 @@ footer li {
 		align-items: center;
 	}
 	.tms {
+		
 		align-items: center;
 	}
 	.wide-panel.collectibles {
@@ -290,7 +296,13 @@ footer li {
 		margin-left: -140px;
 	}
 
+	.tms-middlerow {
+		margin-left: 0px;
+		margin-right: 0px;	
+	}
+
 }
+
 @media only screen and (max-width: 400px) {
 	/* Normal phones */
 	.wide-panel {
@@ -304,4 +316,11 @@ footer li {
 	.pokeicon.tm {
 		display: none;
 	}
+	.tms-middlerow {
+		margin-left: 0px;
+		margin-right: 0px;	
+	}
 }
+
+
+
