@@ -7,15 +7,15 @@
 /* Header */
 
 
-.ingametrades, .legendaries, .tms, .giftpokemon, .completepokedex, .legendaries-ramanas, .trainercard, .poketch, .items, .outfits, .ribbons, .battletower, .rematches, .gymleaders {
+.kantotasks, .galartasks, .hisuitasks, .sinnohtasks, .paldeatasks  {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
-.legendaries-rightrow, .completepokedex-rightrow, .giftpokemon-rightrow, .ingametrades-rightrow, .legendaries-ramanas-rightrow, .trainercard-rightrow, .items-rightrow, .outfits-rightrow, .ribbons-rightrow, .battletower-rightrow, .gymleaders-rightrow {
+.kantotasks-rightrow, .galartasks-rightrow, .hisuitasks-rightrow, .sinnohtasks-rightrow, .paldeatasks-rightrow {
 	margin-left: 40px;
 }
-.legendaries-rowcontainer, .tms-rowcontainer, .giftpokemon-rowcontainer, .completepokedex-rowcontainer, .ingametrades-rowcontainer, .legendaries-ramanas-rowcontainer, .trainercard-rowcontainer, .ribbons-rowcontainer, .poketch-rowcontainer, .items-rowcontainer, .gymleaders-rowcontainer, .outfits-rowcontainer, .battletower-rowcontainer {
+.kantotasks-rowcontainer, .galartasks-rowcontainer, .hisuitasks-rowcontainer, .sinnohtasks-rowcontainer, .paldeatasks-rowcontainer {
 	display: flex;
 	align-items: flex-start;
 }
@@ -26,7 +26,7 @@
 	top: 0;
 	left: 0;
 	right: 0;
-	background-color: #174b7d;
+	background-color: #239a5b;
 	padding: 10px;
 	display: flex;
 	justify-content: space-between;
@@ -36,14 +36,12 @@
 	letter-spacing: 1px;
 }
 
-/* Pokeicon */
 
 .pokeicon {
-	height: 40px;
+	height: 35px;
 	margin-right: 5px;
 	margin-left: 5px;
 }
-
 
 /* Logo Container */
 
@@ -74,7 +72,7 @@ a {
 body {
 	margin: 0;
 	padding: 0;
-	background: #ffffff url(../../images/patterns/pattern-brilliantdiamond.png) repeat center center;
+	background: #ffffff url(../../images/patterns/pattern-home.png) repeat center center;
 	/* Icons Vectors by Vecteezy */
 	background-size: 500px 250px;
 	height: 100vh;
@@ -100,28 +98,22 @@ span {
 	text-align: center;
 	padding: 20px;
 	border-radius: 8px;
-	width: 500px;
+	width: 622px;
 	margin: 30px;
 	box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
 	background-color: white;
 	margin-top: 150px;
-	border: 2px solid #174b7d;
+	border: 2px solid #239a5b;
 }
-.wide-panel.more {
-	margin-bottom: 50px;
-	margin-top: 50px;
-}
-img {
-	margin-left: -5px;
-}
+
 /* Panel Label */
 
 .panel-label {
 	display: block;
 	margin-bottom: 10px;
-	font-size: 25px;
+	font-size: 20px;
 	font-weight: 1000;
-	color: #174b7d;
+	color: #239a5b;
 }
 /* Panel Content */
 
@@ -144,13 +136,13 @@ img {
 	font-size: 20px;
 }
 .small-text {
-	font-size: 14px;
+	font-size: 12px;
 }
 /* Footer */
 
 footer {
 	height: 50px;
-	background: #174b7d;
+	background: #239a5b;
 	bottom: 0;
 	width: 100%;
 	text-align: center;
@@ -171,13 +163,13 @@ footer li {
 	font-size: 15px;
 }
 /* Checkbox Item Label */
+.checkbox-item input {
+	margin-right: 5px;
+}
 
 .checkbox-item label {
 	position: relative;
 	display: inline-block;
-}
-.checkbox-item input {
-	margin-right: 5px;
 }
 .checkbox-item label::before {
 	content: attr(data-tooltip);
@@ -193,7 +185,7 @@ footer li {
 	bottom: 125%;
 	/* Position the tooltip above the text */
 	left: 50%;
-	margin-left: -100px;
+	margin-left: -80px;
 	/* Center the tooltip */
 	opacity: 0;
 	transition: opacity 0.3s;
@@ -219,9 +211,7 @@ footer li {
 		align-items: center;
 		margin-top: 30px;
 	}
-	.panel-content {
-		width: 300px;
-	}
+
 	.wide-panel {
 		margin-top: 180px;
 		width: 350px;
@@ -231,9 +221,7 @@ footer li {
 		align-items: center;
 	}
 	
-	.wide-panel.collectibles {
-		margin-top: 0px;
-	}
+	
 	
 	.checkbox-item label::before { 
 		margin-left: -140px;
