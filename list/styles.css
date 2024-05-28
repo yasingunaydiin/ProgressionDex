@@ -4,7 +4,7 @@
 
 a {
 	text-decoration: none;
-	color: #DEECD8;
+	color: #fff;
 }
 /* Header COPY*/
 
@@ -13,7 +13,7 @@ a {
 	top: 0;
 	left: 0;
 	right: 0; 
-	background-color: #79AD75;
+	background-color: #23273E;
 	padding: 10px 10px 10px 10px;
 	display: flex;
 	justify-content: space-between;
@@ -24,7 +24,7 @@ a {
 }
 .header-left, .header-right {
 	margin: 0px 0px 0px 0px;
-	color: #DEECD8;
+	color: #fff;
 }
 /* Body COPY */
 
@@ -97,7 +97,7 @@ button {
 	position: relative;
 	min-width: 368px;
 	min-height: 208px;
-	border: 2px solid #DEECD8;
+	border: 2px solid #fff;
 	border-radius: 25px;
 	box-sizing: border-box;
 	margin: 10px;
@@ -119,7 +119,7 @@ footer li {
 }
 footer {
 	height: 50px;
-	background: #79AD75;
+	background: #23273E;
 	bottom: 0;
 	width: 100%;
 	text-align: center;
@@ -131,7 +131,7 @@ footer {
 
 footer a {
     text-decoration: none;
-    color: #DEECD8;
+    color: #fff;
     /* Adjust link color */
     margin-right: 10px;
     /* Add spacing between links */
