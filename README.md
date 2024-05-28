@@ -9,9 +9,9 @@ A tool for tracking your 100% progress in Pokemon Games.
 - Check the things you have done.
 
 ## Screenshots
-### Home
+## Home
 <img width="1920px" src="images/screenshots/index_screenshot.png" alt="screenshot" align="left" />
-### List page
+## List page
 <img width="1920px" src="images/screenshots/list_screenshot.png" alt="screenshot" align="left" />
-### Game page
+## Game page
 <img width="1920px" src="images/screenshots/game_screenshot.png" alt="screenshot" align="left" />
