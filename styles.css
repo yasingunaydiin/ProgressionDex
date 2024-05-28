@@ -110,7 +110,7 @@ button {
 }
 footer {
 	height: 50px;
-	background: #DEECD8;
+	background: #23273E;
 	position: fixed;
 	bottom: 0;
 	left: 0;
@@ -118,7 +118,7 @@ footer {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	color: #79AD75;
+	color: #fff;
 	font-size: 1vw;
 }
 footer ul {
