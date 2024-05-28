@@ -9,4 +9,4 @@ A tool for tracking your 100% progress in Pokemon Games.
 - Check the things you have done.
 
 ## Screenshots
-<img width="128px" src="/images/ProgressionDex_logo.png" alt="Logo" align="left" />
+<img width="128px" src="images/screenshots/index_screenshot.png" alt="screenshot" align="left" />
