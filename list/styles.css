@@ -1,3 +1,8 @@
+/* Remove comments if something is broken
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*/
 * {
 	font-family: system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue;
 }
@@ -6,8 +11,10 @@ a {
 	text-decoration: none;
 	color: #fff;
 }
-/* Header COPY*/
-
+/* Header*/
+ul.timeline {
+	margin-left: -300px;
+}
 .main-header {
 	position: fixed;
 	top: 0;
@@ -26,19 +33,12 @@ a {
 	margin: 0px 0px 0px 0px;
 	color: #fff;
 }
-/* Body COPY */
+/* Body */
 
-body {
-	margin: 0;
-	padding: 0;
-	background: #ffffff url(../images/patterns/pattern-list.png) repeat center center;
-	background-size: 500px 250px;
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
-}
+
 img {
-	height: 139.706px;
+	height: 320px;
+	width: 240px;
 	flex-shrink: 0;
 }
 button {
@@ -54,49 +54,45 @@ button {
 	margin-top: 20px;
 }
 /* Container */
+body {
+	background: #ffffff url(../images/patterns/pattern-list.png) repeat center center;
+	background-size: 500px 250px;
+}
 
-.gen-container {
+.games-container { /* Helps center the content */ 
 	display: flex;
 	flex-direction: column;
-	align-items: center;
 	margin-top: 0px;
+	height: 100vh; /* Set the height of your container */
+    overflow-y: scroll; /* Enable vertical scrolling */
 }
-.gen-row {
+
+.gen-row { /* Helps center the timeline */ 
 	display: flex;
-	justify-content: space-around;
 	align-items: center;
 	margin: auto;
 	margin-bottom: 30px;
-	flex-wrap: wrap;
 	position: relative;
 	padding-top: 80px;
-	
+	scroll-snap-align: start; /* Adjust as needed: start, center, end */
 }
 
-.gen-title {
-	position: absolute;
-	font-size: 1rem;
-	padding: 2px;
-	border: 2px solid #ebebeb;
-	background: rgb(241, 241, 241);
-	color: #949494;
-	font-weight: normal;
+.gen-container { /* Puts the content next to eachother */ 
+	display: flex;
+	align-items: center;
 }
 
-.gen-title {
-    position: absolute;
-    top: 40px; /* Adjust as needed */
-    
+.gen-row.secondary {
+	margin-top: -100px;
 }
 
-
-.gen-item {
+.gen-item {  /* Does things inside the panels */ 
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	position: relative;
-	min-width: 368px;
-	min-height: 208px;
+	width: 368px;
+	height: 340px;
 	border: 2px solid #fff;
 	border-radius: 25px;
 	box-sizing: border-box;
@@ -104,7 +100,15 @@ button {
 	box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
 	background-color: white;
 }
-/* Footer COPY*/
+
+.gen-item.small {
+	width: 368px;
+	height: 210px;
+}
+
+
+
+/* Footer */
 
 footer ul {
 	list-style: none;
@@ -126,7 +130,6 @@ footer {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-size: 1vw;
 }
 
 footer a {
@@ -136,11 +139,8 @@ footer a {
     margin-right: 10px;
     /* Add spacing between links */
 }
-
-
-
-/* Media queries for responsiveness */
-@media only screen and (max-width: 768px) {
+/* Media queries for responsiveness on Max devices */
+@media only screen and (max-width: 430px) {
   /* Constant */
   .main-header {
 	padding: 12px;
@@ -152,12 +152,256 @@ footer {
 }
     
     .gen-item {
-        min-width: 350px;
-        min-height: 200px;
+        min-width: 50vh;
     }
+
+	.gen-row {
+		display: block;
+	}
+
+	.games-container {
+		margin-top: -40px;
+	}
+	.gen-container {
+		display: block;
+	}
+	
+	img {
+		width: 30vh;
+	}
     
     footer {
         height: 50px;
         font-size: 12px;
     }
+
 }
+
+/* Media queries for responsiveness on smaller window size than usual  */
+@media only screen and (max-width: 1500px) {
+	.main-header {
+		padding: 12px;
+		font-size: 7px;
+	}
+	footer {
+		height: 50px;
+		font-size: 12px;
+	}
+		
+		.gen-item, .gen-row.secondary {
+			min-width: 40vh;
+		}
+	
+		.gen-row {
+			display: block;
+		}
+	
+		.games-container {
+			margin-top: -40px;
+		}
+		.gen-container {
+			display: block;
+		}
+		
+		img {
+			width: 25vh;
+		}
+		
+		footer {
+			height: 50px;
+			font-size: 12px;
+		}
+}
+
+/* Media queries for responsiveness on tablets  */
+@media only screen and (max-width: 800px) {
+	.main-header {
+		padding: 12px;
+		font-size: 7px;
+	}
+	footer {
+		height: 50px;
+		font-size: 12px;
+	}
+		
+		.gen-item {
+			min-width: 30vh;
+		}
+	
+		.gen-row {
+			display: block;
+		}
+	
+		.games-container {
+			margin-top: -40px;
+		}
+		.gen-container {
+			display: block;
+		}
+		
+		img {
+			width: 20vh;
+		}
+		
+		footer {
+			height: 50px;
+			font-size: 12px;
+		}
+}
+/* Media queries for responsiveness on Max devices */
+@media only screen and (max-width: 430px) {
+	/* Constant */
+	.main-header {
+	  padding: 12px;
+	  font-size: 7px;
+  }
+  footer {
+	  height: 50px;
+	  font-size: 12px;
+  }
+	  
+	  .gen-item {
+		  min-width: 50vh;
+	  }
+  
+	  .gen-row {
+		  display: block;
+	  }
+  
+	  .games-container {
+		  margin-top: -40px;
+	  }
+	  .gen-container {
+		  display: block;
+	  }
+	  
+	  img {
+		  width: 30vh;
+	  }
+	  
+	  footer {
+		  height: 50px;
+		  font-size: 12px;
+	  }
+  
+  }
+  
+  /* Media queries for responsiveness on smaller window size than usual  */
+  @media only screen and (max-width: 1500px) {
+	  .main-header {
+		  padding: 12px;
+		  font-size: 7px;
+	  }
+	  footer {
+		  height: 50px;
+		  font-size: 12px;
+	  }
+		  
+		  .gen-item, .gen-row.secondary {
+			  min-width: 40vh;
+		  }
+	  
+		  .gen-row {
+			  display: block;
+		  }
+	  
+		  .games-container {
+			  margin-top: -40px;
+		  }
+		  .gen-container {
+			  display: block;
+		  }
+		  
+		  img {
+			  width: 25vh;
+		  }
+		  
+		  footer {
+			  height: 50px;
+			  font-size: 12px;
+		  }
+  }
+  
+  /* Media queries for responsiveness on tablets  */
+  @media only screen and (max-width: 800px) {
+	  .main-header {
+		  padding: 12px;
+		  font-size: 7px;
+	  }
+	  footer {
+		  height: 50px;
+		  font-size: 12px;
+	  }
+		  
+		  .gen-item {
+			  min-width: 30vh;
+		  }
+	  
+		  .gen-row {
+			  display: block;
+		  }
+	  
+		  .games-container {
+			  margin-top: -40px;
+		  }
+		  .gen-container {
+			  display: block;
+		  }
+		  
+		  img {
+			  width: 30vh;
+		  }
+		  
+		  footer {
+			  height: 50px;
+			  font-size: 12px;
+		  }
+  }
+
+/* Media queries for responsiveness on regular devices */
+@media only screen and (max-width: 400px) {
+	/* Constant */
+	.main-header {
+	  padding: 12px;
+	  font-size: 7px;
+  }
+  footer {
+	  height: 50px;
+	  font-size: 12px;
+  }
+	  
+	  .gen-item {
+		width: 300px;
+		height: 300px;
+	  }
+
+	  .gen-item.small {
+		width: 300px;
+		height: 200px;
+	  }
+
+	  ul.timeline {
+		margin-left: -250px;
+	  }
+	  
+	  .gen-row {
+		  display: block;
+	  }
+  
+	  .games-container {
+		  margin-top: -40px;
+	  }
+	  .gen-container {
+		  display: block;
+	  }
+	  
+	  img {
+		  width: 30vh;
+	  }
+	  
+	  footer {
+		  height: 50px;
+		  font-size: 12px;
+	  }
+  
+  }
