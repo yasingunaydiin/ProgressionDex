@@ -37,8 +37,8 @@ ul.timeline {
 
 
 img {
-	height: 320px;
-	width: 240px;
+	max-height: 320px;
+	max-width: 240px;
 	flex-shrink: 0;
 }
 button {
@@ -63,7 +63,6 @@ body {
 	display: flex;
 	flex-direction: column;
 	margin-top: 0px;
-	height: 100vh; /* Set the height of your container */
     overflow-y: scroll; /* Enable vertical scrolling */
 }
 
@@ -91,8 +90,8 @@ body {
 	flex-direction: column;
 	align-items: center;
 	position: relative;
-	width: 368px;
-	height: 340px;
+	width: 360px;
+	height: 360px;
 	border: 2px solid #fff;
 	border-radius: 25px;
 	box-sizing: border-box;
@@ -102,8 +101,8 @@ body {
 }
 
 .gen-item.small {
-	width: 368px;
-	height: 210px;
+	width: 360px;
+	height: 250px;
 }
 
 
@@ -139,115 +138,7 @@ footer a {
     margin-right: 10px;
     /* Add spacing between links */
 }
-/* Media queries for responsiveness on Max devices */
-@media only screen and (max-width: 430px) {
-  /* Constant */
-  .main-header {
-	padding: 12px;
-	font-size: 7px;
-}
-footer {
-	height: 50px;
-	font-size: 12px;
-}
-    
-    .gen-item {
-        min-width: 50vh;
-    }
 
-	.gen-row {
-		display: block;
-	}
-
-	.games-container {
-		margin-top: -40px;
-	}
-	.gen-container {
-		display: block;
-	}
-	
-	img {
-		width: 30vh;
-	}
-    
-    footer {
-        height: 50px;
-        font-size: 12px;
-    }
-
-}
-
-/* Media queries for responsiveness on smaller window size than usual  */
-@media only screen and (max-width: 1500px) {
-	.main-header {
-		padding: 12px;
-		font-size: 7px;
-	}
-	footer {
-		height: 50px;
-		font-size: 12px;
-	}
-		
-		.gen-item, .gen-row.secondary {
-			min-width: 40vh;
-		}
-	
-		.gen-row {
-			display: block;
-		}
-	
-		.games-container {
-			margin-top: -40px;
-		}
-		.gen-container {
-			display: block;
-		}
-		
-		img {
-			width: 25vh;
-		}
-		
-		footer {
-			height: 50px;
-			font-size: 12px;
-		}
-}
-
-/* Media queries for responsiveness on tablets  */
-@media only screen and (max-width: 800px) {
-	.main-header {
-		padding: 12px;
-		font-size: 7px;
-	}
-	footer {
-		height: 50px;
-		font-size: 12px;
-	}
-		
-		.gen-item {
-			min-width: 30vh;
-		}
-	
-		.gen-row {
-			display: block;
-		}
-	
-		.games-container {
-			margin-top: -40px;
-		}
-		.gen-container {
-			display: block;
-		}
-		
-		img {
-			width: 20vh;
-		}
-		
-		footer {
-			height: 50px;
-			font-size: 12px;
-		}
-}
 /* Media queries for responsiveness on Max devices */
 @media only screen and (max-width: 430px) {
 	/* Constant */
@@ -260,9 +151,15 @@ footer {
 	  font-size: 12px;
   }
 	  
-	  .gen-item {
-		  min-width: 50vh;
-	  }
+  .gen-item {
+	width: 300px;
+	height: 350px;
+  }
+
+  .gen-item.small {
+	width: 300px;
+	height: 220px;
+  }
   
 	  .gen-row {
 		  display: block;
@@ -303,6 +200,9 @@ footer {
 	  
 		  .gen-row {
 			  display: block;
+		  }
+		  ul.timeline {
+			margin-bottom: -5px;
 		  }
 	  
 		  .games-container {
@@ -372,7 +272,7 @@ footer {
 	  
 	  .gen-item {
 		width: 300px;
-		height: 300px;
+		height: 320px;
 	  }
 
 	  .gen-item.small {

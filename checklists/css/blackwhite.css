@@ -105,9 +105,9 @@ body {
 	padding: 0;
 	background: #ffffff url(../../images/patterns/pattern-black.png) repeat center center; /* Icons Vectors by Vecteezy */
 	background-size: 500px 250px;
-	height: 100vh;
 	display: flex;
 	flex-direction: column;
+	height: 120vh;
 }
 /* Page Container */
 
@@ -166,12 +166,7 @@ img {
 	display: flex;
 	align-items: center;
 }
-.big-text {
-	font-size: 20px;
-}
-.small-text {
-	font-size: 14px;
-}
+
 /* Footer */
 
 footer {
@@ -196,39 +191,7 @@ footer li {
 	list-style: none;
 	font-size: 15px;
 }
-/* Checkbox Item Label */
 
-.checkbox-item label {
-	position: relative;
-	display: inline-block;
-}
-.checkbox-item input {
-	margin-right: 5px;
-}
-.checkbox-item label::before {
-	content: attr(data-tooltip);
-	visibility: hidden;
-	width: 100px;
-	background-color: #333;
-	color: #fff;
-	text-align: center;
-	border-radius: 6px;
-	padding: 5px;
-	position: absolute;
-	z-index: 1;
-	bottom: 125%;
-	/* Position the tooltip above the text */
-	left: 50%;
-	margin-left: -100px;
-	/* Center the tooltip */
-	opacity: 0;
-	transition: opacity 0.3s;
-	cursor: pointer;
-}
-.checkbox-item label:hover::before {
-	visibility: visible;
-	opacity: 1;
-}
 /* Event container */
 
 
