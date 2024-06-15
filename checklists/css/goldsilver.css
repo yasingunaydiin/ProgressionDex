@@ -51,7 +51,6 @@ body {
 	padding: 0;
 	background: #ffffff url(../../images/patterns/pattern-gold.png) repeat center center; /* Icons Vectors by Vecteezy */
 	background-size: 500px 250px;
-	height: 190vh;
 	display: flex;
 	flex-direction: column;
 }

@@ -54,7 +54,6 @@ body {
 	background: #ffffff url(../../images/patterns/pattern-crowntundra.png) repeat center center;
 	/* Icons Vectors by Vecteezy */
 	background-size: 500px 250px;
-	height: 120vh;
 	display: flex;
 	flex-direction: column;
 }

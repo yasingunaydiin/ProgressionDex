@@ -46,7 +46,6 @@ body {
 	background-size: 500px 250px;
 	display: flex;
 	flex-direction: column;
-	height: 150vh;
 }
 .page-container {
 	display: flex;

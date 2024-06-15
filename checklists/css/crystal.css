@@ -48,7 +48,6 @@ body {
 	padding: 0;
 	background: #ffffff url(../../images/patterns/pattern-crystal.png) repeat center center; /* Icons Vectors by Vecteezy */
 	background-size: 500px 250px;
-	height: 180vh;
 	display: flex;
 	flex-direction: column;
 }

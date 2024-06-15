@@ -86,7 +86,6 @@ body {
 	background: #ffffff url(../../images/patterns/pattern-omegaruby.png) repeat center center;
 	/* Icons Vectors by Vecteezy */
 	background-size: 500px 250px;
-	height: 285vh;
 	display: flex;
 	flex-direction: column;
 }

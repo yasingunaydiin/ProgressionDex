@@ -65,7 +65,6 @@ body {
 	background: #ffffff url(../../images/patterns/pattern-letsgopikachu.png) repeat center center;
 	/* Icons Vectors by Vecteezy */
 	background-size: 500px 250px;
-	height: 130vh;
 	display: flex;
 	flex-direction: column;
 }

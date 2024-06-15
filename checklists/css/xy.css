@@ -59,9 +59,9 @@ body {
 	background: #ffffff url(../../images/patterns/pattern-x.png) repeat center center;
 	/* Icons Vectors by Vecteezy */
 	background-size: 500px 250px;
-	height: 250vh;
 	display: flex;
 	flex-direction: column;
+
 }
 /* Page Container */
 
