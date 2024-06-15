@@ -15,24 +15,6 @@ a {
 ul.timeline {
 	margin-left: -300px;
 }
-.main-header {
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0; 
-	background-color: #23273E;
-	padding: 10px 10px 10px 10px;
-	display: flex;
-	justify-content: space-between;
-	font-size: 8px;
-	z-index: 1000;
-	font-weight: 700;
-	letter-spacing: 1px;
-}
-.header-left, .header-right {
-	margin: 0px 0px 0px 0px;
-	color: #fff;
-}
 /* Body */
 
 
@@ -57,6 +39,7 @@ button {
 body {
 	background: #ffffff url(../images/patterns/pattern-list.png) repeat center center;
 	background-size: 500px 250px;
+	margin: 0;
 }
 
 .games-container { /* Helps center the content */ 
@@ -72,7 +55,8 @@ body {
 	margin: auto;
 	margin-bottom: 30px;
 	position: relative;
-	padding-top: 80px;
+	padding-top: 120px;
+	margin-top: 10px;
 	scroll-snap-align: start; /* Adjust as needed: start, center, end */
 }
 
@@ -122,7 +106,7 @@ footer li {
 }
 footer {
 	height: 50px;
-	background: #23273E;
+	background:  rgb(23 37 84);
 	bottom: 0;
 	width: 100%;
 	text-align: center;

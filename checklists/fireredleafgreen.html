@@ -10,12 +10,38 @@
 	<link href="../images/icons/favicontab.ico" rel="shortcut icon" type="image/x-icon">
 </head>
 <body>
-	<header class="main-header">
-		<h1 class="header-left"><a href="../index.html">Progression Dex</a></h1>
-		<h1 class="header-right">yasingunaydiin</h1>
-	</header>
+	<div class="navbar bg-white rounded-3xl shadow-lg mt-2 fixed top-0 flex items-center justify-between" style="width: 95%;  z-index: 1000; left: 50%; transform: translateX(-50%);">
+		<div class="flex items-center gap-4">
+		  <a href="../index.html" class="btn btn-ghost text-2xl"><span class="title">Progression Dex |</span></a>
+		  <div class="flex items-center gap-2">
+			<img id="firered-logo" src="../images/logos/firered-logo.webp" class="w-20">
+			<img id="leafgreen-logo" src="../images/logos/leafgreen-logo.webp" class="w-20">
+		  </div>
+		</div>
+		<div class="flex-none gap-2 flex items-center">
+		  <div class="form-control">
+			<input type="text" placeholder="Search" class="input input-bordered w-24 md:w-auto" />
+		  </div>
+		  <div class="dropdown dropdown-end">
+			<div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
+			  <div class="w-10 rounded-full">
+				<img alt="Tailwind CSS Navbar component" src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+			  </div>
+			</div>
+			<ul tabindex="0" class="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
+			  <li>
+				<a class="justify-between">
+				  Profile
+				  <span class="badge">New</span>
+				</a>
+			  </li>
+			  <li><a href="">Settings</a></li>
+			  <li><a href="">Logout</a></li>
+			</ul>
+		  </div>
+		</div>
+	  </div>
 	<div class="page-container">
-		<div class="logo-container"><img id="firered-logo" src="../images/logos/firered-logo.webp" style="height: 120px;"> <img id="leafgreen-logo" src="../images/logos/leafgreen-logo.webp" style="height: 120px;"></div>
 		<div class="page-container-left">
 			<div class="wide-panel pokedex">
 				<label class="panel-label" id="title">Pokédex</label>
@@ -559,7 +585,7 @@
 	      var fireredLogo = document.getElementById("firered-logo");
 	      var leafgreenLogo = document.getElementById("leafgreen-logo");
 	      
-	      var mainHeader = document.querySelector(".main-header");
+	      var headerTitle = document.querySelector(".title");
 	      var widePanels = document.querySelectorAll(".wide-panel");
 	      var footer = document.querySelector("footer");
 	      var titleText = document.querySelectorAll(".panel-label");
@@ -567,7 +593,7 @@
 
 
 	      fireredLogo.addEventListener("click", function() {
-	          mainHeader.style.backgroundColor = "#E4571A";
+			headerTitle.style.color = "#E4571A";
 	          footer.style.background = "#E4571A";
 	          backgroundIcons.style.backgroundImage = 'url(../../images/patterns/pattern-firered.png)';
 
@@ -581,7 +607,7 @@
 	      });
 
 	      leafgreenLogo.addEventListener("click", function() {
-	          mainHeader.style.backgroundColor = "#5F9569";
+			headerTitle.style.color = "#5F9569";
 	          footer.style.background = "#5F9569";
 	          backgroundIcons.style.backgroundImage = 'url(../../images/patterns/pattern-leafgreen.png)';
 

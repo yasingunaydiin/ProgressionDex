@@ -59,11 +59,7 @@
 	height: 25px;
 	margin-left: 5px;
 }
-.logo-container {
-	margin-top: -13px;
-	z-index: 2000;
-	position: fixed;
-}
+
 .legendaries, .giftpokemon, .ingametrades, .tms, .battles, .battlesubway, .completepokedex, .trainercard, .collectibles, .battleinstitute, .sages {
 	display: flex;
 	flex-direction: column;
@@ -88,16 +84,7 @@ a {
 	text-decoration: none;
 	color: #fff;
 }
-.header-left, .header-right {
-	margin: 0;
-	color: #fff;
-}
-.header-list {
-	position: absolute;
-	font-size: 12px;
-	margin-top: 2px;
-	left: 250px;
-}
+
 /* Body */
 
 body {
@@ -197,10 +184,7 @@ footer li {
 
 @media only screen and (max-width: 768px) {
 	/* Constant */
-    .main-header {
-        padding: 12px;
-        font-size: 7px;
-    }
+    
     footer {
         height: 50px;
         font-size: 12px;
@@ -208,11 +192,6 @@ footer li {
 
 	/* Variable */
 
-	.logo-container {
-		display: flex;
-		align-items: center;
-		margin-top: 30px;
-	  }
 
 	  .collapsible {
 		width: 290px;

@@ -26,21 +26,6 @@
 	height: 30px;
 }
 
-.main-header {
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	background-color: #8d0406;
-	padding: 10px;
-	display: flex;
-	justify-content: space-between;
-	font-size: 8px;
-	z-index: 1000;
-	font-weight: 700;
-	letter-spacing: 1px;
-}
-
 .collapsible {
     background-color: #f1f1f1;
     cursor: pointer;
@@ -85,27 +70,14 @@
 	height: 25px;
 	margin-left: 0px;
 }
-.logo-container {
-	margin-top: -13px;
-	z-index: 2000;
-	position: fixed;
-}
+
 
 /* Links */
 a {
 	text-decoration: none;
 	color: #fff;
 }
-.header-left, .header-right {
-	margin: 0;
-	color: #fff;
-}
-.header-list {
-	position: absolute;
-	font-size: 12px;
-	margin-top: 2px;
-	left: 250px;
-}
+
 
 /* Body */
 body {
@@ -216,10 +188,7 @@ footer li {
 
 @media only screen and (max-width: 768px) {
 	/* Constant */
-    .main-header {
-        padding: 12px;
-        font-size: 7px;
-    }
+  
     footer {
         height: 50px;
         font-size: 12px;
@@ -227,11 +196,7 @@ footer li {
 
 	/* Variable */
 
-	.logo-container {
-		display: flex;
-		align-items: center;
-		margin-top: 30px;
-	  }
+
 
 
 

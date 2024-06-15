@@ -12,20 +12,6 @@
 }
 * {font-family: system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue;}
 
-.main-header {
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	background-color: #C23A22;
-	padding: 10px 10px 10px 10px;
-	display: flex;
-	justify-content: space-between;
-	font-size: 8px;
-	z-index: 1000;
-	font-weight: 700;
-	letter-spacing: 1px;
-}
 .pokeicon {
 	height: 40px;
 }
@@ -38,38 +24,20 @@
 	height: 30px;
 }
 
-.header-list {
-	position: absolute;
-	font-size: 12px;
-	margin-top: 2px;
-	left: 250px;
-}
+
 span {
 	pointer-events: none;
 }
 
-.header-left#list {
-	margin-left: -990px;
-	font-size: 12px;
-	margin-top: 2px;
-}
 .checkbox-item input {
 	margin-right: 5px;
 }
-.logo-container {
-	position: fixed;
-	margin-top: -13px;
-	text-align: center;
-	z-index: 1000;
-}
+
 a {
 	text-decoration: none;
 	color: #fff;
 }
-.header-left, .header-right {
-	margin: 0px 0px 0px 0px;
-	color: #fff;
-}
+
 body {
 	margin: 0;
 	padding: 0;
@@ -141,22 +109,13 @@ footer li {
 }
 
 @media only screen and (max-width: 768px) {
-	/* Constant */
-	.main-header {
-		padding: 12px;
-		font-size: 7px;
-	}
+	
 	footer {
 		height: 50px;
 		font-size: 12px;
 	}
 	/* Variable */
-	.logo-container {
-		display: flex;
-		align-items: center;
-		margin-top: 30px;
-		
-	}
+
 	.panel-content {
 		width: 300px;
 	}
