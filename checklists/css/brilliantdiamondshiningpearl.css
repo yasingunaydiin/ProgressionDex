@@ -85,7 +85,9 @@ body {
 	align-items: baseline;
 }
 /* Span */
-
+.checkbox-item input[type="checkbox"] {
+    margin-right: 5px; /* Adjust this value to control the space between the checkbox and the label */
+}
 span {
 	pointer-events: none;
 }
@@ -106,9 +108,7 @@ span {
 	margin-bottom: 50px;
 	margin-top: 50px;
 }
-img {
-	margin-left: -5px;
-}
+
 /* Panel Label */
 
 .panel-label {

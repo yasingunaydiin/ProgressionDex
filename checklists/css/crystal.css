@@ -58,7 +58,9 @@ body {
 	align-items: baseline;
 }
 /* page */
-
+.checkbox-item input[type="checkbox"] {
+    margin-right: 5px; /* Adjust this value to control the space between the checkbox and the label */
+}
 .wide-panel {
 	text-align: center;
 	padding: 20px;

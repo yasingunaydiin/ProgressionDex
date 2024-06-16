@@ -19,7 +19,7 @@
 }
 /* Header */
 
-.leaguecard-leftrow, .leaguecard-leftmiddlerow, .leaguecard-rightrow, .leaguecard-rightmiddlerow {
+.leaguecard-leftrow, .leaguecard-rightrow {
 	margin-right: 18px;
 	white-space: nowrap;
 }
@@ -62,7 +62,9 @@ body {
 	flex-direction: column;
 }
 /* Page Container */
-
+.checkbox-item input[type="checkbox"] {
+    margin-right: 5px; /* Adjust this value to control the space between the checkbox and the label */
+}
 .page-container {
 	display: flex;
 	justify-content: space-evenly;
@@ -87,9 +89,7 @@ span {
 	margin-top: 150px;
 	border: 2px solid #f6ce31;
 }
-img {
-	margin-left: -5px;
-}
+
 /* Panel Label */
 
 .panel-label {
@@ -123,8 +123,7 @@ img {
 	white-space: nowrap;
 }
 .wide-panel.leaguecards {
-	margin-top: -10px;
-	width: 1000px;
+	width: 600px;
 }
 .pokeicon.leaguecard {
 	height: 180px;

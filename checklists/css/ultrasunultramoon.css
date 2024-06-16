@@ -90,9 +90,7 @@ span {
 	margin-bottom: 50px;
 	margin-top: 50px;
 }
-img {
-	margin-left: -5px;
-}
+
 /* Panel Label */
 .panel-label {
 	display: block;
@@ -148,7 +146,9 @@ img {
 	margin-right: 5px;
 	margin-left: 5px;
 }
-
+.checkbox-item input[type="checkbox"] {
+    margin-right: 5px; /* Adjust this value to control the space between the checkbox and the label */
+}
 /* Checkbox Item */
 .checkbox-item {
 	margin-bottom: 10px;
@@ -192,6 +192,9 @@ footer li {
 	/* Variable */
 
 
+	.pokeicon.tm, .pokeicon.tr {
+		display: none;
+	}
 
 
 	  .panel-content {

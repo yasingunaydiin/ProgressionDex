@@ -131,8 +131,6 @@ span {
 	font-weight: 1000;
 	color: #0078be;
 }
-/* Panel Content */
-
 
 /* Checkbox Item */
 
@@ -140,6 +138,10 @@ span {
 	margin-bottom: 10px;
 	display: flex;
 	align-items: center;
+}
+
+.checkbox-item input[type="checkbox"] {
+    margin-right: 5px; /* Adjust this value to control the space between the checkbox and the label */
 }
 /* Footer */
 
@@ -204,6 +206,9 @@ footer li {
 		}
 		.collapsible {
 			width: 290px;
+		}
+		.tms img {
+			display: none;
 		}
 
 }

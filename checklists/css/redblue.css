@@ -23,7 +23,9 @@
 .pokeicon.tm {
 	height: 30px;
 }
-
+.checkbox-item input[type="checkbox"] {
+    margin-right: 5px; /* Adjust this value to control the space between the checkbox and the label */
+}
 
 span {
 	pointer-events: none;
@@ -109,6 +111,7 @@ footer li {
 
 @media only screen and (max-width: 768px) {
 	
+
 	footer {
 		height: 50px;
 		font-size: 12px;

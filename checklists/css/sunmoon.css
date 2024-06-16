@@ -50,7 +50,9 @@ a {
 	color: #fff;
 }
 
-
+.checkbox-item input[type="checkbox"] {
+    margin-right: 5px; /* Adjust this value to control the space between the checkbox and the label */
+}
 /* Body */
 body {
 	margin: 0;
@@ -90,10 +92,6 @@ span {
 .wide-panel.more {
 	margin-bottom: 50px;
 	margin-top: 50px;
-}
-
-img {
-	margin-left: -5px;
 }
 
 
@@ -194,7 +192,10 @@ footer li {
 
 	/* Variable */
 
-	
+	.pokeicon.tm, .pokeicon.tr {
+		display: none;
+	}
+
 
 
 

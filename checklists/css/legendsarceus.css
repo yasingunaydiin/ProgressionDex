@@ -68,7 +68,9 @@ body {
 	display: flex;
 	flex-direction: column;
 }
-
+.checkbox-item input[type="checkbox"] {
+    margin-right: 5px; /* Adjust this value to control the space between the checkbox and the label */
+}
 /* Page Container */
 .page-container {
 	display: flex;
@@ -99,9 +101,7 @@ span {
 	margin-top: 50px;
 }
 
-img {
-	margin-left: -5px;
-}
+
 
 
 /* Panel Label */
