@@ -89,6 +89,7 @@ footer {
 	height: 40px;
 	background: #C23A22;
 	bottom: 0;
+	position: absolute;
 	width: 100%;
 	text-align: center;
 	display: flex;
@@ -117,15 +118,23 @@ footer li {
 		font-size: 12px;
 	}
 	/* Variable */
-
+	
 	.panel-content {
 		width: 300px;
 	}
 	.wide-panel {
 		margin-top: 180px;
+		width: 300px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: center;
 	}
 	.wide-panel.collectibles {
 		margin-top: 0px;
+	}
+	.collapsible {
+		width: 290px;
 	}
 	
 }

@@ -108,24 +108,28 @@ footer li {
 @media only screen and (max-width: 768px) {
 
     footer {
-        height: 50px;
-        font-size: 12px;
-    }
-
+		height: 50px;
+		font-size: 12px;
+	}
 	/* Variable */
-
 	
-
-	  .panel-content {
+	.panel-content {
 		width: 300px;
-	  }
-
-	  .wide-panel {
+	}
+	.wide-panel {
 		margin-top: 180px;
-	  }
-	  .wide-panel.collectibles {
+		width: 300px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: center;
+	}
+	.wide-panel.collectibles {
 		margin-top: 0px;
-	  }
+	}
+	.collapsible {
+		width: 290px;
+	}
 	  
 	  
 

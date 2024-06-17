@@ -15,6 +15,17 @@ a {
 /* Header*/
 
 /* Body */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.games-container {
+    flex: 1 0 auto;
+}
+
 
 
 .gen-container img, .gen-row img {
@@ -114,6 +125,7 @@ footer {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	
 }
 
 footer a {
