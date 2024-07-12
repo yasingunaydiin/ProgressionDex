@@ -8,9 +8,11 @@ module.exports = {
     "./list/*.{html,js}",
     "./404/*.{html,js}",
     "./checklists/*.{html,js}",
+    "./login/*.{html,js}",
+    "./register/*.{html,js}"
   ],
   theme: {
     extend: {},
   },
-  plugins: [require('daisyui')],
+  plugins: [require('daisyui'), ('@tailwindcss/forms'),],
 }
