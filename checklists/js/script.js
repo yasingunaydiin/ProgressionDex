@@ -1,3 +1,4 @@
+// Checkbox script that saves into cache
 document.addEventListener("DOMContentLoaded", function () {
     // Get all checkboxes on the page
     const checkboxes = document.querySelectorAll('input[type="checkbox"]');
@@ -20,3 +21,24 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+// Script that adds the badge
+document.addEventListener('DOMContentLoaded', () => {
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+    checkboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', (event) => {
+            const checkboxId = event.target.id;
+            const isChecked = event.target.checked;
+            localStorage.setItem(checkboxId, isChecked);
+        });
+
+        const savedState = localStorage.getItem(checkbox.id);
+        if (savedState !== null) {
+            checkbox.checked = savedState === 'true';
+        }
+    });
+});
+
+
+

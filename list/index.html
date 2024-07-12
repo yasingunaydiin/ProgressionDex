@@ -37,7 +37,6 @@
 			<a onclick="toggleGen8()" class="mt-3 ml-3 inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-800 ring-1 ring-inset ring-red-600/20">Gen 8</a>
 			<a onclick="toggleGen9()" class="mt-3 ml-3 inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-800 ring-1 ring-inset ring-red-600/20">Gen 9</a>
 			<a onclick="toggleHome()" class="mt-3 ml-3 inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-800 ring-1 ring-inset ring-red-600/20">Home</a>
-		
 		</div>
 	</div>
 	
@@ -50,17 +49,25 @@
 
 	
 		<div class="gen-container">
-			<div class="gen-item">
+			<div class="gen-item" data-game="redblue">
 				<div class="badge absolute right-4 p-2">
-					<span class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-800 ring-1 ring-inset ring-blue-600/20">New</span>
+
+					<span id="newBadge_redblue" style="display: none;" class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-800 ring-1 ring-inset ring-blue-600/20">New</span>
+					<span id="inProgressBadge_redblue" style="display: none;" class="inline-flex items-center rounded-md bg-yellow-50 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-inset ring-yellow-600/20">In Progress</span>
+					<span id="completedBadge_redblue" style="display: none;" class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-800 ring-1 ring-inset ring-green-600/20">Completed</span>
+
 					<span class="ml-1 inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-800 ring-1 ring-inset ring-red-600/20">Generation 1</span>	
 				</div>
 				<a href="../checklists/redblue.html"><img src="../images/logos/red-logo.webp"></a> <a href="../checklists/redblue.html"><img src="../images/logos/blue-logo.webp"></a> <a href="../checklists/redblue.html"><button class="btn btn-outline">Progress</button></a>
 			</div>
 
-			<div class="gen-item small">
+			<div class="gen-item small" data-game="yellow">
 				<div class="badge absolute right-4 p-2">
-					<span class="inline-flex items-center rounded-md bg-yellow-50 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-inset ring-yellow-600/20">In Progress</span>
+
+					<span id="newBadge_yellow" style="display: none;" class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-800 ring-1 ring-inset ring-blue-600/20">New</span>
+					<span id="inProgressBadge_yellow" style="display: none;" class="inline-flex items-center rounded-md bg-yellow-50 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-inset ring-yellow-600/20">In Progress</span>
+					<span id="completedBadge_yellow" style="display: none;" class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-800 ring-1 ring-inset ring-green-600/20">Completed</span>
+
 					<span class="ml-1 inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-800 ring-1 ring-inset ring-red-600/20">Generation 1</span>	
 				</div>
 				<a href="../checklists/yellow.html"><img src="../images/logos/yellow-logo.webp"></a> <a href="../checklists/yellow.html"> <button class="btn btn-outline">Progress</button></a>
@@ -76,16 +83,23 @@
 		<div class="gen-row generation-2">
 			
 			  <div class="gen-container">
-			<div class="gen-item">
+			<div class="gen-item" data-game="goldsilver">
 				<div class="badge absolute right-4 p-2">
-					<span class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-800 ring-1 ring-inset ring-green-600/20">Completed</span>
+					
+					<span id="newBadge_goldsilver" style="display: none;" class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-800 ring-1 ring-inset ring-blue-600/20">New</span>
+					<span id="inProgressBadge_goldsilver" style="display: none;" class="inline-flex items-center rounded-md bg-yellow-50 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-inset ring-yellow-600/20">In Progress</span>
+					<span id="completedBadge_goldsilver" style="display: none;" class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-800 ring-1 ring-inset ring-green-600/20">Completed</span>
+
 					<span class="ml-1 inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-800 ring-1 ring-inset ring-red-600/20">Generation 2</span>	
 				</div>
 				<a href="../checklists/goldsilver.html"><img src="../images/logos/gold-logo.webp"></a> <a href="../checklists/goldsilver.html"><img src="../images/logos/silver-logo.webp"></a> <a href="../checklists/goldsilver.html"><button class="btn btn-outline ">Progress</button></a>
 			</div>
-			<div class="gen-item small">
+			<div class="gen-item small" data-game="crystal">
 				<div class="badge absolute right-4 p-2">
-					<span class="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-800 ring-1 ring-inset ring-gray-600/20">Default</span>
+					<span id="newBadge_crystal" style="display: none;" class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-800 ring-1 ring-inset ring-blue-600/20">New</span>
+					<span id="inProgressBadge_crystal" style="display: none;" class="inline-flex items-center rounded-md bg-yellow-50 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-inset ring-yellow-600/20">In Progress</span>
+					<span id="completedBadge_crystal" style="display: none;" class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-800 ring-1 ring-inset ring-green-600/20">Completed</span>
+
 					<span class="ml-1 inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-800 ring-1 ring-inset ring-red-600/20">Generation 2</span>	
 				</div>
 				<a href="../checklists/crystal.html"><img src="../images/logos/crystal-logo.webp"></a> <a href="../checklists/crystal.html"><button class="btn btn-outline">Progress</button></a>
@@ -101,14 +115,22 @@
 		<div class="gen-row generation-3"> 
 			
 			  <div class="gen-container">
-			<div class="gen-item">
+			<div class="gen-item" data-game="rubysapphire">
 				<div class="badge absolute right-4 p-2">
+					<span id="newBadge_rubysapphire" style="display: none;" class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-800 ring-1 ring-inset ring-blue-600/20">New</span>
+					<span id="inProgressBadge_rubysapphire" style="display: none;" class="inline-flex items-center rounded-md bg-yellow-50 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-inset ring-yellow-600/20">In Progress</span>
+					<span id="completedBadge_rubysapphire" style="display: none;" class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-800 ring-1 ring-inset ring-green-600/20">Completed</span>
+
 					<span class="ml-1 inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-800 ring-1 ring-inset ring-red-600/20">Generation 3</span>	
 				</div>
 				<a href="../checklists/rubysapphire.html"><img src="../images/logos/ruby-logo.webp"></a> <a href="../checklists/rubysapphire.html"><img src="../images/logos/sapphire-logo.webp"></a> <a href="../checklists/rubysapphire.html"><button class="btn btn-outline ">Progress</button></a>
 			</div>
-			<div class="gen-item small">
+			<div class="gen-item small" data-game="emerald">
 				<div class="badge absolute right-4 p-2">
+					<span id="newBadge_emerald" style="display: none;" class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-800 ring-1 ring-inset ring-blue-600/20">New</span>
+					<span id="inProgressBadge_emerald" style="display: none;" class="inline-flex items-center rounded-md bg-yellow-50 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-inset ring-yellow-600/20">In Progress</span>
+					<span id="completedBadge_emerald" style="display: none;" class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-800 ring-1 ring-inset ring-green-600/20">Completed</span>
+
 					<span class="ml-1 inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-800 ring-1 ring-inset ring-red-600/20">Generation 3</span>	
 				</div>
 				<a href="../checklists/emerald.html"><img src="../images/logos/emerald-logo.webp"></a> <a href="../checklists/emerald.html"><button class="btn btn-outline ">Progress</button></a>
@@ -117,8 +139,12 @@
 		</div>
 		<div class="gen-row secondary generation-3">
 			<div class="gen-container">
-				<div class="gen-item">
+				<div class="gen-item" data-game="fireredleafgreen">
 					<div class="badge absolute right-4 p-2">
+						<span id="newBadge_fireredleafgreen" style="display: none;" class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-800 ring-1 ring-inset ring-blue-600/20">New</span>
+					<span id="inProgressBadge_fireredleafgreen" style="display: none;" class="inline-flex items-center rounded-md bg-yellow-50 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-inset ring-yellow-600/20">In Progress</span>
+					<span id="completedBadge_fireredleafgreen" style="display: none;" class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-800 ring-1 ring-inset ring-green-600/20">Completed</span>
+
 							<span class="ml-1 inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-800 ring-1 ring-inset ring-red-600/20">Generation 3</span>	
 					</div>
 					<a href="../checklists/fireredleafgreen.html"><img src="../images/logos/firered-logo.webp"></a> <a href="../checklists/fireredleafgreen.html"><img src="../images/logos/leafgreen-logo.webp"></a> <a href="../checklists/fireredleafgreen.html"><button class="btn btn-outline ">Progress</button></a>
@@ -128,14 +154,22 @@
 		<div class="gen-row generation-4">
 			
 			  <div class="gen-container">
-			<div class="gen-item">
+			<div class="gen-item" data-game="diamondpearl">
 				<div class="badge absolute right-4 p-2">
+					<span id="newBadge_diamondpearl" style="display: none;" class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-800 ring-1 ring-inset ring-blue-600/20">New</span>
+					<span id="inProgressBadge_diamondpearl" style="display: none;" class="inline-flex items-center rounded-md bg-yellow-50 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-inset ring-yellow-600/20">In Progress</span>
+					<span id="completedBadge_diamondpearl" style="display: none;" class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-800 ring-1 ring-inset ring-green-600/20">Completed</span>
+
 					<span class="ml-1 inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-800 ring-1 ring-inset ring-red-600/20">Generation 4</span>	
 				</div>
 				<a href="../checklists/diamondpearl.html"><img src="../images/logos/diamond-logo.webp"></a> <a href="../checklists/diamondpearl.html"><img src="../images/logos/pearl-logo.webp"></a> <a href="../checklists/diamondpearl.html"><button class="btn btn-outline ">Progress</button></a>
 			</div>
-			<div class="gen-item small">
+			<div class="gen-item small" data-game="platinum">
 				<div class="badge absolute right-4 p-2">
+					<span id="newBadge_platinum" style="display: none;" class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-800 ring-1 ring-inset ring-blue-600/20">New</span>
+					<span id="inProgressBadge_platinum" style="display: none;" class="inline-flex items-center rounded-md bg-yellow-50 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-inset ring-yellow-600/20">In Progress</span>
+					<span id="completedBadge_platinum" style="display: none;" class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-800 ring-1 ring-inset ring-green-600/20">Completed</span>
+
 					<span class="ml-1 inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-800 ring-1 ring-inset ring-red-600/20">Generation 4</span>	
 				</div>
 				<a href="../checklists/platinum.html"><img src="../images/logos/platinum-logo.webp"></a> <a href="../checklists/platinum.html"><button class="btn btn-outline ">Progress</button></a>
@@ -143,8 +177,12 @@
 		</div>
 		</div>
 		<div class="gen-row secondary generation-4">
-			<div class="gen-item">
+			<div class="gen-item" data-game="heartgoldsoulsilver">
 				<div class="badge absolute right-4 p-2">
+					<span id="newBadge_heartgoldsoulsilver" style="display: none;" class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-800 ring-1 ring-inset ring-blue-600/20">New</span>
+					<span id="inProgressBadge_heartgoldsoulsilver" style="display: none;" class="inline-flex items-center rounded-md bg-yellow-50 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-inset ring-yellow-600/20">In Progress</span>
+					<span id="completedBadge_heartgoldsoulsilver" style="display: none;" class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-800 ring-1 ring-inset ring-green-600/20">Completed</span>
+
 					<span class="ml-1 inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-800 ring-1 ring-inset ring-red-600/20">Generation 4</span>	
 				</div>
 				<a href="../checklists/heartgoldsoulsilver.html"><img src="../images/logos/heartgold-logo.webp"></a> <a href="../checklists/heartgoldsoulsilver.html"><img src="../images/logos/soulsilver-logo.webp"></a> <a href="../checklists/heartgoldsoulsilver.html"><button class="btn btn-outline ">Progress</button></a>
@@ -154,14 +192,22 @@
 		<div class="gen-row generation-5">
 			
 			  <div class="gen-container">
-			<div class="gen-item">
+			<div class="gen-item" data-game="blackwhite">
 				<div class="badge absolute right-4 p-2">
+					<span id="newBadge_blackwhite" style="display: none;" class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-800 ring-1 ring-inset ring-blue-600/20">New</span>
+					<span id="inProgressBadge_blackwhite" style="display: none;" class="inline-flex items-center rounded-md bg-yellow-50 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-inset ring-yellow-600/20">In Progress</span>
+					<span id="completedBadge_blackwhite" style="display: none;" class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-800 ring-1 ring-inset ring-green-600/20">Completed</span>
+
 					<span class="ml-1 inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-800 ring-1 ring-inset ring-red-600/20">Generation 5</span>	
 				</div>
 				<a href="../checklists/blackwhite.html"><img src="../images/logos/black-logo.webp"></a> <a href="../checklists/blackwhite.html"><img src="../images/logos/white-logo.webp"></a> <a href="../checklists/blackwhite.html"><button class="btn btn-outline ">Progress</button></a>
 			</div>
-			<div class="gen-item">
+			<div class="gen-item" data-game="black2white2">
 				<div class="badge absolute right-4 p-2">
+					<span id="newBadge_black2white2" style="display: none;" class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-800 ring-1 ring-inset ring-blue-600/20">New</span>
+					<span id="inProgressBadge_black2white2" style="display: none;" class="inline-flex items-center rounded-md bg-yellow-50 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-inset ring-yellow-600/20">In Progress</span>
+					<span id="completedBadge_black2white2" style="display: none;" class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-800 ring-1 ring-inset ring-green-600/20">Completed</span>
+
 					<span class="ml-1 inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-800 ring-1 ring-inset ring-red-600/20">Generation 5</span>	
 				</div>
 				<a href="../checklists/black2white2.html"><img src="../images/logos/black2-logo.webp"></a> <a href="../checklists/black2white2.html"><img src="../images/logos/white2-logo.webp"></a> <a href="../checklists/black2white2.html"><button class="btn btn-outline ">Progress</button></a>
@@ -171,14 +217,22 @@
 		<div class="gen-row generation-6">
 			
 			  <div class="gen-container">
-			<div class="gen-item">
+			<div class="gen-item" data-game="xy">
 				<div class="badge absolute right-4 p-2">
+					<span id="newBadge_xy" style="display: none;" class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-800 ring-1 ring-inset ring-blue-600/20">New</span>
+					<span id="inProgressBadge_xy" style="display: none;" class="inline-flex items-center rounded-md bg-yellow-50 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-inset ring-yellow-600/20">In Progress</span>
+					<span id="completedBadge_xy" style="display: none;" class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-800 ring-1 ring-inset ring-green-600/20">Completed</span>
+
 					<span class="ml-1 inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-800 ring-1 ring-inset ring-red-600/20">Generation 6</span>	
 				</div>
 				<a href="../checklists/xy.html"><img src="../images/logos/x-logo.webp"></a> <a href="../checklists/xy.html"><img src="../images/logos/y-logo.webp"></a> <a href="../checklists/xy.html"><button class="btn btn-outline ">Progress</button></a>
 			</div>
-			<div class="gen-item">
+			<div class="gen-item" data-game="omegarubyalphasapphire">
 				<div class="badge absolute right-4 p-2">
+					<span id="newBadge_omegarubyalphasapphire" style="display: none;" class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-800 ring-1 ring-inset ring-blue-600/20">New</span>
+					<span id="inProgressBadge_omegarubyalphasapphire" style="display: none;" class="inline-flex items-center rounded-md bg-yellow-50 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-inset ring-yellow-600/20">In Progress</span>
+					<span id="completedBadge_omegarubyalphasapphire" style="display: none;" class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-800 ring-1 ring-inset ring-green-600/20">Completed</span>
+
 					<span class="ml-1 inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-800 ring-1 ring-inset ring-red-600/20">Generation 6</span>	
 				</div>
 				<a href="../checklists/omegarubyalphasapphire.html"><img src="../images/logos/omegaruby-logo.webp"></a> <a href="../checklists/omegarubyalphasapphire.html"><img src="../images/logos/alphasapphire-logo.webp"></a> <a href="../checklists/omegarubyalphasapphire.html"><button class="btn btn-outline ">Progress</button></a>
@@ -188,20 +242,32 @@
 		<div class="gen-row generation-7">
 			
 			  <div class="gen-container">
-			<div class="gen-item">
+			<div class="gen-item" data-game="sunmoon">
 				<div class="badge absolute right-4 p-2">
+					<span id="newBadge_sunmoon" style="display: none;" class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-800 ring-1 ring-inset ring-blue-600/20">New</span>
+					<span id="inProgressBadge_sunmoon" style="display: none;" class="inline-flex items-center rounded-md bg-yellow-50 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-inset ring-yellow-600/20">In Progress</span>
+					<span id="completedBadge_sunmoon" style="display: none;" class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-800 ring-1 ring-inset ring-green-600/20">Completed</span>
+
 					<span class="ml-1 inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-800 ring-1 ring-inset ring-red-600/20">Generation 7</span>	
 				</div>
 				<a href="../checklists/sunmoon.html"><img src="../images/logos/sun-logo.webp"></a> <a href="../checklists/sunmoon.html"><img src="../images/logos/moon-logo.webp"></a> <a href="../checklists/sunmoon.html"><button class="btn btn-outline ">Progress</button></a>
 			</div>
-			<div class="gen-item">
+			<div class="gen-item" data-game="ultrasunultramoon">
 				<div class="badge absolute right-4 p-2">
+					<span id="newBadge_ultrasunultramoon" style="display: none;" class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-800 ring-1 ring-inset ring-blue-600/20">New</span>
+					<span id="inProgressBadge_ultrasunultramoon" style="display: none;" class="inline-flex items-center rounded-md bg-yellow-50 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-inset ring-yellow-600/20">In Progress</span>
+					<span id="completedBadge_ultrasunultramoon" style="display: none;" class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-800 ring-1 ring-inset ring-green-600/20">Completed</span>
+
 					<span class="ml-1 inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-800 ring-1 ring-inset ring-red-600/20">Generation 7</span>	
 				</div>
 				<a href="../checklists/ultrasunultramoon.html"><img src="../images/logos/ultramoon-logo.webp"></a> <a href="../checklists/ultrasunultramoon.html"><img src="../images/logos/ultrasun-logo.webp"></a> <a href="../checklists/ultrasunultramoon.html"><button class="btn btn-outline ">Progress</button></a>
 			</div>
-			<div class="gen-item">
+			<div class="gen-item" data-game="letsgopikachueevee">
 				<div class="badge absolute right-4 p-2">
+					<span id="newBadge_letsgopikachueevee" style="display: none;" class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-800 ring-1 ring-inset ring-blue-600/20">New</span>
+					<span id="inProgressBadge_letsgopikachueevee" style="display: none;" class="inline-flex items-center rounded-md bg-yellow-50 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-inset ring-yellow-600/20">In Progress</span>
+					<span id="completedBadge_letsgopikachueevee" style="display: none;" class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-800 ring-1 ring-inset ring-green-600/20">Completed</span>
+
 					<span class="ml-1 inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-800 ring-1 ring-inset ring-red-600/20">Generation 7</span>	
 				</div>
 				<a href="../checklists/letsgopikachueevee.html"><img src="../images/logos/letsgopikachu-logo.webp"></a> <a href="../checklists/letsgopikachueevee.html"><img src="../images/logos/letsgoeevee-logo.webp"></a> <a href="../checklists/letsgopikachueevee.html"><button class="btn btn-outline ">Progress</button></a>
@@ -211,20 +277,32 @@
 		<div class="gen-row generation-8">
 			
 			  <div class="gen-container">
-			<div class="gen-item">
+			<div class="gen-item" data-game="swordshield">
 				<div class="badge absolute right-4 p-2">
+					<span id="newBadge_swordshield" style="display: none;" class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-800 ring-1 ring-inset ring-blue-600/20">New</span>
+					<span id="inProgressBadge_swordshield" style="display: none;" class="inline-flex items-center rounded-md bg-yellow-50 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-inset ring-yellow-600/20">In Progress</span>
+					<span id="completedBadge_swordshield" style="display: none;" class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-800 ring-1 ring-inset ring-green-600/20">Completed</span>
+
 					<span class="ml-1 inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-800 ring-1 ring-inset ring-red-600/20">Generation 8</span>	
 				</div>
 				<a href="../checklists/swordshield.html"><img src="../images/logos/sword-logo.webp"></a> <a href="../checklists/swordshield.html"><img src="../images/logos/shield-logo.webp"></a> <a href="../checklists/swordshield.html"><button class="btn btn-outline ">Progress</button></a>
 			</div>
-			<div class="gen-item small">
+			<div class="gen-item small" data-game="crowntundra">
 				<div class="badge absolute right-4 p-2">
+					<span id="newBadge_crowntundra" style="display: none;" class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-800 ring-1 ring-inset ring-blue-600/20">New</span>
+					<span id="inProgressBadge_crowntundra" style="display: none;" class="inline-flex items-center rounded-md bg-yellow-50 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-inset ring-yellow-600/20">In Progress</span>
+					<span id="completedBadge_crowntundra" style="display: none;" class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-800 ring-1 ring-inset ring-green-600/20">Completed</span>
+
 					<span class="ml-1 inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-800 ring-1 ring-inset ring-red-600/20">Generation 8</span>	
 				</div>
 				<a href="../checklists/crowntundra.html"><img src="../images/logos/crowntundra-logo.png"></a> <a href="../checklists/crowntundra.html"><button class="btn btn-outline ">Progress</button></a>
 			</div>
-			<div class="gen-item small ">
+			<div class="gen-item small" data-game="isleofarmor">
 				<div class="badge absolute right-4 p-2">
+					<span id="newBadge_isleofarmor" style="display: none;" class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-800 ring-1 ring-inset ring-blue-600/20">New</span>
+					<span id="inProgressBadge_isleofarmor" style="display: none;" class="inline-flex items-center rounded-md bg-yellow-50 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-inset ring-yellow-600/20">In Progress</span>
+					<span id="completedBadge_isleofarmor" style="display: none;" class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-800 ring-1 ring-inset ring-green-600/20">Completed</span>
+
 					<span class="ml-1 inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-800 ring-1 ring-inset ring-red-600/20">Generation 8</span>	
 				</div>
 				<a href="../checklists/isleofarmor.html"><img src="../images/logos/isleofarmor-logo.png"></a> <a href="../checklists/isleofarmor.html"><button class="btn btn-outline ">Progress</button></a>
@@ -233,14 +311,22 @@
 		</div>
 		</div>
 		<div class="gen-row secondary generation-8">
-			<div class="gen-item small">
+			<div class="gen-item small" data-game="legendsarceus">
 				<div class="badge absolute right-4 p-2">
+					<span id="newBadge_legendsarceus" style="display: none;" class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-800 ring-1 ring-inset ring-blue-600/20">New</span>
+					<span id="inProgressBadge_legendsarceus" style="display: none;" class="inline-flex items-center rounded-md bg-yellow-50 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-inset ring-yellow-600/20">In Progress</span>
+					<span id="completedBadge_legendsarceus" style="display: none;" class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-800 ring-1 ring-inset ring-green-600/20">Completed</span>
+
 					<span class="ml-1 inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-800 ring-1 ring-inset ring-red-600/20">Generation 8</span>	
 				</div>
 				<a href="../checklists/legendsarceus.html"><img src="../images/logos/legendsarceus-logo.webp"></a> <button class="btn btn-outline ">Progress</button>
 			</div>
-			<div class="gen-item">
+			<div class="gen-item" data-game="brilliantdiamondshiningpearl">
 				<div class="badge absolute right-4 p-2">
+					<span id="newBadge_brilliantdiamondshiningpearl" style="display: none;" class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-800 ring-1 ring-inset ring-blue-600/20">New</span>
+					<span id="inProgressBadge_brilliantdiamondshiningpearl" style="display: none;" class="inline-flex items-center rounded-md bg-yellow-50 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-inset ring-yellow-600/20">In Progress</span>
+					<span id="completedBadge_brilliantdiamondshiningpearl" style="display: none;" class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-800 ring-1 ring-inset ring-green-600/20">Completed</span>
+
 					<span class="ml-1 inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-800 ring-1 ring-inset ring-red-600/20">Generation 8</span>	
 				</div>
 				<a href="../checklists/brilliantdiamondshiningpearl.html"><img src="../images/logos/brilliantdiamond-logo.webp"></a> <img src="../images/logos/shiningpearl-logo.webp"> <button class="btn btn-outline ">Progress</button>
@@ -249,20 +335,32 @@
 		<div class="gen-row generation-9">
 			
 			  <div class="gen-container ">
-			<div class="gen-item">
+			<div class="gen-item" data-game="scarletviolet">
 				<div class="badge absolute right-4 p-2">
+					<span id="newBadge_scarletviolet" style="display: none;" class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-800 ring-1 ring-inset ring-blue-600/20">New</span>
+					<span id="inProgressBadge_scarletviolet" style="display: none;" class="inline-flex items-center rounded-md bg-yellow-50 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-inset ring-yellow-600/20">In Progress</span>
+					<span id="completedBadge_scarletviolet" style="display: none;" class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-800 ring-1 ring-inset ring-green-600/20">Completed</span>
+
 					<span class="ml-1 inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-800 ring-1 ring-inset ring-red-600/20">Generation 9</span>	
 				</div>
 				<a href="../checklists/scarletviolet.html"><img src="../images/logos/scarlet-logo.webp"></a> <img src="../images/logos/violet-logo.webp"> <button class="btn btn-outline ">Progress</button>
 			</div>
-			<div class="gen-item small">
+			<div class="gen-item small" data-game="thetealmask">
 				<div class="badge absolute right-4 p-2">
+					<span id="newBadge_thetealmask" style="display: none;" class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-800 ring-1 ring-inset ring-blue-600/20">New</span>
+					<span id="inProgressBadge_thetealmask" style="display: none;" class="inline-flex items-center rounded-md bg-yellow-50 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-inset ring-yellow-600/20">In Progress</span>
+					<span id="completedBadge_thetealmask" style="display: none;" class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-800 ring-1 ring-inset ring-green-600/20">Completed</span>
+
 					<span class="ml-1 inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-800 ring-1 ring-inset ring-red-600/20">Generation 9</span>	
 				</div>
 				<a href="../checklists/thetealmask.html"><img src="../images/logos/tealmask-logo.webp"></a> <button class="btn btn-outline ">Progress</button>
 			</div>
-			<div class="gen-item small">
+			<div class="gen-item small" data-game="theindigodisk">
 				<div class="badge absolute right-4 p-2">
+					<span id="newBadge_theindigodisk" style="display: none;" class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-800 ring-1 ring-inset ring-blue-600/20">New</span>
+					<span id="inProgressBadge_theindigodisk" style="display: none;" class="inline-flex items-center rounded-md bg-yellow-50 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-inset ring-yellow-600/20">In Progress</span>
+					<span id="completedBadge_theindigodisk" style="display: none;" class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-800 ring-1 ring-inset ring-green-600/20">Completed</span>
+
 					<span class="ml-1 inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-800 ring-1 ring-inset ring-red-600/20">Generation 9</span>	
 				</div>
 				<a href="../checklists/theindigodisk.html"><img src="../images/logos/indigodisk-logo.webp"></a> <button class="btn btn-outline ">Progress</button>
@@ -271,8 +369,12 @@
 		</div>
 		<div class="gen-row home">
 			  <div class="gen-container ">
-			<div class="gen-item small">
+			<div class="gen-item small" data-game="home">
 				<div class="badge absolute right-4 p-2">
+					<span id="newBadge_home" style="display: none;" class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-800 ring-1 ring-inset ring-blue-600/20">New</span>
+					<span id="inProgressBadge_home" style="display: none;" class="inline-flex items-center rounded-md bg-yellow-50 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-inset ring-yellow-600/20">In Progress</span>
+					<span id="completedBadge_home" style="display: none;" class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-800 ring-1 ring-inset ring-green-600/20">Completed</span>
+
 					<span class="ml-1 inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-800 ring-1 ring-inset ring-red-600/20">Home</span>	
 				</div>
 				<a href="../checklists/pokemonhome.html"><img src="../images/logos/home-logo.png"></a> <button class="btn btn-outline ">Progress</button>
@@ -295,5 +397,6 @@
 		</ul>
 	</footer>
 	<script src="script.js"></script>
+
 </body>
 </html>

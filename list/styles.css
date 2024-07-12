@@ -16,7 +16,6 @@ a {
 
 /* Body */
 html, body {
-    height: 100%;
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -49,8 +48,10 @@ button {
 /* Container */
 body {
 	background: #ffffff url(../images/patterns/pattern-list.png) repeat center center;
+	/* Icons Vectors by Vecteezy */
 	background-size: 500px 250px;
 	margin: 0;
+	padding: 0;
 }
 
 .games-container { /* Helps center the content */ 
@@ -73,6 +74,7 @@ body {
 
 .gen-container { /* Puts the content next to eachother */ 
 	display: flex;
+	align-items: center;
 }
 
 .gen-row.secondary {
@@ -106,8 +108,8 @@ body {
 /* Footer */
 
 footer ul {
-	list-style: none;
-	margin: 0;
+	display: flex;
+	list-style: circle;
 	padding: 0;
 }
 footer li {
@@ -117,15 +119,15 @@ footer li {
 	/* Add spacing between links */
 }
 footer {
-	height: 50px;
 	background:  rgb(23 37 84);
+	height: 50px;
 	bottom: 0;
 	width: 100%;
 	text-align: center;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	
+	font-size: 1vw;
 }
 
 footer a {

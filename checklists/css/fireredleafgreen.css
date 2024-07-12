@@ -86,10 +86,10 @@ a {
 /* Body */
 
 body {
-	margin: 0;
-	padding: 0;
 	background: #ffffff url(../../images/patterns/pattern-firered.png) repeat center center;
 	/* Icons Vectors by Vecteezy */
+	margin: 0;
+	padding: 0;
 	background-size: 500px 250px;
 	display: flex;
 	flex-direction: column;
@@ -158,8 +158,8 @@ span {
 /* Footer */
 
 footer {
-	height: 50px;
 	background: #E4571A;
+	height: 50px;
 	bottom: 0;
 	width: 100%;
 	text-align: center;
