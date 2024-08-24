@@ -70,7 +70,7 @@ body {
 .wide-panel {
 	text-align: center;
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 1.5rem;
     max-width: 100%; /* Set maximum width to prevent overflow */
     width: 500px; /* Allow the width to adjust based on content */
     margin: 30px;
@@ -138,10 +138,7 @@ footer li {
 
 	
 
-	  .panel-content {
-		width: 300px;
-	  }
-
+	
 	  .wide-panel {
 		margin-top: 180px;
 		width: 300px;

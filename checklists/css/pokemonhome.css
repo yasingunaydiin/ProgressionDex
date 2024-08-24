@@ -69,7 +69,7 @@ span {
 .wide-panel {
 	text-align: center;
 	padding: 20px;
-	border-radius: 8px;
+	border-radius: 1.5rem;
 	width: 622px;
 	margin: 30px;
 	box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
@@ -89,9 +89,7 @@ span {
 }
 /* Panel Content */
 
-.panel-content {
-	text-align: left;
-}
+
 /* Checkbox Group */
 
 .checkbox-item input[type="checkbox"] {

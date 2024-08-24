@@ -61,7 +61,7 @@ body {
 .wide-panel {
 	text-align: center;
 	padding: 20px;
-	border-radius: 8px;
+	border-radius: 1.5rem;
 	max-width: 100%;
 	/* Set maximum width to prevent overflow */
 	width: 500px;
@@ -71,6 +71,7 @@ body {
 	background-color: white;
 	margin-top: 150px;
 	border: 2px solid #C23A22;
+
 }
 .panel-label {
 	display: block;
@@ -86,7 +87,7 @@ body {
 	align-items: center;
 }
 footer {
-	height: 40px;
+	height: 50px;
 	background: #C23A22;
 	bottom: 0;
 	position: absolute;
@@ -118,10 +119,7 @@ footer li {
 		font-size: 12px;
 	}
 	/* Variable */
-	
-	.panel-content {
-		width: 300px;
-	}
+
 	.wide-panel {
 		margin-top: 180px;
 		width: 300px;

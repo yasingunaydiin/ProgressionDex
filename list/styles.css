@@ -142,7 +142,7 @@ footer a {
 
   
   /* Media queries for responsiveness on smaller window size than usual  */
-  @media only screen and (max-width: 1500px) {
+  @media only screen and (max-width: 1450px) {
 	
 	  footer {
 		  height: 50px;
