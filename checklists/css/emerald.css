@@ -1,7 +1,7 @@
 * {
 	font-family: system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue;
 }
-.legendaries, .tms, .giftpokemon, .ribbons, .battlefrontier, .trickhouse, .rematches, .trainercard, .ingametrades, .completepokedex, .battletent, .trainerhill, .matchcall {
+.legendaries, .giftpokemon, .ribbons, .battlefrontier, .trickhouse, .rematches, .trainercard, .ingametrades, .completepokedex, .battletent, .trainerhill, .matchcall, .items {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -9,14 +9,11 @@
 .legendaries-rightrow, .giftpokemon-rightrow, .ribbons-rightrow, .battlefrontier-rightrow, .trickhouse-rightrow, .ingametrades-rightrow, .trainerhill-rightrow {
 	margin-left: 40px;
 }
-.legendaries-rowcontainer, .tms-rowcontainer, .giftpokemon-rowcontainer, .ribbons-rowcontainer, .battlefrontier-rowcontainer, .trickhouse-rowcontainer, .ingametrades-rowcontainer, .trainerhill-rowcontainer {
+.legendaries-rowcontainer, .giftpokemon-rowcontainer, .ribbons-rowcontainer, .battlefrontier-rowcontainer, .trickhouse-rowcontainer, .ingametrades-rowcontainer, .trainerhill-rowcontainer {
 	display: flex;
 	align-items: flex-start;
 }
-.tms-middlerow {
-	margin-left: 10px;
-	margin-right: 10px;
-}
+
 .collapsible {
 	background-color: #f1f1f1;
 	cursor: pointer;

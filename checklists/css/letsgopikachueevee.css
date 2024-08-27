@@ -115,7 +115,7 @@ span {
 
 /* Checkbox Group */
 
-.ingametrades, .legendaries, .tms, .giftpokemon, .mega, .completepokedex, .battle, .alolanforms, .charms {
+.ingametrades, .legendaries, .giftpokemon, .mega, .completepokedex, .battle, .alolanforms, .items {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -123,14 +123,11 @@ span {
 .legendaries-rightrow, .ingametrades-rightrow, .completepokedex-rightrow, .giftpokemon-rightrow, .battle-rightrow, .alolanforms-rightrow, .mega-rightrow {
 	margin-left: 40px;
 }
-.legendaries-rowcontainer, .giftpokemon-rowcontainer, .completepokedex-rowcontainer, .ingametrades-rowcontainer, .mega-rowcontainer, .battle-rowcontainer, .alolanforms-rowcontainer, .tms-rowcontainer {
+.legendaries-rowcontainer, .giftpokemon-rowcontainer, .completepokedex-rowcontainer, .ingametrades-rowcontainer, .mega-rowcontainer, .battle-rowcontainer, .alolanforms-rowcontainer {
 	display: flex;
 	align-items: flex-start;
 }
-.tms-middlerow {
-	margin-left: 40px;
-	margin-right: 40px;
-}
+
 .pokeicon.item, .pokeicon.mega {
 	height: 30px;
 	margin-right: 5px;
@@ -214,19 +211,7 @@ footer li {
 		margin-left: 0px;
 	}
 
-	.tms {
-		align-items: center;
-	}
-
-	.tms-middlerow {
-		margin-left: 0px;
-		margin-right: 0px;
-	}
-
-	.pokeicon.tm {
-		display: none;
-	}
-
+	
 	.pokeicon.megastone {
 		height: 20px;
 	}

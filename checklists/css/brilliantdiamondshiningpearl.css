@@ -124,7 +124,7 @@ span {
 
 /* Checkbox Group */
 
-.ingametrades, .legendaries, .tms, .giftpokemon, .completepokedex, .legendaries-ramanas, .trainercard, .poketch, .items, .outfits, .ribbons, .battletower, .rematches, .gymleaders {
+.ingametrades, .legendaries, .giftpokemon, .completepokedex, .legendaries-ramanas, .trainercard, .poketch, .items, .outfits, .ribbons, .battletower, .rematches, .gymleaders {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -132,7 +132,7 @@ span {
 .legendaries-rightrow, .completepokedex-rightrow, .giftpokemon-rightrow, .ingametrades-rightrow, .legendaries-ramanas-rightrow, .trainercard-rightrow, .items-rightrow, .outfits-rightrow, .ribbons-rightrow, .battletower-rightrow, .gymleaders-rightrow {
 	margin-left: 40px;
 }
-.legendaries-rowcontainer, .tms-rowcontainer, .giftpokemon-rowcontainer, .completepokedex-rowcontainer, .ingametrades-rowcontainer, .legendaries-ramanas-rowcontainer, .trainercard-rowcontainer, .ribbons-rowcontainer, .poketch-rowcontainer, .items-rowcontainer, .gymleaders-rowcontainer, .outfits-rowcontainer, .battletower-rowcontainer {
+.legendaries-rowcontainer, .giftpokemon-rowcontainer, .completepokedex-rowcontainer, .ingametrades-rowcontainer, .legendaries-ramanas-rowcontainer, .trainercard-rowcontainer, .ribbons-rowcontainer, .poketch-rowcontainer, .items-rowcontainer, .gymleaders-rowcontainer, .outfits-rowcontainer, .battletower-rowcontainer {
 	display: flex;
 	align-items: flex-start;
 }
@@ -142,7 +142,7 @@ span {
 	margin-right: 5px;
 	margin-left: 5px;
 }
-.tms-middlerow, .poketch-middlerow {
+.poketch-middlerow {
 	margin-left: 40px;
 	margin-right: 40px;
 }
@@ -201,10 +201,7 @@ footer li {
 		justify-content: space-evenly;
 		align-items: center;
 	}
-	.tms {
-		
-		align-items: center;
-	}
+
 	.wide-panel.collectibles {
 		margin-top: 0px;
 	}

@@ -108,7 +108,7 @@ span {
 
 
 /* Checkbox Group */
-.ingametrades, .legendaries, .tms, .pokepelago, .giftpokemon, .z-crystals, .mega, .battletree, .completepokedex, .minior, .ultrabeasts, .trainerpassport, .alolanforms, .other, .pokefinder, .charms {
+.ingametrades, .legendaries, .pokepelago, .giftpokemon, .z-crystals, .mega, .battletree, .completepokedex, .minior, .ultrabeasts, .trainerpassport, .alolanforms, .other, .pokefinder, .items {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -116,7 +116,7 @@ span {
 .legendaries-rightrow, .trainerpassport-rightrow, .ultrabeasts-rightrow, .ingametrades-rightrow, .battletree-rightrow, .other-rightrow, .pokepelago-rightrow, .pokepelago-middlerow, .giftpokemon-rightrow, .completepokedex-rightrow, .completepokedex-rightrow, .pokefinder-rightrow {
 	margin-left: 40px;
 }
-.legendaries-rowcontainer, .trainerpassport-rowcontainer, .ultrabeasts-rowcontainer, .tms-rowcontainer, .battletree-rowcontainer, .pokepelago-rowcontainer, .giftpokemon-rowcontainer, .other-rowcontainer, .z-crystals-rowcontainer, .mega-rowcontainer, .completepokedex-rowcontainer, .minior-rowcontainer, .ingametrades-rowcontainer, .pokefinder-rowcontainer, .alolanforms-rowcontainer {
+.legendaries-rowcontainer, .trainerpassport-rowcontainer, .ultrabeasts-rowcontainer, .battletree-rowcontainer, .pokepelago-rowcontainer, .giftpokemon-rowcontainer, .other-rowcontainer, .z-crystals-rowcontainer, .mega-rowcontainer, .completepokedex-rowcontainer, .minior-rowcontainer, .ingametrades-rowcontainer, .pokefinder-rowcontainer, .alolanforms-rowcontainer {
 	display: flex;
 	align-items: flex-start; 
 }
@@ -190,10 +190,7 @@ footer li {
 
 	/* Variable */
 
-	.pokeicon.tm, .pokeicon.tr {
-		display: none;
-	}
-
+	
 
 
 
@@ -217,7 +214,7 @@ footer li {
 
 
 
-	.mega-middlerow, .z-crystals-middlerow, .tms-middlerow {
+	.mega-middlerow, .z-crystals-middlerow {
 		margin-left: 0px;
 		margin-right: 0px;
 	}
@@ -249,7 +246,7 @@ footer li {
 	
 
 	 
-	.pokeicon.megastone, .pokeicon.tm, .pokeicon.z-crystal {
+	.pokeicon.megastone, .pokeicon.z-crystal {
 		display: none;
 	}
 

@@ -1,4 +1,4 @@
-.legendaries, .tms, .poketch, .egoodsitems, .ribbons, .battletower, .trainercard, .ingametrades, .giftpokemon, .completepokedex {
+.legendaries, .poketch, .egoodsitems, .ribbons, .battletower, .trainercard, .ingametrades, .giftpokemon, .completepokedex, .items {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -6,11 +6,11 @@
 .legendaries-rightrow, .ribbons-rightrow, .ingametrades-rightrow {
 	margin-left: 40px;
 }
-.legendaries-rowcontainer, .tms-rowcontainer, .poketch-rowcontainer, .egoodsitems-rowcontainer, .ribbons-rowcontainer, .ingametrades-rowcontainer {
+.legendaries-rowcontainer, .poketch-rowcontainer, .egoodsitems-rowcontainer, .ribbons-rowcontainer, .ingametrades-rowcontainer {
 	display: flex;
 	align-items: flex-start;
 }
-.tms-middlerow, .egoodsitems-middlerow, .poketch-middlerow {
+.egoodsitems-middlerow, .poketch-middlerow {
 	margin-left: 40px;
 	margin-right: 40px;
 }

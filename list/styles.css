@@ -15,11 +15,6 @@ a {
 /* Header*/
 
 /* Body */
-html, body {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-}
 
 .games-container {
     flex: 1 0 auto;
@@ -46,7 +41,7 @@ button {
 	margin-top: 20px;
 }
 /* Container */
-body {
+html, body {
 	background: #ffffff url(../images/patterns/pattern-list.png) repeat center center;
 	/* Icons Vectors by Vecteezy */
 	background-size: 500px 250px;

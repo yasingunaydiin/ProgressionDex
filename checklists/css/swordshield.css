@@ -117,7 +117,7 @@ span {
 
 /* Checkbox Group */
 
-.ingametrades, .legendaries, .gigantamax, .leaguecard, .leaguecard-customizations, .sidequests, .ribbons, .tms, .trs, .giftpokemon, .completepokedex, .currydex, .galarianforms, .battletower, .campingtoys, .other, .charms {
+.ingametrades, .legendaries, .gigantamax, .leaguecard, .leaguecard-customizations, .sidequests, .ribbons, .giftpokemon, .completepokedex, .currydex, .galarianforms, .battletower, .campingtoys, .other, .items {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -125,7 +125,7 @@ span {
 .legendaries-rightrow, .gigantamax-rightrow, .leaguecard-customizations-rightrow, .ribbons-rightrow, .currydex-rightrow, .battletower-rightrow, .other-rightrow, .galarianforms-rightrow, .completepokedex-rightrow, .giftpokemon-rightrow, .ingametrades-rightrow, .campingtoys-rightrow {
 	margin-left: 40px;
 }
-.legendaries-rowcontainer, .leaguecard-customizations-rowcontainer, .campingtoys-rowcontainer, .gigantamax-rowcontainer, .trainerpassport-rowcontainer, .leaguecard-rowcontainer, .other-rowcontainer, .ribbons-rowcontainer, .sidequests-rowcontainer, .currydex-rowcontainer, .tms-rowcontainer, .trs-rowcontainer, .giftpokemon-rowcontainer, .battletower-rowcontainer, .completepokedex-rowcontainer, .ingametrades-rowcontainer, .galarianforms-rowcontainer {
+.legendaries-rowcontainer, .leaguecard-customizations-rowcontainer, .campingtoys-rowcontainer, .gigantamax-rowcontainer, .trainerpassport-rowcontainer, .leaguecard-rowcontainer, .other-rowcontainer, .ribbons-rowcontainer, .sidequests-rowcontainer, .currydex-rowcontainer, .giftpokemon-rowcontainer, .battletower-rowcontainer, .completepokedex-rowcontainer, .ingametrades-rowcontainer, .galarianforms-rowcontainer {
 	display: flex;
 	align-items: flex-start;
 }
@@ -138,10 +138,7 @@ span {
 	margin-right: 18px;
 	white-space: nowrap;
 }
-.tms-middlerow, .trs-middlerow {
-	margin-left: 40px;
-	margin-right: 40px;
-}
+
 .pokeicon.npc {
 	height: 30px;
 	margin-left: -5px;
@@ -204,9 +201,7 @@ footer li {
 		align-items: center;
 	}
 	
-	.pokeicon.tm, .pokeicon.tr {
-		display: none;
-	}
+
 
 
 

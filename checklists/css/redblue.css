@@ -1,12 +1,12 @@
-.legendaries, .tms, .ingametrades, .giftpokemon, .completepokedex {
+.legendaries, .ingametrades, .giftpokemon, .completepokedex, .items {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
-.legendaries-rightrow, .tms-rightrow, .ingametrades-rightrow, .giftpokemon-rightrow  {
+.legendaries-rightrow, .ingametrades-rightrow, .giftpokemon-rightrow  {
 	margin-left: 40px;
 }
-.legendaries-rowcontainer, .tms-rowcontainer, .ingametrades-rowcontainer, .giftpokemon-rowcontainer {
+.legendaries-rowcontainer, .ingametrades-rowcontainer, .giftpokemon-rowcontainer {
 	display: flex;
 	align-items: flex-start;
 }
@@ -20,9 +20,7 @@
 	margin-right: 3px;
 	margin-left: 3px;
 }
-.pokeicon.tm {
-	height: 30px;
-}
+
 .checkbox-item input[type="checkbox"] {
     margin-right: 5px; /* Adjust this value to control the space between the checkbox and the label */
 }
@@ -90,14 +88,12 @@ footer {
 	height: 50px;
 	background: #C23A22;
 	bottom: 0;
-	position: absolute;
 	width: 100%;
 	text-align: center;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	font-size: 1vw;
-	color: white;
 }
 footer ul {
 	display: flex;

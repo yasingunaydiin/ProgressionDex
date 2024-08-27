@@ -4,7 +4,7 @@
 /* Header */
 
 
-.ingametrades, .legendaries, .tms, .pokemoncontest, .giftpokemon, .ribbons, .mega, .battlemaison, .restaurants, .other, .opower, .completepokedex, .trainercard, .pokemonamie, .foodcourtbattles, .bikes, .capturetheflag, .charms {
+.ingametrades, .legendaries, .pokemoncontest, .giftpokemon, .ribbons, .mega, .battlemaison, .restaurants, .other, .opower, .completepokedex, .trainercard, .pokemonamie, .foodcourtbattles, .bikes, .capturetheflag, .items {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -12,12 +12,12 @@
 .legendaries-rightrow, .other-rightrow, .restaurants-rightrow, .pokemoncontest-rightrow, .giftpokemon-rightrow, .opower-rightrow, .completepokedex-rightrow, .battlemaison-rightrow, .capturetheflag-rightrow {
 	margin-left: 40px;
 }
-.legendaries-rowcontainer, .tms-rowcontainer, .pokemoncontest-rowcontainer, .giftpokemon-rowcontainer, .ribbon-rowcontainer, .mega-rowcontainer, .battlemaison-rowcontainer, .other-rowcontainer, .opower-rowcontainer, .completepokedex-rowcontainer, .capturetheflag-rowcontainer {
+.legendaries-rowcontainer, .pokemoncontest-rowcontainer, .giftpokemon-rowcontainer, .ribbon-rowcontainer, .mega-rowcontainer, .battlemaison-rowcontainer, .other-rowcontainer, .opower-rowcontainer, .completepokedex-rowcontainer, .capturetheflag-rowcontainer {
 	display: flex;
 	align-items: flex-start; 
 }
 
-.mega-middlerow, .tms-middlerow {
+.mega-middlerow {
 	margin-left: 40px;
 	margin-right: 40px;	
 }
@@ -25,7 +25,9 @@
 .pokeicon.megastone {
 	height: 30px;
 }
-
+.pokeicon.npc {
+	height: 30px;
+}
 .collapsible {
     background-color: #f1f1f1;
     cursor: pointer;
@@ -216,12 +218,12 @@ footer li {
 
 
 
-	.mega-middlerow, .tms-middlerow {
+	.mega-middlerow {
 		margin-left: 0px;
 		margin-right: 0px;
 	}
 
-	.pokeicon.megastone, .pokeicon.tm {
+	.pokeicon.megastone {
 		display: none;
 	}
 

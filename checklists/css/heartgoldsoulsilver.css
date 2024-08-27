@@ -3,7 +3,7 @@
 }
 /* Header */
 
-.legendaries, .giftpokemon, .ingametrades, .unown, .pokeathlon, .ribbons, .tms, .battlefrontier, .battles, .completepokedex, .trainercard, .storyevents, .commerativephotos, .storyevents {
+.legendaries, .giftpokemon, .ingametrades, .unown, .pokeathlon, .ribbons, .battlefrontier, .battles, .completepokedex, .trainercard, .storyevents, .commerativephotos, .storyevents, .items {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -11,7 +11,7 @@
 .legendaries-rightrow, .giftpokemon-rightrow, .ingametrades-rightrow, .pokeathlon-rightrow, .ribbons-rightrow, .battlefrontier-rightrow, .battles-rightrow, .storyevents-rightrow {
 	margin-left: 40px;
 }
-.legendaries-rowcontainer, .giftpokemon-rowcontainer, .ingametrades-rowcontainer, .unown-rowcontainer, .pokeathlon-rowcontainer, .ribbons-rowcontainer, .tms-rowcontainer, .battlefrontier-rowcontainer, .battles-rowcontainer, .storyevents-rowcontainer {
+.legendaries-rowcontainer, .giftpokemon-rowcontainer, .ingametrades-rowcontainer, .unown-rowcontainer, .pokeathlon-rowcontainer, .ribbons-rowcontainer, .battlefrontier-rowcontainer, .battles-rowcontainer, .storyevents-rowcontainer {
 	display: flex;
 	align-items: flex-start;
 }
@@ -44,6 +44,9 @@
 	margin-right: 5px;
 	margin-left: 5px;
 }
+.pokeicon.npc {
+	height: 30px;
+}
 /* Logo Container */
 
 .icon-small {
@@ -61,7 +64,7 @@ a {
 .pokeicon.unown {
 	height: 30px;
 }
-.unown-middlerow, .tms-middlerow {
+.unown-middlerow {
 	margin-left: 40px;
 	margin-right: 40px;
 }

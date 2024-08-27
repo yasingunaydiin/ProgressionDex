@@ -101,7 +101,7 @@ span {
 }
 /* Checkbox Group */
 
-.legendaries, .leaguecard, .quests, .galarianforms, .trs, .ingametrades, .diglettquest, .gigantamax, .completepokedex, .giftpokemon, .specialitems {
+.legendaries, .leaguecard, .quests, .galarianforms, .trs, .ingametrades, .diglettquest, .gigantamax, .completepokedex, .giftpokemon, .items {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -122,9 +122,7 @@ span {
 	margin-right: 18px;
 	white-space: nowrap;
 }
-.wide-panel.leaguecards {
-	width: 600px;
-}
+
 .pokeicon.leaguecard {
 	height: 180px;
 }

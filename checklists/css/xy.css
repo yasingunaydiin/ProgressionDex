@@ -97,12 +97,12 @@ span {
 }
 
 
-.completepokedex, .tms, .opower, .legendaries, .ingametrades, .vivillion, .battlemaison, .mega, .photographs, .restaurants, .giftpokemon, .trainercard, .battleinstitute, .battlechateau, .other, .supertraining, .charms {
+.completepokedex, .opower, .legendaries, .ingametrades, .vivillion, .battlemaison, .mega, .photographs, .restaurants, .giftpokemon, .trainercard, .battleinstitute, .battlechateau, .other, .supertraining, .items {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
-.completepokedex-rowcontainer, .tms-rowcontainer, .opower-rowcontainer, .legendaries-rowcontainer, .ingametrades-rowcontainer, .vivillion-rowcontainer, .battlemaison-rowcontainer, .mega-rowcontainer, .photographs-rowcontainer, .restaurants-rowcontainer {
+.completepokedex-rowcontainer, .opower-rowcontainer, .legendaries-rowcontainer, .ingametrades-rowcontainer, .vivillion-rowcontainer, .battlemaison-rowcontainer, .mega-rowcontainer, .photographs-rowcontainer, .restaurants-rowcontainer {
 	display: flex;
 	align-items: flex-start;
 }
@@ -110,7 +110,7 @@ span {
 	margin-left: 40px;
 }
 
-.tms-middlerow, .vivillion-middlerow, .mega-middlerow, .restaurants-middlerow {
+.vivillion-middlerow, .mega-middlerow, .restaurants-middlerow {
 	margin-left: 40px;
 	margin-right: 40px;
 }
@@ -198,13 +198,11 @@ footer li {
 	.collapsible {
 		width: 290px;
 	}
-	.pokeicon.tm, .pokeicon.tr {
-		display: none;
-	}
+	
 
 
 
-	.vivillion-middlerow, .mega-middlerow, .tms-middlerow {
+	.vivillion-middlerow, .mega-middlerow {
 		margin-left: 0px;
 		margin-right: 0px;
 	}

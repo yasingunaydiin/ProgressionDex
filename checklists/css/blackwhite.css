@@ -40,7 +40,9 @@
 	color: pink;
 }
 /* Pokeicon */
-
+.pokeicon.npc {
+	height: 30px;
+}
 .pokeicon {
 	height: 40px;
 }
@@ -60,7 +62,7 @@
 	margin-left: 5px;
 }
 
-.legendaries, .giftpokemon, .ingametrades, .tms, .battles, .battlesubway, .completepokedex, .trainercard, .collectibles, .battleinstitute, .sages {
+.legendaries, .giftpokemon, .ingametrades, .battles, .battlesubway, .completepokedex, .trainercard, .musicalitems, .battleinstitute, .sages, .items {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -68,15 +70,11 @@
 .legendaries-rightrow, .giftpokemon-rightrow, .ingametrades-rightrow, .battles-rightrow, .battlesubway-rightrow {
 	margin-left: 40px;
 }
-.legendaries-rowcontainer, .giftpokemon-rowcontainer, .ingametrades-rowcontainer, .tms-rowcontainer, .battles-rowcontainer, .battlesubway-rowcontainer {
+.legendaries-rowcontainer, .giftpokemon-rowcontainer, .ingametrades-rowcontainer, .battles-rowcontainer, .battlesubway-rowcontainer {
 	display: flex;
 	align-items: flex-start; 
 }
 
-.tms-middlerow {
-	margin-left: 40px;
-	margin-right: 40px;
-}
 
 /* Links */
 

@@ -31,7 +31,9 @@
 	margin-right: 5px;
 	margin-left: 3px
 }
-
+.pokeicon.npc {
+	height: 30px;
+}
 /* Logo Container */
 
 .icon-small {
@@ -104,7 +106,7 @@ span {
 }
 
 
-.battlesubway, .completepokedex, .tms, .ingametrades, .n-pokemon, .legendaries, .giftpokemon, .worldtournament, .trainercard, .medalHQ, .joinavenue, .pokestarstudios, .droppeditemquest, .funfestmissions, .abyssalruins, .battleinstitute, .battles, .charms {
+.battlesubway, .completepokedex, .ingametrades, .n-pokemon, .legendaries, .giftpokemon, .worldtournament, .trainercard, .medalHQ, .joinavenue, .pokestarstudios, .droppeditemquest, .funfestmissions, .abyssalruins, .battleinstitute, .battles, .items {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -112,14 +114,11 @@ span {
 .completepokedex-rightrow, .ingametrades-rightrow, .n-pokemon-rightrow, .legendaries-rightrow, .giftpokemon-rightrow, .medalHQ-rightrow, .battlesubway-rightrow, .worldtournament-rightrow, .battles-rightrow {
 	margin-left: 40px;
 }
-.battlesubway-rowcontainer, .completepokedex-rowcontainer, .tms-rowcontainer, .ingametrades-rowcontainer, .n-pokemon-rowcontainer, .legendaries-rowcontainer, .giftpokemon-rowcontainer, .worldtournament-rowcontainer, .medalHQ-rowcontainer, .battles-rowcontainer {
+.battlesubway-rowcontainer, .completepokedex-rowcontainer, .ingametrades-rowcontainer, .n-pokemon-rowcontainer, .legendaries-rowcontainer, .giftpokemon-rowcontainer, .worldtournament-rowcontainer, .medalHQ-rowcontainer, .battles-rowcontainer {
 	display: flex;
 	align-items: flex-start; 
 }
-.tms-middlerow {
-	margin-left: 40px;
-	margin-right: 40px;
-}
+
  
 
 /* Panel Label */
@@ -205,10 +204,7 @@ footer li {
 		.collapsible {
 			width: 290px;
 		}
-		.tms img {
-			display: none;
-		}
-
+	
 }
 
 @media only screen and (max-width: 400px) { /* Normal phones */

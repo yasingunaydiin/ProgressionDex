@@ -1,14 +1,14 @@
 * {font-family: system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue;}
 
-.legendaries, .giftpokemon, .tms, .ingametrades, .unown, .completepokedex, .battle {
+.legendaries, .giftpokemon, .ingametrades, .unown, .completepokedex, .battle, .items {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
-.legendaries-rightrow, .giftpokemon-rightrow, .ingametrades-rightrow, .tms-rightrow {
+.legendaries-rightrow, .giftpokemon-rightrow, .ingametrades-rightrow {
 	margin-left: 40px;
 }
-.legendaries-rowcontainer, .giftpokemon-rowcontainer, .tms-rowcontainer, .ingametrades-rowcontainer, .unown-rowcontainer, .tms-rowcontainer {
+.legendaries-rowcontainer, .giftpokemon-rowcontainer, .ingametrades-rowcontainer, .unown-rowcontainer {
 	display: flex;
 	align-items: flex-start; 
 }

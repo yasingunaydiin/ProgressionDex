@@ -99,7 +99,7 @@ span {
 
 /* Checkbox Group */
 
-.legendaries, .leaguecard, .quests, .galarianforms, .trs, .completepokedex {
+.legendaries, .leaguecards, .quests, .galarianforms, .trs, .completepokedex, .items {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -107,7 +107,7 @@ span {
 .legendaries-rightrow, .quests-rightrow, .trs-rightrow {
 	margin-left: 40px;
 }
-.legendaries-rowcontainer, .leaguecard-rowcontainer, .quests-rowcontainer, .trs-rowcontainer {
+.legendaries-rowcontainer, .leaguecards-rowcontainer, .quests-rowcontainer, .trs-rowcontainer {
 	display: flex;
 	align-items: flex-start;
 }
@@ -116,14 +116,12 @@ span {
 	margin-right: 5px;
 	margin-left: 5px;
 }
-.leaguecard-leftrow, .leaguecard-rightrow {
+.leaguecards-leftrow, .leaguecards-rightrow {
 	margin-right: 18px;
 	white-space: nowrap;
 }
-.wide-panel.leaguecards {
-	margin-top: -10px;
-}
-.pokeicon.leaguecard {
+
+.pokeicon.leaguecards {
 	height: 180px;
 }
 /* Checkbox Item */

@@ -104,7 +104,7 @@ span {
 
 
 /* Checkbox Group */
-.ingametrades, .legendaries, .pokefinder, .battleroyal, .sidequests, .tms, .pokepelago, .giftpokemon, .z-crystals, .mega, .charms, .battletree, .completepokedex, .minior, .ultrabeasts, .trainerpassport, .alolanforms, .other, .giftpokemon-totem, .ultrawormhole, .mantinesurf {
+.ingametrades, .legendaries, .pokefinder, .battleroyal, .sidequests, .pokepelago, .giftpokemon, .z-crystals, .mega, .items, .battletree, .completepokedex, .minior, .ultrabeasts, .trainerpassport, .alolanforms, .other, .giftpokemon-totem, .ultrawormhole, .mantinesurf {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -112,7 +112,7 @@ span {
 .legendaries-rightrow, .trainerpassport-rightrow, .pokefinder-rightrow, .ultrabeasts-rightrow, .ingametrades-rightrow, .battletree-rightrow, .other-rightrow, .giftpokemon-totem-rightrow, .mantinesurf-rightrow, .ultrawormhole-rightrow, .pokepelago-rightrow, .pokepelago-middlerow, .giftpokemon-rightrow, .completepokedex-rightrow, .completepokedex-rightrow {
 	margin-left: 40px;
 }
-.legendaries-rowcontainer, .trainerpassport-rowcontainer, .sidequests-rowcontainer, .pokefinder-rowcontainer, .ultrabeasts-rowcontainer, .tms-rowcontainer, .battletree-rowcontainer, .pokepelago-rowcontainer, .giftpokemon-rowcontainer, .other-rowcontainer, .giftpokemon-totem-rowcontainer, .z-crystals-rowcontainer, .mantinesurf-rowcontainer, .ultrawormhole-rowcontainer, .mega-rowcontainer, .completepokedex-rowcontainer, .minior-rowcontainer, .ingametrades-rowcontainer, .alolanforms-rowcontainer {
+.legendaries-rowcontainer, .trainerpassport-rowcontainer, .sidequests-rowcontainer, .pokefinder-rowcontainer, .ultrabeasts-rowcontainer, .battletree-rowcontainer, .pokepelago-rowcontainer, .giftpokemon-rowcontainer, .other-rowcontainer, .giftpokemon-totem-rowcontainer, .z-crystals-rowcontainer, .mantinesurf-rowcontainer, .ultrawormhole-rowcontainer, .mega-rowcontainer, .completepokedex-rowcontainer, .minior-rowcontainer, .ingametrades-rowcontainer, .alolanforms-rowcontainer {
 	display: flex;
 	align-items: flex-start; 
 }
@@ -134,7 +134,7 @@ span {
 	margin-right: 20px;
 }
 
- .sidequests-middlerow, .mega-middlerow, .z-crystals-middlerow, .tms-middlerow {
+ .sidequests-middlerow, .mega-middlerow, .z-crystals-middlerow {
 	margin-left: 40px;
 	margin-right: 40px;
 }
@@ -190,9 +190,7 @@ footer li {
 	/* Variable */
 
 
-	.pokeicon.tm, .pokeicon.tr {
-		display: none;
-	}
+	
 
 
 

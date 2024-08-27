@@ -1,12 +1,12 @@
-.tm, .legendaries, .giftpokemon, .ingametrades, .completepokedex, .tms {
+.legendaries, .giftpokemon, .ingametrades, .completepokedex, .items {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
-.tms-rightrow, .legendaries-rightrow, .giftpokemon-rightrow, .ingametrades-rightrow, .tms-rightrow {
+.legendaries-rightrow, .giftpokemon-rightrow, .ingametrades-rightrow {
 	margin-left: 40px;
 }
-.tms-rowcontainer, .legendaries-rowcontainer, .giftpokemon-rowcontainer, .ingametrades-rowcontainer, .tms-rowcontainer {
+.legendaries-rowcontainer, .giftpokemon-rowcontainer, .ingametrades-rowcontainer {
 	display: flex;
 	align-items: flex-start; 
 }
