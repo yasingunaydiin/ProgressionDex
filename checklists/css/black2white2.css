@@ -1,7 +1,7 @@
-* {font-family: system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue;}
-
+* {
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue;
+}
 /* Header */
-
 
 #female {
 	color: pink;
@@ -27,7 +27,7 @@
 	margin-left: 5px;
 }
 .pokeicon.medal {
-    height: 30px;
+	height: 30px;
 	margin-right: 5px;
 	margin-left: 3px
 }
@@ -46,13 +46,13 @@ a {
 	text-decoration: none;
 	color: #fff;
 }
-
 /* Body */
 
 body {
 	margin: 0;
 	padding: 0;
-	background: #ffffff url(../../images/patterns/pattern-black2.png) repeat center center; /* Icons Vectors by Vecteezy */
+	background: #ffffff url(../../images/patterns/pattern-black2.png) repeat center center;
+	/* Icons Vectors by Vecteezy */
 	background-size: 500px 250px;
 	display: flex;
 	flex-direction: column;
@@ -70,23 +70,21 @@ body {
 span {
 	pointer-events: none;
 }
-
 .collapsible {
-    background-color: #f1f1f1;
-    cursor: pointer;
-    padding: 18px;
-    width: 500px;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
+	background-color: #f1f1f1;
+	cursor: pointer;
+	padding: 18px;
+	width: 500px;
+	border: none;
+	text-align: left;
+	outline: none;
+	font-size: 15px;
 	margin: 5px;
-  }
-
-  .content {
-    padding: 0 18px;
+}
+.content {
+	padding: 0 18px;
 	display: none;
-  }
+}
 /* Wide Panel */
 
 .wide-panel {
@@ -104,8 +102,6 @@ span {
 	margin-bottom: 50px;
 	margin-top: 50px;
 }
-
-
 .battlesubway, .completepokedex, .ingametrades, .n-pokemon, .legendaries, .giftpokemon, .worldtournament, .trainercard, .medalHQ, .joinavenue, .pokestarstudios, .droppeditemquest, .funfestmissions, .abyssalruins, .battleinstitute, .battles, .items {
 	display: flex;
 	flex-direction: column;
@@ -116,11 +112,8 @@ span {
 }
 .battlesubway-rowcontainer, .completepokedex-rowcontainer, .ingametrades-rowcontainer, .n-pokemon-rowcontainer, .legendaries-rowcontainer, .giftpokemon-rowcontainer, .worldtournament-rowcontainer, .medalHQ-rowcontainer, .battles-rowcontainer {
 	display: flex;
-	align-items: flex-start; 
+	align-items: flex-start;
 }
-
- 
-
 /* Panel Label */
 
 .panel-label {
@@ -130,7 +123,6 @@ span {
 	font-weight: 1000;
 	color: #0078be;
 }
-
 /* Checkbox Item */
 
 .checkbox-item {
@@ -138,9 +130,9 @@ span {
 	display: flex;
 	align-items: center;
 }
-
 .checkbox-item input[type="checkbox"] {
-    margin-right: 5px; /* Adjust this value to control the space between the checkbox and the label */
+	margin-right: 5px;
+	/* Adjust this value to control the space between the checkbox and the label */
 }
 /* Footer */
 
@@ -166,48 +158,15 @@ footer li {
 	list-style: none;
 	font-size: 15px;
 }
-
 /* Event container */
-
 
 @media only screen and (max-width: 768px) {
 	/* Constant */
-    footer {
-        height: 50px;
-        font-size: 12px;
-    }
-
+	footer {
+		height: 50px;
+		font-size: 12px;
+	}
 	/* Variable */
-
-	
-
-
-
-	  
-
-	  .wide-panel {
-		margin-top: 180px;
-		width: 300px;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-evenly;
-		align-items: center;
-		
-	  }
-		  .wide-panel.collectibles {
-			margin-top: 0px;
-		  }
-
-		.legendaries-rightrow {
-			margin-left: -5px;
-		}
-		.collapsible {
-			width: 290px;
-		}
-	
-}
-
-@media only screen and (max-width: 400px) { /* Normal phones */
 	.wide-panel {
 		margin-top: 180px;
 		width: 300px;
@@ -216,5 +175,24 @@ footer li {
 		justify-content: space-evenly;
 		align-items: center;
 	}
-
+	.wide-panel.collectibles {
+		margin-top: 0px;
+	}
+	.legendaries-rightrow {
+		margin-left: -5px;
+	}
+	.collapsible {
+		width: 290px;
+	}
+}
+@media only screen and (max-width: 400px) {
+	/* Normal phones */
+	.wide-panel {
+		margin-top: 180px;
+		width: 300px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: center;
+	}
 }

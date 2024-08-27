@@ -1,31 +1,28 @@
 /* Header */
-* {font-family: system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue;}
 
-
-
+* {
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue;
+}
 #female {
 	color: pink;
 }
 /* Pokeicon */
 
-
 .collapsible {
-    background-color: #f1f1f1;
-    cursor: pointer;
-    padding: 18px;
-    width: 500px;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
+	background-color: #f1f1f1;
+	cursor: pointer;
+	padding: 18px;
+	width: 500px;
+	border: none;
+	text-align: left;
+	outline: none;
+	font-size: 15px;
 	margin: 5px;
-  }
-
-  .content {
-    padding: 0 18px;
+}
+.content {
+	padding: 0 18px;
 	display: none;
-  }
-
+}
 .pokeicon {
 	height: 40px;
 	margin-right: 5px;
@@ -36,21 +33,18 @@
 	margin-right: 5px;
 	margin-left: 5px;
 }
-
 /* Logo Container */
 
 .icon-small {
 	height: 25px;
 	margin-left: 5px;
 }
-
 /* Links */
 
 a {
 	text-decoration: none;
 	color: #fff;
 }
-
 /* Body */
 
 body {
@@ -61,11 +55,12 @@ body {
 	background-size: 500px 250px;
 	display: flex;
 	flex-direction: column;
-
 }
 /* Page Container */
+
 .checkbox-item input[type="checkbox"] {
-    margin-right: 5px; /* Adjust this value to control the space between the checkbox and the label */
+	margin-right: 5px;
+	/* Adjust this value to control the space between the checkbox and the label */
 }
 .page-container {
 	display: flex;
@@ -95,8 +90,6 @@ span {
 	margin-bottom: 50px;
 	margin-top: 50px;
 }
-
-
 .completepokedex, .opower, .legendaries, .ingametrades, .vivillion, .battlemaison, .mega, .photographs, .restaurants, .giftpokemon, .trainercard, .battleinstitute, .battlechateau, .other, .supertraining, .items {
 	display: flex;
 	flex-direction: column;
@@ -109,12 +102,10 @@ span {
 .completepokedex-rightrow, .opower-rightrow, .legendaries-rightrow, .ingametrades-rightrow, .battlemaison-rightrow, .photographs-rightrow {
 	margin-left: 40px;
 }
-
 .vivillion-middlerow, .mega-middlerow, .restaurants-middlerow {
 	margin-left: 40px;
 	margin-right: 40px;
 }
-
 /* Panel Label */
 
 .panel-label {
@@ -126,16 +117,11 @@ span {
 }
 /* Panel Content */
 
-
 /* Checkbox Group */
 
-
- 
 .pokeicon.item {
 	height: 30px;
 }
-
-
 /* Checkbox Item */
 
 .checkbox-item {
@@ -143,7 +129,6 @@ span {
 	display: flex;
 	align-items: center;
 }
-
 /* Footer */
 
 footer {
@@ -158,7 +143,7 @@ footer {
 	font-size: 1vw;
 }
 footer ul {
-	display: flex; 
+	display: flex;
 	list-style: circle;
 	padding: 0;
 }
@@ -168,40 +153,27 @@ footer li {
 	list-style: none;
 	font-size: 15px;
 }
-
 @media only screen and (max-width: 768px) {
 	/* Constant */
-  
-    footer {
-        height: 50px;
-        font-size: 12px;
-    }
-
+	footer {
+		height: 50px;
+		font-size: 12px;
+	}
 	/* Variable */
-
-
-	  
-
-	  .wide-panel {
+	.wide-panel {
 		margin-top: 180px;
 		width: 350px;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-evenly;
 		align-items: center;
-		
-	  }
-		  .wide-panel.collectibles {
-			margin-top: 0px;
-		  }
-
+	}
+	.wide-panel.collectibles {
+		margin-top: 0px;
+	}
 	.collapsible {
 		width: 290px;
 	}
-	
-
-
-
 	.vivillion-middlerow, .mega-middlerow {
 		margin-left: 0px;
 		margin-right: 0px;
@@ -209,15 +181,12 @@ footer li {
 	.pokeicon.vivillion {
 		height: 20px;
 	}
-
 	.pokeicon.item, .pokeicon.tm {
 		display: none;
 	}
-	
-	
 }
-
-@media only screen and (max-width: 400px) { /* Normal phones */
+@media only screen and (max-width: 400px) {
+	/* Normal phones */
 	.wide-panel {
 		margin-top: 180px;
 		width: 300px;
@@ -226,5 +195,4 @@ footer li {
 		justify-content: space-evenly;
 		align-items: center;
 	}
-
 }

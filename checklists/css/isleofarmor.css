@@ -23,7 +23,6 @@
 	margin-right: 18px;
 	white-space: nowrap;
 }
-
 /* Pokeicon */
 
 .pokeicon {
@@ -42,14 +41,12 @@
 	height: 25px;
 	margin-left: 0px;
 }
-
 /* Links */
 
 a {
 	text-decoration: none;
 	color: #fff;
 }
-
 /* Body */
 
 body {
@@ -62,8 +59,10 @@ body {
 	flex-direction: column;
 }
 /* Page Container */
+
 .checkbox-item input[type="checkbox"] {
-    margin-right: 5px; /* Adjust this value to control the space between the checkbox and the label */
+	margin-right: 5px;
+	/* Adjust this value to control the space between the checkbox and the label */
 }
 .page-container {
 	display: flex;
@@ -89,7 +88,6 @@ span {
 	margin-top: 150px;
 	border: 2px solid #f6ce31;
 }
-
 /* Panel Label */
 
 .panel-label {
@@ -122,7 +120,6 @@ span {
 	margin-right: 18px;
 	white-space: nowrap;
 }
-
 .pokeicon.leaguecard {
 	height: 180px;
 }
@@ -165,14 +162,11 @@ footer li {
 }
 @media only screen and (max-width: 768px) {
 	/* Constant */
-	
 	footer {
 		height: 50px;
 		font-size: 12px;
 	}
 	/* Variable */
-
-	
 	.wide-panel {
 		margin-top: 180px;
 		width: 350px;
@@ -220,8 +214,8 @@ footer li {
 		height: 200px;
 	}
 }
-
-@media only screen and (max-width: 400px) { /* Normal phones */
+@media only screen and (max-width: 400px) {
+	/* Normal phones */
 	.wide-panel {
 		margin-top: 180px;
 		width: 300px;

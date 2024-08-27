@@ -15,10 +15,9 @@
 /* Common font family */
 
 * {
-	font-family: system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue;
 }
 /* Header */
-
 
 /* Pokeicon */
 
@@ -38,14 +37,12 @@
 	height: 25px;
 	margin-left: 0px;
 }
-
 /* Links */
 
 a {
 	text-decoration: none;
 	color: #fff;
 }
-
 /* Body */
 
 body {
@@ -66,8 +63,10 @@ body {
 	align-items: baseline;
 }
 /* Span */
+
 .checkbox-item input[type="checkbox"] {
-    margin-right: 5px; /* Adjust this value to control the space between the checkbox and the label */
+	margin-right: 5px;
+	/* Adjust this value to control the space between the checkbox and the label */
 }
 span {
 	pointer-events: none;
@@ -85,7 +84,6 @@ span {
 	margin-top: 150px;
 	border: 2px solid #158b8c;
 }
-
 /* Panel Label */
 
 .panel-label {
@@ -120,7 +118,6 @@ span {
 	margin-right: 18px;
 	white-space: nowrap;
 }
-
 .pokeicon.leaguecards {
 	height: 180px;
 }
@@ -131,7 +128,6 @@ span {
 	display: flex;
 	align-items: center;
 }
-
 /* Footer */
 
 footer {
@@ -158,14 +154,11 @@ footer li {
 }
 @media only screen and (max-width: 768px) {
 	/* Constant */
-
 	footer {
 		height: 50px;
 		font-size: 12px;
 	}
 	/* Variable */
-
-	
 	.wide-panel {
 		margin-top: 180px;
 		width: 350px;
@@ -209,8 +202,8 @@ footer li {
 		height: 200px;
 	}
 }
-
-@media only screen and (max-width: 400px) { /* Normal phones */
+@media only screen and (max-width: 400px) {
+	/* Normal phones */
 	.wide-panel {
 		margin-top: 180px;
 		width: 300px;

@@ -1,5 +1,5 @@
 * {
-	font-family: system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue;
 }
 /* Header */
 
@@ -30,7 +30,6 @@
 	padding: 0 18px;
 	display: none;
 }
-
 #female {
 	color: pink;
 }
@@ -53,14 +52,12 @@
 	height: 25px;
 	margin-left: 5px;
 }
-
 /* Links */
 
 a {
 	text-decoration: none;
 	color: #fff;
 }
-
 .pokeicon.unown {
 	height: 30px;
 }
@@ -80,8 +77,10 @@ body {
 	flex-direction: column;
 }
 /* Page Container */
+
 .checkbox-item input[type="checkbox"] {
-    margin-right: 5px; /* Adjust this value to control the space between the checkbox and the label */
+	margin-right: 5px;
+	/* Adjust this value to control the space between the checkbox and the label */
 }
 .page-container {
 	display: flex;
@@ -111,7 +110,6 @@ span {
 	margin-bottom: 50px;
 	margin-top: 50px;
 }
-
 /* Panel Label */
 
 .panel-label {
@@ -128,7 +126,6 @@ span {
 	display: flex;
 	align-items: center;
 }
-
 /* Footer */
 
 footer {
@@ -153,7 +150,6 @@ footer li {
 	list-style: none;
 	font-size: 15px;
 }
-
 /* Event container */
 
 .event-right {
@@ -162,14 +158,11 @@ footer li {
 }
 @media only screen and (max-width: 768px) {
 	/* Constant */
-	
 	footer {
 		height: 50px;
 		font-size: 12px;
 	}
 	/* Variable */
-	
-	
 	.wide-panel {
 		margin-top: 180px;
 		width: 300px;
@@ -189,13 +182,12 @@ footer li {
 		margin-left: 10px;
 		margin-right: 10px;
 	}
-	
 	.collapsible {
 		width: 290px;
 	}
 }
-
-@media only screen and (max-width: 400px) { /* Normal phones */
+@media only screen and (max-width: 400px) {
+	/* Normal phones */
 	.wide-panel {
 		margin-top: 180px;
 		width: 300px;

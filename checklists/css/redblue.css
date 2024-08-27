@@ -3,15 +3,16 @@
 	flex-direction: column;
 	align-items: center;
 }
-.legendaries-rightrow, .ingametrades-rightrow, .giftpokemon-rightrow  {
+.legendaries-rightrow, .ingametrades-rightrow, .giftpokemon-rightrow {
 	margin-left: 40px;
 }
 .legendaries-rowcontainer, .ingametrades-rowcontainer, .giftpokemon-rowcontainer {
 	display: flex;
 	align-items: flex-start;
 }
-* {font-family: system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue;}
-
+* {
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue;
+}
 .pokeicon {
 	height: 40px;
 }
@@ -20,24 +21,20 @@
 	margin-right: 3px;
 	margin-left: 3px;
 }
-
 .checkbox-item input[type="checkbox"] {
-    margin-right: 5px; /* Adjust this value to control the space between the checkbox and the label */
+	margin-right: 5px;
+	/* Adjust this value to control the space between the checkbox and the label */
 }
-
 span {
 	pointer-events: none;
 }
-
 .checkbox-item input {
 	margin-right: 5px;
 }
-
 a {
 	text-decoration: none;
 	color: #fff;
 }
-
 body {
 	margin: 0;
 	padding: 0;
@@ -69,7 +66,6 @@ body {
 	background-color: white;
 	margin-top: 150px;
 	border: 2px solid #C23A22;
-
 }
 .panel-label {
 	display: block;
@@ -78,7 +74,6 @@ body {
 	font-weight: 1000;
 	color: #C23A22;
 }
-
 .checkbox-item {
 	margin-bottom: 10px;
 	display: flex;
@@ -106,16 +101,12 @@ footer li {
 	list-style: none;
 	font-size: 15px;
 }
-
 @media only screen and (max-width: 768px) {
-	
-
 	footer {
 		height: 50px;
 		font-size: 12px;
 	}
 	/* Variable */
-
 	.wide-panel {
 		margin-top: 180px;
 		width: 300px;
@@ -130,11 +121,9 @@ footer li {
 	.collapsible {
 		width: 290px;
 	}
-	
 }
-
-
-@media only screen and (max-width: 400px) { /* Normal phones */
+@media only screen and (max-width: 400px) {
+	/* Normal phones */
 	.wide-panel {
 		margin-top: 180px;
 		width: 300px;

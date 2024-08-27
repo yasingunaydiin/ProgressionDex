@@ -1,5 +1,5 @@
 * {
-	font-family: system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue;
 }
 .legendaries, .giftpokemon, .ribbons, .battlefrontier, .trickhouse, .rematches, .trainercard, .ingametrades, .completepokedex, .battletent, .trainerhill, .matchcall, .items {
 	display: flex;
@@ -13,7 +13,6 @@
 	display: flex;
 	align-items: flex-start;
 }
-
 .collapsible {
 	background-color: #f1f1f1;
 	cursor: pointer;
@@ -31,7 +30,6 @@
 }
 /* Header */
 
-
 #female {
 	color: pink;
 }
@@ -47,14 +45,12 @@
 }
 /* Logo Container */
 
-
 /* Links */
 
 a {
 	text-decoration: none;
 	color: #fff;
 }
-
 /* Body */
 
 body {
@@ -67,8 +63,10 @@ body {
 	flex-direction: column;
 }
 /* Page Container */
+
 .checkbox-item input[type="checkbox"] {
-    margin-right: 5px; /* Adjust this value to control the space between the checkbox and the label */
+	margin-right: 5px;
+	/* Adjust this value to control the space between the checkbox and the label */
 }
 .page-container {
 	display: flex;
@@ -102,7 +100,6 @@ span {
 	margin-bottom: 50px;
 	margin-top: 50px;
 }
-
 /* Panel Label */
 
 .panel-label {
@@ -117,7 +114,6 @@ span {
 	display: flex;
 	align-items: center;
 }
-
 /* Footer */
 
 footer {
@@ -142,19 +138,15 @@ footer li {
 	list-style: none;
 	font-size: 15px;
 }
-
 /* Event container */
 
 @media only screen and (max-width: 768px) {
 	/* Constant */
-	
 	footer {
 		height: 50px;
 		font-size: 12px;
 	}
 	/* Variable */
-	
-	
 	.wide-panel {
 		margin-top: 180px;
 		width: 300px;
@@ -170,8 +162,8 @@ footer li {
 		width: 290px;
 	}
 }
-
-@media only screen and (max-width: 400px) { /* Normal phones */
+@media only screen and (max-width: 400px) {
+	/* Normal phones */
 	.wide-panel {
 		margin-top: 180px;
 		width: 300px;
@@ -180,5 +172,4 @@ footer li {
 		justify-content: space-evenly;
 		align-items: center;
 	}
-	
 }

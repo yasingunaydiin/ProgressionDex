@@ -1,5 +1,6 @@
-* {font-family: system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue;}
-
+* {
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue;
+}
 .legendaries, .poketch, .egoodsitems, .ribbons, .battlefrontier, .resort, .trainercard, .completepokedex, .giftpokemon, .ingametrades, .battletower, .rivalbattle, .items {
 	display: flex;
 	flex-direction: column;
@@ -10,40 +11,32 @@
 }
 .legendaries-rowcontainer, .resort-rowcontainer, .poketch-rowcontainer, .egoodsitems-rowcontainer, .ribbons-rowcontainer, .battlefrontier-rowcontainer, .giftpokemon-rowcontainer, .ingametrades-rowcontainer {
 	display: flex;
-	align-items: flex-start; 
+	align-items: flex-start;
 }
-
 .egoodsitems-middlerow, .poketch-middlerow, .resort-middlerow {
 	margin-left: 40px;
 	margin-right: 40px;
-} 
-
+}
 /* Header */
-
 
 .pokeicon.npc {
 	height: 30px;
 }
-
-
 .collapsible {
-    background-color: #f1f1f1;
-    cursor: pointer;
-    padding: 18px;
-    width: 500px;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
+	background-color: #f1f1f1;
+	cursor: pointer;
+	padding: 18px;
+	width: 500px;
+	border: none;
+	text-align: left;
+	outline: none;
+	font-size: 15px;
 	margin: 5px;
-  }
-
-  .content {
-    padding: 0 18px;
+}
+.content {
+	padding: 0 18px;
 	display: none;
-  }
-
-
+}
 #female {
 	color: pink;
 }
@@ -64,20 +57,19 @@
 }
 /* Logo Container */
 
-
 /* Links */
 
 a {
 	text-decoration: none;
 	color: #fff;
 }
-
 /* Body */
 
 body {
 	margin: 0;
 	padding: 0;
-	background: #ffffff url(../../images/patterns/pattern-platinum.png) repeat center center; /* Icons Vectors by Vecteezy */
+	background: #ffffff url(../../images/patterns/pattern-platinum.png) repeat center center;
+	/* Icons Vectors by Vecteezy */
 	background-size: 500px 250px;
 	display: flex;
 	flex-direction: column;
@@ -112,7 +104,6 @@ span {
 	margin-bottom: 50px;
 	margin-top: 50px;
 }
-
 /* Panel Label */
 
 .panel-label {
@@ -124,16 +115,14 @@ span {
 }
 /* Panel Content */
 
-
-
 .checkbox-item {
 	margin-bottom: 10px;
 	display: flex;
 	align-items: center;
 }
-
 .checkbox-item input[type="checkbox"] {
-    margin-right: 5px; /* Adjust this value to control the space between the checkbox and the label */
+	margin-right: 5px;
+	/* Adjust this value to control the space between the checkbox and the label */
 }
 /* Footer */
 
@@ -161,45 +150,31 @@ footer li {
 }
 @media only screen and (max-width: 768px) {
 	/* Constant */
- 
-    footer {
-        height: 50px;
-        font-size: 12px;
-    }
-
+	footer {
+		height: 50px;
+		font-size: 12px;
+	}
 	/* Variable */
-
-
-	
-
-	  .wide-panel {
+	.wide-panel {
 		margin-top: 180px;
 		width: 300px;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-evenly;
 		align-items: center;
-	  }
-	  .wide-panel.collectibles {
+	}
+	.wide-panel.collectibles {
 		margin-top: 0px;
-	  }
-
-	  .collapsible {
+	}
+	.collapsible {
 		width: 290px;
 	}
-	 
-
-	  .egoodsitems-rightrow, .egoodsitems-middlerow {
-		margin-left:10px;
+	.egoodsitems-rightrow, .egoodsitems-middlerow {
+		margin-left: 10px;
 	}
-	  
-
-
-
 }
-
-
-@media only screen and (max-width: 400px) { /* Normal phones */
+@media only screen and (max-width: 400px) {
+	/* Normal phones */
 	.wide-panel {
 		margin-top: 180px;
 		width: 300px;

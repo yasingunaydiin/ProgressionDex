@@ -1,6 +1,7 @@
-* {font-family: system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue;}
-
-.legendaries, .giftpokemon, .ingametrades, .unown, .completepokedex, .battles, .items  {
+* {
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue;
+}
+.legendaries, .giftpokemon, .ingametrades, .unown, .completepokedex, .battles, .items {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -8,18 +9,14 @@
 .legendaries-rightrow, .giftpokemon-rightrow, .ingametrades-rightrow {
 	margin-left: 40px;
 }
-
 .legendaries-rowcontainer, .giftpokemon-rowcontainer, .ingametrades-rowcontainer, .unown-rowcontainer {
 	display: flex;
-	align-items: flex-start; 
+	align-items: flex-start;
 }
-
 .unown-middlerow {
 	margin-left: 40px;
 	margin-right: 40px;
 }
-
-
 #female {
 	color: pink;
 }
@@ -27,26 +24,25 @@
 	height: 40px;
 }
 .pokeicon.egg {
-    height: 25px;
-    margin-left: 5px;
+	height: 25px;
+	margin-left: 5px;
 }
 .pokeicon.unown {
 	height: 30px;
-	}
+}
 .pokeicon.legendaries {
 	height: 30px;
 	margin-right: 5px;
 }
-
 a {
 	text-decoration: none;
 	color: #fff;
 }
-
 body {
 	margin: 0;
 	padding: 0;
-	background: #ffffff url(../../images/patterns/pattern-crystal.png) repeat center center; /* Icons Vectors by Vecteezy */
+	background: #ffffff url(../../images/patterns/pattern-crystal.png) repeat center center;
+	/* Icons Vectors by Vecteezy */
 	background-size: 500px 250px;
 	display: flex;
 	flex-direction: column;
@@ -58,8 +54,10 @@ body {
 	align-items: baseline;
 }
 /* page */
+
 .checkbox-item input[type="checkbox"] {
-    margin-right: 5px; /* Adjust this value to control the space between the checkbox and the label */
+	margin-right: 5px;
+	/* Adjust this value to control the space between the checkbox and the label */
 }
 .wide-panel {
 	text-align: center;
@@ -83,20 +81,17 @@ body {
 	font-weight: 1000;
 	color: #62CCCC;
 }
-
 .checkbox-group {
 	margin-bottom: 15px;
 }
 span {
 	pointer-events: none;
 }
-
 .checkbox-item {
 	margin-bottom: 10px;
 	display: flex;
 	align-items: center;
 }
-
 footer {
 	height: 50px;
 	background: #62CCCC;
@@ -119,47 +114,13 @@ footer li {
 	list-style: none;
 	font-size: 15px;
 }
-
-
 @media only screen and (max-width: 768px) {
 	/* Constant */
-   
-    footer {
-        height: 50px;
-        font-size: 12px;
-    }
-
-	/* Variable */
-
-	
-
-	  .wide-panel {
-		margin-top: 180px;
-		width: 300px;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-evenly;
-		align-items: center;
-		
-	  }
-	  .unown {
-		white-space: nowrap;
-		align-items: center;
+	footer {
+		height: 50px;
+		font-size: 12px;
 	}
-		  .unown-middlerow {
-			margin-left: 10px;
-			margin-right: 10px;
-			
-		  }
-	
-		  .wide-panel.collectibles {
-			margin-top: 0px;
-		  }
-		  
-
-}
-
-@media only screen and (max-width: 400px) { /* Normal phones */
+	/* Variable */
 	.wide-panel {
 		margin-top: 180px;
 		width: 300px;
@@ -168,5 +129,26 @@ footer li {
 		justify-content: space-evenly;
 		align-items: center;
 	}
-	
+	.unown {
+		white-space: nowrap;
+		align-items: center;
+	}
+	.unown-middlerow {
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	.wide-panel.collectibles {
+		margin-top: 0px;
+	}
+}
+@media only screen and (max-width: 400px) {
+	/* Normal phones */
+	.wide-panel {
+		margin-top: 180px;
+		width: 300px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: center;
+	}
 }
