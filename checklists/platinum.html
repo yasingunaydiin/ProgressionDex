@@ -1,757 +1,2290 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta content="width=device-width, initial-scale=1.0" name="viewport">
-	<title>Progression Dex | Platinum</title>
-	<link href="../checklists/css/platinum.css" rel="stylesheet">
-	<link href="../output.css" rel="stylesheet">
-	<link href="../images/icons/favicontab.ico" rel="icon" type="image/x-icon">
-	<link href="../images/icons/favicontab.ico" rel="shortcut icon" type="image/x-icon">
-	<meta name="description" content="A tool for tracking your progression in Pokemon games. Easily choose between games and track your game progress.">
-	<meta name="keywords" content="pokemon, checklist, pokedex, progress, completion, speedrun, checklist, check list, locations, characters, games, game">
-</head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4PDLXC895H"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Progression Dex | Platinum</title>
+    <link href="../checklists/css/platinum.css" rel="stylesheet" />
+    <link href="../output.css" rel="stylesheet" />
+    <link
+      href="../images/icons/favicontab.ico"
+      rel="icon"
+      type="image/x-icon"
+    />
+    <link
+      href="../images/icons/favicontab.ico"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
+    <meta
+      name="description"
+      content="A tool for tracking your progression in Pokemon games. Easily choose between games and track your game progress."
+    />
+    <meta
+      name="keywords"
+      content="pokemon, checklist, pokedex, progress, completion, speedrun, checklist, check list, locations, characters, games, game"
+    />
+  </head>
+  <!-- Google tag (gtag.js) -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-4PDLXC895H"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
 
-  gtag('config', 'G-4PDLXC895H');
-</script>
-<body>
-	<div class="navbar bg-white rounded-3xl shadow-lg mt-2 fixed top-0 flex items-center justify-between" style="width: 95%;  z-index: 1000; left: 50%; transform: translateX(-50%);">
-		<div class="flex items-center gap-4">
-		  <a href="../index.html" class="btn btn-ghost text-2xl"><span class="title" style="color: #CEA435;">Progression Dex |</span></a>
-		  <div class="flex items-center gap-2">
-			<img src="../images/logos/platinum-logo.webp" class="w-20">
-		  </div>
-		</div>
-		
-	  </div>
+    gtag('config', 'G-4PDLXC895H');
+  </script>
+  <body>
+    <div
+      class="navbar bg-white rounded-3xl shadow-lg mt-2 fixed top-0 flex items-center justify-between"
+      style="width: 95%; z-index: 1000; left: 50%; transform: translateX(-50%)"
+    >
+      <div class="flex items-center gap-4">
+        <a href="../index.html" class="btn btn-ghost text-2xl"
+          ><span class="title" style="color: #cea435"
+            >Progression Dex |</span
+          ></a
+        >
+        <div class="flex items-center gap-2">
+          <img
+            src="../images/logos/platinum-logo.webp"
+            class="w-20"
+            alt="Icon of Platinum Logo"
+          />
+        </div>
+      </div>
+    </div>
 
-	<div class="page-container" data-game="platinum">
-		<div class="page-container-left">
-			<div class="wide-panel pokedex">
-				<label class="panel-label">Pokédex</label>
+    <div class="page-container" data-game="platinum">
+      <div class="page-container-left">
+        <div class="wide-panel pokedex">
+          <label class="panel-label">Pokédex</label>
 
-					<div class="completepokedex">
-						<div class="checkbox-item">
-							<span class="title"><label class="text-lg">Complete the Sinnoh Pokédex</label></span>
-						</div>
-						<div class="checkbox-item">
-							<input id="platinum-checkbox-national-pokedex" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="There are a total of 493 Pokemon in the National Dex." for="platinum-checkbox-national-pokedex">Complete the National Pokedex</label>
-						</div>
-						<div class="checkbox-item">
-							<input id="platinum-checkbox-diploma" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="The lead developer is in the north-westernmost house in the Hotel Grand Lake at the Valor Lakefront." for="platinum-checkbox-diploma">Get Diploma</label>
-						</div>
-					</div>
-					<div class="legendaries">
-						<div class="checkbox-item">
-							<span class="title"><label class="text-lg">Catch all Legendaries</label></span>
-						</div>
-						<div class="legendaries-rowcontainer">
-							<div class="legendaries-leftrow">
-								<div class="checkbox-item">
-									<input id="platinum-checkbox-dialga" type="checkbox"> <img class="pokeicon legendary" src="../images/icons/pokemon/gen4/platinum/dialga.png"> <label class="text-sm lg:tooltip" data-tip="At the peak of Mt. Coronet, after getting the National Dex, find the Adamant Orb." for="platinum-checkbox-dialga">Dialga</label>
-								</div>
-								<div class="checkbox-item">
-									<input id="platinum-checkbox-palkia" type="checkbox"> <img class="pokeicon legendary" src="../images/icons/pokemon/gen4/platinum/palkia.png"> <label class="text-sm lg:tooltip" data-tip="At the peak of Mt. Coronet, after getting the National Dex, find the Lustrous Orb." for="platinum-checkbox-palkia">Palkia</label>
-								</div>
-								<div class="checkbox-item">
-									<input id="platinum-checkbox-giratina" type="checkbox"> <img class="pokeicon legendary" src="../images/icons/pokemon/gen4/platinum/giratina-altered.png"> <label class="text-sm lg:tooltip" data-tip="Distortion World." for="platinum-checkbox-giratina">Giratina</label>
-								</div>
-								<div class="checkbox-item">
-									<input id="platinum-checkbox-uxie" type="checkbox"> <img class="pokeicon legendary" src="../images/icons/pokemon/gen4/platinum/uxie.png"> <label class="text-sm lg:tooltip" data-tip="Go to Lake Acuity after battling Giratina." for="platinum-checkbox-uxie">Uxie</label>
-								</div>
-								<div class="checkbox-item">
-									<input id="platinum-checkbox-azelf" type="checkbox"> <img class="pokeicon legendary" src="../images/icons/pokemon/gen4/platinum/azelf.png"> <label class="text-sm lg:tooltip" data-tip="Go to Lake Valor after battling Giratina." for="platinum-checkbox-azelf">Azelf</label>
-								</div>
-								<div class="checkbox-item">
-									<input id="platinum-checkbox-mesprit" type="checkbox"> <img class="pokeicon legendary" src="../images/icons/pokemon/gen4/platinum/mesprit.png"> <label class="text-sm lg:tooltip" data-tip="Go to Lake Verity after battling Giratina." for="platinum-checkbox-mesprit">Mesprit</label>
-								</div>
-							</div>
-							<div class="legendaries-rightrow">
-								<div class="checkbox-item">
-									<input id="platinum-checkbox-cresselia" type="checkbox"> <img class="pokeicon legendary" src="../images/icons/pokemon/gen4/platinum/cresselia.png"> <label class="text-sm lg:tooltip" data-tip="Once you have obtained the National Dex, go to Canalave City and speak with the guy above the Sailor by the boat." for="platinum-checkbox-cresselia">Cresselia</label>
-								</div>
-								<div class="checkbox-item">
-									<input id="platinum-checkbox-heatran" type="checkbox"> <img class="pokeicon legendary" src="../images/icons/pokemon/gen4/platinum/heatran.png"> <label class="text-sm lg:tooltip" data-tip="Once you have obtained the National Dex, complete the Stark Mountain quest." for="platinum-checkbox-heatran">Heatran</label>
-								</div>
-								<div class="checkbox-item">
-									<input id="platinum-checkbox-regigigas" type="checkbox"> <img class="pokeicon legendary" src="../images/icons/pokemon/gen4/platinum/regigigas.png"> <label class="text-sm lg:tooltip" data-tip="Go with Regirock, Regice and Registeel to Snowpoint City." for="platinum-checkbox-regigigas">Regigigas</label>
-								</div>
-								<div class="eventpokemon">
-									<div class="checkbox-item">
-										<span class="title"><label class="text-lg">Event Pokemon</label></span>
-									</div>
-									<div class="checkbox-item">
-										<input id="platinum-checkbox-darkrai" type="checkbox"> <img class="pokeicon legendary" src="../images/icons/pokemon/gen4/platinum/darkrai.png"> <label class="text-sm lg:tooltip" data-tip="If you have the item Membership Pass, go to Canalave City in the motel that was previously locked." for="platinum-checkbox-darkrai" style="color: #7ac49a;">Darkrai</label>
-									</div>
-									<div class="checkbox-item">
-										<input id="platinum-checkbox-shaymin" type="checkbox"> <img class="pokeicon legendary" src="../images/icons/pokemon/gen4/platinum/shaymin-land.png"> <label class="text-sm lg:tooltip" data-tip="If you have the item Oak's Letter, go to the White Rock in Route 224." for="platinum-checkbox-shaymin" style="color: #7ac49a;">Shaymin</label>
-									</div>
-									<div class="checkbox-item">
-										<input id="platinum-checkbox-arceus" type="checkbox"> <img class="pokeicon legendary" src="../images/icons/pokemon/gen4/platinum/arceus-normal.png"> <label class="text-sm lg:tooltip" data-tip="If you have a Azure Flute, go to the Spear Pillar in Mt. Coronet." for="platinum-checkbox-arceus" style="color: #7ac49a;">Arceus</label>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="giftpokemon">
-						<div class="checkbox-item">
-							<span class="title"><label class="text-lg">Obtain all In-Game Gift Pokemon</label></span>
-						</div>
-						<div class="giftpokemon-rowcontainer">
-							<div class="giftpokemon-leftrow">
-						
-						<div class="checkbox-item">
-							<input id="platinum-checkbox-eevee" type="checkbox"> <img class="pokeicon" src="../images/icons/pokemon/gen4/platinum/eevee.png"> <label class="text-sm lg:tooltip" data-tip="From Bebe in Hearthome City, after obtaining the National Dex." for="platinum-checkbox-eevee">Eevee</label>
-						</div>
-						<div class="checkbox-item">
-							<input id="platinum-checkbox-togepi" type="checkbox"> <img class="pokeicon" src="../images/icons/pokemon/gen4/platinum/happiny.png"> <label class="text-sm lg:tooltip" data-tip="From Cynthia after you've dealt with the Galactic Grunts in Eterna City." for="platinum-checkbox-togepi">Togepi Egg</label>
-						</div>
-						</div>
-						<div class="giftpokemon-rightrow">
-						<div class="checkbox-item">
-							<input id="platinum-checkbox-riolu" type="checkbox"> <img class="pokeicon" src="../images/icons/pokemon/gen4/platinum/riolu.png"> <label class="text-sm lg:tooltip" data-tip="From Riley as a thanks for clearing Team Galatic off of the island." for="platinum-checkbox-riolu">Riolu Egg</label>
-						</div>
-						<div class="checkbox-item">
-							<input id="platinum-checkbox-porygon" type="checkbox"> <img class="pokeicon" src="../images/icons/pokemon/gen4/platinum/porygon.png"> <label class="text-sm lg:tooltip" data-tip="In one of the northmost houses of Veilstone City." for="platinum-checkbox-porygon">Porygon</label>
-						</div>
-						</div>
+          <div class="completepokedex">
+            <div class="checkbox-item">
+              <span class="title"
+                ><label class="text-lg"
+                  >Complete the Sinnoh Pokédex</label
+                ></span
+              >
+            </div>
+            <div class="checkbox-item">
+              <input id="platinum-checkbox-national-pokedex" type="checkbox" />
+              <label
+                class="text-sm lg:tooltip"
+                data-tip="There are a total of 493 Pokemon in the National Dex."
+                for="platinum-checkbox-national-pokedex"
+                >Complete the National Pokedex</label
+              >
+            </div>
+            <div class="checkbox-item">
+              <input id="platinum-checkbox-diploma" type="checkbox" />
+              <label
+                class="text-sm lg:tooltip"
+                data-tip="The lead developer is in the north-westernmost house in the Hotel Grand Lake at the Valor Lakefront."
+                for="platinum-checkbox-diploma"
+                >Get Diploma</label
+              >
+            </div>
+          </div>
+          <div class="legendaries">
+            <div class="checkbox-item">
+              <span class="title"
+                ><label class="text-lg">Catch all Legendaries</label></span
+              >
+            </div>
+            <div class="legendaries-rowcontainer">
+              <div class="legendaries-leftrow">
+                <div class="checkbox-item">
+                  <input id="platinum-checkbox-dialga" type="checkbox" />
+                  <img
+                    class="pokeicon legendary"
+                    src="../images/icons/pokemon/gen4/platinum/dialga.png"
+                    alt="Icon of Dialga"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="At the peak of Mt. Coronet, after getting the National Dex, find the Adamant Orb."
+                    for="platinum-checkbox-dialga"
+                    >Dialga</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="platinum-checkbox-palkia" type="checkbox" />
+                  <img
+                    class="pokeicon legendary"
+                    src="../images/icons/pokemon/gen4/platinum/palkia.png"
+                    alt="Icon of Palkia"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="At the peak of Mt. Coronet, after getting the National Dex, find the Lustrous Orb."
+                    for="platinum-checkbox-palkia"
+                    >Palkia</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="platinum-checkbox-giratina" type="checkbox" />
+                  <img
+                    class="pokeicon legendary"
+                    src="../images/icons/pokemon/gen4/platinum/giratina-altered.png"
+                    alt="Icon of Giratina"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Distortion World."
+                    for="platinum-checkbox-giratina"
+                    >Giratina</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="platinum-checkbox-uxie" type="checkbox" />
+                  <img
+                    class="pokeicon legendary"
+                    src="../images/icons/pokemon/gen4/platinum/uxie.png"
+                    alt="Icon of Uxie"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Go to Lake Acuity after battling Giratina."
+                    for="platinum-checkbox-uxie"
+                    >Uxie</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="platinum-checkbox-azelf" type="checkbox" />
+                  <img
+                    class="pokeicon legendary"
+                    src="../images/icons/pokemon/gen4/platinum/azelf.png"
+                    alt="Icon of Azelf"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Go to Lake Valor after battling Giratina."
+                    for="platinum-checkbox-azelf"
+                    >Azelf</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="platinum-checkbox-mesprit" type="checkbox" />
+                  <img
+                    class="pokeicon legendary"
+                    src="../images/icons/pokemon/gen4/platinum/mesprit.png"
+                    alt="Icon of Mesprit"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Go to Lake Verity after battling Giratina."
+                    for="platinum-checkbox-mesprit"
+                    >Mesprit</label
+                  >
+                </div>
+              </div>
+              <div class="legendaries-rightrow">
+                <div class="checkbox-item">
+                  <input id="platinum-checkbox-cresselia" type="checkbox" />
+                  <img
+                    class="pokeicon legendary"
+                    src="../images/icons/pokemon/gen4/platinum/cresselia.png"
+                    alt="Icon of Cresselia"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Once you have obtained the National Dex, go to Canalave City and speak with the guy above the Sailor by the boat."
+                    for="platinum-checkbox-cresselia"
+                    >Cresselia</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="platinum-checkbox-heatran" type="checkbox" />
+                  <img
+                    class="pokeicon legendary"
+                    src="../images/icons/pokemon/gen4/platinum/heatran.png"
+                    alt="Icon of Heatran"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Once you have obtained the National Dex, complete the Stark Mountain quest."
+                    for="platinum-checkbox-heatran"
+                    >Heatran</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="platinum-checkbox-regigigas" type="checkbox" />
+                  <img
+                    class="pokeicon legendary"
+                    src="../images/icons/pokemon/gen4/platinum/regigigas.png"
+                    alt="Icon of Regigigas"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Go with Regirock, Regice and Registeel to Snowpoint City."
+                    for="platinum-checkbox-regigigas"
+                    >Regigigas</label
+                  >
+                </div>
+                <div class="eventpokemon">
+                  <div class="checkbox-item">
+                    <span class="title"
+                      ><label class="text-lg">Event Pokemon</label></span
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input id="platinum-checkbox-darkrai" type="checkbox" />
+                    <img
+                      class="pokeicon legendary"
+                      src="../images/icons/pokemon/gen4/platinum/darkrai.png"
+                      alt="Icon of Darkrai"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="If you have the item Membership Pass, go to Canalave City in the motel that was previously locked."
+                      for="platinum-checkbox-darkrai"
+                      style="color: #7ac49a"
+                      >Darkrai</label
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input id="platinum-checkbox-shaymin" type="checkbox" />
+                    <img
+                      class="pokeicon legendary"
+                      src="../images/icons/pokemon/gen4/platinum/shaymin-land.png"
+                      alt="Icon of Shaymin"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="If you have the item Oak's Letter, go to the White Rock in Route 224."
+                      for="platinum-checkbox-shaymin"
+                      style="color: #7ac49a"
+                      >Shaymin</label
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input id="platinum-checkbox-arceus" type="checkbox" />
+                    <img
+                      class="pokeicon legendary"
+                      src="../images/icons/pokemon/gen4/platinum/arceus-normal.png"
+                      alt="Icon of Arceus"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="If you have a Azure Flute, go to the Spear Pillar in Mt. Coronet."
+                      for="platinum-checkbox-arceus"
+                      style="color: #7ac49a"
+                      >Arceus</label
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="giftpokemon">
+            <div class="checkbox-item">
+              <span class="title"
+                ><label class="text-lg"
+                  >Obtain all In-Game Gift Pokemon</label
+                ></span
+              >
+            </div>
+            <div class="giftpokemon-rowcontainer">
+              <div class="giftpokemon-leftrow">
+                <div class="checkbox-item">
+                  <input id="platinum-checkbox-eevee" type="checkbox" />
+                  <img
+                    class="pokeicon"
+                    src="../images/icons/pokemon/gen4/platinum/eevee.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="From Bebe in Hearthome City, after obtaining the National Dex."
+                    for="platinum-checkbox-eevee"
+                    >Eevee</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="platinum-checkbox-togepi" type="checkbox" />
+                  <img
+                    class="pokeicon"
+                    src="../images/icons/pokemon/gen4/platinum/happiny.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="From Cynthia after you've dealt with the Galactic Grunts in Eterna City."
+                    for="platinum-checkbox-togepi"
+                    >Togepi Egg</label
+                  >
+                </div>
+              </div>
+              <div class="giftpokemon-rightrow">
+                <div class="checkbox-item">
+                  <input id="platinum-checkbox-riolu" type="checkbox" />
+                  <img
+                    class="pokeicon"
+                    src="../images/icons/pokemon/gen4/platinum/riolu.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="From Riley as a thanks for clearing Team Galatic off of the island."
+                    for="platinum-checkbox-riolu"
+                    >Riolu Egg</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="platinum-checkbox-porygon" type="checkbox" />
+                  <img
+                    class="pokeicon"
+                    src="../images/icons/pokemon/gen4/platinum/porygon.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="In one of the northmost houses of Veilstone City."
+                    for="platinum-checkbox-porygon"
+                    >Porygon</label
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ingametrades">
+            <div class="checkbox-item">
+              <span class="title"
+                ><label class="text-lg"
+                  >Complete all In-Game Trades</label
+                ></span
+              >
+            </div>
+            <div class="ingametrades-rowcontainer">
+              <div class="ingametrades-leftrow">
+                <div class="checkbox-item">
+                  <input id="platinum-checkbox-machop-abra" type="checkbox" />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Oreburgh City."
+                    for="platinum-checkbox-machop-abra"
+                    >Machop for Abra</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="platinum-checkbox-buizel-chatot" type="checkbox" />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Eterna Condominiums."
+                    for="platinum-checkbox-buizel-chatot"
+                    >Buizel for Chatot</label
+                  >
+                </div>
+              </div>
+              <div class="ingametrades-rightrow">
+                <div class="checkbox-item">
+                  <input
+                    id="platinum-checkbox-medicham-haunter"
+                    type="checkbox"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Snowpoint City."
+                    for="platinum-checkbox-medicham-haunter"
+                    >Medicham for Haunter</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="platinum-checkbox-finneon-magikarp"
+                    type="checkbox"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Route 226."
+                    for="platinum-checkbox-finneon-magikarp"
+                    >Finneon for Magikarp</label
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="wide-panel more">
+          <label class="panel-label">Post Game</label>
+          <div class="trainercard">
+            <div class="checkbox-item">
+              <span class="title"
+                ><label class="text-lg">Black Trainer Card</label></span
+              >
+            </div>
+            <div class="checkbox-item">
+              <input id="platinum-checkbox-pokemon-league" type="checkbox" />
+              <label
+                class="text-sm lg:tooltip"
+                for="platinum-checkbox-pokemon-league"
+                >Defeat the Pokemon League Champion.</label
+              >
+            </div>
+            <div class="checkbox-item">
+              <input id="platinum-checkbox-master-contest" type="checkbox" />
+              <label
+                class="text-sm lg:tooltip"
+                for="platinum-checkbox-master-contest"
+                >Complete 1 Master Rank Super Contest.</label
+              >
+            </div>
+            <div class="checkbox-item">
+              <input
+                id="platinum-checkbox-underground-capture-flag"
+                type="checkbox"
+              />
+              <label
+                class="text-sm lg:tooltip"
+                for="platinum-checkbox-underground-capture-flag"
+                >1 Online Capture the Flag Match.</label
+              >
+            </div>
+            <div class="checkbox-item">
+              <input
+                id="platinum-checkbox-complete-national-dex"
+                type="checkbox"
+              />
+              <label
+                class="text-sm lg:tooltip"
+                for="platinum-checkbox-complete-national-dex"
+                >Complete the National Dex.</label
+              >
+            </div>
+            <div class="checkbox-item">
+              <input id="platinum-checkbox-battle-tower-wins" type="checkbox" />
+              <label
+                class="text-sm lg:tooltip"
+                for="platinum-checkbox-battle-tower-wins"
+                >Complete 100 Wins in the Battle Tower.</label
+              >
+            </div>
+          </div>
+          <div class="poketch">
+            <div class="checkbox-item">
+              <span class="title"
+                ><label class="text-lg"
+                  >Collect all Poketch Applications</label
+                ></span
+              >
+            </div>
+            <div class="poketch-rowcontainer">
+              <div class="poketch-leftrow">
+                <div class="checkbox-item">
+                  <input id="platinum-checkbox-digital-clock" type="checkbox" />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Available from Beginning."
+                    for="platinum-checkbox-digital-clock"
+                    >Digital Clock</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="platinum-checkbox-memo-pad" type="checkbox" />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Obtained from President of Pokétch Company after obtaining the 1st Badge."
+                    for="platinum-checkbox-memo-pad"
+                    >Memo Pad</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="platinum-checkbox-your-party" type="checkbox" />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Available from Beginning."
+                    for="platinum-checkbox-your-party"
+                    >Your Party</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="platinum-checkbox-item-finder" type="checkbox" />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Obtained from Dawn/Lukas in Route 207."
+                    for="platinum-checkbox-item-finder"
+                    >Item Finder</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="platinum-checkbox-breeding-centre"
+                    type="checkbox"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Obtained in the Daycare Centre in Solaceon Town."
+                    for="platinum-checkbox-breeding-centre"
+                    >Breeding Centre</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="platinum-checkbox-counter" type="checkbox" />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Obtained from Veilstone Department Store."
+                    for="platinum-checkbox-counter"
+                    >Counter</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="platinum-checkbox-marking-map" type="checkbox" />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Obtained from President of Poketch Company after obtaining 3rd Badge."
+                    for="platinum-checkbox-marking-map"
+                    >Marking Map</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="platinum-checkbox-coin-toss" type="checkbox" />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Obtained from Resident in Grand Lake Hotel."
+                    for="platinum-checkbox-coin-toss"
+                    >Coin Toss</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="platinum-checkbox-calendar" type="checkbox" />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Obtained from resident in Sunyshore City by bringing a Pokémon with a Serious Nature."
+                    for="platinum-checkbox-calendar"
+                    >Calendar</label
+                  >
+                </div>
+              </div>
+              <div class="poketch-middlerow">
+                <div class="checkbox-item">
+                  <input id="platinum-checkbox-roulette" type="checkbox" />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Obtained from resident in Sunyshore City by bringing a Pokémon with a Quirky Nature."
+                    for="platinum-checkbox-roulette"
+                    >Roulette</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="platinum-checkbox-kitchen-timer" type="checkbox" />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Obtained from girl in Pal Park by showing her a Snorlax."
+                    for="platinum-checkbox-kitchen-timer"
+                    >Kitchen Timer</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="platinum-checkbox-matchup-checker"
+                    type="checkbox"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Obtained through Nintendo Events."
+                    for="platinum-checkbox-matchup-checker"
+                    >Matchup Checker</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="platinum-checkbox-alarm-clock" type="checkbox" />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Obtained through Nintendo Events."
+                    for="platinum-checkbox-alarm-clock"
+                    >Alarm Clock</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="platinum-checkbox-calculator" type="checkbox" />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Available from Beginning."
+                    for="platinum-checkbox-calculator"
+                    >Calculator</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="platinum-checkbox-step-counter" type="checkbox" />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Available from Beginning."
+                    for="platinum-checkbox-step-counter"
+                    >Step Counter</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="platinum-checkbox-happiness-checker"
+                    type="checkbox"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Obtained from Woman in Eterna Pokémon Center."
+                    for="platinum-checkbox-happiness-checker"
+                    >Happiness Checker</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="platinum-checkbox-berry-checker" type="checkbox" />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Obtained from Berry Master in Route 208."
+                    for="platinum-checkbox-berry-checker"
+                    >Berry Checker</label
+                  >
+                </div>
+              </div>
+              <div class="poketch-rightrow">
+                <div class="checkbox-item">
+                  <input
+                    id="platinum-checkbox-pokemon-history"
+                    type="checkbox"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Obtained from a Resident of Solaceon Town."
+                    for="platinum-checkbox-pokemon-history"
+                    >Pokemon History</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="platinum-checkbox-analog-clock" type="checkbox" />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Obtained from resident in Celestic Town."
+                    for="platinum-checkbox-analog-clock"
+                    >Analog Clock</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="platinum-checkbox-wireless-searcher"
+                    type="checkbox"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Obtained from President of Poketch Company after obtaining 5th Badge."
+                    for="platinum-checkbox-wireless-searcher"
+                    >Wireless Searcher</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="platinum-checkbox-type-chart" type="checkbox" />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Obtained from President of Poketch Company after obtaining 7th Badge."
+                    for="platinum-checkbox-type-chart"
+                    >Type Chart</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="platinum-checkbox-drawing-board" type="checkbox" />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Obtained from resident in Sunyshore City by bringing a Pokémon with a Naive Nature."
+                    for="platinum-checkbox-drawing-board"
+                    >Drawing Board</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="platinum-checkbox-pokeradar-checker"
+                    type="checkbox"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Obtained from Professor Oak in Pal Park."
+                    for="platinum-checkbox-pokeradar-checker"
+                    >Pokeradar Checker</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="platinum-checkbox-color-changer" type="checkbox" />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Obtained from girl in Pal Park by showing her a Kecleon."
+                    for="platinum-checkbox-color-changer"
+                    >Color Changer</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="platinum-checkbox-stopwatch" type="checkbox" />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Obtained through Nintendo Events."
+                    for="platinum-checkbox-stopwatch"
+                    >Stopwatch</label
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="egoodsitems">
+            <div class="checkbox-item">
+              <span class="title"
+                ><label class="text-lg"
+                  >Collect all Mr. E Goods Items</label
+                ></span
+              >
+            </div>
+            <div class="egoodsitems-rowcontainer">
+              <div class="egoodsitems-leftrow">
+                <div class="contestcups">
+                  <div class="checkbox-item">
+                    <span class="title"
+                      ><label class="text-lg">Contest Cups</label></span
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input id="platinum-checkbox-beauty-cup" type="checkbox" />
+                    <img
+                      class="pokeicon trophy"
+                      src="../images/icons/miscellaneous/gen4/cups/Beauty_Cup_Sprite_DPPt.png"
+                      alt="Icon of Beauty Cup"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      for="platinum-checkbox-beauty-cup"
+                      >Beauty Cup</label
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input id="platinum-checkbox-cool-cup" type="checkbox" />
+                    <img
+                      class="pokeicon trophy"
+                      src="../images/icons/miscellaneous/gen4/cups/Cool_Cup_Sprite_DPPt.png"
+                      alt="Icon of Cool Cup"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      for="platinum-checkbox-cool-cup"
+                      >Cool Cup</label
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input id="platinum-checkbox-clever-cup" type="checkbox" />
+                    <img
+                      class="pokeicon trophy"
+                      src="../images/icons/miscellaneous/gen4/cups/Clever_Cup_Sprite_DPPt.png"
+                      alt="Icon of Clever Cup"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      for="platinum-checkbox-clever-cup"
+                      >Clever Cup</label
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input id="platinum-checkbox-tough-cup" type="checkbox" />
+                    <img
+                      class="pokeicon trophy"
+                      src="../images/icons/miscellaneous/gen4/cups/Tough_Cup_Sprite_DPPt.png"
+                      alt="Icon of Tough Cup"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      for="platinum-checkbox-tough-cup"
+                      >Tough Cup</label
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input id="platinum-checkbox-cute-cup" type="checkbox" />
+                    <img
+                      class="pokeicon trophy"
+                      src="../images/icons/miscellaneous/gen4/cups/Cute_Cup_Sprite_DPPt.png"
+                      alt="Icon of Cute Cup"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      for="platinum-checkbox-cute-cup"
+                      >Cute Cup</label
+                    >
+                  </div>
+                </div>
+                <div class="other">
+                  <div class="checkbox-item">
+                    <span class="title"
+                      ><label class="text-lg">Other</label></span
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input id="platinum-checkbox-gym-statue" type="checkbox" />
+                    <img
+                      class="pokeicon trophy"
+                      src="../images/icons/miscellaneous/gen4/trophys/Gym_Statue_Sprite_DPPt.png"
+                      alt="Icon of Gym Statue"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      for="platinum-checkbox-gym-statue"
+                      >Gym Statue</label
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input id="platinum-checkbox-globe" type="checkbox" />
+                    <img
+                      class="pokeicon trophy"
+                      src="../images/icons/miscellaneous/gen4/trophys/Globe_Sprite_DPPt.png"
+                      alt="Icon of Globe"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      for="platinum-checkbox-globe"
+                      >Globe</label
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="egoodsitems-middlerow">
+                <div class="crystals">
+                  <div class="checkbox-item">
+                    <span class="title"
+                      ><label class="text-lg">Crystals</label></span
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="platinum-checkbox-blue-crystal"
+                      type="checkbox"
+                    />
+                    <img
+                      class="pokeicon trophy"
+                      src="../images/icons/miscellaneous/gen4/crystals/Blue_Crystal_Sprite_DPPt.png"
+                      alt="Icon of Blue Crystal"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      for="platinum-checkbox-blue-crystal"
+                      >Blue Crystal</label
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="platinum-checkbox-pink-crystal"
+                      type="checkbox"
+                    />
+                    <img
+                      class="pokeicon trophy"
+                      src="../images/icons/miscellaneous/gen4/crystals/Pink_Crystal_Sprite_DPPt.png"
+                      alt="Icon of Pink Crystal"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      for="platinum-checkbox-pink-crystal"
+                      >Pink Crystal</label
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input id="platinum-checkbox-red-crystal" type="checkbox" />
+                    <img
+                      class="pokeicon trophy"
+                      src="../images/icons/miscellaneous/gen4/crystals/Red_Crystal_Sprite_DPPt.png"
+                      alt="Icon of Red Crystal"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      for="platinum-checkbox-red-crystal"
+                      >Red Crystal</label
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="platinum-checkbox-yellow-crystal"
+                      type="checkbox"
+                    />
+                    <img
+                      class="pokeicon trophy"
+                      src="../images/icons/miscellaneous/gen4/crystals/Yellow_Crystal_Sprite_DPPt.png"
+                      alt="Icon of Yellow Crystal"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      for="platinum-checkbox-yellow-crystal"
+                      >Yellow Crystal</label
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="egoodsitems-rightrow">
+                <div class="trophies">
+                  <div class="checkbox-item">
+                    <span class="title"
+                      ><label class="text-lg">Trophies</label></span
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="platinum-checkbox-bronze-trophy"
+                      type="checkbox"
+                    />
+                    <img
+                      class="pokeicon trophy"
+                      src="../images/icons/miscellaneous/gen4/trophys/Bronze_Trophy_Sprite_DPPt.png"
+                      alt="Icon of Bronze Trophy"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      for="platinum-checkbox-bronze-trophy"
+                      >Bronze Trophy</label
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="platinum-checkbox-silver-trophy"
+                      type="checkbox"
+                    />
+                    <img
+                      class="pokeicon trophy"
+                      src="../images/icons/miscellaneous/gen4/trophys/Silver_Trophy_Sprite_DPPt.png"
+                      alt="Icon of Silver Trophy"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      for="platinum-checkbox-silver-trophy"
+                      >Silver Trophy</label
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input id="platinum-checkbox-gold-trophy" type="checkbox" />
+                    <img
+                      class="pokeicon trophy"
+                      src="../images/icons/miscellaneous/gen4/trophys/Gold_Trophy_Sprite_DPPt.png"
+                      alt="Icon of Gold Trophy"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      for="platinum-checkbox-gold-trophy"
+                      >Gold Trophy</label
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="resort">
+            <div class="checkbox-item">
+              <span class="title"
+                ><label class="text-lg"
+                  >Collect all Resort Furniture</label
+                ></span
+              >
+            </div>
+            <div class="resort-rowcontainer">
+              <div class="resort-leftrow">
+                <div class="checkbox-item">
+                  <input id="platinum-checkbox-table" type="checkbox" />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="From Beginning."
+                    for="platinum-checkbox-table"
+                    >Table</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="platinum-checkbox-big-sofa" type="checkbox" />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="From Beginning."
+                    for="platinum-checkbox-big-sofa"
+                    >Big Sofa</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="platinum-checkbox-small-sofa" type="checkbox" />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="From Beginning."
+                    for="platinum-checkbox-small-sofa"
+                    >Small Sofa</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="platinum-checkbox-bed" type="checkbox" />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="From Beginning."
+                    for="platinum-checkbox-bed"
+                    >Bed</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="platinum-checkbox-night-table" type="checkbox" />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="From Beginning."
+                    for="platinum-checkbox-night-table"
+                    >Night Table</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="platinum-checkbox-tv" type="checkbox" />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="From Beginning."
+                    for="platinum-checkbox-tv"
+                    >TV</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="platinum-checkbox-audio-set" type="checkbox" />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="From Beginning."
+                    for="platinum-checkbox-audio-set"
+                    >AudioSet</label
+                  >
+                </div>
+              </div>
+              <div class="resort-middlerow">
+                <div class="checkbox-item">
+                  <input id="platinum-checkbox-shelves" type="checkbox" />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="From Beginning."
+                    for="platinum-checkbox-shelves"
+                    >Shelves</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="platinum-checkbox-racks" type="checkbox" />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="From Beginning."
+                    for="platinum-checkbox-racks"
+                    >Racks</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="platinum-checkbox-house-plant" type="checkbox" />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="From Beginning."
+                    for="platinum-checkbox-house-plant"
+                    >House Plant</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="platinum-checkbox-pc-desk" type="checkbox" />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="From Beginning."
+                    for="platinum-checkbox-pc-desk"
+                    >PC Desk</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="platinum-checkbox-music-box" type="checkbox" />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Purchase Racks."
+                    for="platinum-checkbox-music-box"
+                    >Music Box</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="platinum-checkbox-pokemon-statue1"
+                    type="checkbox"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Obtain a Silver Print in the Battle Frontier."
+                    for="platinum-checkbox-pokemon-statue1"
+                    >Pokemon Statue 1</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="platinum-checkbox-pokemon-statue2"
+                    type="checkbox"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Partake in all 5 facilities of the Battle Frontier."
+                    for="platinum-checkbox-pokemon-statue2"
+                    >Pokemon Statue 2</label
+                  >
+                </div>
+              </div>
+              <div class="resort-rightrow">
+                <div class="checkbox-item">
+                  <input id="platinum-checkbox-piano" type="checkbox" />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Defeat the Elite Four 10 times."
+                    for="platinum-checkbox-piano"
+                    >Piano</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="platinum-checkbox-reception-set" type="checkbox" />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Defeat a total of 50 trainers in the Trainer Café in Battleground."
+                    for="platinum-checkbox-reception-set"
+                    >Reception Set</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="platinum-checkbox-wall-clock" type="checkbox" />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Plant 50 Berries."
+                    for="platinum-checkbox-wall-clock"
+                    >Wall Clock</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="platinum-checkbox-great-painting"
+                    type="checkbox"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Hatch 30 Eggs."
+                    for="platinum-checkbox-great-painting"
+                    >Great Painting</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="platinum-checkbox-tea-set" type="checkbox" />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Purchase Reception Set."
+                    for="platinum-checkbox-tea-set"
+                    >Tea Set</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="platinum-checkbox-chandelier" type="checkbox" />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Walk a total of 300,000 steps."
+                    for="platinum-checkbox-chandelier"
+                    >Chandelier</label
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="page-container-right">
+        <div class="wide-panel collectibles">
+          <label class="panel-label">Collectibles</label>
+          <div class="ribbons">
+            <div class="checkbox-item">
+              <span class="title"><label class="text-lg">Contests</label></span>
+            </div>
+            <div class="ribbons-rowcontainer">
+              <div class="ribbons-leftrow">
+                <div class="beautyribbon">
+                  <div class="checkbox-item">
+                    <span class="title"
+                      ><label class="text-lg">Beauty Contests</label></span
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="platinum-checkbox-beauty-normal"
+                      type="checkbox"
+                    />
+                    <img
+                      class="pokeicon ribbon"
+                      src="../images/icons/miscellaneous/gen4/ribbons/beauty-ribbon-sinnoh.png"
+                      alt="Icon of Beauty Ribbon"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="Beauty Contest Normal Rank Winner!"
+                      for="platinum-checkbox-beauty-normal"
+                      >Normal</label
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="platinum-checkbox-beauty-super"
+                      type="checkbox"
+                    />
+                    <img
+                      class="pokeicon ribbon"
+                      src="../images/icons/miscellaneous/gen4/ribbons/beauty-ribbon-great-sinnoh.png"
+                      alt="Icon of Beauty Ribbon Great"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="Beauty Contest Super Rank Winner!"
+                      for="platinum-checkbox-beauty-super"
+                      >Great</label
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="platinum-checkbox-beauty-hyper"
+                      type="checkbox"
+                    />
+                    <img
+                      class="pokeicon ribbon"
+                      src="../images/icons/miscellaneous/gen4/ribbons/beauty-ribbon-ultra-sinnoh.png"
+                      alt="Icon of Beauty Ribbon Ultra"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="Beauty Contest Super Rank Winner!"
+                      for="platinum-checkbox-beauty-hyper"
+                      >Ultra</label
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="platinum-checkbox-beauty-master"
+                      type="checkbox"
+                    />
+                    <img
+                      class="pokeicon ribbon"
+                      src="../images/icons/miscellaneous/gen4/ribbons/beauty-ribbon-master-sinnoh.png"
+                      alt="Icon of Beauty Ribbon Master"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="Beauty Contest Super Rank Winner!"
+                      for="platinum-checkbox-beauty-master"
+                      >Master</label
+                    >
+                  </div>
+                </div>
+                <div class="toughribbon">
+                  <div class="checkbox-item">
+                    <span class="title"
+                      ><label class="text-lg">Tough Contests</label></span
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="platinum-checkbox-tough-normal"
+                      type="checkbox"
+                    />
+                    <img
+                      class="pokeicon ribbon"
+                      src="../images/icons/miscellaneous/gen4/ribbons/tough-ribbon-sinnoh.png"
+                      alt="Icon of Tough Ribbon"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="Tough Contest Normal Rank Winner!"
+                      for="platinum-checkbox-tough-normal"
+                      >Normal</label
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input id="platinum-checkbox-tough-super" type="checkbox" />
+                    <img
+                      class="pokeicon ribbon"
+                      src="../images/icons/miscellaneous/gen4/ribbons/tough-ribbon-great-sinnoh.png"
+                      alt="Icon of Tough Ribbon Great"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="Tough Contest Great Rank Winner!"
+                      for="platinum-checkbox-tough-super"
+                      >Great</label
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input id="platinum-checkbox-tough-hyper" type="checkbox" />
+                    <img
+                      class="pokeicon ribbon"
+                      src="../images/icons/miscellaneous/gen4/ribbons/tough-ribbon-ultra-sinnoh.png"
+                      alt="Icon of Tough Ribbon Ultra"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="Tough Contest Ultra Rank Winner!"
+                      for="platinum-checkbox-tough-hyper"
+                      >Ultra</label
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="platinum-checkbox-tough-master"
+                      type="checkbox"
+                    />
+                    <img
+                      class="pokeicon ribbon"
+                      src="../images/icons/miscellaneous/gen4/ribbons/tough-ribbon-master-sinnoh.png"
+                      alt="Icon of Tough Ribbon Master"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="Tough Contest Master Rank Winner!"
+                      for="platinum-checkbox-tough-master"
+                      >Master</label
+                    >
+                  </div>
+                </div>
+                <div class="smartnessribbon">
+                  <div class="checkbox-item">
+                    <span class="title"
+                      ><label class="text-lg">Smartness Contests</label></span
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="platinum-checkbox-smartness-normal"
+                      type="checkbox"
+                    />
+                    <img
+                      class="pokeicon ribbon"
+                      src="../images/icons/miscellaneous/gen4/ribbons/smart-ribbon-sinnoh.png"
+                      alt="Icon of Smart Ribbon"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="Smart Contest Normal Rank Winner!"
+                      for="platinum-checkbox-smartness-normal"
+                      >Normal</label
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="platinum-checkbox-smartness-super"
+                      type="checkbox"
+                    />
+                    <img
+                      class="pokeicon ribbon"
+                      src="../images/icons/miscellaneous/gen4/ribbons/smart-ribbon-great-sinnoh.png"
+                      alt="Icon of Smart Ribbon Great"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="Smart Contest Super Rank Winner!"
+                      for="platinum-checkbox-smartness-super"
+                      >Great</label
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="platinum-checkbox-smartness-hyper"
+                      type="checkbox"
+                    />
+                    <img
+                      class="pokeicon ribbon"
+                      src="../images/icons/miscellaneous/gen4/ribbons/smart-ribbon-ultra-sinnoh.png"
+                      alt="Icon of Smart Ribbon Ultra"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="Smart Contest Hyper Rank Winner!"
+                      for="platinum-checkbox-smartness-hyper"
+                      >Ultra</label
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="platinum-checkbox-smartness-master"
+                      type="checkbox"
+                    />
+                    <img
+                      class="pokeicon ribbon"
+                      src="../images/icons/miscellaneous/gen4/ribbons/smart-ribbon-master-sinnoh.png"
+                      alt="Icon of Smart Ribbon Master"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="Smart Contest Master Rank Winner!"
+                      for="platinum-checkbox-smartness-master"
+                      >Master</label
+                    >
+                  </div>
+                </div>
+                <div class="ribbongiver">
+                  <div class="checkbox-item">
+                    <span class="title"
+                      ><label class="text-lg">Ribbon Giver</label></span
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="platinum-checkbox-alert-ribbon"
+                      type="checkbox"
+                    />
+                    <img
+                      class="pokeicon ribbon"
+                      src="../images/icons/miscellaneous/gen4/ribbons/alert-ribbon.png"
+                      alt="Icon of Alert Ribbon"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="Ribbon for clearing LV50 at the Battle Tower."
+                      for="platinum-checkbox-alert-ribbon"
+                      >Alert</label
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="platinum-checkbox-shock-ribbon"
+                      type="checkbox"
+                    />
+                    <img
+                      class="pokeicon ribbon"
+                      src="../images/icons/miscellaneous/gen4/ribbons/shock-ribbon.png"
+                      alt="Icon of Shock Ribbon"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="Won for clearing LV100 at the Battle Tower."
+                      for="platinum-checkbox-shock-ribbon"
+                      >Shock</label
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="platinum-checkbox-downcast-ribbon"
+                      type="checkbox"
+                    />
+                    <img
+                      class="pokeicon ribbon"
+                      src="../images/icons/miscellaneous/gen4/ribbons/downcast-ribbon.png"
+                      alt="Icon of Downcast Ribbon"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="Ribbon for being chosen as a super sketch model."
+                      for="platinum-checkbox-downcast-ribbon"
+                      >Downcast</label
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="platinum-checkbox-careless-ribbon"
+                      type="checkbox"
+                    />
+                    <img
+                      class="pokeicon ribbon"
+                      src="../images/icons/miscellaneous/gen4/ribbons/careless-ribbon.png"
+                      alt="Icon of Careless Ribbon"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="Champion-beating, Hall of Fame Member Ribbon."
+                      for="platinum-checkbox-careless-ribbon"
+                      >Careless</label
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="platinum-checkbox-relax-ribbon"
+                      type="checkbox"
+                    />
+                    <img
+                      class="pokeicon ribbon"
+                      src="../images/icons/miscellaneous/gen4/ribbons/relax-ribbon.png"
+                      alt="Icon of Relax Ribbon"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="Ribbon awarded for being a hard worker."
+                      for="platinum-checkbox-relax-ribbon"
+                      >Relax</label
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="platinum-checkbox-snooze-ribbon"
+                      type="checkbox"
+                    />
+                    <img
+                      class="pokeicon ribbon"
+                      src="../images/icons/miscellaneous/gen4/ribbons/snooze-ribbon.png"
+                      alt="Icon of Snooze Ribbon"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="Ribbon awarded for being a hard worker."
+                      for="platinum-checkbox-snooze-ribbon"
+                      >Snooze</label
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="platinum-checkbox-smile-ribbon"
+                      type="checkbox"
+                    />
+                    <img
+                      class="pokeicon ribbon"
+                      src="../images/icons/miscellaneous/gen4/ribbons/smile-ribbon.png"
+                      alt="Icon of Smile Ribbon"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="Ribbon awarded for being a hard worker."
+                      for="platinum-checkbox-smile-ribbon"
+                      >Smile</label
+                    >
+                  </div>
+                </div>
+                <div class="moreribbons">
+                  <div class="checkbox-item">
+                    <span class="title"
+                      ><label class="text-lg">Achievement Ribbons</label></span
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="platinum-checkbox-footprint-ribbon"
+                      type="checkbox"
+                    />
+                    <img
+                      class="pokeicon ribbon"
+                      src="../images/icons/miscellaneous/gen4/ribbons/footprint-ribbon.png"
+                      alt="Icon of Footprint Ribbon"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="A Ribbon awarded to a Pokémon deemed to have a top-quality footprint."
+                      for="platinum-checkbox-footprint-ribbon"
+                      >Footprint</label
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="platinum-checkbox-champion-ribbon"
+                      type="checkbox"
+                    />
+                    <img
+                      class="pokeicon ribbon"
+                      src="../images/icons/miscellaneous/gen4/ribbons/sinnoh-champion-ribbon.png"
+                      alt="Icon of Sinnoh Champion Ribbon"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="Ribbon awarded for beating the Sinnoh Champion and entering the Hall of Fame."
+                      for="platinum-checkbox-champion-ribbon"
+                      >Champion</label
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="platinum-checkbox-effort-ribbon"
+                      type="checkbox"
+                    />
+                    <img
+                      class="pokeicon ribbon"
+                      src="../images/icons/miscellaneous/gen3/ribbons/effort-ribbon.png"
+                      alt="Icon of Effort Ribbon"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="Ribbon awarded for being an exceptionally hard worker."
+                      for="platinum-checkbox-effort-ribbon"
+                      >Effort</label
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="ribbons-rightrow">
+                <div class="cutenessribbon">
+                  <div class="checkbox-item">
+                    <span class="title"
+                      ><label class="text-lg">Cuteness Contests</label></span
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="platinum-checkbox-cuteness-normal"
+                      type="checkbox"
+                    />
+                    <img
+                      class="pokeicon ribbon"
+                      src="../images/icons/miscellaneous/gen4/ribbons/cute-ribbon-sinnoh.png"
+                      alt="Icon of Cute Ribbon"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="Cute Contest Normal Rank Winner!"
+                      for="platinum-checkbox-cuteness-normal"
+                      >Normal</label
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="platinum-checkbox-cuteness-super"
+                      type="checkbox"
+                    />
+                    <img
+                      class="pokeicon ribbon"
+                      src="../images/icons/miscellaneous/gen4/ribbons/cute-ribbon-great-sinnoh.png"
+                      alt="Icon of Cute Ribbon Great"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="Cute Contest Super Rank Winner!"
+                      for="platinum-checkbox-cuteness-super"
+                      >Great</label
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="platinum-checkbox-cuteness-hyper"
+                      type="checkbox"
+                    />
+                    <img
+                      class="pokeicon ribbon"
+                      src="../images/icons/miscellaneous/gen4/ribbons/cute-ribbon-ultra-sinnoh.png"
+                      alt="Icon of Cute Ribbon Ultra"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="Cute Contest Hyper Rank Winner!"
+                      for="platinum-checkbox-cuteness-hyper"
+                      >Ultra</label
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="platinum-checkbox-cuteness-master"
+                      type="checkbox"
+                    />
+                    <img
+                      class="pokeicon ribbon"
+                      src="../images/icons/miscellaneous/gen4/ribbons/cute-ribbon-master-sinnoh.png"
+                      alt="Icon of Cute Ribbon Master"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="Cute Contest Master Rank Winner!"
+                      for="platinum-checkbox-cuteness-master"
+                      >Master</label
+                    >
+                  </div>
+                </div>
+                <div class="coolnessribbon">
+                  <div class="checkbox-item">
+                    <span class="title"
+                      ><label class="text-lg">Coolness Contests</label></span
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="platinum-checkbox-coolness-normal"
+                      type="checkbox"
+                    />
+                    <img
+                      class="pokeicon ribbon"
+                      src="../images/icons/miscellaneous/gen4/ribbons/cool-ribbon-sinnoh.png"
+                      alt="Icon of Cool Ribbon"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="Cool Contest Normal Rank Winner!"
+                      for="platinum-checkbox-coolness-normal"
+                      >Normal</label
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="platinum-checkbox-coolness-super"
+                      type="checkbox"
+                    />
+                    <img
+                      class="pokeicon ribbon"
+                      src="../images/icons/miscellaneous/gen4/ribbons/cool-ribbon-great-sinnoh.png"
+                      alt="Icon of Cool Ribbon Great"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="Cool Contest Super Rank Winner!"
+                      for="platinum-checkbox-coolness-super"
+                      >Great</label
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="platinum-checkbox-coolness-hyper"
+                      type="checkbox"
+                    />
+                    <img
+                      class="pokeicon ribbon"
+                      src="../images/icons/miscellaneous/gen4/ribbons/cool-ribbon-ultra-sinnoh.png"
+                      alt="Icon of Cool Ribbon Ultra"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="Cool Contest Hyper Rank Winner!"
+                      for="platinum-checkbox-coolness-hyper"
+                      >Ultra</label
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="platinum-checkbox-coolness-master"
+                      type="checkbox"
+                    />
+                    <img
+                      class="pokeicon ribbon"
+                      src="../images/icons/miscellaneous/gen4/ribbons/cool-ribbon-master-sinnoh.png"
+                      alt="Icon of Cool Ribbon Master"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="Cool Contest Master Rank Winner!"
+                      for="platinum-checkbox-coolness-master"
+                      >Master</label
+                    >
+                  </div>
+                </div>
+                <div class="abilitybattle">
+                  <div class="checkbox-item">
+                    <span class="title"
+                      ><label class="text-lg">Ability Battle</label></span
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="platinum-checkbox-ability-normal"
+                      type="checkbox"
+                    />
+                    <img
+                      class="pokeicon ribbon"
+                      src="../images/icons/miscellaneous/gen4/ribbons/ability-ribbon.png"
+                      alt="Icon of Ability Ribbon"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="A Ribbon awarded for defeating the Tower Tycoon at the Battle Tower."
+                      for="platinum-checkbox-ability-normal"
+                      >Ability</label
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="platinum-checkbox-ability-great"
+                      type="checkbox"
+                    />
+                    <img
+                      class="pokeicon ribbon"
+                      src="../images/icons/miscellaneous/gen4/ribbons/great-ability-ribbon.png"
+                      alt="Icon of Great Ability Ribbon"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="A Ribbon awarded for defeating the Tower Tycoon at the Battle Tower."
+                      for="platinum-checkbox-ability-great"
+                      >Great Ability</label
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="platinum-checkbox-ability-double"
+                      type="checkbox"
+                    />
+                    <img
+                      class="pokeicon ribbon"
+                      src="../images/icons/miscellaneous/gen4/ribbons/double-ability-ribbon.png"
+                      alt="Icon of Double Ability Ribbon"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="A Ribbon awarded for completing the Battle Tower Double challenge."
+                      for="platinum-checkbox-ability-double"
+                      >Double Ability</label
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="platinum-checkbox-ability-multi"
+                      type="checkbox"
+                    />
+                    <img
+                      class="pokeicon ribbon"
+                      src="../images/icons/miscellaneous/gen4/ribbons/multi-ability-ribbon.png"
+                      alt="Icon of Multi Ability Ribbon"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="A Ribbon awarded for completing the Battle Tower Multi challenge."
+                      for="platinum-checkbox-ability-multi"
+                      >Multi Ability</label
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="platinum-checkbox-ability-pair"
+                      type="checkbox"
+                    />
+                    <img
+                      class="pokeicon ribbon"
+                      src="../images/icons/miscellaneous/gen4/ribbons/pair-ability-ribbon.png"
+                      alt="Icon of Pair Ability Ribbon"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="A Ribbon awarded for completing the Battle Tower Link Multi challenge."
+                      for="platinum-checkbox-ability-pair"
+                      >Pair Ability</label
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="platinum-checkbox-ability-world"
+                      type="checkbox"
+                    />
+                    <img
+                      class="pokeicon ribbon"
+                      src="../images/icons/miscellaneous/gen4/ribbons/world-ability-ribbon.png"
+                      alt="Icon of World Ability Ribbon"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="A Ribbon awarded for completing the Battle Tower Link Multi challenge."
+                      for="platinum-checkbox-ability-world"
+                      >World Ability</label
+                    >
+                  </div>
+                </div>
+                <div class="ribbonsociety">
+                  <div class="checkbox-item">
+                    <span class="title"
+                      ><label class="text-lg"
+                        >Ribbon Society Ribbons</label
+                      ></span
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="platinum-checkbox-gorgeous-ribbon"
+                      type="checkbox"
+                    />
+                    <img
+                      class="pokeicon ribbon"
+                      src="../images/icons/miscellaneous/gen4/ribbons/gorgeous-ribbon.png"
+                      alt="Icon of Gorgeous Ribbon"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="Buy it for 10,000 at the Resort Area."
+                      for="platinum-checkbox-gorgeous-ribbon"
+                      >Gorgeous</label
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="platinum-checkbox-royal-ribbon"
+                      type="checkbox"
+                    />
+                    <img
+                      class="pokeicon ribbon"
+                      src="../images/icons/miscellaneous/gen4/ribbons/royal-ribbon.png"
+                      alt="Icon of Royal Ribbon"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="Buy it for 100,000 at the Resort Area."
+                      for="platinum-checkbox-royal-ribbon"
+                      >Royal</label
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="platinum-checkbox-royal-gorgeous-ribbon"
+                      type="checkbox"
+                    />
+                    <img
+                      class="pokeicon ribbon"
+                      src="../images/icons/miscellaneous/gen4/ribbons/gorgeous-royal-ribbon.png"
+                      alt="Icon of Gorgeous Royal Ribbon"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="Buy it for 10,000 at the Resort Area."
+                      for="platinum-checkbox-royal-gorgeous-ribbon"
+                      >Royal-Gorgeous</label
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="items">
+            <div class="checkbox-item">
+              <span class="title"><label class="text-lg">Items</label></span>
+            </div>
+            <div class="checkbox-item">
+              <input id="xy-checkbox-alltms" type="checkbox" />
+              <img
+                class="pokeicon item"
+                src="../images/icons/inventory/tms/normal.png"
+              />
+              <label
+                class="text-sm lg:tooltip"
+                data-tip="Find all TM's."
+                for="xy-checkbox-alltms"
+                >Collect all TM's</label
+              >
+            </div>
+          </div>
+        </div>
+        <div class="wide-panel more">
+          <label class="panel-label">Battles</label>
+          <div class="battlefrontier">
+            <div class="checkbox-item">
+              <span class="title"
+                ><label class="text-lg"
+                  >Collect all Battle Frontier Prints</label
+                ></span
+              >
+            </div>
+            <div class="battlefrontier-rowcontainer">
+              <div class="battlefrontier-leftrow">
+                <div class="checkbox-item">
+                  <input id="platinum-checkbox-palmer" type="checkbox" />
+                  <img
+                    class="pokeicon npc"
+                    src="../images/icons/miscellaneous/gen4/Palmer_OD.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    for="platinum-checkbox-palmer"
+                    >Tower Tycoon Palmer</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="platinum-checkbox-thorton" type="checkbox" />
+                  <img
+                    class="pokeicon npc"
+                    src="../images/icons/miscellaneous/gen4/Thorton_OD.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    for="platinum-checkbox-thorton"
+                    >Factory Head Thorton</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="platinum-checkbox-dahlia" type="checkbox" />
+                  <img
+                    class="pokeicon npc"
+                    src="../images/icons/miscellaneous/gen4/Dahlia_OD.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    for="platinum-checkbox-dahlia"
+                    >Arcade Star Dahlia</label
+                  >
+                </div>
+              </div>
+              <div class="battlefrontier-rightrow">
+                <div class="checkbox-item">
+                  <input id="platinum-checkbox-darach" type="checkbox" />
+                  <img
+                    class="pokeicon npc"
+                    src="../images/icons/miscellaneous/gen4/Darach_OD.png"
+                  />
+                  <img
+                    class="pokeicon npc"
+                    src="../images/icons/miscellaneous/gen4/Caitlin_IV_OD.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    for="platinum-checkbox-darach"
+                    >Castle Valet Darach & Lady Caitlin</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="platinum-checkbox-argentha" type="checkbox" />
+                  <img
+                    class="pokeicon npc"
+                    src="../images/icons/miscellaneous/gen4/Argenta_OD.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    for="platinum-checkbox-argentha"
+                    >Hall Matron Argentha</label
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="rivalbattle">
+            <div class="checkbox-item">
+              <span class="title"
+                ><label class="text-lg"
+                  >Complete the Rival Battle phases</label
+                ></span
+              >
+            </div>
+            <div class="checkbox-item">
+              <input id="platinum-checkbox-lv65" type="checkbox" />
+              <label class="text-sm lg:tooltip" for="platinum-checkbox-lv65"
+                >LV. 65</label
+              >
+            </div>
+            <div class="checkbox-item">
+              <input id="platinum-checkbox-lv75" type="checkbox" />
+              <label class="text-sm lg:tooltip" for="platinum-checkbox-lv75"
+                >LV. 75</label
+              >
+            </div>
+            <div class="checkbox-item">
+              <input id="platinum-checkbox-lv85" type="checkbox" />
+              <label class="text-sm lg:tooltip" for="platinum-checkbox-lv85"
+                >LV. 85</label
+              >
+            </div>
+          </div>
+          <div class="battletower">
+            <div class="checkbox-item">
+              <span class="title"
+                ><label class="text-lg">Battle Tower Streaks</label></span
+              >
+            </div>
+            <div class="checkbox-item">
+              <input id="platinum-checkbox-single-battles" type="checkbox" />
+              <label
+                class="text-sm lg:tooltip"
+                for="platinum-checkbox-single-battles"
+                >Single Battles</label
+              >
+            </div>
+            <div class="checkbox-item">
+              <input id="platinum-checkbox-double-battles" type="checkbox" />
+              <label
+                class="text-sm lg:tooltip"
+                for="platinum-checkbox-double-battles"
+                >Double Battles</label
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <ul>
+        <li>
+          <a href="../index.html">Progression Dex</a>
+        </li>
+        <li>
+          <a href="#">Twitter</a>
+        </li>
+        <li>
+          <a href="https://github.com/yasingunaydiin">GitHub</a>
+        </li>
+      </ul>
+    </footer>
+    <script src="../checklists/js/script.js"></script>
+    <script>
+      /* Checkbox linethrough script */
+      document.addEventListener('DOMContentLoaded', function () {
+        const completepokedexCheckboxes = document.querySelectorAll(
+          '.completepokedex input[type="checkbox"]'
+        );
+        const legendariesCheckboxes = document.querySelectorAll(
+          '.legendaries input[type="checkbox"]'
+        );
+        const eventpokemonCheckboxes = document.querySelectorAll(
+          '.eventpokemon input[type="checkbox"]'
+        );
+        const giftpokemonCheckboxes = document.querySelectorAll(
+          '.giftpokemon input[type="checkbox"]'
+        );
+        const ingametradesCheckboxes = document.querySelectorAll(
+          '.ingametrades input[type="checkbox"]'
+        );
+        const trainercardCheckboxes = document.querySelectorAll(
+          '.trainercard input[type="checkbox"]'
+        );
+        const poketchCheckboxes = document.querySelectorAll(
+          '.poketch input[type="checkbox"]'
+        );
+        const egoodsitemsCheckboxes = document.querySelectorAll(
+          '.egoodsitems input[type="checkbox"]'
+        );
+        const contestcupsCheckboxes = document.querySelectorAll(
+          '.contestcups input[type="checkbox"]'
+        );
+        const crystalsCheckboxes = document.querySelectorAll(
+          '.crystals input[type="checkbox"]'
+        );
+        const trophiesCheckboxes = document.querySelectorAll(
+          '.trophies input[type="checkbox"]'
+        );
+        const otherCheckboxes = document.querySelectorAll(
+          '.other input[type="checkbox"]'
+        );
+        const battletowerCheckboxes = document.querySelectorAll(
+          '.battletower input[type="checkbox"]'
+        );
+        const ribbonsCheckboxes = document.querySelectorAll(
+          '.ribbons input[type="checkbox"]'
+        );
+        const rivalbattleCheckboxes = document.querySelectorAll(
+          '.rivalbattle input[type="checkbox"]'
+        );
+        const battlefrontierCheckboxes = document.querySelectorAll(
+          '.battlefrontier input[type="checkbox"]'
+        );
+        const resortCheckboxes = document.querySelectorAll(
+          '.resort input[type="checkbox"]'
+        );
+        const moreribbonsCheckboxes = document.querySelectorAll(
+          '.moreribbons input[type="checkbox"]'
+        );
+        const ribbonsocietyCheckboxes = document.querySelectorAll(
+          '.ribbonsociety input[type="checkbox"]'
+        );
+        const ribbongiverCheckboxes = document.querySelectorAll(
+          '.ribbongiver input[type="checkbox"]'
+        );
+        const smartnessribbonCheckboxes = document.querySelectorAll(
+          '.smartnessribbon input[type="checkbox"]'
+        );
+        const abilitybattleCheckboxes = document.querySelectorAll(
+          '.abilitybattle input[type="checkbox"]'
+        );
+        const toughribbonCheckboxes = document.querySelectorAll(
+          '.toughribbon input[type="checkbox"]'
+        );
+        const coolnessribbonCheckboxes = document.querySelectorAll(
+          '.coolnessribbon input[type="checkbox"]'
+        );
+        const cutenessribbonCheckboxes = document.querySelectorAll(
+          '.cutenessribbon input[type="checkbox"]'
+        );
+        const beautyribbonCheckboxes = document.querySelectorAll(
+          '.beautyribbon input[type="checkbox"]'
+        );
+        const itemsCheckboxes = document.querySelectorAll(
+          '.items input[type="checkbox"]'
+        );
 
-</div>
-					</div>
-					<div class="ingametrades">
-						<div class="checkbox-item">
-							<span class="title"><label class="text-lg">Complete all In-Game Trades</label></span>
-						</div>
-						<div class="ingametrades-rowcontainer">
-							<div class="ingametrades-leftrow">
-						<div class="checkbox-item">
-							<input id="platinum-checkbox-machop-abra" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Oreburgh City." for="platinum-checkbox-machop-abra">Machop for Abra</label>
-						</div>
-						<div class="checkbox-item">
-							<input id="platinum-checkbox-buizel-chatot" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Eterna Condominiums." for="platinum-checkbox-buizel-chatot">Buizel for Chatot</label>
-						</div>
-						</div>
-						<div class="ingametrades-rightrow">
-						<div class="checkbox-item">
-							<input id="platinum-checkbox-medicham-haunter" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Snowpoint City." for="platinum-checkbox-medicham-haunter">Medicham for Haunter</label>
-						</div>
-						<div class="checkbox-item">
-							<input id="platinum-checkbox-finneon-magikarp" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Route 226." for="platinum-checkbox-finneon-magikarp">Finneon for Magikarp</label>
-						</div>
-						</div>
-						</div>
-					</div>
+        function updateStyle(checkboxes, label) {
+          const allChecked = [...checkboxes].every(
+            (checkbox) => checkbox.checked
+          );
+          label.style.textDecoration = allChecked ? 'line-through' : 'none';
+        }
 
-			</div>
-			<div class="wide-panel more">
-				<label class="panel-label">Post Game</label>
-				<div class="trainercard">
-					<div class="checkbox-item">
-						<span class="title"><label class="text-lg">Black Trainer Card</label></span>
-					</div>
-					<div class="checkbox-item">
-						<input id="platinum-checkbox-pokemon-league" type="checkbox"> <label class="text-sm lg:tooltip" for="platinum-checkbox-pokemon-league">Defeat the Pokemon League Champion.</label>
-					</div>
-					<div class="checkbox-item">
-						<input id="platinum-checkbox-master-contest" type="checkbox"> <label class="text-sm lg:tooltip" for="platinum-checkbox-master-contest">Complete 1 Master Rank Super Contest.</label>
-					</div>
-					<div class="checkbox-item">
-						<input id="platinum-checkbox-underground-capture-flag" type="checkbox"> <label class="text-sm lg:tooltip" for="platinum-checkbox-underground-capture-flag">1 Online Capture the Flag Match.</label>
-					</div>
-					<div class="checkbox-item">
-						<input id="platinum-checkbox-complete-national-dex" type="checkbox"> <label class="text-sm lg:tooltip" for="platinum-checkbox-complete-national-dex">Complete the National Dex.</label>
-					</div>
-					<div class="checkbox-item">
-						<input id="platinum-checkbox-battle-tower-wins" type="checkbox"> <label class="text-sm lg:tooltip" for="platinum-checkbox-battle-tower-wins">Complete 100 Wins in the Battle Tower.</label>
-					</div>
-				</div>
-				<div class="poketch">
-					<div class="checkbox-item">
-						<span class="title"><label class="text-lg">Collect all Poketch Applications</label></span>
-					</div>
-					<div class="poketch-rowcontainer">
-						<div class="poketch-leftrow">
-							<div class="checkbox-item">
-								<input id="platinum-checkbox-digital-clock" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Available from Beginning." for="platinum-checkbox-digital-clock">Digital Clock</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="platinum-checkbox-memo-pad" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Obtained from President of Pokétch Company after obtaining the 1st Badge." for="platinum-checkbox-memo-pad">Memo Pad</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="platinum-checkbox-your-party" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Available from Beginning." for="platinum-checkbox-your-party">Your Party</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="platinum-checkbox-item-finder" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Obtained from Dawn/Lukas in Route 207." for="platinum-checkbox-item-finder">Item Finder</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="platinum-checkbox-breeding-centre" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Obtained in the Daycare Centre in Solaceon Town." for="platinum-checkbox-breeding-centre">Breeding Centre</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="platinum-checkbox-counter" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Obtained from Veilstone Department Store." for="platinum-checkbox-counter">Counter</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="platinum-checkbox-marking-map" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Obtained from President of Poketch Company after obtaining 3rd Badge." for="platinum-checkbox-marking-map">Marking Map</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="platinum-checkbox-coin-toss" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Obtained from Resident in Grand Lake Hotel." for="platinum-checkbox-coin-toss">Coin Toss</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="platinum-checkbox-calendar" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Obtained from resident in Sunyshore City by bringing a Pokémon with a Serious Nature." for="platinum-checkbox-calendar">Calendar</label>
-							</div>
-								
-						</div>
-						<div class="poketch-middlerow">
-								
-							<div class="checkbox-item">
-								<input id="platinum-checkbox-roulette" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Obtained from resident in Sunyshore City by bringing a Pokémon with a Quirky Nature." for="platinum-checkbox-roulette">Roulette</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="platinum-checkbox-kitchen-timer" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Obtained from girl in Pal Park by showing her a Snorlax." for="platinum-checkbox-kitchen-timer">Kitchen Timer</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="platinum-checkbox-matchup-checker" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Obtained through Nintendo Events." for="platinum-checkbox-matchup-checker">Matchup Checker</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="platinum-checkbox-alarm-clock" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Obtained through Nintendo Events." for="platinum-checkbox-alarm-clock">Alarm Clock</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="platinum-checkbox-calculator" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Available from Beginning." for="platinum-checkbox-calculator">Calculator</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="platinum-checkbox-step-counter" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Available from Beginning." for="platinum-checkbox-step-counter">Step Counter</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="platinum-checkbox-happiness-checker" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Obtained from Woman in Eterna Pokémon Center." for="platinum-checkbox-happiness-checker">Happiness Checker</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="platinum-checkbox-berry-checker" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Obtained from Berry Master in Route 208." for="platinum-checkbox-berry-checker">Berry Checker</label>
-							</div>
-							
-								
-						</div>
-						<div class="poketch-rightrow">
-							<div class="checkbox-item">
-								<input id="platinum-checkbox-pokemon-history" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Obtained from a Resident of Solaceon Town." for="platinum-checkbox-pokemon-history">Pokemon History</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="platinum-checkbox-analog-clock" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Obtained from resident in Celestic Town." for="platinum-checkbox-analog-clock">Analog Clock</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="platinum-checkbox-wireless-searcher" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Obtained from President of Poketch Company after obtaining 5th Badge." for="platinum-checkbox-wireless-searcher">Wireless Searcher</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="platinum-checkbox-type-chart" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Obtained from President of Poketch Company after obtaining 7th Badge." for="platinum-checkbox-type-chart">Type Chart</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="platinum-checkbox-drawing-board" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Obtained from resident in Sunyshore City by bringing a Pokémon with a Naive Nature." for="platinum-checkbox-drawing-board">Drawing Board</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="platinum-checkbox-pokeradar-checker" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Obtained from Professor Oak in Pal Park." for="platinum-checkbox-pokeradar-checker">Pokeradar Checker</label>
-							</div> 
-							<div class="checkbox-item">
-								<input id="platinum-checkbox-color-changer" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Obtained from girl in Pal Park by showing her a Kecleon." for="platinum-checkbox-color-changer">Color Changer</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="platinum-checkbox-stopwatch" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Obtained through Nintendo Events." for="platinum-checkbox-stopwatch">Stopwatch</label>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="egoodsitems">
-					<div class="checkbox-item">
-						<span class="title"><label class="text-lg">Collect all Mr. E Goods Items</label></span>
-					</div>
-					<div class="egoodsitems-rowcontainer">
-						<div class="egoodsitems-leftrow">
-							<div class="contestcups">
-								<div class="checkbox-item">
-									<span class="title"><label class="text-lg">Contest Cups</label></span>
-								</div>
-								<div class="checkbox-item">
-									<input id="platinum-checkbox-beauty-cup" type="checkbox"> <img class="pokeicon trophy" src="../images/icons/miscellaneous/gen4/cups/Beauty_Cup_Sprite_DPPt.png"> <label class="text-sm lg:tooltip" for="platinum-checkbox-beauty-cup">Beauty Cup</label>
-								</div>
-								<div class="checkbox-item">
-									<input id="platinum-checkbox-cool-cup" type="checkbox"> <img class="pokeicon trophy" src="../images/icons/miscellaneous/gen4/cups/Cool_Cup_Sprite_DPPt.png"> <label class="text-sm lg:tooltip" for="platinum-checkbox-cool-cup">Cool Cup</label>
-								</div>
-								<div class="checkbox-item">
-									<input id="platinum-checkbox-clever-cup" type="checkbox"> <img class="pokeicon trophy" src="../images/icons/miscellaneous/gen4/cups/Clever_Cup_Sprite_DPPt.png"> <label class="text-sm lg:tooltip" for="platinum-checkbox-clever-cup">Clever Cup</label>
-								</div>
-								<div class="checkbox-item">
-									<input id="platinum-checkbox-tough-cup" type="checkbox"> <img class="pokeicon trophy" src="../images/icons/miscellaneous/gen4/cups/Tough_Cup_Sprite_DPPt.png"> <label class="text-sm lg:tooltip" for="platinum-checkbox-tough-cup">Tough Cup</label>
-								</div>
-								<div class="checkbox-item">
-									<input id="platinum-checkbox-cute-cup" type="checkbox"> <img class="pokeicon trophy" src="../images/icons/miscellaneous/gen4/cups/Cute_Cup_Sprite_DPPt.png"> <label class="text-sm lg:tooltip" for="platinum-checkbox-cute-cup">Cute Cup</label>
-								</div>
-							</div>
-							<div class="other">
-								<div class="checkbox-item">
-									<span class="title"><label class="text-lg">Other</label></span>
-								</div>
-								<div class="checkbox-item">
-									<input id="platinum-checkbox-gym-statue" type="checkbox"> <img class="pokeicon trophy" src="../images/icons/miscellaneous/gen4/trophys/Gym_Statue_Sprite_DPPt.png"> <label class="text-sm lg:tooltip" for="platinum-checkbox-gym-statue">Gym Statue</label>
-								</div>
-								<div class="checkbox-item">
-									<input id="platinum-checkbox-globe" type="checkbox"> <img class="pokeicon trophy" src="../images/icons/miscellaneous/gen4/trophys/Globe_Sprite_DPPt.png"> <label class="text-sm lg:tooltip" for="platinum-checkbox-globe">Globe</label>
-								</div>
-							</div>
-						</div>
-						<div class="egoodsitems-middlerow">
-							<div class="crystals">
-								<div class="checkbox-item">
-									<span class="title"><label class="text-lg">Crystals</label></span>
-								</div>
-								<div class="checkbox-item">
-									<input id="platinum-checkbox-blue-crystal" type="checkbox"> <img class="pokeicon trophy" src="../images/icons/miscellaneous/gen4/crystals/Blue_Crystal_Sprite_DPPt.png"> <label class="text-sm lg:tooltip" for="platinum-checkbox-blue-crystal">Blue Crystal</label>
-								</div>
-								<div class="checkbox-item">
-									<input id="platinum-checkbox-pink-crystal" type="checkbox"> <img class="pokeicon trophy" src="../images/icons/miscellaneous/gen4/crystals/Pink_Crystal_Sprite_DPPt.png"> <label class="text-sm lg:tooltip" for="platinum-checkbox-pink-crystal">Pink Crystal</label>
-								</div>
-								<div class="checkbox-item">
-									<input id="platinum-checkbox-red-crystal" type="checkbox"> <img class="pokeicon trophy" src="../images/icons/miscellaneous/gen4/crystals/Red_Crystal_Sprite_DPPt.png"> <label class="text-sm lg:tooltip" for="platinum-checkbox-red-crystal">Red Crystal</label>
-								</div>
-								<div class="checkbox-item">
-									<input id="platinum-checkbox-yellow-crystal" type="checkbox"> <img class="pokeicon trophy" src="../images/icons/miscellaneous/gen4/crystals/Yellow_Crystal_Sprite_DPPt.png"> <label class="text-sm lg:tooltip" for="platinum-checkbox-yellow-crystal">Yellow Crystal</label>
-								</div>
-							</div>
-								
-								
-						</div>
-						<div class="egoodsitems-rightrow">
-							<div class="trophies">
-								<div class="checkbox-item">
-									<span class="title"><label class="text-lg">Trophies</label></span>
-								</div>
-								<div class="checkbox-item">
-									<input id="platinum-checkbox-bronze-trophy" type="checkbox"> <img class="pokeicon trophy" src="../images/icons/miscellaneous/gen4/trophys/Bronze_Trophy_Sprite_DPPt.png"> <label class="text-sm lg:tooltip" for="platinum-checkbox-bronze-trophy">Bronze Trophy</label>
-								</div>
-								<div class="checkbox-item">
-									<input id="platinum-checkbox-silver-trophy" type="checkbox"> <img class="pokeicon trophy" src="../images/icons/miscellaneous/gen4/trophys/Silver_Trophy_Sprite_DPPt.png"> <label class="text-sm lg:tooltip" for="platinum-checkbox-silver-trophy">Silver Trophy</label>
-								</div>
-								<div class="checkbox-item">
-									<input id="platinum-checkbox-gold-trophy" type="checkbox"> <img class="pokeicon trophy" src="../images/icons/miscellaneous/gen4/trophys/Gold_Trophy_Sprite_DPPt.png"> <label class="text-sm lg:tooltip" for="platinum-checkbox-gold-trophy">Gold Trophy</label>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="resort">
-					<div class="checkbox-item">
-						<span class="title"><label class="text-lg">Collect all Resort Furniture</label></span>
-					</div>
-					<div class="resort-rowcontainer">
-						<div class="resort-leftrow">
-							<div class="checkbox-item">
-								<input id="platinum-checkbox-table" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="From Beginning." for="platinum-checkbox-table">Table</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="platinum-checkbox-big-sofa" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="From Beginning." for="platinum-checkbox-big-sofa">Big Sofa</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="platinum-checkbox-small-sofa" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="From Beginning." for="platinum-checkbox-small-sofa">Small Sofa</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="platinum-checkbox-bed" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="From Beginning." for="platinum-checkbox-bed">Bed</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="platinum-checkbox-night-table" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="From Beginning." for="platinum-checkbox-night-table">Night Table</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="platinum-checkbox-tv" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="From Beginning." for="platinum-checkbox-tv">TV</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="platinum-checkbox-audio-set" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="From Beginning." for="platinum-checkbox-audio-set">AudioSet</label>
-							</div>
-						</div>
-						<div class="resort-middlerow">
-								
-							<div class="checkbox-item">
-								<input id="platinum-checkbox-shelves" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="From Beginning." for="platinum-checkbox-shelves">Shelves</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="platinum-checkbox-racks" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="From Beginning." for="platinum-checkbox-racks">Racks</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="platinum-checkbox-house-plant" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="From Beginning." for="platinum-checkbox-house-plant">House Plant</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="platinum-checkbox-pc-desk" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="From Beginning." for="platinum-checkbox-pc-desk">PC Desk</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="platinum-checkbox-music-box" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Purchase Racks." for="platinum-checkbox-music-box">Music Box</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="platinum-checkbox-pokemon-statue1" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Obtain a Silver Print in the Battle Frontier." for="platinum-checkbox-pokemon-statue1">Pokemon Statue 1</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="platinum-checkbox-pokemon-statue2" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Partake in all 5 facilities of the Battle Frontier." for="platinum-checkbox-pokemon-statue2">Pokemon Statue 2</label>
-							</div>
-								
-						</div>
-						<div class="resort-rightrow">
-								
-							<div class="checkbox-item">
-								<input id="platinum-checkbox-piano" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Defeat the Elite Four 10 times." for="platinum-checkbox-piano">Piano</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="platinum-checkbox-reception-set" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Defeat a total of 50 trainers in the Trainer Café in Battleground." for="platinum-checkbox-reception-set">Reception Set</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="platinum-checkbox-wall-clock" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Plant 50 Berries." for="platinum-checkbox-wall-clock">Wall Clock</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="platinum-checkbox-great-painting" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Hatch 30 Eggs." for="platinum-checkbox-great-painting">Great Painting</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="platinum-checkbox-tea-set" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Purchase Reception Set." for="platinum-checkbox-tea-set">Tea Set</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="platinum-checkbox-chandelier" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Walk a total of 300,000 steps." for="platinum-checkbox-chandelier">Chandelier</label>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			
-		</div>
-		<div class="page-container-right">
-			<div class="wide-panel collectibles">
-				<label class="panel-label">Collectibles</label>
-					<div class="ribbons">
-						<div class="checkbox-item">
-							<span class="title"><label class="text-lg">Contests</label></span>
-						</div>
-						<div class="ribbons-rowcontainer">
-							<div class="ribbons-leftrow">
-								<div class="beautyribbon">
-									<div class="checkbox-item">
-										<span class="title"><label class="text-lg">Beauty Contests</label></span>
-									</div>
-									<div class="checkbox-item">
-										<input id="platinum-checkbox-beauty-normal" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen4/ribbons/beauty-ribbon-sinnoh.png"> <label class="text-sm lg:tooltip" data-tip="Beauty Contest Normal Rank Winner!" for="platinum-checkbox-beauty-normal">Normal</label>
-									</div>
-									<div class="checkbox-item">
-										<input id="platinum-checkbox-beauty-super" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen4/ribbons/beauty-ribbon-great-sinnoh.png"> <label class="text-sm lg:tooltip" data-tip="Beauty Contest Super Rank Winner!" for="platinum-checkbox-beauty-super">Great</label>
-									</div>
-									<div class="checkbox-item">
-										<input id="platinum-checkbox-beauty-hyper" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen4/ribbons/beauty-ribbon-ultra-sinnoh.png"> <label class="text-sm lg:tooltip" data-tip="Beauty Contest Super Rank Winner!" for="platinum-checkbox-beauty-hyper">Ultra</label>
-									</div>
-									<div class="checkbox-item">
-										<input id="platinum-checkbox-beauty-master" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen4/ribbons/beauty-ribbon-master-sinnoh.png"> <label class="text-sm lg:tooltip" data-tip="Beauty Contest Super Rank Winner!" for="platinum-checkbox-beauty-master">Master</label>
-									</div>
-								</div>
-								<div class="toughribbon">
-									<div class="checkbox-item">
-										<span class="title"><label class="text-lg">Tough Contests</label></span>
-									</div>
-									<div class="checkbox-item">
-										<input id="platinum-checkbox-tough-normal" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen4/ribbons/tough-ribbon-sinnoh.png"> <label class="text-sm lg:tooltip" data-tip="Tough Contest Normal Rank Winner!" for="platinum-checkbox-tough-normal">Normal</label>
-									</div>
-									<div class="checkbox-item">
-										<input id="platinum-checkbox-tough-super" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen4/ribbons/tough-ribbon-great-sinnoh.png"> <label class="text-sm lg:tooltip" data-tip="Tough Contest Great Rank Winner!" for="platinum-checkbox-tough-super">Great</label>
-									</div>
-									<div class="checkbox-item">
-										<input id="platinum-checkbox-tough-hyper" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen4/ribbons/tough-ribbon-ultra-sinnoh.png"> <label class="text-sm lg:tooltip" data-tip="Tough Contest Ultra Rank Winner!" for="platinum-checkbox-tough-hyper">Ultra</label>
-									</div>
-									<div class="checkbox-item">
-										<input id="platinum-checkbox-tough-master" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen4/ribbons/tough-ribbon-master-sinnoh.png"> <label class="text-sm lg:tooltip" data-tip="Tough Contest Master Rank Winner!" for="platinum-checkbox-tough-master">Master</label>
-									</div>
-								</div>
-								<div class="smartnessribbon">
-									<div class="checkbox-item">
-										<span class="title"><label class="text-lg">Smartness Contests</label></span>
-									</div>
-									<div class="checkbox-item">
-										<input id="platinum-checkbox-smartness-normal" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen4/ribbons/smart-ribbon-sinnoh.png"> <label class="text-sm lg:tooltip" data-tip="Smart Contest Normal Rank Winner!" for="platinum-checkbox-smartness-normal">Normal</label>
-									</div>
-									<div class="checkbox-item">
-										<input id="platinum-checkbox-smartness-super" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen4/ribbons/smart-ribbon-great-sinnoh.png"> <label class="text-sm lg:tooltip" data-tip="Smart Contest Super Rank Winner!" for="platinum-checkbox-smartness-super">Great</label>
-									</div>
-									<div class="checkbox-item">
-										<input id="platinum-checkbox-smartness-hyper" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen4/ribbons/smart-ribbon-ultra-sinnoh.png"> <label class="text-sm lg:tooltip" data-tip="Smart Contest Hyper Rank Winner!" for="platinum-checkbox-smartness-hyper">Ultra</label>
-									</div>
-									<div class="checkbox-item">
-										<input id="platinum-checkbox-smartness-master" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen4/ribbons/smart-ribbon-master-sinnoh.png"> <label class="text-sm lg:tooltip" data-tip="Smart Contest Master Rank Winner!" for="platinum-checkbox-smartness-master">Master</label>
-									</div>
-								</div>
-								<div class="ribbongiver">
-									<div class="checkbox-item">
-										<span class="title"><label class="text-lg">Ribbon Giver</label></span>
-									</div>
-									<div class="checkbox-item">
-										<input id="platinum-checkbox-alert-ribbon" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen4/ribbons/alert-ribbon.png"> <label class="text-sm lg:tooltip" data-tip="Ribbon for clearing LV50 at the Battle Tower." for="platinum-checkbox-alert-ribbon">Alert</label>
-									</div>
-									<div class="checkbox-item">
-										<input id="platinum-checkbox-shock-ribbon" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen4/ribbons/shock-ribbon.png"> <label class="text-sm lg:tooltip" data-tip="Won for clearing LV100 at the Battle Tower." for="platinum-checkbox-shock-ribbon">Shock</label>
-									</div>
-									<div class="checkbox-item">
-										<input id="platinum-checkbox-downcast-ribbon" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen4/ribbons/downcast-ribbon.png"> <label class="text-sm lg:tooltip" data-tip="Ribbon for being chosen as a super sketch model." for="platinum-checkbox-downcast-ribbon">Downcast</label>
-									</div>
-									<div class="checkbox-item">
-										<input id="platinum-checkbox-careless-ribbon" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen4/ribbons/careless-ribbon.png"> <label class="text-sm lg:tooltip" data-tip="Champion-beating, Hall of Fame Member Ribbon." for="platinum-checkbox-careless-ribbon">Careless</label>
-									</div>
-									<div class="checkbox-item">
-										<input id="platinum-checkbox-relax-ribbon" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen4/ribbons/relax-ribbon.png"> <label class="text-sm lg:tooltip" data-tip="Ribbon awarded for being a hard worker." for="platinum-checkbox-relax-ribbon">Relax</label>
-									</div>
-									<div class="checkbox-item">
-										<input id="platinum-checkbox-snooze-ribbon" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen4/ribbons/snooze-ribbon.png"> <label class="text-sm lg:tooltip" data-tip="Ribbon awarded for being a hard worker." for="platinum-checkbox-snooze-ribbon">Snooze</label>
-									</div>
-									<div class="checkbox-item">
-										<input id="platinum-checkbox-smile-ribbon" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen4/ribbons/smile-ribbon.png"> <label class="text-sm lg:tooltip" data-tip="Ribbon awarded for being a hard worker." for="platinum-checkbox-smile-ribbon">Smile</label>
-									</div>
-								</div>
-								<div class="moreribbons">
-									<div class="checkbox-item">
-										<span class="title"><label class="text-lg">Achievement Ribbons</label></span>
-									</div>
-									<div class="checkbox-item">
-										<input id="platinum-checkbox-footprint-ribbon" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen4/ribbons/footprint-ribbon.png"> <label class="text-sm lg:tooltip" data-tip="A Ribbon awarded to a Pokémon deemed to have a top-quality footprint." for="platinum-checkbox-footprint-ribbon">Footprint</label>
-									</div>
-									<div class="checkbox-item">
-										<input id="platinum-checkbox-champion-ribbon" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen4/ribbons/sinnoh-champion-ribbon.png"> <label class="text-sm lg:tooltip" data-tip="Ribbon awarded for beating the Sinnoh Champion and entering the Hall of Fame." for="platinum-checkbox-champion-ribbon">Champion</label>
-									</div>
-									<div class="checkbox-item">
-										<input id="platinum-checkbox-effort-ribbon" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen3/ribbons/effort-ribbon.png"> <label class="text-sm lg:tooltip" data-tip="Ribbon awarded for being an exceptionally hard worker." for="platinum-checkbox-effort-ribbon">Effort</label>
-									</div>
-								</div>
-							</div>
-							<div class="ribbons-rightrow">
-								<div class="cutenessribbon">
-									<div class="checkbox-item">
-										<span class="title"><label class="text-lg">Cuteness Contests</label></span>
-									</div>
-									<div class="checkbox-item">
-										<input id="platinum-checkbox-cuteness-normal" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen4/ribbons/cute-ribbon-sinnoh.png"> <label class="text-sm lg:tooltip" data-tip="Cute Contest Normal Rank Winner!" for="platinum-checkbox-cuteness-normal">Normal</label>
-									</div>
-									<div class="checkbox-item">
-										<input id="platinum-checkbox-cuteness-super" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen4/ribbons/cute-ribbon-great-sinnoh.png"> <label class="text-sm lg:tooltip" data-tip="Cute Contest Super Rank Winner!" for="platinum-checkbox-cuteness-super">Great</label>
-									</div>
-									<div class="checkbox-item">
-										<input id="platinum-checkbox-cuteness-hyper" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen4/ribbons/cute-ribbon-ultra-sinnoh.png"> <label class="text-sm lg:tooltip" data-tip="Cute Contest Hyper Rank Winner!" for="platinum-checkbox-cuteness-hyper">Ultra</label>
-									</div>
-									<div class="checkbox-item">
-										<input id="platinum-checkbox-cuteness-master" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen4/ribbons/cute-ribbon-master-sinnoh.png"> <label class="text-sm lg:tooltip" data-tip="Cute Contest Master Rank Winner!" for="platinum-checkbox-cuteness-master">Master</label>
-									</div>
-								</div>
-								<div class="coolnessribbon">
-									<div class="checkbox-item">
-										<span class="title"><label class="text-lg">Coolness Contests</label></span>
-									</div>
-									<div class="checkbox-item">
-										<input id="platinum-checkbox-coolness-normal" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen4/ribbons/cool-ribbon-sinnoh.png"> <label class="text-sm lg:tooltip" data-tip="Cool Contest Normal Rank Winner!" for="platinum-checkbox-coolness-normal">Normal</label>
-									</div>
-									<div class="checkbox-item">
-										<input id="platinum-checkbox-coolness-super" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen4/ribbons/cool-ribbon-great-sinnoh.png"> <label class="text-sm lg:tooltip" data-tip="Cool Contest Super Rank Winner!" for="platinum-checkbox-coolness-super">Great</label>
-									</div>
-									<div class="checkbox-item">
-										<input id="platinum-checkbox-coolness-hyper" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen4/ribbons/cool-ribbon-ultra-sinnoh.png"> <label class="text-sm lg:tooltip" data-tip="Cool Contest Hyper Rank Winner!" for="platinum-checkbox-coolness-hyper">Ultra</label>
-									</div>
-									<div class="checkbox-item">
-										<input id="platinum-checkbox-coolness-master" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen4/ribbons/cool-ribbon-master-sinnoh.png"> <label class="text-sm lg:tooltip" data-tip="Cool Contest Master Rank Winner!" for="platinum-checkbox-coolness-master">Master</label>
-									</div>
-								</div>
-								<div class="abilitybattle">
-									<div class="checkbox-item">
-										<span class="title"><label class="text-lg">Ability Battle</label></span>
-									</div>
-									<div class="checkbox-item">
-										<input id="platinum-checkbox-ability-normal" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen4/ribbons/ability-ribbon.png"> <label class="text-sm lg:tooltip" data-tip="A Ribbon awarded for defeating the Tower Tycoon at the Battle Tower." for="platinum-checkbox-ability-normal">Ability</label>
-									</div>
-									<div class="checkbox-item">
-										<input id="platinum-checkbox-ability-great" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen4/ribbons/great-ability-ribbon.png"> <label class="text-sm lg:tooltip" data-tip="A Ribbon awarded for defeating the Tower Tycoon at the Battle Tower." for="platinum-checkbox-ability-great">Great Ability</label>
-									</div>
-									<div class="checkbox-item">
-										<input id="platinum-checkbox-ability-double" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen4/ribbons/double-ability-ribbon.png"> <label class="text-sm lg:tooltip" data-tip="A Ribbon awarded for completing the Battle Tower Double challenge." for="platinum-checkbox-ability-double">Double Ability</label>
-									</div>
-									<div class="checkbox-item">
-										<input id="platinum-checkbox-ability-multi" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen4/ribbons/multi-ability-ribbon.png"> <label class="text-sm lg:tooltip" data-tip="A Ribbon awarded for completing the Battle Tower Multi challenge." for="platinum-checkbox-ability-multi">Multi Ability</label>
-									</div>
-									<div class="checkbox-item">
-										<input id="platinum-checkbox-ability-pair" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen4/ribbons/pair-ability-ribbon.png"> <label class="text-sm lg:tooltip" data-tip="A Ribbon awarded for completing the Battle Tower Link Multi challenge." for="platinum-checkbox-ability-pair">Pair Ability</label>
-									</div>
-									<div class="checkbox-item">
-										<input id="platinum-checkbox-ability-world" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen4/ribbons/world-ability-ribbon.png"> <label class="text-sm lg:tooltip" data-tip="A Ribbon awarded for completing the Battle Tower Link Multi challenge." for="platinum-checkbox-ability-world">World Ability</label>
-									</div>
-								</div>
-								<div class="ribbonsociety">
-									<div class="checkbox-item">
-										<span class="title"><label class="text-lg">Ribbon Society Ribbons</label></span>
-									</div>
-									<div class="checkbox-item">
-										<input id="platinum-checkbox-gorgeous-ribbon" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen4/ribbons/gorgeous-ribbon.png"> <label class="text-sm lg:tooltip" data-tip="Buy it for 10,000 at the Resort Area." for="platinum-checkbox-gorgeous-ribbon">Gorgeous</label>
-									</div>
-									<div class="checkbox-item">
-										<input id="platinum-checkbox-royal-ribbon" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen4/ribbons/royal-ribbon.png"> <label class="text-sm lg:tooltip" data-tip="Buy it for 100,000 at the Resort Area." for="platinum-checkbox-royal-ribbon">Royal</label>
-									</div>
-									<div class="checkbox-item">
-										<input id="platinum-checkbox-royal-gorgeous-ribbon" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen4/ribbons/gorgeous-royal-ribbon.png"> <label class="text-sm lg:tooltip" data-tip="Buy it for 10,000 at the Resort Area." for="platinum-checkbox-royal-gorgeous-ribbon">Royal-Gorgeous</label>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="items">
-						<div class="checkbox-item">
-							<span class="title"><label class="text-lg">Items</label></span>
-						</div>
-						<div class="checkbox-item">
-							<input id="xy-checkbox-alltms" type="checkbox"> <img class="pokeicon item" src="../images/icons/inventory/tms/normal.png"> <label class="text-sm lg:tooltip" data-tip="Find all TM's." for="xy-checkbox-alltms">Collect all TM's</label>
-						</div>
-	
-					</div>
-			</div>
-			<div class="wide-panel more">
-				<label class="panel-label">Battles</label>
-				<div class="battlefrontier">
-					<div class="checkbox-item">
-						<span class="title"><label class="text-lg">Collect all Battle Frontier Prints</label></span>
-					</div>
-					<div class="battlefrontier-rowcontainer">
-						<div class="battlefrontier-leftrow">
-							<div class="checkbox-item">
-								<input id="platinum-checkbox-palmer" type="checkbox"> <img class="pokeicon npc" src="../images/icons/miscellaneous/gen4/Palmer_OD.png">  <label class="text-sm lg:tooltip" for="platinum-checkbox-palmer">Tower Tycoon Palmer</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="platinum-checkbox-thorton" type="checkbox"> <img class="pokeicon npc" src="../images/icons/miscellaneous/gen4/Thorton_OD.png"> <label class="text-sm lg:tooltip" for="platinum-checkbox-thorton">Factory Head Thorton</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="platinum-checkbox-dahlia" type="checkbox"> <img class="pokeicon npc" src="../images/icons/miscellaneous/gen4/Dahlia_OD.png">  <label class="text-sm lg:tooltip" for="platinum-checkbox-dahlia">Arcade Star Dahlia</label>
-							</div>
-						</div>
-						<div class="battlefrontier-rightrow">
-							<div class="checkbox-item">
-								<input id="platinum-checkbox-darach" type="checkbox"> <img class="pokeicon npc" src="../images/icons/miscellaneous/gen4/Darach_OD.png"> <img class="pokeicon npc" src="../images/icons/miscellaneous/gen4/Caitlin_IV_OD.png"> <label class="text-sm lg:tooltip" for="platinum-checkbox-darach">Castle Valet Darach & Lady Caitlin</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="platinum-checkbox-argentha" type="checkbox"> <img class="pokeicon npc" src="../images/icons/miscellaneous/gen4/Argenta_OD.png"> <label class="text-sm lg:tooltip" for="platinum-checkbox-argentha">Hall Matron Argentha</label>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="rivalbattle">
-					<div class="checkbox-item">
-						<span class="title"><label class="text-lg">Complete the Rival Battle phases</label></span>
-					</div>
-					<div class="checkbox-item">
-						<input id="platinum-checkbox-lv65" type="checkbox"> <label class="text-sm lg:tooltip" for="platinum-checkbox-lv65">LV. 65</label>
-					</div>
-					<div class="checkbox-item">
-						<input id="platinum-checkbox-lv75" type="checkbox"> <label class="text-sm lg:tooltip" for="platinum-checkbox-lv75">LV. 75</label>
-					</div>
-					<div class="checkbox-item">
-						<input id="platinum-checkbox-lv85" type="checkbox"> <label class="text-sm lg:tooltip" for="platinum-checkbox-lv85">LV. 85</label>
-					</div>
-				</div>
-				<div class="battletower">
-					<div class="checkbox-item">
-						<span class="title"><label class="text-lg">Battle Tower Streaks</label></span>
-					</div>
-					<div class="checkbox-item">
-						<input id="platinum-checkbox-single-battles" type="checkbox"> <label class="text-sm lg:tooltip" for="platinum-checkbox-single-battles">Single Battles</label>
-					</div>
-					<div class="checkbox-item">
-						<input id="platinum-checkbox-double-battles" type="checkbox"> <label class="text-sm lg:tooltip" for="platinum-checkbox-double-battles">Double Battles</label>
-					</div>
-				</div>
-			</div>
-		
-		</div>
-	</div>
-	<footer>
-		<ul>
-			<li>
-				<a href="../index.html">Progression Dex</a>
-			</li>
-			<li>
-				<a href="#">Twitter</a>
-			</li>
-			<li>
-				<a href="https://github.com/yasingunaydiin">GitHub</a>
-			</li>
-		</ul>
-	</footer>
-	<script src="../checklists/js/script.js">
-	</script> 
-	<script>
-	   /* Checkbox linethrough script */
-	   document.addEventListener('DOMContentLoaded', function() {
-	      const completepokedexCheckboxes = document.querySelectorAll('.completepokedex input[type="checkbox"]');
-	      const legendariesCheckboxes = document.querySelectorAll('.legendaries input[type="checkbox"]');
-	      const eventpokemonCheckboxes = document.querySelectorAll('.eventpokemon input[type="checkbox"]');
-	      const giftpokemonCheckboxes = document.querySelectorAll('.giftpokemon input[type="checkbox"]');
-	      const ingametradesCheckboxes = document.querySelectorAll('.ingametrades input[type="checkbox"]');
-	      const trainercardCheckboxes = document.querySelectorAll('.trainercard input[type="checkbox"]');
-	      const poketchCheckboxes = document.querySelectorAll('.poketch input[type="checkbox"]');
-	      const egoodsitemsCheckboxes = document.querySelectorAll('.egoodsitems input[type="checkbox"]');
-	      const contestcupsCheckboxes = document.querySelectorAll('.contestcups input[type="checkbox"]');
-	      const crystalsCheckboxes = document.querySelectorAll('.crystals input[type="checkbox"]');
-	      const trophiesCheckboxes = document.querySelectorAll('.trophies input[type="checkbox"]');
-	      const otherCheckboxes = document.querySelectorAll('.other input[type="checkbox"]');
-	      const battletowerCheckboxes = document.querySelectorAll('.battletower input[type="checkbox"]');
-	      const ribbonsCheckboxes = document.querySelectorAll('.ribbons input[type="checkbox"]');
-	      const rivalbattleCheckboxes = document.querySelectorAll('.rivalbattle input[type="checkbox"]');
-	      const battlefrontierCheckboxes = document.querySelectorAll('.battlefrontier input[type="checkbox"]');
-	      const resortCheckboxes = document.querySelectorAll('.resort input[type="checkbox"]');
-	      const moreribbonsCheckboxes = document.querySelectorAll('.moreribbons input[type="checkbox"]');
-	      const ribbonsocietyCheckboxes = document.querySelectorAll('.ribbonsociety input[type="checkbox"]');
-	      const ribbongiverCheckboxes = document.querySelectorAll('.ribbongiver input[type="checkbox"]');
-	      const smartnessribbonCheckboxes = document.querySelectorAll('.smartnessribbon input[type="checkbox"]');
-	      const abilitybattleCheckboxes = document.querySelectorAll('.abilitybattle input[type="checkbox"]');
-	      const toughribbonCheckboxes = document.querySelectorAll('.toughribbon input[type="checkbox"]');
-	      const coolnessribbonCheckboxes = document.querySelectorAll('.coolnessribbon input[type="checkbox"]');
-	      const cutenessribbonCheckboxes = document.querySelectorAll('.cutenessribbon input[type="checkbox"]');
-	      const beautyribbonCheckboxes = document.querySelectorAll('.beautyribbon input[type="checkbox"]');
-	      const itemsCheckboxes = document.querySelectorAll('.items input[type="checkbox"]');
-
-
-
-	      function updateStyle(checkboxes, label) {
-	          const allChecked = [...checkboxes].every(checkbox => checkbox.checked);
-	          label.style.textDecoration = allChecked ? 'line-through' : 'none';
-	      }
-
-	      function initializeCheckboxes(checkboxes, label) {
-	          checkboxes.forEach(checkbox => {
-	              checkbox.addEventListener('change', function() {
-	                  updateStyle(checkboxes, label);
-	              });
-	          });
-	          updateStyle(checkboxes, label);
-	      }
-	      initializeCheckboxes(completepokedexCheckboxes, document.querySelector('.completepokedex .title label'));
-	      initializeCheckboxes(legendariesCheckboxes, document.querySelector('.legendaries .title label'));
-	      initializeCheckboxes(eventpokemonCheckboxes, document.querySelector('.eventpokemon .title label'));
-	      initializeCheckboxes(giftpokemonCheckboxes, document.querySelector('.giftpokemon .title label'));
-	      initializeCheckboxes(ingametradesCheckboxes, document.querySelector('.ingametrades .title label'));
-	      initializeCheckboxes(trainercardCheckboxes, document.querySelector('.trainercard .title label'));
-	      initializeCheckboxes(poketchCheckboxes, document.querySelector('.poketch .title label'));
-	      initializeCheckboxes(egoodsitemsCheckboxes, document.querySelector('.egoodsitems .title label'));
-	      initializeCheckboxes(contestcupsCheckboxes, document.querySelector('.contestcups .title label'));
-	      initializeCheckboxes(crystalsCheckboxes, document.querySelector('.crystals .title label'));
-	      initializeCheckboxes(trophiesCheckboxes, document.querySelector('.trophies .title label'));
-	      initializeCheckboxes(otherCheckboxes, document.querySelector('.other .title label'));
-	      initializeCheckboxes(battletowerCheckboxes, document.querySelector('.battletower .title label'));
-	      initializeCheckboxes(ribbonsCheckboxes, document.querySelector('.ribbons .title label'));
-	      initializeCheckboxes(rivalbattleCheckboxes, document.querySelector('.rivalbattle .title label'));
-	      initializeCheckboxes(battlefrontierCheckboxes, document.querySelector('.battlefrontier .title label'));
-	      initializeCheckboxes(resortCheckboxes, document.querySelector('.resort .title label'));
-	      initializeCheckboxes(moreribbonsCheckboxes, document.querySelector('.moreribbons .title label'));
-	      initializeCheckboxes(ribbonsocietyCheckboxes, document.querySelector('.ribbonsociety .title label'));
-	      initializeCheckboxes(ribbongiverCheckboxes, document.querySelector('.ribbongiver .title label'));
-	      initializeCheckboxes(smartnessribbonCheckboxes, document.querySelector('.smartnessribbon .title label'));
-	      initializeCheckboxes(abilitybattleCheckboxes, document.querySelector('.abilitybattle .title label'));
-	      initializeCheckboxes(toughribbonCheckboxes, document.querySelector('.toughribbon .title label'));
-	      initializeCheckboxes(coolnessribbonCheckboxes, document.querySelector('.coolnessribbon .title label'));
-	      initializeCheckboxes(cutenessribbonCheckboxes, document.querySelector('.cutenessribbon .title label'));
-	      initializeCheckboxes(beautyribbonCheckboxes, document.querySelector('.beautyribbon .title label'));
-	      initializeCheckboxes(itemsCheckboxes, document.querySelector('.items .title label'));
-
-	   });
-	</script>
-</body>
+        function initializeCheckboxes(checkboxes, label) {
+          checkboxes.forEach((checkbox) => {
+            checkbox.addEventListener('change', function () {
+              updateStyle(checkboxes, label);
+            });
+          });
+          updateStyle(checkboxes, label);
+        }
+        initializeCheckboxes(
+          completepokedexCheckboxes,
+          document.querySelector('.completepokedex .title label')
+        );
+        initializeCheckboxes(
+          legendariesCheckboxes,
+          document.querySelector('.legendaries .title label')
+        );
+        initializeCheckboxes(
+          eventpokemonCheckboxes,
+          document.querySelector('.eventpokemon .title label')
+        );
+        initializeCheckboxes(
+          giftpokemonCheckboxes,
+          document.querySelector('.giftpokemon .title label')
+        );
+        initializeCheckboxes(
+          ingametradesCheckboxes,
+          document.querySelector('.ingametrades .title label')
+        );
+        initializeCheckboxes(
+          trainercardCheckboxes,
+          document.querySelector('.trainercard .title label')
+        );
+        initializeCheckboxes(
+          poketchCheckboxes,
+          document.querySelector('.poketch .title label')
+        );
+        initializeCheckboxes(
+          egoodsitemsCheckboxes,
+          document.querySelector('.egoodsitems .title label')
+        );
+        initializeCheckboxes(
+          contestcupsCheckboxes,
+          document.querySelector('.contestcups .title label')
+        );
+        initializeCheckboxes(
+          crystalsCheckboxes,
+          document.querySelector('.crystals .title label')
+        );
+        initializeCheckboxes(
+          trophiesCheckboxes,
+          document.querySelector('.trophies .title label')
+        );
+        initializeCheckboxes(
+          otherCheckboxes,
+          document.querySelector('.other .title label')
+        );
+        initializeCheckboxes(
+          battletowerCheckboxes,
+          document.querySelector('.battletower .title label')
+        );
+        initializeCheckboxes(
+          ribbonsCheckboxes,
+          document.querySelector('.ribbons .title label')
+        );
+        initializeCheckboxes(
+          rivalbattleCheckboxes,
+          document.querySelector('.rivalbattle .title label')
+        );
+        initializeCheckboxes(
+          battlefrontierCheckboxes,
+          document.querySelector('.battlefrontier .title label')
+        );
+        initializeCheckboxes(
+          resortCheckboxes,
+          document.querySelector('.resort .title label')
+        );
+        initializeCheckboxes(
+          moreribbonsCheckboxes,
+          document.querySelector('.moreribbons .title label')
+        );
+        initializeCheckboxes(
+          ribbonsocietyCheckboxes,
+          document.querySelector('.ribbonsociety .title label')
+        );
+        initializeCheckboxes(
+          ribbongiverCheckboxes,
+          document.querySelector('.ribbongiver .title label')
+        );
+        initializeCheckboxes(
+          smartnessribbonCheckboxes,
+          document.querySelector('.smartnessribbon .title label')
+        );
+        initializeCheckboxes(
+          abilitybattleCheckboxes,
+          document.querySelector('.abilitybattle .title label')
+        );
+        initializeCheckboxes(
+          toughribbonCheckboxes,
+          document.querySelector('.toughribbon .title label')
+        );
+        initializeCheckboxes(
+          coolnessribbonCheckboxes,
+          document.querySelector('.coolnessribbon .title label')
+        );
+        initializeCheckboxes(
+          cutenessribbonCheckboxes,
+          document.querySelector('.cutenessribbon .title label')
+        );
+        initializeCheckboxes(
+          beautyribbonCheckboxes,
+          document.querySelector('.beautyribbon .title label')
+        );
+        initializeCheckboxes(
+          itemsCheckboxes,
+          document.querySelector('.items .title label')
+        );
+      });
+    </script>
+  </body>
 </html>

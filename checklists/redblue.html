@@ -1,250 +1,556 @@
 <DOCTYPE html>
- <html lang="en">
- <head>
- 	<meta charset="UTF-8">
- 	<meta content="width=device-width, initial-scale=1.0" name="viewport">
- 	<title>Progression Dex | Red and Blue</title>
- 	<link href="../checklists/css/redblue.css" rel="stylesheet">
- 	<link href="../output.css" rel="stylesheet">
- 	<link href="../images/icons/favicontab.ico" rel="icon" type="image/x-icon">
- 	<link href="../images/icons/favicontab.ico" rel="shortcut icon" type="image/x-icon">
-	 <meta name="description" content="A tool for tracking your progression in Pokemon games. Easily choose between games and track your game progress.">
-	 <meta name="keywords" content="pokemon, checklist, pokedex, progress, completion, speedrun, checklist, check list, locations, characters, games, game">
- </head>
- <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4PDLXC895H"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+      <title>Progression Dex | Red and Blue</title>
+      <link href="../checklists/css/redblue.css" rel="stylesheet" />
+      <link href="../output.css" rel="stylesheet" />
+      <link
+        href="../images/icons/favicontab.ico"
+        rel="icon"
+        type="image/x-icon"
+      />
+      <link
+        href="../images/icons/favicontab.ico"
+        rel="shortcut icon"
+        type="image/x-icon"
+      />
+      <meta
+        name="description"
+        content="A tool for tracking your progression in Pokemon games. Easily choose between games and track your game progress."
+      />
+      <meta
+        name="keywords"
+        content="pokemon, checklist, pokedex, progress, completion, speedrun, checklist, check list, locations, characters, games, game"
+      />
+    </head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-4PDLXC895H"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
 
-  gtag('config', 'G-4PDLXC895H');
-</script>
- <body>
- 	<div class="navbar bg-white rounded-3xl shadow-lg mt-2 fixed top-0 flex items-center justify-between" style="width: 95%;  z-index: 1000; left: 50%; transform: translateX(-50%);">
- 		<div class="flex items-center gap-4">
- 		  <a href="../index.html" class="btn btn-ghost text-2xl"><span class="title">Progression Dex |</span></a>
- 		  <div class="flex items-center gap-2">
- 			<img id="red-logo" src="../images/logos/red-logo.webp" class="w-20">
- 			<img id="blue-logo" src="../images/logos/blue-logo.webp" class="w-20">
- 		  </div>
- 		</div>
+      gtag('config', 'G-4PDLXC895H');
+    </script>
+    <body>
+      <div
+        class="navbar bg-white rounded-3xl shadow-lg mt-2 fixed top-0 flex items-center justify-between"
+        style="
+          width: 95%;
+          z-index: 1000;
+          left: 50%;
+          transform: translateX(-50%);
+        "
+      >
+        <div class="flex items-center gap-4">
+          <a href="../index.html" class="btn btn-ghost text-2xl"
+            ><span class="title">Progression Dex |</span></a
+          >
+          <div class="flex items-center gap-2">
+            <img
+              alt="Logo of Pokemon Red"
+              id="red-logo"
+              src="../images/logos/red-logo.webp"
+              class="w-20"
+            />
+            <img
+              alt="Logo of Pokemon Blue"
+              id="blue-logo"
+              src="../images/logos/blue-logo.webp"
+              class="w-20"
+            />
+          </div>
+        </div>
+      </div>
 
- 	  </div>
+      <div class="page-container" data-game="redblue">
+        <div class="wide-panel pokedex">
+          <label class="panel-label">Pokédex</label>
+          <div class="completepokedex">
+            <div class="checkbox-item">
+              <span class="title"
+                ><label class="text-lg">Complete the Kanto Pokédex</label></span
+              >
+            </div>
+            <div class="checkbox-item">
+              <input id="redblue-checkbox-trade-exclusives" type="checkbox" />
+              <label
+                class="text-sm lg:tooltip"
+                data-tip="Trade them from Red/Blue."
+                for="redblue-checkbox-trade-exclusives"
+                >Trade all version exclusives</label
+              >
+            </div>
+            <div class="checkbox-item">
+              <input id="redblue-checkbox-get-diploma" type="checkbox" />
+              <label
+                class="text-sm lg:tooltip"
+                data-tip="After catching all Pokémon, go to the Game Freak Headquarters in Celadon Condominiums and speak with the lead developer."
+                for="redblue-checkbox-get-diploma"
+                >Get Diploma</label
+              >
+            </div>
+          </div>
+          <div class="legendaries">
+            <div class="checkbox-item">
+              <span class="title"
+                ><label class="text-lg">Catch all Legendaries</label></span
+              >
+            </div>
+            <div class="legendaries-rowcontainer">
+              <div class="legendaries-leftrow">
+                <div class="checkbox-item">
+                  <input id="redblue-checkbox-zapdos" type="checkbox" />
+                  <img
+                    alt="Icon of Zapdos"
+                    class="pokeicon small"
+                    src="../images/icons/pokemon/gen1/redblue/zapdos-color.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Zapdos appears at the end of the Power Plant in the room with the exit."
+                    for="redblue-checkbox-zapdos"
+                    >Catch Zapdos</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="redblue-checkbox-moltres" type="checkbox" />
+                  <img
+                    alt="Icon of Moltres"
+                    src="class"
+                    ="pokeicon small"
+                    src="../images/icons/pokemon/gen1/redblue/moltres-color.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Moltres appears in the middle of the Victory Road."
+                    for="redblue-checkbox-moltres"
+                    >Catch Moltres</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="redblue-checkbox-articuno" type="checkbox" />
+                  <img
+                    alt="Icon of Articuno"
+                    src="class"
+                    ="pokeicon small"
+                    src="../images/icons/pokemon/gen1/redblue/articuno-color.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Articuno appears at the bottom of Seafoam Islands."
+                    for="redblue-checkbox-articuno"
+                    >Catch Articuno</label
+                  >
+                </div>
+              </div>
+              <div class="legendaries-rightrow">
+                <div class="checkbox-item">
+                  <input id="redblue-checkbox-mewtwo" type="checkbox" />
+                  <img
+                    alt="Icon of Mewtwo"
+                    src="class"
+                    ="pokeicon small"
+                    src="../images/icons/pokemon/gen1/redblue/mewtwo-color.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Mewtwo appears in Cerulean Cave."
+                    for="redblue-checkbox-mewtwo"
+                    >Catch Mewtwo</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="redblue-checkbox-mew" type="checkbox" />
+                  <img
+                    alt="Icon of Mew"
+                    src="class"
+                    ="pokeicon small"
+                    src="../images/icons/pokemon/gen1/redblue/mew-color.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Under the truck."
+                    for="redblue-checkbox-mew"
+                    >Catch Mew</label
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="giftpokemon">
+            <div class="checkbox-item">
+              <span class="title"
+                ><label class="text-lg"
+                  >Obtain all In-Game Gift Pokémon</label
+                ></span
+              >
+            </div>
+            <div class="giftpokemon-rowcontainer">
+              <div class="giftpokemon-leftrow">
+                <div class="checkbox-item">
+                  <input id="redblue-checkbox-hitmonlee" type="checkbox" />
+                  <img
+                    alt="Icon of Hitmonlee"
+                    src="class"
+                    ="pokeicon small"
+                    src="../images/icons/pokemon/gen1/redblue/hitmonlee-color.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Received at the Fighting Dojo gym in Saffron City upon defeating the Karate King."
+                    for="redblue-checkbox-hitmonlee"
+                    >Obtain Hitmonlee</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="redblue-checkbox-hitmonchan" type="checkbox" />
+                  <img
+                    alt="Icon of Hitmonchan"
+                    src="class"
+                    ="pokeicon small"
+                    src="../images/icons/pokemon/gen1/redblue/hitmonchan-color.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Received at the Fighting Dojo gym in Saffron City upon defeating the Karate King."
+                    for="redblue-checkbox-hitmonchan"
+                    >Obtain Hitmonchan</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="redblue-checkbox-lapras" type="checkbox" />
+                  <img
+                    alt="Icon of Lapras"
+                    src="class"
+                    ="pokeicon small"
+                    src="../images/icons/pokemon/gen1/redblue/lapras-color.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Given at Saffron City in the Siph Co. room with your rival."
+                    for="redblue-checkbox-lapras"
+                    >Obtain Lapras</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="redblue-checkbox-eevee" type="checkbox" />
+                  <img
+                    alt="Icon of Eevee"
+                    src="class"
+                    ="pokeicon small"
+                    src="../images/icons/pokemon/gen1/redblue/eevee-color.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="At the roof of the Celadon Mansion."
+                    for="redblue-checkbox-eevee"
+                    >Obtain Eevee</label
+                  >
+                </div>
+              </div>
+              <div class="giftpokemon-rightrow">
+                <div class="checkbox-item">
+                  <input id="redblue-checkbox-omanyte" type="checkbox" />
+                  <img
+                    alt="Icon of Omanyte"
+                    src="class"
+                    ="pokeicon small"
+                    src="../images/icons/pokemon/gen1/redblue/omanyte-color.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="At the end of Mt. Moon."
+                    for="redblue-checkbox-omanyte"
+                    >Obtain Omanyte</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="redblue-checkbox-kabuto" type="checkbox" />
+                  <img
+                    alt="Icon of Kabuto"
+                    src="class"
+                    ="pokeicon small"
+                    src="../images/icons/pokemon/gen1/redblue/kabuto-color.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="At the end of Mt. Moon."
+                    for="redblue-checkbox-kabuto"
+                    >Obtain Kabuto</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="redblue-checkbox-aerodactyl" type="checkbox" />
+                  <img
+                    alt="Icon of Aerodactyl"
+                    src="class"
+                    ="pokeicon small"
+                    src="../images/icons/pokemon/gen1/redblue/aerodactyl-color.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="You need the Old Amber, which is found in the Pewter City museum."
+                    for="redblue-checkbox-aerodactyl"
+                    >Obtain Aerodactyl</label
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ingametrades">
+            <div class="checkbox-item">
+              <span class="title"
+                ><label class="text-lg"
+                  >Complete all In-Game Trades</label
+                ></span
+              >
+            </div>
+            <div class="ingametrades-rowcontainer">
+              <div class="ingametrades-leftrow">
+                <div class="checkbox-item">
+                  <input id="redblue-checkbox-abra-mr-mime" type="checkbox" />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Route 2. Outside Diglett's Cave."
+                    for="redblue-checkbox-abra-mr-mime"
+                    >Trade Abra for Mr. Mime</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="redblue-checkbox-nidoran-m-f" type="checkbox" />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Route 5. Underground tunnel, north exit."
+                    for="redblue-checkbox-nidoran-m-f"
+                    >Trade Nidoran M for Nidoran F</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="redblue-checkbox-nidorino-nidorina"
+                    type="checkbox"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Route 11. Inside the gatehouse."
+                    for="redblue-checkbox-nidorino-nidorina"
+                    >Trade Nidorino for Nidorina</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="redblue-checkbox-slowbro-lickitung"
+                    type="checkbox"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Route 18. Inside the gatehouse."
+                    for="redblue-checkbox-slowbro-lickitung"
+                    >Trade Slowbro for Lickitung</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="redblue-checkbox-poliwhirl-jynx" type="checkbox" />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Cerulean City. The house next to the Pokémon Center."
+                    for="redblue-checkbox-poliwhirl-jynx"
+                    >Trade Poliwhirl for Jynx</label
+                  >
+                </div>
+              </div>
+              <div class="ingametrades-rightrow">
+                <div class="checkbox-item">
+                  <input
+                    id="redblue-checkbox-spearow-farfetchd"
+                    type="checkbox"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Vermillion City."
+                    for="redblue-checkbox-spearow-farfetchd"
+                    >Trade Spearow for Farfetch'd</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="redblue-checkbox-ponyta-seel" type="checkbox" />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Cinnabar Island. Inside the Cinnabar laboratory."
+                    for="redblue-checkbox-ponyta-seel"
+                    >Trade Ponyta for Seel</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="redblue-checkbox-raichu-electrode"
+                    type="checkbox"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Cinnabar Island. Inside the Cinnabar laboratory."
+                    for="redblue-checkbox-raichu-electrode"
+                    >Trade Raichu for Electrode</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="redblue-checkbox-venonat-tangela"
+                    type="checkbox"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Cinnabar Island. Inside the Cinnabar laboratory."
+                    for="redblue-checkbox-venonat-tangela"
+                    >Trade Venonat for Tangela</label
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="items">
+            <div class="checkbox-item">
+              <span class="title"><label class="text-lg">Items</label></span>
+            </div>
+            <div class="checkbox-item">
+              <input id="redblue-checkbox-alltms" type="checkbox" />
+              <img
+                alt="Icon of TM"
+                src="class"
+                ="pokeicon item"
+                src="../images/icons/inventory/tms/normal.png"
+              />
+              <label
+                class="text-sm lg:tooltip"
+                data-tip="Find all TM's."
+                for="redblue-checkbox-alltms"
+                >Collect all TM's</label
+              >
+            </div>
+          </div>
+        </div>
+      </div>
 
- 	<div class="page-container" data-game="redblue">
+      <footer class="text-sm">
+        <ul>
+          <li>
+            <a href="../index.html">Progression Dex</a>
+          </li>
+          <li>
+            <a href="#">Twitter</a>
+          </li>
+          <li>
+            <a href="https://github.com/yasingunaydiin">GitHub</a>
+          </li>
+        </ul>
+      </footer>
+      <script src="../checklists/js/script.js"></script>
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          var redLogo = document.getElementById('red-logo');
+          var blueLogo = document.getElementById('blue-logo');
 
+          var headerTitle = document.querySelector('.title');
+          var widePanels = document.querySelectorAll('.wide-panel');
+          var footer = document.querySelector('footer');
+          var titleText = document.querySelectorAll('.panel-label');
+          var backgroundIcons = document.querySelector('body');
 
+          redLogo.addEventListener('click', function () {
+            headerTitle.style.color = '#C23A22';
+            footer.style.background = '#C23A22';
+            backgroundIcons.style.backgroundImage =
+              'url(../../images/patterns/pattern-red.png)';
 
+            titleText.forEach(function (text) {
+              text.style.color = '#C23A22';
+            });
 
- 		<div class="wide-panel pokedex">
- 			<label class="panel-label">Pokédex</label>
- 			<div class="completepokedex">
- 				<div class="checkbox-item">
- 					<span class="title"><label class="text-lg">Complete the Kanto Pokédex</label></span>
- 				</div>
- 				<div class="checkbox-item">
- 					<input id="redblue-checkbox-trade-exclusives" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Trade them from Red/Blue." for="redblue-checkbox-trade-exclusives">Trade all version exclusives</label>
- 				</div>
- 				<div class="checkbox-item">
- 					<input id="redblue-checkbox-get-diploma" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="After catching all Pokémon, go to the Game Freak Headquarters in Celadon Condominiums and speak with the lead developer." for="redblue-checkbox-get-diploma">Get Diploma</label>
- 				</div>
- 			</div>
- 			<div class="legendaries">
- 				<div class="checkbox-item">
- 					<span class="title"><label class="text-lg">Catch all Legendaries</label></span>
- 				</div>
- 				<div class="legendaries-rowcontainer">
- 					<div class="legendaries-leftrow">
- 						<div class="checkbox-item">
- 							<input id="redblue-checkbox-zapdos" type="checkbox"> <img class="pokeicon small" src="../images/icons/pokemon/gen1/redblue/zapdos-color.png"> <label class="text-sm lg:tooltip" data-tip="Zapdos appears at the end of the Power Plant in the room with the exit." for="redblue-checkbox-zapdos">Catch Zapdos</label>
- 						</div>
- 						<div class="checkbox-item">
- 							<input id="redblue-checkbox-moltres" type="checkbox"> <img class="pokeicon small" src="../images/icons/pokemon/gen1/redblue/moltres-color.png"> <label class="text-sm lg:tooltip" data-tip="Moltres appears in the middle of the Victory Road." for="redblue-checkbox-moltres">Catch Moltres</label>
- 						</div>
- 						<div class="checkbox-item">
- 							<input id="redblue-checkbox-articuno" type="checkbox"> <img class="pokeicon small" src="../images/icons/pokemon/gen1/redblue/articuno-color.png"> <label class="text-sm lg:tooltip" data-tip="Articuno appears at the bottom of Seafoam Islands." for="redblue-checkbox-articuno">Catch Articuno</label>
- 						</div>
- 					</div>
- 					<div class="legendaries-rightrow">
- 						<div class="checkbox-item">
- 							<input id="redblue-checkbox-mewtwo" type="checkbox"> <img class="pokeicon small" src="../images/icons/pokemon/gen1/redblue/mewtwo-color.png"> <label class="text-sm lg:tooltip" data-tip="Mewtwo appears in Cerulean Cave." for="redblue-checkbox-mewtwo">Catch Mewtwo</label>
- 						</div>
- 						<div class="checkbox-item">
- 							<input id="redblue-checkbox-mew" type="checkbox"> <img class="pokeicon small" src="../images/icons/pokemon/gen1/redblue/mew-color.png"> <label class="text-sm lg:tooltip" data-tip="A quick Google research shows that Mew is only catchable through glitches." for="redblue-checkbox-mew">Catch Mew</label>
- 						</div>
- 					</div>
- 				</div>
- 			</div>
- 			<div class="giftpokemon">
- 				<div class="checkbox-item">
- 					<span class="title"><label class="text-lg">Obtain all In-Game Gift Pokémon</label></span>
- 				</div>
- 				<div class="giftpokemon-rowcontainer">
- 					<div class="giftpokemon-leftrow">
- 						<div class="checkbox-item">
- 							<input id="redblue-checkbox-hitmonlee" type="checkbox"> <img class="pokeicon small" src="../images/icons/pokemon/gen1/redblue/hitmonlee-color.png"> <label class="text-sm lg:tooltip" data-tip="Received at the Fighting Dojo gym in Saffron City upon defeating the Karate King." for="redblue-checkbox-hitmonlee">Obtain Hitmonlee</label>
- 						</div>
- 						<div class="checkbox-item">
- 							<input id="redblue-checkbox-hitmonchan" type="checkbox"> <img class="pokeicon small" src="../images/icons/pokemon/gen1/redblue/hitmonchan-color.png"> <label class="text-sm lg:tooltip" data-tip="Received at the Fighting Dojo gym in Saffron City upon defeating the Karate King." for="redblue-checkbox-hitmonchan">Obtain Hitmonchan</label>
- 						</div>
- 						<div class="checkbox-item">
- 							<input id="redblue-checkbox-lapras" type="checkbox"> <img class="pokeicon small" src="../images/icons/pokemon/gen1/redblue/lapras-color.png"> <label class="text-sm lg:tooltip" data-tip="Given at Saffron City in the Siph Co. room with your rival." for="redblue-checkbox-lapras">Obtain Lapras</label>
- 						</div>
- 						<div class="checkbox-item">
- 							<input id="redblue-checkbox-eevee" type="checkbox"> <img class="pokeicon small" src="../images/icons/pokemon/gen1/redblue/eevee-color.png"> <label class="text-sm lg:tooltip" data-tip="At the roof of the Celadon Mansion." for="redblue-checkbox-eevee">Obtain Eevee</label>
- 						</div>
- 					</div>
- 					<div class="giftpokemon-rightrow">
- 						<div class="checkbox-item">
- 							<input id="redblue-checkbox-omanyte" type="checkbox"> <img class="pokeicon small" src="../images/icons/pokemon/gen1/redblue/omanyte-color.png"> <label class="text-sm lg:tooltip" data-tip="At the end of Mt. Moon." for="redblue-checkbox-omanyte">Obtain Omanyte</label>
- 						</div>
- 						<div class="checkbox-item">
- 							<input id="redblue-checkbox-kabuto" type="checkbox"> <img class="pokeicon small" src="../images/icons/pokemon/gen1/redblue/kabuto-color.png"> <label class="text-sm lg:tooltip" data-tip="At the end of Mt. Moon." for="redblue-checkbox-kabuto">Obtain Kabuto</label>
- 						</div>
- 						<div class="checkbox-item">
- 							<input id="redblue-checkbox-aerodactyl" type="checkbox"> <img class="pokeicon small" src="../images/icons/pokemon/gen1/redblue/aerodactyl-color.png"> <label class="text-sm lg:tooltip" data-tip="You need the Old Amber, which is found in the Pewter City museum." for="redblue-checkbox-aerodactyl">Obtain Aerodactyl</label>
- 						</div>
- 					</div>
- 				</div>
- 			</div>
- 			<div class="ingametrades">
- 				<div class="checkbox-item">
- 					<span class="title"><label class="text-lg">Complete all In-Game Trades</label></span>
- 				</div>
- 				<div class="ingametrades-rowcontainer">
- 					<div class="ingametrades-leftrow">
- 						<div class="checkbox-item">
- 							<input id="redblue-checkbox-abra-mr-mime" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Route 2. Outside Diglett's Cave." for="redblue-checkbox-abra-mr-mime">Trade Abra for Mr. Mime</label>
- 						</div>
- 						<div class="checkbox-item">
- 							<input id="redblue-checkbox-nidoran-m-f" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Route 5. Underground tunnel, north exit." for="redblue-checkbox-nidoran-m-f">Trade Nidoran M for Nidoran F</label>
- 						</div>
- 						<div class="checkbox-item">
- 							<input id="redblue-checkbox-nidorino-nidorina" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Route 11. Inside the gatehouse." for="redblue-checkbox-nidorino-nidorina">Trade Nidorino for Nidorina</label>
- 						</div>
- 						<div class="checkbox-item">
- 							<input id="redblue-checkbox-slowbro-lickitung" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Route 18. Inside the gatehouse." for="redblue-checkbox-slowbro-lickitung">Trade Slowbro for Lickitung</label>
- 						</div>
- 						<div class="checkbox-item">
- 							<input id="redblue-checkbox-poliwhirl-jynx" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Cerulean City. The house next to the Pokémon Center." for="redblue-checkbox-poliwhirl-jynx">Trade Poliwhirl for Jynx</label>
- 						</div>
- 					</div>
- 					<div class="ingametrades-rightrow">
- 						<div class="checkbox-item">
- 							<input id="redblue-checkbox-spearow-farfetchd" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Vermillion City." for="redblue-checkbox-spearow-farfetchd">Trade Spearow for Farfetch'd</label>
- 						</div>
- 						<div class="checkbox-item">
- 							<input id="redblue-checkbox-ponyta-seel" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Cinnabar Island. Inside the Cinnabar laboratory." for="redblue-checkbox-ponyta-seel">Trade Ponyta for Seel</label>
- 						</div>
- 						<div class="checkbox-item">
- 							<input id="redblue-checkbox-raichu-electrode" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Cinnabar Island. Inside the Cinnabar laboratory." for="redblue-checkbox-raichu-electrode">Trade Raichu for Electrode</label>
- 						</div>
- 						<div class="checkbox-item">
- 							<input id="redblue-checkbox-venonat-tangela" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Cinnabar Island. Inside the Cinnabar laboratory." for="redblue-checkbox-venonat-tangela">Trade Venonat for Tangela</label>
- 						</div>
- 					</div>
- 				</div>
- 			</div>
- 			<div class="items">
- 				<div class="checkbox-item">
- 					<span class="title"><label class="text-lg">Items</label></span>
- 				</div>
- 				<div class="checkbox-item">
- 					<input id="redblue-checkbox-alltms" type="checkbox"> <img class="pokeicon item" src="../images/icons/inventory/tms/normal.png"> <label class="text-sm lg:tooltip" data-tip="Find all TM's." for="redblue-checkbox-alltms">Collect all TM's</label>
- 				</div>
+            widePanels.forEach(function (panel) {
+              panel.style.border = '2px solid #C23A22';
+            });
+          });
 
- 			</div>
+          blueLogo.addEventListener('click', function () {
+            headerTitle.style.color = '#84ADD7';
+            footer.style.background = '#84ADD7';
+            backgroundIcons.style.backgroundImage =
+              'url(../../images/patterns/pattern-blue.png)';
 
- 			</div>
- 		</div>
+            titleText.forEach(function (text) {
+              text.style.color = '#84ADD7';
+            });
 
+            widePanels.forEach(function (panel) {
+              panel.style.border = '2px solid #84ADD7';
+            });
+          });
+        });
+      </script>
+      <script>
+        /* Checkbox linethrough script */
+        document.addEventListener('DOMContentLoaded', function () {
+          const completepokedexCheckboxes = document.querySelectorAll(
+            '.completepokedex input[type="checkbox"]'
+          );
+          const legendariesCheckboxes = document.querySelectorAll(
+            '.legendaries input[type="checkbox"]'
+          );
+          const giftpokemonCheckboxes = document.querySelectorAll(
+            '.giftpokemon input[type="checkbox"]'
+          );
+          const ingametradesCheckboxes = document.querySelectorAll(
+            '.ingametrades input[type="checkbox"]'
+          );
+          const itemsCheckboxes = document.querySelectorAll(
+            '.items input[type="checkbox"]'
+          );
 
- 	<footer class="text-sm">
- 		<ul>
- 			<li>
- 				<a href="../index.html">Progression Dex</a>
- 			</li>
- 			<li>
- 				<a href="#">Twitter</a>
- 			</li>
- 			<li>
- 				<a href="https://github.com/yasingunaydiin">GitHub</a>
- 			</li>
- 		</ul>
- 	</footer>
- 	<script src="../checklists/js/script.js">
- 	</script> 
- 	<script>
- 	         document.addEventListener("DOMContentLoaded", function() {
- 	         var redLogo = document.getElementById("red-logo");
- 	         var blueLogo = document.getElementById("blue-logo");
+          function updateStyle(checkboxes, label) {
+            const allChecked = [...checkboxes].every(
+              (checkbox) => checkbox.checked
+            );
+            label.style.textDecoration = allChecked ? 'line-through' : 'none';
+          }
 
-
- 	         var headerTitle = document.querySelector(".title");
- 	         var widePanels = document.querySelectorAll(".wide-panel");
- 	         var footer = document.querySelector("footer");
- 	         var titleText = document.querySelectorAll(".panel-label");
- 	         var backgroundIcons = document.querySelector("body");
-
- 	         redLogo.addEventListener("click", function() {
- 	             headerTitle.style.color = "#C23A22";
- 	             footer.style.background = "#C23A22";
- 	             backgroundIcons.style.backgroundImage = 'url(../../images/patterns/pattern-red.png)';
-
- 	             titleText.forEach(function(text) {
- 	                 text.style.color = "#C23A22";
- 	             });
-
- 	             widePanels.forEach(function(panel) {
- 	                 panel.style.border = "2px solid #C23A22";
- 	             });
- 	         });
-
- 	         blueLogo.addEventListener("click", function() {
- 	             headerTitle.style.color = "#84ADD7";
- 	             footer.style.background = "#84ADD7";
- 	             backgroundIcons.style.backgroundImage = 'url(../../images/patterns/pattern-blue.png)';
-
- 	             titleText.forEach(function(text) {
- 	                 text.style.color = "#84ADD7";
- 	             });
-
- 	             widePanels.forEach(function(panel) {
- 	                 panel.style.border = "2px solid #84ADD7";
- 	             });
- 	         });
- 	      });
- 	</script> 
- 	<script>
- 	      /* Checkbox linethrough script */
- 	         document.addEventListener('DOMContentLoaded', function() {
- 	         const completepokedexCheckboxes = document.querySelectorAll('.completepokedex input[type="checkbox"]');
- 	         const legendariesCheckboxes = document.querySelectorAll('.legendaries input[type="checkbox"]');
- 	         const giftpokemonCheckboxes = document.querySelectorAll('.giftpokemon input[type="checkbox"]');
- 	         const ingametradesCheckboxes = document.querySelectorAll('.ingametrades input[type="checkbox"]');
- 	         const itemsCheckboxes = document.querySelectorAll('.items input[type="checkbox"]');
-
- 	         function updateStyle(checkboxes, label) {
- 	             const allChecked = [...checkboxes].every(checkbox => checkbox.checked);
- 	             label.style.textDecoration = allChecked ? 'line-through' : 'none';
- 	         }
-
- 	         function initializeCheckboxes(checkboxes, label) {
- 	             checkboxes.forEach(checkbox => {
- 	                 checkbox.addEventListener('change', function() {
- 	                     updateStyle(checkboxes, label);
- 	                 });
- 	             });
- 	             updateStyle(checkboxes, label);
- 	         }
- 	         initializeCheckboxes(completepokedexCheckboxes, document.querySelector('.completepokedex .title label'));
- 	         initializeCheckboxes(legendariesCheckboxes, document.querySelector('.legendaries .title label'));
- 	         initializeCheckboxes(giftpokemonCheckboxes, document.querySelector('.giftpokemon .title label'));
- 	         initializeCheckboxes(itemsCheckboxes, document.querySelector('.items .title label'));
- 			 initializeCheckboxes(ingametradesCheckboxes, document.querySelector('.ingametrades .title label'));
-
- 	      });
- 	</script>
- </body>
- </html> 
+          function initializeCheckboxes(checkboxes, label) {
+            checkboxes.forEach((checkbox) => {
+              checkbox.addEventListener('change', function () {
+                updateStyle(checkboxes, label);
+              });
+            });
+            updateStyle(checkboxes, label);
+          }
+          initializeCheckboxes(
+            completepokedexCheckboxes,
+            document.querySelector('.completepokedex .title label')
+          );
+          initializeCheckboxes(
+            legendariesCheckboxes,
+            document.querySelector('.legendaries .title label')
+          );
+          initializeCheckboxes(
+            giftpokemonCheckboxes,
+            document.querySelector('.giftpokemon .title label')
+          );
+          initializeCheckboxes(
+            itemsCheckboxes,
+            document.querySelector('.items .title label')
+          );
+          initializeCheckboxes(
+            ingametradesCheckboxes,
+            document.querySelector('.ingametrades .title label')
+          );
+        });
+      </script>
+    </body>
+  </html>
+</DOCTYPE>

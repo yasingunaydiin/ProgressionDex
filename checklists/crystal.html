@@ -1,307 +1,929 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta content="width=device-width, initial-scale=1.0" name="viewport">
-	<title>Progression Dex | Crystal</title>
-	<link href="../checklists/css/crystal.css" rel="stylesheet">
-	<link href="../output.css" rel="stylesheet">
-	<link href="../images/icons/favicontab.ico" rel="icon" type="image/x-icon">
-	<link href="../images/icons/favicontab.ico" rel="shortcut icon" type="image/x-icon">
-	<meta name="description" content="A tool for tracking your progression in Pokemon games. Easily choose between games and track your game progress.">
-	<meta name="keywords" content="pokemon, checklist, pokedex, progress, completion, speedrun, checklist, check list, locations, characters, games, game">
-</head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4PDLXC895H"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Progression Dex | Crystal</title>
+    <link href="../checklists/css/crystal.css" rel="stylesheet" />
+    <link href="../output.css" rel="stylesheet" />
+    <link
+      href="../images/icons/favicontab.ico"
+      rel="icon"
+      type="image/x-icon"
+    />
+    <link
+      href="../images/icons/favicontab.ico"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
+    <meta
+      name="description"
+      content="A tool for tracking your progression in Pokemon games. Easily choose between games and track your game progress."
+    />
+    <meta
+      name="keywords"
+      content="pokemon, checklist, pokedex, progress, completion, speedrun, checklist, check list, locations, characters, games, game"
+    />
+  </head>
+  <!-- Google tag (gtag.js) -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-4PDLXC895H"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
 
-  gtag('config', 'G-4PDLXC895H');
-</script>
-<body>
-	<div class="navbar bg-white rounded-3xl shadow-lg mt-2 fixed top-0 flex items-center justify-between" style="width: 95%;  z-index: 1000; left: 50%; transform: translateX(-50%);">
-		<div class="flex items-center gap-4">
-		  <a href="../index.html" class="btn btn-ghost text-2xl"><span class="title" style="color: #62CCCC;">Progression Dex |</span></a>
-		  <div class="flex items-center gap-2">
-			<img src="../images/logos/crystal-logo.webp" class="w-20">
-		  </div>
-		</div>
-		
-	  </div>
-	<div class="page-container" data-game="crystal">
-		<div class="page-container-left">
-			<div class="wide-panel pokedex">
-				<label class="panel-label">Pokédex</label>
-				<div class="completepokedex">
-					<div class="checkbox-item">
-						<span class="title"><label class="text-lg">Complete the Johto Pokédex</label></span>
-					</div>
-					<div class="checkbox-item">
-						<input id="crystal-checkbox-diploma" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="After catching all Pokemon, go to the Game Freak Headquarters in Celadon Condominiums and speak with the lead developer." for="crystal-checkbox-diploma">Get Diploma</label>
-					</div>
-				</div>
-				<div class="legendaries">
-					<div class="checkbox-item">
-						<span class="title"><label class="text-lg">Catch all Legendaries</label></span>
-					</div>
-					<div class="legendaries-rowcontainer">
-						<div class="legendaries-leftrow">
-							<div class="checkbox-item">
-								<input id="crystal-checkbox-lugia" type="checkbox"> <img class="pokeicon" src="../images/icons/pokemon/gen2/crystal/lugia.png"> <label class="text-sm lg:tooltip" data-tip="If you have a Silver Wing, go to the Whirl Islands." for="crystal-checkbox-lugia">Lugia</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="crystal-checkbox-ho-oh" type="checkbox"> <img class="pokeicon" src="../images/icons/pokemon/gen2/crystal/ho-oh.png"> <label class="text-sm lg:tooltip" data-tip="If you have a Rainbow Wing, go to the Tin Tower." for="crystal-checkbox-ho-oh">Ho-oh</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="crystal-checkbox-celebi" type="checkbox"> <img class="pokeicon" src="../images/icons/pokemon/gen2/crystal/celebi.png"> <label class="text-sm lg:tooltip" data-tip="Bring your GS Ball to Kurt." for="crystal-checkbox-celebi">Celebi</label>
-							</div>
-						</div>
-						<div class="legendaries-rightrow">
-							<div class="checkbox-item">
-								<input id="crystal-checkbox-raikou" type="checkbox"> <img class="pokeicon" src="../images/icons/pokemon/gen2/crystal/raikou.png"> <label class="text-sm lg:tooltip" data-tip="You will be able to catch Raikou west of the map." for="crystal-checkbox-raikou">Raikou</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="crystal-checkbox-entei" type="checkbox"> <img class="pokeicon" src="../images/icons/pokemon/gen2/crystal/entei.png"> <label class="text-sm lg:tooltip" data-tip="You will be able to catch Entei north of the map." for="crystal-checkbox-entei">Entei</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="crystal-checkbox-suicune" type="checkbox"> <img class="pokeicon" src="../images/icons/pokemon/gen2/crystal/suicune.png"> <label class="text-sm lg:tooltip" data-tip="You will be able to catch Raikou east of the map." for="crystal-checkbox-suicune">Suicune</label>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="giftpokemon">
-					<div class="checkbox-item">
-						<span class="title"><label class="text-lg">Obtain all In-Game Gift Pokemon</label></span>
-					</div>
-					<div class="giftpokemon-rowcontainer">
-						<div class="giftpokemon-leftrow">
-							<div class="checkbox-item">
-								<input id="crystal-checkbox-spearow" type="checkbox"> <img class="pokeicon" src="../images/icons/pokemon/gen2/crystal/spearow.png"> <label class="text-sm lg:tooltip" data-tip="Route 35 South Gate." for="crystal-checkbox-spearow">Spearow</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="crystal-checkbox-eevee" type="checkbox"> <img class="pokeicon" src="../images/icons/pokemon/gen2/crystal/eevee.png"> <label class="text-sm lg:tooltip" data-tip="Bill's house in Goldenrod City." for="crystal-checkbox-eevee">Eevee</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="crystal-checkbox-togepi" type="checkbox"> <img class="pokeicon" src="../images/icons/pokemon/gen2/crystal/togepi.png"> <label class="text-sm lg:tooltip" data-tip="Violet City - Pokemon Center." for="crystal-checkbox-togepi">Togepi</label>
-							</div>
-						</div>
-						<div class="giftpokemon-rightrow">
-							<div class="checkbox-item">
-								<input id="crystal-checkbox-shuckle" type="checkbox"> <img class="pokeicon" src="../images/icons/pokemon/gen2/crystal/shuckle.png"> <label class="text-sm lg:tooltip" data-tip="Cianwood City." for="crystal-checkbox-shuckle">Shuckle</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="crystal-checkbox-tyrogue" type="checkbox"> <img class="pokeicon" src="../images/icons/pokemon/gen2/crystal/tyrogue.png"> <label class="text-sm lg:tooltip" data-tip="Mt. Mortar B1F." for="crystal-checkbox-tyrogue">Tyrogue</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="crystal-checkbox-dratini" type="checkbox"> <img class="pokeicon" src="../images/icons/pokemon/gen2/crystal/dratini.png"> <label class="text-sm lg:tooltip" data-tip="Defeat Clair at Dragons Den." for="crystal-checkbox-dratini">Dratini</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="crystal-checkbox-egg" type="checkbox"> <img class="pokeicon egg" src="../images/icons/pokemon/gen2/crystal/egg.png"><label class="text-sm lg:tooltip" data-tip="Route 34. Pichu, Cleffa, Igglybuff, Tyrogue, Smoochum, Elekid or Magby." for="crystal-checkbox-egg" style="margin-left: 5px;">An Egg</label>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="ingametrades">
-					<div class="checkbox-item">
-						<span class="title"><label class="text-lg">Complete all In-Game Trades</label></span>
-					</div>
-					<div class="ingametrades-rowcontainer">
-						<div class="ingametrades-leftrow">
-							<div class="checkbox-item">
-								<input id="crystal-checkbox-bellsprout" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="House in Violet City." for="crystal-checkbox-bellsprout">Bellsprout for Onix</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="crystal-checkbox-abra" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Goldenrod City - Department Store." for="crystal-checkbox-abra">Abra for Machop</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="crystal-checkbox-krabby" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Olivine City." for="crystal-checkbox-krabby">Krabby for Voltorb</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="crystal-checkbox-dragonair" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Blackthorn City." for="crystal-checkbox-dragonair">Dragonair<label id="female">♀</label> for Dodrio</label>
-							</div>
-						</div>
-						<div class="ingametrades-rightrow">
-							<div class="checkbox-item">
-								<input id="crystal-checkbox-haunter" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Pewter City." for="crystal-checkbox-haunter">Haunter for Xatu</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="crystal-checkbox-dugtrio" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Power Plant." for="crystal-checkbox-dugtrio">Dugtrio for Magneton</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="crystal-checkbox-chansey" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Route 14." for="crystal-checkbox-chansey">Chansey for Aerodactyl</label>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="unown">
-					<div class="checkbox-item">
-						<span class="title"><label class="text-lg">Catch all Unown's</label></span>
-					</div>
-					<div class="unown-rowcontainer">
-						<div class="unown-leftrow">
-							<div class="checkbox-item">
-								<input id="crystal-checkbox-a" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen2/unown/unown-a.PNG"> <label class="text-sm lg:tooltip" data-tip="Northeast." for="crystal-checkbox-a">A</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="crystal-checkbox-b" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen2/unown/unown-b.png"> <label class="text-sm lg:tooltip" data-tip="Northeast." for="crystal-checkbox-b">B</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="crystal-checkbox-c" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen2/unown/unown-c.png"> <label class="text-sm lg:tooltip" data-tip="Northeast." for="crystal-checkbox-c">C</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="crystal-checkbox-d" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen2/unown/unown-d.png"> <label class="text-sm lg:tooltip" data-tip="Northeast." for="crystal-checkbox-d">D</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="crystal-checkbox-e" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen2/unown/unown-e.png"> <label class="text-sm lg:tooltip" data-tip="Northeast." for="crystal-checkbox-e">E</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="crystal-checkbox-f" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen2/unown/unown-f.png"> <label class="text-sm lg:tooltip" data-tip="Northeast." for="crystal-checkbox-f">F</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="crystal-checkbox-g" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen2/unown/unown-g.png"> <label class="text-sm lg:tooltip" data-tip="Northeast." for="crystal-checkbox-g">G</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="crystal-checkbox-h" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen2/unown/unown-h.png"> <label class="text-sm lg:tooltip" data-tip="Northeast." for="crystal-checkbox-h">H</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="crystal-checkbox-i" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen2/unown/unown-i.png"> <label class="text-sm lg:tooltip" data-tip="Northeast." for="crystal-checkbox-i">I</label>
-							</div>
-						</div>
-						<div class="unown-middlerow">
-							<div class="checkbox-item">
-								<input id="crystal-checkbox-j" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen2/unown/unown-j.png"> <label class="text-sm lg:tooltip" data-tip="Northeast." for="crystal-checkbox-j">J</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="crystal-checkbox-k" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen2/unown/unown-k.png"> <label class="text-sm lg:tooltip" data-tip="Northeast." for="crystal-checkbox-k">K</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="crystal-checkbox-l" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen2/unown/unown-l.png"> <label class="text-sm lg:tooltip" data-tip="Southwest." for="crystal-checkbox-l">L</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="crystal-checkbox-m" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen2/unown/unown-m.png"> <label class="text-sm lg:tooltip" data-tip="Southwest." for="crystal-checkbox-m">M</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="crystal-checkbox-n" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen2/unown/unown-n.png"> <label class="text-sm lg:tooltip" data-tip="Southwest." for="crystal-checkbox-n">N</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="crystal-checkbox-o" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen2/unown/unown-o.png"> <label class="text-sm lg:tooltip" data-tip="Southwest." for="crystal-checkbox-o">O</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="crystal-checkbox-p" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen2/unown/unown-p.png"> <label class="text-sm lg:tooltip" data-tip="Southwest." for="crystal-checkbox-p">P</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="crystal-checkbox-q" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen2/unown/unown-q.png"> <label class="text-sm lg:tooltip" data-tip="Southwest." for="crystal-checkbox-q">Q</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="crystal-checkbox-r" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen2/unown/unown-r.png"> <label class="text-sm lg:tooltip" data-tip="Southwest." for="crystal-checkbox-r">R</label>
-							</div>
-						</div>
-						<div class="unown-rightrow">
-							<div class="checkbox-item">
-								<input id="crystal-checkbox-s" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen2/unown/unown-s.png"> <label class="text-sm lg:tooltip" data-tip="Southeast." for="crystal-checkbox-s">S</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="crystal-checkbox-t" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen2/unown/unown-t.png"> <label class="text-sm lg:tooltip" data-tip="Southeast." for="crystal-checkbox-t">T</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="crystal-checkbox-u" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen2/unown/unown-u.png"> <label class="text-sm lg:tooltip" data-tip="Southeast." for="crystal-checkbox-u">U</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="crystal-checkbox-v" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen2/unown/unown-v.png"> <label class="text-sm lg:tooltip" data-tip="Southeast." for="crystal-checkbox-v">V</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="crystal-checkbox-w" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen2/unown/unown-w.png"> <label class="text-sm lg:tooltip" data-tip="Southeast." for="crystal-checkbox-w">W</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="crystal-checkbox-x" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen2/unown/unown-x.png"> <label class="text-sm lg:tooltip" data-tip="Northwest." for="crystal-checkbox-x">X</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="crystal-checkbox-y" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen2/unown/unown-y.png"> <label class="text-sm lg:tooltip" data-tip="Northwest." for="crystal-checkbox-y">Y</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="crystal-checkbox-z" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen2/unown/unown-z.png"> <label class="text-sm lg:tooltip" data-tip="Northwest." for="crystal-checkbox-z">Z</label>
-							</div>
-						</div>
-					</div>
-					<div class="battles">
-						<div class="checkbox-item">
-							<span class="title"><label class="text-lg">Battles</label></span>
-						</div>
-						<div class="checkbox-item">
-							<input id="crystal-checkbox-red" type="checkbox"> <img class="pokeicon" src="../images/icons/miscellaneous/gen2/Spr_GS_Red.png"> <label class="text-sm lg:tooltip" data-tip="You can find Red in Silver Cave after getting all 16 badges." for="crystal-checkbox-red">Defeat Red</label>
-						</div>
-						<div class="checkbox-item">
-							<input id="crystal-checkbox-battle-tower" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Next to Olivine City." for="crystal-checkbox-battle-tower">Beat the Battle Tower</label>
-						</div>
-					</div>
-					<div class="items">
-						<div class="checkbox-item">
-							<span class="title"><label class="text-lg">Items</label></span>
-						</div>
-						
-						<div class="checkbox-item">
-							<input id="crystal-checkbox-alltms" type="checkbox"> <img class="pokeicon item" src="../images/icons/inventory/tms/normal.png"> <label class="text-sm lg:tooltip" data-tip="Find all TM's." for="crystal-checkbox-alltms">Collect all TM's</label>
-						</div>
-	
-					</div>
-	
-				</div>
-			</div>
-		</div>
-	</div>
+    gtag('config', 'G-4PDLXC895H');
+  </script>
+  <body>
+    <div
+      class="navbar bg-white rounded-3xl shadow-lg mt-2 fixed top-0 flex items-center justify-between"
+      style="width: 95%; z-index: 1000; left: 50%; transform: translateX(-50%)"
+    >
+      <div class="flex items-center gap-4">
+        <a href="../index.html" class="btn btn-ghost text-2xl"
+          ><span class="title" style="color: #62cccc"
+            >Progression Dex |</span
+          ></a
+        >
+        <div class="flex items-center gap-2">
+          <img
+            alt="Logo of Pokemon Crystal"
+            src="src"
+            ="../images/logos/crystal-logo.webp"
+            class="w-20"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="page-container" data-game="crystal">
+      <div class="page-container-left">
+        <div class="wide-panel pokedex">
+          <label class="panel-label">Pokédex</label>
+          <div class="completepokedex">
+            <div class="checkbox-item">
+              <span class="title"
+                ><label class="text-lg">Complete the Johto Pokédex</label></span
+              >
+            </div>
+            <div class="checkbox-item">
+              <input id="crystal-checkbox-diploma" type="checkbox" />
+              <label
+                class="text-sm lg:tooltip"
+                data-tip="After catching all Pokemon, go to the Game Freak Headquarters in Celadon Condominiums and speak with the lead developer."
+                for="crystal-checkbox-diploma"
+                >Get Diploma</label
+              >
+            </div>
+          </div>
+          <div class="legendaries">
+            <div class="checkbox-item">
+              <span class="title"
+                ><label class="text-lg">Catch all Legendaries</label></span
+              >
+            </div>
+            <div class="legendaries-rowcontainer">
+              <div class="legendaries-leftrow">
+                <div class="checkbox-item">
+                  <input id="crystal-checkbox-lugia" type="checkbox" />
+                  <img
+                    alt="Icon of Lugia"
+                    src="class"
+                    ="pokeicon"
+                    src="../images/icons/pokemon/gen2/crystal/lugia.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="If you have a Silver Wing, go to the Whirl Islands."
+                    for="crystal-checkbox-lugia"
+                    >Lugia</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="crystal-checkbox-ho-oh" type="checkbox" />
+                  <img
+                    alt="Icon of Ho Oh"
+                    src="class"
+                    ="pokeicon"
+                    src="../images/icons/pokemon/gen2/crystal/ho-oh.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="If you have a Rainbow Wing, go to the Tin Tower."
+                    for="crystal-checkbox-ho-oh"
+                    >Ho-oh</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="crystal-checkbox-celebi" type="checkbox" />
+                  <img
+                    alt="Icon of Celebi"
+                    src="class"
+                    ="pokeicon"
+                    src="../images/icons/pokemon/gen2/crystal/celebi.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Bring your GS Ball to Kurt."
+                    for="crystal-checkbox-celebi"
+                    >Celebi</label
+                  >
+                </div>
+              </div>
+              <div class="legendaries-rightrow">
+                <div class="checkbox-item">
+                  <input id="crystal-checkbox-raikou" type="checkbox" />
+                  <img
+                    alt="Icon of Raikou"
+                    src="class"
+                    ="pokeicon"
+                    src="../images/icons/pokemon/gen2/crystal/raikou.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="You will be able to catch Raikou west of the map."
+                    for="crystal-checkbox-raikou"
+                    >Raikou</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="crystal-checkbox-entei" type="checkbox" />
+                  <img
+                    alt="Icon of Entei"
+                    src="class"
+                    ="pokeicon"
+                    src="../images/icons/pokemon/gen2/crystal/entei.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="You will be able to catch Entei north of the map."
+                    for="crystal-checkbox-entei"
+                    >Entei</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="crystal-checkbox-suicune" type="checkbox" />
+                  <img
+                    alt="Icon of Suicune"
+                    src="class"
+                    ="pokeicon"
+                    src="../images/icons/pokemon/gen2/crystal/suicune.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="You will be able to catch Raikou east of the map."
+                    for="crystal-checkbox-suicune"
+                    >Suicune</label
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="giftpokemon">
+            <div class="checkbox-item">
+              <span class="title"
+                ><label class="text-lg"
+                  >Obtain all In-Game Gift Pokemon</label
+                ></span
+              >
+            </div>
+            <div class="giftpokemon-rowcontainer">
+              <div class="giftpokemon-leftrow">
+                <div class="checkbox-item">
+                  <input id="crystal-checkbox-spearow" type="checkbox" />
+                  <img
+                    alt="Icon of Spearow"
+                    src="class"
+                    ="pokeicon"
+                    src="../images/icons/pokemon/gen2/crystal/spearow.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Route 35 South Gate."
+                    for="crystal-checkbox-spearow"
+                    >Spearow</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="crystal-checkbox-eevee" type="checkbox" />
+                  <img
+                    alt="Icon of Eevee"
+                    src="class"
+                    ="pokeicon"
+                    src="../images/icons/pokemon/gen2/crystal/eevee.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Bill's house in Goldenrod City."
+                    for="crystal-checkbox-eevee"
+                    >Eevee</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="crystal-checkbox-togepi" type="checkbox" />
+                  <img
+                    alt="Icon of Togepi"
+                    src="class"
+                    ="pokeicon"
+                    src="../images/icons/pokemon/gen2/crystal/togepi.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Violet City - Pokemon Center."
+                    for="crystal-checkbox-togepi"
+                    >Togepi</label
+                  >
+                </div>
+              </div>
+              <div class="giftpokemon-rightrow">
+                <div class="checkbox-item">
+                  <input id="crystal-checkbox-shuckle" type="checkbox" />
+                  <img
+                    alt="Icon of Shuckle"
+                    src="class"
+                    ="pokeicon"
+                    src="../images/icons/pokemon/gen2/crystal/shuckle.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Cianwood City."
+                    for="crystal-checkbox-shuckle"
+                    >Shuckle</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="crystal-checkbox-tyrogue" type="checkbox" />
+                  <img
+                    alt="Icon of Tyrogue"
+                    src="class"
+                    ="pokeicon"
+                    src="../images/icons/pokemon/gen2/crystal/tyrogue.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Mt. Mortar B1F."
+                    for="crystal-checkbox-tyrogue"
+                    >Tyrogue</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="crystal-checkbox-dratini" type="checkbox" />
+                  <img
+                    alt="Icon of Dratini"
+                    src="class"
+                    ="pokeicon"
+                    src="../images/icons/pokemon/gen2/crystal/dratini.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Defeat Clair at Dragons Den."
+                    for="crystal-checkbox-dratini"
+                    >Dratini</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="crystal-checkbox-egg" type="checkbox" />
+                  <img
+                    alt="Icon of Egg"
+                    src="class"
+                    ="pokeicon egg"
+                    src="../images/icons/pokemon/gen2/crystal/egg.png"
+                  /><label
+                    class="text-sm lg:tooltip"
+                    data-tip="Route 34. Pichu, Cleffa, Igglybuff, Tyrogue, Smoochum, Elekid or Magby."
+                    for="crystal-checkbox-egg"
+                    style="margin-left: 5px"
+                    >An Egg</label
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ingametrades">
+            <div class="checkbox-item">
+              <span class="title"
+                ><label class="text-lg"
+                  >Complete all In-Game Trades</label
+                ></span
+              >
+            </div>
+            <div class="ingametrades-rowcontainer">
+              <div class="ingametrades-leftrow">
+                <div class="checkbox-item">
+                  <input id="crystal-checkbox-bellsprout" type="checkbox" />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="House in Violet City."
+                    for="crystal-checkbox-bellsprout"
+                    >Bellsprout for Onix</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="crystal-checkbox-abra" type="checkbox" />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Goldenrod City - Department Store."
+                    for="crystal-checkbox-abra"
+                    >Abra for Machop</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="crystal-checkbox-krabby" type="checkbox" />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Olivine City."
+                    for="crystal-checkbox-krabby"
+                    >Krabby for Voltorb</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="crystal-checkbox-dragonair" type="checkbox" />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Blackthorn City."
+                    for="crystal-checkbox-dragonair"
+                    >Dragonair<label id="female">♀</label> for Dodrio</label
+                  >
+                </div>
+              </div>
+              <div class="ingametrades-rightrow">
+                <div class="checkbox-item">
+                  <input id="crystal-checkbox-haunter" type="checkbox" />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Pewter City."
+                    for="crystal-checkbox-haunter"
+                    >Haunter for Xatu</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="crystal-checkbox-dugtrio" type="checkbox" />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Power Plant."
+                    for="crystal-checkbox-dugtrio"
+                    >Dugtrio for Magneton</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="crystal-checkbox-chansey" type="checkbox" />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Route 14."
+                    for="crystal-checkbox-chansey"
+                    >Chansey for Aerodactyl</label
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="unown">
+            <div class="checkbox-item">
+              <span class="title"
+                ><label class="text-lg">Catch all Unown's</label></span
+              >
+            </div>
+            <div class="unown-rowcontainer">
+              <div class="unown-leftrow">
+                <div class="checkbox-item">
+                  <input id="crystal-checkbox-a" type="checkbox" />
+                  <img
+                    alt="Icon of Unown A"
+                    src="class"
+                    ="pokeicon unown"
+                    src="../images/icons/pokemon/gen2/unown/unown-a.PNG"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Northeast."
+                    for="crystal-checkbox-a"
+                    >A</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="crystal-checkbox-b" type="checkbox" />
+                  <img
+                    alt="Icon of Unown B"
+                    src="class"
+                    ="pokeicon unown"
+                    src="../images/icons/pokemon/gen2/unown/unown-b.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Northeast."
+                    for="crystal-checkbox-b"
+                    >B</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="crystal-checkbox-c" type="checkbox" />
+                  <img
+                    alt="Icon of Unown C"
+                    src="class"
+                    ="pokeicon unown"
+                    src="../images/icons/pokemon/gen2/unown/unown-c.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Northeast."
+                    for="crystal-checkbox-c"
+                    >C</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="crystal-checkbox-d" type="checkbox" />
+                  <img
+                    alt="Icon of Unown D"
+                    src="class"
+                    ="pokeicon unown"
+                    src="../images/icons/pokemon/gen2/unown/unown-d.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Northeast."
+                    for="crystal-checkbox-d"
+                    >D</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="crystal-checkbox-e" type="checkbox" />
+                  <img
+                    alt="Icon of Unown E"
+                    src="class"
+                    ="pokeicon unown"
+                    src="../images/icons/pokemon/gen2/unown/unown-e.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Northeast."
+                    for="crystal-checkbox-e"
+                    >E</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="crystal-checkbox-f" type="checkbox" />
+                  <img
+                    alt="Icon of Unown F"
+                    src="class"
+                    ="pokeicon unown"
+                    src="../images/icons/pokemon/gen2/unown/unown-f.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Northeast."
+                    for="crystal-checkbox-f"
+                    >F</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="crystal-checkbox-g" type="checkbox" />
+                  <img
+                    alt="Icon of Unown G"
+                    src="class"
+                    ="pokeicon unown"
+                    src="../images/icons/pokemon/gen2/unown/unown-g.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Northeast."
+                    for="crystal-checkbox-g"
+                    >G</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="crystal-checkbox-h" type="checkbox" />
+                  <img
+                    alt="Icon of Unown H"
+                    src="class"
+                    ="pokeicon unown"
+                    src="../images/icons/pokemon/gen2/unown/unown-h.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Northeast."
+                    for="crystal-checkbox-h"
+                    >H</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="crystal-checkbox-i" type="checkbox" />
+                  <img
+                    alt="Icon of Unown I"
+                    src="class"
+                    ="pokeicon unown"
+                    src="../images/icons/pokemon/gen2/unown/unown-i.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Northeast."
+                    for="crystal-checkbox-i"
+                    >I</label
+                  >
+                </div>
+              </div>
+              <div class="unown-middlerow">
+                <div class="checkbox-item">
+                  <input id="crystal-checkbox-j" type="checkbox" />
+                  <img
+                    alt="Icon of Unown J"
+                    src="class"
+                    ="pokeicon unown"
+                    src="../images/icons/pokemon/gen2/unown/unown-j.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Northeast."
+                    for="crystal-checkbox-j"
+                    >J</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="crystal-checkbox-k" type="checkbox" />
+                  <img
+                    alt="Icon of Unown K"
+                    src="class"
+                    ="pokeicon unown"
+                    src="../images/icons/pokemon/gen2/unown/unown-k.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Northeast."
+                    for="crystal-checkbox-k"
+                    >K</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="crystal-checkbox-l" type="checkbox" />
+                  <img
+                    alt="Icon of Unown L"
+                    src="class"
+                    ="pokeicon unown"
+                    src="../images/icons/pokemon/gen2/unown/unown-l.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Southwest."
+                    for="crystal-checkbox-l"
+                    >L</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="crystal-checkbox-m" type="checkbox" />
+                  <img
+                    alt="Icon of Unown M"
+                    src="class"
+                    ="pokeicon unown"
+                    src="../images/icons/pokemon/gen2/unown/unown-m.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Southwest."
+                    for="crystal-checkbox-m"
+                    >M</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="crystal-checkbox-n" type="checkbox" />
+                  <img
+                    alt="Icon of Unown N"
+                    src="class"
+                    ="pokeicon unown"
+                    src="../images/icons/pokemon/gen2/unown/unown-n.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Southwest."
+                    for="crystal-checkbox-n"
+                    >N</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="crystal-checkbox-o" type="checkbox" />
+                  <img
+                    alt="Icon of Unown O"
+                    src="class"
+                    ="pokeicon unown"
+                    src="../images/icons/pokemon/gen2/unown/unown-o.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Southwest."
+                    for="crystal-checkbox-o"
+                    >O</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="crystal-checkbox-p" type="checkbox" />
+                  <img
+                    alt="Icon of Unown P"
+                    src="class"
+                    ="pokeicon unown"
+                    src="../images/icons/pokemon/gen2/unown/unown-p.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Southwest."
+                    for="crystal-checkbox-p"
+                    >P</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="crystal-checkbox-q" type="checkbox" />
+                  <img
+                    alt="Icon of Unown Q"
+                    src="class"
+                    ="pokeicon unown"
+                    src="../images/icons/pokemon/gen2/unown/unown-q.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Southwest."
+                    for="crystal-checkbox-q"
+                    >Q</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="crystal-checkbox-r" type="checkbox" />
+                  <img
+                    alt="Icon of Unown R"
+                    src="class"
+                    ="pokeicon unown"
+                    src="../images/icons/pokemon/gen2/unown/unown-r.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Southwest."
+                    for="crystal-checkbox-r"
+                    >R</label
+                  >
+                </div>
+              </div>
+              <div class="unown-rightrow">
+                <div class="checkbox-item">
+                  <input id="crystal-checkbox-s" type="checkbox" />
+                  <img
+                    alt="Icon of Unown S"
+                    src="class"
+                    ="pokeicon unown"
+                    src="../images/icons/pokemon/gen2/unown/unown-s.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Southeast."
+                    for="crystal-checkbox-s"
+                    >S</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="crystal-checkbox-t" type="checkbox" />
+                  <img
+                    alt="Icon of Unown T"
+                    src="class"
+                    ="pokeicon unown"
+                    src="../images/icons/pokemon/gen2/unown/unown-t.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Southeast."
+                    for="crystal-checkbox-t"
+                    >T</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="crystal-checkbox-u" type="checkbox" />
+                  <img
+                    alt="Icon of Unown U"
+                    src="class"
+                    ="pokeicon unown"
+                    src="../images/icons/pokemon/gen2/unown/unown-u.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Southeast."
+                    for="crystal-checkbox-u"
+                    >U</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="crystal-checkbox-v" type="checkbox" />
+                  <img
+                    alt="Icon of Unown V"
+                    src="class"
+                    ="pokeicon unown"
+                    src="../images/icons/pokemon/gen2/unown/unown-v.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Southeast."
+                    for="crystal-checkbox-v"
+                    >V</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="crystal-checkbox-w" type="checkbox" />
+                  <img
+                    alt="Icon of Unown W"
+                    src="class"
+                    ="pokeicon unown"
+                    src="../images/icons/pokemon/gen2/unown/unown-w.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Southeast."
+                    for="crystal-checkbox-w"
+                    >W</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="crystal-checkbox-x" type="checkbox" />
+                  <img
+                    alt="Icon of Unown X"
+                    src="class"
+                    ="pokeicon unown"
+                    src="../images/icons/pokemon/gen2/unown/unown-x.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Northwest."
+                    for="crystal-checkbox-x"
+                    >X</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="crystal-checkbox-y" type="checkbox" />
+                  <img
+                    alt="Icon of Unown Y"
+                    src="class"
+                    ="pokeicon unown"
+                    src="../images/icons/pokemon/gen2/unown/unown-y.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Northwest."
+                    for="crystal-checkbox-y"
+                    >Y</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="crystal-checkbox-z" type="checkbox" />
+                  <img
+                    alt="Icon of Unown Z"
+                    src="class"
+                    ="pokeicon unown"
+                    src="../images/icons/pokemon/gen2/unown/unown-z.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Northwest."
+                    for="crystal-checkbox-z"
+                    >Z</label
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="battles">
+              <div class="checkbox-item">
+                <span class="title"
+                  ><label class="text-lg">Battles</label></span
+                >
+              </div>
+              <div class="checkbox-item">
+                <input id="crystal-checkbox-red" type="checkbox" />
+                <img
+                  alt="Icon of Red"
+                  src="class"
+                  ="pokeicon"
+                  src="../images/icons/miscellaneous/gen2/Spr_GS_Red.png"
+                />
+                <label
+                  class="text-sm lg:tooltip"
+                  data-tip="You can find Red in Silver Cave after getting all 16 badges."
+                  for="crystal-checkbox-red"
+                  >Defeat Red</label
+                >
+              </div>
+              <div class="checkbox-item">
+                <input id="crystal-checkbox-battle-tower" type="checkbox" />
+                <label
+                  class="text-sm lg:tooltip"
+                  data-tip="Next to Olivine City."
+                  for="crystal-checkbox-battle-tower"
+                  >Beat the Battle Tower</label
+                >
+              </div>
+            </div>
+            <div class="items">
+              <div class="checkbox-item">
+                <span class="title"><label class="text-lg">Items</label></span>
+              </div>
 
-	
-	<footer>
-		<ul>
-			<li>
-				<a href="../index.html">Progression Dex</a>
-			</li>
-			<li>
-				<a href="#">Twitter</a>
-			</li>
-			<li>
-				<a href="https://github.com/yasingunaydiin">GitHub</a>
-			</li>
-		</ul>
-	</footer>
-	<script src="../checklists/js/script.js">
-	</script> 
-	<script>
-	       document.addEventListener('DOMContentLoaded', function() {
-	   const completepokedexCheckboxes = document.querySelectorAll('.completepokedex input[type="checkbox"]');
-	   const legendariesCheckboxes = document.querySelectorAll('.legendaries input[type="checkbox"]');
-	   const giftpokemonCheckboxes = document.querySelectorAll('.giftpokemon input[type="checkbox"]');
-	   const ingametradesCheckboxes = document.querySelectorAll('.ingametrades input[type="checkbox"]');
-	   const unownCheckboxes = document.querySelectorAll('.unown input[type="checkbox"]');
-	   const battlesCheckboxes = document.querySelectorAll('.battles input[type="checkbox"]');
-	   const itemsCheckboxes = document.querySelectorAll('.items input[type="checkbox"]');
+              <div class="checkbox-item">
+                <input id="crystal-checkbox-alltms" type="checkbox" />
+                <img
+                  alt="Icon of TM"
+                  src="class"
+                  ="pokeicon item"
+                  src="../images/icons/inventory/tms/normal.png"
+                />
+                <label
+                  class="text-sm lg:tooltip"
+                  data-tip="Find all TM's."
+                  for="crystal-checkbox-alltms"
+                  >Collect all TM's</label
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <footer>
+      <ul>
+        <li>
+          <a href="../index.html">Progression Dex</a>
+        </li>
+        <li>
+          <a href="#">Twitter</a>
+        </li>
+        <li>
+          <a href="https://github.com/yasingunaydiin">GitHub</a>
+        </li>
+      </ul>
+    </footer>
+    <script src="../checklists/js/script.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const completepokedexCheckboxes = document.querySelectorAll(
+          '.completepokedex input[type="checkbox"]'
+        );
+        const legendariesCheckboxes = document.querySelectorAll(
+          '.legendaries input[type="checkbox"]'
+        );
+        const giftpokemonCheckboxes = document.querySelectorAll(
+          '.giftpokemon input[type="checkbox"]'
+        );
+        const ingametradesCheckboxes = document.querySelectorAll(
+          '.ingametrades input[type="checkbox"]'
+        );
+        const unownCheckboxes = document.querySelectorAll(
+          '.unown input[type="checkbox"]'
+        );
+        const battlesCheckboxes = document.querySelectorAll(
+          '.battles input[type="checkbox"]'
+        );
+        const itemsCheckboxes = document.querySelectorAll(
+          '.items input[type="checkbox"]'
+        );
 
+        function updateStyle(checkboxes, label) {
+          const allChecked = [...checkboxes].every(
+            (checkbox) => checkbox.checked
+          );
+          label.style.textDecoration = allChecked ? 'line-through' : 'none';
+        }
 
-	   function updateStyle(checkboxes, label) {
-	       const allChecked = [...checkboxes].every(checkbox => checkbox.checked);
-	       label.style.textDecoration = allChecked ? 'line-through' : 'none';
-	   }
-
-	   function initializeCheckboxes(checkboxes, label) {
-	       checkboxes.forEach(checkbox => {
-	           checkbox.addEventListener('change', function() {
-	               updateStyle(checkboxes, label);
-	           });
-	       });
-	       updateStyle(checkboxes, label);
-	   }
-	   initializeCheckboxes(completepokedexCheckboxes, document.querySelector('.completepokedex .title label'));
-	   initializeCheckboxes(legendariesCheckboxes, document.querySelector('.legendaries .title label'));
-	   initializeCheckboxes(giftpokemonCheckboxes, document.querySelector('.giftpokemon .title label'));
-	   initializeCheckboxes(ingametradesCheckboxes, document.querySelector('.ingametrades .title label'));
-	   initializeCheckboxes(unownCheckboxes, document.querySelector('.unown .title label'));
-	   initializeCheckboxes(battlesCheckboxes, document.querySelector('.battles .title label'));
-	   initializeCheckboxes(itemsCheckboxes, document.querySelector('.items .title label'));
-
-	});
-	</script>
-</body>
+        function initializeCheckboxes(checkboxes, label) {
+          checkboxes.forEach((checkbox) => {
+            checkbox.addEventListener('change', function () {
+              updateStyle(checkboxes, label);
+            });
+          });
+          updateStyle(checkboxes, label);
+        }
+        initializeCheckboxes(
+          completepokedexCheckboxes,
+          document.querySelector('.completepokedex .title label')
+        );
+        initializeCheckboxes(
+          legendariesCheckboxes,
+          document.querySelector('.legendaries .title label')
+        );
+        initializeCheckboxes(
+          giftpokemonCheckboxes,
+          document.querySelector('.giftpokemon .title label')
+        );
+        initializeCheckboxes(
+          ingametradesCheckboxes,
+          document.querySelector('.ingametrades .title label')
+        );
+        initializeCheckboxes(
+          unownCheckboxes,
+          document.querySelector('.unown .title label')
+        );
+        initializeCheckboxes(
+          battlesCheckboxes,
+          document.querySelector('.battles .title label')
+        );
+        initializeCheckboxes(
+          itemsCheckboxes,
+          document.querySelector('.items .title label')
+        );
+      });
+    </script>
+  </body>
 </html>

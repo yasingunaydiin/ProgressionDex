@@ -1,343 +1,960 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta content="width=device-width, initial-scale=1.0" name="viewport">
-	<title>Progression Dex | Gold and Silver</title>
-	<link href="../checklists/css/goldsilver.css" rel="stylesheet">
-	<link href="../output.css" rel="stylesheet">
-	<link href="../images/icons/favicontab.ico" rel="icon" type="image/x-icon">
-	<link href="../images/icons/favicontab.ico" rel="shortcut icon" type="image/x-icon">
-	<meta name="description" content="A tool for tracking your progression in Pokemon games. Easily choose between games and track your game progress.">
-	<meta name="keywords" content="pokemon, checklist, pokedex, progress, completion, speedrun, checklist, check list, locations, characters, games, game">
-</head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4PDLXC895H"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Progression Dex | Gold and Silver</title>
+    <link href="../checklists/css/goldsilver.css" rel="stylesheet" />
+    <link href="../output.css" rel="stylesheet" />
+    <link
+      href="../images/icons/favicontab.ico"
+      rel="icon"
+      type="image/x-icon"
+    />
+    <link
+      href="../images/icons/favicontab.ico"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
+    <meta
+      name="description"
+      content="A tool for tracking your progression in Pokemon games. Easily choose between games and track your game progress."
+    />
+    <meta
+      name="keywords"
+      content="pokemon, checklist, pokedex, progress, completion, speedrun, checklist, check list, locations, characters, games, game"
+    />
+  </head>
+  <!-- Google tag (gtag.js) -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-4PDLXC895H"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
 
-  gtag('config', 'G-4PDLXC895H');
-</script>
-<body>
-	<div class="navbar bg-white rounded-3xl shadow-lg mt-2 fixed top-0 flex items-center justify-between" style="width: 95%;  z-index: 1000; left: 50%; transform: translateX(-50%);">
-		<div class="flex items-center gap-4">
-		  <a href="../index.html" class="btn btn-ghost text-2xl"><span class="title">Progression Dex |</span></a>
-		  <div class="flex items-center gap-2">
-			<img id="gold-logo" src="../images/logos/gold-logo.webp" class="w-20">
-			<img id="silver-logo" src="../images/logos/silver-logo.webp" class="w-20">
-		  </div>
-		</div>
-		
-	  </div>
-	<div class="page-container" data-game="goldsilver">
-		<div class="page-container-left">
-			<div class="wide-panel pokedex">
-				<label class="panel-label">Pokédex</label>
-				<div class="completepokedex">
-					<div class="checkbox-item">
-						<span class="title"><label class="text-lg">Complete the Johto Pokédex</label></span>
-					</div>
-					<div class="checkbox-item">
-						<input id="goldsilver-checkbox-trade" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Trade them from Gold/Silver." for="goldsilver-checkbox-trade">Trade all version exclusives</label>
-					</div>
-					<div class="checkbox-item">
-						<input id="goldsilver-checkbox-diploma" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="After catching all Pokemon, go to the Game Freak Headquarters in Celadon Condominiums and speak with the lead developer." for="goldsilver-checkbox-diploma">Get Diploma</label>
-					</div>
-				</div>
-				<div class="legendaries">
-					<div class="checkbox-item">
-						<span class="title"><label class="text-lg">Catch the Legendaries</label></span>
-					</div>
-					<div class="legendaries-rowcontainer">
-						<div class="legendaries-leftrow">
-							<div class="checkbox-item">
-								<input id="goldsilver-checkbox-lugia" type="checkbox"> <img class="pokeicon" src="../images/icons/pokemon/gen2/goldsilver/lugia.png"> <label class="text-sm lg:tooltip" data-tip="If you have a Silver Wing, go to the Whirl Islands." for="goldsilver-checkbox-lugia"><span style="color: #CCE4EB;">Lugia</span></label><label class="text-sm lg:tooltip" data-tip="In Pokemon Gold, the Silver Wing is obtained from an old man in Pewter City."><img class="icon-small" src="../images/icons/miscellaneous/other/moreinfo.png"></label>
-							</div>
-							<div class="checkbox-item">
-								<input id="goldsilver-checkbox-ho-oh" type="checkbox"> <img class="pokeicon" src="../images/icons/pokemon/gen2/goldsilver/ho-oh.png"> <label  class="text-sm lg:tooltip" data-tip="If you have a Rainbow Wing, go to the Tin Tower." for="goldsilver-checkbox-ho-oh"><span style="color: #E3C07D;">Ho-oh</span></label><label class="text-sm lg:tooltip" data-tip="In Silver, you'll need to go to Pewter City to get it from an old man."><img class="icon-small" src="../images/icons/miscellaneous/other/moreinfo.png"></label>
-							</div>
-						</div>
-						<div class="legendaries-rightrow">
-							<div class="checkbox-item">
-								<input id="goldsilver-checkbox-raikou" type="checkbox"> <img class="pokeicon" src="../images/icons/pokemon/gen2/goldsilver/raikou.png"> <label class="text-sm lg:tooltip" data-tip="You will be able to catch Raikou west of the map." for="goldsilver-checkbox-raikou">Raikou</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="goldsilver-checkbox-entei" type="checkbox"> <img class="pokeicon" src="../images/icons/pokemon/gen2/goldsilver/entei.png"> <label class="text-sm lg:tooltip" data-tip="You will be able to catch Entei north of the map." for="goldsilver-checkbox-entei">Entei</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="goldsilver-checkbox-suicune" type="checkbox"> <img class="pokeicon" src="../images/icons/pokemon/gen2/goldsilver/suicune.png"> <label class="text-sm lg:tooltip" data-tip="You will be able to catch Raikou east of the map." for="goldsilver-checkbox-suicune">Suicune</label>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="giftpokemon">
-					<div class="checkbox-item">
-						<span class="title"><label class="text-lg">Obtain all In-Game Gift Pokemon</label></span>
-					</div>
-					<div class="giftpokemon-rowcontainer">
-						<div class="giftpokemon-leftrow">
-							<div class="checkbox-item">
-								<input id="goldsilver-checkbox-spearow" type="checkbox"> <img class="pokeicon" src="../images/icons/pokemon/gen2/goldsilver/spearow.png"> <label class="text-sm lg:tooltip" data-tip="Route 35 South Gate." for="goldsilver-checkbox-spearow">Spearow</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="goldsilver-checkbox-eevee" type="checkbox"> <img class="pokeicon" src="../images/icons/pokemon/gen2/goldsilver/eevee.png"> <label class="text-sm lg:tooltip" data-tip="Bill's house in Goldenrod City." for="goldsilver-checkbox-eevee">Eevee</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="goldsilver-checkbox-togepi" type="checkbox"> <img class="pokeicon" src="../images/icons/pokemon/gen2/goldsilver/togepi.png"> <label class="text-sm lg:tooltip" data-tip="Violet City - Pokemon Center." for="goldsilver-checkbox-togepi">Togepi</label>
-							</div>
-						</div>
-						<div class="giftpokemon-rightrow">
-							<div class="checkbox-item">
-								<input id="goldsilver-checkbox-shuckle" type="checkbox"> <img class="pokeicon" src="../images/icons/pokemon/gen2/goldsilver/shuckle.png"> <label class="text-sm lg:tooltip" data-tip="Cianwood City." for="goldsilver-checkbox-shuckle">Shuckle</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="goldsilver-checkbox-tyrogue" type="checkbox"> <img class="pokeicon" src="../images/icons/pokemon/gen2/goldsilver/tyrogue.png"> <label class="text-sm lg:tooltip" data-tip="Mt. Mortar B1F." for="goldsilver-checkbox-tyrogue">Tyrogue</label>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="ingametrades">
-					<div class="checkbox-item">
-						<span class="title"><label class="text-lg">Complete all In-Game Trades</label></span>
-					</div>
-					<div class="ingametrades-rowcontainer">
-						<div class="ingametrades-leftrow">
-							<div class="checkbox-item">
-								<input id="goldsilver-checkbox-bellsprout-onix" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="House in Violet City." for="goldsilver-checkbox-bellsprout-onix">Bellsprout for Onix</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="goldsilver-checkbox-drowzee-machop" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Goldenrod City - Department Store." for="goldsilver-checkbox-drowzee-machop">Drowzee for Machop</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="goldsilver-checkbox-krabby-voltorb" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Olivine City." for="goldsilver-checkbox-krabby-voltorb">Krabby for Voltorb</label>
-							</div>
-						</div>
-						<div class="ingametrades-rightrow">
-							<div class="checkbox-item">
-								<input id="goldsilver-checkbox-dragonair-rhydon" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Blackthorn City." for="goldsilver-checkbox-dragonair-rhydon">Dragonair<label id="female">♀</label> for Rhydon</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="goldsilver-checkbox-gloom-rapidash" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Pewter City." for="goldsilver-checkbox-gloom-rapidash">Gloom for Rapidash</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="goldsilver-checkbox-chansey-aerodactyl" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Route 14." for="goldsilver-checkbox-chansey-aerodactyl">Chansey for Aerodactyl</label>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="unown">
-					<div class="checkbox-item">
-						<span class="title"><label class="text-lg">Catch all Unown's</label></span>
-					</div>
-					<div class="unown-rowcontainer">
-						<div class="unown-leftrow">
-							<div class="checkbox-item">
-								<input id="goldsilver-checkbox-a" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen2/unown/unown-a.PNG"> <label class="text-sm lg:tooltip" data-tip="Northeast." for="goldsilver-checkbox-a">A</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="goldsilver-checkbox-b" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen2/unown/unown-b.png"> <label class="text-sm lg:tooltip" data-tip="Northeast." for="goldsilver-checkbox-b">B</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="goldsilver-checkbox-c" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen2/unown/unown-c.png"> <label class="text-sm lg:tooltip" data-tip="Northeast." for="goldsilver-checkbox-c">C</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="goldsilver-checkbox-d" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen2/unown/unown-d.png"> <label class="text-sm lg:tooltip" data-tip="Northeast." for="goldsilver-checkbox-d">D</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="goldsilver-checkbox-e" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen2/unown/unown-e.png"> <label class="text-sm lg:tooltip" data-tip="Northeast." for="goldsilver-checkbox-e">E</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="goldsilver-checkbox-f" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen2/unown/unown-f.png"> <label class="text-sm lg:tooltip" data-tip="Northeast." for="goldsilver-checkbox-f">F</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="goldsilver-checkbox-g" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen2/unown/unown-g.png"> <label class="text-sm lg:tooltip" data-tip="Northeast." for="goldsilver-checkbox-g">G</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="goldsilver-checkbox-h" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen2/unown/unown-h.png"> <label class="text-sm lg:tooltip" data-tip="Northeast." for="goldsilver-checkbox-h">H</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="goldsilver-checkbox-i" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen2/unown/unown-i.png"> <label class="text-sm lg:tooltip" data-tip="Northeast." for="goldsilver-checkbox-i">I</label>
-							</div>
-						</div>
-						<div class="unown-middlerow">
-							<div class="checkbox-item">
-								<input id="goldsilver-checkbox-j" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen2/unown/unown-j.png"> <label class="text-sm lg:tooltip" data-tip="Northeast." for="goldsilver-checkbox-j">J</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="goldsilver-checkbox-k" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen2/unown/unown-k.png"> <label class="text-sm lg:tooltip" data-tip="Northeast." for="goldsilver-checkbox-k">K</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="goldsilver-checkbox-l" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen2/unown/unown-l.png"> <label class="text-sm lg:tooltip" data-tip="Southwest." for="goldsilver-checkbox-l">L</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="goldsilver-checkbox-m" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen2/unown/unown-m.png"> <label class="text-sm lg:tooltip" data-tip="Southwest." for="goldsilver-checkbox-m">M</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="goldsilver-checkbox-n" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen2/unown/unown-n.png"> <label class="text-sm lg:tooltip" data-tip="Southwest." for="goldsilver-checkbox-n">N</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="goldsilver-checkbox-o" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen2/unown/unown-o.png"> <label class="text-sm lg:tooltip" data-tip="Southwest." for="goldsilver-checkbox-o">O</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="goldsilver-checkbox-p" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen2/unown/unown-p.png"> <label class="text-sm lg:tooltip" data-tip="Southwest." for="goldsilver-checkbox-p">P</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="goldsilver-checkbox-q" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen2/unown/unown-q.png"> <label class="text-sm lg:tooltip" data-tip="Southwest." for="goldsilver-checkbox-q">Q</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="goldsilver-checkbox-r" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen2/unown/unown-r.png"> <label class="text-sm lg:tooltip" data-tip="Southwest." for="goldsilver-checkbox-r">R</label>
-							</div>
-						</div>
-						<div class="unown-rightrow">
-							<div class="checkbox-item">
-								<input id="goldsilver-checkbox-s" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen2/unown/unown-s.png"> <label class="text-sm lg:tooltip" data-tip="Southeast." for="goldsilver-checkbox-s">S</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="goldsilver-checkbox-t" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen2/unown/unown-t.png"> <label class="text-sm lg:tooltip" data-tip="Southeast." for="goldsilver-checkbox-t">T</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="goldsilver-checkbox-u" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen2/unown/unown-u.png"> <label class="text-sm lg:tooltip" data-tip="Southeast." for="goldsilver-checkbox-u">U</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="goldsilver-checkbox-v" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen2/unown/unown-v.png"> <label class="text-sm lg:tooltip" data-tip="Southeast." for="goldsilver-checkbox-v">V</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="goldsilver-checkbox-w" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen2/unown/unown-w.png"> <label class="text-sm lg:tooltip" data-tip="Southeast." for="goldsilver-checkbox-w">W</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="goldsilver-checkbox-x" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen2/unown/unown-x.png"> <label class="text-sm lg:tooltip" data-tip="Northwestern." for="goldsilver-checkbox-x">X</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="goldsilver-checkbox-y" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen2/unown/unown-y.png"> <label class="text-sm lg:tooltip" data-tip="Northwestern." for="goldsilver-checkbox-y">Y</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="goldsilver-checkbox-z" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen2/unown/unown-z.png"> <label class="text-sm lg:tooltip" data-tip="Northwestern." for="goldsilver-checkbox-z">Z</label>
-							</div>
-						</div>
-					</div>
-					<div class="battle">
-						<div class="checkbox-item">
-							<span class="title"><label class="text-lg">Battle</label></span>
-						</div>
-						<div class="checkbox-item">
-							<input id="goldsilver-checkbox-defeatred" type="checkbox"> <img class="pokeicon" src="../images/icons/miscellaneous/gen2/Spr_GS_Red.png"> <label class="text-sm lg:tooltip" data-tip="You can find red in Silver Cave after getting all 16 badges." for="goldsilver-checkbox-defeatred">Defeat Red</label>
-						</div>
-					</div>
-					<div class="items">
-						<div class="checkbox-item">
-							<span class="title"><label class="text-lg">Items</label></span>
-						</div>
-						
-						<div class="checkbox-item">
-							<input id="goldsilver-checkbox-alltms" type="checkbox"> <img class="pokeicon item" src="../images/icons/inventory/tms/normal.png"> <label class="text-sm lg:tooltip" data-tip="Find all TM's." for="goldsilver-checkbox-alltms">Collect all TM's</label>
-						</div>
-	
-					</div>
-	
-				</div>
-			</div>
-			
-		</div>
-	</div>
-		<div class="page-container-right hidden">
-			<div class="wide-panel collectibles">
-				<label class="panel-label">Collectibles</label>
+    gtag('config', 'G-4PDLXC895H');
+  </script>
+  <body>
+    <div
+      class="navbar bg-white rounded-3xl shadow-lg mt-2 fixed top-0 flex items-center justify-between"
+      style="width: 95%; z-index: 1000; left: 50%; transform: translateX(-50%)"
+    >
+      <div class="flex items-center gap-4">
+        <a href="../index.html" class="btn btn-ghost text-2xl"
+          ><span class="title">Progression Dex |</span></a
+        >
+        <div class="flex items-center gap-2">
+          <img
+            alt="Logo of Pokemon Gold"
+            src="id"
+            ="gold-logo"
+            src="../images/logos/gold-logo.webp"
+            class="w-20"
+          />
+          <img
+            alt="Logo of Pokemon Silver"
+            src="id"
+            ="silver-logo"
+            src="../images/logos/silver-logo.webp"
+            class="w-20"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="page-container" data-game="goldsilver">
+      <div class="page-container-left">
+        <div class="wide-panel pokedex">
+          <label class="panel-label">Pokédex</label>
+          <div class="completepokedex">
+            <div class="checkbox-item">
+              <span class="title"
+                ><label class="text-lg">Complete the Johto Pokédex</label></span
+              >
+            </div>
+            <div class="checkbox-item">
+              <input id="goldsilver-checkbox-trade" type="checkbox" />
+              <label
+                class="text-sm lg:tooltip"
+                data-tip="Trade them from Gold/Silver."
+                for="goldsilver-checkbox-trade"
+                >Trade all version exclusives</label
+              >
+            </div>
+            <div class="checkbox-item">
+              <input id="goldsilver-checkbox-diploma" type="checkbox" />
+              <label
+                class="text-sm lg:tooltip"
+                data-tip="After catching all Pokemon, go to the Game Freak Headquarters in Celadon Condominiums and speak with the lead developer."
+                for="goldsilver-checkbox-diploma"
+                >Get Diploma</label
+              >
+            </div>
+          </div>
+          <div class="legendaries">
+            <div class="checkbox-item">
+              <span class="title"
+                ><label class="text-lg">Catch the Legendaries</label></span
+              >
+            </div>
+            <div class="legendaries-rowcontainer">
+              <div class="legendaries-leftrow">
+                <div class="checkbox-item">
+                  <input id="goldsilver-checkbox-lugia" type="checkbox" />
+                  <img
+                    alt="Icon of Lugia"
+                    src="class"
+                    ="pokeicon"
+                    src="../images/icons/pokemon/gen2/goldsilver/lugia.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="If you have a Silver Wing, go to the Whirl Islands."
+                    for="goldsilver-checkbox-lugia"
+                    ><span style="color: #cce4eb">Lugia</span></label
+                  ><label
+                    class="text-sm lg:tooltip"
+                    data-tip="In Pokemon Gold, the Silver Wing is obtained from an old man in Pewter City."
+                    ><img
+                      alt="Icon of Bulbasaur"
+                      src="class"
+                      ="icon-small"
+                      src="../images/icons/miscellaneous/other/moreinfo.png"
+                  /></label>
+                </div>
+                <div class="checkbox-item">
+                  <input id="goldsilver-checkbox-ho-oh" type="checkbox" />
+                  <img
+                    alt="Icon of Ho Oh"
+                    src="class"
+                    ="pokeicon"
+                    src="../images/icons/pokemon/gen2/goldsilver/ho-oh.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="If you have a Rainbow Wing, go to the Tin Tower."
+                    for="goldsilver-checkbox-ho-oh"
+                    ><span style="color: #e3c07d">Ho-oh</span></label
+                  ><label
+                    class="text-sm lg:tooltip"
+                    data-tip="In Silver, you'll need to go to Pewter City to get it from an old man."
+                    ><img
+                      alt="Icon of Bulbasaur"
+                      src="class"
+                      ="icon-small"
+                      src="../images/icons/miscellaneous/other/moreinfo.png"
+                  /></label>
+                </div>
+              </div>
+              <div class="legendaries-rightrow">
+                <div class="checkbox-item">
+                  <input id="goldsilver-checkbox-raikou" type="checkbox" />
+                  <img
+                    alt="Icon of Raikou"
+                    src="class"
+                    ="pokeicon"
+                    src="../images/icons/pokemon/gen2/goldsilver/raikou.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="You will be able to catch Raikou west of the map."
+                    for="goldsilver-checkbox-raikou"
+                    >Raikou</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="goldsilver-checkbox-entei" type="checkbox" />
+                  <img
+                    alt="Icon of Entei"
+                    src="class"
+                    ="pokeicon"
+                    src="../images/icons/pokemon/gen2/goldsilver/entei.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="You will be able to catch Entei north of the map."
+                    for="goldsilver-checkbox-entei"
+                    >Entei</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="goldsilver-checkbox-suicune" type="checkbox" />
+                  <img
+                    alt="Icon of Suicune"
+                    src="class"
+                    ="pokeicon"
+                    src="../images/icons/pokemon/gen2/goldsilver/suicune.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="You will be able to catch Raikou east of the map."
+                    for="goldsilver-checkbox-suicune"
+                    >Suicune</label
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="giftpokemon">
+            <div class="checkbox-item">
+              <span class="title"
+                ><label class="text-lg"
+                  >Obtain all In-Game Gift Pokemon</label
+                ></span
+              >
+            </div>
+            <div class="giftpokemon-rowcontainer">
+              <div class="giftpokemon-leftrow">
+                <div class="checkbox-item">
+                  <input id="goldsilver-checkbox-spearow" type="checkbox" />
+                  <img
+                    alt="Icon of Spearow"
+                    src="class"
+                    ="pokeicon"
+                    src="../images/icons/pokemon/gen2/goldsilver/spearow.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Route 35 South Gate."
+                    for="goldsilver-checkbox-spearow"
+                    >Spearow</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="goldsilver-checkbox-eevee" type="checkbox" />
+                  <img
+                    alt="Icon of Eevee"
+                    src="class"
+                    ="pokeicon"
+                    src="../images/icons/pokemon/gen2/goldsilver/eevee.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Bill's house in Goldenrod City."
+                    for="goldsilver-checkbox-eevee"
+                    >Eevee</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="goldsilver-checkbox-togepi" type="checkbox" />
+                  <img
+                    alt="Icon of Togepi"
+                    src="class"
+                    ="pokeicon"
+                    src="../images/icons/pokemon/gen2/goldsilver/togepi.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Violet City - Pokemon Center."
+                    for="goldsilver-checkbox-togepi"
+                    >Togepi</label
+                  >
+                </div>
+              </div>
+              <div class="giftpokemon-rightrow">
+                <div class="checkbox-item">
+                  <input id="goldsilver-checkbox-shuckle" type="checkbox" />
+                  <img
+                    alt="Icon of Shuckle"
+                    src="class"
+                    ="pokeicon"
+                    src="../images/icons/pokemon/gen2/goldsilver/shuckle.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Cianwood City."
+                    for="goldsilver-checkbox-shuckle"
+                    >Shuckle</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="goldsilver-checkbox-tyrogue" type="checkbox" />
+                  <img
+                    alt="Icon of Tyrogue"
+                    src="class"
+                    ="pokeicon"
+                    src="../images/icons/pokemon/gen2/goldsilver/tyrogue.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Mt. Mortar B1F."
+                    for="goldsilver-checkbox-tyrogue"
+                    >Tyrogue</label
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ingametrades">
+            <div class="checkbox-item">
+              <span class="title"
+                ><label class="text-lg"
+                  >Complete all In-Game Trades</label
+                ></span
+              >
+            </div>
+            <div class="ingametrades-rowcontainer">
+              <div class="ingametrades-leftrow">
+                <div class="checkbox-item">
+                  <input
+                    id="goldsilver-checkbox-bellsprout-onix"
+                    type="checkbox"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="House in Violet City."
+                    for="goldsilver-checkbox-bellsprout-onix"
+                    >Bellsprout for Onix</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="goldsilver-checkbox-drowzee-machop"
+                    type="checkbox"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Goldenrod City - Department Store."
+                    for="goldsilver-checkbox-drowzee-machop"
+                    >Drowzee for Machop</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="goldsilver-checkbox-krabby-voltorb"
+                    type="checkbox"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Olivine City."
+                    for="goldsilver-checkbox-krabby-voltorb"
+                    >Krabby for Voltorb</label
+                  >
+                </div>
+              </div>
+              <div class="ingametrades-rightrow">
+                <div class="checkbox-item">
+                  <input
+                    id="goldsilver-checkbox-dragonair-rhydon"
+                    type="checkbox"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Blackthorn City."
+                    for="goldsilver-checkbox-dragonair-rhydon"
+                    >Dragonair<label id="female">♀</label> for Rhydon</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="goldsilver-checkbox-gloom-rapidash"
+                    type="checkbox"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Pewter City."
+                    for="goldsilver-checkbox-gloom-rapidash"
+                    >Gloom for Rapidash</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="goldsilver-checkbox-chansey-aerodactyl"
+                    type="checkbox"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Route 14."
+                    for="goldsilver-checkbox-chansey-aerodactyl"
+                    >Chansey for Aerodactyl</label
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="unown">
+            <div class="checkbox-item">
+              <span class="title"
+                ><label class="text-lg">Catch all Unown's</label></span
+              >
+            </div>
+            <div class="unown-rowcontainer">
+              <div class="unown-leftrow">
+                <div class="checkbox-item">
+                  <input id="goldsilver-checkbox-a" type="checkbox" />
+                  <img
+                    alt="Icon of Unown"
+                    src="class"
+                    ="pokeicon unown"
+                    src="../images/icons/pokemon/gen2/unown/unown-a.PNG"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Northeast."
+                    for="goldsilver-checkbox-a"
+                    >A</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="goldsilver-checkbox-b" type="checkbox" />
+                  <img
+                    alt="Icon of Unown"
+                    src="class"
+                    ="pokeicon unown"
+                    src="../images/icons/pokemon/gen2/unown/unown-b.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Northeast."
+                    for="goldsilver-checkbox-b"
+                    >B</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="goldsilver-checkbox-c" type="checkbox" />
+                  <img
+                    alt="Icon of Unown"
+                    src="class"
+                    ="pokeicon unown"
+                    src="../images/icons/pokemon/gen2/unown/unown-c.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Northeast."
+                    for="goldsilver-checkbox-c"
+                    >C</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="goldsilver-checkbox-d" type="checkbox" />
+                  <img
+                    alt="Icon of Unown"
+                    src="class"
+                    ="pokeicon unown"
+                    src="../images/icons/pokemon/gen2/unown/unown-d.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Northeast."
+                    for="goldsilver-checkbox-d"
+                    >D</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="goldsilver-checkbox-e" type="checkbox" />
+                  <img
+                    alt="Icon of Unown"
+                    src="class"
+                    ="pokeicon unown"
+                    src="../images/icons/pokemon/gen2/unown/unown-e.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Northeast."
+                    for="goldsilver-checkbox-e"
+                    >E</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="goldsilver-checkbox-f" type="checkbox" />
+                  <img
+                    alt="Icon of Unown"
+                    src="class"
+                    ="pokeicon unown"
+                    src="../images/icons/pokemon/gen2/unown/unown-f.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Northeast."
+                    for="goldsilver-checkbox-f"
+                    >F</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="goldsilver-checkbox-g" type="checkbox" />
+                  <img
+                    alt="Icon of Unown"
+                    src="class"
+                    ="pokeicon unown"
+                    src="../images/icons/pokemon/gen2/unown/unown-g.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Northeast."
+                    for="goldsilver-checkbox-g"
+                    >G</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="goldsilver-checkbox-h" type="checkbox" />
+                  <img
+                    alt="Icon of Unown"
+                    src="class"
+                    ="pokeicon unown"
+                    src="../images/icons/pokemon/gen2/unown/unown-h.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Northeast."
+                    for="goldsilver-checkbox-h"
+                    >H</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="goldsilver-checkbox-i" type="checkbox" />
+                  <img
+                    alt="Icon of Unown"
+                    src="class"
+                    ="pokeicon unown"
+                    src="../images/icons/pokemon/gen2/unown/unown-i.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Northeast."
+                    for="goldsilver-checkbox-i"
+                    >I</label
+                  >
+                </div>
+              </div>
+              <div class="unown-middlerow">
+                <div class="checkbox-item">
+                  <input id="goldsilver-checkbox-j" type="checkbox" />
+                  <img
+                    alt="Icon of Unown"
+                    src="class"
+                    ="pokeicon unown"
+                    src="../images/icons/pokemon/gen2/unown/unown-j.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Northeast."
+                    for="goldsilver-checkbox-j"
+                    >J</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="goldsilver-checkbox-k" type="checkbox" />
+                  <img
+                    alt="Icon of Unown"
+                    src="class"
+                    ="pokeicon unown"
+                    src="../images/icons/pokemon/gen2/unown/unown-k.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Northeast."
+                    for="goldsilver-checkbox-k"
+                    >K</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="goldsilver-checkbox-l" type="checkbox" />
+                  <img
+                    alt="Icon of Unown"
+                    src="class"
+                    ="pokeicon unown"
+                    src="../images/icons/pokemon/gen2/unown/unown-l.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Southwest."
+                    for="goldsilver-checkbox-l"
+                    >L</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="goldsilver-checkbox-m" type="checkbox" />
+                  <img
+                    alt="Icon of Unown"
+                    src="class"
+                    ="pokeicon unown"
+                    src="../images/icons/pokemon/gen2/unown/unown-m.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Southwest."
+                    for="goldsilver-checkbox-m"
+                    >M</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="goldsilver-checkbox-n" type="checkbox" />
+                  <img
+                    alt="Icon of Unown"
+                    src="class"
+                    ="pokeicon unown"
+                    src="../images/icons/pokemon/gen2/unown/unown-n.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Southwest."
+                    for="goldsilver-checkbox-n"
+                    >N</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="goldsilver-checkbox-o" type="checkbox" />
+                  <img
+                    alt="Icon of Unown"
+                    src="class"
+                    ="pokeicon unown"
+                    src="../images/icons/pokemon/gen2/unown/unown-o.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Southwest."
+                    for="goldsilver-checkbox-o"
+                    >O</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="goldsilver-checkbox-p" type="checkbox" />
+                  <img
+                    alt="Icon of Unown"
+                    src="class"
+                    ="pokeicon unown"
+                    src="../images/icons/pokemon/gen2/unown/unown-p.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Southwest."
+                    for="goldsilver-checkbox-p"
+                    >P</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="goldsilver-checkbox-q" type="checkbox" />
+                  <img
+                    alt="Icon of Unown"
+                    src="class"
+                    ="pokeicon unown"
+                    src="../images/icons/pokemon/gen2/unown/unown-q.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Southwest."
+                    for="goldsilver-checkbox-q"
+                    >Q</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="goldsilver-checkbox-r" type="checkbox" />
+                  <img
+                    alt="Icon of Unown"
+                    src="class"
+                    ="pokeicon unown"
+                    src="../images/icons/pokemon/gen2/unown/unown-r.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Southwest."
+                    for="goldsilver-checkbox-r"
+                    >R</label
+                  >
+                </div>
+              </div>
+              <div class="unown-rightrow">
+                <div class="checkbox-item">
+                  <input id="goldsilver-checkbox-s" type="checkbox" />
+                  <img
+                    alt="Icon of Unown"
+                    src="class"
+                    ="pokeicon unown"
+                    src="../images/icons/pokemon/gen2/unown/unown-s.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Southeast."
+                    for="goldsilver-checkbox-s"
+                    >S</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="goldsilver-checkbox-t" type="checkbox" />
+                  <img
+                    alt="Icon of Unown"
+                    src="class"
+                    ="pokeicon unown"
+                    src="../images/icons/pokemon/gen2/unown/unown-t.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Southeast."
+                    for="goldsilver-checkbox-t"
+                    >T</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="goldsilver-checkbox-u" type="checkbox" />
+                  <img
+                    alt="Icon of Unown"
+                    src="class"
+                    ="pokeicon unown"
+                    src="../images/icons/pokemon/gen2/unown/unown-u.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Southeast."
+                    for="goldsilver-checkbox-u"
+                    >U</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="goldsilver-checkbox-v" type="checkbox" />
+                  <img
+                    alt="Icon of Unown"
+                    src="class"
+                    ="pokeicon unown"
+                    src="../images/icons/pokemon/gen2/unown/unown-v.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Southeast."
+                    for="goldsilver-checkbox-v"
+                    >V</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="goldsilver-checkbox-w" type="checkbox" />
+                  <img
+                    alt="Icon of Unown"
+                    src="class"
+                    ="pokeicon unown"
+                    src="../images/icons/pokemon/gen2/unown/unown-w.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Southeast."
+                    for="goldsilver-checkbox-w"
+                    >W</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="goldsilver-checkbox-x" type="checkbox" />
+                  <img
+                    alt="Icon of Unown"
+                    src="class"
+                    ="pokeicon unown"
+                    src="../images/icons/pokemon/gen2/unown/unown-x.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Northwestern."
+                    for="goldsilver-checkbox-x"
+                    >X</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="goldsilver-checkbox-y" type="checkbox" />
+                  <img
+                    alt="Icon of Unown"
+                    src="class"
+                    ="pokeicon unown"
+                    src="../images/icons/pokemon/gen2/unown/unown-y.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Northwestern."
+                    for="goldsilver-checkbox-y"
+                    >Y</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="goldsilver-checkbox-z" type="checkbox" />
+                  <img
+                    alt="Icon of Unown"
+                    src="class"
+                    ="pokeicon unown"
+                    src="../images/icons/pokemon/gen2/unown/unown-z.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Northwestern."
+                    for="goldsilver-checkbox-z"
+                    >Z</label
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="battle">
+              <div class="checkbox-item">
+                <span class="title"><label class="text-lg">Battle</label></span>
+              </div>
+              <div class="checkbox-item">
+                <input id="goldsilver-checkbox-defeatred" type="checkbox" />
+                <img
+                  alt="Icon of Red"
+                  src="class"
+                  ="pokeicon"
+                  src="../images/icons/miscellaneous/gen2/Spr_GS_Red.png"
+                />
+                <label
+                  class="text-sm lg:tooltip"
+                  data-tip="You can find red in Silver Cave after getting all 16 badges."
+                  for="goldsilver-checkbox-defeatred"
+                  >Defeat Red</label
+                >
+              </div>
+            </div>
+            <div class="items">
+              <div class="checkbox-item">
+                <span class="title"><label class="text-lg">Items</label></span>
+              </div>
 
-			</div>
-		</div>
-	
-	<footer>
-		<ul>
-			<li>
-				<a href="../index.html">Progression Dex</a>
-			</li>
-			<li>
-				<a href="#">Twitter</a>
-			</li>
-			<li>
-				<a href="https://github.com/yasingunaydiin">GitHub</a>
-			</li>
-		</ul>
-	</footer>
-	<script src="../checklists/js/script.js">
-	</script> 
-	<script>
-	      document.addEventListener("DOMContentLoaded", function() {
-	      var goldLogo = document.getElementById("gold-logo");
-	      var silverLogo = document.getElementById("silver-logo");
-	      
-	      var headerTitle = document.querySelector(".title");
-	      var widePanels = document.querySelectorAll(".wide-panel");
-	      var footer = document.querySelector("footer");
-	      var titleText = document.querySelectorAll(".panel-label");
-	      var backgroundIcons = document.querySelector("body");
+              <div class="checkbox-item">
+                <input id="goldsilver-checkbox-alltms" type="checkbox" />
+                <img
+                  alt="Icon of TM"
+                  src="class"
+                  ="pokeicon item"
+                  src="../images/icons/inventory/tms/normal.png"
+                />
+                <label
+                  class="text-sm lg:tooltip"
+                  data-tip="Find all TM's."
+                  for="goldsilver-checkbox-alltms"
+                  >Collect all TM's</label
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page-container-right hidden">
+      <div class="wide-panel collectibles">
+        <label class="panel-label">Collectibles</label>
+      </div>
+    </div>
 
+    <footer>
+      <ul>
+        <li>
+          <a href="../index.html">Progression Dex</a>
+        </li>
+        <li>
+          <a href="#">Twitter</a>
+        </li>
+        <li>
+          <a href="https://github.com/yasingunaydiin">GitHub</a>
+        </li>
+      </ul>
+    </footer>
+    <script src="../checklists/js/script.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var goldLogo = document.getElementById('gold-logo');
+        var silverLogo = document.getElementById('silver-logo');
 
-	      goldLogo.addEventListener("click", function() {
-			headerTitle.style.color = "#E3C07D";
-	          footer.style.background = "#E3C07D";
-	          backgroundIcons.style.backgroundImage = 'url(../../images/patterns/pattern-gold.png)';
+        var headerTitle = document.querySelector('.title');
+        var widePanels = document.querySelectorAll('.wide-panel');
+        var footer = document.querySelector('footer');
+        var titleText = document.querySelectorAll('.panel-label');
+        var backgroundIcons = document.querySelector('body');
 
-	          titleText.forEach(function(text) {
-	              text.style.color = "#E3C07D";
-	          });
+        goldLogo.addEventListener('click', function () {
+          headerTitle.style.color = '#E3C07D';
+          footer.style.background = '#E3C07D';
+          backgroundIcons.style.backgroundImage =
+            'url(../../images/patterns/pattern-gold.png)';
 
-	          widePanels.forEach(function(panel) {
-	              panel.style.border = "2px solid #E3C07D";
-	          });
-	      });
+          titleText.forEach(function (text) {
+            text.style.color = '#E3C07D';
+          });
 
-	      silverLogo.addEventListener("click", function() {
-			headerTitle.style.color = "#CCE4EB";
-	          footer.style.background = "#CCE4EB";
-	          backgroundIcons.style.backgroundImage = 'url(../../images/patterns/pattern-silver.png)';
+          widePanels.forEach(function (panel) {
+            panel.style.border = '2px solid #E3C07D';
+          });
+        });
 
-	          titleText.forEach(function(text) {
-	              text.style.color = "#CCE4EB";
-	          });
+        silverLogo.addEventListener('click', function () {
+          headerTitle.style.color = '#CCE4EB';
+          footer.style.background = '#CCE4EB';
+          backgroundIcons.style.backgroundImage =
+            'url(../../images/patterns/pattern-silver.png)';
 
-	          widePanels.forEach(function(panel) {
-	              panel.style.border = "2px solid #CCE4EB";
-	          });
-	      });
-	   });
-	</script> 
-	<script>
-	       document.addEventListener('DOMContentLoaded', function() {
-	   const completepokedexCheckboxes = document.querySelectorAll('.completepokedex input[type="checkbox"]');
-	   const legendariesCheckboxes = document.querySelectorAll('.legendaries input[type="checkbox"]');
-	   const giftpokemonCheckboxes = document.querySelectorAll('.giftpokemon input[type="checkbox"]');
-	   const ingametradesCheckboxes = document.querySelectorAll('.ingametrades input[type="checkbox"]');
-	   const unownCheckboxes = document.querySelectorAll('.unown input[type="checkbox"]');
-	   const battleCheckboxes = document.querySelectorAll('.battle input[type="checkbox"]');
-	   const itemsCheckboxes = document.querySelectorAll('.items input[type="checkbox"]');
+          titleText.forEach(function (text) {
+            text.style.color = '#CCE4EB';
+          });
 
+          widePanels.forEach(function (panel) {
+            panel.style.border = '2px solid #CCE4EB';
+          });
+        });
+      });
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const completepokedexCheckboxes = document.querySelectorAll(
+          '.completepokedex input[type="checkbox"]'
+        );
+        const legendariesCheckboxes = document.querySelectorAll(
+          '.legendaries input[type="checkbox"]'
+        );
+        const giftpokemonCheckboxes = document.querySelectorAll(
+          '.giftpokemon input[type="checkbox"]'
+        );
+        const ingametradesCheckboxes = document.querySelectorAll(
+          '.ingametrades input[type="checkbox"]'
+        );
+        const unownCheckboxes = document.querySelectorAll(
+          '.unown input[type="checkbox"]'
+        );
+        const battleCheckboxes = document.querySelectorAll(
+          '.battle input[type="checkbox"]'
+        );
+        const itemsCheckboxes = document.querySelectorAll(
+          '.items input[type="checkbox"]'
+        );
 
+        function updateStyle(checkboxes, label) {
+          const allChecked = [...checkboxes].every(
+            (checkbox) => checkbox.checked
+          );
+          label.style.textDecoration = allChecked ? 'line-through' : 'none';
+        }
 
-	   function updateStyle(checkboxes, label) {
-	       const allChecked = [...checkboxes].every(checkbox => checkbox.checked);
-	       label.style.textDecoration = allChecked ? 'line-through' : 'none';
-	   }
-
-	   function initializeCheckboxes(checkboxes, label) {
-	       checkboxes.forEach(checkbox => {
-	           checkbox.addEventListener('change', function() {
-	               updateStyle(checkboxes, label);
-	           });
-	       });
-	       updateStyle(checkboxes, label);
-	   }
-	   initializeCheckboxes(completepokedexCheckboxes, document.querySelector('.completepokedex .title label'));
-	   initializeCheckboxes(legendariesCheckboxes, document.querySelector('.legendaries .title label'));
-	   initializeCheckboxes(giftpokemonCheckboxes, document.querySelector('.giftpokemon .title label'));
-	   initializeCheckboxes(ingametradesCheckboxes, document.querySelector('.ingametrades .title label'));
-	   initializeCheckboxes(unownCheckboxes, document.querySelector('.unown .title label'));
-	   initializeCheckboxes(battleCheckboxes, document.querySelector('.battle .title label'));
-	   initializeCheckboxes(itemsCheckboxes, document.querySelector('.items .title label'));
-
-	});
-	</script>
-</body>
+        function initializeCheckboxes(checkboxes, label) {
+          checkboxes.forEach((checkbox) => {
+            checkbox.addEventListener('change', function () {
+              updateStyle(checkboxes, label);
+            });
+          });
+          updateStyle(checkboxes, label);
+        }
+        initializeCheckboxes(
+          completepokedexCheckboxes,
+          document.querySelector('.completepokedex .title label')
+        );
+        initializeCheckboxes(
+          legendariesCheckboxes,
+          document.querySelector('.legendaries .title label')
+        );
+        initializeCheckboxes(
+          giftpokemonCheckboxes,
+          document.querySelector('.giftpokemon .title label')
+        );
+        initializeCheckboxes(
+          ingametradesCheckboxes,
+          document.querySelector('.ingametrades .title label')
+        );
+        initializeCheckboxes(
+          unownCheckboxes,
+          document.querySelector('.unown .title label')
+        );
+        initializeCheckboxes(
+          battleCheckboxes,
+          document.querySelector('.battle .title label')
+        );
+        initializeCheckboxes(
+          itemsCheckboxes,
+          document.querySelector('.items .title label')
+        );
+      });
+    </script>
+  </body>
 </html>

@@ -1,453 +1,1326 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta content="width=device-width, initial-scale=1.0" name="viewport">
-	<title>Progression Dex | Ruby and Sapphire</title>
-	<link href="../checklists/css/rubysapphire.css" rel="stylesheet">
-	<link href="../output.css" rel="stylesheet">
-	<link href="../images/icons/favicontab.ico" rel="icon" type="image/x-icon">
-	<link href="../images/icons/favicontab.ico" rel="shortcut icon" type="image/x-icon">
-	<meta name="description" content="A tool for tracking your progression in Pokemon games. Easily choose between games and track your game progress.">
-	<meta name="keywords" content="pokemon, checklist, pokedex, progress, completion, speedrun, checklist, check list, locations, characters, games, game">
-</head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4PDLXC895H"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Progression Dex | Ruby and Sapphire</title>
+    <link href="../checklists/css/rubysapphire.css" rel="stylesheet" />
+    <link href="../output.css" rel="stylesheet" />
+    <link
+      href="../images/icons/favicontab.ico"
+      rel="icon"
+      type="image/x-icon"
+    />
+    <link
+      href="../images/icons/favicontab.ico"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
+    <meta
+      name="description"
+      content="A tool for tracking your progression in Pokemon games. Easily choose between games and track your game progress."
+    />
+    <meta
+      name="keywords"
+      content="pokemon, checklist, pokedex, progress, completion, speedrun, checklist, check list, locations, characters, games, game"
+    />
+  </head>
+  <!-- Google tag (gtag.js) -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-4PDLXC895H"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
 
-  gtag('config', 'G-4PDLXC895H');
-</script>
-<body>
-	<div class="navbar bg-white rounded-3xl shadow-lg mt-2 fixed top-0 flex items-center justify-between" style="width: 95%;  z-index: 1000; left: 50%; transform: translateX(-50%);">
-		<div class="flex items-center gap-4">
-		  <a href="../index.html" class="btn btn-ghost text-2xl"><span class="title">Progression Dex |</span></a>
-		  <div class="flex items-center gap-2">
-			<img id="ruby-logo" src="../images/logos/ruby-logo.webp" class="w-20">
-			<img id="sapphire-logo" src="../images/logos/sapphire-logo.webp" class="w-20">
-		  </div>
-		</div>
-		
-	  </div>
+    gtag('config', 'G-4PDLXC895H');
+  </script>
+  <body>
+    <div
+      class="navbar bg-white rounded-3xl shadow-lg mt-2 fixed top-0 flex items-center justify-between"
+      style="width: 95%; z-index: 1000; left: 50%; transform: translateX(-50%)"
+    >
+      <div class="flex items-center gap-4">
+        <a href="../index.html" class="btn btn-ghost text-2xl"
+          ><span class="title">Progression Dex |</span></a
+        >
+        <div class="flex items-center gap-2">
+          <img
+            alt="Logo of Pokemon Ruby"
+            src="alt"
+            ="Icon of Bulbasaur"
+            src="id"
+            ="ruby-logo"
+            src="../images/logos/ruby-logo.webp"
+            class="w-20"
+          />
+          <img
+            alt="Logo of Pokemon Sapphire"
+            src="alt"
+            ="Icon of Bulbasaur"
+            src="id"
+            ="sapphire-logo"
+            src="../images/logos/sapphire-logo.webp"
+            class="w-20"
+          />
+        </div>
+      </div>
+    </div>
 
-	<div class="page-container" data-game="rubysapphire">
-		<div class="page-container-left">
-			<div class="wide-panel pokedex">
-				<label class="panel-label">Pokédex</label>
-				<div class="completepokedex">
-					<div class="checkbox-item">
-						<span class="title"><label class="text-lg">Complete the Hoenn Pokédex</label></span>
-					</div>
-					<div class="checkbox-item">
-						<input id="rubysapphire-checkbox-trade" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Trade them from Ruby/Sapphire." for="rubysapphire-checkbox-trade">Trade all version exclusives</label>
-					</div>
-					<div class="checkbox-item">
-						<input id="rubysapphire-checkbox-national-pokedex" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="There are a total of 386 Pokemon in the National Dex." for="rubysapphire-checkbox-national-pokedex">Complete the National Pokedex</label>
-					</div>
-					<div class="checkbox-item">
-						<input id="rubysapphire-checkbox-diploma" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="The lead developer is on the top floor of the Cove Lily Motel in Lilycove City." for="rubysapphire-checkbox-diploma">Get Diploma</label>
-					</div>
-				</div>
-				<div class="legendaries">
-					<div class="checkbox-item">
-						<span class="title"><label class="text-lg">Catch all Legendaries</label></span>
-					</div>
-					<div class="legendaries-rowcontainer">
-						<div class="legendaries-leftrow">
-							<div class="checkbox-item">
-								<input id="rubysapphire-checkbox-kyogre" type="checkbox"> <img class="pokeicon legendary" src="../images/icons/pokemon/gen3/rubysapphire/kyogre.png"> <label class="text-sm lg:tooltip" data-tip="Cave of Origin." for="rubysapphire-checkbox-kyogre"><span style="color: #065A9C;">Kyogre</span></label>
-							</div>
-							<div class="checkbox-item">
-								<input id="rubysapphire-checkbox-groudon" type="checkbox"> <img class="pokeicon legendary" src="../images/icons/pokemon/gen3/rubysapphire/groudon.png"> <label class="text-sm lg:tooltip" data-tip="Cave of Origin." for="rubysapphire-checkbox-groudon"><span style="color: #b13131;">Groudon</span></label>
-							</div>
-							<div class="checkbox-item">
-								<input id="rubysapphire-checkbox-rayquaza" type="checkbox"> <img class="pokeicon legendary" src="../images/icons/pokemon/gen3/rubysapphire/rayquaza.png"> <label class="text-sm lg:tooltip" data-tip="Sky Pillar." for="rubysapphire-checkbox-rayquaza">Rayquaza</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="rubysapphire-checkbox-latias" type="checkbox"> <img class="pokeicon legendary" src="../images/icons/pokemon/gen3/rubysapphire/latias.png"> <label class="text-sm lg:tooltip" data-tip="You can find Latias roaming after the Pokemon League." for="rubysapphire-checkbox-latias">Latias</label> <label class="text-sm lg:tooltip" data-tip="In Ruby you can find Latias on the Southern Island if you have the Eon Ticket."><img class="icon-small" src="../images/icons/miscellaneous/other/moreinfo.png"></label>
-							</div>
-							<div class="checkbox-item">
-								<input id="rubysapphire-checkbox-latios" type="checkbox"> <img class="pokeicon legendary" src="../images/icons/pokemon/gen3/rubysapphire/latios.png"> <label class="text-sm lg:tooltip" data-tip="You can find Latios roaming after the Pokemon League." for="rubysapphire-checkbox-latios">Latios</label> <label class="text-sm lg:tooltip" data-tip="In Sapphire you can find Latios on the Southern Island if you have the Eon Ticket."><img class="icon-small" src="../images/icons/miscellaneous/other/moreinfo.png"></label>
-							</div>
-						</div>
-						<div class="legendaries-rightrow">
-							<div class="checkbox-item">
-								<input id="rubysapphire-checkbox-regirock" type="checkbox"> <img class="pokeicon legendary" src="../images/icons/pokemon/gen3/rubysapphire/regirock.png"> <label class="text-sm lg:tooltip" data-tip="Desert Tomb." for="rubysapphire-checkbox-regirock">Regirock</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="rubysapphire-checkbox-regice" type="checkbox"> <img class="pokeicon legendary" src="../images/icons/pokemon/gen3/rubysapphire/regice.png"> <label class="text-sm lg:tooltip" data-tip="Island Cave." for="rubysapphire-checkbox-regice">Regice</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="rubysapphire-checkbox-registeel" type="checkbox"> <img class="pokeicon legendary" src="../images/icons/pokemon/gen3/rubysapphire/registeel.png"> <label class="text-sm lg:tooltip" data-tip="Ancient Tomb." for="rubysapphire-checkbox-registeel">Registeel</label>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="giftpokemon">
-					<div class="checkbox-item">
-						<span class="title"><label class="text-lg">Obtain all In-Game Gift Pokemon</label></span>
-					</div>
-					<div class="giftpokemon-rowcontainer">
-						<div class="giftpokemon-leftrow">
-							<div class="checkbox-item">
-								<input id="rubysapphire-checkbox-lileep" type="checkbox"> <img class="pokeicon" src="../images/icons/pokemon/gen3/rubysapphire/lileep.png"> <label class="text-sm lg:tooltip" data-tip="Route 111, Only one can be chosen." for="rubysapphire-checkbox-lileep">Lileep</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="rubysapphire-checkbox-anorith" type="checkbox"> <img class="pokeicon" src="../images/icons/pokemon/gen3/rubysapphire/anorith.png"> <label class="text-sm lg:tooltip" data-tip="Route 111, Only one can be chosen." for="rubysapphire-checkbox-anorith">Anorith</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="rubysapphire-checkbox-castform" type="checkbox"> <img class="pokeicon" src="../images/icons/pokemon/gen3/rubysapphire/castform.png"> <label class="text-sm lg:tooltip" data-tip="Weather Institute." for="rubysapphire-checkbox-castform">Castform</label>
-							</div>
-						</div>
-						<div class="giftpokemon-rightrow">
-							<div class="checkbox-item">
-								<input id="rubysapphire-checkbox-wynaut" type="checkbox"> <img class="pokeicon" src="../images/icons/pokemon/gen3/rubysapphire/wynaut.png"> <label class="text-sm lg:tooltip" data-tip="Lavaridge Town." for="rubysapphire-checkbox-wynaut">Wynaut</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="rubysapphire-checkbox-beldum" type="checkbox"> <img class="pokeicon" src="../images/icons/pokemon/gen3/rubysapphire/beldum.png"> <label class="text-sm lg:tooltip" data-tip="Lavaridge Town after defeating the Champion." for="rubysapphire-checkbox-beldum">Beldum</label>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="ingametrades">
-					<div class="checkbox-item">
-						<span class="title"><label class="text-lg">Complete all In-Game Trades</label></span>
-					</div>
-					<div class="checkbox-item">
-						<input id="rubysapphire-checkbox-slakoth" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Rustoboro City." for="rubysapphire-checkbox-slakoth">Slakoth for Makuhita</label>
-					</div>
-					<div class="checkbox-item">
-						<input id="rubysapphire-checkbox-pikachu" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Fortree City." for="rubysapphire-checkbox-pikachu">Pikachu for Skitty</label>
-					</div>
-					<div class="checkbox-item">
-						<input id="rubysapphire-checkbox-bellossum" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Pacifidlog Town." for="rubysapphire-checkbox-bellossum">Bellossum for Corsola</label>
-					</div>
-				</div>
-			</div>
-			<div class="wide-panel more">
-				<label class="panel-label">Post Game</label>
-				<div class="trainercard">
-						<div class="checkbox-item">
-							<span class="title"><label class="text-lg">4 Stars Golden Trainer Card</label></span>
-						</div>
-						<div class="checkbox-item">
-							<input id="rubysapphire-checkbox-pokemon-league-champion" type="checkbox"> <label class="text-sm lg:tooltip" for="rubysapphire-checkbox-pokemon-league-champion">Defeat the Pokemon League Champion.</label>
-						</div>
-						<div class="checkbox-item">
-							<input id="rubysapphire-checkbox-master-rank-contests" type="checkbox"> <label class="text-sm lg:tooltip" for="rubysapphire-checkbox-master-rank-contests">Win all five Master Rank contests.</label>
-						</div>
-						<div class="checkbox-item">
-							<input id="rubysapphire-checkbox-50-trainer-challenge" type="checkbox"> <label class="text-sm lg:tooltip" for="rubysapphire-checkbox-50-trainer-challenge">Defeat the 50 trainer challenge.</label>
-						</div>
-						<div class="checkbox-item">
-							<input id="rubysapphire-checkbox-hoenn-pokedex" type="checkbox"> <label class="text-sm lg:tooltip" for="rubysapphire-checkbox-hoenn-pokedex">Complete the Hoenn Pokedex.</label>
-						</div>
-					</div>
-				
-				
-				<div class="battletower">
-					<div class="checkbox-item">
-						<span class="title"><label class="text-lg">Master the Battle Tower</label></span>
-					</div>
-					<div class="checkbox-item">
-						<input id="rubysapphire-checkbox-singles" type="checkbox"> <label class="text-sm lg:tooltip" for="rubysapphire-checkbox-singles">Singles</label>
-					</div>
-					<div class="checkbox-item">
-						<input id="rubysapphire-checkbox-doubles" type="checkbox"> <label class="text-sm lg:tooltip" for="rubysapphire-checkbox-doubles">Doubles</label>
-					</div>
-					<div class="checkbox-item">
-						<input id="rubysapphire-checkbox-multi" type="checkbox"> <label class="text-sm lg:tooltip" for="rubysapphire-checkbox-multi">Multi</label>
-					</div>
-				</div>
-				<div class="trickhouse">
-					<div class="checkbox-item">
-						<span class="title"><label class="text-lg">Trick House</label></span>
-					</div>
-					<div class="trickhouse-rowcontainer">
-					<div class="trickhouse-leftrow">
-					
-						<div class="checkbox-item">
-							<input id="rubysapphire-checkbox-chamber1" type="checkbox"> <label class="text-sm lg:tooltip" for="rubysapphire-checkbox-chamber1">Chamber 1</label>
-						</div>
-						<div class="checkbox-item">
-							<input id="rubysapphire-checkbox-chamber2" type="checkbox"> <label class="text-sm lg:tooltip" for="rubysapphire-checkbox-chamber2">Chamber 2</label>
-						</div>
-						<div class="checkbox-item">
-							<input id="rubysapphire-checkbox-chamber3" type="checkbox"> <label class="text-sm lg:tooltip" for="rubysapphire-checkbox-chamber3">Chamber 3</label>
-						</div>
-						<div class="checkbox-item">
-							<input id="rubysapphire-checkbox-chamber4" type="checkbox"> <label class="text-sm lg:tooltip" for="rubysapphire-checkbox-chamber4">Chamber 4</label>
-						</div>
-					</div>
-					<div class="trickhouse-rightrow">
-						<div class="checkbox-item">
-							<input id="rubysapphire-checkbox-chamber5" type="checkbox"> <label class="text-sm lg:tooltip" for="rubysapphire-checkbox-chamber5">Chamber 5</label>
-						</div>
-						<div class="checkbox-item">
-							<input id="rubysapphire-checkbox-chamber6" type="checkbox"> <label class="text-sm lg:tooltip" for="rubysapphire-checkbox-chamber6">Chamber 6</label>
-						</div>
-						<div class="checkbox-item">
-							<input id="rubysapphire-checkbox-chamber7" type="checkbox"> <label class="text-sm lg:tooltip" for="rubysapphire-checkbox-chamber7">Chamber 7</label>
-						</div>
-						<div class="checkbox-item">
-							<input id="rubysapphire-checkbox-chamber8" type="checkbox"> <label class="text-sm lg:tooltip" for="rubysapphire-checkbox-chamber8">Chamber 8</label>
-						</div>
-					</div>
-					</div>
-				</div>
-				<div class="trainerseye">
-					<div class="checkbox-item">
-						<span class="title"><label class="text-lg">Trainer's Eye</label></span>
-					</div>
-					<div class="checkbox-item">
-						<input id="rubysapphire-checkbox-trainers-eye" type="checkbox"> <label class="text-sm lg:tooltip" for="rubysapphire-checkbox-trainers-eye">Register all 69 trainers</label>
-					</div>
-				</div>
-			</div>
-		</div>
-	
-		<div class="page-container-right">
-			<div class="wide-panel collectibles">
-				<label class="panel-label">Collectibles</label>				
-				<div class="ribbons">
-					<div class="checkbox-item">
-						<span class="title"><label class="text-lg">Contests</label></span> 
-					</div>
-					<div class="ribbons-rowcontainer">
-						<div class="ribbons-leftrow">
-							<div class="beautycontest">
-								<div class="checkbox-item">
-									<span class="title"><label class="text-lg">Beauty Contests</label></span>
-								</div>
-								<div class="checkbox-item">
-									<input id="rubysapphire-checkbox-beauty-normal" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen3/ribbons/beauty-ribbon-hoenn.png"> <label class="text-sm lg:tooltip" data-tip="Beauty Contest Normal Rank Winner!" for="rubysapphire-checkbox-beauty-normal">Normal</label>
-								</div>
-								<div class="checkbox-item">
-									<input id="rubysapphire-checkbox-beauty-super" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen3/ribbons/beauty-ribbon-super-hoenn.png"> <label class="text-sm lg:tooltip" data-tip="Beauty Contest Super Rank Winner!" for="rubysapphire-checkbox-beauty-super">Super</label>
-								</div>
-								<div class="checkbox-item">
-									<input id="rubysapphire-checkbox-beauty-hyper" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen3/ribbons/beauty-ribbon-hyper-hoenn.png"> <label class="text-sm lg:tooltip" data-tip="Beauty Contest Super Rank Winner!" for="rubysapphire-checkbox-beauty-hyper">Hyper</label>
-								</div>
-								<div class="checkbox-item">
-									<input id="rubysapphire-checkbox-beauty-master" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen3/ribbons/beauty-ribbon-master-hoenn.png"> <label class="text-sm lg:tooltip" data-tip="Beauty Contest Super Rank Winner!" for="rubysapphire-checkbox-beauty-master">Master</label>
-								</div>
-							</div>
-							<div class="thoughcontest">
-								<div class="checkbox-item">
-									<span class="title"><label class="text-lg">Though Contests</label></span>
-								</div>
-								<div class="checkbox-item">
-									<input id="rubysapphire-checkbox-though-normal" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen3/ribbons/tough-ribbon-hoenn.png"> <label class="text-sm lg:tooltip" data-tip="Though Contest Normal Rank Winner!" for="rubysapphire-checkbox-though-normal">Normal</label>
-								</div>
-								<div class="checkbox-item">
-									<input id="rubysapphire-checkbox-though-super" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen3/ribbons/tough-ribbon-super-hoenn.png"> <label class="text-sm lg:tooltip" data-tip="Though Contest Super Rank Winner!" for="rubysapphire-checkbox-though-super">Super</label>
-								</div>
-								<div class="checkbox-item">
-									<input id="rubysapphire-checkbox-though-hyper" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen3/ribbons/tough-ribbon-hyper-hoenn.png"> <label class="text-sm lg:tooltip" data-tip="Though Contest Hyper Rank Winner!" for="rubysapphire-checkbox-though-hyper">Hyper</label>
-								</div>
-								<div class="checkbox-item">
-									<input id="rubysapphire-checkbox-though-master" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen3/ribbons/tough-ribbon-master-hoenn.png"> <label class="text-sm lg:tooltip" data-tip="Though Contest Master Rank Winner!" for="rubysapphire-checkbox-though-master">Master</label>
-								</div>
-							</div>
-							<div class="smartnesscontest">
-								<div class="checkbox-item">
-									<span class="title"><label class="text-lg">Smartness Contests</label></span>
-								</div>
-								<div class="checkbox-item">
-									<input id="rubysapphire-checkbox-smartness-normal" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen3/ribbons/smart-ribbon-hoenn.png"> <label class="text-sm lg:tooltip" data-tip="Smart Contest Normal Rank Winner!" for="rubysapphire-checkbox-smartness-normal">Normal</label>
-								</div>
-								<div class="checkbox-item">
-									<input id="rubysapphire-checkbox-smartness-super" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen3/ribbons/smart-ribbon-super-hoenn.png"> <label class="text-sm lg:tooltip" data-tip="Smart Contest Super Rank Winner!" for="rubysapphire-checkbox-smartness-super">Super</label>
-								</div>
-								<div class="checkbox-item">
-									<input id="rubysapphire-checkbox-smartness-hyper" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen3/ribbons/smart-ribbon-hyper-hoenn.png"> <label class="text-sm lg:tooltip" data-tip="Smart Contest Hyper Rank Winner!" for="rubysapphire-checkbox-smartness-hyper">Hyper</label>
-								</div>
-								<div class="checkbox-item">
-									<input id="rubysapphire-checkbox-smartness-master" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen3/ribbons/smart-ribbon-master-hoenn.png"> <label class="text-sm lg:tooltip" data-tip="Smart Contest Master Rank Winner!" for="rubysapphire-checkbox-smartness-master">Master</label>
-								</div>
-							</div>
-						</div>
-						<div class="ribbons-rightrow">
-							<div class="cutenesscontest">
-								<div class="checkbox-item">
-									<span class="title"><label class="text-lg">Cuteness Contests</label></span>
-								</div>
-								<div class="checkbox-item">
-									<input id="rubysapphire-checkbox-cuteness-normal" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen3/ribbons/cute-ribbon-hoenn.png"> <label class="text-sm lg:tooltip" data-tip="Cute Contest Normal Rank Winner!" for="rubysapphire-checkbox-cuteness-normal">Normal</label>
-								</div>
-								<div class="checkbox-item">
-									<input id="rubysapphire-checkbox-cuteness-super" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen3/ribbons/cute-ribbon-super-hoenn.png"> <label class="text-sm lg:tooltip" data-tip="Cute Contest Super Rank Winner!" for="rubysapphire-checkbox-cuteness-super">Super</label>
-								</div>
-								<div class="checkbox-item">
-									<input id="rubysapphire-checkbox-cuteness-hyper" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen3/ribbons/cute-ribbon-hyper-hoenn.png"> <label class="text-sm lg:tooltip" data-tip="Cute Contest Hyper Rank Winner!" for="rubysapphire-checkbox-cuteness-hyper">Hyper</label>
-								</div>
-								<div class="checkbox-item">
-									<input id="rubysapphire-checkbox-cuteness-master" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen3/ribbons/cute-ribbon-master-hoenn.png"> <label class="text-sm lg:tooltip" data-tip="Cute Contest Master Rank Winner!" for="rubysapphire-checkbox-cuteness-master">Master</label>
-								</div>
-							</div>
-							<div class="coolnesscontest">
-								<div class="checkbox-item">
-									<span class="title"><label class="text-lg">Coolness Contests</label></span>
-								</div>
-								<div class="checkbox-item">
-									<input id="rubysapphire-checkbox-coolness-normal" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen3/ribbons/cool-ribbon-hoenn.png"> <label class="text-sm lg:tooltip" data-tip="Cool Contest Normal Rank Winner!" for="rubysapphire-checkbox-coolness-normal">Normal</label>
-								</div>
-								<div class="checkbox-item">
-									<input id="rubysapphire-checkbox-coolness-super" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen3/ribbons/cool-ribbon-super-hoenn.png"> <label class="text-sm lg:tooltip" data-tip="Cool Contest Super Rank Winner!" for="rubysapphire-checkbox-coolness-super">Super</label>
-								</div>
-								<div class="checkbox-item">
-									<input id="rubysapphire-checkbox-coolness-hyper" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen3/ribbons/cool-ribbon-hyper-hoenn.png"> <label class="text-sm lg:tooltip" data-tip="Cool Contest Hyper Rank Winner!" for="rubysapphire-checkbox-coolness-hyper">Hyper</label>
-								</div>
-								<div class="checkbox-item">
-									<input id="rubysapphire-checkbox-coolness-master" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen3/ribbons/cool-ribbon-master-hoenn.png"> <label class="text-sm lg:tooltip" data-tip="Cool Contest Master Rank Winner!" for="rubysapphire-checkbox-coolness-master">Master</label>
-								</div>
-							</div>
-							<div class="moreribbons">
-								<div class="checkbox-item">
-									<span class="title"><label class="text-lg">Achievement Ribbons</label></span>
-								</div>
-								<div class="checkbox-item">
-									<input id="rubysapphire-checkbox-winning-ribbon" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen3/ribbons/winning-ribbon.png"> <label class="text-sm lg:tooltip" data-tip="Ribbon for clearing LV50 at the Battle Tower." for="rubysapphire-checkbox-winning-ribbon">Winning</label>
-								</div>
-								<div class="checkbox-item">
-									<input id="rubysapphire-checkbox-victory-ribbon" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen3/ribbons/victory-ribbon.png"> <label class="text-sm lg:tooltip" data-tip="Won for clearing LV100 at the Battle Tower." for="rubysapphire-checkbox-victory-ribbon">Victory</label>
-								</div>
-								<div class="checkbox-item">
-									<input id="rubysapphire-checkbox-artist-ribbon" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen3/ribbons/artist-ribbon.png"> <label class="text-sm lg:tooltip" data-tip="Ribbon for being chosen as a super sketch model." for="rubysapphire-checkbox-artist-ribbon">Artist</label>
-								</div>
-								<div class="checkbox-item">
-									<input id="rubysapphire-checkbox-champion-ribbon" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen3/ribbons/champion-ribbon.png"> <label class="text-sm lg:tooltip" data-tip="Champion-beating, Hall of Fame Member Ribbon." for="rubysapphire-checkbox-champion-ribbon">Champion</label>
-								</div>
-								<div class="checkbox-item">
-									<input id="rubysapphire-checkbox-effort-ribbon" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen3/ribbons/effort-ribbon.png"> <label class="text-sm lg:tooltip" data-tip="Ribbon awarded for being a hard worker." for="rubysapphire-checkbox-effort-ribbon">Effort</label>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="items">
-					<div class="checkbox-item">
-						<span class="title"><label class="text-lg">Items</label></span>
-					</div>
-					<div class="checkbox-item">
-						<input id="xy-checkbox-alltms" type="checkbox"> <img class="pokeicon item" src="../images/icons/inventory/tms/normal.png"> <label class="text-sm lg:tooltip" data-tip="Find all TM's." for="xy-checkbox-alltms">Collect all TM's</label>
-					</div>
+    <div class="page-container" data-game="rubysapphire">
+      <div class="page-container-left">
+        <div class="wide-panel pokedex">
+          <label class="panel-label">Pokédex</label>
+          <div class="completepokedex">
+            <div class="checkbox-item">
+              <span class="title"
+                ><label class="text-lg">Complete the Hoenn Pokédex</label></span
+              >
+            </div>
+            <div class="checkbox-item">
+              <input id="rubysapphire-checkbox-trade" type="checkbox" />
+              <label
+                class="text-sm lg:tooltip"
+                data-tip="Trade them from Ruby/Sapphire."
+                for="rubysapphire-checkbox-trade"
+                >Trade all version exclusives</label
+              >
+            </div>
+            <div class="checkbox-item">
+              <input
+                id="rubysapphire-checkbox-national-pokedex"
+                type="checkbox"
+              />
+              <label
+                class="text-sm lg:tooltip"
+                data-tip="There are a total of 386 Pokemon in the National Dex."
+                for="rubysapphire-checkbox-national-pokedex"
+                >Complete the National Pokedex</label
+              >
+            </div>
+            <div class="checkbox-item">
+              <input id="rubysapphire-checkbox-diploma" type="checkbox" />
+              <label
+                class="text-sm lg:tooltip"
+                data-tip="The lead developer is on the top floor of the Cove Lily Motel in Lilycove City."
+                for="rubysapphire-checkbox-diploma"
+                >Get Diploma</label
+              >
+            </div>
+          </div>
+          <div class="legendaries">
+            <div class="checkbox-item">
+              <span class="title"
+                ><label class="text-lg">Catch all Legendaries</label></span
+              >
+            </div>
+            <div class="legendaries-rowcontainer">
+              <div class="legendaries-leftrow">
+                <div class="checkbox-item">
+                  <input id="rubysapphire-checkbox-kyogre" type="checkbox" />
+                  <img
+                    alt="Icon of Kyogre"
+                    src="alt"
+                    ="Icon of Bulbasaur"
+                    src="class"
+                    ="pokeicon legendary"
+                    src="../images/icons/pokemon/gen3/rubysapphire/kyogre.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Cave of Origin."
+                    for="rubysapphire-checkbox-kyogre"
+                    ><span style="color: #065a9c">Kyogre</span></label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="rubysapphire-checkbox-groudon" type="checkbox" />
+                  <img
+                    alt="Icon of Groudon"
+                    src="alt"
+                    ="Icon of Bulbasaur"
+                    src="class"
+                    ="pokeicon legendary"
+                    src="../images/icons/pokemon/gen3/rubysapphire/groudon.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Cave of Origin."
+                    for="rubysapphire-checkbox-groudon"
+                    ><span style="color: #b13131">Groudon</span></label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="rubysapphire-checkbox-rayquaza" type="checkbox" />
+                  <img
+                    alt="Icon of Rayquaza"
+                    src="alt"
+                    ="Icon of Bulbasaur"
+                    src="class"
+                    ="pokeicon legendary"
+                    src="../images/icons/pokemon/gen3/rubysapphire/rayquaza.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Sky Pillar."
+                    for="rubysapphire-checkbox-rayquaza"
+                    >Rayquaza</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="rubysapphire-checkbox-latias" type="checkbox" />
+                  <img
+                    alt="Icon of Latias"
+                    src="alt"
+                    ="Icon of Bulbasaur"
+                    src="class"
+                    ="pokeicon legendary"
+                    src="../images/icons/pokemon/gen3/rubysapphire/latias.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="You can find Latias roaming after the Pokemon League."
+                    for="rubysapphire-checkbox-latias"
+                    >Latias</label
+                  >
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="In Ruby you can find Latias on the Southern Island if you have the Eon Ticket."
+                    ><img
+                      alt="Icon of Bulbasaur"
+                      src="alt"
+                      ="Icon of Bulbasaur"
+                      src="class"
+                      ="icon-small"
+                      src="../images/icons/miscellaneous/other/moreinfo.png"
+                  /></label>
+                </div>
+                <div class="checkbox-item">
+                  <input id="rubysapphire-checkbox-latios" type="checkbox" />
+                  <img
+                    alt="Icon of Latios"
+                    src="alt"
+                    ="Icon of Bulbasaur"
+                    src="class"
+                    ="pokeicon legendary"
+                    src="../images/icons/pokemon/gen3/rubysapphire/latios.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="You can find Latios roaming after the Pokemon League."
+                    for="rubysapphire-checkbox-latios"
+                    >Latios</label
+                  >
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="In Sapphire you can find Latios on the Southern Island if you have the Eon Ticket."
+                    ><img
+                      alt="Icon of Bulbasaur"
+                      src="alt"
+                      ="Icon of Bulbasaur"
+                      src="class"
+                      ="icon-small"
+                      src="../images/icons/miscellaneous/other/moreinfo.png"
+                  /></label>
+                </div>
+              </div>
+              <div class="legendaries-rightrow">
+                <div class="checkbox-item">
+                  <input id="rubysapphire-checkbox-regirock" type="checkbox" />
+                  <img
+                    alt="Icon of Regirock"
+                    src="alt"
+                    ="Icon of Bulbasaur"
+                    src="class"
+                    ="pokeicon legendary"
+                    src="../images/icons/pokemon/gen3/rubysapphire/regirock.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Desert Tomb."
+                    for="rubysapphire-checkbox-regirock"
+                    >Regirock</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="rubysapphire-checkbox-regice" type="checkbox" />
+                  <img
+                    alt="Icon of Regice"
+                    src="alt"
+                    ="Icon of Bulbasaur"
+                    src="class"
+                    ="pokeicon legendary"
+                    src="../images/icons/pokemon/gen3/rubysapphire/regice.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Island Cave."
+                    for="rubysapphire-checkbox-regice"
+                    >Regice</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="rubysapphire-checkbox-registeel" type="checkbox" />
+                  <img
+                    alt="Icon of Registeel"
+                    src="alt"
+                    ="Icon of Bulbasaur"
+                    src="class"
+                    ="pokeicon legendary"
+                    src="../images/icons/pokemon/gen3/rubysapphire/registeel.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Ancient Tomb."
+                    for="rubysapphire-checkbox-registeel"
+                    >Registeel</label
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="giftpokemon">
+            <div class="checkbox-item">
+              <span class="title"
+                ><label class="text-lg"
+                  >Obtain all In-Game Gift Pokemon</label
+                ></span
+              >
+            </div>
+            <div class="giftpokemon-rowcontainer">
+              <div class="giftpokemon-leftrow">
+                <div class="checkbox-item">
+                  <input id="rubysapphire-checkbox-lileep" type="checkbox" />
+                  <img
+                    alt="Icon of Lileep"
+                    src="alt"
+                    ="Icon of Bulbasaur"
+                    src="class"
+                    ="pokeicon"
+                    src="../images/icons/pokemon/gen3/rubysapphire/lileep.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Route 111, Only one can be chosen."
+                    for="rubysapphire-checkbox-lileep"
+                    >Lileep</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="rubysapphire-checkbox-anorith" type="checkbox" />
+                  <img
+                    alt="Icon of Anorith"
+                    src="alt"
+                    ="Icon of Bulbasaur"
+                    src="class"
+                    ="pokeicon"
+                    src="../images/icons/pokemon/gen3/rubysapphire/anorith.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Route 111, Only one can be chosen."
+                    for="rubysapphire-checkbox-anorith"
+                    >Anorith</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="rubysapphire-checkbox-castform" type="checkbox" />
+                  <img
+                    alt="Icon of Castform"
+                    src="alt"
+                    ="Icon of Bulbasaur"
+                    src="class"
+                    ="pokeicon"
+                    src="../images/icons/pokemon/gen3/rubysapphire/castform.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Weather Institute."
+                    for="rubysapphire-checkbox-castform"
+                    >Castform</label
+                  >
+                </div>
+              </div>
+              <div class="giftpokemon-rightrow">
+                <div class="checkbox-item">
+                  <input id="rubysapphire-checkbox-wynaut" type="checkbox" />
+                  <img
+                    alt="Icon of Wynaut"
+                    src="alt"
+                    ="Icon of Bulbasaur"
+                    src="class"
+                    ="pokeicon"
+                    src="../images/icons/pokemon/gen3/rubysapphire/wynaut.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Lavaridge Town."
+                    for="rubysapphire-checkbox-wynaut"
+                    >Wynaut</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="rubysapphire-checkbox-beldum" type="checkbox" />
+                  <img
+                    alt="Icon of Beldum"
+                    src="alt"
+                    ="Icon of Bulbasaur"
+                    src="class"
+                    ="pokeicon"
+                    src="../images/icons/pokemon/gen3/rubysapphire/beldum.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Lavaridge Town after defeating the Champion."
+                    for="rubysapphire-checkbox-beldum"
+                    >Beldum</label
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ingametrades">
+            <div class="checkbox-item">
+              <span class="title"
+                ><label class="text-lg"
+                  >Complete all In-Game Trades</label
+                ></span
+              >
+            </div>
+            <div class="checkbox-item">
+              <input id="rubysapphire-checkbox-slakoth" type="checkbox" />
+              <label
+                class="text-sm lg:tooltip"
+                data-tip="Rustoboro City."
+                for="rubysapphire-checkbox-slakoth"
+                >Slakoth for Makuhita</label
+              >
+            </div>
+            <div class="checkbox-item">
+              <input id="rubysapphire-checkbox-pikachu" type="checkbox" />
+              <label
+                class="text-sm lg:tooltip"
+                data-tip="Fortree City."
+                for="rubysapphire-checkbox-pikachu"
+                >Pikachu for Skitty</label
+              >
+            </div>
+            <div class="checkbox-item">
+              <input id="rubysapphire-checkbox-bellossum" type="checkbox" />
+              <label
+                class="text-sm lg:tooltip"
+                data-tip="Pacifidlog Town."
+                for="rubysapphire-checkbox-bellossum"
+                >Bellossum for Corsola</label
+              >
+            </div>
+          </div>
+        </div>
+        <div class="wide-panel more">
+          <label class="panel-label">Post Game</label>
+          <div class="trainercard">
+            <div class="checkbox-item">
+              <span class="title"
+                ><label class="text-lg"
+                  >4 Stars Golden Trainer Card</label
+                ></span
+              >
+            </div>
+            <div class="checkbox-item">
+              <input
+                id="rubysapphire-checkbox-pokemon-league-champion"
+                type="checkbox"
+              />
+              <label
+                class="text-sm lg:tooltip"
+                for="rubysapphire-checkbox-pokemon-league-champion"
+                >Defeat the Pokemon League Champion.</label
+              >
+            </div>
+            <div class="checkbox-item">
+              <input
+                id="rubysapphire-checkbox-master-rank-contests"
+                type="checkbox"
+              />
+              <label
+                class="text-sm lg:tooltip"
+                for="rubysapphire-checkbox-master-rank-contests"
+                >Win all five Master Rank contests.</label
+              >
+            </div>
+            <div class="checkbox-item">
+              <input
+                id="rubysapphire-checkbox-50-trainer-challenge"
+                type="checkbox"
+              />
+              <label
+                class="text-sm lg:tooltip"
+                for="rubysapphire-checkbox-50-trainer-challenge"
+                >Defeat the 50 trainer challenge.</label
+              >
+            </div>
+            <div class="checkbox-item">
+              <input id="rubysapphire-checkbox-hoenn-pokedex" type="checkbox" />
+              <label
+                class="text-sm lg:tooltip"
+                for="rubysapphire-checkbox-hoenn-pokedex"
+                >Complete the Hoenn Pokedex.</label
+              >
+            </div>
+          </div>
 
-				</div>
-			</div>
-		</div>
-	</div>
-		<footer>
-			<ul>
-				<li>
-					<a href="../index.html">Progression Dex</a>
-				</li>
-				<li>
-					<a href="#">Twitter</a>
-				</li>
-				<li>
-					<a href="https://github.com/yasingunaydiin">GitHub</a>
-				</li>
-			</ul>
-		</footer>
-		
-		<script src="../checklists/js/script.js">
-		</script> 
-		<script>
-		                 document.addEventListener("DOMContentLoaded", function() {  
-		                 var rubyLogo = document.getElementById("ruby-logo");
-		                 var sapphireLogo = document.getElementById("sapphire-logo");
-		                 
-		                 var headerTitle = document.querySelector(".title");
-		                 var widePanels = document.querySelectorAll(".wide-panel");
-		                 var footer = document.querySelector("footer");
-		                 var titleText = document.querySelectorAll(".panel-label");
-		                 var backgroundIcons = document.querySelector("body");
+          <div class="battletower">
+            <div class="checkbox-item">
+              <span class="title"
+                ><label class="text-lg">Master the Battle Tower</label></span
+              >
+            </div>
+            <div class="checkbox-item">
+              <input id="rubysapphire-checkbox-singles" type="checkbox" />
+              <label
+                class="text-sm lg:tooltip"
+                for="rubysapphire-checkbox-singles"
+                >Singles</label
+              >
+            </div>
+            <div class="checkbox-item">
+              <input id="rubysapphire-checkbox-doubles" type="checkbox" />
+              <label
+                class="text-sm lg:tooltip"
+                for="rubysapphire-checkbox-doubles"
+                >Doubles</label
+              >
+            </div>
+            <div class="checkbox-item">
+              <input id="rubysapphire-checkbox-multi" type="checkbox" />
+              <label
+                class="text-sm lg:tooltip"
+                for="rubysapphire-checkbox-multi"
+                >Multi</label
+              >
+            </div>
+          </div>
+          <div class="trickhouse">
+            <div class="checkbox-item">
+              <span class="title"
+                ><label class="text-lg">Trick House</label></span
+              >
+            </div>
+            <div class="trickhouse-rowcontainer">
+              <div class="trickhouse-leftrow">
+                <div class="checkbox-item">
+                  <input id="rubysapphire-checkbox-chamber1" type="checkbox" />
+                  <label
+                    class="text-sm lg:tooltip"
+                    for="rubysapphire-checkbox-chamber1"
+                    >Chamber 1</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="rubysapphire-checkbox-chamber2" type="checkbox" />
+                  <label
+                    class="text-sm lg:tooltip"
+                    for="rubysapphire-checkbox-chamber2"
+                    >Chamber 2</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="rubysapphire-checkbox-chamber3" type="checkbox" />
+                  <label
+                    class="text-sm lg:tooltip"
+                    for="rubysapphire-checkbox-chamber3"
+                    >Chamber 3</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="rubysapphire-checkbox-chamber4" type="checkbox" />
+                  <label
+                    class="text-sm lg:tooltip"
+                    for="rubysapphire-checkbox-chamber4"
+                    >Chamber 4</label
+                  >
+                </div>
+              </div>
+              <div class="trickhouse-rightrow">
+                <div class="checkbox-item">
+                  <input id="rubysapphire-checkbox-chamber5" type="checkbox" />
+                  <label
+                    class="text-sm lg:tooltip"
+                    for="rubysapphire-checkbox-chamber5"
+                    >Chamber 5</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="rubysapphire-checkbox-chamber6" type="checkbox" />
+                  <label
+                    class="text-sm lg:tooltip"
+                    for="rubysapphire-checkbox-chamber6"
+                    >Chamber 6</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="rubysapphire-checkbox-chamber7" type="checkbox" />
+                  <label
+                    class="text-sm lg:tooltip"
+                    for="rubysapphire-checkbox-chamber7"
+                    >Chamber 7</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="rubysapphire-checkbox-chamber8" type="checkbox" />
+                  <label
+                    class="text-sm lg:tooltip"
+                    for="rubysapphire-checkbox-chamber8"
+                    >Chamber 8</label
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="trainerseye">
+            <div class="checkbox-item">
+              <span class="title"
+                ><label class="text-lg">Trainer's Eye</label></span
+              >
+            </div>
+            <div class="checkbox-item">
+              <input id="rubysapphire-checkbox-trainers-eye" type="checkbox" />
+              <label
+                class="text-sm lg:tooltip"
+                for="rubysapphire-checkbox-trainers-eye"
+                >Register all 69 trainers</label
+              >
+            </div>
+          </div>
+        </div>
+      </div>
 
-		                 rubyLogo.addEventListener("click", function() {
-		                     headerTitle.style.color = "#b13131";
-		                     footer.style.background = "#b13131";
-		                     backgroundIcons.style.backgroundImage = 'url(../../images/patterns/pattern-ruby.png)';
+      <div class="page-container-right">
+        <div class="wide-panel collectibles">
+          <label class="panel-label">Collectibles</label>
+          <div class="ribbons">
+            <div class="checkbox-item">
+              <span class="title"><label class="text-lg">Contests</label></span>
+            </div>
+            <div class="ribbons-rowcontainer">
+              <div class="ribbons-leftrow">
+                <div class="beautycontest">
+                  <div class="checkbox-item">
+                    <span class="title"
+                      ><label class="text-lg">Beauty Contests</label></span
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="rubysapphire-checkbox-beauty-normal"
+                      type="checkbox"
+                    />
+                    <img
+                      alt="Icon of Beauty Normal Ribbon"
+                      src="alt"
+                      ="Icon of Bulbasaur"
+                      src="class"
+                      ="pokeicon ribbon"
+                      src="../images/icons/miscellaneous/gen3/ribbons/beauty-ribbon-hoenn.png"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="Beauty Contest Normal Rank Winner!"
+                      for="rubysapphire-checkbox-beauty-normal"
+                      >Normal</label
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="rubysapphire-checkbox-beauty-super"
+                      type="checkbox"
+                    />
+                    <img
+                      alt="Icon of Beauty Super Ribbon"
+                      src="alt"
+                      ="Icon of Bulbasaur"
+                      src="class"
+                      ="pokeicon ribbon"
+                      src="../images/icons/miscellaneous/gen3/ribbons/beauty-ribbon-super-hoenn.png"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="Beauty Contest Super Rank Winner!"
+                      for="rubysapphire-checkbox-beauty-super"
+                      >Super</label
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="rubysapphire-checkbox-beauty-hyper"
+                      type="checkbox"
+                    />
+                    <img
+                      alt="Icon of Beauty Hyper Ribbon"
+                      src="class"
+                      ="pokeicon ribbon"
+                      src="../images/icons/miscellaneous/gen3/ribbons/beauty-ribbon-hyper-hoenn.png"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="Beauty Contest Super Rank Winner!"
+                      for="rubysapphire-checkbox-beauty-hyper"
+                      >Hyper</label
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="rubysapphire-checkbox-beauty-master"
+                      type="checkbox"
+                    />
+                    <img
+                      alt="Icon of Beauty Master Ribbon"
+                      src="class"
+                      ="pokeicon ribbon"
+                      src="../images/icons/miscellaneous/gen3/ribbons/beauty-ribbon-master-hoenn.png"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="Beauty Contest Super Rank Winner!"
+                      for="rubysapphire-checkbox-beauty-master"
+                      >Master</label
+                    >
+                  </div>
+                </div>
+                <div class="thoughcontest">
+                  <div class="checkbox-item">
+                    <span class="title"
+                      ><label class="text-lg">Though Contests</label></span
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="rubysapphire-checkbox-though-normal"
+                      type="checkbox"
+                    />
+                    <img
+                      alt="Icon of Though Normal Ribbon"
+                      src="class"
+                      ="pokeicon ribbon"
+                      src="../images/icons/miscellaneous/gen3/ribbons/tough-ribbon-hoenn.png"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="Though Contest Normal Rank Winner!"
+                      for="rubysapphire-checkbox-though-normal"
+                      >Normal</label
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="rubysapphire-checkbox-though-super"
+                      type="checkbox"
+                    />
+                    <img
+                      alt="Icon of Though Super Ribbon"
+                      src="class"
+                      ="pokeicon ribbon"
+                      src="../images/icons/miscellaneous/gen3/ribbons/tough-ribbon-super-hoenn.png"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="Though Contest Super Rank Winner!"
+                      for="rubysapphire-checkbox-though-super"
+                      >Super</label
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="rubysapphire-checkbox-though-hyper"
+                      type="checkbox"
+                    />
+                    <img
+                      alt="Icon of Though Hyper Ribbon"
+                      src="class"
+                      ="pokeicon ribbon"
+                      src="../images/icons/miscellaneous/gen3/ribbons/tough-ribbon-hyper-hoenn.png"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="Though Contest Hyper Rank Winner!"
+                      for="rubysapphire-checkbox-though-hyper"
+                      >Hyper</label
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="rubysapphire-checkbox-though-master"
+                      type="checkbox"
+                    />
+                    <img
+                      alt="Icon of Though Master Ribbon"
+                      src="class"
+                      ="pokeicon ribbon"
+                      src="../images/icons/miscellaneous/gen3/ribbons/tough-ribbon-master-hoenn.png"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="Though Contest Master Rank Winner!"
+                      for="rubysapphire-checkbox-though-master"
+                      >Master</label
+                    >
+                  </div>
+                </div>
+                <div class="smartnesscontest">
+                  <div class="checkbox-item">
+                    <span class="title"
+                      ><label class="text-lg">Smartness Contests</label></span
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="rubysapphire-checkbox-smartness-normal"
+                      type="checkbox"
+                    />
+                    <img
+                      alt="Icon of Smartness Normal Ribbon"
+                      src="class"
+                      ="pokeicon ribbon"
+                      src="../images/icons/miscellaneous/gen3/ribbons/smart-ribbon-hoenn.png"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="Smart Contest Normal Rank Winner!"
+                      for="rubysapphire-checkbox-smartness-normal"
+                      >Normal</label
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="rubysapphire-checkbox-smartness-super"
+                      type="checkbox"
+                    />
+                    <img
+                      alt="Icon of Smartness Super Ribbon"
+                      src="class"
+                      ="pokeicon ribbon"
+                      src="../images/icons/miscellaneous/gen3/ribbons/smart-ribbon-super-hoenn.png"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="Smart Contest Super Rank Winner!"
+                      for="rubysapphire-checkbox-smartness-super"
+                      >Super</label
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="rubysapphire-checkbox-smartness-hyper"
+                      type="checkbox"
+                    />
+                    <img
+                      alt="Icon of Smartness Hyper Ribbon"
+                      src="class"
+                      ="pokeicon ribbon"
+                      src="../images/icons/miscellaneous/gen3/ribbons/smart-ribbon-hyper-hoenn.png"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="Smart Contest Hyper Rank Winner!"
+                      for="rubysapphire-checkbox-smartness-hyper"
+                      >Hyper</label
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="rubysapphire-checkbox-smartness-master"
+                      type="checkbox"
+                    />
+                    <img
+                      alt="Icon of Smartness Master Ribbon"
+                      src="class"
+                      ="pokeicon ribbon"
+                      src="../images/icons/miscellaneous/gen3/ribbons/smart-ribbon-master-hoenn.png"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="Smart Contest Master Rank Winner!"
+                      for="rubysapphire-checkbox-smartness-master"
+                      >Master</label
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="ribbons-rightrow">
+                <div class="cutenesscontest">
+                  <div class="checkbox-item">
+                    <span class="title"
+                      ><label class="text-lg">Cuteness Contests</label></span
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="rubysapphire-checkbox-cuteness-normal"
+                      type="checkbox"
+                    />
+                    <img
+                      alt="Icon of Cuteness Normal Ribbon"
+                      src="class"
+                      ="pokeicon ribbon"
+                      src="../images/icons/miscellaneous/gen3/ribbons/cute-ribbon-hoenn.png"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="Cute Contest Normal Rank Winner!"
+                      for="rubysapphire-checkbox-cuteness-normal"
+                      >Normal</label
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="rubysapphire-checkbox-cuteness-super"
+                      type="checkbox"
+                    />
+                    <img
+                      alt="Icon of Cuteness Super Ribbon"
+                      src="class"
+                      ="pokeicon ribbon"
+                      src="../images/icons/miscellaneous/gen3/ribbons/cute-ribbon-super-hoenn.png"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="Cute Contest Super Rank Winner!"
+                      for="rubysapphire-checkbox-cuteness-super"
+                      >Super</label
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="rubysapphire-checkbox-cuteness-hyper"
+                      type="checkbox"
+                    />
+                    <img
+                      alt="Icon of Cuteness Hyper Ribbon"
+                      src="class"
+                      ="pokeicon ribbon"
+                      src="../images/icons/miscellaneous/gen3/ribbons/cute-ribbon-hyper-hoenn.png"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="Cute Contest Hyper Rank Winner!"
+                      for="rubysapphire-checkbox-cuteness-hyper"
+                      >Hyper</label
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="rubysapphire-checkbox-cuteness-master"
+                      type="checkbox"
+                    />
+                    <img
+                      alt="Icon of Cuteness Master Ribbon"
+                      src="class"
+                      ="pokeicon ribbon"
+                      src="../images/icons/miscellaneous/gen3/ribbons/cute-ribbon-master-hoenn.png"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="Cute Contest Master Rank Winner!"
+                      for="rubysapphire-checkbox-cuteness-master"
+                      >Master</label
+                    >
+                  </div>
+                </div>
+                <div class="coolnesscontest">
+                  <div class="checkbox-item">
+                    <span class="title"
+                      ><label class="text-lg">Coolness Contests</label></span
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="rubysapphire-checkbox-coolness-normal"
+                      type="checkbox"
+                    />
+                    <img
+                      alt="Icon of Coolness Normal Ribbon"
+                      src="class"
+                      ="pokeicon ribbon"
+                      src="../images/icons/miscellaneous/gen3/ribbons/cool-ribbon-hoenn.png"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="Cool Contest Normal Rank Winner!"
+                      for="rubysapphire-checkbox-coolness-normal"
+                      >Normal</label
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="rubysapphire-checkbox-coolness-super"
+                      type="checkbox"
+                    />
+                    <img
+                      alt="Icon of Coolness Super Ribbon"
+                      src="class"
+                      ="pokeicon ribbon"
+                      src="../images/icons/miscellaneous/gen3/ribbons/cool-ribbon-super-hoenn.png"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="Cool Contest Super Rank Winner!"
+                      for="rubysapphire-checkbox-coolness-super"
+                      >Super</label
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="rubysapphire-checkbox-coolness-hyper"
+                      type="checkbox"
+                    />
+                    <img
+                      alt="Icon of Coolness Hyper Ribbon"
+                      src="class"
+                      ="pokeicon ribbon"
+                      src="../images/icons/miscellaneous/gen3/ribbons/cool-ribbon-hyper-hoenn.png"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="Cool Contest Hyper Rank Winner!"
+                      for="rubysapphire-checkbox-coolness-hyper"
+                      >Hyper</label
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="rubysapphire-checkbox-coolness-master"
+                      type="checkbox"
+                    />
+                    <img
+                      alt="Icon of Coolness Master Ribbon"
+                      src="class"
+                      ="pokeicon ribbon"
+                      src="../images/icons/miscellaneous/gen3/ribbons/cool-ribbon-master-hoenn.png"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="Cool Contest Master Rank Winner!"
+                      for="rubysapphire-checkbox-coolness-master"
+                      >Master</label
+                    >
+                  </div>
+                </div>
+                <div class="moreribbons">
+                  <div class="checkbox-item">
+                    <span class="title"
+                      ><label class="text-lg">Achievement Ribbons</label></span
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="rubysapphire-checkbox-winning-ribbon"
+                      type="checkbox"
+                    />
+                    <img
+                      alt="Icon of Winning Ribbon"
+                      src="class"
+                      ="pokeicon ribbon"
+                      src="../images/icons/miscellaneous/gen3/ribbons/winning-ribbon.png"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="Ribbon for clearing LV50 at the Battle Tower."
+                      for="rubysapphire-checkbox-winning-ribbon"
+                      >Winning</label
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="rubysapphire-checkbox-victory-ribbon"
+                      type="checkbox"
+                    />
+                    <img
+                      alt="Icon of Victory Ribbon"
+                      src="class"
+                      ="pokeicon ribbon"
+                      src="../images/icons/miscellaneous/gen3/ribbons/victory-ribbon.png"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="Won for clearing LV100 at the Battle Tower."
+                      for="rubysapphire-checkbox-victory-ribbon"
+                      >Victory</label
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="rubysapphire-checkbox-artist-ribbon"
+                      type="checkbox"
+                    />
+                    <img
+                      alt="Icon of Artist Ribbon"
+                      src="class"
+                      ="pokeicon ribbon"
+                      src="../images/icons/miscellaneous/gen3/ribbons/artist-ribbon.png"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="Ribbon for being chosen as a super sketch model."
+                      for="rubysapphire-checkbox-artist-ribbon"
+                      >Artist</label
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="rubysapphire-checkbox-champion-ribbon"
+                      type="checkbox"
+                    />
+                    <img
+                      alt="Icon of Champion Ribbon"
+                      src="class"
+                      ="pokeicon ribbon"
+                      src="../images/icons/miscellaneous/gen3/ribbons/champion-ribbon.png"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="Champion-beating, Hall of Fame Member Ribbon."
+                      for="rubysapphire-checkbox-champion-ribbon"
+                      >Champion</label
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="rubysapphire-checkbox-effort-ribbon"
+                      type="checkbox"
+                    />
+                    <img
+                      alt="Icon of Effort Ribbon"
+                      src="class"
+                      ="pokeicon ribbon"
+                      src="../images/icons/miscellaneous/gen3/ribbons/effort-ribbon.png"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="Ribbon awarded for being a hard worker."
+                      for="rubysapphire-checkbox-effort-ribbon"
+                      >Effort</label
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="items">
+            <div class="checkbox-item">
+              <span class="title"><label class="text-lg">Items</label></span>
+            </div>
+            <div class="checkbox-item">
+              <input id="xy-checkbox-alltms" type="checkbox" />
+              <img
+                alt="Icon of TM"
+                src="class"
+                ="pokeicon item"
+                src="../images/icons/inventory/tms/normal.png"
+              />
+              <label
+                class="text-sm lg:tooltip"
+                data-tip="Find all TM's."
+                for="xy-checkbox-alltms"
+                >Collect all TM's</label
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <ul>
+        <li>
+          <a href="../index.html">Progression Dex</a>
+        </li>
+        <li>
+          <a href="#">Twitter</a>
+        </li>
+        <li>
+          <a href="https://github.com/yasingunaydiin">GitHub</a>
+        </li>
+      </ul>
+    </footer>
 
-		                     titleText.forEach(function(text) {
-		                         text.style.color = "#b13131";
-		                     });
+    <script src="../checklists/js/script.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var rubyLogo = document.getElementById('ruby-logo');
+        var sapphireLogo = document.getElementById('sapphire-logo');
 
-		                     widePanels.forEach(function(panel) {
-		                         panel.style.border = "2px solid #b13131";
-		                     });
-		                 });
+        var headerTitle = document.querySelector('.title');
+        var widePanels = document.querySelectorAll('.wide-panel');
+        var footer = document.querySelector('footer');
+        var titleText = document.querySelectorAll('.panel-label');
+        var backgroundIcons = document.querySelector('body');
 
-		                 sapphireLogo.addEventListener("click", function() {
-		                     headerTitle.style.color = "#065A9C";
-		                     footer.style.background = "#065A9C";
-		                     backgroundIcons.style.backgroundImage = 'url(../../images/patterns/pattern-sapphire.png)';
+        rubyLogo.addEventListener('click', function () {
+          headerTitle.style.color = '#b13131';
+          footer.style.background = '#b13131';
+          backgroundIcons.style.backgroundImage =
+            'url(../../images/patterns/pattern-ruby.png)';
 
-		                     titleText.forEach(function(text) {
-		                         text.style.color = "#065A9C";
-		                     });
+          titleText.forEach(function (text) {
+            text.style.color = '#b13131';
+          });
 
-		                     widePanels.forEach(function(panel) {
-		                         panel.style.border = "2px solid #065A9C";
-		                     });
-		                 });
-		              });
-		</script> 
+          widePanels.forEach(function (panel) {
+            panel.style.border = '2px solid #b13131';
+          });
+        });
 
-			<script>
-		                  document.addEventListener('DOMContentLoaded', function() {
-		              const completepokedexCheckboxes = document.querySelectorAll('.completepokedex input[type="checkbox"]');
-		              const legendariesCheckboxes = document.querySelectorAll('.legendaries input[type="checkbox"]');
-		              const giftpokemonCheckboxes = document.querySelectorAll('.giftpokemon input[type="checkbox"]');
-		              const ingametradesCheckboxes = document.querySelectorAll('.ingametrades input[type="checkbox"]');
-		              const trainercardCheckboxes = document.querySelectorAll('.trainercard input[type="checkbox"]');
-		              const battletowerCheckboxes = document.querySelectorAll('.battletower input[type="checkbox"]');
-		              const trickhouseCheckboxes = document.querySelectorAll('.trickhouse input[type="checkbox"]');
-		              const beautycontestCheckboxes = document.querySelectorAll('.beautycontest input[type="checkbox"]');
-		              const thoughcontestCheckboxes = document.querySelectorAll('.thoughcontest input[type="checkbox"]');
-		              const smartnesscontestCheckboxes = document.querySelectorAll('.smartnesscontest input[type="checkbox"]');
-		              const cutenesscontestCheckboxes = document.querySelectorAll('.cutenesscontest input[type="checkbox"]');
-		              const coolnesscontestCheckboxes = document.querySelectorAll('.coolnesscontest input[type="checkbox"]');
-		              const trainerseyeCheckboxes = document.querySelectorAll('.trainerseye input[type="checkbox"]');
-		              const moreribbonsCheckboxes = document.querySelectorAll('.moreribbons input[type="checkbox"]');
-		              const ribbonsCheckboxes = document.querySelectorAll('.ribbons input[type="checkbox"]');
-		              const itemsCheckboxes = document.querySelectorAll('.items input[type="checkbox"]');
+        sapphireLogo.addEventListener('click', function () {
+          headerTitle.style.color = '#065A9C';
+          footer.style.background = '#065A9C';
+          backgroundIcons.style.backgroundImage =
+            'url(../../images/patterns/pattern-sapphire.png)';
 
+          titleText.forEach(function (text) {
+            text.style.color = '#065A9C';
+          });
 
-		              function updateStyle(checkboxes, label) {
-		                  const allChecked = [...checkboxes].every(checkbox => checkbox.checked);
-		                  label.style.textDecoration = allChecked ? 'line-through' : 'none';
-		              }
+          widePanels.forEach(function (panel) {
+            panel.style.border = '2px solid #065A9C';
+          });
+        });
+      });
+    </script>
 
-		              function initializeCheckboxes(checkboxes, label) {
-		                  checkboxes.forEach(checkbox => {
-		                      checkbox.addEventListener('change', function() {
-		                          updateStyle(checkboxes, label);
-		                      });
-		                  });
-		                  updateStyle(checkboxes, label);
-		              }
-		              initializeCheckboxes(completepokedexCheckboxes, document.querySelector('.completepokedex .title label'));
-		              initializeCheckboxes(legendariesCheckboxes, document.querySelector('.legendaries .title label'));
-		              initializeCheckboxes(giftpokemonCheckboxes, document.querySelector('.giftpokemon .title label'));
-		              initializeCheckboxes(ingametradesCheckboxes, document.querySelector('.ingametrades .title label'));
-		              initializeCheckboxes(trainercardCheckboxes, document.querySelector('.trainercard .title label'));
-		              initializeCheckboxes(battletowerCheckboxes, document.querySelector('.battletower .title label'));
-		              initializeCheckboxes(trickhouseCheckboxes, document.querySelector('.trickhouse .title label'));
-		              initializeCheckboxes(beautycontestCheckboxes, document.querySelector('.beautycontest .title label'));
-		              initializeCheckboxes(thoughcontestCheckboxes, document.querySelector('.thoughcontest .title label'));
-		              initializeCheckboxes(smartnesscontestCheckboxes, document.querySelector('.smartnesscontest .title label'));
-		              initializeCheckboxes(cutenesscontestCheckboxes, document.querySelector('.cutenesscontest .title label'));
-		              initializeCheckboxes(coolnesscontestCheckboxes, document.querySelector('.coolnesscontest .title label'));
-		              initializeCheckboxes(trainerseyeCheckboxes, document.querySelector('.trainerseye .title label'));
-		              initializeCheckboxes(moreribbonsCheckboxes, document.querySelector('.moreribbons .title label'));
-		              initializeCheckboxes(ribbonsCheckboxes, document.querySelector('.ribbons .title label'));
-		              initializeCheckboxes(itemsCheckboxes, document.querySelector('.items .title label'));
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const completepokedexCheckboxes = document.querySelectorAll(
+          '.completepokedex input[type="checkbox"]'
+        );
+        const legendariesCheckboxes = document.querySelectorAll(
+          '.legendaries input[type="checkbox"]'
+        );
+        const giftpokemonCheckboxes = document.querySelectorAll(
+          '.giftpokemon input[type="checkbox"]'
+        );
+        const ingametradesCheckboxes = document.querySelectorAll(
+          '.ingametrades input[type="checkbox"]'
+        );
+        const trainercardCheckboxes = document.querySelectorAll(
+          '.trainercard input[type="checkbox"]'
+        );
+        const battletowerCheckboxes = document.querySelectorAll(
+          '.battletower input[type="checkbox"]'
+        );
+        const trickhouseCheckboxes = document.querySelectorAll(
+          '.trickhouse input[type="checkbox"]'
+        );
+        const beautycontestCheckboxes = document.querySelectorAll(
+          '.beautycontest input[type="checkbox"]'
+        );
+        const thoughcontestCheckboxes = document.querySelectorAll(
+          '.thoughcontest input[type="checkbox"]'
+        );
+        const smartnesscontestCheckboxes = document.querySelectorAll(
+          '.smartnesscontest input[type="checkbox"]'
+        );
+        const cutenesscontestCheckboxes = document.querySelectorAll(
+          '.cutenesscontest input[type="checkbox"]'
+        );
+        const coolnesscontestCheckboxes = document.querySelectorAll(
+          '.coolnesscontest input[type="checkbox"]'
+        );
+        const trainerseyeCheckboxes = document.querySelectorAll(
+          '.trainerseye input[type="checkbox"]'
+        );
+        const moreribbonsCheckboxes = document.querySelectorAll(
+          '.moreribbons input[type="checkbox"]'
+        );
+        const ribbonsCheckboxes = document.querySelectorAll(
+          '.ribbons input[type="checkbox"]'
+        );
+        const itemsCheckboxes = document.querySelectorAll(
+          '.items input[type="checkbox"]'
+        );
 
-		            });
-		</script>
+        function updateStyle(checkboxes, label) {
+          const allChecked = [...checkboxes].every(
+            (checkbox) => checkbox.checked
+          );
+          label.style.textDecoration = allChecked ? 'line-through' : 'none';
+        }
 
-</body>
+        function initializeCheckboxes(checkboxes, label) {
+          checkboxes.forEach((checkbox) => {
+            checkbox.addEventListener('change', function () {
+              updateStyle(checkboxes, label);
+            });
+          });
+          updateStyle(checkboxes, label);
+        }
+        initializeCheckboxes(
+          completepokedexCheckboxes,
+          document.querySelector('.completepokedex .title label')
+        );
+        initializeCheckboxes(
+          legendariesCheckboxes,
+          document.querySelector('.legendaries .title label')
+        );
+        initializeCheckboxes(
+          giftpokemonCheckboxes,
+          document.querySelector('.giftpokemon .title label')
+        );
+        initializeCheckboxes(
+          ingametradesCheckboxes,
+          document.querySelector('.ingametrades .title label')
+        );
+        initializeCheckboxes(
+          trainercardCheckboxes,
+          document.querySelector('.trainercard .title label')
+        );
+        initializeCheckboxes(
+          battletowerCheckboxes,
+          document.querySelector('.battletower .title label')
+        );
+        initializeCheckboxes(
+          trickhouseCheckboxes,
+          document.querySelector('.trickhouse .title label')
+        );
+        initializeCheckboxes(
+          beautycontestCheckboxes,
+          document.querySelector('.beautycontest .title label')
+        );
+        initializeCheckboxes(
+          thoughcontestCheckboxes,
+          document.querySelector('.thoughcontest .title label')
+        );
+        initializeCheckboxes(
+          smartnesscontestCheckboxes,
+          document.querySelector('.smartnesscontest .title label')
+        );
+        initializeCheckboxes(
+          cutenesscontestCheckboxes,
+          document.querySelector('.cutenesscontest .title label')
+        );
+        initializeCheckboxes(
+          coolnesscontestCheckboxes,
+          document.querySelector('.coolnesscontest .title label')
+        );
+        initializeCheckboxes(
+          trainerseyeCheckboxes,
+          document.querySelector('.trainerseye .title label')
+        );
+        initializeCheckboxes(
+          moreribbonsCheckboxes,
+          document.querySelector('.moreribbons .title label')
+        );
+        initializeCheckboxes(
+          ribbonsCheckboxes,
+          document.querySelector('.ribbons .title label')
+        );
+        initializeCheckboxes(
+          itemsCheckboxes,
+          document.querySelector('.items .title label')
+        );
+      });
+    </script>
+  </body>
 </html>

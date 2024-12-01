@@ -1,338 +1,1078 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta content="width=device-width, initial-scale=1.0" name="viewport">
-	<title>Progression Dex | Legends Arceus</title>
-	<link href="../checklists/css/legendsarceus.css" rel="stylesheet">
-	<link href="../output.css" rel="stylesheet">
-	<link href="../images/icons/favicontab.ico" rel="icon" type="image/x-icon">
-	<link href="../images/icons/favicontab.ico" rel="shortcut icon" type="image/x-icon">
-	<meta name="description" content="A tool for tracking your progression in Pokemon games. Easily choose between games and track your game progress.">
-	<meta name="keywords" content="pokemon, checklist, pokedex, progress, completion, speedrun, checklist, check list, locations, characters, games, game">
-</head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4PDLXC895H"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Progression Dex | Legends Arceus</title>
+    <link href="../checklists/css/legendsarceus.css" rel="stylesheet" />
+    <link href="../output.css" rel="stylesheet" />
+    <link
+      href="../images/icons/favicontab.ico"
+      rel="icon"
+      type="image/x-icon"
+    />
+    <link
+      href="../images/icons/favicontab.ico"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
+    <meta
+      name="description"
+      content="A tool for tracking your progression in Pokemon games. Easily choose between games and track your game progress."
+    />
+    <meta
+      name="keywords"
+      content="pokemon, checklist, pokedex, progress, completion, speedrun, checklist, check list, locations, characters, games, game"
+    />
+  </head>
+  <!-- Google tag (gtag.js) -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-4PDLXC895H"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
 
-  gtag('config', 'G-4PDLXC895H');
-</script>
-<body>
-	<div class="navbar bg-white rounded-3xl shadow-lg mt-2 fixed top-0 flex items-center justify-between" style="width: 95%;  z-index: 1000; left: 50%; transform: translateX(-50%);">
-		<div class="flex items-center gap-4">
-		  <a href="../index.html" class="btn btn-ghost text-2xl"><span class="title" style="color: #01629e;">Progression Dex |</span></a>
-		  <div class="flex items-center gap-2">
-			<img src="../images/logos/legendsarceus-logo.webp" class="w-20">
-		  </div>
-		</div>
-		
-	  </div>
+    gtag('config', 'G-4PDLXC895H');
+  </script>
+  <body>
+    <div
+      class="navbar bg-white rounded-3xl shadow-lg mt-2 fixed top-0 flex items-center justify-between"
+      style="width: 95%; z-index: 1000; left: 50%; transform: translateX(-50%)"
+    >
+      <div class="flex items-center gap-4">
+        <a href="../index.html" class="btn btn-ghost text-2xl"
+          ><span class="title" style="color: #01629e"
+            >Progression Dex |</span
+          ></a
+        >
+        <div class="flex items-center gap-2">
+          <img
+            src="../images/logos/legendsarceus-logo.webp"
+            class="w-20"
+            alt="Icon of Legends Arceus Logo"
+          />
+        </div>
+      </div>
+    </div>
 
-	<div class="page-container" data-game="legendsarceus">
-		<div class="page-container-left">
-			<div class="wide-panel pokedex">
-				<label class="panel-label">Pokédex</label>
-				<div class="completepokedex">
-					<div class="checkbox-item">
-						<span class="title"><label class="text-lg">Complete the Hisui Pokédex</label></span>
-					</div>
-					<div class="checkbox-item">
-						<input id="legendsarceus-checkbox-hisui-pokedex" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="There are a total of 242 Pokemon in the Hisui Dex." for="legendsarceus-checkbox-hisui-pokedex">Complete Hisui Pokedex</label>
-					</div>
-					<div class="checkbox-item">
-						<input id="legendsarceus-checkbox-starters" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="After finishing the main story, the player can talk to Laventon to obtain the two first partner Pokémon that they hadn't picked." for="legendsarceus-checkbox-starters">Obtain all starters</label>
-					</div>
-				</div>
-				<div class="legendaries">
-					<div class="checkbox-item">
-						<span class="title"><label class="text-lg">Catch all Legendaries</label></span>
-					</div>
-					<div class="legendaries-rowcontainer">
-						<div class="legendaries-leftrow">
-							<div class="checkbox-item">
-								<input id="legendsarceus-checkbox-dialga" type="checkbox"> <img class="pokeicon legendary" src="../images/icons/pokemon/gen8/legendsarceus/dialga.png"> <label class="text-sm lg:tooltip" data-tip="Temple of Sinnoh." for="legendsarceus-checkbox-dialga">Dialga</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="legendsarceus-checkbox-palkia" type="checkbox"> <img class="pokeicon legendary" src="../images/icons/pokemon/gen8/legendsarceus/palkia.png"> <label class="text-sm lg:tooltip" data-tip="Temple of Sinnoh." for="legendsarceus-checkbox-palkia">Palkia</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="legendsarceus-checkbox-manaphy" type="checkbox"> <img class="pokeicon legendary" src="../images/icons/pokemon/gen8/legendsarceus/manaphy.png"> <label class="text-sm lg:tooltip" data-tip="Seabreak Hollow." for="legendsarceus-checkbox-manaphy">Manaphy</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="legendsarceus-checkbox-phione" type="checkbox"> <img class="pokeicon legendary" src="../images/icons/pokemon/gen8/legendsarceus/phione.png"> <label class="text-sm lg:tooltip" data-tip="Seabreak Hollow." for="legendsarceus-checkbox-phione">Phione</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="legendsarceus-checkbox-uxie" type="checkbox"> <img class="pokeicon legendary" src="../images/icons/pokemon/gen8/legendsarceus/uxie.png"> <label class="text-sm lg:tooltip" data-tip="Lake Acuity." for="legendsarceus-checkbox-uxie">Uxie</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="legendsarceus-checkbox-mesprit" type="checkbox"> <img class="pokeicon legendary" src="../images/icons/pokemon/gen8/legendsarceus/mesprit.png"> <label class="text-sm lg:tooltip" data-tip="Lake Verity." for="legendsarceus-checkbox-mesprit">Mesprit</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="legendsarceus-checkbox-azelf" type="checkbox"> <img class="pokeicon legendary" src="../images/icons/pokemon/gen8/legendsarceus/azelf.png"> <label class="text-sm lg:tooltip" data-tip="Lake Valor." for="legendsarceus-checkbox-azelf">Azelf</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="legendsarceus-checkbox-heatran" type="checkbox"> <img class="pokeicon legendary" src="../images/icons/pokemon/gen8/legendsarceus/heatran.png"> <label class="text-sm lg:tooltip" data-tip="Firespit Island." for="legendsarceus-checkbox-heatran">Heatran</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="legendsarceus-checkbox-regigigas" type="checkbox"> <img class="pokeicon legendary" src="../images/icons/pokemon/gen8/legendsarceus/regigigas.png"> <label class="text-sm lg:tooltip" data-tip="Snowpoint Temple." for="legendsarceus-checkbox-regigigas">Regigigas</label>
-							</div>
-						</div>
-						<div class="legendaries-rightrow">
-							<div class="checkbox-item">
-								<input id="legendsarceus-checkbox-cressela" type="checkbox"> <img class="pokeicon legendary" src="../images/icons/pokemon/gen8/legendsarceus/cresselia.png"> <label class="text-sm lg:tooltip" data-tip="Moonbreak Arena." for="legendsarceus-checkbox-cressela">Cresselia</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="legendsarceus-checkbox-giratina" type="checkbox"> <img class="pokeicon legendary" src="../images/icons/pokemon/gen8/legendsarceus/giratina-origin.png"> <label class="text-sm lg:tooltip" data-tip="Spring Path." for="legendsarceus-checkbox-giratina">Giratina</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="legendsarceus-checkbox-tornadus" type="checkbox"> <img class="pokeicon legendary" src="../images/icons/pokemon/gen8/legendsarceus/tornadus-incarnate.png"> <label class="text-sm lg:tooltip" data-tip="Bonechill Wastelands." for="legendsarceus-checkbox-tornadus">Tornadus</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="legendsarceus-checkbox-thundurus" type="checkbox"> <img class="pokeicon legendary" src="../images/icons/pokemon/gen8/legendsarceus/thundurus-incarnate.png"> <label class="text-sm lg:tooltip" data-tip="Cobalt Coastlands." for="legendsarceus-checkbox-thundurus">Thundurus</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="legendsarceus-checkbox-landorus" type="checkbox"> <img class="pokeicon legendary" src="../images/icons/pokemon/gen8/legendsarceus/landorus-incarnate.png"> <label class="text-sm lg:tooltip" data-tip="Ramanas Island." for="legendsarceus-checkbox-landorus">Landorus</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="legendsarceus-checkbox-enamorus" type="checkbox"> <img class="pokeicon legendary" src="../images/icons/pokemon/gen8/legendsarceus/enamorus-incarnate.png"> <label class="text-sm lg:tooltip" data-tip="Scarlet Bog." for="legendsarceus-checkbox-enamorus">Enamorus</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="legendsarceus-checkbox-darkrai" type="checkbox"> <img class="pokeicon legendary" src="../images/icons/pokemon/gen8/legendsarceus/darkrai.png"> <label class="text-sm lg:tooltip" data-tip="Clamberclaw Cliffs." for="legendsarceus-checkbox-darkrai">Darkrai</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="legendsarceus-checkbox-shaymin" type="checkbox"> <img class="pokeicon legendary" src="../images/icons/pokemon/gen8/legendsarceus/shaymin-land.png"> <label class="text-sm lg:tooltip" data-tip="Floaro Gardens." for="legendsarceus-checkbox-shaymin">Shaymin</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="legendsarceus-checkbox-arceus" type="checkbox"> <img class="pokeicon legendary" src="../images/icons/pokemon/gen8/legendsarceus/arceus-normal.png"> <label class="text-sm lg:tooltip" data-tip="Temple of Sinnoh." for="legendsarceus-checkbox-arceus">Arceus</label>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="giftpokemon">
-					<div class="checkbox-item">
-						<span class="title"><label class="text-lg">Obtain all In-Game Gift Pokemon</label></span>
-					</div>
-					<div class="checkbox-item">
-						<input id="legendsarceus-checkbox-vulpix" type="checkbox"> <img class="pokeicon" src="../images/icons/pokemon/gen8/legendsarceus/vulpix-alolan.png"> <label class="text-sm lg:tooltip" data-tip="Received as thanks for finding all 5 of Keaka's Vulpix during request 83." for="legendsarceus-checkbox-vulpix">Alolan Vulpix</label>
-					</div>
-				</div>
-				<div class="unown">
-					<div class="checkbox-item">
-						<span class="title"><label class="text-lg">all Unown's</label></span>
-					</div>
-					<div class="unown-rowcontainer">
-						<div class="unown-leftrow">
-							<div class="checkbox-item">
-								<input id="legendsarceus-checkbox-a" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen8/legendsarceus/unown/unown-a.PNG"> <label class="text-sm lg:tooltip" data-tip="See a guide." for="legendsarceus-checkbox-a">A</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="legendsarceus-checkbox-b" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen8/legendsarceus/unown/unown-b.png"> <label class="text-sm lg:tooltip" data-tip="See a guide." for="legendsarceus-checkbox-b">B</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="legendsarceus-checkbox-c" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen8/legendsarceus/unown/unown-c.png"> <label class="text-sm lg:tooltip" data-tip="See a guide." for="legendsarceus-checkbox-c">C</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="legendsarceus-checkbox-d" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen8/legendsarceus/unown/unown-d.png"> <label class="text-sm lg:tooltip" data-tip="See a guide." for="legendsarceus-checkbox-d">D</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="legendsarceus-checkbox-e" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen8/legendsarceus/unown/unown-e.png"> <label class="text-sm lg:tooltip" data-tip="See a guide." for="legendsarceus-checkbox-e">E</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="legendsarceus-checkbox-f" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen8/legendsarceus/unown/unown-f.png"> <label class="text-sm lg:tooltip" data-tip="See a guide." for="legendsarceus-checkbox-f">F</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="legendsarceus-checkbox-g" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen8/legendsarceus/unown/unown-g.png"> <label class="text-sm lg:tooltip" data-tip="See a guide." for="legendsarceus-checkbox-g">G</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="legendsarceus-checkbox-h" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen8/legendsarceus/unown/unown-h.png"> <label class="text-sm lg:tooltip" data-tip="See a guide." for="legendsarceus-checkbox-h">H</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="legendsarceus-checkbox-i" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen8/legendsarceus/unown/unown-i.png"> <label class="text-sm lg:tooltip" data-tip="See a guide." for="legendsarceus-checkbox-i">I</label>
-							</div>
-						</div>
-						<div class="unown-middlerow">
-							<div class="checkbox-item">
-								<input id="legendsarceus-checkbox-j" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen8/legendsarceus/unown/unown-j.png"> <label class="text-sm lg:tooltip" data-tip="See a guide." for="legendsarceus-checkbox-j">J</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="legendsarceus-checkbox-k" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen8/legendsarceus/unown/unown-k.png"> <label class="text-sm lg:tooltip" data-tip="See a guide." for="legendsarceus-checkbox-k">K</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="legendsarceus-checkbox-l" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen8/legendsarceus/unown/unown-l.png"> <label class="text-sm lg:tooltip" data-tip="See a guide." for="legendsarceus-checkbox-l">L</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="legendsarceus-checkbox-m" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen8/legendsarceus/unown/unown-m.png"> <label class="text-sm lg:tooltip" data-tip="See a guide." for="legendsarceus-checkbox-m">M</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="legendsarceus-checkbox-n" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen8/legendsarceus/unown/unown-n.png"> <label class="text-sm lg:tooltip" data-tip="See a guide." for="legendsarceus-checkbox-n">N</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="legendsarceus-checkbox-o" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen8/legendsarceus/unown/unown-o.png"> <label class="text-sm lg:tooltip" data-tip="See a guide." for="legendsarceus-checkbox-o">O</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="legendsarceus-checkbox-p" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen8/legendsarceus/unown/unown-p.png"> <label class="text-sm lg:tooltip" data-tip="See a guide." for="legendsarceus-checkbox-p">P</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="legendsarceus-checkbox-q" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen8/legendsarceus/unown/unown-q.png"> <label class="text-sm lg:tooltip" data-tip="See a guide." for="legendsarceus-checkbox-q">Q</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="legendsarceus-checkbox-r" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen8/legendsarceus/unown/unown-r.png"> <label class="text-sm lg:tooltip" data-tip="See a guide." for="legendsarceus-checkbox-r">R</label>
-							</div>
-						</div>
-						<div class="unown-rightrow">
-							<div class="checkbox-item">
-								<input id="legendsarceus-checkbox-s" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen8/legendsarceus/unown/unown-s.png"> <label class="text-sm lg:tooltip" data-tip="See a guide." for="legendsarceus-checkbox-s">S</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="legendsarceus-checkbox-t" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen8/legendsarceus/unown/unown-t.png"> <label class="text-sm lg:tooltip" data-tip="See a guide." for="legendsarceus-checkbox-t">T</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="legendsarceus-checkbox-u" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen8/legendsarceus/unown/unown-u.png"> <label class="text-sm lg:tooltip" data-tip="See a guide." for="legendsarceus-checkbox-u">U</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="legendsarceus-checkbox-v" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen8/legendsarceus/unown/unown-v.png"> <label class="text-sm lg:tooltip" data-tip="See a guide." for="legendsarceus-checkbox-v">V</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="legendsarceus-checkbox-w" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen8/legendsarceus/unown/unown-w.png"> <label class="text-sm lg:tooltip" data-tip="See a guide." for="legendsarceus-checkbox-w">W</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="legendsarceus-checkbox-x" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen8/legendsarceus/unown/unown-x.png"> <label class="text-sm lg:tooltip" data-tip="See a guide." for="legendsarceus-checkbox-x">X</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="legendsarceus-checkbox-y" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen8/legendsarceus/unown/unown-y.png"> <label class="text-sm lg:tooltip" data-tip="See a guide." for="legendsarceus-checkbox-y">Y</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="legendsarceus-checkbox-z" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen8/legendsarceus/unown/unown-z.png"> <label class="text-sm lg:tooltip" data-tip="See a guide." for="legendsarceus-checkbox-z">Z</label>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="page-container-right">
-			<div class="wide-panel collectibles">
-				<label class="panel-label">Collectibles</label>
-				<div class="recipes">
-					<div class="recipes-rowcontainer">
-						<div class="recipes-leftrow">
-							<div class="checkbox-item">
-								<input id="legendsarceus-checkbox-recipe-pokeball" type="checkbox"><img class="pokeicon item" src="../images/icons/inventory/gen8/legendsarceus/hisuian-poke.png"> <label class="text-sm lg:tooltip" data-tip="Purchase all Poke Ball Recipes." for="legendsarceus-checkbox-recipe-pokeball">Collect all Poke Ball Recipes</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="legendsarceus-checkbox-recipe-medicine" type="checkbox"> <img class="pokeicon item" src="../images/icons/inventory/gen8/legendsarceus/Bag_Potion_LA_Sprite.png"><label class="text-sm lg:tooltip" data-tip="Purchase all Recovery Recipes." for="legendsarceus-checkbox-recipe-medicine">Collect all Recovery Recipes</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="legendsarceus-checkbox-shiny-charm" type="checkbox"> <img class="pokeicon item" src="../images/icons/miscellaneous/gen8/legendsarceus/Bag_Shiny_Charm_LA_Sprite.png"> <label class="text-sm lg:tooltip" data-tip="Galaxy Hall 1F." for="legendsarceus-checkbox-shiny-charm">Get Shiny Charm</label>
-							</div>
-						</div>
-						<div class="recipes-rightrow">
-							<div class="checkbox-item">
-								<input id="legendsarceus-checkbox-recipe-battleitem" type="checkbox"> <img class="pokeicon item" src="../images/icons/inventory/gen8/legendsarceus/Bag_Aux_Guard_LA_Sprite.png"><label class="text-sm lg:tooltip" data-tip="Purchase all Battle Effect Recipes." for="legendsarceus-checkbox-recipe-battleitem">Collect all Battle Effect Recipes</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="legendsarceus-checkbox-recipe-other" type="checkbox"> <img class="pokeicon item" src="../images/icons/inventory/gen8/legendsarceus/saltcake.png"><label class="text-sm lg:tooltip" data-tip="Purchase all other Recipes." for="legendsarceus-checkbox-recipe-other">Collect other Recipes</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="legendsarceus-checkbox-verses" type="checkbox"> <img class="pokeicon item" src="../images/icons/miscellaneous/gen8/legendsarceus/Bag_Old_Verse_LA_Sprite.png"> <label class="text-sm lg:tooltip" data-tip="Collect all 20 Verses." for="legendsarceus-checkbox-verses">Collect all Old Verses</label>
-							</div>
-								
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="wide-panel more">
-				<label class="panel-label">Post Game</label>
-				<div class="other">
-					<div class="checkbox-item">
-						<input id="legendsarceus-checkbox-eternalbattlereverie" type="checkbox"> <img class="pokeicon item" src="../images/icons/miscellaneous/gen8/legendsarceus/Eternal_Battle_Reverie_mark.png"> <label class="text-sm lg:tooltip" data-tip="Get a 100 streak and receive a mark." for="legendsarceus-checkbox-eternalbattlereverie">Defeat Arceus at the Eternal Battle Reverie</label>
-					</div>
-					<div class="checkbox-item">
-						<input id="legendsarceus-checkbox-perfectstar" type="checkbox"> <img class="pokeicon item" src="../images/icons/miscellaneous/gen8/legendsarceus/perfectstar.png"> <label class="text-sm lg:tooltip" data-tip="This would be your end goal to 100%." for="legendsarceus-checkbox-perfectstar">Perfect Research Tasks for every Pokemon</label>
-					</div>
-					<div class="other-rowcontainer">
-						<div class="other-leftrow">
-							<div class="checkbox-item">
-								<input id="legendsarceus-checkbox-fullstar" type="checkbox"> <img class="pokeicon item" src="../images/icons/miscellaneous/gen8/legendsarceus/star.png"> <label class="text-sm lg:tooltip" data-tip="Get 10 stars and become Full Star Member." for="legendsarceus-checkbox-fullstar">Get to Rank 10</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="legendsarceus-checkbox-clothing" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Purchase all Clothes." for="legendsarceus-checkbox-clothing">Purchase all Clothes</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="legendsarceus-checkbox-balloonrace" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="At the Coronet Highlands after completing all the requests." for="legendsarceus-checkbox-balloonrace">Complete the Balloon Race</label>
-							</div>
-						</div>
-						<div class="other-rightrow">
-							<div class="checkbox-item">
-								<input id="legendsarceus-checkbox-frenziedpokemon" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="They will respawn at level 70." for="legendsarceus-checkbox-frenziedpokemon">Re-challenge Frenzied Pokemon</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="legendsarceus-checkbox-trainingground" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="They will respawn at level 70." for="legendsarceus-checkbox-trainingground">Complete the Training Ground Battles</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="legendsarceus-checkbox-satchel" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Purchase 37 slots." for="legendsarceus-checkbox-satchel">Fully upgrade the Satchel</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="legendsarceus-checkbox-requests" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="There are 122 requests." for="legendsarceus-checkbox-requests">Complete all Requests</label>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<footer>
-		<ul>
-			<li>
-				<a href="../index.html">Progression Dex</a>
-			</li>
-			<li>
-				<a href="#">Twitter</a>
-			</li>
-			<li>
-				<a href="https://github.com/yasingunaydiin">GitHub</a>
-			</li>
-		</ul>
-	</footer>
-	<script src="../checklists/js/script.js">
-	</script> 
-	<script>
-	                                           document.addEventListener('DOMContentLoaded', function() {
-	                                       const completepokedexCheckboxes = document.querySelectorAll('.completepokedex input[type="checkbox"]');
-	                                       const legendariesCheckboxes = document.querySelectorAll('.legendaries input[type="checkbox"]');
-	                                       const giftpokemonCheckboxes = document.querySelectorAll('.giftpokemon input[type="checkbox"]');
-	                                       const otherCheckboxes = document.querySelectorAll('.other input[type="checkbox"]');
-	                                       const unownCheckboxes = document.querySelectorAll('.unown input[type="checkbox"]');
-	                                       const recipesCheckboxes = document.querySelectorAll('.recipes input[type="checkbox"]');
+    <div class="page-container" data-game="legendsarceus">
+      <div class="page-container-left">
+        <div class="wide-panel pokedex">
+          <label class="panel-label">Pokédex</label>
+          <div class="completepokedex">
+            <div class="checkbox-item">
+              <span class="title"
+                ><label class="text-lg">Complete the Hisui Pokédex</label></span
+              >
+            </div>
+            <div class="checkbox-item">
+              <input
+                id="legendsarceus-checkbox-hisui-pokedex"
+                type="checkbox"
+              />
+              <label
+                class="text-sm lg:tooltip"
+                data-tip="There are a total of 242 Pokemon in the Hisui Dex."
+                for="legendsarceus-checkbox-hisui-pokedex"
+                >Complete Hisui Pokedex</label
+              >
+            </div>
+            <div class="checkbox-item">
+              <input id="legendsarceus-checkbox-starters" type="checkbox" />
+              <label
+                class="text-sm lg:tooltip"
+                data-tip="After finishing the main story, the player can talk to Laventon to obtain the two first partner Pokémon that they hadn't picked."
+                for="legendsarceus-checkbox-starters"
+                >Obtain all starters</label
+              >
+            </div>
+          </div>
+          <div class="legendaries">
+            <div class="checkbox-item">
+              <span class="title"
+                ><label class="text-lg">Catch all Legendaries</label></span
+              >
+            </div>
+            <div class="legendaries-rowcontainer">
+              <div class="legendaries-leftrow">
+                <div class="checkbox-item">
+                  <input id="legendsarceus-checkbox-dialga" type="checkbox" />
+                  <img
+                    class="pokeicon legendary"
+                    src="../images/icons/pokemon/gen8/legendsarceus/dialga.png"
+                    alt="Icon of Dialga"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Temple of Sinnoh."
+                    for="legendsarceus-checkbox-dialga"
+                    >Dialga</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="legendsarceus-checkbox-palkia" type="checkbox" />
+                  <img
+                    class="pokeicon legendary"
+                    src="../images/icons/pokemon/gen8/legendsarceus/palkia.png"
+                    alt="Icon of Palkia"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Temple of Sinnoh."
+                    for="legendsarceus-checkbox-palkia"
+                    >Palkia</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="legendsarceus-checkbox-manaphy" type="checkbox" />
+                  <img
+                    class="pokeicon legendary"
+                    src="../images/icons/pokemon/gen8/legendsarceus/manaphy.png"
+                    alt="Icon of Manaphy"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Seabreak Hollow."
+                    for="legendsarceus-checkbox-manaphy"
+                    >Manaphy</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="legendsarceus-checkbox-phione" type="checkbox" />
+                  <img
+                    class="pokeicon legendary"
+                    src="../images/icons/pokemon/gen8/legendsarceus/phione.png"
+                    alt="Icon of Phione"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Seabreak Hollow."
+                    for="legendsarceus-checkbox-phione"
+                    >Phione</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="legendsarceus-checkbox-uxie" type="checkbox" />
+                  <img
+                    class="pokeicon legendary"
+                    src="../images/icons/pokemon/gen8/legendsarceus/uxie.png"
+                    alt="Icon of Uxie"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Lake Acuity."
+                    for="legendsarceus-checkbox-uxie"
+                    >Uxie</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="legendsarceus-checkbox-mesprit" type="checkbox" />
+                  <img
+                    class="pokeicon legendary"
+                    src="../images/icons/pokemon/gen8/legendsarceus/mesprit.png"
+                    alt="Icon of Mesprit"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Lake Verity."
+                    for="legendsarceus-checkbox-mesprit"
+                    >Mesprit</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="legendsarceus-checkbox-azelf" type="checkbox" />
+                  <img
+                    class="pokeicon legendary"
+                    src="../images/icons/pokemon/gen8/legendsarceus/azelf.png"
+                    alt="Icon of Azelf"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Lake Valor."
+                    for="legendsarceus-checkbox-azelf"
+                    >Azelf</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="legendsarceus-checkbox-heatran" type="checkbox" />
+                  <img
+                    class="pokeicon legendary"
+                    src="../images/icons/pokemon/gen8/legendsarceus/heatran.png"
+                    alt="Icon of Heatran"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Firespit Island."
+                    for="legendsarceus-checkbox-heatran"
+                    >Heatran</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="legendsarceus-checkbox-regigigas"
+                    type="checkbox"
+                  />
+                  <img
+                    class="pokeicon legendary"
+                    src="../images/icons/pokemon/gen8/legendsarceus/regigigas.png"
+                    alt="Icon of Regigigas"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Snowpoint Temple."
+                    for="legendsarceus-checkbox-regigigas"
+                    >Regigigas</label
+                  >
+                </div>
+              </div>
+              <div class="legendaries-rightrow">
+                <div class="checkbox-item">
+                  <input id="legendsarceus-checkbox-cressela" type="checkbox" />
+                  <img
+                    class="pokeicon legendary"
+                    src="../images/icons/pokemon/gen8/legendsarceus/cresselia.png"
+                    alt="Icon of Cresselia"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Moonbreak Arena."
+                    for="legendsarceus-checkbox-cressela"
+                    >Cresselia</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="legendsarceus-checkbox-giratina" type="checkbox" />
+                  <img
+                    class="pokeicon legendary"
+                    src="../images/icons/pokemon/gen8/legendsarceus/giratina-origin.png"
+                    alt="Icon of Giratina"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Spring Path."
+                    for="legendsarceus-checkbox-giratina"
+                    >Giratina</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="legendsarceus-checkbox-tornadus" type="checkbox" />
+                  <img
+                    class="pokeicon legendary"
+                    src="../images/icons/pokemon/gen8/legendsarceus/tornadus-incarnate.png"
+                    alt="Icon of Tornadus"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Bonechill Wastelands."
+                    for="legendsarceus-checkbox-tornadus"
+                    >Tornadus</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="legendsarceus-checkbox-thundurus"
+                    type="checkbox"
+                  />
+                  <img
+                    class="pokeicon legendary"
+                    src="../images/icons/pokemon/gen8/legendsarceus/thundurus-incarnate.png"
+                    alt="Icon of Thundurus"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Cobalt Coastlands."
+                    for="legendsarceus-checkbox-thundurus"
+                    >Thundurus</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="legendsarceus-checkbox-landorus" type="checkbox" />
+                  <img
+                    class="pokeicon legendary"
+                    src="../images/icons/pokemon/gen8/legendsarceus/landorus-incarnate.png"
+                    alt="Icon of Landorus"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Ramanas Island."
+                    for="legendsarceus-checkbox-landorus"
+                    >Landorus</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="legendsarceus-checkbox-enamorus" type="checkbox" />
+                  <img
+                    class="pokeicon legendary"
+                    src="../images/icons/pokemon/gen8/legendsarceus/enamorus-incarnate.png"
+                    alt="Icon of Enamorus"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Scarlet Bog."
+                    for="legendsarceus-checkbox-enamorus"
+                    >Enamorus</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="legendsarceus-checkbox-darkrai" type="checkbox" />
+                  <img
+                    class="pokeicon legendary"
+                    src="../images/icons/pokemon/gen8/legendsarceus/darkrai.png"
+                    alt="Icon of Darkrai"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Clamberclaw Cliffs."
+                    for="legendsarceus-checkbox-darkrai"
+                    >Darkrai</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="legendsarceus-checkbox-shaymin" type="checkbox" />
+                  <img
+                    class="pokeicon legendary"
+                    src="../images/icons/pokemon/gen8/legendsarceus/shaymin-land.png"
+                    alt="Icon of Shaymin"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Floaro Gardens."
+                    for="legendsarceus-checkbox-shaymin"
+                    >Shaymin</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="legendsarceus-checkbox-arceus" type="checkbox" />
+                  <img
+                    class="pokeicon legendary"
+                    src="../images/icons/pokemon/gen8/legendsarceus/arceus-normal.png"
+                    alt="Icon of Arceus"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Temple of Sinnoh."
+                    for="legendsarceus-checkbox-arceus"
+                    >Arceus</label
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="giftpokemon">
+            <div class="checkbox-item">
+              <span class="title"
+                ><label class="text-lg"
+                  >Obtain all In-Game Gift Pokemon</label
+                ></span
+              >
+            </div>
+            <div class="checkbox-item">
+              <input id="legendsarceus-checkbox-vulpix" type="checkbox" />
+              <img
+                class="pokeicon"
+                src="../images/icons/pokemon/gen8/legendsarceus/vulpix-alolan.png"
+                alt="Icon of Alolan Vulpix"
+              />
+              <label
+                class="text-sm lg:tooltip"
+                data-tip="Received as thanks for finding all 5 of Keaka's Vulpix during request 83."
+                for="legendsarceus-checkbox-vulpix"
+                >Alolan Vulpix</label
+              >
+            </div>
+          </div>
+          <div class="unown">
+            <div class="checkbox-item">
+              <span class="title"
+                ><label class="text-lg">all Unown's</label></span
+              >
+            </div>
+            <div class="unown-rowcontainer">
+              <div class="unown-leftrow">
+                <div class="checkbox-item">
+                  <input id="legendsarceus-checkbox-a" type="checkbox" />
+                  <img
+                    class="pokeicon unown"
+                    src="../images/icons/pokemon/gen8/legendsarceus/unown/unown-a.PNG"
+                    alt="Icon of Unown A"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="See a guide."
+                    for="legendsarceus-checkbox-a"
+                    >A</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="legendsarceus-checkbox-b" type="checkbox" />
+                  <img
+                    class="pokeicon unown"
+                    src="../images/icons/pokemon/gen8/legendsarceus/unown/unown-b.png"
+                    alt="Icon of Unown B"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="See a guide."
+                    for="legendsarceus-checkbox-b"
+                    >B</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="legendsarceus-checkbox-c" type="checkbox" />
+                  <img
+                    class="pokeicon unown"
+                    src="../images/icons/pokemon/gen8/legendsarceus/unown/unown-c.png"
+                    alt="Icon of Unown C"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="See a guide."
+                    for="legendsarceus-checkbox-c"
+                    >C</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="legendsarceus-checkbox-d" type="checkbox" />
+                  <img
+                    class="pokeicon unown"
+                    src="../images/icons/pokemon/gen8/legendsarceus/unown/unown-d.png"
+                    alt="Icon of Unown D"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="See a guide."
+                    for="legendsarceus-checkbox-d"
+                    >D</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="legendsarceus-checkbox-e" type="checkbox" />
+                  <img
+                    class="pokeicon unown"
+                    src="../images/icons/pokemon/gen8/legendsarceus/unown/unown-e.png"
+                    alt="Icon of Unown E"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="See a guide."
+                    for="legendsarceus-checkbox-e"
+                    >E</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="legendsarceus-checkbox-f" type="checkbox" />
+                  <img
+                    class="pokeicon unown"
+                    src="../images/icons/pokemon/gen8/legendsarceus/unown/unown-f.png"
+                    alt="Icon of Unown F"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="See a guide."
+                    for="legendsarceus-checkbox-f"
+                    >F</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="legendsarceus-checkbox-g" type="checkbox" />
+                  <img
+                    class="pokeicon unown"
+                    src="../images/icons/pokemon/gen8/legendsarceus/unown/unown-g.png"
+                    alt="Icon of Unown G"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="See a guide."
+                    for="legendsarceus-checkbox-g"
+                    >G</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="legendsarceus-checkbox-h" type="checkbox" />
+                  <img
+                    class="pokeicon unown"
+                    src="../images/icons/pokemon/gen8/legendsarceus/unown/unown-h.png"
+                    alt="Icon of Unown H"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="See a guide."
+                    for="legendsarceus-checkbox-h"
+                    >H</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="legendsarceus-checkbox-i" type="checkbox" />
+                  <img
+                    class="pokeicon unown"
+                    src="../images/icons/pokemon/gen8/legendsarceus/unown/unown-i.png"
+                    alt="Icon of Unown I"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="See a guide."
+                    for="legendsarceus-checkbox-i"
+                    >I</label
+                  >
+                </div>
+              </div>
+              <div class="unown-middlerow">
+                <div class="checkbox-item">
+                  <input id="legendsarceus-checkbox-j" type="checkbox" />
+                  <img
+                    class="pokeicon unown"
+                    src="../images/icons/pokemon/gen8/legendsarceus/unown/unown-j.png"
+                    alt="Icon of Unown J"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="See a guide."
+                    for="legendsarceus-checkbox-j"
+                    >J</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="legendsarceus-checkbox-k" type="checkbox" />
+                  <img
+                    class="pokeicon unown"
+                    src="../images/icons/pokemon/gen8/legendsarceus/unown/unown-k.png"
+                    alt="Icon of Unown K"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="See a guide."
+                    for="legendsarceus-checkbox-k"
+                    >K</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="legendsarceus-checkbox-l" type="checkbox" />
+                  <img
+                    class="pokeicon unown"
+                    src="../images/icons/pokemon/gen8/legendsarceus/unown/unown-l.png"
+                    alt="Icon of Unown L"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="See a guide."
+                    for="legendsarceus-checkbox-l"
+                    >L</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="legendsarceus-checkbox-m" type="checkbox" />
+                  <img
+                    class="pokeicon unown"
+                    src="../images/icons/pokemon/gen8/legendsarceus/unown/unown-m.png"
+                    alt="Icon of Unown M"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="See a guide."
+                    for="legendsarceus-checkbox-m"
+                    >M</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="legendsarceus-checkbox-n" type="checkbox" />
+                  <img
+                    class="pokeicon unown"
+                    src="../images/icons/pokemon/gen8/legendsarceus/unown/unown-n.png"
+                    alt="Icon of Unown N"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="See a guide."
+                    for="legendsarceus-checkbox-n"
+                    >N</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="legendsarceus-checkbox-o" type="checkbox" />
+                  <img
+                    class="pokeicon unown"
+                    src="../images/icons/pokemon/gen8/legendsarceus/unown/unown-o.png"
+                    alt="Icon of Unown O"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="See a guide."
+                    for="legendsarceus-checkbox-o"
+                    >O</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="legendsarceus-checkbox-p" type="checkbox" />
+                  <img
+                    class="pokeicon unown"
+                    src="../images/icons/pokemon/gen8/legendsarceus/unown/unown-p.png"
+                    alt="Icon of Unown P"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="See a guide."
+                    for="legendsarceus-checkbox-p"
+                    >P</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="legendsarceus-checkbox-q" type="checkbox" />
+                  <img
+                    class="pokeicon unown"
+                    src="../images/icons/pokemon/gen8/legendsarceus/unown/unown-q.png"
+                    alt="Icon of Unown Q"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="See a guide."
+                    for="legendsarceus-checkbox-q"
+                    >Q</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="legendsarceus-checkbox-r" type="checkbox" />
+                  <img
+                    class="pokeicon unown"
+                    src="../images/icons/pokemon/gen8/legendsarceus/unown/unown-r.png"
+                    alt="Icon of Unown R"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="See a guide."
+                    for="legendsarceus-checkbox-r"
+                    >R</label
+                  >
+                </div>
+              </div>
+              <div class="unown-rightrow">
+                <div class="checkbox-item">
+                  <input id="legendsarceus-checkbox-s" type="checkbox" />
+                  <img
+                    class="pokeicon unown"
+                    src="../images/icons/pokemon/gen8/legendsarceus/unown/unown-s.png"
+                    alt="Icon of Unown S"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="See a guide."
+                    for="legendsarceus-checkbox-s"
+                    >S</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="legendsarceus-checkbox-t" type="checkbox" />
+                  <img
+                    class="pokeicon unown"
+                    src="../images/icons/pokemon/gen8/legendsarceus/unown/unown-t.png"
+                    alt="Icon of Unown T"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="See a guide."
+                    for="legendsarceus-checkbox-t"
+                    >T</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="legendsarceus-checkbox-u" type="checkbox" />
+                  <img
+                    class="pokeicon unown"
+                    src="../images/icons/pokemon/gen8/legendsarceus/unown/unown-u.png"
+                    alt="Icon of Unown U"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="See a guide."
+                    for="legendsarceus-checkbox-u"
+                    >U</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="legendsarceus-checkbox-v" type="checkbox" />
+                  <img
+                    class="pokeicon unown"
+                    src="../images/icons/pokemon/gen8/legendsarceus/unown/unown-v.png"
+                    alt="Icon of Unown V"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="See a guide."
+                    for="legendsarceus-checkbox-v"
+                    >V</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="legendsarceus-checkbox-w" type="checkbox" />
+                  <img
+                    class="pokeicon unown"
+                    src="../images/icons/pokemon/gen8/legendsarceus/unown/unown-w.png"
+                    alt="Icon of Unown W"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="See a guide."
+                    for="legendsarceus-checkbox-w"
+                    >W</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="legendsarceus-checkbox-x" type="checkbox" />
+                  <img
+                    class="pokeicon unown"
+                    src="../images/icons/pokemon/gen8/legendsarceus/unown/unown-x.png"
+                    alt="Icon of Unown X"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="See a guide."
+                    for="legendsarceus-checkbox-x"
+                    >X</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="legendsarceus-checkbox-y" type="checkbox" />
+                  <img
+                    class="pokeicon unown"
+                    src="../images/icons/pokemon/gen8/legendsarceus/unown/unown-y.png"
+                    alt="Icon of Unown Y"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="See a guide."
+                    for="legendsarceus-checkbox-y"
+                    >Y</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="legendsarceus-checkbox-z" type="checkbox" />
+                  <img
+                    class="pokeicon unown"
+                    src="../images/icons/pokemon/gen8/legendsarceus/unown/unown-z.png"
+                    alt="Icon of Unown Z"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="See a guide."
+                    for="legendsarceus-checkbox-z"
+                    >Z</label
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="page-container-right">
+        <div class="wide-panel collectibles">
+          <label class="panel-label">Collectibles</label>
+          <div class="recipes">
+            <div class="recipes-rowcontainer">
+              <div class="recipes-leftrow">
+                <div class="checkbox-item">
+                  <input
+                    id="legendsarceus-checkbox-recipe-pokeball"
+                    type="checkbox"
+                  /><img
+                    class="pokeicon item"
+                    src="../images/icons/inventory/gen8/legendsarceus/hisuian-poke.png"
+                    alt="Icon of Hisuian Poke"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Purchase all Poke Ball Recipes."
+                    for="legendsarceus-checkbox-recipe-pokeball"
+                    >Collect all Poke Ball Recipes</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="legendsarceus-checkbox-recipe-medicine"
+                    type="checkbox"
+                  />
+                  <img
+                    class="pokeicon item"
+                    src="../images/icons/inventory/gen8/legendsarceus/Bag_Potion_LA_Sprite.png"
+                    alt="Icon of Potion"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Purchase all Recovery Recipes."
+                    for="legendsarceus-checkbox-recipe-medicine"
+                    >Collect all Recovery Recipes</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="legendsarceus-checkbox-shiny-charm"
+                    type="checkbox"
+                  />
+                  <img
+                    class="pokeicon item"
+                    src="../images/icons/miscellaneous/gen8/legendsarceus/Bag_Shiny_Charm_LA_Sprite.png"
+                    alt="Icon of Shiny Charm"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Galaxy Hall 1F."
+                    for="legendsarceus-checkbox-shiny-charm"
+                    >Get Shiny Charm</label
+                  >
+                </div>
+              </div>
+              <div class="recipes-rightrow">
+                <div class="checkbox-item">
+                  <input
+                    id="legendsarceus-checkbox-recipe-battleitem"
+                    type="checkbox"
+                  />
+                  <img
+                    class="pokeicon item"
+                    src="../images/icons/inventory/gen8/legendsarceus/Bag_Aux_Guard_LA_Sprite.png"
+                    alt="Icon of Aux Guard"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Purchase all Battle Effect Recipes."
+                    for="legendsarceus-checkbox-recipe-battleitem"
+                    >Collect all Battle Effect Recipes</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="legendsarceus-checkbox-recipe-other"
+                    type="checkbox"
+                  />
+                  <img
+                    class="pokeicon item"
+                    src="../images/icons/inventory/gen8/legendsarceus/saltcake.png"
+                    alt="Icon of Salt Cake"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Purchase all other Recipes."
+                    for="legendsarceus-checkbox-recipe-other"
+                    >Collect other Recipes</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="legendsarceus-checkbox-verses" type="checkbox" />
+                  <img
+                    class="pokeicon item"
+                    src="../images/icons/miscellaneous/gen8/legendsarceus/Bag_Old_Verse_LA_Sprite.png"
+                    alt="Icon of Old Verse"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Collect all 20 Verses."
+                    for="legendsarceus-checkbox-verses"
+                    >Collect all Old Verses</label
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="wide-panel more">
+          <label class="panel-label">Post Game</label>
+          <div class="other">
+            <div class="checkbox-item">
+              <input
+                id="legendsarceus-checkbox-eternalbattlereverie"
+                type="checkbox"
+              />
+              <img
+                class="pokeicon item"
+                src="../images/icons/miscellaneous/gen8/legendsarceus/Eternal_Battle_Reverie_mark.png"
+                alt="Icon of Eternal Battle Reverie Mark"
+              />
+              <label
+                class="text-sm lg:tooltip"
+                data-tip="Get a 100 streak and receive a mark."
+                for="legendsarceus-checkbox-eternalbattlereverie"
+                >Defeat Arceus at the Eternal Battle Reverie</label
+              >
+            </div>
+            <div class="checkbox-item">
+              <input id="legendsarceus-checkbox-perfectstar" type="checkbox" />
+              <img
+                class="pokeicon item"
+                src="../images/icons/miscellaneous/gen8/legendsarceus/perfectstar.png"
+                alt="Icon of Perfect Star"
+              />
+              <label
+                class="text-sm lg:tooltip"
+                data-tip="This would be your end goal to 100%."
+                for="legendsarceus-checkbox-perfectstar"
+                >Perfect Research Tasks for every Pokemon</label
+              >
+            </div>
+            <div class="other-rowcontainer">
+              <div class="other-leftrow">
+                <div class="checkbox-item">
+                  <input id="legendsarceus-checkbox-fullstar" type="checkbox" />
+                  <img
+                    class="pokeicon item"
+                    src="../images/icons/miscellaneous/gen8/legendsarceus/star.png"
+                    alt="Icon of Star"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Get 10 stars and become Full Star Member."
+                    for="legendsarceus-checkbox-fullstar"
+                    >Get to Rank 10</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="legendsarceus-checkbox-clothing" type="checkbox" />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Purchase all Clothes."
+                    for="legendsarceus-checkbox-clothing"
+                    >Purchase all Clothes</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="legendsarceus-checkbox-balloonrace"
+                    type="checkbox"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="At the Coronet Highlands after completing all the requests."
+                    for="legendsarceus-checkbox-balloonrace"
+                    >Complete the Balloon Race</label
+                  >
+                </div>
+              </div>
+              <div class="other-rightrow">
+                <div class="checkbox-item">
+                  <input
+                    id="legendsarceus-checkbox-frenziedpokemon"
+                    type="checkbox"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="They will respawn at level 70."
+                    for="legendsarceus-checkbox-frenziedpokemon"
+                    >Re-challenge Frenzied Pokemon</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="legendsarceus-checkbox-trainingground"
+                    type="checkbox"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="They will respawn at level 70."
+                    for="legendsarceus-checkbox-trainingground"
+                    >Complete the Training Ground Battles</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="legendsarceus-checkbox-satchel" type="checkbox" />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Purchase 37 slots."
+                    for="legendsarceus-checkbox-satchel"
+                    >Fully upgrade the Satchel</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input id="legendsarceus-checkbox-requests" type="checkbox" />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="There are 122 requests."
+                    for="legendsarceus-checkbox-requests"
+                    >Complete all Requests</label
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <ul>
+        <li>
+          <a href="../index.html">Progression Dex</a>
+        </li>
+        <li>
+          <a href="#">Twitter</a>
+        </li>
+        <li>
+          <a href="https://github.com/yasingunaydiin">GitHub</a>
+        </li>
+      </ul>
+    </footer>
+    <script src="../checklists/js/script.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const completepokedexCheckboxes = document.querySelectorAll(
+          '.completepokedex input[type="checkbox"]'
+        );
+        const legendariesCheckboxes = document.querySelectorAll(
+          '.legendaries input[type="checkbox"]'
+        );
+        const giftpokemonCheckboxes = document.querySelectorAll(
+          '.giftpokemon input[type="checkbox"]'
+        );
+        const otherCheckboxes = document.querySelectorAll(
+          '.other input[type="checkbox"]'
+        );
+        const unownCheckboxes = document.querySelectorAll(
+          '.unown input[type="checkbox"]'
+        );
+        const recipesCheckboxes = document.querySelectorAll(
+          '.recipes input[type="checkbox"]'
+        );
 
+        function updateStyle(checkboxes, label) {
+          const allChecked = [...checkboxes].every(
+            (checkbox) => checkbox.checked
+          );
+          label.style.textDecoration = allChecked ? 'line-through' : 'none';
+        }
 
-
-
-	                                       function updateStyle(checkboxes, label) {
-	                                           const allChecked = [...checkboxes].every(checkbox => checkbox.checked);
-	                                           label.style.textDecoration = allChecked ? 'line-through' : 'none';
-	                                       }
-
-	                                       function initializeCheckboxes(checkboxes, label) {
-	                                           checkboxes.forEach(checkbox => {
-	                                               checkbox.addEventListener('change', function() {
-	                                                   updateStyle(checkboxes, label);
-	                                               });
-	                                           });
-	                                           updateStyle(checkboxes, label);
-	                                       }
-	                                       initializeCheckboxes(completepokedexCheckboxes, document.querySelector('.completepokedex .title label'));
-	                                       initializeCheckboxes(legendariesCheckboxes, document.querySelector('.legendaries .title label'));
-	                                       initializeCheckboxes(giftpokemonCheckboxes, document.querySelector('.giftpokemon .title label'));
-	                                       initializeCheckboxes(otherCheckboxes, document.querySelector('.other .title label'));
-	                                       initializeCheckboxes(unownCheckboxes, document.querySelector('.unown .title label'));
-	                                       initializeCheckboxes(recipesCheckboxes, document.querySelector('.recipes .title label'));
-
-
-	                                       
-	                                    });
-	</script>
-</body>
+        function initializeCheckboxes(checkboxes, label) {
+          checkboxes.forEach((checkbox) => {
+            checkbox.addEventListener('change', function () {
+              updateStyle(checkboxes, label);
+            });
+          });
+          updateStyle(checkboxes, label);
+        }
+        initializeCheckboxes(
+          completepokedexCheckboxes,
+          document.querySelector('.completepokedex .title label')
+        );
+        initializeCheckboxes(
+          legendariesCheckboxes,
+          document.querySelector('.legendaries .title label')
+        );
+        initializeCheckboxes(
+          giftpokemonCheckboxes,
+          document.querySelector('.giftpokemon .title label')
+        );
+        initializeCheckboxes(
+          otherCheckboxes,
+          document.querySelector('.other .title label')
+        );
+        initializeCheckboxes(
+          unownCheckboxes,
+          document.querySelector('.unown .title label')
+        );
+        initializeCheckboxes(
+          recipesCheckboxes,
+          document.querySelector('.recipes .title label')
+        );
+      });
+    </script>
+  </body>
 </html>

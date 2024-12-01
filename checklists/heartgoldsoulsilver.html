@@ -1,643 +1,2153 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta content="width=device-width, initial-scale=1.0" name="viewport">
-	<title>Progression Dex | HeartGold and SoulSilver</title>
-	<link href="../checklists/css/heartgoldsoulsilver.css" rel="stylesheet">
-	<link href="../output.css" rel="stylesheet">
-	<link href="../images/icons/favicontab.ico" rel="icon" type="image/x-icon">
-	<link href="../images/icons/favicontab.ico" rel="shortcut icon" type="image/x-icon">
-	<meta name="description" content="A tool for tracking your progression in Pokemon games. Easily choose between games and track your game progress.">
-	<meta name="keywords" content="pokemon, checklist, pokedex, progress, completion, speedrun, checklist, check list, locations, characters, games, game">
-</head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4PDLXC895H"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Progression Dex | HeartGold and SoulSilver</title>
+    <link href="../checklists/css/heartgoldsoulsilver.css" rel="stylesheet" />
+    <link href="../output.css" rel="stylesheet" />
+    <link
+      href="../images/icons/favicontab.ico"
+      rel="icon"
+      type="image/x-icon"
+    />
+    <link
+      href="../images/icons/favicontab.ico"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
+    <meta
+      name="description"
+      content="A tool for tracking your progression in Pokemon games. Easily choose between games and track your game progress."
+    />
+    <meta
+      name="keywords"
+      content="pokemon, checklist, pokedex, progress, completion, speedrun, checklist, check list, locations, characters, games, game"
+    />
+  </head>
+  <!-- Google tag (gtag.js) -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-4PDLXC895H"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
 
-  gtag('config', 'G-4PDLXC895H');
-</script>
-<body>
-	<div class="navbar bg-white rounded-3xl shadow-lg mt-2 fixed top-0 flex items-center justify-between" style="width: 95%;  z-index: 1000; left: 50%; transform: translateX(-50%);">
-		<div class="flex items-center gap-4">
-		  <a href="../index.html" class="btn btn-ghost text-2xl"><span class="title">Progression Dex |</span></a>
-		  <div class="flex items-center gap-2">
-			<img id="heartgold-logo" src="../images/logos/heartgold-logo.webp" class="w-20">
-			<img id="soulsilver-logo" src="../images/logos/soulsilver-logo.webp" class="w-20">
-		  </div>
-		</div>
-		
-	  </div>
-	<div class="page-container" data-game="heartgoldsoulsilver">
-		<div class="page-container-left">
-			<div class="wide-panel pokedex">
-				<label class="panel-label">Pokédex</label>
-				<div class="completepokedex">
-					<div class="checkbox-item">
-						<span class="title"><label class="text-lg">Complete the Johto Pokédex</label></span>
-					</div>
+    gtag('config', 'G-4PDLXC895H');
+  </script>
+  <body>
+    <div
+      class="navbar bg-white rounded-3xl shadow-lg mt-2 fixed top-0 flex items-center justify-between"
+      style="width: 95%; z-index: 1000; left: 50%; transform: translateX(-50%)"
+    >
+      <div class="flex items-center gap-4">
+        <a href="../index.html" class="btn btn-ghost text-2xl"
+          ><span class="title">Progression Dex |</span></a
+        >
+        <div class="flex items-center gap-2">
+          <img
+            id="heartgold-logo"
+            src="../images/logos/heartgold-logo.webp"
+            class="w-20"
+            alt="Icon of HeartGold Logo"
+          />
+          <img
+            id="soulsilver-logo"
+            src="../images/logos/soulsilver-logo.webp"
+            class="w-20"
+            alt="Icon of SoulSilver Logo"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="page-container" data-game="heartgoldsoulsilver">
+      <div class="page-container-left">
+        <div class="wide-panel pokedex">
+          <label class="panel-label">Pokédex</label>
+          <div class="completepokedex">
+            <div class="checkbox-item">
+              <span class="title"
+                ><label class="text-lg">Complete the Johto Pokédex</label></span
+              >
+            </div>
 
-					<div class="checkbox-item">
-						<input id="heartgoldsoulsilver-checkbox-nationalpokedex" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="There are a total of 493 Pokemon in the National Dex." for="heartgoldsoulsilver-checkbox-nationalpokedex">Complete the National Pokedex</label>
-					</div>
-					<div class="checkbox-item">
-						<input id="heartgoldsoulsilver-checkbox-diploma" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="" for="heartgoldsoulsilver-checkbox-diploma">Get Diploma</label>
-					</div>
-				</div>
-				<div class="legendaries">
-					<div class="checkbox-item">
-						<span class="title"><label class="text-lg">Catch all Legendaries</label></span>
-					</div>
-					<div class="legendaries-rowcontainer">
-						<div class="legendaries-leftrow">
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-ho-oh" type="checkbox"> <img class="pokeicon legendary" src="../images/icons/pokemon/gen4/heartgoldsoulsilver/ho-oh.png"> <label class="text-sm lg:tooltip" data-tip="After defeating Team Rocket and Kimono Girls, climb Ecruteak City's Bell Tower with the Rainbow Wing." for="heartgoldsoulsilver-checkbox-ho-oh" style="color: #FFB346;">Ho-Oh</label> <label class="text-sm lg:tooltip" data-tip="Catch Ho-Oh in Soul Silver with the Rainbow Wing obtained from a person in Pewter City, then go to the Bell Tower's roof"><img class="icon-small" src="../images/icons/miscellaneous/other/moreinfo.png"></label>
-							</div>
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-lugia" type="checkbox"> <img class="pokeicon legendary" src="../images/icons/pokemon/gen4/heartgoldsoulsilver/lugia.png"> <label class="text-sm lg:tooltip" data-tip="Catch Lugia in Soul Silver by obtaining the Silver Feather, defeating Team Rocket and the Kimono Girls, then encountering it in Whirl Islands." for="heartgoldsoulsilver-checkbox-lugia" style="color: #7A95C4;">Lugia</label> <label class="text-sm lg:tooltip" data-tip="Catch Lugia in HeartGold with the Silver Feather from Pewter City, descend to the bottom of Whirl Islands"><img class="icon-small" src="../images/icons/miscellaneous/other/moreinfo.png"></label>
-							</div>
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-suicune" type="checkbox"> <img class="pokeicon legendary" src="../images/icons/pokemon/gen4/heartgoldsoulsilver/suicune.png"> <label class="text-sm lg:tooltip" data-tip="After multiple encounters around the world, go to the hill next to Bill's house." for="heartgoldsoulsilver-checkbox-suicune">Suicune</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-entei" type="checkbox"> <img class="pokeicon legendary" src="../images/icons/pokemon/gen4/heartgoldsoulsilver/entei.png"> <label class="text-sm lg:tooltip" data-tip="After entering the basement of Brass Tower, it, along with Raikou and Suicune will be roaming." for="heartgoldsoulsilver-checkbox-entei">Entei</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-raikou" type="checkbox"> <img class="pokeicon legendary" src="../images/icons/pokemon/gen4/heartgoldsoulsilver/raikou.png"> <label class="text-sm lg:tooltip" data-tip="After entering the basement of Brass Tower, it, along with Entei and Suicune will be roaming." for="heartgoldsoulsilver-checkbox-raikou">Raikou</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-articuno" type="checkbox"> <img class="pokeicon legendary" src="../images/icons/pokemon/gen4/heartgoldsoulsilver/articuno.png"> <label class="text-sm lg:tooltip" data-tip="Articuno can be found deep within the Seafoam Islands." for="heartgoldsoulsilver-checkbox-articuno">Articuno</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-zapdos" type="checkbox"> <img class="pokeicon legendary" src="../images/icons/pokemon/gen4/heartgoldsoulsilver/zapdos.png"> <label class="text-sm lg:tooltip" data-tip="Zapdos can be found just outside the Power Plant in Route 10 of Kanto." for="heartgoldsoulsilver-checkbox-zapdos">Zapdos</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-moltres" type="checkbox"> <img class="pokeicon legendary" src="../images/icons/pokemon/gen4/heartgoldsoulsilver/moltres.png"> <label class="text-sm lg:tooltip" data-tip="Moltres can be found within the Silver Cave." for="heartgoldsoulsilver-checkbox-moltres">Moltres</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-mewtwo" type="checkbox"> <img class="pokeicon legendary" src="../images/icons/pokemon/gen4/heartgoldsoulsilver/mewtwo.png"> <label class="text-sm lg:tooltip" data-tip="Mewtwo can be found after you have earned all the Kanto badges, inside Cerulean Cave." for="heartgoldsoulsilver-checkbox-mewtwo">Mewtwo</label>
-							</div>
-						</div>
-						<div class="legendaries-rightrow">
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-kyogre" type="checkbox"> <img class="pokeicon legendary" src="../images/icons/pokemon/gen4/heartgoldsoulsilver/kyogre.png"> <label class="text-sm lg:tooltip" data-tip="In SoulSilver, You need to obtain the Red Orb from Mr. Pokemon. Then go to Route 47." for="heartgoldsoulsilver-checkbox-kyogre">Kyogre</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-groudon" type="checkbox"> <img class="pokeicon legendary" src="../images/icons/pokemon/gen4/heartgoldsoulsilver/groudon.png"> <label class="text-sm lg:tooltip" data-tip="In HeartGold, You need to obtain the Blue Orb from Mr. Pokemon. Then go to Route 47." for="heartgoldsoulsilver-checkbox-groudon">Groudon</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-rayquaza" type="checkbox"> <img class="pokeicon legendary" src="../images/icons/pokemon/gen4/heartgoldsoulsilver/rayquaza.png"> <label class="text-sm lg:tooltip" data-tip="You need to have both Kyogre and Groudon with the Jade Orb to the same cave." for="heartgoldsoulsilver-checkbox-rayquaza">Rayquaza</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-latios" type="checkbox"> <img class="pokeicon legendary" src="../images/icons/pokemon/gen4/heartgoldsoulsilver/latios.png"> <label class="text-sm lg:tooltip" data-tip="After obtaining the National Pokédex and leaving Vermillion City's Pokémon Fan Club, Steven Stone will tell you about a roaming legendary." for="heartgoldsoulsilver-checkbox-latios">Latios</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-latias" type="checkbox"> <img class="pokeicon legendary" src="../images/icons/pokemon/gen4/heartgoldsoulsilver/latias.png"> <label class="text-sm lg:tooltip" data-tip="After obtaining the National Pokédex and leaving Vermillion City's Pokémon Fan Club, Steven Stone will tell you about a roaming legendary." for="heartgoldsoulsilver-checkbox-latias">Latias</label>
-							</div>
-							<div class="eventpokemon">
-								<div class="checkbox-item">
-									<span class="title"><label class="text-lg">Event Pokemon</label></span> <label class="text-sm lg:tooltip" data-tip="See Events tab. You may choose one of these Legendaries."><img class="icon-small" src="../images/icons/miscellaneous/other/moreinfo.png"></label>
-								</div>
-								<div class="checkbox-item">
-									<input id="heartgoldsoulsilver-checkbox-dialga" type="checkbox"> <img class="pokeicon legendary" src="../images/icons/pokemon/gen4/heartgoldsoulsilver/dialga.png"> <label class="text-sm lg:tooltip" data-tip="Go with the special 12th movie Arceus to the Sinjoh Ruins." for="heartgoldsoulsilver-checkbox-dialga"  style="color: #7ac49a;">Dialga</label>
-								</div>
-								<div class="checkbox-item">
-									<input id="heartgoldsoulsilver-checkbox-palkia" type="checkbox"> <img class="pokeicon legendary" src="../images/icons/pokemon/gen4/heartgoldsoulsilver/palkia.png"> <label class="text-sm lg:tooltip" data-tip="Go with the special 12th movie Arceus to the Sinjoh Ruins." for="heartgoldsoulsilver-checkbox-palkia"  style="color: #7ac49a;">Palkia</label>
-								</div>
-								<div class="checkbox-item">
-									<input id="heartgoldsoulsilver-checkbox-giratina" type="checkbox"> <img class="pokeicon legendary" src="../images/icons/pokemon/gen4/heartgoldsoulsilver/giratina-altered.png"> <label class="text-sm lg:tooltip" data-tip="Go with the special 12th movie Arceus to the Sinjoh Ruins." for="heartgoldsoulsilver-checkbox-giratina"  style="color: #7ac49a;">Giratina</label>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="giftpokemon">
-					<div class="checkbox-item">
-						<span class="title"><label class="text-lg">Obtain all In-Game Gift Pokemon</label></span>
-					</div>
-					<div class="giftpokemon-rowcontainer">
-						<div class="giftpokemon-leftrow">
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-eevee" type="checkbox"> <img class="pokeicon" src="../images/icons/pokemon/gen4/heartgoldsoulsilver/eevee.png"> <label class="text-sm lg:tooltip" data-tip="After bumping into Bill in Ecruteak City, he will be in his house in Goldenrod City." for="heartgoldsoulsilver-checkbox-eevee">Eevee</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-togepi" type="checkbox"> <img class="pokeicon" src="../images/icons/pokemon/gen4/heartgoldsoulsilver/togepi.png"> <label class="text-sm lg:tooltip" data-tip="After beating Falkner, go to the PokeMart." for="heartgoldsoulsilver-checkbox-togepi">Togepi Egg</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-spearow" type="checkbox"> <img class="pokeicon" src="../images/icons/pokemon/gen4/heartgoldsoulsilver/spearow.png"> <label class="text-sm lg:tooltip" data-tip="In the gate in the north of Goldenrod." for="heartgoldsoulsilver-checkbox-spearow">Spearow</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-egg" type="checkbox"> <img class="pokeicon" src="../images/icons/pokemon/gen4/heartgoldsoulsilver/egg.png"> <label class="text-sm lg:tooltip" data-tip="In Violet City, you can receive 1 of 3 eggs by giving a special Secret Code. Mareep, Wooper or Slugma." for="heartgoldsoulsilver-checkbox-egg">a Random Egg</label>
-							</div>
-						</div>
-						<div class="giftpokemon-rightrow">
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-shuckle" type="checkbox"> <img class="pokeicon" src="../images/icons/pokemon/gen4/heartgoldsoulsilver/shuckle.png"> <label class="text-sm lg:tooltip" data-tip="After you have beaten Chuck in the Cianwood Gym, go to the south-west house of Cianwood City." for="heartgoldsoulsilver-checkbox-shuckle">Shuckle</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-tentacool" type="checkbox"> <img class="pokeicon" src="../images/icons/pokemon/gen4/heartgoldsoulsilver/tentacool.png"> <label class="text-sm lg:tooltip" data-tip="In Cianwood City, if you have released or transferred all but 1 of your Pokémon and lack Surf or Fly on them." for="heartgoldsoulsilver-checkbox-tentacool">Tentacool</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-tyrogue" type="checkbox"> <img class="pokeicon" src="../images/icons/pokemon/gen4/heartgoldsoulsilver/tyrogue.png"> <label class="text-sm lg:tooltip" data-tip="Middle entrance of Mt. Mortar and follow the path all the way down to the basement." for="heartgoldsoulsilver-checkbox-tyrogue">Tyrogue</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-dratini" type="checkbox"> <img class="pokeicon" src="../images/icons/pokemon/gen4/heartgoldsoulsilver/dratini.png"> <label class="text-sm lg:tooltip" data-tip="After you have defeated Clair in the Blackthorn Gym, she will send you on a quest into the Dragon's Den." for="heartgoldsoulsilver-checkbox-dratini">Dratini</label>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="ingametrades">
-					<div class="checkbox-item">
-						<span class="title"><label class="text-lg">Complete all In-Game Trades</label></span>
-					</div>
-					<div class="ingametrades-rowcontainer">
-						<div class="ingametrades-leftrow">
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-onix" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="In a house in Violet City." for="heartgoldsoulsilver-checkbox-onix">Bellsprout for Onix</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-machop" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Up on the fifth floor of the Goldenrod City Department Store." for="heartgoldsoulsilver-checkbox-machop">Drowzee for Machop</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-dodrio" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="In the eastmost house of Blackthorn City." for="heartgoldsoulsilver-checkbox-dodrio">Dragonair for Dodrio</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-xatu" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="In the Pokémon Centre of Pewter City." for="heartgoldsoulsilver-checkbox-xatu">Haunter for Xatu</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-magneton" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="In the Power Plant in Route 10." for="heartgoldsoulsilver-checkbox-magneton">Dugtrio for Magneton</label>
-							</div>
-						</div>
-						<div class="ingametrades-rightrow">
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-pikachu" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="After you have defeated Lt. Surge for a second time, you will find him in the Saffron City Magnet Train station." for="heartgoldsoulsilver-checkbox-pikachu">Pikachu for French Pikachu</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-beldum" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="After you have received the Hoenn Starter from Steven and spoken to him in the Pewter Museum, he will be in the lobby of Silph Co." for="heartgoldsoulsilver-checkbox-beldum">Forretress for Beldum</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-rhyhorn" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="After you have defeated Brock, on Saturdays between 17:00 and 20:00, you will find him in the entrance of Diglett's Cave." for="heartgoldsoulsilver-checkbox-rhyhorn">Bonsly for Rhyhorn</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-steelix" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="After you have defeated Jasmine in the rematch, she will be in her gym waiting for you." for="heartgoldsoulsilver-checkbox-steelix">Any for Steelix</label>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="unown">
-					<div class="checkbox-item">
-						<span class="title"><label class="text-lg">Catch all Unown's</label></span>
-					</div>
-					<div class="unown-rowcontainer">
-						<div class="unown-leftrow">
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-unownA" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen4/heartgoldsoulsilver/unown/unown-a.PNG"> <label class="text-sm lg:tooltip" data-tip="Solve the Kabuto puzzle." for="heartgoldsoulsilver-checkbox-unownA">A</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-unownB" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen4/heartgoldsoulsilver/unown/unown-b.png"> <label class="text-sm lg:tooltip" data-tip="Solve the Kabuto puzzle." for="heartgoldsoulsilver-checkbox-unownB">B</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-unownC" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen4/heartgoldsoulsilver/unown/unown-c.png"> <label class="text-sm lg:tooltip" data-tip="Solve the Kabuto puzzle." for="heartgoldsoulsilver-checkbox-unownC">C</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-unownD" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen4/heartgoldsoulsilver/unown/unown-d.png"> <label class="text-sm lg:tooltip" data-tip="Solve the Kabuto puzzle." for="heartgoldsoulsilver-checkbox-unownD">D</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-unownE" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen4/heartgoldsoulsilver/unown/unown-e.png"> <label class="text-sm lg:tooltip" data-tip="Solve the Kabuto puzzle." for="heartgoldsoulsilver-checkbox-unownE">E</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-unownF" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen4/heartgoldsoulsilver/unown/unown-f.png"> <label class="text-sm lg:tooltip" data-tip="Solve the Kabuto puzzle." for="heartgoldsoulsilver-checkbox-unownF">F</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-unownG" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen4/heartgoldsoulsilver/unown/unown-g.png"> <label class="text-sm lg:tooltip" data-tip="Solve the Kabuto puzzle." for="heartgoldsoulsilver-checkbox-unownG">G</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-unownH" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen4/heartgoldsoulsilver/unown/unown-h.png"> <label class="text-sm lg:tooltip" data-tip="Solve the Kabuto puzzle." for="heartgoldsoulsilver-checkbox-unownH">H</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-unownI" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen4/heartgoldsoulsilver/unown/unown-i.png"> <label class="text-sm lg:tooltip" data-tip="Solve the Kabuto puzzle." for="heartgoldsoulsilver-checkbox-unownI">I</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-unownJ" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen4/heartgoldsoulsilver/unown/unown-j.png"> <label class="text-sm lg:tooltip" data-tip="Solve the Kabuto puzzle." for="heartgoldsoulsilver-checkbox-unownJ">J</label>
-							</div>
-						</div>
-						<div class="unown-middlerow">
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-unownK" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen4/heartgoldsoulsilver/unown/unown-k.png"> <label class="text-sm lg:tooltip" data-tip="Solve the Omanyte puzzle." for="heartgoldsoulsilver-checkbox-unownK">K</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-unownL" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen4/heartgoldsoulsilver/unown/unown-l.png"> <label class="text-sm lg:tooltip" data-tip="Solve the Omanyte puzzle." for="heartgoldsoulsilver-checkbox-unownL">L</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-unownM" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen4/heartgoldsoulsilver/unown/unown-m.png"> <label class="text-sm lg:tooltip" data-tip="Solve the Omanyte puzzle." for="heartgoldsoulsilver-checkbox-unownM">M</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-unownN" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen4/heartgoldsoulsilver/unown/unown-n.png"> <label class="text-sm lg:tooltip" data-tip="Solve the Omanyte puzzle." for="heartgoldsoulsilver-checkbox-unownN">N</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-unownO" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen4/heartgoldsoulsilver/unown/unown-o.png"> <label class="text-sm lg:tooltip" data-tip="Solve the Omanyte puzzle." for="heartgoldsoulsilver-checkbox-unownO">O</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-unownP" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen4/heartgoldsoulsilver/unown/unown-p.png"> <label class="text-sm lg:tooltip" data-tip="Solve the Omanyte puzzle." for="heartgoldsoulsilver-checkbox-unownP">P</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-unownQ" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen4/heartgoldsoulsilver/unown/unown-q.png"> <label class="text-sm lg:tooltip" data-tip="Solve the Omanyte puzzle." for="heartgoldsoulsilver-checkbox-unownQ">Q</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-unownR" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen4/heartgoldsoulsilver/unown/unown-r.png"> <label class="text-sm lg:tooltip" data-tip="Solve the Aerodactyl puzzle." for="heartgoldsoulsilver-checkbox-unownR">R</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-unownS" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen4/heartgoldsoulsilver/unown/unown-s.png"> <label class="text-sm lg:tooltip" data-tip="Solve the Aerodactyl puzzle." for="heartgoldsoulsilver-checkbox-unownS">S</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-unownT" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen4/heartgoldsoulsilver/unown/unown-t.png"> <label class="text-sm lg:tooltip" data-tip="Solve the Aerodactyl puzzle." for="heartgoldsoulsilver-checkbox-unownT">T</label>
-							</div>
-						</div>
-						<div class="unown-rightrow">
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-unownU" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen4/heartgoldsoulsilver/unown/unown-u.png"> <label class="text-sm lg:tooltip" data-tip="Solve the Aerodactyl puzzle." for="heartgoldsoulsilver-checkbox-unownU">U</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-unownV" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen4/heartgoldsoulsilver/unown/unown-v.png"> <label class="text-sm lg:tooltip" data-tip="Solve the Aerodactyl puzzle." for="heartgoldsoulsilver-checkbox-unownV">V</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-unownW" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen4/heartgoldsoulsilver/unown/unown-w.png"> <label class="text-sm lg:tooltip" data-tip="Solve the Ho-Oh puzzle." for="heartgoldsoulsilver-checkbox-unownW">W</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-unownX" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen4/heartgoldsoulsilver/unown/unown-x.png"> <label class="text-sm lg:tooltip" data-tip="Solve the Ho-Oh puzzle." for="heartgoldsoulsilver-checkbox-unownX">X</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-unownY" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen4/heartgoldsoulsilver/unown/unown-y.png"> <label class="text-sm lg:tooltip" data-tip="Solve the Ho-Oh puzzle." for="heartgoldsoulsilver-checkbox-unownY">Y</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-unownZ" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen4/heartgoldsoulsilver/unown/unown-z.png"> <label class="text-sm lg:tooltip" data-tip="Solve the Ho-Oh puzzle." for="heartgoldsoulsilver-checkbox-unownZ">Z</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-unown?" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen4/heartgoldsoulsilver/unown/unown-qm.png"> <label class="text-sm lg:tooltip" data-tip="Talk to the scientist at the Research Center after catching all Unown." for="heartgoldsoulsilver-checkbox-unown?">?</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-unown!" type="checkbox"> <img class="pokeicon unown" src="../images/icons/pokemon/gen4/heartgoldsoulsilver/unown/unown-em.png"> <label class="text-sm lg:tooltip" data-tip="Talk to the scientist at the Research Center after catching all Unown." for="heartgoldsoulsilver-checkbox-unown!">!</label>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="page-container-right">
-			<div class="wide-panel collectibles">
-				<label class="panel-label">Collectibles</label>
-				<div class="ribbons">
-					<div class="ribbons-rowcontainer">
-						<div class="ribbons-leftrow">
-							<div class="ribbongiver">
-								<div class="checkbox-item">
-									<span class="title"><label class="text-lg">Ribbon Giver</label></span>
-								</div>
-								<div class="checkbox-item">
-									<input id="heartgoldsoulsilver-checkbox-alert-ribbon" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen4/ribbons/alert-ribbon.png"> <label class="text-sm lg:tooltip" data-tip="A Ribbon for recalling an invigorating event that created life energy." for="heartgoldsoulsilver-checkbox-alert-ribbon">Alert</label>
-								</div>
-								<div class="checkbox-item">
-									<input id="heartgoldsoulsilver-checkbox-shock-ribbon" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen4/ribbons/shock-ribbon.png"> <label class="text-sm lg:tooltip" data-tip="A Ribbon for recalling a thrilling event that made life more exciting." for="heartgoldsoulsilver-checkbox-shock-ribbon">Shock</label>
-								</div>
-								<div class="checkbox-item">
-									<input id="heartgoldsoulsilver-checkbox-downcast-ribbon" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen4/ribbons/downcast-ribbon.png"> <label class="text-sm lg:tooltip" data-tip="A Ribbon for recalling feelings of sadness that added spice to life." for="heartgoldsoulsilver-checkbox-downcast-ribbon">Downcast</label>
-								</div>
-								<div class="checkbox-item">
-									<input id="heartgoldsoulsilver-checkbox-careless-ribbon" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen4/ribbons/careless-ribbon.png"> <label class="text-sm lg:tooltip" data-tip="A Ribbon for recalling a careless error that helped steer life decisions." for="heartgoldsoulsilver-checkbox-careless-ribbon">Careless</label>
-								</div>
-								<div class="checkbox-item">
-									<input id="heartgoldsoulsilver-checkbox-relax-ribbon" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen4/ribbons/relax-ribbon.png"> <label class="text-sm lg:tooltip" data-tip="A Ribbon for recalling a refreshing event that added sparkle to life." for="heartgoldsoulsilver-checkbox-relax-ribbon">Relax</label>
-								</div>
-								<div class="checkbox-item">
-									<input id="heartgoldsoulsilver-checkbox-snooze-ribbon" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen4/ribbons/snooze-ribbon.png"> <label class="text-sm lg:tooltip" data-tip="A Ribbon for recalling a deep slumber that made life soothing." for="heartgoldsoulsilver-checkbox-snooze-ribbon">Snooze</label>
-								</div>
-								<div class="checkbox-item">
-									<input id="heartgoldsoulsilver-checkbox-smile-ribbon" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen4/ribbons/smile-ribbon.png"> <label class="text-sm lg:tooltip" data-tip="A Ribbon for recalling that smiles enrich the quality of life." for="heartgoldsoulsilver-checkbox-smile-ribbon">Smile</label>
-								</div>
-								<div class="moreribbons">
-									<div class="checkbox-item">
-										<span class="title"><label class="text-lg">Achievement Ribbons</label></span>
-									</div>
-									<div class="checkbox-item">
-										<input id="heartgoldsoulsilver-checkbox-effort-ribbon" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen3/ribbons/effort-ribbon.png"> <label class="text-sm lg:tooltip" data-tip="Ribbon awarded for being an exceptionally hard worker." for="heartgoldsoulsilver-checkbox-effort-ribbon">Effort</label>
-									</div>
-									<div class="checkbox-item">
-										<input id="heartgoldsoulsilver-checkbox-legend-ribbon" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen4/ribbons/legend-ribbon.png"> <label class="text-sm lg:tooltip" data-tip="Ribbon awarded for being an exceptionally hard worker." for="heartgoldsoulsilver-checkbox-legend-ribbon">Legend</label>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="ribbons-rightrow">
-							<div class="abilitybattle">
-								<div class="checkbox-item">
-									<span class="title"><label class="text-lg">Ability Battle</label></span>
-								</div>
-								<div class="checkbox-item">
-									<input id="heartgoldsoulsilver-checkbox-ability-normal" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen4/ribbons/ability-ribbon.png"> <label class="text-sm lg:tooltip" data-tip="A Ribbon awarded for defeating the Tower Tycoon at the Battle Tower." for="heartgoldsoulsilver-checkbox-ability-normal">Ability</label>
-								</div>
-								<div class="checkbox-item">
-									<input id="heartgoldsoulsilver-checkbox-ability-great" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen4/ribbons/great-ability-ribbon.png"> <label class="text-sm lg:tooltip" data-tip="A Ribbon awarded for defeating the Tower Tycoon at the Battle Tower." for="heartgoldsoulsilver-checkbox-ability-great">Great Ability</label>
-								</div>
-								<div class="checkbox-item">
-									<input id="heartgoldsoulsilver-checkbox-ability-double" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen4/ribbons/double-ability-ribbon.png"> <label class="text-sm lg:tooltip" data-tip="A Ribbon awarded for completing the Battle Tower Double challenge." for="heartgoldsoulsilver-checkbox-ability-double">Double Ability</label>
-								</div>
-								<div class="checkbox-item">
-									<input id="heartgoldsoulsilver-checkbox-ability-multi" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen4/ribbons/multi-ability-ribbon.png"> <label class="text-sm lg:tooltip" data-tip="A Ribbon awarded for completing the Battle Tower Multi challenge." for="heartgoldsoulsilver-checkbox-ability-multi">Multi Ability</label>
-								</div>
-								<div class="checkbox-item">
-									<input id="heartgoldsoulsilver-checkbox-ability-pair" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen4/ribbons/pair-ability-ribbon.png"> <label class="text-sm lg:tooltip" data-tip="A Ribbon awarded for completing the Battle Tower Link Multi challenge." for="heartgoldsoulsilver-checkbox-ability-pair">Pair Ability</label>
-								</div>
-								<div class="checkbox-item">
-									<input id="heartgoldsoulsilver-checkbox-ability-world" type="checkbox"> <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen4/ribbons/world-ability-ribbon.png"> <label class="text-sm lg:tooltip" data-tip="A Ribbon awarded for completing the Battle Tower Link Multi challenge." for="heartgoldsoulsilver-checkbox-ability-world">World Ability</label>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+            <div class="checkbox-item">
+              <input
+                id="heartgoldsoulsilver-checkbox-nationalpokedex"
+                type="checkbox"
+              />
+              <label
+                class="text-sm lg:tooltip"
+                data-tip="There are a total of 493 Pokemon in the National Dex."
+                for="heartgoldsoulsilver-checkbox-nationalpokedex"
+                >Complete the National Pokedex</label
+              >
+            </div>
+            <div class="checkbox-item">
+              <input
+                id="heartgoldsoulsilver-checkbox-diploma"
+                type="checkbox"
+              />
+              <label
+                class="text-sm lg:tooltip"
+                data-tip=""
+                for="heartgoldsoulsilver-checkbox-diploma"
+                >Get Diploma</label
+              >
+            </div>
+          </div>
+          <div class="legendaries">
+            <div class="checkbox-item">
+              <span class="title"
+                ><label class="text-lg">Catch all Legendaries</label></span
+              >
+            </div>
+            <div class="legendaries-rowcontainer">
+              <div class="legendaries-leftrow">
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-ho-oh"
+                    type="checkbox"
+                  />
+                  <img
+                    class="pokeicon legendary"
+                    src="../images/icons/pokemon/gen4/heartgoldsoulsilver/ho-oh.png"
+                    alt="Icon of Ho-Oh"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="After defeating Team Rocket and Kimono Girls, climb Ecruteak City's Bell Tower with the Rainbow Wing."
+                    for="heartgoldsoulsilver-checkbox-ho-oh"
+                    style="color: #ffb346"
+                    >Ho-Oh</label
+                  >
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Catch Ho-Oh in Soul Silver with the Rainbow Wing obtained from a person in Pewter City, then go to the Bell Tower's roof"
+                    ><img
+                      class="icon-small"
+                      src="../images/icons/miscellaneous/other/moreinfo.png"
+                  /></label>
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-lugia"
+                    type="checkbox"
+                  />
+                  <img
+                    class="pokeicon legendary"
+                    src="../images/icons/pokemon/gen4/heartgoldsoulsilver/lugia.png"
+                    alt="Icon of Lugia"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Catch Lugia in Soul Silver by obtaining the Silver Feather, defeating Team Rocket and the Kimono Girls, then encountering it in Whirl Islands."
+                    for="heartgoldsoulsilver-checkbox-lugia"
+                    style="color: #7a95c4"
+                    >Lugia</label
+                  >
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Catch Lugia in HeartGold with the Silver Feather from Pewter City, descend to the bottom of Whirl Islands"
+                    ><img
+                      class="icon-small"
+                      src="../images/icons/miscellaneous/other/moreinfo.png"
+                  /></label>
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-suicune"
+                    type="checkbox"
+                  />
+                  <img
+                    class="pokeicon legendary"
+                    src="../images/icons/pokemon/gen4/heartgoldsoulsilver/suicune.png"
+                    alt="Icon of Suicune"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="After multiple encounters around the world, go to the hill next to Bill's house."
+                    for="heartgoldsoulsilver-checkbox-suicune"
+                    >Suicune</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-entei"
+                    type="checkbox"
+                  />
+                  <img
+                    class="pokeicon legendary"
+                    src="../images/icons/pokemon/gen4/heartgoldsoulsilver/entei.png"
+                    alt="Icon of Entei"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="After entering the basement of Brass Tower, it, along with Raikou and Suicune will be roaming."
+                    for="heartgoldsoulsilver-checkbox-entei"
+                    >Entei</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-raikou"
+                    type="checkbox"
+                  />
+                  <img
+                    class="pokeicon legendary"
+                    src="../images/icons/pokemon/gen4/heartgoldsoulsilver/raikou.png"
+                    alt="Icon of Raikou"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="After entering the basement of Brass Tower, it, along with Entei and Suicune will be roaming."
+                    for="heartgoldsoulsilver-checkbox-raikou"
+                    >Raikou</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-articuno"
+                    type="checkbox"
+                  />
+                  <img
+                    class="pokeicon legendary"
+                    src="../images/icons/pokemon/gen4/heartgoldsoulsilver/articuno.png"
+                    alt="Icon of Articuno"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Articuno can be found deep within the Seafoam Islands."
+                    for="heartgoldsoulsilver-checkbox-articuno"
+                    >Articuno</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-zapdos"
+                    type="checkbox"
+                  />
+                  <img
+                    class="pokeicon legendary"
+                    src="../images/icons/pokemon/gen4/heartgoldsoulsilver/zapdos.png"
+                    alt="Icon of Zapdos"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Zapdos can be found just outside the Power Plant in Route 10 of Kanto."
+                    for="heartgoldsoulsilver-checkbox-zapdos"
+                    >Zapdos</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-moltres"
+                    type="checkbox"
+                  />
+                  <img
+                    class="pokeicon legendary"
+                    src="../images/icons/pokemon/gen4/heartgoldsoulsilver/moltres.png"
+                    alt="Icon of Moltres"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Moltres can be found within the Silver Cave."
+                    for="heartgoldsoulsilver-checkbox-moltres"
+                    >Moltres</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-mewtwo"
+                    type="checkbox"
+                  />
+                  <img
+                    class="pokeicon legendary"
+                    src="../images/icons/pokemon/gen4/heartgoldsoulsilver/mewtwo.png"
+                    alt="Icon of Mewtwo"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Mewtwo can be found after you have earned all the Kanto badges, inside Cerulean Cave."
+                    for="heartgoldsoulsilver-checkbox-mewtwo"
+                    >Mewtwo</label
+                  >
+                </div>
+              </div>
+              <div class="legendaries-rightrow">
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-kyogre"
+                    type="checkbox"
+                  />
+                  <img
+                    class="pokeicon legendary"
+                    src="../images/icons/pokemon/gen4/heartgoldsoulsilver/kyogre.png"
+                    alt="Icon of Kyogre"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="In SoulSilver, You need to obtain the Red Orb from Mr. Pokemon. Then go to Route 47."
+                    for="heartgoldsoulsilver-checkbox-kyogre"
+                    >Kyogre</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-groudon"
+                    type="checkbox"
+                  />
+                  <img
+                    class="pokeicon legendary"
+                    src="../images/icons/pokemon/gen4/heartgoldsoulsilver/groudon.png"
+                    alt="Icon of Groudon"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="In HeartGold, You need to obtain the Blue Orb from Mr. Pokemon. Then go to Route 47."
+                    for="heartgoldsoulsilver-checkbox-groudon"
+                    >Groudon</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-rayquaza"
+                    type="checkbox"
+                  />
+                  <img
+                    class="pokeicon legendary"
+                    src="../images/icons/pokemon/gen4/heartgoldsoulsilver/rayquaza.png"
+                    alt="Icon of Rayquaza"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="You need to have both Kyogre and Groudon with the Jade Orb to the same cave."
+                    for="heartgoldsoulsilver-checkbox-rayquaza"
+                    >Rayquaza</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-latios"
+                    type="checkbox"
+                  />
+                  <img
+                    class="pokeicon legendary"
+                    src="../images/icons/pokemon/gen4/heartgoldsoulsilver/latios.png"
+                    alt="Icon of Latios"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="After obtaining the National Pokédex and leaving Vermillion City's Pokémon Fan Club, Steven Stone will tell you about a roaming legendary."
+                    for="heartgoldsoulsilver-checkbox-latios"
+                    >Latios</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-latias"
+                    type="checkbox"
+                  />
+                  <img
+                    class="pokeicon legendary"
+                    src="../images/icons/pokemon/gen4/heartgoldsoulsilver/latias.png"
+                    alt="Icon of Latias"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="After obtaining the National Pokédex and leaving Vermillion City's Pokémon Fan Club, Steven Stone will tell you about a roaming legendary."
+                    for="heartgoldsoulsilver-checkbox-latias"
+                    >Latias</label
+                  >
+                </div>
+                <div class="eventpokemon">
+                  <div class="checkbox-item">
+                    <span class="title"
+                      ><label class="text-lg">Event Pokemon</label></span
+                    >
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="See Events tab. You may choose one of these Legendaries."
+                      ><img
+                        class="icon-small"
+                        src="../images/icons/miscellaneous/other/moreinfo.png"
+                    /></label>
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="heartgoldsoulsilver-checkbox-dialga"
+                      type="checkbox"
+                    />
+                    <img
+                      class="pokeicon legendary"
+                      src="../images/icons/pokemon/gen4/heartgoldsoulsilver/dialga.png"
+                      alt="Icon of Dialga"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="Go with the special 12th movie Arceus to the Sinjoh Ruins."
+                      for="heartgoldsoulsilver-checkbox-dialga"
+                      style="color: #7ac49a"
+                      >Dialga</label
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="heartgoldsoulsilver-checkbox-palkia"
+                      type="checkbox"
+                    />
+                    <img
+                      class="pokeicon legendary"
+                      src="../images/icons/pokemon/gen4/heartgoldsoulsilver/palkia.png"
+                      alt="Icon of Palkia"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="Go with the special 12th movie Arceus to the Sinjoh Ruins."
+                      for="heartgoldsoulsilver-checkbox-palkia"
+                      style="color: #7ac49a"
+                      >Palkia</label
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="heartgoldsoulsilver-checkbox-giratina"
+                      type="checkbox"
+                    />
+                    <img
+                      class="pokeicon legendary"
+                      src="../images/icons/pokemon/gen4/heartgoldsoulsilver/giratina-altered.png"
+                      alt="Icon of Giratina"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="Go with the special 12th movie Arceus to the Sinjoh Ruins."
+                      for="heartgoldsoulsilver-checkbox-giratina"
+                      style="color: #7ac49a"
+                      >Giratina</label
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="giftpokemon">
+            <div class="checkbox-item">
+              <span class="title"
+                ><label class="text-lg"
+                  >Obtain all In-Game Gift Pokemon</label
+                ></span
+              >
+            </div>
+            <div class="giftpokemon-rowcontainer">
+              <div class="giftpokemon-leftrow">
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-eevee"
+                    type="checkbox"
+                  />
+                  <img
+                    class="pokeicon"
+                    src="../images/icons/pokemon/gen4/heartgoldsoulsilver/eevee.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="After bumping into Bill in Ecruteak City, he will be in his house in Goldenrod City."
+                    for="heartgoldsoulsilver-checkbox-eevee"
+                    >Eevee</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-togepi"
+                    type="checkbox"
+                  />
+                  <img
+                    class="pokeicon"
+                    src="../images/icons/pokemon/gen4/heartgoldsoulsilver/togepi.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="After beating Falkner, go to the PokeMart."
+                    for="heartgoldsoulsilver-checkbox-togepi"
+                    >Togepi Egg</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-spearow"
+                    type="checkbox"
+                  />
+                  <img
+                    class="pokeicon"
+                    src="../images/icons/pokemon/gen4/heartgoldsoulsilver/spearow.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="In the gate in the north of Goldenrod."
+                    for="heartgoldsoulsilver-checkbox-spearow"
+                    >Spearow</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-egg"
+                    type="checkbox"
+                  />
+                  <img
+                    class="pokeicon"
+                    src="../images/icons/pokemon/gen4/heartgoldsoulsilver/egg.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="In Violet City, you can receive 1 of 3 eggs by giving a special Secret Code. Mareep, Wooper or Slugma."
+                    for="heartgoldsoulsilver-checkbox-egg"
+                    >a Random Egg</label
+                  >
+                </div>
+              </div>
+              <div class="giftpokemon-rightrow">
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-shuckle"
+                    type="checkbox"
+                  />
+                  <img
+                    class="pokeicon"
+                    src="../images/icons/pokemon/gen4/heartgoldsoulsilver/shuckle.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="After you have beaten Chuck in the Cianwood Gym, go to the south-west house of Cianwood City."
+                    for="heartgoldsoulsilver-checkbox-shuckle"
+                    >Shuckle</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-tentacool"
+                    type="checkbox"
+                  />
+                  <img
+                    class="pokeicon"
+                    src="../images/icons/pokemon/gen4/heartgoldsoulsilver/tentacool.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="In Cianwood City, if you have released or transferred all but 1 of your Pokémon and lack Surf or Fly on them."
+                    for="heartgoldsoulsilver-checkbox-tentacool"
+                    >Tentacool</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-tyrogue"
+                    type="checkbox"
+                  />
+                  <img
+                    class="pokeicon"
+                    src="../images/icons/pokemon/gen4/heartgoldsoulsilver/tyrogue.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Middle entrance of Mt. Mortar and follow the path all the way down to the basement."
+                    for="heartgoldsoulsilver-checkbox-tyrogue"
+                    >Tyrogue</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-dratini"
+                    type="checkbox"
+                  />
+                  <img
+                    class="pokeicon"
+                    src="../images/icons/pokemon/gen4/heartgoldsoulsilver/dratini.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="After you have defeated Clair in the Blackthorn Gym, she will send you on a quest into the Dragon's Den."
+                    for="heartgoldsoulsilver-checkbox-dratini"
+                    >Dratini</label
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ingametrades">
+            <div class="checkbox-item">
+              <span class="title"
+                ><label class="text-lg"
+                  >Complete all In-Game Trades</label
+                ></span
+              >
+            </div>
+            <div class="ingametrades-rowcontainer">
+              <div class="ingametrades-leftrow">
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-onix"
+                    type="checkbox"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="In a house in Violet City."
+                    for="heartgoldsoulsilver-checkbox-onix"
+                    >Bellsprout for Onix</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-machop"
+                    type="checkbox"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Up on the fifth floor of the Goldenrod City Department Store."
+                    for="heartgoldsoulsilver-checkbox-machop"
+                    >Drowzee for Machop</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-dodrio"
+                    type="checkbox"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="In the eastmost house of Blackthorn City."
+                    for="heartgoldsoulsilver-checkbox-dodrio"
+                    >Dragonair for Dodrio</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-xatu"
+                    type="checkbox"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="In the Pokémon Centre of Pewter City."
+                    for="heartgoldsoulsilver-checkbox-xatu"
+                    >Haunter for Xatu</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-magneton"
+                    type="checkbox"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="In the Power Plant in Route 10."
+                    for="heartgoldsoulsilver-checkbox-magneton"
+                    >Dugtrio for Magneton</label
+                  >
+                </div>
+              </div>
+              <div class="ingametrades-rightrow">
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-pikachu"
+                    type="checkbox"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="After you have defeated Lt. Surge for a second time, you will find him in the Saffron City Magnet Train station."
+                    for="heartgoldsoulsilver-checkbox-pikachu"
+                    >Pikachu for French Pikachu</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-beldum"
+                    type="checkbox"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="After you have received the Hoenn Starter from Steven and spoken to him in the Pewter Museum, he will be in the lobby of Silph Co."
+                    for="heartgoldsoulsilver-checkbox-beldum"
+                    >Forretress for Beldum</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-rhyhorn"
+                    type="checkbox"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="After you have defeated Brock, on Saturdays between 17:00 and 20:00, you will find him in the entrance of Diglett's Cave."
+                    for="heartgoldsoulsilver-checkbox-rhyhorn"
+                    >Bonsly for Rhyhorn</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-steelix"
+                    type="checkbox"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="After you have defeated Jasmine in the rematch, she will be in her gym waiting for you."
+                    for="heartgoldsoulsilver-checkbox-steelix"
+                    >Any for Steelix</label
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="unown">
+            <div class="checkbox-item">
+              <span class="title"
+                ><label class="text-lg">Catch all Unown's</label></span
+              >
+            </div>
+            <div class="unown-rowcontainer">
+              <div class="unown-leftrow">
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-unownA"
+                    type="checkbox"
+                  />
+                  <img
+                    class="pokeicon unown"
+                    src="../images/icons/pokemon/gen4/heartgoldsoulsilver/unown/unown-a.PNG"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Solve the Kabuto puzzle."
+                    for="heartgoldsoulsilver-checkbox-unownA"
+                    >A</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-unownB"
+                    type="checkbox"
+                  />
+                  <img
+                    class="pokeicon unown"
+                    src="../images/icons/pokemon/gen4/heartgoldsoulsilver/unown/unown-b.png"
+                    alt="Icon of Unown B"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Solve the Kabuto puzzle."
+                    for="heartgoldsoulsilver-checkbox-unownB"
+                    >B</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-unownC"
+                    type="checkbox"
+                  />
+                  <img
+                    class="pokeicon unown"
+                    src="../images/icons/pokemon/gen4/heartgoldsoulsilver/unown/unown-c.png"
+                    alt="Icon of Unown C"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Solve the Kabuto puzzle."
+                    for="heartgoldsoulsilver-checkbox-unownC"
+                    >C</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-unownD"
+                    type="checkbox"
+                  />
+                  <img
+                    class="pokeicon unown"
+                    src="../images/icons/pokemon/gen4/heartgoldsoulsilver/unown/unown-d.png"
+                    alt="Icon of Unown D"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Solve the Kabuto puzzle."
+                    for="heartgoldsoulsilver-checkbox-unownD"
+                    >D</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-unownE"
+                    type="checkbox"
+                  />
+                  <img
+                    class="pokeicon unown"
+                    src="../images/icons/pokemon/gen4/heartgoldsoulsilver/unown/unown-e.png"
+                    alt="Icon of Unown E"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Solve the Kabuto puzzle."
+                    for="heartgoldsoulsilver-checkbox-unownE"
+                    >E</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-unownF"
+                    type="checkbox"
+                  />
+                  <img
+                    class="pokeicon unown"
+                    src="../images/icons/pokemon/gen4/heartgoldsoulsilver/unown/unown-f.png"
+                    alt="Icon of Unown F"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Solve the Kabuto puzzle."
+                    for="heartgoldsoulsilver-checkbox-unownF"
+                    >F</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-unownG"
+                    type="checkbox"
+                  />
+                  <img
+                    class="pokeicon unown"
+                    src="../images/icons/pokemon/gen4/heartgoldsoulsilver/unown/unown-g.png"
+                    alt="Icon of Unown G"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Solve the Kabuto puzzle."
+                    for="heartgoldsoulsilver-checkbox-unownG"
+                    >G</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-unownH"
+                    type="checkbox"
+                  />
+                  <img
+                    class="pokeicon unown"
+                    src="../images/icons/pokemon/gen4/heartgoldsoulsilver/unown/unown-h.png"
+                    alt="Icon of Unown H"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Solve the Kabuto puzzle."
+                    for="heartgoldsoulsilver-checkbox-unownH"
+                    >H</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-unownI"
+                    type="checkbox"
+                  />
+                  <img
+                    class="pokeicon unown"
+                    src="../images/icons/pokemon/gen4/heartgoldsoulsilver/unown/unown-i.png"
+                    alt="Icon of Unown I"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Solve the Kabuto puzzle."
+                    for="heartgoldsoulsilver-checkbox-unownI"
+                    >I</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-unownJ"
+                    type="checkbox"
+                  />
+                  <img
+                    class="pokeicon unown"
+                    src="../images/icons/pokemon/gen4/heartgoldsoulsilver/unown/unown-j.png"
+                    alt="Icon of Unown J"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Solve the Kabuto puzzle."
+                    for="heartgoldsoulsilver-checkbox-unownJ"
+                    >J</label
+                  >
+                </div>
+              </div>
+              <div class="unown-middlerow">
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-unownK"
+                    type="checkbox"
+                  />
+                  <img
+                    class="pokeicon unown"
+                    src="../images/icons/pokemon/gen4/heartgoldsoulsilver/unown/unown-k.png"
+                    alt="Icon of Unown K"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Solve the Omanyte puzzle."
+                    for="heartgoldsoulsilver-checkbox-unownK"
+                    >K</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-unownL"
+                    type="checkbox"
+                  />
+                  <img
+                    class="pokeicon unown"
+                    src="../images/icons/pokemon/gen4/heartgoldsoulsilver/unown/unown-l.png"
+                    alt="Icon of Unown L"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Solve the Omanyte puzzle."
+                    for="heartgoldsoulsilver-checkbox-unownL"
+                    >L</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-unownM"
+                    type="checkbox"
+                  />
+                  <img
+                    class="pokeicon unown"
+                    src="../images/icons/pokemon/gen4/heartgoldsoulsilver/unown/unown-m.png"
+                    alt="Icon of Unown M"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Solve the Omanyte puzzle."
+                    for="heartgoldsoulsilver-checkbox-unownM"
+                    >M</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-unownN"
+                    type="checkbox"
+                  />
+                  <img
+                    class="pokeicon unown"
+                    src="../images/icons/pokemon/gen4/heartgoldsoulsilver/unown/unown-n.png"
+                    alt="Icon of Unown N"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Solve the Omanyte puzzle."
+                    for="heartgoldsoulsilver-checkbox-unownN"
+                    >N</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-unownO"
+                    type="checkbox"
+                  />
+                  <img
+                    class="pokeicon unown"
+                    src="../images/icons/pokemon/gen4/heartgoldsoulsilver/unown/unown-o.png"
+                    alt="Icon of Unown O"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Solve the Omanyte puzzle."
+                    for="heartgoldsoulsilver-checkbox-unownO"
+                    >O</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-unownP"
+                    type="checkbox"
+                  />
+                  <img
+                    class="pokeicon unown"
+                    src="../images/icons/pokemon/gen4/heartgoldsoulsilver/unown/unown-p.png"
+                    alt="Icon of Unown P"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Solve the Omanyte puzzle."
+                    for="heartgoldsoulsilver-checkbox-unownP"
+                    >P</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-unownQ"
+                    type="checkbox"
+                  />
+                  <img
+                    class="pokeicon unown"
+                    src="../images/icons/pokemon/gen4/heartgoldsoulsilver/unown/unown-q.png"
+                    alt="Icon of Unown Q"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Solve the Omanyte puzzle."
+                    for="heartgoldsoulsilver-checkbox-unownQ"
+                    >Q</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-unownR"
+                    type="checkbox"
+                  />
+                  <img
+                    class="pokeicon unown"
+                    src="../images/icons/pokemon/gen4/heartgoldsoulsilver/unown/unown-r.png"
+                    alt="Icon of Unown R"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Solve the Aerodactyl puzzle."
+                    for="heartgoldsoulsilver-checkbox-unownR"
+                    >R</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-unownS"
+                    type="checkbox"
+                  />
+                  <img
+                    class="pokeicon unown"
+                    src="../images/icons/pokemon/gen4/heartgoldsoulsilver/unown/unown-s.png"
+                    alt="Icon of Unown S"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Solve the Aerodactyl puzzle."
+                    for="heartgoldsoulsilver-checkbox-unownS"
+                    >S</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-unownT"
+                    type="checkbox"
+                  />
+                  <img
+                    class="pokeicon unown"
+                    src="../images/icons/pokemon/gen4/heartgoldsoulsilver/unown/unown-t.png"
+                    alt="Icon of Unown T"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Solve the Aerodactyl puzzle."
+                    for="heartgoldsoulsilver-checkbox-unownT"
+                    >T</label
+                  >
+                </div>
+              </div>
+              <div class="unown-rightrow">
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-unownU"
+                    type="checkbox"
+                  />
+                  <img
+                    class="pokeicon unown"
+                    src="../images/icons/pokemon/gen4/heartgoldsoulsilver/unown/unown-u.png"
+                    alt="Icon of Unown U"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Solve the Aerodactyl puzzle."
+                    for="heartgoldsoulsilver-checkbox-unownU"
+                    >U</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-unownV"
+                    type="checkbox"
+                  />
+                  <img
+                    class="pokeicon unown"
+                    src="../images/icons/pokemon/gen4/heartgoldsoulsilver/unown/unown-v.png"
+                    alt="Icon of Unown V"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Solve the Aerodactyl puzzle."
+                    for="heartgoldsoulsilver-checkbox-unownV"
+                    >V</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-unownW"
+                    type="checkbox"
+                  />
+                  <img
+                    class="pokeicon unown"
+                    src="../images/icons/pokemon/gen4/heartgoldsoulsilver/unown/unown-w.png"
+                    alt="Icon of Unown W"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Solve the Ho-Oh puzzle."
+                    for="heartgoldsoulsilver-checkbox-unownW"
+                    >W</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-unownX"
+                    type="checkbox"
+                  />
+                  <img
+                    class="pokeicon unown"
+                    src="../images/icons/pokemon/gen4/heartgoldsoulsilver/unown/unown-x.png"
+                    alt="Icon of Unown X"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Solve the Ho-Oh puzzle."
+                    for="heartgoldsoulsilver-checkbox-unownX"
+                    >X</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-unownY"
+                    type="checkbox"
+                  />
+                  <img
+                    class="pokeicon unown"
+                    src="../images/icons/pokemon/gen4/heartgoldsoulsilver/unown/unown-y.png"
+                    alt="Icon of Unown Y"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Solve the Ho-Oh puzzle."
+                    for="heartgoldsoulsilver-checkbox-unownY"
+                    >Y</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-unownZ"
+                    type="checkbox"
+                  />
+                  <img
+                    class="pokeicon unown"
+                    src="../images/icons/pokemon/gen4/heartgoldsoulsilver/unown/unown-z.png"
+                    alt="Icon of Unown Z"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Solve the Ho-Oh puzzle."
+                    for="heartgoldsoulsilver-checkbox-unownZ"
+                    >Z</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-unown?"
+                    type="checkbox"
+                  />
+                  <img
+                    class="pokeicon unown"
+                    src="../images/icons/pokemon/gen4/heartgoldsoulsilver/unown/unown-qm.png"
+                    alt="Icon of Unown ?"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Talk to the scientist at the Research Center after catching all Unown."
+                    for="heartgoldsoulsilver-checkbox-unown?"
+                    >?</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-unown!"
+                    type="checkbox"
+                  />
+                  <img
+                    class="pokeicon unown"
+                    src="../images/icons/pokemon/gen4/heartgoldsoulsilver/unown/unown-em.png"
+                    alt="Icon of Unown !"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Talk to the scientist at the Research Center after catching all Unown."
+                    for="heartgoldsoulsilver-checkbox-unown!"
+                    >!</label
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="page-container-right">
+        <div class="wide-panel collectibles">
+          <label class="panel-label">Collectibles</label>
+          <div class="ribbons">
+            <div class="ribbons-rowcontainer">
+              <div class="ribbons-leftrow">
+                <div class="ribbongiver">
+                  <div class="checkbox-item">
+                    <span class="title"
+                      ><label class="text-lg">Ribbon Giver</label></span
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="heartgoldsoulsilver-checkbox-alert-ribbon"
+                      type="checkbox"
+                    />
+                    <img
+                      class="pokeicon ribbon"
+                      src="../images/icons/miscellaneous/gen4/ribbons/alert-ribbon.png"
+                      alt="Icon of Alert Ribbon"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="A Ribbon for recalling an invigorating event that created life energy."
+                      for="heartgoldsoulsilver-checkbox-alert-ribbon"
+                      >Alert</label
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="heartgoldsoulsilver-checkbox-shock-ribbon"
+                      type="checkbox"
+                    />
+                    <img
+                      class="pokeicon ribbon"
+                      src="../images/icons/miscellaneous/gen4/ribbons/shock-ribbon.png"
+                      alt="Icon of Shock Ribbon"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="A Ribbon for recalling a thrilling event that made life more exciting."
+                      for="heartgoldsoulsilver-checkbox-shock-ribbon"
+                      >Shock</label
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="heartgoldsoulsilver-checkbox-downcast-ribbon"
+                      type="checkbox"
+                    />
+                    <img
+                      class="pokeicon ribbon"
+                      src="../images/icons/miscellaneous/gen4/ribbons/downcast-ribbon.png"
+                      alt="Icon of Downcast Ribbon"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="A Ribbon for recalling feelings of sadness that added spice to life."
+                      for="heartgoldsoulsilver-checkbox-downcast-ribbon"
+                      >Downcast</label
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="heartgoldsoulsilver-checkbox-careless-ribbon"
+                      type="checkbox"
+                    />
+                    <img
+                      class="pokeicon ribbon"
+                      src="../images/icons/miscellaneous/gen4/ribbons/careless-ribbon.png"
+                      alt="Icon of Careless Ribbon"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="A Ribbon for recalling a careless error that helped steer life decisions."
+                      for="heartgoldsoulsilver-checkbox-careless-ribbon"
+                      >Careless</label
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="heartgoldsoulsilver-checkbox-relax-ribbon"
+                      type="checkbox"
+                    />
+                    <img
+                      class="pokeicon ribbon"
+                      src="../images/icons/miscellaneous/gen4/ribbons/relax-ribbon.png"
+                      alt="Icon of Relax Ribbon"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="A Ribbon for recalling a refreshing event that added sparkle to life."
+                      for="heartgoldsoulsilver-checkbox-relax-ribbon"
+                      >Relax</label
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="heartgoldsoulsilver-checkbox-snooze-ribbon"
+                      type="checkbox"
+                    />
+                    <img
+                      class="pokeicon ribbon"
+                      src="../images/icons/miscellaneous/gen4/ribbons/snooze-ribbon.png"
+                      alt="Icon of Snooze Ribbon"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="A Ribbon for recalling a deep slumber that made life soothing."
+                      for="heartgoldsoulsilver-checkbox-snooze-ribbon"
+                      >Snooze</label
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="heartgoldsoulsilver-checkbox-smile-ribbon"
+                      type="checkbox"
+                    />
+                    <img
+                      class="pokeicon ribbon"
+                      src="../images/icons/miscellaneous/gen4/ribbons/smile-ribbon.png"
+                      alt="Icon of Smile Ribbon"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="A Ribbon for recalling that smiles enrich the quality of life."
+                      for="heartgoldsoulsilver-checkbox-smile-ribbon"
+                      >Smile</label
+                    >
+                  </div>
+                  <div class="moreribbons">
+                    <div class="checkbox-item">
+                      <span class="title"
+                        ><label class="text-lg"
+                          >Achievement Ribbons</label
+                        ></span
+                      >
+                    </div>
+                    <div class="checkbox-item">
+                      <input
+                        id="heartgoldsoulsilver-checkbox-effort-ribbon"
+                        type="checkbox"
+                      />
+                      <img
+                        class="pokeicon ribbon"
+                        src="../images/icons/miscellaneous/gen3/ribbons/effort-ribbon.png"
+                      />
+                      <label
+                        class="text-sm lg:tooltip"
+                        data-tip="Ribbon awarded for being an exceptionally hard worker."
+                        for="heartgoldsoulsilver-checkbox-effort-ribbon"
+                        >Effort</label
+                      >
+                    </div>
+                    <div class="checkbox-item">
+                      <input
+                        id="heartgoldsoulsilver-checkbox-legend-ribbon"
+                        type="checkbox"
+                      />
+                      <img
+                        class="pokeicon ribbon"
+                        src="../images/icons/miscellaneous/gen4/ribbons/legend-ribbon.png"
+                      />
+                      <label
+                        class="text-sm lg:tooltip"
+                        data-tip="Ribbon awarded for being an exceptionally hard worker."
+                        for="heartgoldsoulsilver-checkbox-legend-ribbon"
+                        >Legend</label
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="ribbons-rightrow">
+                <div class="abilitybattle">
+                  <div class="checkbox-item">
+                    <span class="title"
+                      ><label class="text-lg">Ability Battle</label></span
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="heartgoldsoulsilver-checkbox-ability-normal"
+                      type="checkbox"
+                    />
+                    <img
+                      class="pokeicon ribbon"
+                      src="../images/icons/miscellaneous/gen4/ribbons/ability-ribbon.png"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="A Ribbon awarded for defeating the Tower Tycoon at the Battle Tower."
+                      for="heartgoldsoulsilver-checkbox-ability-normal"
+                      >Ability</label
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="heartgoldsoulsilver-checkbox-ability-great"
+                      type="checkbox"
+                    />
+                    <img
+                      class="pokeicon ribbon"
+                      src="../images/icons/miscellaneous/gen4/ribbons/great-ability-ribbon.png"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="A Ribbon awarded for defeating the Tower Tycoon at the Battle Tower."
+                      for="heartgoldsoulsilver-checkbox-ability-great"
+                      >Great Ability</label
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="heartgoldsoulsilver-checkbox-ability-double"
+                      type="checkbox"
+                    />
+                    <img
+                      class="pokeicon ribbon"
+                      src="../images/icons/miscellaneous/gen4/ribbons/double-ability-ribbon.png"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="A Ribbon awarded for completing the Battle Tower Double challenge."
+                      for="heartgoldsoulsilver-checkbox-ability-double"
+                      >Double Ability</label
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="heartgoldsoulsilver-checkbox-ability-multi"
+                      type="checkbox"
+                    />
+                    <img
+                      class="pokeicon ribbon"
+                      src="../images/icons/miscellaneous/gen4/ribbons/multi-ability-ribbon.png"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="A Ribbon awarded for completing the Battle Tower Multi challenge."
+                      for="heartgoldsoulsilver-checkbox-ability-multi"
+                      >Multi Ability</label
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="heartgoldsoulsilver-checkbox-ability-pair"
+                      type="checkbox"
+                    />
+                    <img
+                      class="pokeicon ribbon"
+                      src="../images/icons/miscellaneous/gen4/ribbons/pair-ability-ribbon.png"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="A Ribbon awarded for completing the Battle Tower Link Multi challenge."
+                      for="heartgoldsoulsilver-checkbox-ability-pair"
+                      >Pair Ability</label
+                    >
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      id="heartgoldsoulsilver-checkbox-ability-world"
+                      type="checkbox"
+                    />
+                    <img
+                      class="pokeicon ribbon"
+                      src="../images/icons/miscellaneous/gen4/ribbons/world-ability-ribbon.png"
+                    />
+                    <label
+                      class="text-sm lg:tooltip"
+                      data-tip="A Ribbon awarded for completing the Battle Tower Link Multi challenge."
+                      for="heartgoldsoulsilver-checkbox-ability-world"
+                      >World Ability</label
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-				<div class="items">
-					<div class="checkbox-item">
-						<span class="title"><label class="text-lg">Items</label></span>
-					</div>
-					
-					<div class="checkbox-item">
-						<input id="diamondpearl-checkbox-alltms" type="checkbox"> <img class="pokeicon item" src="../images/icons/inventory/tms/normal.png"> <label class="text-sm lg:tooltip" data-tip="Find all TM's." for="diamondpearl-checkbox-alltms">Collect all TM's</label>
-					</div>
+          <div class="items">
+            <div class="checkbox-item">
+              <span class="title"><label class="text-lg">Items</label></span>
+            </div>
 
-				</div>
-			</div>
-			<div class="wide-panel more">
-				<label class="panel-label">Post Game</label>
-				<div class="trainercard">
-					<div class="checkbox-item">
-						<span class="title"><label class="text-lg">Black Trainer Card</label></span>
-					</div>
-					<div class="checkbox-item">
-						<input id="heartgoldsoulsilver-checkbox-leaguechampion" type="checkbox"> <label class="text-sm lg:tooltip" for="heartgoldsoulsilver-checkbox-leaguechampion">Defeat the Pokemon League Champion.</label>
-					</div>
-					<div class="checkbox-item">
-						<input id="heartgoldsoulsilver-checkbox-shinyleaves" type="checkbox"> <label class="text-sm lg:tooltip" for="heartgoldsoulsilver-checkbox-shinyleaves">Collect 5 Shiny Leaves.</label>
-					</div>
-					<div class="checkbox-item">
-						<input id="heartgoldsoulsilver-checkbox-pokeathlonevents" type="checkbox"> <label class="text-sm lg:tooltip" for="heartgoldsoulsilver-checkbox-pokeathlonevents">Defeat records on all Pokéathlon events.</label>
-					</div>
-					<div class="checkbox-item">
-						<input id="heartgoldsoulsilver-checkbox-nationaldex" type="checkbox"> <label class="text-sm lg:tooltip" for="heartgoldsoulsilver-checkbox-nationaldex">Complete the National Dex.</label>
-					</div>
-					<div class="checkbox-item">
-						<input id="heartgoldsoulsilver-checkbox-battletower" type="checkbox"> <label class="text-sm lg:tooltip" for="heartgoldsoulsilver-checkbox-battletower">Get a 100 Streak in the Battle Tower.</label>
-					</div>
-				</div>
+            <div class="checkbox-item">
+              <input id="diamondpearl-checkbox-alltms" type="checkbox" />
+              <img
+                class="pokeicon item"
+                src="../images/icons/inventory/tms/normal.png"
+              />
+              <label
+                class="text-sm lg:tooltip"
+                data-tip="Find all TM's."
+                for="diamondpearl-checkbox-alltms"
+                >Collect all TM's</label
+              >
+            </div>
+          </div>
+        </div>
+        <div class="wide-panel more">
+          <label class="panel-label">Post Game</label>
+          <div class="trainercard">
+            <div class="checkbox-item">
+              <span class="title"
+                ><label class="text-lg">Black Trainer Card</label></span
+              >
+            </div>
+            <div class="checkbox-item">
+              <input
+                id="heartgoldsoulsilver-checkbox-leaguechampion"
+                type="checkbox"
+              />
+              <label
+                class="text-sm lg:tooltip"
+                for="heartgoldsoulsilver-checkbox-leaguechampion"
+                >Defeat the Pokemon League Champion.</label
+              >
+            </div>
+            <div class="checkbox-item">
+              <input
+                id="heartgoldsoulsilver-checkbox-shinyleaves"
+                type="checkbox"
+              />
+              <label
+                class="text-sm lg:tooltip"
+                for="heartgoldsoulsilver-checkbox-shinyleaves"
+                >Collect 5 Shiny Leaves.</label
+              >
+            </div>
+            <div class="checkbox-item">
+              <input
+                id="heartgoldsoulsilver-checkbox-pokeathlonevents"
+                type="checkbox"
+              />
+              <label
+                class="text-sm lg:tooltip"
+                for="heartgoldsoulsilver-checkbox-pokeathlonevents"
+                >Defeat records on all Pokéathlon events.</label
+              >
+            </div>
+            <div class="checkbox-item">
+              <input
+                id="heartgoldsoulsilver-checkbox-nationaldex"
+                type="checkbox"
+              />
+              <label
+                class="text-sm lg:tooltip"
+                for="heartgoldsoulsilver-checkbox-nationaldex"
+                >Complete the National Dex.</label
+              >
+            </div>
+            <div class="checkbox-item">
+              <input
+                id="heartgoldsoulsilver-checkbox-battletower"
+                type="checkbox"
+              />
+              <label
+                class="text-sm lg:tooltip"
+                for="heartgoldsoulsilver-checkbox-battletower"
+                >Get a 100 Streak in the Battle Tower.</label
+              >
+            </div>
+          </div>
 
-				<div class="storyevents">
-					<div class="checkbox-item">
-						<span class="title"><label class="text-lg">Story Events</label></span>
-					</div>
-					<div class="storyevents-rowcontainer">
-						<div class="storyevents-leftrow">
-					<div class="checkbox-item">
-						<input id="heartgoldsoulsilver-checkbox-pichu" type="checkbox"> <img class="pokeicon" src="../images/icons/pokemon/gen4/heartgoldsoulsilver/pichu-spiky-eared.png"> <label class="text-sm lg:tooltip" data-tip="After getting an event Pichu, go to Celebi's Shrine in Ilex Forest." for="heartgoldsoulsilver-checkbox-pichu" style="color: #7ac49a;">Spikey Eared Pichu</label>
-					</div>
-					<div class="checkbox-item">
-						<input id="heartgoldsoulsilver-checkbox-arceus" type="checkbox"> <img class="pokeicon legendary" src="../images/icons/pokemon/gen4/heartgoldsoulsilver/arceus-normal.png"> <label class="text-sm lg:tooltip" data-tip="The first one of note would be the Arceus obtained from the events. If you send this over to Heart Gold & Soul Silver, when you reach the Ruins of Alph with the Arceus, a new area will open where you will meet Cynthia from Sinnoh." for="heartgoldsoulsilver-checkbox-arceus" style="color: #7ac49a;">Arceus Event</label>
-					</div>
-					</div>
-					<div class="storyevents-rightrow">
-					<div class="checkbox-item">
-						<input id="heartgoldsoulsilver-checkbox-jirachi" type="checkbox"> <img class="pokeicon" src="../images/icons/pokemon/gen4/heartgoldsoulsilver/jirachi.png"> <label class="text-sm lg:tooltip" data-tip="After getting an event Pichu, go to Celebi's Shrine in Ilex Forest." for="heartgoldsoulsilver-checkbox-jirachi" style="color: #7ac49a;">Jirachi Event</label>
-					</div>
-					<div class="checkbox-item">
-						<input id="heartgoldsoulsilver-checkbox-celebi" type="checkbox"> <img class="pokeicon" src="../images/icons/pokemon/gen4/heartgoldsoulsilver/celebi.png"> <label class="text-sm lg:tooltip" data-tip="If you send this Celebi over to HeartGold/SoulSilver, or get sent it directly, take it to Ilex Forest's shrine and it will begin a side-story to give you background information on a variety of aspects including your Rival and Team Rocket." for="heartgoldsoulsilver-checkbox-celebi" style="color: #7ac49a;">Celebi Event</label>
-					</div>
-					</div>
-					</div>
-				</div>
-				<div class="commerativephotos">
-					<div class="checkbox-item">
-						<span class="title"><label class="text-lg">Take all Commerative Photos</label></span>
-					</div>
-					<div class="checkbox-item">
-						<input id="heartgoldsoulsilver-checkbox-locationphotos" type="checkbox"> <label class="text-sm lg:tooltip" for="heartgoldsoulsilver-checkbox-locationphotos">46 Location Based Photos</label>
-					</div>
-					<div class="checkbox-item">
-						<input id="heartgoldsoulsilver-checkbox-gymphotos" type="checkbox"> <label class="text-sm lg:tooltip" for="heartgoldsoulsilver-checkbox-gymphotos">16 Gym Leader Photos</label>
-					</div>
-				</div>
-					
-					
-				<div class="pokeathlon">
-					<div class="checkbox-item">
-						<span class="title"><label class="text-lg">Pokeathlon Hall of Fame</label></span>
-					</div>
-					<div class="pokeathlon-rowcontainer">
-						<div class="pokeathlon-leftrow">
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-hurdle-dash" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Highscore: 80.0" for="heartgoldsoulsilver-checkbox-hurdle-dash">Hurdle Dash</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-lamp-jump" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Highscore: 500" for="heartgoldsoulsilver-checkbox-lamp-jump">Lamp Jump</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-ring-toss" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Highscore: 100" for="heartgoldsoulsilver-checkbox-ring-toss">Ring Toss</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-snow-throw" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Highscore: 55" for="heartgoldsoulsilver-checkbox-snow-throw">Snow Throw</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-relay-run" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Highscore: 16" for="heartgoldsoulsilver-checkbox-relay-run">Relay Run</label>
-							</div>
-						</div>
-						<div class="pokeathlon-rightrow">
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-block-smash" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Highscore: 130" for="heartgoldsoulsilver-checkbox-block-smash">Block Smash</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-circle-push" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Highscore: 60" for="heartgoldsoulsilver-checkbox-circle-push">Circle Push</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-pennant-capture" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Highscore: 50" for="heartgoldsoulsilver-checkbox-pennant-capture">Pennant Capture</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-disc-catch" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Highscore: 70" for="heartgoldsoulsilver-checkbox-disc-catch">Disc Catch</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-goal-roal" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Highscore: 9" for="heartgoldsoulsilver-checkbox-goal-roal">Goal Roal</label>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="wide-panel more">
-				<label class="panel-label">Battles</label>
-				<div class="battlefrontier">
-					<div class="checkbox-item">
-						<span class="title"><label class="text-lg">Battle Frontier</label></span>
-					</div>
-					<div class="battlefrontier-rowcontainer">
-						<div class="battlefrontier-leftrow">
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-battle-tower" type="checkbox"> <label class="text-sm lg:tooltip" for="heartgoldsoulsilver-checkbox-battle-tower">Battle Tower</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-battle-factory" type="checkbox"> <label class="text-sm lg:tooltip" for="heartgoldsoulsilver-checkbox-battle-factory">Battle Factory</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-battle-arcade" type="checkbox"> <label class="text-sm lg:tooltip" for="heartgoldsoulsilver-checkbox-battle-arcade">Battle Arcade</label>
-							</div>
-						</div>
-						<div class="battlefrontier-rightrow">
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-battle-castle" type="checkbox"> <label class="text-sm lg:tooltip" for="heartgoldsoulsilver-checkbox-battle-castle">Battle Castle</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-battle-hall" type="checkbox"> <label class="text-sm lg:tooltip" for="heartgoldsoulsilver-checkbox-battle-hall">Battle Hall</label>
-							</div>
-						</div>
-					</div>
-				</div>
-					
-				<div class="battles">
-					<div class="checkbox-item">
-						<span class="title"><label class="text-lg">Battles</label></span>
-					</div>
-					<div class="battles-rowcontainer">
-						<div class="battles-leftrow">
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-elitefour" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Post Kanto." for="heartgoldsoulsilver-checkbox-elitefour">Elite Four Rematch</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-gymrematch" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Post E4." for="heartgoldsoulsilver-checkbox-gymrematch">Gym Leader Rematch</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-beatred" type="checkbox">  <img class="pokeicon npc" src="../images/icons/miscellaneous/gen4/Red_IV_OD.png">  <label class="text-sm lg:tooltip" data-tip="Top of Mt. Silver." for="heartgoldsoulsilver-checkbox-beatred">Beat Red</label>
-							</div>
-						</div>
-						<div class="battles-rightrow">
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-beatrival" type="checkbox"> <img class="pokeicon npc" src="../images/icons/miscellaneous/gen4/Silver_OD.png"> <label class="text-sm lg:tooltip" data-tip="Enter the Pokemon League on a Monday or Wednesday after fighting your rival at the Dragon's Den." for="heartgoldsoulsilver-checkbox-beatrival">Beat your Rival one last time</label>
-							</div>
-							<div class="checkbox-item">
-								<input id="heartgoldsoulsilver-checkbox-trainers" type="checkbox"> <label class="text-sm lg:tooltip" data-tip="Fight all trainers and register all 63 trainers to your PokeGear." for="heartgoldsoulsilver-checkbox-trainers">Defeat every trainer and register</label>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			
-		</div>
-	</div>
-	<footer>
-		<ul>
-			<li>
-				<a href="../index.html">Progression Dex</a>
-			</li>
-			<li>
-				<a href="#">Twitter</a>
-			</li>
-			<li>
-				<a href="https://github.com/yasingunaydiin">GitHub</a>
-			</li>
-		</ul>
-	</footer>
-	<script src="../checklists/js/script.js">
-	</script> 
+          <div class="storyevents">
+            <div class="checkbox-item">
+              <span class="title"
+                ><label class="text-lg">Story Events</label></span
+              >
+            </div>
+            <div class="storyevents-rowcontainer">
+              <div class="storyevents-leftrow">
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-pichu"
+                    type="checkbox"
+                  />
+                  <img
+                    class="pokeicon"
+                    src="../images/icons/pokemon/gen4/heartgoldsoulsilver/pichu-spiky-eared.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="After getting an event Pichu, go to Celebi's Shrine in Ilex Forest."
+                    for="heartgoldsoulsilver-checkbox-pichu"
+                    style="color: #7ac49a"
+                    >Spikey Eared Pichu</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-arceus"
+                    type="checkbox"
+                  />
+                  <img
+                    class="pokeicon legendary"
+                    src="../images/icons/pokemon/gen4/heartgoldsoulsilver/arceus-normal.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="The first one of note would be the Arceus obtained from the events. If you send this over to Heart Gold & Soul Silver, when you reach the Ruins of Alph with the Arceus, a new area will open where you will meet Cynthia from Sinnoh."
+                    for="heartgoldsoulsilver-checkbox-arceus"
+                    style="color: #7ac49a"
+                    >Arceus Event</label
+                  >
+                </div>
+              </div>
+              <div class="storyevents-rightrow">
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-jirachi"
+                    type="checkbox"
+                  />
+                  <img
+                    class="pokeicon"
+                    src="../images/icons/pokemon/gen4/heartgoldsoulsilver/jirachi.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="After getting an event Pichu, go to Celebi's Shrine in Ilex Forest."
+                    for="heartgoldsoulsilver-checkbox-jirachi"
+                    style="color: #7ac49a"
+                    >Jirachi Event</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-celebi"
+                    type="checkbox"
+                  />
+                  <img
+                    class="pokeicon"
+                    src="../images/icons/pokemon/gen4/heartgoldsoulsilver/celebi.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="If you send this Celebi over to HeartGold/SoulSilver, or get sent it directly, take it to Ilex Forest's shrine and it will begin a side-story to give you background information on a variety of aspects including your Rival and Team Rocket."
+                    for="heartgoldsoulsilver-checkbox-celebi"
+                    style="color: #7ac49a"
+                    >Celebi Event</label
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="commerativephotos">
+            <div class="checkbox-item">
+              <span class="title"
+                ><label class="text-lg"
+                  >Take all Commerative Photos</label
+                ></span
+              >
+            </div>
+            <div class="checkbox-item">
+              <input
+                id="heartgoldsoulsilver-checkbox-locationphotos"
+                type="checkbox"
+              />
+              <label
+                class="text-sm lg:tooltip"
+                for="heartgoldsoulsilver-checkbox-locationphotos"
+                >46 Location Based Photos</label
+              >
+            </div>
+            <div class="checkbox-item">
+              <input
+                id="heartgoldsoulsilver-checkbox-gymphotos"
+                type="checkbox"
+              />
+              <label
+                class="text-sm lg:tooltip"
+                for="heartgoldsoulsilver-checkbox-gymphotos"
+                >16 Gym Leader Photos</label
+              >
+            </div>
+          </div>
 
-	<script>
-	         document.addEventListener("DOMContentLoaded", function() {
-	            var heartgoldLogo = document.getElementById("heartgold-logo");
-	            var soulsilverLogo = document.getElementById("soulsilver-logo");
-	            
-	            var headerTitle = document.querySelector(".title");
-	            var widePanels = document.querySelectorAll(".wide-panel");
-	            var footer = document.querySelector("footer");
-	            var titleText = document.querySelectorAll(".panel-label");
-	            var backgroundIcons = document.querySelector("body");
+          <div class="pokeathlon">
+            <div class="checkbox-item">
+              <span class="title"
+                ><label class="text-lg">Pokeathlon Hall of Fame</label></span
+              >
+            </div>
+            <div class="pokeathlon-rowcontainer">
+              <div class="pokeathlon-leftrow">
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-hurdle-dash"
+                    type="checkbox"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Highscore: 80.0"
+                    for="heartgoldsoulsilver-checkbox-hurdle-dash"
+                    >Hurdle Dash</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-lamp-jump"
+                    type="checkbox"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Highscore: 500"
+                    for="heartgoldsoulsilver-checkbox-lamp-jump"
+                    >Lamp Jump</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-ring-toss"
+                    type="checkbox"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Highscore: 100"
+                    for="heartgoldsoulsilver-checkbox-ring-toss"
+                    >Ring Toss</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-snow-throw"
+                    type="checkbox"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Highscore: 55"
+                    for="heartgoldsoulsilver-checkbox-snow-throw"
+                    >Snow Throw</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-relay-run"
+                    type="checkbox"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Highscore: 16"
+                    for="heartgoldsoulsilver-checkbox-relay-run"
+                    >Relay Run</label
+                  >
+                </div>
+              </div>
+              <div class="pokeathlon-rightrow">
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-block-smash"
+                    type="checkbox"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Highscore: 130"
+                    for="heartgoldsoulsilver-checkbox-block-smash"
+                    >Block Smash</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-circle-push"
+                    type="checkbox"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Highscore: 60"
+                    for="heartgoldsoulsilver-checkbox-circle-push"
+                    >Circle Push</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-pennant-capture"
+                    type="checkbox"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Highscore: 50"
+                    for="heartgoldsoulsilver-checkbox-pennant-capture"
+                    >Pennant Capture</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-disc-catch"
+                    type="checkbox"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Highscore: 70"
+                    for="heartgoldsoulsilver-checkbox-disc-catch"
+                    >Disc Catch</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-goal-roal"
+                    type="checkbox"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Highscore: 9"
+                    for="heartgoldsoulsilver-checkbox-goal-roal"
+                    >Goal Roal</label
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="wide-panel more">
+          <label class="panel-label">Battles</label>
+          <div class="battlefrontier">
+            <div class="checkbox-item">
+              <span class="title"
+                ><label class="text-lg">Battle Frontier</label></span
+              >
+            </div>
+            <div class="battlefrontier-rowcontainer">
+              <div class="battlefrontier-leftrow">
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-battle-tower"
+                    type="checkbox"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    for="heartgoldsoulsilver-checkbox-battle-tower"
+                    >Battle Tower</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-battle-factory"
+                    type="checkbox"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    for="heartgoldsoulsilver-checkbox-battle-factory"
+                    >Battle Factory</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-battle-arcade"
+                    type="checkbox"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    for="heartgoldsoulsilver-checkbox-battle-arcade"
+                    >Battle Arcade</label
+                  >
+                </div>
+              </div>
+              <div class="battlefrontier-rightrow">
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-battle-castle"
+                    type="checkbox"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    for="heartgoldsoulsilver-checkbox-battle-castle"
+                    >Battle Castle</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-battle-hall"
+                    type="checkbox"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    for="heartgoldsoulsilver-checkbox-battle-hall"
+                    >Battle Hall</label
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
 
-	            heartgoldLogo.addEventListener("click", function() {
-	                headerTitle.style.color = "#FFB346";
-	                footer.style.background = "#FFB346";
-	                backgroundIcons.style.backgroundImage = 'url(../../images/patterns/pattern-heartgold.png)';
+          <div class="battles">
+            <div class="checkbox-item">
+              <span class="title"><label class="text-lg">Battles</label></span>
+            </div>
+            <div class="battles-rowcontainer">
+              <div class="battles-leftrow">
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-elitefour"
+                    type="checkbox"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Post Kanto."
+                    for="heartgoldsoulsilver-checkbox-elitefour"
+                    >Elite Four Rematch</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-gymrematch"
+                    type="checkbox"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Post E4."
+                    for="heartgoldsoulsilver-checkbox-gymrematch"
+                    >Gym Leader Rematch</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-beatred"
+                    type="checkbox"
+                  />
+                  <img
+                    class="pokeicon npc"
+                    src="../images/icons/miscellaneous/gen4/Red_IV_OD.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Top of Mt. Silver."
+                    for="heartgoldsoulsilver-checkbox-beatred"
+                    >Beat Red</label
+                  >
+                </div>
+              </div>
+              <div class="battles-rightrow">
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-beatrival"
+                    type="checkbox"
+                  />
+                  <img
+                    class="pokeicon npc"
+                    src="../images/icons/miscellaneous/gen4/Silver_OD.png"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Enter the Pokemon League on a Monday or Wednesday after fighting your rival at the Dragon's Den."
+                    for="heartgoldsoulsilver-checkbox-beatrival"
+                    >Beat your Rival one last time</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    id="heartgoldsoulsilver-checkbox-trainers"
+                    type="checkbox"
+                  />
+                  <label
+                    class="text-sm lg:tooltip"
+                    data-tip="Fight all trainers and register all 63 trainers to your PokeGear."
+                    for="heartgoldsoulsilver-checkbox-trainers"
+                    >Defeat every trainer and register</label
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <ul>
+        <li>
+          <a href="../index.html">Progression Dex</a>
+        </li>
+        <li>
+          <a href="#">Twitter</a>
+        </li>
+        <li>
+          <a href="https://github.com/yasingunaydiin">GitHub</a>
+        </li>
+      </ul>
+    </footer>
+    <script src="../checklists/js/script.js"></script>
 
-	                titleText.forEach(function(text) {
-	                    text.style.color = "#FFB346";
-	                });
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var heartgoldLogo = document.getElementById('heartgold-logo');
+        var soulsilverLogo = document.getElementById('soulsilver-logo');
 
-	                widePanels.forEach(function(panel) {
-	                    panel.style.border = "2px solid #FFB346";
-	                });
-	            });
+        var headerTitle = document.querySelector('.title');
+        var widePanels = document.querySelectorAll('.wide-panel');
+        var footer = document.querySelector('footer');
+        var titleText = document.querySelectorAll('.panel-label');
+        var backgroundIcons = document.querySelector('body');
 
-	            soulsilverLogo.addEventListener("click", function() {
-	                headerTitle.style.color = "#7A95C4"
-	                footer.style.backgroundColor = "#7A95C4"
-	                backgroundIcons.style.backgroundImage = 'url(../../images/patterns/pattern-soulsilver.png)';
+        heartgoldLogo.addEventListener('click', function () {
+          headerTitle.style.color = '#FFB346';
+          footer.style.background = '#FFB346';
+          backgroundIcons.style.backgroundImage =
+            'url(../../images/patterns/pattern-heartgold.png)';
 
-	                titleText.forEach(function(text) {
-	                    text.style.color = "#7A95C4";
-	                });
-	               
-	                widePanels.forEach(function(panel) {
-	                    panel.style.border = "2px solid #7A95C4";
-	                });
-	            });
-	         });
-	</script> 
-	<script>
-	             document.addEventListener('DOMContentLoaded', function() {
-	         const completepokedexCheckboxes = document.querySelectorAll('.completepokedex input[type="checkbox"]');
-	         const legendariesCheckboxes = document.querySelectorAll('.legendaries input[type="checkbox"]');
-	         const eventpokemonCheckboxes = document.querySelectorAll('.eventpokemon input[type="checkbox"]');
-	         const giftpokemonCheckboxes = document.querySelectorAll('.giftpokemon input[type="checkbox"]');
-	         const ingametradesCheckboxes = document.querySelectorAll('.ingametrades input[type="checkbox"]');
-	         const unownCheckboxes = document.querySelectorAll('.unown input[type="checkbox"]');
-	         const trainercardCheckboxes = document.querySelectorAll('.trainercard input[type="checkbox"]');
-	         const pokeathlonCheckboxes = document.querySelectorAll('.pokeathlon input[type="checkbox"]');
-	         const battlefrontierCheckboxes = document.querySelectorAll('.battlefrontier input[type="checkbox"]');
-	         const commerativephotosCheckboxes = document.querySelectorAll('.commerativephotos input[type="checkbox"]');
-	         const storyeventsCheckboxes = document.querySelectorAll('.storyevents input[type="checkbox"]');
-	         const battlesCheckboxes = document.querySelectorAll('.battles input[type="checkbox"]');
-	         const ribbongiverCheckboxes = document.querySelectorAll('.ribbongiver input[type="checkbox"]');
-	         const abilitybattleCheckboxes = document.querySelectorAll('.abilitybattle input[type="checkbox"]');
-	         const moreribbonsCheckboxes = document.querySelectorAll('.moreribbons input[type="checkbox"]');
-	         const itemsCheckboxes = document.querySelectorAll('.items input[type="checkbox"]');
+          titleText.forEach(function (text) {
+            text.style.color = '#FFB346';
+          });
 
+          widePanels.forEach(function (panel) {
+            panel.style.border = '2px solid #FFB346';
+          });
+        });
 
+        soulsilverLogo.addEventListener('click', function () {
+          headerTitle.style.color = '#7A95C4';
+          footer.style.backgroundColor = '#7A95C4';
+          backgroundIcons.style.backgroundImage =
+            'url(../../images/patterns/pattern-soulsilver.png)';
 
-	         function updateStyle(checkboxes, label) {
-	             const allChecked = [...checkboxes].every(checkbox => checkbox.checked);
-	             label.style.textDecoration = allChecked ? 'line-through' : 'none';
-	         }
+          titleText.forEach(function (text) {
+            text.style.color = '#7A95C4';
+          });
 
-	         function initializeCheckboxes(checkboxes, label) {
-	             checkboxes.forEach(checkbox => {
-	                 checkbox.addEventListener('change', function() {
-	                     updateStyle(checkboxes, label);
-	                 });
-	             });
-	             updateStyle(checkboxes, label);
-	         }
-	         initializeCheckboxes(completepokedexCheckboxes, document.querySelector('.completepokedex .title label'));
-	         initializeCheckboxes(legendariesCheckboxes, document.querySelector('.legendaries .title label'));
-	         initializeCheckboxes(eventpokemonCheckboxes, document.querySelector('.eventpokemon .title label'));
-	         initializeCheckboxes(giftpokemonCheckboxes, document.querySelector('.giftpokemon .title label'));
-	         initializeCheckboxes(ingametradesCheckboxes, document.querySelector('.ingametrades .title label'));
-	         initializeCheckboxes(unownCheckboxes, document.querySelector('.unown .title label'));
-	         initializeCheckboxes(trainercardCheckboxes, document.querySelector('.trainercard .title label'));
-	         initializeCheckboxes(pokeathlonCheckboxes, document.querySelector('.pokeathlon .title label'));
-	         initializeCheckboxes(battlefrontierCheckboxes, document.querySelector('.battlefrontier .title label'));
-	         initializeCheckboxes(commerativephotosCheckboxes, document.querySelector('.commerativephotos .title label'));
-	         initializeCheckboxes(storyeventsCheckboxes, document.querySelector('.storyevents .title label'));
-	         initializeCheckboxes(battlesCheckboxes, document.querySelector('.battles .title label'));
-	         initializeCheckboxes(ribbongiverCheckboxes, document.querySelector('.ribbongiver .title label'));
-	         initializeCheckboxes(abilitybattleCheckboxes, document.querySelector('.abilitybattle .title label'));
-	         initializeCheckboxes(moreribbonsCheckboxes, document.querySelector('.moreribbons .title label'));
-	         initializeCheckboxes(itemsCheckboxes, document.querySelector('.items .title label'));
+          widePanels.forEach(function (panel) {
+            panel.style.border = '2px solid #7A95C4';
+          });
+        });
+      });
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const completepokedexCheckboxes = document.querySelectorAll(
+          '.completepokedex input[type="checkbox"]'
+        );
+        const legendariesCheckboxes = document.querySelectorAll(
+          '.legendaries input[type="checkbox"]'
+        );
+        const eventpokemonCheckboxes = document.querySelectorAll(
+          '.eventpokemon input[type="checkbox"]'
+        );
+        const giftpokemonCheckboxes = document.querySelectorAll(
+          '.giftpokemon input[type="checkbox"]'
+        );
+        const ingametradesCheckboxes = document.querySelectorAll(
+          '.ingametrades input[type="checkbox"]'
+        );
+        const unownCheckboxes = document.querySelectorAll(
+          '.unown input[type="checkbox"]'
+        );
+        const trainercardCheckboxes = document.querySelectorAll(
+          '.trainercard input[type="checkbox"]'
+        );
+        const pokeathlonCheckboxes = document.querySelectorAll(
+          '.pokeathlon input[type="checkbox"]'
+        );
+        const battlefrontierCheckboxes = document.querySelectorAll(
+          '.battlefrontier input[type="checkbox"]'
+        );
+        const commerativephotosCheckboxes = document.querySelectorAll(
+          '.commerativephotos input[type="checkbox"]'
+        );
+        const storyeventsCheckboxes = document.querySelectorAll(
+          '.storyevents input[type="checkbox"]'
+        );
+        const battlesCheckboxes = document.querySelectorAll(
+          '.battles input[type="checkbox"]'
+        );
+        const ribbongiverCheckboxes = document.querySelectorAll(
+          '.ribbongiver input[type="checkbox"]'
+        );
+        const abilitybattleCheckboxes = document.querySelectorAll(
+          '.abilitybattle input[type="checkbox"]'
+        );
+        const moreribbonsCheckboxes = document.querySelectorAll(
+          '.moreribbons input[type="checkbox"]'
+        );
+        const itemsCheckboxes = document.querySelectorAll(
+          '.items input[type="checkbox"]'
+        );
 
-	         
-	      });
-	</script>
-</body>
+        function updateStyle(checkboxes, label) {
+          const allChecked = [...checkboxes].every(
+            (checkbox) => checkbox.checked
+          );
+          label.style.textDecoration = allChecked ? 'line-through' : 'none';
+        }
+
+        function initializeCheckboxes(checkboxes, label) {
+          checkboxes.forEach((checkbox) => {
+            checkbox.addEventListener('change', function () {
+              updateStyle(checkboxes, label);
+            });
+          });
+          updateStyle(checkboxes, label);
+        }
+        initializeCheckboxes(
+          completepokedexCheckboxes,
+          document.querySelector('.completepokedex .title label')
+        );
+        initializeCheckboxes(
+          legendariesCheckboxes,
+          document.querySelector('.legendaries .title label')
+        );
+        initializeCheckboxes(
+          eventpokemonCheckboxes,
+          document.querySelector('.eventpokemon .title label')
+        );
+        initializeCheckboxes(
+          giftpokemonCheckboxes,
+          document.querySelector('.giftpokemon .title label')
+        );
+        initializeCheckboxes(
+          ingametradesCheckboxes,
+          document.querySelector('.ingametrades .title label')
+        );
+        initializeCheckboxes(
+          unownCheckboxes,
+          document.querySelector('.unown .title label')
+        );
+        initializeCheckboxes(
+          trainercardCheckboxes,
+          document.querySelector('.trainercard .title label')
+        );
+        initializeCheckboxes(
+          pokeathlonCheckboxes,
+          document.querySelector('.pokeathlon .title label')
+        );
+        initializeCheckboxes(
+          battlefrontierCheckboxes,
+          document.querySelector('.battlefrontier .title label')
+        );
+        initializeCheckboxes(
+          commerativephotosCheckboxes,
+          document.querySelector('.commerativephotos .title label')
+        );
+        initializeCheckboxes(
+          storyeventsCheckboxes,
+          document.querySelector('.storyevents .title label')
+        );
+        initializeCheckboxes(
+          battlesCheckboxes,
+          document.querySelector('.battles .title label')
+        );
+        initializeCheckboxes(
+          ribbongiverCheckboxes,
+          document.querySelector('.ribbongiver .title label')
+        );
+        initializeCheckboxes(
+          abilitybattleCheckboxes,
+          document.querySelector('.abilitybattle .title label')
+        );
+        initializeCheckboxes(
+          moreribbonsCheckboxes,
+          document.querySelector('.moreribbons .title label')
+        );
+        initializeCheckboxes(
+          itemsCheckboxes,
+          document.querySelector('.items .title label')
+        );
+      });
+    </script>
+  </body>
 </html>
