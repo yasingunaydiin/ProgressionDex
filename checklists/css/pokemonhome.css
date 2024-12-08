@@ -1,148 +1,171 @@
 /* Common font family */
 
 * {
-	font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    Segoe UI,
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    Fira Sans,
+    Droid Sans,
+    Helvetica Neue;
 }
 /* Header */
 
-.kantotasks, .galartasks, .hisuitasks, .sinnohtasks, .paldeatasks {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+.kantotasks,
+.galartasks,
+.hisuitasks,
+.sinnohtasks,
+.paldeatasks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.kantotasks-rightrow, .galartasks-rightrow, .hisuitasks-rightrow, .sinnohtasks-rightrow, .paldeatasks-rightrow {
-	margin-left: 40px;
+.kantotasks-rightrow,
+.galartasks-rightrow,
+.hisuitasks-rightrow,
+.sinnohtasks-rightrow,
+.paldeatasks-rightrow {
+  margin-left: 40px;
 }
-.kantotasks-rowcontainer, .galartasks-rowcontainer, .hisuitasks-rowcontainer, .sinnohtasks-rowcontainer, .paldeatasks-rowcontainer {
-	display: flex;
-	align-items: flex-start;
+.kantotasks-rowcontainer,
+.galartasks-rowcontainer,
+.hisuitasks-rowcontainer,
+.sinnohtasks-rowcontainer,
+.paldeatasks-rowcontainer {
+  display: flex;
+  align-items: flex-start;
 }
 .pokeicon {
-	height: 35px;
-	margin-right: 5px;
-	margin-left: 5px;
+  height: 35px;
+  margin-right: 5px;
+  margin-left: 5px;
 }
 /* Logo Container */
 
 /* Links */
 
 a {
-	text-decoration: none;
-	color: #fff;
+  text-decoration: none;
+  color: #fff;
 }
 /* Body */
 
 body {
-	margin: 0;
-	padding: 0;
-	background: #ffffff url(../../images/patterns/pattern-home.png) repeat center center;
-	/* Icons Vectors by Vecteezy */
-	background-size: 500px 250px;
-	display: flex;
-	flex-direction: column;
+  margin: 0;
+  padding: 0;
+  background: #ffffff url(../../images/patterns/pattern-home.png) repeat center center;
+  /* Icons Vectors by Vecteezy */
+  background-size: 500px 250px;
+  display: flex;
+  flex-direction: column;
 }
 /* Page Container */
 
 .page-container {
-	display: flex;
-	justify-content: space-evenly;
-	flex-wrap: wrap;
-	align-items: baseline;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: baseline;
 }
 /* Span */
 
 span {
-	pointer-events: none;
+  pointer-events: none;
 }
 /* Wide Panel */
 
 .wide-panel {
-	text-align: center;
-	padding: 20px;
-	border-radius: 1.5rem;
-	width: 750px;
-	height: 550px;
-	margin: 30px;
-	box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
-	background-color: white;
-	margin-top: 150px;
-	border: 2px solid #239a5b;
+  text-align: center;
+  padding: 20px;
+  border-radius: 1.5rem;
+  width: 750px;
+  height: 550px;
+  margin: 30px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  background-color: white;
+  margin-top: 150px;
+  border: 2px solid #239a5b;
 }
 /* Panel Label */
 
 .panel-label {
-	display: block;
-	margin-bottom: 10px;
-	font-size: 20px;
-	font-weight: 1000;
-	color: #239a5b;
+  display: block;
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 1000;
+  color: #239a5b;
 }
 /* Panel Content */
 
 /* Checkbox Group */
 
 .checkbox-item input[type="checkbox"] {
-	margin-right: 5px;
-	/* Adjust this value to control the space between the checkbox and the label */
+  margin-right: 5px;
+  /* Adjust this value to control the space between the checkbox and the label */
 }
 /* Checkbox Item */
 
 .checkbox-item {
-	margin-bottom: 10px;
-	display: flex;
-	align-items: center;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
 }
 /* Footer */
 
 footer {
-	height: 50px;
-	background: #239a5b;
-	bottom: 0;
-	width: 100%;
-	text-align: center;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-size: 1vw;
+  height: 50px;
+  background: #239a5b;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1vw;
 }
 footer ul {
-	display: flex;
-	list-style: circle;
-	padding: 0;
+  display: flex;
+  list-style: circle;
+  padding: 0;
 }
 footer li {
-	margin-right: 10px;
-	text-decoration: none;
-	list-style: none;
-	font-size: 15px;
+  margin-right: 10px;
+  text-decoration: none;
+  list-style: none;
+  font-size: 15px;
 }
 @media only screen and (max-width: 768px) {
-	/* Constant */
-	footer {
-		height: 50px;
-		font-size: 12px;
-	}
-	/* Variable */
-	.wide-panel {
-		margin-top: 180px;
-		width: 350px;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-evenly;
-		align-items: center;
-	}
-	.checkbox-item label::before {
-		margin-left: -140px;
-	}
+  /* Constant */
+  footer {
+    height: 50px;
+    font-size: 12px;
+  }
+  /* Variable */
+  .wide-panel {
+    margin-top: 180px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .checkbox-item label::before {
+    margin-left: -140px;
+  }
 }
 @media only screen and (max-width: 400px) {
-	/* Normal phones */
-	.wide-panel {
-		margin-top: 180px;
-		width: 300px;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-evenly;
-		align-items: center;
-	}
+  /* Normal phones */
+  .wide-panel {
+    margin-top: 180px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
 }

@@ -1,184 +1,213 @@
-.legendaries, .poketch, .egoodsitems, .ribbons, .battletower, .trainercard, .ingametrades, .giftpokemon, .completepokedex, .items {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+.legendaries,
+.poketch,
+.egoodsitems,
+.ribbons,
+.battletower,
+.trainercard,
+.ingametrades,
+.giftpokemon,
+.completepokedex,
+.items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.legendaries-rightrow, .ribbons-rightrow, .ingametrades-rightrow {
-	margin-left: 40px;
+.legendaries-rightrow,
+.ribbons-rightrow,
+.ingametrades-rightrow {
+  margin-left: 40px;
 }
-.legendaries-rowcontainer, .poketch-rowcontainer, .egoodsitems-rowcontainer, .ribbons-rowcontainer, .ingametrades-rowcontainer {
-	display: flex;
-	align-items: flex-start;
+.legendaries-rowcontainer,
+.poketch-rowcontainer,
+.egoodsitems-rowcontainer,
+.ribbons-rowcontainer,
+.ingametrades-rowcontainer {
+  display: flex;
+  align-items: flex-start;
 }
-.egoodsitems-middlerow, .poketch-middlerow {
-	margin-left: 40px;
-	margin-right: 40px;
+.egoodsitems-middlerow,
+.poketch-middlerow {
+  margin-left: 40px;
+  margin-right: 40px;
 }
 * {
-	font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    Segoe UI,
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    Fira Sans,
+    Droid Sans,
+    Helvetica Neue;
 }
 .pokeicon.trophy {
-	height: 20px;
-	margin-right: 5px;
-	margin-left: 5px;
+  height: 20px;
+  margin-right: 5px;
+  margin-left: 5px;
 }
 .collapsible {
-	background-color: #f1f1f1;
-	cursor: pointer;
-	padding: 18px;
-	width: 500px;
-	border: none;
-	text-align: left;
-	outline: none;
-	font-size: 15px;
-	margin: 5px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  padding: 18px;
+  width: 500px;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  margin: 5px;
 }
 .content {
-	padding: 0 18px;
-	display: none;
+  padding: 0 18px;
+  display: none;
 }
 /* Header */
 
 #female {
-	color: pink;
+  color: pink;
 }
 /* Pokeicon */
 
 .pokeicon {
-	height: 40px;
+  height: 40px;
 }
 .pokeicon.legendary {
-	height: 30px;
-	margin-right: 5px;
-	margin-left: 5px;
+  height: 30px;
+  margin-right: 5px;
+  margin-left: 5px;
 }
 /* Logo Container */
 
 /* Links */
 
 a {
-	text-decoration: none;
-	color: #fff;
+  text-decoration: none;
+  color: #fff;
 }
 /* Body */
 
 body {
-	margin: 0;
-	padding: 0;
-	background: #ffffff url(../../images/patterns/pattern-diamond.png) repeat center center;
-	/* Icons Vectors by Vecteezy */
-	background-size: 500px 250px;
-	display: flex;
-	flex-direction: column;
+  margin: 0;
+  padding: 0;
+  background: #ffffff url(../../images/patterns/pattern-diamond.png) repeat center center;
+  /* Icons Vectors by Vecteezy */
+  background-size: 500px 250px;
+  display: flex;
+  flex-direction: column;
 }
 /* Page Container */
 
 .checkbox-item input[type="checkbox"] {
-	margin-right: 5px;
-	/* Adjust this value to control the space between the checkbox and the label */
+  margin-right: 5px;
+  /* Adjust this value to control the space between the checkbox and the label */
 }
 .page-container {
-	display: flex;
-	justify-content: space-evenly;
-	flex-wrap: wrap;
-	align-items: baseline;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: baseline;
 }
 /* Span */
 
 span {
-	pointer-events: none;
+  pointer-events: none;
 }
 /* Wide Panel */
 
 .wide-panel {
-	text-align: center;
-	padding: 20px;
-	border-radius: 1.5rem;
-	width: 500px;
-	margin: 30px;
-	box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
-	background-color: white;
-	margin-top: 150px;
-	border: 2px solid #7A95C4;
+  text-align: center;
+  padding: 20px;
+  border-radius: 1.5rem;
+  width: 500px;
+  margin: 30px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  background-color: white;
+  margin-top: 150px;
+  border: 2px solid #7a95c4;
 }
-.wide-panel.more, .wide-panel.contests {
-	margin-bottom: 50px;
-	margin-top: 50px;
+.wide-panel.more,
+.wide-panel.contests {
+  margin-bottom: 50px;
+  margin-top: 50px;
 }
 .panel-label {
-	display: block;
-	margin-bottom: 10px;
-	font-size: 25px;
-	font-weight: 1000;
-	color: #7A95C4;
+  display: block;
+  margin-bottom: 10px;
+  font-size: 25px;
+  font-weight: 1000;
+  color: #7a95c4;
 }
 .checkbox-item {
-	margin-bottom: 10px;
-	display: flex;
-	align-items: center;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
 }
 /* Footer */
 
 footer {
-	height: 50px;
-	background: #86BFF3;
-	bottom: 0;
-	width: 100%;
-	text-align: center;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-size: 1vw;
+  height: 50px;
+  background: #86bff3;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1vw;
 }
 footer ul {
-	display: flex;
-	list-style: circle;
-	padding: 0;
+  display: flex;
+  list-style: circle;
+  padding: 0;
 }
 footer li {
-	margin-right: 10px;
-	text-decoration: none;
-	list-style: none;
-	font-size: 15px;
+  margin-right: 10px;
+  text-decoration: none;
+  list-style: none;
+  font-size: 15px;
 }
 /* Event container */
 
 @media only screen and (max-width: 768px) {
-	/* Constant */
-	footer {
-		height: 50px;
-		font-size: 12px;
-	}
-	/* Variable */
-	.wide-panel {
-		margin-top: 180px;
-		width: 300px;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-evenly;
-		align-items: center;
-	}
-	.wide-panel.collectibles {
-		margin-top: 0px;
-	}
-	.egoodsitems-rightrow, .egoodsitems-middlerow {
-		margin-left: 10px;
-	}
-	.collapsible {
-		width: 290px;
-	}
+  /* Constant */
+  footer {
+    height: 50px;
+    font-size: 12px;
+  }
+  /* Variable */
+  .wide-panel {
+    margin-top: 180px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .wide-panel.collectibles {
+    margin-top: 0px;
+  }
+  .egoodsitems-rightrow,
+  .egoodsitems-middlerow {
+    margin-left: 10px;
+  }
+  .collapsible {
+    width: 290px;
+  }
 }
 @media only screen and (max-width: 400px) {
-	/* Normal phones */
-	.wide-panel {
-		margin-top: 180px;
-		width: 300px;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-evenly;
-		align-items: center;
-	}
-	.pokeicon.unown {
-		height: 30px;
-	}
+  /* Normal phones */
+  .wide-panel {
+    margin-top: 180px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .pokeicon.unown {
+    height: 30px;
+  }
 }

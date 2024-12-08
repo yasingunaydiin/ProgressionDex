@@ -1,115 +1,93 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta content="width=device-width, initial-scale=1.0" name="viewport">
-	<title>Progression Dex | The Teal Mask</title>
-	<link href="../checklists/css/thetealmask.css" rel="stylesheet">
-	<link href="../output.css" rel="stylesheet">
-	<link href="../images/icons/favicontab.ico" rel="icon" type="image/x-icon">
-	<link href="../images/icons/favicontab.ico" rel="shortcut icon" type="image/x-icon">
-	<meta name="description" content="A tool for tracking your progression in Pokemon games. Easily choose between games and track your game progress.">
-	<meta name="keywords" content="pokemon, checklist, pokedex, progress, completion, speedrun, checklist, check list, locations, characters, games, game">
-</head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4PDLXC895H"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Progression Dex | The Teal Mask</title>
+    <link href="../checklists/css/thetealmask.css" rel="stylesheet" />
+    <link href="../output.css" rel="stylesheet" />
+    <link href="../images/icons/favicontab.ico" rel="icon" type="image/x-icon" />
+    <link href="../images/icons/favicontab.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="description" content="A tool for tracking your progression in Pokemon games. Easily choose between games and track your game progress." />
+    <meta name="keywords" content="pokemon, checklist, pokedex, progress, completion, speedrun, checklist, check list, locations, characters, games, game" />
+  </head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4PDLXC895H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
 
-  gtag('config', 'G-4PDLXC895H');
-</script>
-<body>
-	<div class="navbar bg-white rounded-3xl shadow-lg mt-2 fixed top-0 flex items-center justify-between" style="width: 95%;  z-index: 1000; left: 50%; transform: translateX(-50%);">
-		<div class="flex items-center gap-4">
-		  <a href="../index.html" class="btn btn-ghost text-2xl"><span class="title" style="color: #00bbb9;">Progression Dex |</span></a>
-		  <div class="flex items-center gap-2">
-			<img img alt="Logo of Teal Mask DLC" src= id="tealmask-logo" src="../images/logos/tealmask-logo.webp" class="w-20">
-		  </div>
-		</div>
-		
-	  </div>
+    gtag("config", "G-4PDLXC895H");
+  </script>
+  <body>
+    <div class="navbar bg-white rounded-3xl shadow-lg mt-2 fixed top-0 flex items-center justify-between" style="width: 95%; z-index: 1000; left: 50%; transform: translateX(-50%)">
+      <div class="flex items-center gap-4">
+        <a href="../index.html" class="btn btn-ghost text-2xl"><span class="title" style="color: #00bbb9">Progression Dex |</span></a>
+        <div class="flex items-center gap-2">
+          <img img alt="Logo of Teal Mask DLC" src="id" ="tealmask-logo" src="../images/logos/tealmask-logo.webp" class="w-20" />
+        </div>
+      </div>
+    </div>
 
-	<div class="page-container" data-game="thetealmask">
-		
-		<div class="page-container-left">
-			<div class="wide-panel pokedex">
-				
-			
-				
-				
-				
-			</div>
+    <div class="page-container" data-game="thetealmask">
+      <div class="page-container-left">
+        <div class="wide-panel pokedex"></div>
 
-			<div class="wide-panel exploration">
-				
-				
-			</div>
-		</div>
-		<div class="page-container-right">
-			<div class="wide-panel mainstory">
-				
-				
-			</div>
-			<div class="wide-panel postgame">
-			
-		</div>
-	</div>
-	<footer>
-		<ul>
-			<li>
-				<a href="../index/index.html">Progression Dex</a>
-			</li>
-			<li>
-				<a href="#">Twitter</a>
-			</li>
-			<li>
-				<a href="https://github.com/yasingunaydiin">GitHub</a>
-			</li>
-		</ul>
-	</footer>
+        <div class="wide-panel exploration"></div>
+      </div>
+      <div class="page-container-right">
+        <div class="wide-panel mainstory"></div>
+        <div class="wide-panel postgame"></div>
+      </div>
+      <footer>
+        <ul>
+          <li>
+            <a href="../index/index.html">Progression Dex</a>
+          </li>
+          <li>
+            <a href="#">Twitter</a>
+          </li>
+          <li>
+            <a href="https://github.com/yasingunaydiin">GitHub</a>
+          </li>
+        </ul>
+      </footer>
 
-	<script src="../checklists/js/script.js"></script> 
+      <script src="../checklists/js/script.js"></script>
 
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const completepokedexCheckboxes = document.querySelectorAll('.completepokedex input[type="checkbox"]');
+          const legendariesCheckboxes = document.querySelectorAll('.legendaries input[type="checkbox"]');
+          const giftpokemonCheckboxes = document.querySelectorAll('.giftpokemon input[type="checkbox"]');
+          const postgameCheckboxes = document.querySelectorAll('.postgame input[type="checkbox"]');
+          const mainstoryCheckboxes = document.querySelectorAll('.mainstory input[type="checkbox"]');
+          const explorationCheckboxes = document.querySelectorAll('.exploration input[type="checkbox"]');
 
+          function updateStyle(checkboxes, label) {
+            const allChecked = [...checkboxes].every((checkbox) => checkbox.checked);
+            label.style.textDecoration = allChecked ? "line-through" : "none";
+          }
 
-	<script>
-	                                           document.addEventListener('DOMContentLoaded', function() {
-	                                       const completepokedexCheckboxes = document.querySelectorAll('.completepokedex input[type="checkbox"]');
-	                                       const legendariesCheckboxes = document.querySelectorAll('.legendaries input[type="checkbox"]');
-	                                       const giftpokemonCheckboxes = document.querySelectorAll('.giftpokemon input[type="checkbox"]');
-	                                       const postgameCheckboxes = document.querySelectorAll('.postgame input[type="checkbox"]');
-	                                       const mainstoryCheckboxes = document.querySelectorAll('.mainstory input[type="checkbox"]');
-	                                       const explorationCheckboxes = document.querySelectorAll('.exploration input[type="checkbox"]');
-
-
-
-
-	                                       function updateStyle(checkboxes, label) {
-	                                           const allChecked = [...checkboxes].every(checkbox => checkbox.checked);
-	                                           label.style.textDecoration = allChecked ? 'line-through' : 'none';
-	                                       }
-
-	                                       function initializeCheckboxes(checkboxes, label) {
-	                                           checkboxes.forEach(checkbox => {
-	                                               checkbox.addEventListener('change', function() {
-	                                                   updateStyle(checkboxes, label);
-	                                               });
-	                                           });
-	                                           updateStyle(checkboxes, label);
-	                                       }
-	                                       initializeCheckboxes(completepokedexCheckboxes, document.querySelector('.completepokedex .title label'));
-	                                       initializeCheckboxes(legendariesCheckboxes, document.querySelector('.legendaries .title label'));
-	                                       initializeCheckboxes(giftpokemonCheckboxes, document.querySelector('.giftpokemon .title label'));
-	                                       initializeCheckboxes(postgameCheckboxes, document.querySelector('.postgame .title label'));
-	                                       initializeCheckboxes(mainstoryCheckboxes, document.querySelector('.mainstory .title label'));
-	                                       initializeCheckboxes(explorationCheckboxes, document.querySelector('.exploration .title label'));
-
-
-	                                       
-	                                    });
-	</script>
-
-</body>
+          function initializeCheckboxes(checkboxes, label) {
+            checkboxes.forEach((checkbox) => {
+              checkbox.addEventListener("change", function () {
+                updateStyle(checkboxes, label);
+              });
+            });
+            updateStyle(checkboxes, label);
+          }
+          initializeCheckboxes(completepokedexCheckboxes, document.querySelector(".completepokedex .title label"));
+          initializeCheckboxes(legendariesCheckboxes, document.querySelector(".legendaries .title label"));
+          initializeCheckboxes(giftpokemonCheckboxes, document.querySelector(".giftpokemon .title label"));
+          initializeCheckboxes(postgameCheckboxes, document.querySelector(".postgame .title label"));
+          initializeCheckboxes(mainstoryCheckboxes, document.querySelector(".mainstory .title label"));
+          initializeCheckboxes(explorationCheckboxes, document.querySelector(".exploration .title label"));
+        });
+      </script>
+    </div>
+  </body>
 </html>

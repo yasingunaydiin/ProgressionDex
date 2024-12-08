@@ -1,96 +1,93 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta content="width=device-width, initial-scale=1.0" name="viewport">
-	<title>ProgressionDex | Log your 100% progression</title>
-	<link href="styles.css" rel="stylesheet">
-	<link href="images/icons/favicontab.ico" rel="icon" type="image/x-icon">
-	<link href="images/icons/favicontab.ico" rel="shortcut icon" type="image/x-icon">
-	<link href="output.css" rel="stylesheet">
-	<meta name="description" content="A tool for tracking your progression in Pokemon games. Easily choose between games and track your game progress.">
-	<meta name="keywords" content="pokemon, checklist, pokedex, progress, completion, speedrun, checklist, check list, locations, characters, games, game">
-</head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4PDLXC895H"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>ProgressionDex | Log your 100% progression</title>
+    <link href="styles.css" rel="stylesheet" />
+    <link href="images/icons/favicontab.ico" rel="icon" type="image/x-icon" />
+    <link href="images/icons/favicontab.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="output.css" rel="stylesheet" />
+    <meta name="description" content="A tool for tracking your progression in Pokemon games. Easily choose between games and track your game progress." />
+    <meta name="keywords" content="pokemon, checklist, pokedex, progress, completion, speedrun, checklist, check list, locations, characters, games, game" />
+  </head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4PDLXC895H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
 
-  gtag('config', 'G-4PDLXC895H');
-</script>
-<body>
-		<div class="container">
-			<div class="header-left">
-				<div>
-					<h1 class="mb-0 text-blue-950">Progression Dex</h1>
-					<p>A tool for tracking your 100% progression. <br> Easily choose games and track your game progress.</p>
+    gtag("config", "G-4PDLXC895H");
+  </script>
+  <body>
+    <div class="container">
+      <div class="header-left">
+        <div>
+          <h1 class="mb-0 text-blue-950">Progression Dex</h1>
+          <p>
+            A tool for tracking your 100% progression. <br />
+            Easily choose games and track your game progress.
+          </p>
+          <div>
+            <a href="../list/index.html"><h1 class="btn btn-primary">Continue without creating an account</h1></a>
+          </div>
+        </div>
+      </div>
+      <div class="header-right">
+        <div class="social">
+          <a href="https://github.com/yasingunaydiin" target="_blank"><img alt="Github logo" class="github" src="../images/icons/github-mark.png" /></a>
+        </div>
+        <img alt="Header image" class="header-image skew-y-12" src="../images/images/index1.png" />
+      </div>
+    </div>
+    <footer>Made with <img alt="Icons of Pokemon" id="dynamicImage" style="margin: 8px; height: 40px" /> in a Cafe</footer>
+  </body>
 
-					<div>
-						<!--
-						<a href="signup/index.html" class="btn btn-outline">Login</a>
-						<a href="signup/index.html" class="btn btn-primary">Register</a>
-						!-->
-						<a href="../list/index.html"><h1 class="btn btn-primary">Continue without creating an account</h1></a>
-					</div>
-				</div>
-			</div>
-			<div class="header-right">
-			<div class="social">
-				<a href="https://github.com/yasingunaydiin" target="_blank"><img alt="Github logo" class="github" src="../images/icons/github-mark.png"></a>
-			</div>
-			<img alt="Header image" class="header-image skew-y-12" src="../images/images/index1.png">
-		</div>
-		</div>
-	<footer>
-		Made with <img alt="Icons of Pokemon" id="dynamicImage" style="margin: 8px; height: 40px"> in a Cafe
-	</footer>
-</body>
+  <script>
+    // Array of image URLs
+    var images = [
+      "../images/icons/pokemon/gen8/swordshield/gigantamax/alcremie-gigantamax.png",
+      "../images/icons/pokemon/gen8/swordshield/gigantamax/appletun-gigantamax.png",
+      "../images/icons/pokemon/gen8/swordshield/gigantamax/blastoise-gigantamax.png",
+      "../images/icons/pokemon/gen8/swordshield/gigantamax/butterfree-gigantamax.png",
+      "../images/icons/pokemon/gen8/swordshield/gigantamax/centiskorch-gigantamax.png",
+      "../images/icons/pokemon/gen8/swordshield/gigantamax/charizard-gigantamax.png",
+      "../images/icons/pokemon/gen8/swordshield/gigantamax/cinderace-gigantamax.png",
+      "../images/icons/pokemon/gen8/swordshield/gigantamax/coalossal-gigantamax.png",
+      "../images/icons/pokemon/gen8/swordshield/gigantamax/copperajah-gigantamax.png",
+      "../images/icons/pokemon/gen8/swordshield/gigantamax/eevee-gigantamax.png",
+      "../images/icons/pokemon/gen8/swordshield/gigantamax/flapple-gigantamax.png",
+      "../images/icons/pokemon/gen8/swordshield/gigantamax/garbodor-gigantamax.png",
+      "../images/icons/pokemon/gen8/swordshield/gigantamax/gengar-gigantamax.png",
+      "../images/icons/pokemon/gen8/swordshield/gigantamax/grimmsnarl-gigantamax.png",
+      "../images/icons/pokemon/gen8/swordshield/gigantamax/hatterene-gigantamax.png",
+      "../images/icons/pokemon/gen8/swordshield/gigantamax/inteleon-gigantamax.png",
+      "../images/icons/pokemon/gen8/swordshield/gigantamax/lapras-gigantamax.png",
+      "../images/icons/pokemon/gen8/swordshield/gigantamax/machamp-gigantamax.png",
+      "../images/icons/pokemon/gen8/swordshield/gigantamax/melmetal-gigantamax.png",
+      "../images/icons/pokemon/gen8/swordshield/gigantamax/meowth-gigantamax.png",
+      "../images/icons/pokemon/gen8/swordshield/gigantamax/orbeetle-gigantamax.png",
+      "../images/icons/pokemon/gen8/swordshield/gigantamax/pikachu-gigantamax.png",
+      "../images/icons/pokemon/gen8/swordshield/gigantamax/rillaboom-gigantamax.png",
+      "../images/icons/pokemon/gen8/swordshield/gigantamax/sandaconda-gigantamax.png",
+      "../images/icons/pokemon/gen8/swordshield/gigantamax/snorlax-gigantamax.png",
+      "../images/icons/pokemon/gen8/swordshield/gigantamax/toxtricity-gigantamax.png",
+      "../images/icons/pokemon/gen8/swordshield/gigantamax/urshifu-gigantamax-rapid-strike.png",
+      "../images/icons/pokemon/gen8/swordshield/gigantamax/venusaur-gigantamax.png",
+      "../images/icons/pokemon/gen8/swordshield/gigantamax/kingler-gigantamax.png",
+      "../images/icons/pokemon/gen8/swordshield/gigantamax/corviknight-gigantamax.png",
+      "../images/icons/pokemon/gen8/swordshield/gigantamax/urshifu-gigantamax-single-strike.png",
+    ];
 
-<script>
-	// Array of image URLs
-	var images = [
-		"../images/icons/pokemon/gen8/swordshield/gigantamax/alcremie-gigantamax.png",
-		"../images/icons/pokemon/gen8/swordshield/gigantamax/appletun-gigantamax.png",
-		"../images/icons/pokemon/gen8/swordshield/gigantamax/blastoise-gigantamax.png",
-		"../images/icons/pokemon/gen8/swordshield/gigantamax/butterfree-gigantamax.png",
-		"../images/icons/pokemon/gen8/swordshield/gigantamax/centiskorch-gigantamax.png",
-		"../images/icons/pokemon/gen8/swordshield/gigantamax/charizard-gigantamax.png",
-		"../images/icons/pokemon/gen8/swordshield/gigantamax/cinderace-gigantamax.png",
-		"../images/icons/pokemon/gen8/swordshield/gigantamax/coalossal-gigantamax.png",
-		"../images/icons/pokemon/gen8/swordshield/gigantamax/copperajah-gigantamax.png",
-		"../images/icons/pokemon/gen8/swordshield/gigantamax/eevee-gigantamax.png",
-		"../images/icons/pokemon/gen8/swordshield/gigantamax/flapple-gigantamax.png",
-		"../images/icons/pokemon/gen8/swordshield/gigantamax/garbodor-gigantamax.png",
-		"../images/icons/pokemon/gen8/swordshield/gigantamax/gengar-gigantamax.png",
-		"../images/icons/pokemon/gen8/swordshield/gigantamax/grimmsnarl-gigantamax.png",
-		"../images/icons/pokemon/gen8/swordshield/gigantamax/hatterene-gigantamax.png",
-		"../images/icons/pokemon/gen8/swordshield/gigantamax/inteleon-gigantamax.png",
-		"../images/icons/pokemon/gen8/swordshield/gigantamax/lapras-gigantamax.png",
-		"../images/icons/pokemon/gen8/swordshield/gigantamax/machamp-gigantamax.png",
-		"../images/icons/pokemon/gen8/swordshield/gigantamax/melmetal-gigantamax.png",
-		"../images/icons/pokemon/gen8/swordshield/gigantamax/meowth-gigantamax.png",
-		"../images/icons/pokemon/gen8/swordshield/gigantamax/orbeetle-gigantamax.png",
-		"../images/icons/pokemon/gen8/swordshield/gigantamax/pikachu-gigantamax.png",
-		"../images/icons/pokemon/gen8/swordshield/gigantamax/rillaboom-gigantamax.png",
-		"../images/icons/pokemon/gen8/swordshield/gigantamax/sandaconda-gigantamax.png",
-		"../images/icons/pokemon/gen8/swordshield/gigantamax/snorlax-gigantamax.png",
-		"../images/icons/pokemon/gen8/swordshield/gigantamax/toxtricity-gigantamax.png",
-		"../images/icons/pokemon/gen8/swordshield/gigantamax/urshifu-gigantamax-rapid-strike.png",
-		"../images/icons/pokemon/gen8/swordshield/gigantamax/venusaur-gigantamax.png",
-		"../images/icons/pokemon/gen8/swordshield/gigantamax/kingler-gigantamax.png",
-		"../images/icons/pokemon/gen8/swordshield/gigantamax/corviknight-gigantamax.png",
-		"../images/icons/pokemon/gen8/swordshield/gigantamax/urshifu-gigantamax-single-strike.png"
-			];
+    // Function to change the image
+    const changeImage = () => {
+      document.getElementById("dynamicImage").src = images[Math.floor(Math.random() * images.length)];
+    };
 
-	// Function to change the image
-	const changeImage = () => {
-	document.getElementById('dynamicImage').src = images[Math.floor(Math.random() * images.length)];
-};
-
-	// Call changeImage function when page loads
-	window.onload = changeImage;
-</script>
-<!-- <script src="/firebase.js"></script> -->
+    // Call changeImage function when page loads
+    window.onload = changeImage;
+  </script>
 </html>

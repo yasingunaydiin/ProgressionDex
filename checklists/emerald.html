@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,57 +6,28 @@
     <title>Progression Dex | Emerald</title>
     <link href="../checklists/css/emerald.css" rel="stylesheet" />
     <link href="../output.css" rel="stylesheet" />
-    <link
-      href="../images/icons/favicontab.ico"
-      rel="icon"
-      type="image/x-icon"
-    />
-    <link
-      href="../images/icons/favicontab.ico"
-      rel="shortcut icon"
-      type="image/x-icon"
-    />
-    <meta
-      name="description"
-      content="A tool for tracking your progression in Pokemon games. Easily choose between games and track your game progress."
-    />
-    <meta
-      name="keywords"
-      content="pokemon, checklist, pokedex, progress, completion, speedrun, checklist, check list, locations, characters, games, game"
-    />
+    <link href="../images/icons/favicontab.ico" rel="icon" type="image/x-icon" />
+    <link href="../images/icons/favicontab.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="description" content="A tool for tracking your progression in Pokemon games. Easily choose between games and track your game progress." />
+    <meta name="keywords" content="pokemon, checklist, pokedex, progress, completion, speedrun, checklist, check list, locations, characters, games, game" />
   </head>
   <!-- Google tag (gtag.js) -->
-  <script
-    async
-    src="https://www.googletagmanager.com/gtag/js?id=G-4PDLXC895H"
-  ></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4PDLXC895H"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() {
       dataLayer.push(arguments);
     }
-    gtag('js', new Date());
+    gtag("js", new Date());
 
-    gtag('config', 'G-4PDLXC895H');
+    gtag("config", "G-4PDLXC895H");
   </script>
   <body>
-    <div
-      class="navbar bg-white rounded-3xl shadow-lg mt-2 fixed top-0 flex items-center justify-between"
-      style="width: 95%; z-index: 1000; left: 50%; transform: translateX(-50%)"
-    >
+    <div class="navbar bg-white rounded-3xl shadow-lg mt-2 fixed top-0 flex items-center justify-between" style="width: 95%; z-index: 1000; left: 50%; transform: translateX(-50%)">
       <div class="flex items-center gap-4">
-        <a href="../index.html" class="btn btn-ghost text-2xl"
-          ><span class="title" style="color: #588e47"
-            >Progression Dex |</span
-          ></a
-        >
+        <a href="../index.html" class="btn btn-ghost text-2xl"><span class="title" style="color: #588e47">Progression Dex |</span></a>
         <div class="flex items-center gap-2">
-          <img
-            alt="Logo of Pokemon Emerlad"
-            src="src"
-            ="../images/logos/emerald-logo.webp"
-            class="w-20"
-          />
+          <img alt="Logo of Pokemon Emerlad" src="src" ="../images/logos/emerald-logo.webp" class="w-20" />
         </div>
       </div>
     </div>
@@ -66,96 +37,42 @@
           <label class="panel-label">Pokédex</label>
           <div class="completepokedex">
             <div class="checkbox-item">
-              <span class="title"
-                ><label class="text-lg">Complete the Hoenn Pokédex</label></span
-              >
+              <span class="title"><label class="text-lg">Complete the Hoenn Pokédex</label></span>
             </div>
             <div class="checkbox-item">
               <input id="emerald-checkbox-national-pokedex" type="checkbox" />
-              <label
-                class="text-sm lg:tooltip"
-                data-tip="There are a total of 386 Pokemon in the National Dex."
-                for="emerald-checkbox-national-pokedex"
-                >Complete the National Pokedex</label
-              >
+              <label class="text-sm lg:tooltip" data-tip="There are a total of 386 Pokemon in the National Dex." for="emerald-checkbox-national-pokedex">Complete the National Pokedex</label>
             </div>
             <div class="checkbox-item">
               <input id="emerald-checkbox-diploma" type="checkbox" />
-              <label
-                class="text-sm lg:tooltip"
-                data-tip="The lead developer is on the top floor of the Cove Lily Motel in Lilycove City."
-                for="emerald-checkbox-diploma"
-                >Get Diploma</label
-              >
+              <label class="text-sm lg:tooltip" data-tip="The lead developer is on the top floor of the Cove Lily Motel in Lilycove City." for="emerald-checkbox-diploma">Get Diploma</label>
             </div>
           </div>
           <div class="legendaries">
             <div class="checkbox-item">
-              <span class="title"
-                ><label class="text-lg">Catch all Legendaries</label></span
-              >
+              <span class="title"><label class="text-lg">Catch all Legendaries</label></span>
             </div>
             <div class="legendaries-rowcontainer">
               <div class="legendaries-leftrow">
                 <div class="checkbox-item">
                   <input id="emerald-checkbox-kyogre" type="checkbox" />
-                  <img
-                    alt="Icon of Kyogre"
-                    src="class"
-                    ="pokeicon legendary"
-                    src="../images/icons/pokemon/gen3/emerald/kyogre.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Go to the Marine Cave after becoming the Champion."
-                    for="emerald-checkbox-kyogre"
-                    >Kyogre</label
-                  >
+                  <img alt="Icon of Kyogre" src="class" ="pokeicon legendary" src="../images/icons/pokemon/gen3/emerald/kyogre.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Go to the Marine Cave after becoming the Champion." for="emerald-checkbox-kyogre">Kyogre</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="emerald-checkbox-groudon" type="checkbox" />
-                  <img
-                    alt="Icon of Groudon"
-                    src="class"
-                    ="pokeicon legendary"
-                    src="../images/icons/pokemon/gen3/emerald/groudon.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Go to the Terra Cave after becoming the Champion."
-                    for="emerald-checkbox-groudon"
-                    >Groudon</label
-                  >
+                  <img alt="Icon of Groudon" src="class" ="pokeicon legendary" src="../images/icons/pokemon/gen3/emerald/groudon.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Go to the Terra Cave after becoming the Champion." for="emerald-checkbox-groudon">Groudon</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="emerald-checkbox-rayquaza" type="checkbox" />
-                  <img
-                    alt="Icon of Rayquaza"
-                    src="class"
-                    ="pokeicon legendary"
-                    src="../images/icons/pokemon/gen3/emerald/rayquaza.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Go to the Sky Pillar after becoming the Champion."
-                    for="emerald-checkbox-rayquaza"
-                    >Rayquaza</label
-                  >
+                  <img alt="Icon of Rayquaza" src="class" ="pokeicon legendary" src="../images/icons/pokemon/gen3/emerald/rayquaza.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Go to the Sky Pillar after becoming the Champion." for="emerald-checkbox-rayquaza">Rayquaza</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="emerald-checkbox-latias-latios" type="checkbox" />
-                  <img
-                    alt="Icon of Latias"
-                    src="class"
-                    ="pokeicon legendary"
-                    src="../images/icons/pokemon/gen3/emerald/latias.png"
-                  />
-                  <img
-                    alt="Icon of Latios"
-                    src="class"
-                    ="pokeicon legendary"
-                    src="../images/icons/pokemon/gen3/emerald/latios.png"
-                  />
+                  <img alt="Icon of Latias" src="class" ="pokeicon legendary" src="../images/icons/pokemon/gen3/emerald/latias.png" />
+                  <img alt="Icon of Latios" src="class" ="pokeicon legendary" src="../images/icons/pokemon/gen3/emerald/latios.png" />
                   <label
                     class="text-sm lg:tooltip"
                     data-tip="After you beat the Pokemon League, these Pokemon roam around Hoenn in. After seeing the TV, you'll be asked what colour the Pokémon was and that will determine which one roams."
@@ -165,122 +82,44 @@
                 </div>
                 <div class="checkbox-item">
                   <input id="emerald-checkbox-regirock" type="checkbox" />
-                  <img
-                    alt="Icon of Regirock"
-                    src="class"
-                    ="pokeicon legendary"
-                    src="../images/icons/pokemon/gen3/emerald/regirock.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Desert Tomb."
-                    for="emerald-checkbox-regirock"
-                    >Regirock</label
-                  >
+                  <img alt="Icon of Regirock" src="class" ="pokeicon legendary" src="../images/icons/pokemon/gen3/emerald/regirock.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Desert Tomb." for="emerald-checkbox-regirock">Regirock</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="emerald-checkbox-regice" type="checkbox" />
-                  <img
-                    alt="Icon of Regice"
-                    src="class"
-                    ="pokeicon legendary"
-                    src="../images/icons/pokemon/gen3/emerald/regice.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Island Cave."
-                    for="emerald-checkbox-regice"
-                    >Regice</label
-                  >
+                  <img alt="Icon of Regice" src="class" ="pokeicon legendary" src="../images/icons/pokemon/gen3/emerald/regice.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Island Cave." for="emerald-checkbox-regice">Regice</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="emerald-checkbox-registeel" type="checkbox" />
-                  <img
-                    alt="Icon of Registeel"
-                    src="class"
-                    ="pokeicon legendary"
-                    src="../images/icons/pokemon/gen3/emerald/registeel.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Ancient Tomb."
-                    for="emerald-checkbox-registeel"
-                    >Registeel</label
-                  >
+                  <img alt="Icon of Registeel" src="class" ="pokeicon legendary" src="../images/icons/pokemon/gen3/emerald/registeel.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Ancient Tomb." for="emerald-checkbox-registeel">Registeel</label>
                 </div>
               </div>
               <div class="legendaries-rightrow">
                 <div class="eventpokemon">
                   <div class="checkbox-item">
-                    <span class="title"
-                      ><label class="text-lg" style="white-space: nowrap"
-                        >Event Pokemon</label
-                      ></span
-                    >
+                    <span class="title"><label class="text-lg" style="white-space: nowrap">Event Pokemon</label></span>
                   </div>
                   <div class="checkbox-item">
                     <input id="emerald-checkbox-mew" type="checkbox" />
-                    <img
-                      alt="Icon of Mew"
-                      src="class"
-                      ="pokeicon legendary"
-                      src="../images/icons/pokemon/gen3/emerald/mew.png"
-                    />
-                    <label
-                      class="text-sm lg:tooltip"
-                      data-tip="Get the Old Sea Map and go to the Faraway Island."
-                      for="emerald-checkbox-mew"
-                      style="color: #7ac49a"
-                      >Mew</label
-                    >
+                    <img alt="Icon of Mew" src="class" ="pokeicon legendary" src="../images/icons/pokemon/gen3/emerald/mew.png" />
+                    <label class="text-sm lg:tooltip" data-tip="Get the Old Sea Map and go to the Faraway Island." for="emerald-checkbox-mew" style="color: #7ac49a">Mew</label>
                   </div>
                   <div class="checkbox-item">
                     <input id="emerald-checkbox-lugia" type="checkbox" />
-                    <img
-                      alt="Icon of Lugia"
-                      src="class"
-                      ="pokeicon legendary"
-                      src="../images/icons/pokemon/gen3/emerald/lugia.png"
-                    />
-                    <label
-                      class="text-sm lg:tooltip"
-                      data-tip="Get the MysticTicket and go to the eighth Sevii Island, Navel Rock."
-                      for="emerald-checkbox-lugia"
-                      style="color: #7ac49a"
-                      >Lugia</label
-                    >
+                    <img alt="Icon of Lugia" src="class" ="pokeicon legendary" src="../images/icons/pokemon/gen3/emerald/lugia.png" />
+                    <label class="text-sm lg:tooltip" data-tip="Get the MysticTicket and go to the eighth Sevii Island, Navel Rock." for="emerald-checkbox-lugia" style="color: #7ac49a">Lugia</label>
                   </div>
                   <div class="checkbox-item">
                     <input id="emerald-checkbox-ho-oh" type="checkbox" />
-                    <img
-                      alt="Icon of Ho Oh"
-                      src="class"
-                      ="pokeicon legendary"
-                      src="../images/icons/pokemon/gen3/emerald/ho-oh.png"
-                    />
-                    <label
-                      class="text-sm lg:tooltip"
-                      data-tip="Get the MysticTicket and go to the eighth Sevii Island, Navel Rock."
-                      for="emerald-checkbox-ho-oh"
-                      style="color: #7ac49a"
-                      >Ho-oh</label
-                    >
+                    <img alt="Icon of Ho Oh" src="class" ="pokeicon legendary" src="../images/icons/pokemon/gen3/emerald/ho-oh.png" />
+                    <label class="text-sm lg:tooltip" data-tip="Get the MysticTicket and go to the eighth Sevii Island, Navel Rock." for="emerald-checkbox-ho-oh" style="color: #7ac49a">Ho-oh</label>
                   </div>
                   <div class="checkbox-item">
                     <input id="emerald-checkbox-deoxys" type="checkbox" />
-                    <img
-                      alt="Icon of Deoxys"
-                      src="class"
-                      ="pokeicon legendary"
-                      src="../images/icons/pokemon/gen3/emerald/deoxys.png"
-                    />
-                    <label
-                      class="text-sm lg:tooltip"
-                      data-tip="Get the AuroraTicket and go to the last Sevii Island, Birth Island."
-                      for="emerald-checkbox-deoxys"
-                      style="color: #7ac49a"
-                      >Deoxys</label
-                    >
+                    <img alt="Icon of Deoxys" src="class" ="pokeicon legendary" src="../images/icons/pokemon/gen3/emerald/deoxys.png" />
+                    <label class="text-sm lg:tooltip" data-tip="Get the AuroraTicket and go to the last Sevii Island, Birth Island." for="emerald-checkbox-deoxys" style="color: #7ac49a">Deoxys</label>
                   </div>
                 </div>
               </div>
@@ -288,81 +127,32 @@
           </div>
           <div class="giftpokemon">
             <div class="checkbox-item">
-              <span class="title"
-                ><label class="text-lg"
-                  >Obtain all In-Game Gift Pokemon</label
-                ></span
-              >
+              <span class="title"><label class="text-lg">Obtain all In-Game Gift Pokemon</label></span>
             </div>
             <div class="giftpokemon-rowcontainer">
               <div class="giftpokemon-leftrow">
                 <div class="checkbox-item">
                   <input id="emerald-checkbox-lileep" type="checkbox" />
-                  <img
-                    alt="Icon of Lileep"
-                    src="class"
-                    ="pokeicon"
-                    src="../images/icons/pokemon/gen3/emerald/lileep.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Route 111, Only one can be chosen."
-                    for="emerald-checkbox-lileep"
-                    >Lileep</label
-                  >
+                  <img alt="Icon of Lileep" src="class" ="pokeicon" src="../images/icons/pokemon/gen3/emerald/lileep.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Route 111, Only one can be chosen." for="emerald-checkbox-lileep">Lileep</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="emerald-checkbox-anorith" type="checkbox" />
-                  <img
-                    alt="Icon of Anorith"
-                    src="class"
-                    ="pokeicon"
-                    src="../images/icons/pokemon/gen3/emerald/anorith.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Route 111, Only one can be chosen."
-                    for="emerald-checkbox-anorith"
-                    >Anorith</label
-                  >
+                  <img alt="Icon of Anorith" src="class" ="pokeicon" src="../images/icons/pokemon/gen3/emerald/anorith.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Route 111, Only one can be chosen." for="emerald-checkbox-anorith">Anorith</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="emerald-checkbox-castform" type="checkbox" />
-                  <img
-                    alt="Icon of Castform"
-                    src="class"
-                    ="pokeicon"
-                    src="../images/icons/pokemon/gen3/emerald/castform.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Weather Institute."
-                    for="emerald-checkbox-castform"
-                    >Castform</label
-                  >
+                  <img alt="Icon of Castform" src="class" ="pokeicon" src="../images/icons/pokemon/gen3/emerald/castform.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Weather Institute." for="emerald-checkbox-castform">Castform</label>
                 </div>
               </div>
               <div class="giftpokemon-rightrow">
                 <div class="checkbox-item">
                   <input id="emerald-checkbox-johto-starter" type="checkbox" />
-                  <img
-                    alt="Icon of Chikorita"
-                    src="class"
-                    ="pokeicon"
-                    src="../images/icons/pokemon/gen3/emerald/chikorita.png"
-                  />
-                  <img
-                    alt="Icon of Cyndaquil"
-                    src="class"
-                    ="pokeicon"
-                    src="../images/icons/pokemon/gen3/emerald/cyndaquil.png"
-                  />
-                  <img
-                    alt="Icon of Totodile"
-                    src="class"
-                    ="pokeicon"
-                    src="../images/icons/pokemon/gen3/emerald/totodile.png"
-                  />
+                  <img alt="Icon of Chikorita" src="class" ="pokeicon" src="../images/icons/pokemon/gen3/emerald/chikorita.png" />
+                  <img alt="Icon of Cyndaquil" src="class" ="pokeicon" src="../images/icons/pokemon/gen3/emerald/cyndaquil.png" />
+                  <img alt="Icon of Totodile" src="class" ="pokeicon" src="../images/icons/pokemon/gen3/emerald/totodile.png" />
                   <label
                     class="text-sm lg:tooltip"
                     data-tip="After completing the Hoenn Pokedex, go to Professor Birch in Littleroot Town. You can choose one Johto starter."
@@ -372,84 +162,40 @@
                 </div>
                 <div class="checkbox-item">
                   <input id="emerald-checkbox-wynaut" type="checkbox" />
-                  <img
-                    alt="Icon of Wynaut"
-                    src="class"
-                    ="pokeicon"
-                    src="../images/icons/pokemon/gen3/emerald/wynaut.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Lavaridge Town."
-                    for="emerald-checkbox-wynaut"
-                    >Wynaut</label
-                  >
+                  <img alt="Icon of Wynaut" src="class" ="pokeicon" src="../images/icons/pokemon/gen3/emerald/wynaut.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Lavaridge Town." for="emerald-checkbox-wynaut">Wynaut</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="emerald-checkbox-beldum" type="checkbox" />
-                  <img
-                    alt="Icon of Beldum"
-                    src="class"
-                    ="pokeicon"
-                    src="../images/icons/pokemon/gen3/emerald/beldum.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Lavaridge Town after defeating the Champion."
-                    for="emerald-checkbox-beldum"
-                    >Beldum</label
-                  >
+                  <img alt="Icon of Beldum" src="class" ="pokeicon" src="../images/icons/pokemon/gen3/emerald/beldum.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Lavaridge Town after defeating the Champion." for="emerald-checkbox-beldum">Beldum</label>
                 </div>
               </div>
             </div>
           </div>
           <div class="ingametrades">
             <div class="checkbox-item">
-              <span class="title"
-                ><label class="text-lg"
-                  >Complete all In-Game Trades</label
-                ></span
-              >
+              <span class="title"><label class="text-lg">Complete all In-Game Trades</label></span>
             </div>
             <div class="ingametrades-rowcontainer">
               <div class="ingametrades-leftrow">
                 <div class="checkbox-item">
                   <input id="emerald-checkbox-seedot-ralts" type="checkbox" />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Rustoboro City."
-                    for="emerald-checkbox-seedot-ralts"
-                    >Seedot for Ralts</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Rustoboro City." for="emerald-checkbox-seedot-ralts">Seedot for Ralts</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="emerald-checkbox-volbeat-plusle" type="checkbox" />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Fortree City."
-                    for="emerald-checkbox-volbeat-plusle"
-                    >Volbeat for Plusle</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Fortree City." for="emerald-checkbox-volbeat-plusle">Volbeat for Plusle</label>
                 </div>
               </div>
               <div class="ingametrades-rightrow">
                 <div class="checkbox-item">
                   <input id="emerald-checkbox-bagon-horsea" type="checkbox" />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Pacifidlog Town."
-                    for="emerald-checkbox-bagon-horsea"
-                    >Bagon for Horsea</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Pacifidlog Town." for="emerald-checkbox-bagon-horsea">Bagon for Horsea</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="emerald-checkbox-skitty-meowth" type="checkbox" />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Battle Frontier."
-                    for="emerald-checkbox-skitty-meowth"
-                    >Skitty for Meowth</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Battle Frontier." for="emerald-checkbox-skitty-meowth">Skitty for Meowth</label>
                 </div>
               </div>
             </div>
@@ -459,330 +205,174 @@
           <label class="panel-label">Post Game</label>
           <div class="trainercard">
             <div class="checkbox-item">
-              <span class="title"
-                ><label class="text-lg"
-                  >4 Stars Golden Trainer Card</label
-                ></span
-              >
+              <span class="title"><label class="text-lg">4 Stars Golden Trainer Card</label></span>
             </div>
             <div class="checkbox-item">
               <input id="emerald-checkbox-defeat-champion" type="checkbox" />
-              <label
-                class="text-sm lg:tooltip"
-                for="emerald-checkbox-defeat-champion"
-                >Defeat the Pokemon League Champion.</label
-              >
+              <label class="text-sm lg:tooltip" for="emerald-checkbox-defeat-champion">Defeat the Pokemon League Champion.</label>
             </div>
             <div class="checkbox-item">
-              <input
-                id="emerald-checkbox-win-master-contests"
-                type="checkbox"
-              />
-              <label
-                class="text-sm lg:tooltip"
-                for="emerald-checkbox-win-master-contests"
-                >Win all Master Rank contests.</label
-              >
+              <input id="emerald-checkbox-win-master-contests" type="checkbox" />
+              <label class="text-sm lg:tooltip" for="emerald-checkbox-win-master-contests">Win all Master Rank contests.</label>
             </div>
             <div class="checkbox-item">
               <input id="emerald-checkbox-win-gold-symbols" type="checkbox" />
-              <label
-                class="text-sm lg:tooltip"
-                for="emerald-checkbox-win-gold-symbols"
-                >Win all Gold Symbols at the Battle Frontier.</label
-              >
+              <label class="text-sm lg:tooltip" for="emerald-checkbox-win-gold-symbols">Win all Gold Symbols at the Battle Frontier.</label>
             </div>
             <div class="checkbox-item">
-              <input
-                id="emerald-checkbox-complete-hoenn-pokedex"
-                type="checkbox"
-              />
-              <label
-                class="text-sm lg:tooltip"
-                for="emerald-checkbox-complete-hoenn-pokedex"
-                >Complete the Hoenn Pokedex.</label
-              >
+              <input id="emerald-checkbox-complete-hoenn-pokedex" type="checkbox" />
+              <label class="text-sm lg:tooltip" for="emerald-checkbox-complete-hoenn-pokedex">Complete the Hoenn Pokedex.</label>
             </div>
           </div>
           <div class="rematches">
             <div class="checkbox-item">
-              <span class="title"
-                ><label class="text-lg">Rematches</label></span
-              >
+              <span class="title"><label class="text-lg">Rematches</label></span>
             </div>
             <div class="checkbox-item">
               <input id="emerald-checkbox-rematch-steven" type="checkbox" />
-              <img
-                alt="Icon of Steve "
-                src="class"
-                ="pokeicon"
-                src="../images/icons/miscellaneous/gen3/Spr_RS_Steven.png"
-              />
-              <label
-                class="text-sm lg:tooltip"
-                data-tip="At the Meteor Crater."
-                for="emerald-checkbox-rematch-steven"
-                >Rematch Steven</label
-              >
+              <img alt="Icon of Steve " src="class" ="pokeicon" src="../images/icons/miscellaneous/gen3/Spr_RS_Steven.png" />
+              <label class="text-sm lg:tooltip" data-tip="At the Meteor Crater." for="emerald-checkbox-rematch-steven">Rematch Steven</label>
             </div>
             <div class="checkbox-item">
-              <input
-                id="emerald-checkbox-rematch-gym-leaders"
-                type="checkbox"
-              />
-              <label
-                class="text-sm lg:tooltip"
-                data-tip="There is a 31% chance for a rematch to become available after encounters and battles."
-                for="emerald-checkbox-rematch-gym-leaders"
+              <input id="emerald-checkbox-rematch-gym-leaders" type="checkbox" />
+              <label class="text-sm lg:tooltip" data-tip="There is a 31% chance for a rematch to become available after encounters and battles." for="emerald-checkbox-rematch-gym-leaders"
                 >Rematch the Gym Leaders</label
               >
             </div>
           </div>
           <div class="trickhouse">
             <div class="checkbox-item">
-              <span class="title"
-                ><label class="text-lg">Trick House</label></span
-              >
+              <span class="title"><label class="text-lg">Trick House</label></span>
             </div>
             <div class="trickhouse-rowcontainer">
               <div class="trickhouse-leftrow">
                 <div class="checkbox-item">
                   <input id="emerald-checkbox-chamber1" type="checkbox" />
-                  <label
-                    class="text-sm lg:tooltip"
-                    for="emerald-checkbox-chamber1"
-                    >Chamber 1</label
-                  >
+                  <label class="text-sm lg:tooltip" for="emerald-checkbox-chamber1">Chamber 1</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="emerald-checkbox-chamber2" type="checkbox" />
-                  <label
-                    class="text-sm lg:tooltip"
-                    for="emerald-checkbox-chamber2"
-                    >Chamber 2</label
-                  >
+                  <label class="text-sm lg:tooltip" for="emerald-checkbox-chamber2">Chamber 2</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="emerald-checkbox-chamber3" type="checkbox" />
-                  <label
-                    class="text-sm lg:tooltip"
-                    for="emerald-checkbox-chamber3"
-                    >Chamber 3</label
-                  >
+                  <label class="text-sm lg:tooltip" for="emerald-checkbox-chamber3">Chamber 3</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="emerald-checkbox-chamber4" type="checkbox" />
-                  <label
-                    class="text-sm lg:tooltip"
-                    for="emerald-checkbox-chamber4"
-                    >Chamber 4</label
-                  >
+                  <label class="text-sm lg:tooltip" for="emerald-checkbox-chamber4">Chamber 4</label>
                 </div>
               </div>
               <div class="trickhouse-rightrow">
                 <div class="checkbox-item">
                   <input id="emerald-checkbox-chamber5" type="checkbox" />
-                  <label
-                    class="text-sm lg:tooltip"
-                    for="emerald-checkbox-chamber5"
-                    >Chamber 5</label
-                  >
+                  <label class="text-sm lg:tooltip" for="emerald-checkbox-chamber5">Chamber 5</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="emerald-checkbox-chamber6" type="checkbox" />
-                  <label
-                    class="text-sm lg:tooltip"
-                    for="emerald-checkbox-chamber6"
-                    >Chamber 6</label
-                  >
+                  <label class="text-sm lg:tooltip" for="emerald-checkbox-chamber6">Chamber 6</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="emerald-checkbox-chamber7" type="checkbox" />
-                  <label
-                    class="text-sm lg:tooltip"
-                    for="emerald-checkbox-chamber7"
-                    >Chamber 7</label
-                  >
+                  <label class="text-sm lg:tooltip" for="emerald-checkbox-chamber7">Chamber 7</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="emerald-checkbox-chamber8" type="checkbox" />
-                  <label
-                    class="text-sm lg:tooltip"
-                    for="emerald-checkbox-chamber8"
-                    >Chamber 8</label
-                  >
+                  <label class="text-sm lg:tooltip" for="emerald-checkbox-chamber8">Chamber 8</label>
                 </div>
               </div>
             </div>
           </div>
           <div class="battlefrontier">
             <div class="checkbox-item">
-              <span class="title"
-                ><label class="text-lg">Battle Frontier</label></span
-              >
+              <span class="title"><label class="text-lg">Battle Frontier</label></span>
             </div>
             <div class="battlefrontier-rowcontainer">
               <div class="battlefrontier-leftrow">
                 <div class="checkbox-item">
                   <input id="emerald-checkbox-battle-dome" type="checkbox" />
-                  <label
-                    class="text-sm lg:tooltip"
-                    for="emerald-checkbox-battle-dome"
-                    >Battle Dome</label
-                  >
+                  <label class="text-sm lg:tooltip" for="emerald-checkbox-battle-dome">Battle Dome</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="emerald-checkbox-battle-pike" type="checkbox" />
-                  <label
-                    class="text-sm lg:tooltip"
-                    for="emerald-checkbox-battle-pike"
-                    >Battle Pike</label
-                  >
+                  <label class="text-sm lg:tooltip" for="emerald-checkbox-battle-pike">Battle Pike</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="emerald-checkbox-battle-arena" type="checkbox" />
-                  <label
-                    class="text-sm lg:tooltip"
-                    for="emerald-checkbox-battle-arena"
-                    >Battle Arena</label
-                  >
+                  <label class="text-sm lg:tooltip" for="emerald-checkbox-battle-arena">Battle Arena</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="emerald-checkbox-battle-factory" type="checkbox" />
-                  <label
-                    class="text-sm lg:tooltip"
-                    for="emerald-checkbox-battle-factory"
-                    >Battle Factory</label
-                  >
+                  <label class="text-sm lg:tooltip" for="emerald-checkbox-battle-factory">Battle Factory</label>
                 </div>
               </div>
               <div class="battlefrontier-rightrow">
                 <div class="checkbox-item">
                   <input id="emerald-checkbox-battle-palace" type="checkbox" />
-                  <label
-                    class="text-sm lg:tooltip"
-                    for="emerald-checkbox-battle-palace"
-                    >Battle Palace</label
-                  >
+                  <label class="text-sm lg:tooltip" for="emerald-checkbox-battle-palace">Battle Palace</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="emerald-checkbox-battle-pyramid" type="checkbox" />
-                  <label
-                    class="text-sm lg:tooltip"
-                    for="emerald-checkbox-battle-pyramid"
-                    >Battle Pyramid</label
-                  >
+                  <label class="text-sm lg:tooltip" for="emerald-checkbox-battle-pyramid">Battle Pyramid</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="emerald-checkbox-battle-tower" type="checkbox" />
-                  <label
-                    class="text-sm lg:tooltip"
-                    for="emerald-checkbox-battle-tower"
-                    >Battle Tower</label
-                  >
+                  <label class="text-sm lg:tooltip" for="emerald-checkbox-battle-tower">Battle Tower</label>
                 </div>
               </div>
             </div>
           </div>
           <div class="battletent">
             <div class="checkbox-item">
-              <span class="title"
-                ><label class="text-lg">Defeat the Battle Tents</label></span
-              >
+              <span class="title"><label class="text-lg">Defeat the Battle Tents</label></span>
             </div>
             <div class="checkbox-item">
               <input id="emerald-checkbox-slateport-tent" type="checkbox" />
-              <label
-                class="text-sm lg:tooltip"
-                for="emerald-checkbox-slateport-tent"
-                >Slateport Tent</label
-              >
+              <label class="text-sm lg:tooltip" for="emerald-checkbox-slateport-tent">Slateport Tent</label>
             </div>
             <div class="checkbox-item">
               <input id="emerald-checkbox-verdanturf-tent" type="checkbox" />
-              <label
-                class="text-sm lg:tooltip"
-                for="emerald-checkbox-verdanturf-tent"
-                >Verdanturf Tent</label
-              >
+              <label class="text-sm lg:tooltip" for="emerald-checkbox-verdanturf-tent">Verdanturf Tent</label>
             </div>
             <div class="checkbox-item">
               <input id="emerald-checkbox-fallarbor-tent" type="checkbox" />
-              <label
-                class="text-sm lg:tooltip"
-                for="emerald-checkbox-fallarbor-tent"
-                >Fallarbor Tent</label
-              >
+              <label class="text-sm lg:tooltip" for="emerald-checkbox-fallarbor-tent">Fallarbor Tent</label>
             </div>
           </div>
           <div class="trainerhill">
             <div class="checkbox-item">
-              <span class="title"
-                ><label class="text-lg">Complete the Trainer Hill</label></span
-              >
+              <span class="title"><label class="text-lg">Complete the Trainer Hill</label></span>
             </div>
             <div class="trainerhill-rowcontainer">
               <div class="trainerhill-leftrow">
                 <div class="checkbox-item">
-                  <input
-                    id="emerald-checkbox-trainerhill-normal"
-                    type="checkbox"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    for="emerald-checkbox-trainerhill-normal"
-                    >Normal Mode</label
-                  >
+                  <input id="emerald-checkbox-trainerhill-normal" type="checkbox" />
+                  <label class="text-sm lg:tooltip" for="emerald-checkbox-trainerhill-normal">Normal Mode</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="emerald-checkbox-trainerhill-variety"
-                    type="checkbox"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    for="emerald-checkbox-trainerhill-variety"
-                    >Variety Mode</label
-                  >
+                  <input id="emerald-checkbox-trainerhill-variety" type="checkbox" />
+                  <label class="text-sm lg:tooltip" for="emerald-checkbox-trainerhill-variety">Variety Mode</label>
                 </div>
               </div>
               <div class="trainerhill-rightrow">
                 <div class="checkbox-item">
-                  <input
-                    id="emerald-checkbox-trainerhill-unique"
-                    type="checkbox"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    for="emerald-checkbox-trainerhill-unique"
-                    >Unique Mode</label
-                  >
+                  <input id="emerald-checkbox-trainerhill-unique" type="checkbox" />
+                  <label class="text-sm lg:tooltip" for="emerald-checkbox-trainerhill-unique">Unique Mode</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="emerald-checkbox-trainerhill-expert"
-                    type="checkbox"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    for="emerald-checkbox-trainerhill-expert"
-                    >Expert Mode</label
-                  >
+                  <input id="emerald-checkbox-trainerhill-expert" type="checkbox" />
+                  <label class="text-sm lg:tooltip" for="emerald-checkbox-trainerhill-expert">Expert Mode</label>
                 </div>
               </div>
             </div>
           </div>
           <div class="matchcall">
             <div class="checkbox-item">
-              <span class="title"
-                ><label class="text-lg">Match Call</label></span
-              >
+              <span class="title"><label class="text-lg">Match Call</label></span>
             </div>
             <div class="checkbox-item">
               <input id="emerald-checkbox-matchcall" type="checkbox" />
-              <label class="text-sm lg:tooltip" for="emerald-checkbox-matchcall"
-                >Register all 80 NPC's</label
-              >
+              <label class="text-sm lg:tooltip" for="emerald-checkbox-matchcall">Register all 80 NPC's</label>
             </div>
           </div>
         </div>
@@ -799,484 +389,159 @@
               <div class="ribbons-leftrow">
                 <div class="beautycontest">
                   <div class="checkbox-item">
-                    <span class="title"
-                      ><label class="text-lg">Beauty Contests</label></span
-                    >
+                    <span class="title"><label class="text-lg">Beauty Contests</label></span>
                   </div>
                   <div class="checkbox-item">
-                    <input
-                      id="emerald-checkbox-beauty-normal"
-                      type="checkbox"
-                    />
-                    <img
-                      alt="Icon of Beauty Normal Ribbon"
-                      src="class"
-                      ="pokeicon ribbon"
-                      src="../images/icons/miscellaneous/gen3/ribbons/beauty-ribbon-hoenn.png"
-                    />
-                    <label
-                      class="text-sm lg:tooltip"
-                      data-tip="Beauty Contest Normal Rank Winner!"
-                      for="emerald-checkbox-beauty-normal"
-                      >Normal</label
-                    >
+                    <input id="emerald-checkbox-beauty-normal" type="checkbox" />
+                    <img alt="Icon of Beauty Normal Ribbon" src="class" ="pokeicon ribbon" src="../images/icons/miscellaneous/gen3/ribbons/beauty-ribbon-hoenn.png" />
+                    <label class="text-sm lg:tooltip" data-tip="Beauty Contest Normal Rank Winner!" for="emerald-checkbox-beauty-normal">Normal</label>
                   </div>
                   <div class="checkbox-item">
                     <input id="emerald-checkbox-beauty-super" type="checkbox" />
-                    <img
-                      alt="Icon of Beauty Super Ribbon"
-                      src="class"
-                      ="pokeicon ribbon"
-                      src="../images/icons/miscellaneous/gen3/ribbons/beauty-ribbon-super-hoenn.png"
-                    />
-                    <label
-                      class="text-sm lg:tooltip"
-                      data-tip="Beauty Contest Super Rank Winner!"
-                      for="emerald-checkbox-beauty-super"
-                      >Super</label
-                    >
+                    <img alt="Icon of Beauty Super Ribbon" src="class" ="pokeicon ribbon" src="../images/icons/miscellaneous/gen3/ribbons/beauty-ribbon-super-hoenn.png" />
+                    <label class="text-sm lg:tooltip" data-tip="Beauty Contest Super Rank Winner!" for="emerald-checkbox-beauty-super">Super</label>
                   </div>
                   <div class="checkbox-item">
                     <input id="emerald-checkbox-beauty-hyper" type="checkbox" />
-                    <img
-                      alt="Icon of Beauty Hyper Ribbon"
-                      src="class"
-                      ="pokeicon ribbon"
-                      src="../images/icons/miscellaneous/gen3/ribbons/beauty-ribbon-hyper-hoenn.png"
-                    />
-                    <label
-                      class="text-sm lg:tooltip"
-                      data-tip="Beauty Contest Super Rank Winner!"
-                      for="emerald-checkbox-beauty-hyper"
-                      >Hyper</label
-                    >
+                    <img alt="Icon of Beauty Hyper Ribbon" src="class" ="pokeicon ribbon" src="../images/icons/miscellaneous/gen3/ribbons/beauty-ribbon-hyper-hoenn.png" />
+                    <label class="text-sm lg:tooltip" data-tip="Beauty Contest Super Rank Winner!" for="emerald-checkbox-beauty-hyper">Hyper</label>
                   </div>
                   <div class="checkbox-item">
-                    <input
-                      id="emerald-checkbox-beauty-master"
-                      type="checkbox"
-                    />
-                    <img
-                      alt="Icon of Beauty Master Ribbon"
-                      src="class"
-                      ="pokeicon ribbon"
-                      src="../images/icons/miscellaneous/gen3/ribbons/beauty-ribbon-master-hoenn.png"
-                    />
-                    <label
-                      class="text-sm lg:tooltip"
-                      data-tip="Beauty Contest Super Rank Winner!"
-                      for="emerald-checkbox-beauty-master"
-                      >Master</label
-                    >
+                    <input id="emerald-checkbox-beauty-master" type="checkbox" />
+                    <img alt="Icon of Beauty Master Ribbon" src="class" ="pokeicon ribbon" src="../images/icons/miscellaneous/gen3/ribbons/beauty-ribbon-master-hoenn.png" />
+                    <label class="text-sm lg:tooltip" data-tip="Beauty Contest Super Rank Winner!" for="emerald-checkbox-beauty-master">Master</label>
                   </div>
                 </div>
                 <div class="thoughcontest">
                   <div class="checkbox-item">
-                    <span class="title"
-                      ><label class="text-lg">Though Contests</label></span
-                    >
+                    <span class="title"><label class="text-lg">Though Contests</label></span>
                   </div>
                   <div class="checkbox-item">
-                    <input
-                      id="emerald-checkbox-though-normal"
-                      type="checkbox"
-                    />
-                    <img
-                      alt="Icon of Thougn Normal Ribbon"
-                      src="class"
-                      ="pokeicon ribbon"
-                      src="../images/icons/miscellaneous/gen3/ribbons/tough-ribbon-hoenn.png"
-                    />
-                    <label
-                      class="text-sm lg:tooltip"
-                      data-tip="Though Contest Normal Rank Winner!"
-                      for="emerald-checkbox-though-normal"
-                      >Normal</label
-                    >
+                    <input id="emerald-checkbox-though-normal" type="checkbox" />
+                    <img alt="Icon of Thougn Normal Ribbon" src="class" ="pokeicon ribbon" src="../images/icons/miscellaneous/gen3/ribbons/tough-ribbon-hoenn.png" />
+                    <label class="text-sm lg:tooltip" data-tip="Though Contest Normal Rank Winner!" for="emerald-checkbox-though-normal">Normal</label>
                   </div>
                   <div class="checkbox-item">
                     <input id="emerald-checkbox-though-super" type="checkbox" />
-                    <img
-                      alt="Icon of Though Super Ribbon"
-                      src="class"
-                      ="pokeicon ribbon"
-                      src="../images/icons/miscellaneous/gen3/ribbons/tough-ribbon-super-hoenn.png"
-                    />
-                    <label
-                      class="text-sm lg:tooltip"
-                      data-tip="Though Contest Super Rank Winner!"
-                      for="emerald-checkbox-though-super"
-                      >Super</label
-                    >
+                    <img alt="Icon of Though Super Ribbon" src="class" ="pokeicon ribbon" src="../images/icons/miscellaneous/gen3/ribbons/tough-ribbon-super-hoenn.png" />
+                    <label class="text-sm lg:tooltip" data-tip="Though Contest Super Rank Winner!" for="emerald-checkbox-though-super">Super</label>
                   </div>
                   <div class="checkbox-item">
                     <input id="emerald-checkbox-though-hyper" type="checkbox" />
-                    <img
-                      alt="Icon of Though Hyper Ribbon"
-                      src="class"
-                      ="pokeicon ribbon"
-                      src="../images/icons/miscellaneous/gen3/ribbons/tough-ribbon-hyper-hoenn.png"
-                    />
-                    <label
-                      class="text-sm lg:tooltip"
-                      data-tip="Though Contest Hyper Rank Winner!"
-                      for="emerald-checkbox-though-hyper"
-                      >Hyper</label
-                    >
+                    <img alt="Icon of Though Hyper Ribbon" src="class" ="pokeicon ribbon" src="../images/icons/miscellaneous/gen3/ribbons/tough-ribbon-hyper-hoenn.png" />
+                    <label class="text-sm lg:tooltip" data-tip="Though Contest Hyper Rank Winner!" for="emerald-checkbox-though-hyper">Hyper</label>
                   </div>
                   <div class="checkbox-item">
-                    <input
-                      id="emerald-checkbox-though-master"
-                      type="checkbox"
-                    />
-                    <img
-                      alt="Icon of Though Master Ribbon"
-                      src="class"
-                      ="pokeicon ribbon"
-                      src="../images/icons/miscellaneous/gen3/ribbons/tough-ribbon-master-hoenn.png"
-                    />
-                    <label
-                      class="text-sm lg:tooltip"
-                      data-tip="Though Contest Master Rank Winner!"
-                      for="emerald-checkbox-though-master"
-                      >Master</label
-                    >
+                    <input id="emerald-checkbox-though-master" type="checkbox" />
+                    <img alt="Icon of Though Master Ribbon" src="class" ="pokeicon ribbon" src="../images/icons/miscellaneous/gen3/ribbons/tough-ribbon-master-hoenn.png" />
+                    <label class="text-sm lg:tooltip" data-tip="Though Contest Master Rank Winner!" for="emerald-checkbox-though-master">Master</label>
                   </div>
                 </div>
                 <div class="smartnesscontest">
                   <div class="checkbox-item">
-                    <span class="title"
-                      ><label class="text-lg">Smartness Contests</label></span
-                    >
+                    <span class="title"><label class="text-lg">Smartness Contests</label></span>
                   </div>
                   <div class="checkbox-item">
-                    <input
-                      id="emerald-checkbox-smartness-normal"
-                      type="checkbox"
-                    />
-                    <img
-                      alt="Icon of Smartness Normal Ribbon"
-                      src="class"
-                      ="pokeicon ribbon"
-                      src="../images/icons/miscellaneous/gen3/ribbons/smart-ribbon-hoenn.png"
-                    />
-                    <label
-                      class="text-sm lg:tooltip"
-                      data-tip="Smart Contest Normal Rank Winner!"
-                      for="emerald-checkbox-smartness-normal"
-                      >Normal</label
-                    >
+                    <input id="emerald-checkbox-smartness-normal" type="checkbox" />
+                    <img alt="Icon of Smartness Normal Ribbon" src="class" ="pokeicon ribbon" src="../images/icons/miscellaneous/gen3/ribbons/smart-ribbon-hoenn.png" />
+                    <label class="text-sm lg:tooltip" data-tip="Smart Contest Normal Rank Winner!" for="emerald-checkbox-smartness-normal">Normal</label>
                   </div>
                   <div class="checkbox-item">
-                    <input
-                      id="emerald-checkbox-smartness-super"
-                      type="checkbox"
-                    />
-                    <img
-                      alt="Icon of Smartness Super Ribbon"
-                      src="class"
-                      ="pokeicon ribbon"
-                      src="../images/icons/miscellaneous/gen3/ribbons/smart-ribbon-super-hoenn.png"
-                    />
-                    <label
-                      class="text-sm lg:tooltip"
-                      data-tip="Smart Contest Super Rank Winner!"
-                      for="emerald-checkbox-smartness-super"
-                      >Super</label
-                    >
+                    <input id="emerald-checkbox-smartness-super" type="checkbox" />
+                    <img alt="Icon of Smartness Super Ribbon" src="class" ="pokeicon ribbon" src="../images/icons/miscellaneous/gen3/ribbons/smart-ribbon-super-hoenn.png" />
+                    <label class="text-sm lg:tooltip" data-tip="Smart Contest Super Rank Winner!" for="emerald-checkbox-smartness-super">Super</label>
                   </div>
                   <div class="checkbox-item">
-                    <input
-                      id="emerald-checkbox-smartness-hyper"
-                      type="checkbox"
-                    />
-                    <img
-                      alt="Icon of Smartness Hyper Ribbon"
-                      src="class"
-                      ="pokeicon ribbon"
-                      src="../images/icons/miscellaneous/gen3/ribbons/smart-ribbon-hyper-hoenn.png"
-                    />
-                    <label
-                      class="text-sm lg:tooltip"
-                      data-tip="Smart Contest Hyper Rank Winner!"
-                      for="emerald-checkbox-smartness-hyper"
-                      >Hyper</label
-                    >
+                    <input id="emerald-checkbox-smartness-hyper" type="checkbox" />
+                    <img alt="Icon of Smartness Hyper Ribbon" src="class" ="pokeicon ribbon" src="../images/icons/miscellaneous/gen3/ribbons/smart-ribbon-hyper-hoenn.png" />
+                    <label class="text-sm lg:tooltip" data-tip="Smart Contest Hyper Rank Winner!" for="emerald-checkbox-smartness-hyper">Hyper</label>
                   </div>
                   <div class="checkbox-item">
-                    <input
-                      id="emerald-checkbox-smartness-master"
-                      type="checkbox"
-                    />
-                    <img
-                      alt="Icon of Smartness Master Ribbon"
-                      src="class"
-                      ="pokeicon ribbon"
-                      src="../images/icons/miscellaneous/gen3/ribbons/smart-ribbon-master-hoenn.png"
-                    />
-                    <label
-                      class="text-sm lg:tooltip"
-                      data-tip="Smart Contest Master Rank Winner!"
-                      for="emerald-checkbox-smartness-master"
-                      >Master</label
-                    >
+                    <input id="emerald-checkbox-smartness-master" type="checkbox" />
+                    <img alt="Icon of Smartness Master Ribbon" src="class" ="pokeicon ribbon" src="../images/icons/miscellaneous/gen3/ribbons/smart-ribbon-master-hoenn.png" />
+                    <label class="text-sm lg:tooltip" data-tip="Smart Contest Master Rank Winner!" for="emerald-checkbox-smartness-master">Master</label>
                   </div>
                 </div>
               </div>
               <div class="ribbons-rightrow">
                 <div class="cutenesscontest">
                   <div class="checkbox-item">
-                    <span class="title"
-                      ><label class="text-lg">Cuteness Contests</label></span
-                    >
+                    <span class="title"><label class="text-lg">Cuteness Contests</label></span>
                   </div>
                   <div class="checkbox-item">
-                    <input
-                      id="emerald-checkbox-cuteness-normal"
-                      type="checkbox"
-                    />
-                    <img
-                      alt="Icon of Cuteness Normal Ribbon"
-                      src="class"
-                      ="pokeicon ribbon"
-                      src="../images/icons/miscellaneous/gen3/ribbons/cute-ribbon-hoenn.png"
-                    />
-                    <label
-                      class="text-sm lg:tooltip"
-                      data-tip="Cute Contest Normal Rank Winner!"
-                      for="emerald-checkbox-cuteness-normal"
-                      >Normal</label
-                    >
+                    <input id="emerald-checkbox-cuteness-normal" type="checkbox" />
+                    <img alt="Icon of Cuteness Normal Ribbon" src="class" ="pokeicon ribbon" src="../images/icons/miscellaneous/gen3/ribbons/cute-ribbon-hoenn.png" />
+                    <label class="text-sm lg:tooltip" data-tip="Cute Contest Normal Rank Winner!" for="emerald-checkbox-cuteness-normal">Normal</label>
                   </div>
                   <div class="checkbox-item">
-                    <input
-                      id="emerald-checkbox-cuteness-super"
-                      type="checkbox"
-                    />
-                    <img
-                      alt="Icon of Cuteness Super Ribbon"
-                      src="class"
-                      ="pokeicon ribbon"
-                      src="../images/icons/miscellaneous/gen3/ribbons/cute-ribbon-super-hoenn.png"
-                    />
-                    <label
-                      class="text-sm lg:tooltip"
-                      data-tip="Cute Contest Super Rank Winner!"
-                      for="emerald-checkbox-cuteness-super"
-                      >Super</label
-                    >
+                    <input id="emerald-checkbox-cuteness-super" type="checkbox" />
+                    <img alt="Icon of Cuteness Super Ribbon" src="class" ="pokeicon ribbon" src="../images/icons/miscellaneous/gen3/ribbons/cute-ribbon-super-hoenn.png" />
+                    <label class="text-sm lg:tooltip" data-tip="Cute Contest Super Rank Winner!" for="emerald-checkbox-cuteness-super">Super</label>
                   </div>
                   <div class="checkbox-item">
-                    <input
-                      id="emerald-checkbox-cuteness-hyper"
-                      type="checkbox"
-                    />
-                    <img
-                      alt="Icon of Cuteness Hyper Ribbon"
-                      src="class"
-                      ="pokeicon ribbon"
-                      src="../images/icons/miscellaneous/gen3/ribbons/cute-ribbon-hyper-hoenn.png"
-                    />
-                    <label
-                      class="text-sm lg:tooltip"
-                      data-tip="Cute Contest Hyper Rank Winner!"
-                      for="emerald-checkbox-cuteness-hyper"
-                      >Hyper</label
-                    >
+                    <input id="emerald-checkbox-cuteness-hyper" type="checkbox" />
+                    <img alt="Icon of Cuteness Hyper Ribbon" src="class" ="pokeicon ribbon" src="../images/icons/miscellaneous/gen3/ribbons/cute-ribbon-hyper-hoenn.png" />
+                    <label class="text-sm lg:tooltip" data-tip="Cute Contest Hyper Rank Winner!" for="emerald-checkbox-cuteness-hyper">Hyper</label>
                   </div>
                   <div class="checkbox-item">
-                    <input
-                      id="emerald-checkbox-cuteness-master"
-                      type="checkbox"
-                    />
-                    <img
-                      alt="Icon of Cuteness Master Ribbon"
-                      src="class"
-                      ="pokeicon ribbon"
-                      src="../images/icons/miscellaneous/gen3/ribbons/cute-ribbon-master-hoenn.png"
-                    />
-                    <label
-                      class="text-sm lg:tooltip"
-                      data-tip="Cute Contest Master Rank Winner!"
-                      for="emerald-checkbox-cuteness-master"
-                      >Master</label
-                    >
+                    <input id="emerald-checkbox-cuteness-master" type="checkbox" />
+                    <img alt="Icon of Cuteness Master Ribbon" src="class" ="pokeicon ribbon" src="../images/icons/miscellaneous/gen3/ribbons/cute-ribbon-master-hoenn.png" />
+                    <label class="text-sm lg:tooltip" data-tip="Cute Contest Master Rank Winner!" for="emerald-checkbox-cuteness-master">Master</label>
                   </div>
                 </div>
                 <div class="coolnesscontest">
                   <div class="checkbox-item">
-                    <span class="title"
-                      ><label class="text-lg">Coolness Contests</label></span
-                    >
+                    <span class="title"><label class="text-lg">Coolness Contests</label></span>
                   </div>
                   <div class="checkbox-item">
-                    <input
-                      id="emerald-checkbox-coolness-normal"
-                      type="checkbox"
-                    />
-                    <img
-                      alt="Icon of Coolness Normal Ribbon"
-                      src="class"
-                      ="pokeicon ribbon"
-                      src="../images/icons/miscellaneous/gen3/ribbons/cool-ribbon-hoenn.png"
-                    />
-                    <label
-                      class="text-sm lg:tooltip"
-                      data-tip="Cool Contest Normal Rank Winner!"
-                      for="emerald-checkbox-coolness-normal"
-                      >Normal</label
-                    >
+                    <input id="emerald-checkbox-coolness-normal" type="checkbox" />
+                    <img alt="Icon of Coolness Normal Ribbon" src="class" ="pokeicon ribbon" src="../images/icons/miscellaneous/gen3/ribbons/cool-ribbon-hoenn.png" />
+                    <label class="text-sm lg:tooltip" data-tip="Cool Contest Normal Rank Winner!" for="emerald-checkbox-coolness-normal">Normal</label>
                   </div>
                   <div class="checkbox-item">
-                    <input
-                      id="emerald-checkbox-coolness-super"
-                      type="checkbox"
-                    />
-                    <img
-                      alt="Icon of Coolness Super Ribbon"
-                      src="class"
-                      ="pokeicon ribbon"
-                      src="../images/icons/miscellaneous/gen3/ribbons/cool-ribbon-super-hoenn.png"
-                    />
-                    <label
-                      class="text-sm lg:tooltip"
-                      data-tip="Cool Contest Super Rank Winner!"
-                      for="emerald-checkbox-coolness-super"
-                      >Super</label
-                    >
+                    <input id="emerald-checkbox-coolness-super" type="checkbox" />
+                    <img alt="Icon of Coolness Super Ribbon" src="class" ="pokeicon ribbon" src="../images/icons/miscellaneous/gen3/ribbons/cool-ribbon-super-hoenn.png" />
+                    <label class="text-sm lg:tooltip" data-tip="Cool Contest Super Rank Winner!" for="emerald-checkbox-coolness-super">Super</label>
                   </div>
                   <div class="checkbox-item">
-                    <input
-                      id="emerald-checkbox-coolness-hyper"
-                      type="checkbox"
-                    />
-                    <img
-                      alt="Icon of Coolness Hyper Ribbon"
-                      src="class"
-                      ="pokeicon ribbon"
-                      src="../images/icons/miscellaneous/gen3/ribbons/cool-ribbon-hyper-hoenn.png"
-                    />
-                    <label
-                      class="text-sm lg:tooltip"
-                      data-tip="Cool Contest Hyper Rank Winner!"
-                      for="emerald-checkbox-coolness-hyper"
-                      >Hyper</label
-                    >
+                    <input id="emerald-checkbox-coolness-hyper" type="checkbox" />
+                    <img alt="Icon of Coolness Hyper Ribbon" src="class" ="pokeicon ribbon" src="../images/icons/miscellaneous/gen3/ribbons/cool-ribbon-hyper-hoenn.png" />
+                    <label class="text-sm lg:tooltip" data-tip="Cool Contest Hyper Rank Winner!" for="emerald-checkbox-coolness-hyper">Hyper</label>
                   </div>
                   <div class="checkbox-item">
-                    <input
-                      id="emerald-checkbox-coolness-master"
-                      type="checkbox"
-                    />
-                    <img
-                      alt="Icon of Coolness Master Ribbon"
-                      src="class"
-                      ="pokeicon ribbon"
-                      src="../images/icons/miscellaneous/gen3/ribbons/cool-ribbon-master-hoenn.png"
-                    />
-                    <label
-                      class="text-sm lg:tooltip"
-                      data-tip="Cool Contest Master Rank Winner!"
-                      for="emerald-checkbox-coolness-master"
-                      >Master</label
-                    >
+                    <input id="emerald-checkbox-coolness-master" type="checkbox" />
+                    <img alt="Icon of Coolness Master Ribbon" src="class" ="pokeicon ribbon" src="../images/icons/miscellaneous/gen3/ribbons/cool-ribbon-master-hoenn.png" />
+                    <label class="text-sm lg:tooltip" data-tip="Cool Contest Master Rank Winner!" for="emerald-checkbox-coolness-master">Master</label>
                   </div>
                 </div>
                 <div class="moreribbons">
                   <div class="checkbox-item">
-                    <span class="title"
-                      ><label class="text-lg">Achievement Ribbons</label></span
-                    >
+                    <span class="title"><label class="text-lg">Achievement Ribbons</label></span>
                   </div>
                   <div class="checkbox-item">
-                    <input
-                      id="emerald-checkbox-winning-ribbon"
-                      type="checkbox"
-                    />
-                    <img
-                      alt="Icon of Winning Ribbon"
-                      src="class"
-                      ="pokeicon ribbon"
-                      src="../images/icons/miscellaneous/gen3/ribbons/winning-ribbon.png"
-                    />
-                    <label
-                      class="text-sm lg:tooltip"
-                      data-tip="Ribbon for clearing LV50 at the Battle Tower."
-                      for="emerald-checkbox-winning-ribbon"
-                      >Winning</label
-                    >
+                    <input id="emerald-checkbox-winning-ribbon" type="checkbox" />
+                    <img alt="Icon of Winning Ribbon" src="class" ="pokeicon ribbon" src="../images/icons/miscellaneous/gen3/ribbons/winning-ribbon.png" />
+                    <label class="text-sm lg:tooltip" data-tip="Ribbon for clearing LV50 at the Battle Tower." for="emerald-checkbox-winning-ribbon">Winning</label>
                   </div>
                   <div class="checkbox-item">
-                    <input
-                      id="emerald-checkbox-victory-ribbon"
-                      type="checkbox"
-                    />
-                    <img
-                      alt="Icon of Victory Ribbon"
-                      src="class"
-                      ="pokeicon ribbon"
-                      src="../images/icons/miscellaneous/gen3/ribbons/victory-ribbon.png"
-                    />
-                    <label
-                      class="text-sm lg:tooltip"
-                      data-tip="Won for clearing LV100 at the Battle Tower."
-                      for="emerald-checkbox-victory-ribbon"
-                      >Victory</label
-                    >
+                    <input id="emerald-checkbox-victory-ribbon" type="checkbox" />
+                    <img alt="Icon of Victory Ribbon" src="class" ="pokeicon ribbon" src="../images/icons/miscellaneous/gen3/ribbons/victory-ribbon.png" />
+                    <label class="text-sm lg:tooltip" data-tip="Won for clearing LV100 at the Battle Tower." for="emerald-checkbox-victory-ribbon">Victory</label>
                   </div>
                   <div class="checkbox-item">
-                    <input
-                      id="emerald-checkbox-artist-ribbon"
-                      type="checkbox"
-                    />
-                    <img
-                      alt="Icon of Artist Ribbon"
-                      src="class"
-                      ="pokeicon ribbon"
-                      src="../images/icons/miscellaneous/gen3/ribbons/artist-ribbon.png"
-                    />
-                    <label
-                      class="text-sm lg:tooltip"
-                      data-tip="Ribbon for being chosen as a super sketch model."
-                      for="emerald-checkbox-artist-ribbon"
-                      >Artist</label
-                    >
+                    <input id="emerald-checkbox-artist-ribbon" type="checkbox" />
+                    <img alt="Icon of Artist Ribbon" src="class" ="pokeicon ribbon" src="../images/icons/miscellaneous/gen3/ribbons/artist-ribbon.png" />
+                    <label class="text-sm lg:tooltip" data-tip="Ribbon for being chosen as a super sketch model." for="emerald-checkbox-artist-ribbon">Artist</label>
                   </div>
                   <div class="checkbox-item">
-                    <input
-                      id="emerald-checkbox-champion-ribbon"
-                      type="checkbox"
-                    />
-                    <img
-                      alt="Icon of Champion Ribbon"
-                      src="class"
-                      ="pokeicon ribbon"
-                      src="../images/icons/miscellaneous/gen3/ribbons/champion-ribbon.png"
-                    />
-                    <label
-                      class="text-sm lg:tooltip"
-                      data-tip="Champion-beating, Hall of Fame Member Ribbon."
-                      for="emerald-checkbox-champion-ribbon"
-                      >Champion</label
-                    >
+                    <input id="emerald-checkbox-champion-ribbon" type="checkbox" />
+                    <img alt="Icon of Champion Ribbon" src="class" ="pokeicon ribbon" src="../images/icons/miscellaneous/gen3/ribbons/champion-ribbon.png" />
+                    <label class="text-sm lg:tooltip" data-tip="Champion-beating, Hall of Fame Member Ribbon." for="emerald-checkbox-champion-ribbon">Champion</label>
                   </div>
                   <div class="checkbox-item">
-                    <input
-                      id="emerald-checkbox-effort-ribbon"
-                      type="checkbox"
-                    />
-                    <img
-                      alt="Icon of Effort Ribbon"
-                      src="class"
-                      ="pokeicon ribbon"
-                      src="../images/icons/miscellaneous/gen3/ribbons/effort-ribbon.png"
-                    />
-                    <label
-                      class="text-sm lg:tooltip"
-                      data-tip="Ribbon awarded for being a hard worker."
-                      for="emerald-checkbox-effort-ribbon"
-                      >Effort</label
-                    >
+                    <input id="emerald-checkbox-effort-ribbon" type="checkbox" />
+                    <img alt="Icon of Effort Ribbon" src="class" ="pokeicon ribbon" src="../images/icons/miscellaneous/gen3/ribbons/effort-ribbon.png" />
+                    <label class="text-sm lg:tooltip" data-tip="Ribbon awarded for being a hard worker." for="emerald-checkbox-effort-ribbon">Effort</label>
                   </div>
                 </div>
               </div>
@@ -1289,18 +554,8 @@
 
             <div class="checkbox-item">
               <input id="emerald-checkbox-alltms" type="checkbox" />
-              <img
-                alt="Icon of TM"
-                src="class"
-                ="pokeicon item"
-                src="../images/icons/inventory/tms/normal.png"
-              />
-              <label
-                class="text-sm lg:tooltip"
-                data-tip="Find all TM's."
-                for="emerald-checkbox-alltms"
-                >Collect all TM's</label
-              >
+              <img alt="Icon of TM" src="class" ="pokeicon item" src="../images/icons/inventory/tms/normal.png" />
+              <label class="text-sm lg:tooltip" data-tip="Find all TM's." for="emerald-checkbox-alltms">Collect all TM's</label>
             </div>
           </div>
         </div>
@@ -1322,156 +577,59 @@
     <script src="../checklists/js/script.js"></script>
 
     <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        const completepokedexCheckboxes = document.querySelectorAll(
-          '.completepokedex input[type="checkbox"]'
-        );
-        const legendariesCheckboxes = document.querySelectorAll(
-          '.legendaries input[type="checkbox"]'
-        );
-        const eventpokemonCheckboxes = document.querySelectorAll(
-          '.eventpokemon input[type="checkbox"]'
-        );
-        const giftpokemonCheckboxes = document.querySelectorAll(
-          '.giftpokemon input[type="checkbox"]'
-        );
-        const ingametradesCheckboxes = document.querySelectorAll(
-          '.ingametrades input[type="checkbox"]'
-        );
-        const trainercardCheckboxes = document.querySelectorAll(
-          '.trainercard input[type="checkbox"]'
-        );
-        const rematchesCheckboxes = document.querySelectorAll(
-          '.rematches input[type="checkbox"]'
-        );
-        const trickhouseCheckboxes = document.querySelectorAll(
-          '.trickhouse input[type="checkbox"]'
-        );
-        const beautycontestCheckboxes = document.querySelectorAll(
-          '.beautycontest input[type="checkbox"]'
-        );
-        const thoughcontestCheckboxes = document.querySelectorAll(
-          '.thoughcontest input[type="checkbox"]'
-        );
-        const smartnesscontestCheckboxes = document.querySelectorAll(
-          '.smartnesscontest input[type="checkbox"]'
-        );
-        const battletentCheckboxes = document.querySelectorAll(
-          '.battletent input[type="checkbox"]'
-        );
-        const trainerhillCheckboxes = document.querySelectorAll(
-          '.trainerhill input[type="checkbox"]'
-        );
-        const cutenesscontestCheckboxes = document.querySelectorAll(
-          '.cutenesscontest input[type="checkbox"]'
-        );
-        const coolnesscontestCheckboxes = document.querySelectorAll(
-          '.coolnesscontest input[type="checkbox"]'
-        );
-        const battlefrontierCheckboxes = document.querySelectorAll(
-          '.battlefrontier input[type="checkbox"]'
-        );
-        const matchcallCheckboxes = document.querySelectorAll(
-          '.matchcall input[type="checkbox"]'
-        );
-        const moreribbonsCheckboxes = document.querySelectorAll(
-          '.moreribbons input[type="checkbox"]'
-        );
-        const itemsCheckboxes = document.querySelectorAll(
-          '.items input[type="checkbox"]'
-        );
+      document.addEventListener("DOMContentLoaded", function () {
+        const completepokedexCheckboxes = document.querySelectorAll('.completepokedex input[type="checkbox"]');
+        const legendariesCheckboxes = document.querySelectorAll('.legendaries input[type="checkbox"]');
+        const eventpokemonCheckboxes = document.querySelectorAll('.eventpokemon input[type="checkbox"]');
+        const giftpokemonCheckboxes = document.querySelectorAll('.giftpokemon input[type="checkbox"]');
+        const ingametradesCheckboxes = document.querySelectorAll('.ingametrades input[type="checkbox"]');
+        const trainercardCheckboxes = document.querySelectorAll('.trainercard input[type="checkbox"]');
+        const rematchesCheckboxes = document.querySelectorAll('.rematches input[type="checkbox"]');
+        const trickhouseCheckboxes = document.querySelectorAll('.trickhouse input[type="checkbox"]');
+        const beautycontestCheckboxes = document.querySelectorAll('.beautycontest input[type="checkbox"]');
+        const thoughcontestCheckboxes = document.querySelectorAll('.thoughcontest input[type="checkbox"]');
+        const smartnesscontestCheckboxes = document.querySelectorAll('.smartnesscontest input[type="checkbox"]');
+        const battletentCheckboxes = document.querySelectorAll('.battletent input[type="checkbox"]');
+        const trainerhillCheckboxes = document.querySelectorAll('.trainerhill input[type="checkbox"]');
+        const cutenesscontestCheckboxes = document.querySelectorAll('.cutenesscontest input[type="checkbox"]');
+        const coolnesscontestCheckboxes = document.querySelectorAll('.coolnesscontest input[type="checkbox"]');
+        const battlefrontierCheckboxes = document.querySelectorAll('.battlefrontier input[type="checkbox"]');
+        const matchcallCheckboxes = document.querySelectorAll('.matchcall input[type="checkbox"]');
+        const moreribbonsCheckboxes = document.querySelectorAll('.moreribbons input[type="checkbox"]');
+        const itemsCheckboxes = document.querySelectorAll('.items input[type="checkbox"]');
 
         function updateStyle(checkboxes, label) {
-          const allChecked = [...checkboxes].every(
-            (checkbox) => checkbox.checked
-          );
-          label.style.textDecoration = allChecked ? 'line-through' : 'none';
+          const allChecked = [...checkboxes].every((checkbox) => checkbox.checked);
+          label.style.textDecoration = allChecked ? "line-through" : "none";
         }
 
         function initializeCheckboxes(checkboxes, label) {
           checkboxes.forEach((checkbox) => {
-            checkbox.addEventListener('change', function () {
+            checkbox.addEventListener("change", function () {
               updateStyle(checkboxes, label);
             });
           });
           updateStyle(checkboxes, label);
         }
-        initializeCheckboxes(
-          completepokedexCheckboxes,
-          document.querySelector('.completepokedex .title label')
-        );
-        initializeCheckboxes(
-          legendariesCheckboxes,
-          document.querySelector('.legendaries .title label')
-        );
-        initializeCheckboxes(
-          eventpokemonCheckboxes,
-          document.querySelector('.eventpokemon .title label')
-        );
-        initializeCheckboxes(
-          giftpokemonCheckboxes,
-          document.querySelector('.giftpokemon .title label')
-        );
-        initializeCheckboxes(
-          ingametradesCheckboxes,
-          document.querySelector('.ingametrades .title label')
-        );
-        initializeCheckboxes(
-          trainercardCheckboxes,
-          document.querySelector('.trainercard .title label')
-        );
-        initializeCheckboxes(
-          rematchesCheckboxes,
-          document.querySelector('.rematches .title label')
-        );
-        initializeCheckboxes(
-          trickhouseCheckboxes,
-          document.querySelector('.trickhouse .title label')
-        );
-        initializeCheckboxes(
-          beautycontestCheckboxes,
-          document.querySelector('.beautycontest .title label')
-        );
-        initializeCheckboxes(
-          thoughcontestCheckboxes,
-          document.querySelector('.thoughcontest .title label')
-        );
-        initializeCheckboxes(
-          smartnesscontestCheckboxes,
-          document.querySelector('.smartnesscontest .title label')
-        );
-        initializeCheckboxes(
-          battletentCheckboxes,
-          document.querySelector('.battletent .title label')
-        );
-        initializeCheckboxes(
-          trainerhillCheckboxes,
-          document.querySelector('.trainerhill .title label')
-        );
-        initializeCheckboxes(
-          cutenesscontestCheckboxes,
-          document.querySelector('.cutenesscontest .title label')
-        );
-        initializeCheckboxes(
-          coolnesscontestCheckboxes,
-          document.querySelector('.coolnesscontest .title label')
-        );
-        initializeCheckboxes(
-          battlefrontierCheckboxes,
-          document.querySelector('.battlefrontier .title label')
-        );
-        initializeCheckboxes(
-          matchcallCheckboxes,
-          document.querySelector('.matchcall .title label')
-        );
-        initializeCheckboxes(
-          moreribbonsCheckboxes,
-          document.querySelector('.moreribbons .title label')
-        );
-        initializeCheckboxes(
-          itemsCheckboxes,
-          document.querySelector('.items .title label')
-        );
+        initializeCheckboxes(completepokedexCheckboxes, document.querySelector(".completepokedex .title label"));
+        initializeCheckboxes(legendariesCheckboxes, document.querySelector(".legendaries .title label"));
+        initializeCheckboxes(eventpokemonCheckboxes, document.querySelector(".eventpokemon .title label"));
+        initializeCheckboxes(giftpokemonCheckboxes, document.querySelector(".giftpokemon .title label"));
+        initializeCheckboxes(ingametradesCheckboxes, document.querySelector(".ingametrades .title label"));
+        initializeCheckboxes(trainercardCheckboxes, document.querySelector(".trainercard .title label"));
+        initializeCheckboxes(rematchesCheckboxes, document.querySelector(".rematches .title label"));
+        initializeCheckboxes(trickhouseCheckboxes, document.querySelector(".trickhouse .title label"));
+        initializeCheckboxes(beautycontestCheckboxes, document.querySelector(".beautycontest .title label"));
+        initializeCheckboxes(thoughcontestCheckboxes, document.querySelector(".thoughcontest .title label"));
+        initializeCheckboxes(smartnesscontestCheckboxes, document.querySelector(".smartnesscontest .title label"));
+        initializeCheckboxes(battletentCheckboxes, document.querySelector(".battletent .title label"));
+        initializeCheckboxes(trainerhillCheckboxes, document.querySelector(".trainerhill .title label"));
+        initializeCheckboxes(cutenesscontestCheckboxes, document.querySelector(".cutenesscontest .title label"));
+        initializeCheckboxes(coolnesscontestCheckboxes, document.querySelector(".coolnesscontest .title label"));
+        initializeCheckboxes(battlefrontierCheckboxes, document.querySelector(".battlefrontier .title label"));
+        initializeCheckboxes(matchcallCheckboxes, document.querySelector(".matchcall .title label"));
+        initializeCheckboxes(moreribbonsCheckboxes, document.querySelector(".moreribbons .title label"));
+        initializeCheckboxes(itemsCheckboxes, document.querySelector(".items .title label"));
       });
     </script>
   </body>

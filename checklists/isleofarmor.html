@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,57 +6,28 @@
     <title>Progression Dex | The Isle of Armor</title>
     <link href="../checklists/css/isleofarmor.css" rel="stylesheet" />
     <link href="../output.css" rel="stylesheet" />
-    <link
-      href="../images/icons/favicontab.ico"
-      rel="icon"
-      type="image/x-icon"
-    />
-    <link
-      href="../images/icons/favicontab.ico"
-      rel="shortcut icon"
-      type="image/x-icon"
-    />
-    <meta
-      name="description"
-      content="A tool for tracking your progression in Pokemon games. Easily choose between games and track your game progress."
-    />
-    <meta
-      name="keywords"
-      content="pokemon, checklist, pokedex, progress, completion, speedrun, checklist, check list, locations, characters, games, game"
-    />
+    <link href="../images/icons/favicontab.ico" rel="icon" type="image/x-icon" />
+    <link href="../images/icons/favicontab.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="description" content="A tool for tracking your progression in Pokemon games. Easily choose between games and track your game progress." />
+    <meta name="keywords" content="pokemon, checklist, pokedex, progress, completion, speedrun, checklist, check list, locations, characters, games, game" />
   </head>
   <!-- Google tag (gtag.js) -->
-  <script
-    async
-    src="https://www.googletagmanager.com/gtag/js?id=G-4PDLXC895H"
-  ></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4PDLXC895H"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() {
       dataLayer.push(arguments);
     }
-    gtag('js', new Date());
+    gtag("js", new Date());
 
-    gtag('config', 'G-4PDLXC895H');
+    gtag("config", "G-4PDLXC895H");
   </script>
   <body>
-    <div
-      class="navbar bg-white rounded-3xl shadow-lg mt-2 fixed top-0 flex items-center justify-between"
-      style="width: 95%; z-index: 1000; left: 50%; transform: translateX(-50%)"
-    >
+    <div class="navbar bg-white rounded-3xl shadow-lg mt-2 fixed top-0 flex items-center justify-between" style="width: 95%; z-index: 1000; left: 50%; transform: translateX(-50%)">
       <div class="flex items-center gap-4">
-        <a href="../index.html" class="btn btn-ghost text-2xl"
-          ><span class="title" style="color: #f6ce31"
-            >Progression Dex |</span
-          ></a
-        >
+        <a href="../index.html" class="btn btn-ghost text-2xl"><span class="title" style="color: #f6ce31">Progression Dex |</span></a>
         <div class="flex items-center gap-2">
-          <img
-            alt="Logo of Isle of Armor DLC"
-            src="src"
-            ="../images/logos/isleofarmor-logo.png"
-            class="w-20"
-          />
+          <img alt="Logo of Isle of Armor DLC" src="src" ="../images/logos/isleofarmor-logo.png" class="w-20" />
         </div>
       </div>
     </div>
@@ -67,287 +38,98 @@
           <label class="panel-label">Pokédex</label>
           <div class="completepokedex">
             <div class="checkbox-item">
-              <span class="title"
-                ><label class="text-lg"
-                  >Complete the Isle of Armor Pokédex</label
-                ></span
-              >
+              <span class="title"><label class="text-lg">Complete the Isle of Armor Pokédex</label></span>
             </div>
             <div class="checkbox-item">
               <input id="isleofarmor-checkbox-galar-pokedex" type="checkbox" />
-              <label
-                class="text-sm lg:tooltip"
-                data-tip="There are a total of 211 Pokemon in the Isle of Armor Dex."
-                for="isleofarmor-checkbox-galar-pokedex"
-                >Complete Isle of Armor Pokedex</label
-              >
+              <label class="text-sm lg:tooltip" data-tip="There are a total of 211 Pokemon in the Isle of Armor Dex." for="isleofarmor-checkbox-galar-pokedex">Complete Isle of Armor Pokedex</label>
             </div>
           </div>
           <div class="giftpokemon">
             <div class="checkbox-item">
-              <span class="title"
-                ><label class="text-lg"
-                  >Obtain all In-Game Gift Pokemon</label
-                ></span
-              >
+              <span class="title"><label class="text-lg">Obtain all In-Game Gift Pokemon</label></span>
             </div>
             <div class="checkbox-item">
-              <input
-                id="isleofarmor-checkbox-bulbasaur-squirtle"
-                type="checkbox"
-              />
-              <img
-                alt="Icon of Bulbasaur"
-                src="class"
-                ="pokeicon small"
-                src="../images/icons/pokemon/gen8/swordshield/isleofarmor/bulbasaur.png"
-              />
-              <img
-                alt="Icon of Squirtle"
-                src="class"
-                ="pokeicon small"
-                src="../images/icons/pokemon/gen8/swordshield/isleofarmor/squirtle.png"
-                style="margin-left: -20px"
-              />
-              <label
-                class="text-sm lg:tooltip"
-                data-tip="Master Dojo after completing your first trial."
-                for="isleofarmor-checkbox-bulbasaur-squirtle"
-                >Bulbasaur / Squirtle</label
-              >
+              <input id="isleofarmor-checkbox-bulbasaur-squirtle" type="checkbox" />
+              <img alt="Icon of Bulbasaur" src="class" ="pokeicon small" src="../images/icons/pokemon/gen8/swordshield/isleofarmor/bulbasaur.png" />
+              <img alt="Icon of Squirtle" src="class" ="pokeicon small" src="../images/icons/pokemon/gen8/swordshield/isleofarmor/squirtle.png" style="margin-left: -20px" />
+              <label class="text-sm lg:tooltip" data-tip="Master Dojo after completing your first trial." for="isleofarmor-checkbox-bulbasaur-squirtle">Bulbasaur / Squirtle</label>
             </div>
-            <div
-              class="checkbox-item"
-              style="margin-bottom: -10px; margin-top: -20px"
-            >
+            <div class="checkbox-item" style="margin-bottom: -10px; margin-top: -20px">
               <input id="isleofarmor-checkbox-kubfu" type="checkbox" />
-              <img
-                alt="Icon of Kubfu"
-                src="class"
-                ="pokeicon small"
-                src="../images/icons/pokemon/gen8/swordshield/isleofarmor/kubfu.png"
-              />
-              <label
-                class="text-sm lg:tooltip"
-                data-tip="Master Dojo after completing all of Mustard's challenges."
-                for="isleofarmor-checkbox-kubfu"
-                >Kubfu</label
-              >
+              <img alt="Icon of Kubfu" src="class" ="pokeicon small" src="../images/icons/pokemon/gen8/swordshield/isleofarmor/kubfu.png" />
+              <label class="text-sm lg:tooltip" data-tip="Master Dojo after completing all of Mustard's challenges." for="isleofarmor-checkbox-kubfu">Kubfu</label>
             </div>
             <div class="checkbox-item">
               <input id="isleofarmor-checkbox-porygon" type="checkbox" />
-              <img
-                alt="Icon of Porygon"
-                src="class"
-                ="pokeicon small"
-                src="../images/icons/pokemon/gen8/swordshield/isleofarmor/toxel.png"
-              />
-              <label
-                class="text-sm lg:tooltip"
-                data-tip="Master Dojo after completing all of Mustard's challenges, if you speak to the Porygon by Hyde."
-                for="isleofarmor-checkbox-porygon"
+              <img alt="Icon of Porygon" src="class" ="pokeicon small" src="../images/icons/pokemon/gen8/swordshield/isleofarmor/toxel.png" />
+              <label class="text-sm lg:tooltip" data-tip="Master Dojo after completing all of Mustard's challenges, if you speak to the Porygon by Hyde." for="isleofarmor-checkbox-porygon"
                 >Toxel</label
               >
             </div>
           </div>
           <div class="diglettquest">
             <div class="checkbox-item">
-              <span class="title"
-                ><label class="text-lg">Find all Diglett</label></span
-              >
+              <span class="title"><label class="text-lg">Find all Diglett</label></span>
             </div>
             <div class="diglettquest-rowcontainer">
               <div class="diglettquest-leftrow">
                 <div class="checkbox-item">
-                  <input
-                    id="isleofarmor-checkbox-alolan-meowth"
-                    type="checkbox"
-                  />
-                  <img
-                    alt="Icon of Alolan Meowth"
-                    src="class"
-                    ="pokeicon small"
-                    src="../images/icons/pokemon/gen8/swordshield/isleofarmor/meowth-alolan.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="5 Diglett Found."
-                    for="isleofarmor-checkbox-alolan-meowth"
-                    >Alolan Meowth</label
-                  >
+                  <input id="isleofarmor-checkbox-alolan-meowth" type="checkbox" />
+                  <img alt="Icon of Alolan Meowth" src="class" ="pokeicon small" src="../images/icons/pokemon/gen8/swordshield/isleofarmor/meowth-alolan.png" />
+                  <label class="text-sm lg:tooltip" data-tip="5 Diglett Found." for="isleofarmor-checkbox-alolan-meowth">Alolan Meowth</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="isleofarmor-checkbox-kantonian-slowpoke"
-                    type="checkbox"
-                  />
-                  <img
-                    alt="Icon of Kantonian Slowpoke"
-                    src="class"
-                    ="pokeicon small"
-                    src="../images/icons/pokemon/gen8/swordshield/isleofarmor/slowpoke.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="10 Diglett Found."
-                    for="isleofarmor-checkbox-kantonian-slowpoke"
-                    >Kantonian Slowpoke</label
-                  >
+                  <input id="isleofarmor-checkbox-kantonian-slowpoke" type="checkbox" />
+                  <img alt="Icon of Kantonian Slowpoke" src="class" ="pokeicon small" src="../images/icons/pokemon/gen8/swordshield/isleofarmor/slowpoke.png" />
+                  <label class="text-sm lg:tooltip" data-tip="10 Diglett Found." for="isleofarmor-checkbox-kantonian-slowpoke">Kantonian Slowpoke</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="isleofarmor-checkbox-alolan-vulpix"
-                    type="checkbox"
-                  />
-                  <img
-                    alt="Icon of Alolan Vulpix"
-                    src="class"
-                    ="pokeicon small"
-                    src="../images/icons/pokemon/gen8/swordshield/isleofarmor/vulpix-alolan.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="20 Diglett Found."
-                    for="isleofarmor-checkbox-alolan-vulpix"
-                    >Alolan Vulpix</label
-                  >
+                  <input id="isleofarmor-checkbox-alolan-vulpix" type="checkbox" />
+                  <img alt="Icon of Alolan Vulpix" src="class" ="pokeicon small" src="../images/icons/pokemon/gen8/swordshield/isleofarmor/vulpix-alolan.png" />
+                  <label class="text-sm lg:tooltip" data-tip="20 Diglett Found." for="isleofarmor-checkbox-alolan-vulpix">Alolan Vulpix</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="isleofarmor-checkbox-alolan-sandshrew"
-                    type="checkbox"
-                  />
-                  <img
-                    alt="Icon of Alolan Sandshrew"
-                    src="class"
-                    ="pokeicon small"
-                    src="../images/icons/pokemon/gen8/swordshield/isleofarmor/sandshrew-alolan.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="30 Diglett Found."
-                    for="isleofarmor-checkbox-alolan-sandshrew"
-                    >Alolan Sandshrew</label
-                  >
+                  <input id="isleofarmor-checkbox-alolan-sandshrew" type="checkbox" />
+                  <img alt="Icon of Alolan Sandshrew" src="class" ="pokeicon small" src="../images/icons/pokemon/gen8/swordshield/isleofarmor/sandshrew-alolan.png" />
+                  <label class="text-sm lg:tooltip" data-tip="30 Diglett Found." for="isleofarmor-checkbox-alolan-sandshrew">Alolan Sandshrew</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="isleofarmor-checkbox-alolan-raichu"
-                    type="checkbox"
-                  />
-                  <img
-                    alt="Icon of Alolan Raichu"
-                    src="class"
-                    ="pokeicon small"
-                    src="../images/icons/pokemon/gen8/swordshield/isleofarmor/raichu-alolan.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="40 Diglett Found."
-                    for="isleofarmor-checkbox-alolan-raichu"
-                    >Alolan Raichu</label
-                  >
+                  <input id="isleofarmor-checkbox-alolan-raichu" type="checkbox" />
+                  <img alt="Icon of Alolan Raichu" src="class" ="pokeicon small" src="../images/icons/pokemon/gen8/swordshield/isleofarmor/raichu-alolan.png" />
+                  <label class="text-sm lg:tooltip" data-tip="40 Diglett Found." for="isleofarmor-checkbox-alolan-raichu">Alolan Raichu</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="isleofarmor-checkbox-alolan-marowak"
-                    type="checkbox"
-                  />
-                  <img
-                    alt="Icon of Alolan Marowak"
-                    src="class"
-                    ="pokeicon small"
-                    src="../images/icons/pokemon/gen8/swordshield/isleofarmor/marowak-alolan.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="50 Diglett Found."
-                    for="isleofarmor-checkbox-alolan-marowak"
-                    >Alolan Marowak</label
-                  >
+                  <input id="isleofarmor-checkbox-alolan-marowak" type="checkbox" />
+                  <img alt="Icon of Alolan Marowak" src="class" ="pokeicon small" src="../images/icons/pokemon/gen8/swordshield/isleofarmor/marowak-alolan.png" />
+                  <label class="text-sm lg:tooltip" data-tip="50 Diglett Found." for="isleofarmor-checkbox-alolan-marowak">Alolan Marowak</label>
                 </div>
               </div>
               <div class="diglettquest-rightrow">
                 <div class="checkbox-item">
-                  <input
-                    id="isleofarmor-checkbox-alolan-exeggutor"
-                    type="checkbox"
-                  />
-                  <img
-                    alt="Icon of Alolan Exeggutor"
-                    src="class"
-                    ="pokeicon small"
-                    src="../images/icons/pokemon/gen8/swordshield/isleofarmor/exeggutor-alolan.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="75 Diglett Found."
-                    for="isleofarmor-checkbox-alolan-exeggutor"
-                    >Alolan Exeggutor</label
-                  >
+                  <input id="isleofarmor-checkbox-alolan-exeggutor" type="checkbox" />
+                  <img alt="Icon of Alolan Exeggutor" src="class" ="pokeicon small" src="../images/icons/pokemon/gen8/swordshield/isleofarmor/exeggutor-alolan.png" />
+                  <label class="text-sm lg:tooltip" data-tip="75 Diglett Found." for="isleofarmor-checkbox-alolan-exeggutor">Alolan Exeggutor</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="isleofarmor-checkbox-rowlet" type="checkbox" />
-                  <img
-                    alt="Icon of Rowlet"
-                    src="class"
-                    ="pokeicon small"
-                    src="../images/icons/pokemon/gen8/swordshield/isleofarmor/rowlet.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="100 Diglett Found - Grookey Chosen as Starter."
-                    for="isleofarmor-checkbox-rowlet"
-                    >Rowlet</label
-                  >
+                  <img alt="Icon of Rowlet" src="class" ="pokeicon small" src="../images/icons/pokemon/gen8/swordshield/isleofarmor/rowlet.png" />
+                  <label class="text-sm lg:tooltip" data-tip="100 Diglett Found - Grookey Chosen as Starter." for="isleofarmor-checkbox-rowlet">Rowlet</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="isleofarmor-checkbox-litten" type="checkbox" />
-                  <img
-                    alt="Icon of Litten"
-                    src="class"
-                    ="pokeicon small"
-                    src="../images/icons/pokemon/gen8/swordshield/isleofarmor/litten.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="100 Diglett Found - Scorbunny Chosen as Starter."
-                    for="isleofarmor-checkbox-litten"
-                    >Litten</label
-                  >
+                  <img alt="Icon of Litten" src="class" ="pokeicon small" src="../images/icons/pokemon/gen8/swordshield/isleofarmor/litten.png" />
+                  <label class="text-sm lg:tooltip" data-tip="100 Diglett Found - Scorbunny Chosen as Starter." for="isleofarmor-checkbox-litten">Litten</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="isleofarmor-checkbox-popplio" type="checkbox" />
-                  <img
-                    alt="Icon of Popplio"
-                    src="class"
-                    ="pokeicon small"
-                    src="../images/icons/pokemon/gen8/swordshield/isleofarmor/popplio.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="100 Diglett Found - Sobble Chosen as Starter."
-                    for="isleofarmor-checkbox-popplio"
-                    >Popplio</label
-                  >
+                  <img alt="Icon of Popplio" src="class" ="pokeicon small" src="../images/icons/pokemon/gen8/swordshield/isleofarmor/popplio.png" />
+                  <label class="text-sm lg:tooltip" data-tip="100 Diglett Found - Sobble Chosen as Starter." for="isleofarmor-checkbox-popplio">Popplio</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="isleofarmor-checkbox-alolan-diglett"
-                    type="checkbox"
-                  />
-                  <img
-                    alt="Icon of Alolan Diglet"
-                    src="class"
-                    ="pokeicon small"
-                    src="../images/icons/pokemon/gen8/swordshield/isleofarmor/diglett-alolan.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="150 Diglett Found."
-                    for="isleofarmor-checkbox-alolan-diglett"
-                    >Alolan Diglett</label
-                  >
+                  <input id="isleofarmor-checkbox-alolan-diglett" type="checkbox" />
+                  <img alt="Icon of Alolan Diglet" src="class" ="pokeicon small" src="../images/icons/pokemon/gen8/swordshield/isleofarmor/diglett-alolan.png" />
+                  <label class="text-sm lg:tooltip" data-tip="150 Diglett Found." for="isleofarmor-checkbox-alolan-diglett">Alolan Diglett</label>
                 </div>
               </div>
             </div>
@@ -355,294 +137,118 @@
 
           <div class="gigantamax">
             <div class="checkbox-item">
-              <span class="title"
-                ><label class="text-lg">Gigantamax Pokemon</label></span
-              >
+              <span class="title"><label class="text-lg">Gigantamax Pokemon</label></span>
             </div>
             <div class="gigantamax-rowcontainer">
               <div class="gigantamax-leftrow">
                 <div class="checkbox-item">
-                  <input
-                    id="isleofarmor-checkbox-gigantamax-venusaur"
-                    type="checkbox"
-                  />
-                  <img
-                    alt="Icon of Gigantamax Venusaur"
-                    src="class"
-                    ="pokeicon"
-                    src="../images/icons/pokemon/gen8/swordshield/gigantamax/venusaur-gigantamax.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Forest of Focus, Training Lowlands."
-                    for="isleofarmor-checkbox-gigantamax-venusaur"
-                    >Venusaur</label
-                  >
+                  <input id="isleofarmor-checkbox-gigantamax-venusaur" type="checkbox" />
+                  <img alt="Icon of Gigantamax Venusaur" src="class" ="pokeicon" src="../images/icons/pokemon/gen8/swordshield/gigantamax/venusaur-gigantamax.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Forest of Focus, Training Lowlands." for="isleofarmor-checkbox-gigantamax-venusaur">Venusaur</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="isleofarmor-checkbox-gigantamax-blastoise"
-                    type="checkbox"
-                  />
-                  <img
-                    alt="Icon of Gigantamax Blastoise"
-                    src="class"
-                    ="pokeicon"
-                    src="../images/icons/pokemon/gen8/swordshield/gigantamax/blastoise-gigantamax.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Workout Sea, Stepping-Stone Sea."
-                    for="isleofarmor-checkbox-gigantamax-blastoise"
-                    >Blastoise</label
-                  >
+                  <input id="isleofarmor-checkbox-gigantamax-blastoise" type="checkbox" />
+                  <img alt="Icon of Gigantamax Blastoise" src="class" ="pokeicon" src="../images/icons/pokemon/gen8/swordshield/gigantamax/blastoise-gigantamax.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Workout Sea, Stepping-Stone Sea." for="isleofarmor-checkbox-gigantamax-blastoise">Blastoise</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="isleofarmor-checkbox-gigantamax-rillaboom"
-                    type="checkbox"
-                  />
-                  <img
-                    alt="Icon of Gigantamax Rillaboom"
-                    src="class"
-                    ="pokeicon"
-                    src="../images/icons/pokemon/gen8/swordshield/gigantamax/rillaboom-gigantamax.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Reward for your starter Rillaboom."
-                    for="isleofarmor-checkbox-gigantamax-rillaboom"
-                    >Rillaboom</label
-                  >
+                  <input id="isleofarmor-checkbox-gigantamax-rillaboom" type="checkbox" />
+                  <img alt="Icon of Gigantamax Rillaboom" src="class" ="pokeicon" src="../images/icons/pokemon/gen8/swordshield/gigantamax/rillaboom-gigantamax.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Reward for your starter Rillaboom." for="isleofarmor-checkbox-gigantamax-rillaboom">Rillaboom</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="isleofarmor-checkbox-gigantamax-cinderace"
-                    type="checkbox"
-                  />
-                  <img
-                    alt="Icon of Gigantamax Cinderace"
-                    src="class"
-                    ="pokeicon"
-                    src="../images/icons/pokemon/gen8/swordshield/gigantamax/cinderace-gigantamax.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Reward for your starter Cincerace."
-                    for="isleofarmor-checkbox-gigantamax-cinderace"
-                    >Cinderace</label
-                  >
+                  <input id="isleofarmor-checkbox-gigantamax-cinderace" type="checkbox" />
+                  <img alt="Icon of Gigantamax Cinderace" src="class" ="pokeicon" src="../images/icons/pokemon/gen8/swordshield/gigantamax/cinderace-gigantamax.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Reward for your starter Cincerace." for="isleofarmor-checkbox-gigantamax-cinderace">Cinderace</label>
                 </div>
               </div>
               <div class="gigantamax-rightrow">
                 <div class="checkbox-item">
-                  <input
-                    id="isleofarmor-checkbox-gigantamax-inteleon"
-                    type="checkbox"
-                  />
-                  <img
-                    alt="Icon of Gigantamax Inteleon"
-                    src="class"
-                    ="pokeicon"
-                    src="../images/icons/pokemon/gen8/swordshield/gigantamax/inteleon-gigantamax.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Reward for your starter Inteleon."
-                    for="isleofarmor-checkbox-gigantamax-inteleon"
-                    >Inteleon</label
-                  >
+                  <input id="isleofarmor-checkbox-gigantamax-inteleon" type="checkbox" />
+                  <img alt="Icon of Gigantamax Inteleon" src="class" ="pokeicon" src="../images/icons/pokemon/gen8/swordshield/gigantamax/inteleon-gigantamax.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Reward for your starter Inteleon." for="isleofarmor-checkbox-gigantamax-inteleon">Inteleon</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="isleofarmor-checkbox-gigantamax-urshifu-rapidstrike"
-                    type="checkbox"
-                  />
-                  <img
-                    alt="Icon of Gigantamax Urshifu Rapid Strike"
-                    src="class"
-                    ="pokeicon"
-                    src="../images/icons/pokemon/gen8/swordshield/gigantamax/urshifu-gigantamax-rapid-strike.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Give Urshifu Max Soup."
-                    for="isleofarmor-checkbox-gigantamax-urshifu-rapidstrike"
-                    >Urshifu</label
-                  >
+                  <input id="isleofarmor-checkbox-gigantamax-urshifu-rapidstrike" type="checkbox" />
+                  <img alt="Icon of Gigantamax Urshifu Rapid Strike" src="class" ="pokeicon" src="../images/icons/pokemon/gen8/swordshield/gigantamax/urshifu-gigantamax-rapid-strike.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Give Urshifu Max Soup." for="isleofarmor-checkbox-gigantamax-urshifu-rapidstrike">Urshifu</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="isleofarmor-checkbox-gigantamax-urshifu-singlestrike"
-                    type="checkbox"
-                  />
-                  <img
-                    alt="Icon of Gigantamax Urshifu Single Strike"
-                    src="class"
-                    ="pokeicon"
-                    src="../images/icons/pokemon/gen8/swordshield/gigantamax/urshifu-gigantamax-single-strike.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Give Urshifu Max Soup."
-                    for="isleofarmor-checkbox-gigantamax-urshifu-singlestrike"
-                    >Urshifu</label
-                  >
+                  <input id="isleofarmor-checkbox-gigantamax-urshifu-singlestrike" type="checkbox" />
+                  <img alt="Icon of Gigantamax Urshifu Single Strike" src="class" ="pokeicon" src="../images/icons/pokemon/gen8/swordshield/gigantamax/urshifu-gigantamax-single-strike.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Give Urshifu Max Soup." for="isleofarmor-checkbox-gigantamax-urshifu-singlestrike">Urshifu</label>
                 </div>
               </div>
             </div>
           </div>
           <div class="galarianforms">
             <div class="checkbox-item">
-              <span class="title"
-                ><label class="text-lg">Catch all Galarian Forms</label></span
-              >
+              <span class="title"><label class="text-lg">Catch all Galarian Forms</label></span>
             </div>
             <div class="checkbox-item">
-              <input
-                id="isleofarmor-checkbox-galarian-slowpoke"
-                type="checkbox"
-              />
-              <img
-                alt="Icon of Galarian Slowpoke"
-                src="class"
-                ="pokeicon"
-                src="../images/icons/pokemon/gen8/swordshield/isleofarmor/slowpoke-galarian.png"
-              />
-              <label
-                class="text-sm lg:tooltip"
-                data-tip="Glimwood Tangle (Shield)."
-                for="isleofarmor-checkbox-galarian-slowpoke"
-                >Galarian Slowpoke</label
-              >
+              <input id="isleofarmor-checkbox-galarian-slowpoke" type="checkbox" />
+              <img alt="Icon of Galarian Slowpoke" src="class" ="pokeicon" src="../images/icons/pokemon/gen8/swordshield/isleofarmor/slowpoke-galarian.png" />
+              <label class="text-sm lg:tooltip" data-tip="Glimwood Tangle (Shield)." for="isleofarmor-checkbox-galarian-slowpoke">Galarian Slowpoke</label>
             </div>
             <div class="checkbox-item">
-              <input
-                id="isleofarmor-checkbox-galarian-slowbro"
-                type="checkbox"
-              />
-              <img
-                alt="Icon of Galarian Slowbro"
-                src="class"
-                ="pokeicon"
-                src="../images/icons/pokemon/gen8/swordshield/isleofarmor/slowbro-galarian.png"
-              />
-              <label
-                class="text-sm lg:tooltip"
-                data-tip="Glimwood Tangle (Shield)."
-                for="isleofarmor-checkbox-galarian-slowbro"
-                >Galarian Slowbro</label
-              >
+              <input id="isleofarmor-checkbox-galarian-slowbro" type="checkbox" />
+              <img alt="Icon of Galarian Slowbro" src="class" ="pokeicon" src="../images/icons/pokemon/gen8/swordshield/isleofarmor/slowbro-galarian.png" />
+              <label class="text-sm lg:tooltip" data-tip="Glimwood Tangle (Shield)." for="isleofarmor-checkbox-galarian-slowbro">Galarian Slowbro</label>
             </div>
           </div>
           <div class="ingametrades">
             <div class="checkbox-item">
-              <span class="title"
-                ><label class="text-lg">In-Game Trades</label></span
-              >
+              <span class="title"><label class="text-lg">In-Game Trades</label></span>
             </div>
             <div class="ingametrades-rowcontainer">
               <div class="ingametrades-leftrow">
                 <div class="checkbox-item">
                   <input id="isleofarmor-checkbox-meowth" type="checkbox" />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Find trainers in caves scattered around the Isle of Armor."
-                    for="isleofarmor-checkbox-meowth"
-                    >Galarian Meowth for Meowth</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Find trainers in caves scattered around the Isle of Armor." for="isleofarmor-checkbox-meowth">Galarian Meowth for Meowth</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="isleofarmor-checkbox-farfetchd" type="checkbox" />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Find trainers in caves scattered around the Isle of Armor."
-                    for="isleofarmor-checkbox-farfetchd"
+                  <label class="text-sm lg:tooltip" data-tip="Find trainers in caves scattered around the Isle of Armor." for="isleofarmor-checkbox-farfetchd"
                     >Galarian Farfetch'd for Farfetch'd</label
                   >
                 </div>
                 <div class="checkbox-item">
                   <input id="isleofarmor-checkbox-corsola" type="checkbox" />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Find trainers in caves scattered around the Isle of Armor."
-                    for="isleofarmor-checkbox-corsola"
-                    >Galarian Corsola for Corsola</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Find trainers in caves scattered around the Isle of Armor." for="isleofarmor-checkbox-corsola">Galarian Corsola for Corsola</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="isleofarmor-checkbox-ponyta" type="checkbox" />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Find trainers in caves scattered around the Isle of Armor."
-                    for="isleofarmor-checkbox-ponyta"
-                    >Galarian Ponyta for Ponyta</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Find trainers in caves scattered around the Isle of Armor." for="isleofarmor-checkbox-ponyta">Galarian Ponyta for Ponyta</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="isleofarmor-checkbox-mrmime" type="checkbox" />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Find trainers in caves scattered around the Isle of Armor."
-                    for="isleofarmor-checkbox-mrmime"
-                    >Galarian Mr. Mime for Mr. Mime</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Find trainers in caves scattered around the Isle of Armor." for="isleofarmor-checkbox-mrmime">Galarian Mr. Mime for Mr. Mime</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="isleofarmor-checkbox-darumaka" type="checkbox" />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Find trainers in caves scattered around the Isle of Armor."
-                    for="isleofarmor-checkbox-darumaka"
-                    >Galarian Darumaka for Darumaka</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Find trainers in caves scattered around the Isle of Armor." for="isleofarmor-checkbox-darumaka">Galarian Darumaka for Darumaka</label>
                 </div>
               </div>
               <div class="ingametrades-rightrow">
                 <div class="checkbox-item">
                   <input id="isleofarmor-checkbox-zigzagoon" type="checkbox" />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Find trainers in caves scattered around the Isle of Armor."
-                    for="isleofarmor-checkbox-zigzagoon"
-                    >Galarian Zigzagoon for Zigzagoon</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Find trainers in caves scattered around the Isle of Armor." for="isleofarmor-checkbox-zigzagoon">Galarian Zigzagoon for Zigzagoon</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="isleofarmor-checkbox-stunfisk" type="checkbox" />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Find trainers in caves scattered around the Isle of Armor."
-                    for="isleofarmor-checkbox-stunfisk"
-                    >Galarian Stunfisk for Stunfisk</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Find trainers in caves scattered around the Isle of Armor." for="isleofarmor-checkbox-stunfisk">Galarian Stunfisk for Stunfisk</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="isleofarmor-checkbox-weezing" type="checkbox" />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Find trainers in caves scattered around the Isle of Armor."
-                    for="isleofarmor-checkbox-weezing"
-                    >Galarian Weezing for Weezing</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Find trainers in caves scattered around the Isle of Armor." for="isleofarmor-checkbox-weezing">Galarian Weezing for Weezing</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="isleofarmor-checkbox-exeggutor" type="checkbox" />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Find trainers in caves scattered around the Isle of Armor."
-                    for="isleofarmor-checkbox-exeggutor"
-                    >Galarian Exeggutor for Exeggutor</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Find trainers in caves scattered around the Isle of Armor." for="isleofarmor-checkbox-exeggutor">Galarian Exeggutor for Exeggutor</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="isleofarmor-checkbox-marowak" type="checkbox" />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Find trainers in caves scattered around the Isle of Armor."
-                    for="isleofarmor-checkbox-marowak"
-                    >Galarian Marowak for Marowak</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Find trainers in caves scattered around the Isle of Armor." for="isleofarmor-checkbox-marowak">Galarian Marowak for Marowak</label>
                 </div>
               </div>
             </div>
@@ -654,157 +260,51 @@
           <label class="panel-label">Collectibles</label>
           <div class="leaguecard">
             <div class="checkbox-item">
-              <span class="title"
-                ><label class="text-lg">League Cards</label></span
-              >
+              <span class="title"><label class="text-lg">League Cards</label></span>
             </div>
             <div class="leaguecard-rowcontainer">
               <div class="leaguecard-leftrow">
                 <div class="checkbox-item">
-                  <input
-                    id="isleofarmor-checkbox-leaguecard-mustard"
-                    type="checkbox"
-                  />
-                  <img
-                    alt="Icon of Mustard Leaguecard"
-                    src="class"
-                    ="pokeicon leaguecard"
-                    src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Mustard.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Motostoke."
-                    for="isleofarmor-checkbox-leaguecard-mustard"
-                    >Mustard</label
-                  >
+                  <input id="isleofarmor-checkbox-leaguecard-mustard" type="checkbox" />
+                  <img alt="Icon of Mustard Leaguecard" src="class" ="pokeicon leaguecard" src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Mustard.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Motostoke." for="isleofarmor-checkbox-leaguecard-mustard">Mustard</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="isleofarmor-checkbox-leaguecard-honey"
-                    type="checkbox"
-                  />
-                  <img
-                    alt="Icon of Honey Leaguecard"
-                    src="class"
-                    ="pokeicon leaguecard"
-                    src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Honey.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Ballonlea Stadium."
-                    for="isleofarmor-checkbox-leaguecard-honey"
-                    >Honey</label
-                  >
+                  <input id="isleofarmor-checkbox-leaguecard-honey" type="checkbox" />
+                  <img alt="Icon of Honey Leaguecard" src="class" ="pokeicon leaguecard" src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Honey.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Ballonlea Stadium." for="isleofarmor-checkbox-leaguecard-honey">Honey</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="isleofarmor-checkbox-leaguecard-avery"
-                    type="checkbox"
-                  />
-                  <img
-                    alt="Icon of Avery Leaguecard"
-                    src="class"
-                    ="pokeicon leaguecard"
-                    src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Avery.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Circhester Stadium."
-                    for="isleofarmor-checkbox-leaguecard-avery"
-                    ><span style="color: #a40045">Avery</span></label
-                  >
+                  <input id="isleofarmor-checkbox-leaguecard-avery" type="checkbox" />
+                  <img alt="Icon of Avery Leaguecard" src="class" ="pokeicon leaguecard" src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Avery.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Circhester Stadium." for="isleofarmor-checkbox-leaguecard-avery"><span style="color: #a40045">Avery</span></label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="isleofarmor-checkbox-leaguecard-klara"
-                    type="checkbox"
-                  />
-                  <img
-                    alt="Icon of Klara Leaguecard"
-                    src="class"
-                    ="pokeicon leaguecard"
-                    src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Klara.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Circhester Stadium."
-                    for="isleofarmor-checkbox-leaguecard-klara"
-                    ><span style="color: #181369">Klara</span></label
-                  >
+                  <input id="isleofarmor-checkbox-leaguecard-klara" type="checkbox" />
+                  <img alt="Icon of Klara Leaguecard" src="class" ="pokeicon leaguecard" src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Klara.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Circhester Stadium." for="isleofarmor-checkbox-leaguecard-klara"><span style="color: #181369">Klara</span></label>
                 </div>
               </div>
               <div class="leaguecard-rightrow">
                 <div class="checkbox-item">
-                  <input
-                    id="isleofarmor-checkbox-leaguecard-mustard-rare"
-                    type="checkbox"
-                  />
-                  <img
-                    alt="Icon of Mustard Rare Leaguecard"
-                    src="class"
-                    ="pokeicon leaguecard"
-                    src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Mustard_rare.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Slumbering Weald."
-                    for="isleofarmor-checkbox-leaguecard-mustard-rare"
-                    >Mustard Rare</label
-                  >
+                  <input id="isleofarmor-checkbox-leaguecard-mustard-rare" type="checkbox" />
+                  <img alt="Icon of Mustard Rare Leaguecard" src="class" ="pokeicon leaguecard" src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Mustard_rare.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Slumbering Weald." for="isleofarmor-checkbox-leaguecard-mustard-rare">Mustard Rare</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="isleofarmor-checkbox-leaguecard-honey-rare"
-                    type="checkbox"
-                  />
-                  <img
-                    alt="Icon of Honey Rare Leaguecard"
-                    src="class"
-                    ="pokeicon leaguecard"
-                    src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Honey_rare.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Spikemuth."
-                    for="isleofarmor-checkbox-leaguecard-honey-rare"
-                    >Honey Rare</label
-                  >
+                  <input id="isleofarmor-checkbox-leaguecard-honey-rare" type="checkbox" />
+                  <img alt="Icon of Honey Rare Leaguecard" src="class" ="pokeicon leaguecard" src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Honey_rare.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Spikemuth." for="isleofarmor-checkbox-leaguecard-honey-rare">Honey Rare</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="isleofarmor-checkbox-leaguecard-avery-rare"
-                    type="checkbox"
-                  />
-                  <img
-                    alt="Icon of Avery Rare Leaguecard"
-                    src="class"
-                    ="pokeicon leaguecard"
-                    src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Avery_rare.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Circhester Stadium."
-                    for="isleofarmor-checkbox-leaguecard-avery-rare"
-                    ><span style="color: #a40045">Avery Rare</span></label
-                  >
+                  <input id="isleofarmor-checkbox-leaguecard-avery-rare" type="checkbox" />
+                  <img alt="Icon of Avery Rare Leaguecard" src="class" ="pokeicon leaguecard" src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Avery_rare.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Circhester Stadium." for="isleofarmor-checkbox-leaguecard-avery-rare"><span style="color: #a40045">Avery Rare</span></label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="isleofarmor-checkbox-leaguecard-klara-rare"
-                    type="checkbox"
-                  />
-                  <img
-                    alt="Icon of Klara Rare Leaguecard"
-                    src="class"
-                    ="pokeicon leaguecard"
-                    src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Klara_rare.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Circhester Stadium."
-                    for="isleofarmor-checkbox-leaguecard-klara-rare"
-                    ><span style="color: #181369">Klara Rare</span></label
-                  >
+                  <input id="isleofarmor-checkbox-leaguecard-klara-rare" type="checkbox" />
+                  <img alt="Icon of Klara Rare Leaguecard" src="class" ="pokeicon leaguecard" src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Klara_rare.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Circhester Stadium." for="isleofarmor-checkbox-leaguecard-klara-rare"><span style="color: #181369">Klara Rare</span></label>
                 </div>
               </div>
             </div>
@@ -815,66 +315,25 @@
             </div>
             <div class="checkbox-item">
               <input id="isleofarmor-checkbox-stylecard" type="checkbox" />
-              <img
-                alt="Icon of Style Card"
-                src="class"
-                ="pokeicon"
-                src="../images/icons/inventory/gen8/swordshield/style-card.png"
-              />
-              <label
-                class="text-sm lg:tooltip"
-                data-tip="Fields of Honor, from Klara/Avery after defeating them for the first time."
-                for="isleofarmor-checkbox-stylecard"
-                >Style Card</label
-              >
+              <img alt="Icon of Style Card" src="class" ="pokeicon" src="../images/icons/inventory/gen8/swordshield/style-card.png" />
+              <label class="text-sm lg:tooltip" data-tip="Fields of Honor, from Klara/Avery after defeating them for the first time." for="isleofarmor-checkbox-stylecard">Style Card</label>
             </div>
             <div class="checkbox-item">
               <input id="isleofarmor-checkbox-expcharm" type="checkbox" />
-              <img
-                alt="Icon of EXP Charm"
-                src="class"
-                ="pokeicon"
-                src="../images/icons/inventory/gen8/swordshield/exp-charm.png"
-              />
-              <label
-                class="text-sm lg:tooltip"
-                data-tip="Master Dojo, from Hyde upon entering for the first time."
-                for="isleofarmor-checkbox-expcharm"
-                >EXP Charm</label
-              >
+              <img alt="Icon of EXP Charm" src="class" ="pokeicon" src="../images/icons/inventory/gen8/swordshield/exp-charm.png" />
+              <label class="text-sm lg:tooltip" data-tip="Master Dojo, from Hyde upon entering for the first time." for="isleofarmor-checkbox-expcharm">EXP Charm</label>
             </div>
             <div class="checkbox-item">
               <input id="isleofarmor-checkbox-markcharm" type="checkbox" />
-              <img
-                alt="Icon of Mark Charm"
-                src="class"
-                ="pokeicon"
-                src="../images/icons/inventory/gen8/swordshield/mark-charm.png"
-              />
-              <label
-                class="text-sm lg:tooltip"
-                data-tip="Armor Station, from the Doctor that gives the player their Isle of Armor Pokédex for completing it."
-                for="isleofarmor-checkbox-markcharm"
+              <img alt="Icon of Mark Charm" src="class" ="pokeicon" src="../images/icons/inventory/gen8/swordshield/mark-charm.png" />
+              <label class="text-sm lg:tooltip" data-tip="Armor Station, from the Doctor that gives the player their Isle of Armor Pokédex for completing it." for="isleofarmor-checkbox-markcharm"
                 >Mark Charm</label
               >
             </div>
             <div class="checkbox-item">
-              <input
-                id="isleofarmor-checkbox-rotombike-white"
-                type="checkbox"
-              />
-              <img
-                alt="Icon of Rotom Bike White"
-                src="class"
-                ="pokeicon"
-                src="../images/icons/inventory/gen8/swordshield/rotom-bike-3.png"
-              />
-              <img
-                alt="Icon of Rotom Bike Black"
-                src="class"
-                ="pokeicon"
-                src="../images/icons/inventory/gen8/swordshield/rotom-bike-4.png"
-              /><label
+              <input id="isleofarmor-checkbox-rotombike-white" type="checkbox" />
+              <img alt="Icon of Rotom Bike White" src="class" ="pokeicon" src="../images/icons/inventory/gen8/swordshield/rotom-bike-3.png" />
+              <img alt="Icon of Rotom Bike Black" src="class" ="pokeicon" src="../images/icons/inventory/gen8/swordshield/rotom-bike-4.png" /><label
                 class="text-sm lg:tooltip"
                 data-tip="Fields of Honor (from the Bike Lady near the Master Dojo)."
                 for="isleofarmor-checkbox-rotombike-white"
@@ -883,18 +342,8 @@
             </div>
             <div class="checkbox-item">
               <input id="isleofarmor-checkbox-alltms" type="checkbox" />
-              <img
-                alt="Icon of TM"
-                src="class"
-                ="pokeicon item"
-                src="../images/icons/inventory/tms/normal.png"
-              />
-              <label
-                class="text-sm lg:tooltip"
-                data-tip="Find all TM's."
-                for="isleofarmor-checkbox-alltms"
-                >Collect all TM's</label
-              >
+              <img alt="Icon of TM" src="class" ="pokeicon item" src="../images/icons/inventory/tms/normal.png" />
+              <label class="text-sm lg:tooltip" data-tip="Find all TM's." for="isleofarmor-checkbox-alltms">Collect all TM's</label>
             </div>
           </div>
         </div>
@@ -916,79 +365,37 @@
     <script src="../checklists/js/script.js"></script>
 
     <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        const completepokedexCheckboxes = document.querySelectorAll(
-          '.completepokedex input[type="checkbox"]'
-        );
-        const giftpokemonCheckboxes = document.querySelectorAll(
-          '.giftpokemon input[type="checkbox"]'
-        );
-        const galarianformsCheckboxes = document.querySelectorAll(
-          '.galarianforms input[type="checkbox"]'
-        );
-        const leaguecardCheckboxes = document.querySelectorAll(
-          '.leaguecard input[type="checkbox"]'
-        );
-        const ingametradesCheckboxes = document.querySelectorAll(
-          '.ingametrades input[type="checkbox"]'
-        );
-        const diglettquestCheckboxes = document.querySelectorAll(
-          '.diglettquest input[type="checkbox"]'
-        );
-        const gigantamaxCheckboxes = document.querySelectorAll(
-          '.gigantamax input[type="checkbox"]'
-        );
-        const itemsCheckboxes = document.querySelectorAll(
-          '.items input[type="checkbox"]'
-        );
+      document.addEventListener("DOMContentLoaded", function () {
+        const completepokedexCheckboxes = document.querySelectorAll('.completepokedex input[type="checkbox"]');
+        const giftpokemonCheckboxes = document.querySelectorAll('.giftpokemon input[type="checkbox"]');
+        const galarianformsCheckboxes = document.querySelectorAll('.galarianforms input[type="checkbox"]');
+        const leaguecardCheckboxes = document.querySelectorAll('.leaguecard input[type="checkbox"]');
+        const ingametradesCheckboxes = document.querySelectorAll('.ingametrades input[type="checkbox"]');
+        const diglettquestCheckboxes = document.querySelectorAll('.diglettquest input[type="checkbox"]');
+        const gigantamaxCheckboxes = document.querySelectorAll('.gigantamax input[type="checkbox"]');
+        const itemsCheckboxes = document.querySelectorAll('.items input[type="checkbox"]');
 
         function updateStyle(checkboxes, label) {
-          const allChecked = [...checkboxes].every(
-            (checkbox) => checkbox.checked
-          );
-          label.style.textDecoration = allChecked ? 'line-through' : 'none';
+          const allChecked = [...checkboxes].every((checkbox) => checkbox.checked);
+          label.style.textDecoration = allChecked ? "line-through" : "none";
         }
 
         function initializeCheckboxes(checkboxes, label) {
           checkboxes.forEach((checkbox) => {
-            checkbox.addEventListener('change', function () {
+            checkbox.addEventListener("change", function () {
               updateStyle(checkboxes, label);
             });
           });
           updateStyle(checkboxes, label);
         }
-        initializeCheckboxes(
-          completepokedexCheckboxes,
-          document.querySelector('.completepokedex .title label')
-        );
-        initializeCheckboxes(
-          giftpokemonCheckboxes,
-          document.querySelector('.giftpokemon .title label')
-        );
-        initializeCheckboxes(
-          galarianformsCheckboxes,
-          document.querySelector('.galarianforms .title label')
-        );
-        initializeCheckboxes(
-          leaguecardCheckboxes,
-          document.querySelector('.leaguecard .title label')
-        );
-        initializeCheckboxes(
-          ingametradesCheckboxes,
-          document.querySelector('.ingametrades .title label')
-        );
-        initializeCheckboxes(
-          diglettquestCheckboxes,
-          document.querySelector('.diglettquest .title label')
-        );
-        initializeCheckboxes(
-          gigantamaxCheckboxes,
-          document.querySelector('.gigantamax .title label')
-        );
-        initializeCheckboxes(
-          itemsCheckboxes,
-          document.querySelector('.items .title label')
-        );
+        initializeCheckboxes(completepokedexCheckboxes, document.querySelector(".completepokedex .title label"));
+        initializeCheckboxes(giftpokemonCheckboxes, document.querySelector(".giftpokemon .title label"));
+        initializeCheckboxes(galarianformsCheckboxes, document.querySelector(".galarianforms .title label"));
+        initializeCheckboxes(leaguecardCheckboxes, document.querySelector(".leaguecard .title label"));
+        initializeCheckboxes(ingametradesCheckboxes, document.querySelector(".ingametrades .title label"));
+        initializeCheckboxes(diglettquestCheckboxes, document.querySelector(".diglettquest .title label"));
+        initializeCheckboxes(gigantamaxCheckboxes, document.querySelector(".gigantamax .title label"));
+        initializeCheckboxes(itemsCheckboxes, document.querySelector(".items .title label"));
       });
     </script>
   </body>

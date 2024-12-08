@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,61 +6,29 @@
     <title>Progression Dex | Let's Go Pikachu and Eevee</title>
     <link href="../checklists/css/letsgopikachueevee.css" rel="stylesheet" />
     <link href="../output.css" rel="stylesheet" />
-    <link
-      href="../images/icons/favicontab.ico"
-      rel="icon"
-      type="image/x-icon"
-    />
-    <link
-      href="../images/icons/favicontab.ico"
-      rel="shortcut icon"
-      type="image/x-icon"
-    />
-    <meta
-      name="description"
-      content="A tool for tracking your progression in Pokemon games. Easily choose between games and track your game progress."
-    />
-    <meta
-      name="keywords"
-      content="pokemon, checklist, pokedex, progress, completion, speedrun, checklist, check list, locations, characters, games, game"
-    />
+    <link href="../images/icons/favicontab.ico" rel="icon" type="image/x-icon" />
+    <link href="../images/icons/favicontab.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="description" content="A tool for tracking your progression in Pokemon games. Easily choose between games and track your game progress." />
+    <meta name="keywords" content="pokemon, checklist, pokedex, progress, completion, speedrun, checklist, check list, locations, characters, games, game" />
   </head>
   <!-- Google tag (gtag.js) -->
-  <script
-    async
-    src="https://www.googletagmanager.com/gtag/js?id=G-4PDLXC895H"
-  ></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4PDLXC895H"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() {
       dataLayer.push(arguments);
     }
-    gtag('js', new Date());
+    gtag("js", new Date());
 
-    gtag('config', 'G-4PDLXC895H');
+    gtag("config", "G-4PDLXC895H");
   </script>
   <body>
-    <div
-      class="navbar bg-white rounded-3xl shadow-lg mt-2 fixed top-0 flex items-center justify-between"
-      style="width: 95%; z-index: 1000; left: 50%; transform: translateX(-50%)"
-    >
+    <div class="navbar bg-white rounded-3xl shadow-lg mt-2 fixed top-0 flex items-center justify-between" style="width: 95%; z-index: 1000; left: 50%; transform: translateX(-50%)">
       <div class="flex items-center gap-4">
-        <a href="../index.html" class="btn btn-ghost text-2xl"
-          ><span class="title">Progression Dex |</span></a
-        >
+        <a href="../index.html" class="btn btn-ghost text-2xl"><span class="title">Progression Dex |</span></a>
         <div class="flex items-center gap-2">
-          <img
-            id="letsgopikachu-logo"
-            src="../images/logos/letsgopikachu-logo.webp"
-            class="w-20"
-            alt="Icon of Let's Go Pikachu Logo"
-          />
-          <img
-            id="letsgoeevee-logo"
-            src="../images/logos/letsgoeevee-logo.webp"
-            class="w-20"
-            alt="Icon of Let's Go Eevee Logo"
-          />
+          <img id="letsgopikachu-logo" src="../images/logos/letsgopikachu-logo.webp" class="w-20" alt="Icon of Let's Go Pikachu Logo" />
+          <img id="letsgoeevee-logo" src="../images/logos/letsgoeevee-logo.webp" class="w-20" alt="Icon of Let's Go Eevee Logo" />
         </div>
       </div>
     </div>
@@ -71,534 +39,186 @@
           <label class="panel-label">Pokédex</label>
           <div class="completepokedex">
             <div class="checkbox-item">
-              <span class="title"
-                ><label class="text-lg">Complete the Kanto Pokédex</label></span
-              >
+              <span class="title"><label class="text-lg">Complete the Kanto Pokédex</label></span>
             </div>
             <div class="checkbox-item">
-              <input
-                id="letsgopikachueevee-checkbox-kanto-pokedex"
-                type="checkbox"
-              />
-              <label
-                class="text-sm lg:tooltip"
-                data-tip="There are a total of 153 Pokemon in the Kanto Dex."
-                for="letsgopikachueevee-checkbox-kanto-pokedex"
-                >Complete Kanto Pokedex</label
-              >
+              <input id="letsgopikachueevee-checkbox-kanto-pokedex" type="checkbox" />
+              <label class="text-sm lg:tooltip" data-tip="There are a total of 153 Pokemon in the Kanto Dex." for="letsgopikachueevee-checkbox-kanto-pokedex">Complete Kanto Pokedex</label>
             </div>
             <div class="checkbox-item">
-              <input
-                id="letsgopikachueevee-checkbox-maxcandy"
-                type="checkbox"
-              />
-              <img
-                class="pokeicon item"
-                src="../images/icons/inventory/gen7/candy/smart-xl.png"
-                alt="Icon of Smart XL Candy"
-              />
-              <label
-                class="text-sm lg:tooltip"
-                data-tip="Trade them."
-                for="letsgopikachueevee-checkbox-maxcandy"
-                >Max Candy on all Pokemon</label
-              >
+              <input id="letsgopikachueevee-checkbox-maxcandy" type="checkbox" />
+              <img class="pokeicon item" src="../images/icons/inventory/gen7/candy/smart-xl.png" alt="Icon of Smart XL Candy" />
+              <label class="text-sm lg:tooltip" data-tip="Trade them." for="letsgopikachueevee-checkbox-maxcandy">Max Candy on all Pokemon</label>
             </div>
           </div>
           <div class="legendaries">
             <div class="checkbox-item">
-              <span class="title"
-                ><label class="text-lg">Catch all Legendaries</label></span
-              >
+              <span class="title"><label class="text-lg">Catch all Legendaries</label></span>
             </div>
             <div class="legendaries-rowcontainer">
               <div class="legendaries-leftrow">
                 <div class="checkbox-item">
-                  <input
-                    id="letsgopikachueevee-checkbox-articuno"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon legendary"
-                    src="../images/icons/pokemon/gen7/lpge/articuno.png"
-                    alt="Icon of Articuno"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Seafoam Islands."
-                    for="letsgopikachueevee-checkbox-articuno"
-                    >Articuno</label
-                  >
+                  <input id="letsgopikachueevee-checkbox-articuno" type="checkbox" />
+                  <img class="pokeicon legendary" src="../images/icons/pokemon/gen7/lpge/articuno.png" alt="Icon of Articuno" />
+                  <label class="text-sm lg:tooltip" data-tip="Seafoam Islands." for="letsgopikachueevee-checkbox-articuno">Articuno</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="letsgopikachueevee-checkbox-moltres"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon legendary"
-                    src="../images/icons/pokemon/gen7/lpge/moltres.png"
-                    alt="Icon of Moltres"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Victory Road."
-                    for="letsgopikachueevee-checkbox-moltres"
-                    >Moltres</label
-                  >
+                  <input id="letsgopikachueevee-checkbox-moltres" type="checkbox" />
+                  <img class="pokeicon legendary" src="../images/icons/pokemon/gen7/lpge/moltres.png" alt="Icon of Moltres" />
+                  <label class="text-sm lg:tooltip" data-tip="Victory Road." for="letsgopikachueevee-checkbox-moltres">Moltres</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="letsgopikachueevee-checkbox-zapdos"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon legendary"
-                    src="../images/icons/pokemon/gen7/lpge/zapdos.png"
-                    alt="Icon of Zapdos"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Power Plant."
-                    for="letsgopikachueevee-checkbox-zapdos"
-                    >Zapdos</label
-                  >
+                  <input id="letsgopikachueevee-checkbox-zapdos" type="checkbox" />
+                  <img class="pokeicon legendary" src="../images/icons/pokemon/gen7/lpge/zapdos.png" alt="Icon of Zapdos" />
+                  <label class="text-sm lg:tooltip" data-tip="Power Plant." for="letsgopikachueevee-checkbox-zapdos">Zapdos</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="letsgopikachueevee-checkbox-mew" type="checkbox" />
-                  <img
-                    class="pokeicon legendary"
-                    src="../images/icons/pokemon/gen7/lpge/mew.png"
-                    alt="Icon of Mew"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Trade from another game."
-                    for="letsgopikachueevee-checkbox-mew"
-                    >Mew</label
-                  >
+                  <img class="pokeicon legendary" src="../images/icons/pokemon/gen7/lpge/mew.png" alt="Icon of Mew" />
+                  <label class="text-sm lg:tooltip" data-tip="Trade from another game." for="letsgopikachueevee-checkbox-mew">Mew</label>
                 </div>
               </div>
               <div class="legendaries-rightrow">
                 <div class="checkbox-item">
-                  <input
-                    id="letsgopikachueevee-checkbox-mewtwo"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon legendary"
-                    src="../images/icons/pokemon/gen7/lpge/mewtwo.png"
-                    alt="Icon of Mewtwo"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Cerulean Cave."
-                    for="letsgopikachueevee-checkbox-mewtwo"
-                    >Mewtwo</label
-                  >
+                  <input id="letsgopikachueevee-checkbox-mewtwo" type="checkbox" />
+                  <img class="pokeicon legendary" src="../images/icons/pokemon/gen7/lpge/mewtwo.png" alt="Icon of Mewtwo" />
+                  <label class="text-sm lg:tooltip" data-tip="Cerulean Cave." for="letsgopikachueevee-checkbox-mewtwo">Mewtwo</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="letsgopikachueevee-checkbox-meltan"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon legendary"
-                    src="../images/icons/pokemon/gen7/lpge/meltan.png"
-                    alt="Icon of Meltan"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Receeive from a Meltan Box."
-                    for="letsgopikachueevee-checkbox-meltan"
-                    >Meltan</label
-                  >
+                  <input id="letsgopikachueevee-checkbox-meltan" type="checkbox" />
+                  <img class="pokeicon legendary" src="../images/icons/pokemon/gen7/lpge/meltan.png" alt="Icon of Meltan" />
+                  <label class="text-sm lg:tooltip" data-tip="Receeive from a Meltan Box." for="letsgopikachueevee-checkbox-meltan">Meltan</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="letsgopikachueevee-checkbox-melmetal"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon legendary"
-                    src="../images/icons/pokemon/gen7/lpge/melmetal.png"
-                    alt="Icon of Melmetal"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Evolve Meltan."
-                    for="letsgopikachueevee-checkbox-melmetal"
-                    >Melmetal</label
-                  >
+                  <input id="letsgopikachueevee-checkbox-melmetal" type="checkbox" />
+                  <img class="pokeicon legendary" src="../images/icons/pokemon/gen7/lpge/melmetal.png" alt="Icon of Melmetal" />
+                  <label class="text-sm lg:tooltip" data-tip="Evolve Meltan." for="letsgopikachueevee-checkbox-melmetal">Melmetal</label>
                 </div>
               </div>
             </div>
           </div>
           <div class="giftpokemon">
             <div class="checkbox-item">
-              <span class="title"
-                ><label class="text-lg"
-                  >Obtain all In-Game Gift Pokemon</label
-                ></span
-              >
+              <span class="title"><label class="text-lg">Obtain all In-Game Gift Pokemon</label></span>
             </div>
             <div class="giftpokemon-rowcontainer">
               <div class="giftpokemon-leftrow">
                 <div class="checkbox-item">
-                  <input
-                    id="letsgopikachueevee-checkbox-persian-arcanine"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon"
-                    src="../images/icons/pokemon/gen7/lpge/persian.png"
-                    alt="Icon of Persian"
-                  />
-                  <img
-                    class="pokeicon"
-                    src="../images/icons/pokemon/gen7/lpge/arcanine.png"
-                    alt="Icon of Arcanine"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Vermilion City."
-                    for="letsgopikachueevee-checkbox-persian-arcanine"
-                    ><span style="color: #f1b836">Persian</span> /
-                    <span style="color: #bc6436">Arcanine</span></label
+                  <input id="letsgopikachueevee-checkbox-persian-arcanine" type="checkbox" />
+                  <img class="pokeicon" src="../images/icons/pokemon/gen7/lpge/persian.png" alt="Icon of Persian" />
+                  <img class="pokeicon" src="../images/icons/pokemon/gen7/lpge/arcanine.png" alt="Icon of Arcanine" />
+                  <label class="text-sm lg:tooltip" data-tip="Vermilion City." for="letsgopikachueevee-checkbox-persian-arcanine"
+                    ><span style="color: #f1b836">Persian</span> / <span style="color: #bc6436">Arcanine</span></label
                   >
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="letsgopikachueevee-checkbox-hitmonlee-hitmonchan"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon"
-                    src="../images/icons/pokemon/gen7/lpge/hitmonchan.png"
-                    alt="Icon of Hitmonchan"
-                  />
-                  <img
-                    class="pokeicon"
-                    src="../images/icons/pokemon/gen7/lpge/hitmonlee.png"
-                    alt="Icon of Hitmonlee"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Saffron City."
-                    for="letsgopikachueevee-checkbox-hitmonlee-hitmonchan"
-                    >Hitmonlee / Hitmonchan</label
-                  >
+                  <input id="letsgopikachueevee-checkbox-hitmonlee-hitmonchan" type="checkbox" />
+                  <img class="pokeicon" src="../images/icons/pokemon/gen7/lpge/hitmonchan.png" alt="Icon of Hitmonchan" />
+                  <img class="pokeicon" src="../images/icons/pokemon/gen7/lpge/hitmonlee.png" alt="Icon of Hitmonlee" />
+                  <label class="text-sm lg:tooltip" data-tip="Saffron City." for="letsgopikachueevee-checkbox-hitmonlee-hitmonchan">Hitmonlee / Hitmonchan</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="letsgopikachueevee-checkbox-omanyte-kabuto"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon"
-                    src="../images/icons/pokemon/gen7/lpge/omanyte.png"
-                    alt="Icon of Omanyte"
-                  />
-                  <img
-                    class="pokeicon"
-                    src="../images/icons/pokemon/gen7/lpge/kabuto.png"
-                    alt="Icon of Kabuto"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Cinnabar Island."
-                    for="letsgopikachueevee-checkbox-omanyte-kabuto"
-                    >Omanyte / Kabuto</label
-                  >
+                  <input id="letsgopikachueevee-checkbox-omanyte-kabuto" type="checkbox" />
+                  <img class="pokeicon" src="../images/icons/pokemon/gen7/lpge/omanyte.png" alt="Icon of Omanyte" />
+                  <img class="pokeicon" src="../images/icons/pokemon/gen7/lpge/kabuto.png" alt="Icon of Kabuto" />
+                  <label class="text-sm lg:tooltip" data-tip="Cinnabar Island." for="letsgopikachueevee-checkbox-omanyte-kabuto">Omanyte / Kabuto</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="letsgopikachueevee-checkbox-bulbasaur"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon"
-                    src="../images/icons/pokemon/gen7/lpge/bulbasaur.png"
-                    alt="Icon of Bulbasaur"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Cerulean City if you have over 30 Pokemon."
-                    for="letsgopikachueevee-checkbox-bulbasaur"
-                    >Bulbasaur</label
-                  >
+                  <input id="letsgopikachueevee-checkbox-bulbasaur" type="checkbox" />
+                  <img class="pokeicon" src="../images/icons/pokemon/gen7/lpge/bulbasaur.png" alt="Icon of Bulbasaur" />
+                  <label class="text-sm lg:tooltip" data-tip="Cerulean City if you have over 30 Pokemon." for="letsgopikachueevee-checkbox-bulbasaur">Bulbasaur</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="letsgopikachueevee-checkbox-charmender"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon"
-                    src="../images/icons/pokemon/gen7/lpge/charmender.png"
-                    alt="Icon of Charmender"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Route 24 if you have over 50 Pokemon."
-                    for="letsgopikachueevee-checkbox-charmender"
-                    >Charmender</label
-                  >
+                  <input id="letsgopikachueevee-checkbox-charmender" type="checkbox" />
+                  <img class="pokeicon" src="../images/icons/pokemon/gen7/lpge/charmender.png" alt="Icon of Charmender" />
+                  <label class="text-sm lg:tooltip" data-tip="Route 24 if you have over 50 Pokemon." for="letsgopikachueevee-checkbox-charmender">Charmender</label>
                 </div>
               </div>
               <div class="giftpokemon-rightrow">
                 <div class="checkbox-item">
-                  <input
-                    id="letsgopikachueevee-checkbox-squirtle"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon"
-                    src="../images/icons/pokemon/gen7/lpge/squirtle.png"
-                    alt="Icon of Squirtle"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Vermilion City if you have over 60 Pokemon."
-                    for="letsgopikachueevee-checkbox-squirtle"
-                    >Squirtle</label
-                  >
+                  <input id="letsgopikachueevee-checkbox-squirtle" type="checkbox" />
+                  <img class="pokeicon" src="../images/icons/pokemon/gen7/lpge/squirtle.png" alt="Icon of Squirtle" />
+                  <label class="text-sm lg:tooltip" data-tip="Vermilion City if you have over 60 Pokemon." for="letsgopikachueevee-checkbox-squirtle">Squirtle</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="letsgopikachueevee-checkbox-lapras"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon"
-                    src="../images/icons/pokemon/gen7/lpge/lapras.png"
-                    alt="Icon of Lapras"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Silph Co.."
-                    for="letsgopikachueevee-checkbox-lapras"
-                    >Lapras</label
-                  >
+                  <input id="letsgopikachueevee-checkbox-lapras" type="checkbox" />
+                  <img class="pokeicon" src="../images/icons/pokemon/gen7/lpge/lapras.png" alt="Icon of Lapras" />
+                  <label class="text-sm lg:tooltip" data-tip="Silph Co.." for="letsgopikachueevee-checkbox-lapras">Lapras</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="letsgopikachueevee-checkbox-magikarp"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon"
-                    src="../images/icons/pokemon/gen7/lpge/magikarp.png"
-                    alt="Icon of Magikarp"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Route 4."
-                    for="letsgopikachueevee-checkbox-magikarp"
-                    >Magikarp</label
-                  >
+                  <input id="letsgopikachueevee-checkbox-magikarp" type="checkbox" />
+                  <img class="pokeicon" src="../images/icons/pokemon/gen7/lpge/magikarp.png" alt="Icon of Magikarp" />
+                  <label class="text-sm lg:tooltip" data-tip="Route 4." for="letsgopikachueevee-checkbox-magikarp">Magikarp</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="letsgopikachueevee-checkbox-porygon"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon"
-                    src="../images/icons/pokemon/gen7/lpge/porygon.png"
-                    alt="Icon of Porygon"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Saffron City."
-                    for="letsgopikachueevee-checkbox-porygon"
-                    >Porygon</label
-                  >
+                  <input id="letsgopikachueevee-checkbox-porygon" type="checkbox" />
+                  <img class="pokeicon" src="../images/icons/pokemon/gen7/lpge/porygon.png" alt="Icon of Porygon" />
+                  <label class="text-sm lg:tooltip" data-tip="Saffron City." for="letsgopikachueevee-checkbox-porygon">Porygon</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="letsgopikachueevee-checkbox-aerodactyl"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon"
-                    src="../images/icons/pokemon/gen7/lpge/aerodactyl.png"
-                    alt="Icon of Aerodactyl"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Cinnabar Island."
-                    for="letsgopikachueevee-checkbox-aerodactyl"
-                    >Aerodactyl</label
-                  >
+                  <input id="letsgopikachueevee-checkbox-aerodactyl" type="checkbox" />
+                  <img class="pokeicon" src="../images/icons/pokemon/gen7/lpge/aerodactyl.png" alt="Icon of Aerodactyl" />
+                  <label class="text-sm lg:tooltip" data-tip="Cinnabar Island." for="letsgopikachueevee-checkbox-aerodactyl">Aerodactyl</label>
                 </div>
               </div>
             </div>
           </div>
           <div class="alolanforms">
             <div class="checkbox-item">
-              <span class="title"
-                ><label class="text-lg">Catch all Alolan Forms</label></span
-              >
-              <label
-                class="text-sm lg:tooltip"
-                data-tip="These are all the In-game Trades you can get. You can obtain them infinitely."
-                ><img
-                  class="icon-small"
-                  src="../images/icons/miscellaneous/other/moreinfo.png"
+              <span class="title"><label class="text-lg">Catch all Alolan Forms</label></span>
+              <label class="text-sm lg:tooltip" data-tip="These are all the In-game Trades you can get. You can obtain them infinitely."
+                ><img class="icon-small" src="../images/icons/miscellaneous/other/moreinfo.png"
               /></label>
             </div>
             <div class="alolanforms-rowcontainer">
               <div class="alolanforms-leftrow">
                 <div class="checkbox-item">
-                  <input
-                    id="letsgopikachueevee-checkbox-grimer-meowth"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon small"
-                    src="../images/icons/pokemon/gen7/lpge/alolanforms/grimer-alolan.png"
-                    alt="Icon of Alolan Grimer"
-                  />
-                  <img
-                    class="pokeicon small"
-                    src="../images/icons/pokemon/gen7/lpge/alolanforms/meowth-alolan.png"
-                    alt="Icon of Alolan Meowth"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Cinnabar Island."
-                    for="letsgopikachueevee-checkbox-grimer-meowth"
-                    ><span style="color: #f1b836">Grimer</span> /
-                    <span style="color: #bc6436">Meowth</span></label
+                  <input id="letsgopikachueevee-checkbox-grimer-meowth" type="checkbox" />
+                  <img class="pokeicon small" src="../images/icons/pokemon/gen7/lpge/alolanforms/grimer-alolan.png" alt="Icon of Alolan Grimer" />
+                  <img class="pokeicon small" src="../images/icons/pokemon/gen7/lpge/alolanforms/meowth-alolan.png" alt="Icon of Alolan Meowth" />
+                  <label class="text-sm lg:tooltip" data-tip="Cinnabar Island." for="letsgopikachueevee-checkbox-grimer-meowth"
+                    ><span style="color: #f1b836">Grimer</span> / <span style="color: #bc6436">Meowth</span></label
                   >
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="letsgopikachueevee-checkbox-sandshrew-vulpix"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon small"
-                    src="../images/icons/pokemon/gen7/lpge/alolanforms/sandshrew-alolan.png"
-                    alt="Icon of Alolan Sandshrew"
-                  />
-                  <img
-                    class="pokeicon small"
-                    src="../images/icons/pokemon/gen7/lpge/alolanforms/vulpix-alolan.png"
-                    alt="Icon of Alolan Vulpix"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Celadon City."
-                    for="letsgopikachueevee-checkbox-sandshrew-vulpix"
-                    ><span style="color: #f1b836">Sandshrew</span> /
-                    <span style="color: #bc6436">Vulpix</span></label
+                  <input id="letsgopikachueevee-checkbox-sandshrew-vulpix" type="checkbox" />
+                  <img class="pokeicon small" src="../images/icons/pokemon/gen7/lpge/alolanforms/sandshrew-alolan.png" alt="Icon of Alolan Sandshrew" />
+                  <img class="pokeicon small" src="../images/icons/pokemon/gen7/lpge/alolanforms/vulpix-alolan.png" alt="Icon of Alolan Vulpix" />
+                  <label class="text-sm lg:tooltip" data-tip="Celadon City." for="letsgopikachueevee-checkbox-sandshrew-vulpix"
+                    ><span style="color: #f1b836">Sandshrew</span> / <span style="color: #bc6436">Vulpix</span></label
                   >
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="letsgopikachueevee-checkbox-rattata"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon small"
-                    src="../images/icons/pokemon/gen7/lpge/alolanforms/rattata-alolan.png"
-                    alt="Icon of Alolan Rattata"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Cerulean City."
-                    for="letsgopikachueevee-checkbox-rattata"
-                    >Rattata</label
-                  >
+                  <input id="letsgopikachueevee-checkbox-rattata" type="checkbox" />
+                  <img class="pokeicon small" src="../images/icons/pokemon/gen7/lpge/alolanforms/rattata-alolan.png" alt="Icon of Alolan Rattata" />
+                  <label class="text-sm lg:tooltip" data-tip="Cerulean City." for="letsgopikachueevee-checkbox-rattata">Rattata</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="letsgopikachueevee-checkbox-geodude"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon small"
-                    src="../images/icons/pokemon/gen7/lpge/alolanforms/geodude-alolan.png"
-                    alt="Icon of Alolan Geodude"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Vermilion City."
-                    for="letsgopikachueevee-checkbox-geodude"
-                    >Geodude</label
-                  >
+                  <input id="letsgopikachueevee-checkbox-geodude" type="checkbox" />
+                  <img class="pokeicon small" src="../images/icons/pokemon/gen7/lpge/alolanforms/geodude-alolan.png" alt="Icon of Alolan Geodude" />
+                  <label class="text-sm lg:tooltip" data-tip="Vermilion City." for="letsgopikachueevee-checkbox-geodude">Geodude</label>
                 </div>
               </div>
               <div class="alolanforms-rightrow">
                 <div class="checkbox-item">
-                  <input
-                    id="letsgopikachueevee-checkbox-diglett"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon small"
-                    src="../images/icons/pokemon/gen7/lpge/alolanforms/diglett-alolan.png"
-                    alt="Icon of Alolan Diglett"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Lavender Town."
-                    for="letsgopikachueevee-checkbox-diglett"
-                    >Diglett</label
-                  >
+                  <input id="letsgopikachueevee-checkbox-diglett" type="checkbox" />
+                  <img class="pokeicon small" src="../images/icons/pokemon/gen7/lpge/alolanforms/diglett-alolan.png" alt="Icon of Alolan Diglett" />
+                  <label class="text-sm lg:tooltip" data-tip="Lavender Town." for="letsgopikachueevee-checkbox-diglett">Diglett</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="letsgopikachueevee-checkbox-raichu"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon small"
-                    src="../images/icons/pokemon/gen7/lpge/alolanforms/raichu-alolan.png"
-                    alt="Icon of Alolan Raichu"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Saffron City."
-                    for="letsgopikachueevee-checkbox-raichu"
-                    >Raichu</label
-                  >
+                  <input id="letsgopikachueevee-checkbox-raichu" type="checkbox" />
+                  <img class="pokeicon small" src="../images/icons/pokemon/gen7/lpge/alolanforms/raichu-alolan.png" alt="Icon of Alolan Raichu" />
+                  <label class="text-sm lg:tooltip" data-tip="Saffron City." for="letsgopikachueevee-checkbox-raichu">Raichu</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="letsgopikachueevee-checkbox-marowak"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon small"
-                    src="../images/icons/pokemon/gen7/lpge/alolanforms/marowak-alolan.png"
-                    alt="Icon of Alolan Marowak"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Fuchsia City."
-                    for="letsgopikachueevee-checkbox-marowak"
-                    >Marowak</label
-                  >
+                  <input id="letsgopikachueevee-checkbox-marowak" type="checkbox" />
+                  <img class="pokeicon small" src="../images/icons/pokemon/gen7/lpge/alolanforms/marowak-alolan.png" alt="Icon of Alolan Marowak" />
+                  <label class="text-sm lg:tooltip" data-tip="Fuchsia City." for="letsgopikachueevee-checkbox-marowak">Marowak</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="letsgopikachueevee-checkbox-exeggutor"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon"
-                    src="../images/icons/pokemon/gen7/lpge/alolanforms/exeggutor-alolan.png"
-                    alt="Icon of Alolan Exeggutor"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Indigo Plateau."
-                    for="letsgopikachueevee-checkbox-exeggutor"
-                    >Exeggutor</label
-                  >
+                  <input id="letsgopikachueevee-checkbox-exeggutor" type="checkbox" />
+                  <img class="pokeicon" src="../images/icons/pokemon/gen7/lpge/alolanforms/exeggutor-alolan.png" alt="Icon of Alolan Exeggutor" />
+                  <label class="text-sm lg:tooltip" data-tip="Indigo Plateau." for="letsgopikachueevee-checkbox-exeggutor">Exeggutor</label>
                 </div>
               </div>
             </div>
@@ -611,268 +231,86 @@
 
           <div class="mega">
             <div class="checkbox-item">
-              <span class="title"
-                ><label class="text-lg">Find all Mega Stones</label></span
-              >
+              <span class="title"><label class="text-lg">Find all Mega Stones</label></span>
             </div>
             <div class="mega-rowcontainer">
               <div class="mega-leftrow">
                 <div class="checkbox-item">
-                  <input
-                    id="letsgopikachueevee-checkbox-venusaurite"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon megastone"
-                    src="../images/icons/inventory/gen7/megastones/Dream_Venusaurite_Sprite.png"
-                    alt="Icon of Venusaurite"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Defeat Red in the Battle Tree."
-                    for="letsgopikachueevee-checkbox-venusaurite"
-                    >Venusaurite</label
-                  >
+                  <input id="letsgopikachueevee-checkbox-venusaurite" type="checkbox" />
+                  <img class="pokeicon megastone" src="../images/icons/inventory/gen7/megastones/Dream_Venusaurite_Sprite.png" alt="Icon of Venusaurite" />
+                  <label class="text-sm lg:tooltip" data-tip="Defeat Red in the Battle Tree." for="letsgopikachueevee-checkbox-venusaurite">Venusaurite</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="letsgopikachueevee-checkbox-charizarditex"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon megastone"
-                    src="../images/icons/inventory/gen7/megastones/Dream_Charizardite_X_Sprite.png"
-                    alt="Icon of Charizardite X"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Defeat Red in the Battle Tree."
-                    for="letsgopikachueevee-checkbox-charizarditex"
-                    >Charizardite X</label
-                  >
+                  <input id="letsgopikachueevee-checkbox-charizarditex" type="checkbox" />
+                  <img class="pokeicon megastone" src="../images/icons/inventory/gen7/megastones/Dream_Charizardite_X_Sprite.png" alt="Icon of Charizardite X" />
+                  <label class="text-sm lg:tooltip" data-tip="Defeat Red in the Battle Tree." for="letsgopikachueevee-checkbox-charizarditex">Charizardite X</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="letsgopikachueevee-checkbox-charizarditey"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon megastone"
-                    src="../images/icons/inventory/gen7/megastones/Dream_Charizardite_Y_Sprite.png"
-                    alt="Icon of Charizardite Y"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Defeat Red in the Battle Tree."
-                    for="letsgopikachueevee-checkbox-charizarditey"
-                    >Charizardite Y</label
-                  >
+                  <input id="letsgopikachueevee-checkbox-charizarditey" type="checkbox" />
+                  <img class="pokeicon megastone" src="../images/icons/inventory/gen7/megastones/Dream_Charizardite_Y_Sprite.png" alt="Icon of Charizardite Y" />
+                  <label class="text-sm lg:tooltip" data-tip="Defeat Red in the Battle Tree." for="letsgopikachueevee-checkbox-charizarditey">Charizardite Y</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="letsgopikachueevee-checkbox-blastoisinite"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon megastone"
-                    src="../images/icons/inventory/gen7/megastones/Dream_Blastoisinite_Sprite.png"
-                    alt="Icon of Blastoisinite"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Defeat Red in the Battle Tree."
-                    for="letsgopikachueevee-checkbox-blastoisinite"
-                    >Blastoisinite</label
-                  >
+                  <input id="letsgopikachueevee-checkbox-blastoisinite" type="checkbox" />
+                  <img class="pokeicon megastone" src="../images/icons/inventory/gen7/megastones/Dream_Blastoisinite_Sprite.png" alt="Icon of Blastoisinite" />
+                  <label class="text-sm lg:tooltip" data-tip="Defeat Red in the Battle Tree." for="letsgopikachueevee-checkbox-blastoisinite">Blastoisinite</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="letsgopikachueevee-checkbox-mewtwoniteX"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon megastone"
-                    src="../images/icons/inventory/gen7/megastones/Dream_Mewtwonite_X_Sprite.png"
-                    alt="Icon of Mewtwonite X"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Mewtwonite X download code."
-                    for="letsgopikachueevee-checkbox-mewtwoniteX"
-                    >Mewtwonite X</label
-                  >
+                  <input id="letsgopikachueevee-checkbox-mewtwoniteX" type="checkbox" />
+                  <img class="pokeicon megastone" src="../images/icons/inventory/gen7/megastones/Dream_Mewtwonite_X_Sprite.png" alt="Icon of Mewtwonite X" />
+                  <label class="text-sm lg:tooltip" data-tip="Mewtwonite X download code." for="letsgopikachueevee-checkbox-mewtwoniteX">Mewtwonite X</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="letsgopikachueevee-checkbox-mewtwoniteY"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon megastone"
-                    src="../images/icons/inventory/gen7/megastones/Dream_Mewtwonite_Y_Sprite.png"
-                    alt="Icon of Mewtwonite Y"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Mewtwonite Y download code."
-                    for="letsgopikachueevee-checkbox-mewtwoniteY"
-                    >Mewtwonite Y</label
-                  >
+                  <input id="letsgopikachueevee-checkbox-mewtwoniteY" type="checkbox" />
+                  <img class="pokeicon megastone" src="../images/icons/inventory/gen7/megastones/Dream_Mewtwonite_Y_Sprite.png" alt="Icon of Mewtwonite Y" />
+                  <label class="text-sm lg:tooltip" data-tip="Mewtwonite Y download code." for="letsgopikachueevee-checkbox-mewtwoniteY">Mewtwonite Y</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="letsgopikachueevee-checkbox-beedrilite"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon megastone"
-                    src="../images/icons/inventory/gen7/megastones/Dream_Beedrillite_Sprite.png"
-                    alt="Icon of Beedrillite"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Bedrillite download code."
-                    for="letsgopikachueevee-checkbox-beedrilite"
-                    >Beedrillite</label
-                  >
+                  <input id="letsgopikachueevee-checkbox-beedrilite" type="checkbox" />
+                  <img class="pokeicon megastone" src="../images/icons/inventory/gen7/megastones/Dream_Beedrillite_Sprite.png" alt="Icon of Beedrillite" />
+                  <label class="text-sm lg:tooltip" data-tip="Bedrillite download code." for="letsgopikachueevee-checkbox-beedrilite">Beedrillite</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="letsgopikachueevee-checkbox-pidgeotite"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon megastone"
-                    src="../images/icons/inventory/gen7/megastones/Dream_Pidgeotite_Sprite.png"
-                    alt="Icon of Pidgeotite"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Pidgeotite download code."
-                    for="letsgopikachueevee-checkbox-pidgeotite"
-                    >Pidgeotite</label
-                  >
+                  <input id="letsgopikachueevee-checkbox-pidgeotite" type="checkbox" />
+                  <img class="pokeicon megastone" src="../images/icons/inventory/gen7/megastones/Dream_Pidgeotite_Sprite.png" alt="Icon of Pidgeotite" />
+                  <label class="text-sm lg:tooltip" data-tip="Pidgeotite download code." for="letsgopikachueevee-checkbox-pidgeotite">Pidgeotite</label>
                 </div>
               </div>
               <div class="mega-rightrow">
                 <div class="checkbox-item">
-                  <input
-                    id="letsgopikachueevee-checkbox-alakazite"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon megastone"
-                    src="../images/icons/inventory/gen7/megastones/Dream_Alakazite_Sprite.png"
-                    alt="Icon of Alakazite"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Defeat Dexio on Ancient Poni Path; or Purchase with 64 BP at Battle Tree."
-                    for="letsgopikachueevee-checkbox-alakazite"
-                    >Alakazite</label
-                  >
+                  <input id="letsgopikachueevee-checkbox-alakazite" type="checkbox" />
+                  <img class="pokeicon megastone" src="../images/icons/inventory/gen7/megastones/Dream_Alakazite_Sprite.png" alt="Icon of Alakazite" />
+                  <label class="text-sm lg:tooltip" data-tip="Defeat Dexio on Ancient Poni Path; or Purchase with 64 BP at Battle Tree." for="letsgopikachueevee-checkbox-alakazite">Alakazite</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="letsgopikachueevee-checkbox-slowbronite"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon megastone"
-                    src="../images/icons/inventory/gen7/megastones/Dream_Slowbronite_Sprite.png"
-                    alt="Icon of Slowbronite"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Purchase with 64 BP at Battle Tree."
-                    for="letsgopikachueevee-checkbox-slowbronite"
-                    >Slowbronite</label
-                  >
+                  <input id="letsgopikachueevee-checkbox-slowbronite" type="checkbox" />
+                  <img class="pokeicon megastone" src="../images/icons/inventory/gen7/megastones/Dream_Slowbronite_Sprite.png" alt="Icon of Slowbronite" />
+                  <label class="text-sm lg:tooltip" data-tip="Purchase with 64 BP at Battle Tree." for="letsgopikachueevee-checkbox-slowbronite">Slowbronite</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="letsgopikachueevee-checkbox-gengarite"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon megastone"
-                    src="../images/icons/inventory/gen7/megastones/Dream_Gengarite_Sprite.png"
-                    alt="Icon of Gengarite"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Purchase with 64 BP at Battle Tree."
-                    for="letsgopikachueevee-checkbox-gengarite"
-                    >Gengarite</label
-                  >
+                  <input id="letsgopikachueevee-checkbox-gengarite" type="checkbox" />
+                  <img class="pokeicon megastone" src="../images/icons/inventory/gen7/megastones/Dream_Gengarite_Sprite.png" alt="Icon of Gengarite" />
+                  <label class="text-sm lg:tooltip" data-tip="Purchase with 64 BP at Battle Tree." for="letsgopikachueevee-checkbox-gengarite">Gengarite</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="letsgopikachueevee-checkbox-kangaskhanite"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon megastone"
-                    src="../images/icons/inventory/gen7/megastones/Dream_Kangaskhanite_Sprite.png"
-                    alt="Icon of Kangaskhanite"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Purchase with 64 BP at Battle Tree."
-                    for="letsgopikachueevee-checkbox-kangaskhanite"
-                    >Kangaskhanite</label
-                  >
+                  <input id="letsgopikachueevee-checkbox-kangaskhanite" type="checkbox" />
+                  <img class="pokeicon megastone" src="../images/icons/inventory/gen7/megastones/Dream_Kangaskhanite_Sprite.png" alt="Icon of Kangaskhanite" />
+                  <label class="text-sm lg:tooltip" data-tip="Purchase with 64 BP at Battle Tree." for="letsgopikachueevee-checkbox-kangaskhanite">Kangaskhanite</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="letsgopikachueevee-checkbox-pinsirite"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon megastone"
-                    src="../images/icons/inventory/gen7/megastones/Dream_Pinsirite_Sprite.png"
-                    alt="Icon of Pinsirite"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Purchase with 64 BP at Battle Tree."
-                    for="letsgopikachueevee-checkbox-pinsirite"
-                    >Pinsirite</label
-                  >
+                  <input id="letsgopikachueevee-checkbox-pinsirite" type="checkbox" />
+                  <img class="pokeicon megastone" src="../images/icons/inventory/gen7/megastones/Dream_Pinsirite_Sprite.png" alt="Icon of Pinsirite" />
+                  <label class="text-sm lg:tooltip" data-tip="Purchase with 64 BP at Battle Tree." for="letsgopikachueevee-checkbox-pinsirite">Pinsirite</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="letsgopikachueevee-checkbox-gyaradosite"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon megastone"
-                    src="../images/icons/inventory/gen7/megastones/Dream_Gyaradosite_Sprite.png"
-                    alt="Icon of Gyaradosite"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Purchase with 64 BP at Battle Tree."
-                    for="letsgopikachueevee-checkbox-gyaradosite"
-                    >Gyaradosite</label
-                  >
+                  <input id="letsgopikachueevee-checkbox-gyaradosite" type="checkbox" />
+                  <img class="pokeicon megastone" src="../images/icons/inventory/gen7/megastones/Dream_Gyaradosite_Sprite.png" alt="Icon of Gyaradosite" />
+                  <label class="text-sm lg:tooltip" data-tip="Purchase with 64 BP at Battle Tree." for="letsgopikachueevee-checkbox-gyaradosite">Gyaradosite</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="letsgopikachueevee-checkbox-aerodactylite"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon megastone"
-                    src="../images/icons/inventory/gen7/megastones/Dream_Aerodactylite_Sprite.png"
-                    alt="Icon of Aerodactylite"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Purchase with 64 BP at Battle Tree."
-                    for="letsgopikachueevee-checkbox-aerodactylite"
-                    >Aerodactylite</label
-                  >
+                  <input id="letsgopikachueevee-checkbox-aerodactylite" type="checkbox" />
+                  <img class="pokeicon megastone" src="../images/icons/inventory/gen7/megastones/Dream_Aerodactylite_Sprite.png" alt="Icon of Aerodactylite" />
+                  <label class="text-sm lg:tooltip" data-tip="Purchase with 64 BP at Battle Tree." for="letsgopikachueevee-checkbox-aerodactylite">Aerodactylite</label>
                 </div>
               </div>
             </div>
@@ -882,34 +320,15 @@
               <span class="title"><label class="text-lg">Items</label></span>
             </div>
             <div class="checkbox-item">
-              <input
-                id="letsgopikachueevee-checkbox-shiny-charm"
-                type="checkbox"
-              />
-              <img
-                class="pokeicon item"
-                src="../images/icons/inventory/gen5/charms/Key_Shiny_Charm_Sprite.png"
-              />
-              <label
-                class="text-sm lg:tooltip"
-                data-tip="Celadon Condominiums after filling the Kanto Pokedex."
-                for="letsgopikachueevee-checkbox-shiny-charm"
-                >Get Shiny Charm</label
-              >
+              <input id="letsgopikachueevee-checkbox-shiny-charm" type="checkbox" />
+              <img class="pokeicon item" src="../images/icons/inventory/gen5/charms/Key_Shiny_Charm_Sprite.png" />
+              <label class="text-sm lg:tooltip" data-tip="Celadon Condominiums after filling the Kanto Pokedex." for="letsgopikachueevee-checkbox-shiny-charm">Get Shiny Charm</label>
             </div>
 
             <div class="checkbox-item">
               <input id="letsgopikachueevee-checkbox-alltms" type="checkbox" />
-              <img
-                class="pokeicon item"
-                src="../images/icons/inventory/tms/normal.png"
-              />
-              <label
-                class="text-sm lg:tooltip"
-                data-tip="Find all TM's."
-                for="letsgopikachueevee-checkbox-alltms"
-                >Collect all TM's</label
-              >
+              <img class="pokeicon item" src="../images/icons/inventory/tms/normal.png" />
+              <label class="text-sm lg:tooltip" data-tip="Find all TM's." for="letsgopikachueevee-checkbox-alltms">Collect all TM's</label>
             </div>
           </div>
         </div>
@@ -922,37 +341,14 @@
             <div class="battle-rowcontainer">
               <div class="battle-leftrow">
                 <div class="checkbox-item">
-                  <input
-                    id="letsgopikachueevee-checkbox-coach-trainer"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon npc"
-                    src="../images/icons/miscellaneous/gen7/npc/coachtrainer-boy.png"
-                    alt="Icon of Coach Trainer Boy"
-                  />
-                  <img
-                    class="pokeicon npc"
-                    src="../images/icons/miscellaneous/gen7/npc/coachtrainer-girl.png"
-                    alt="Icon of Coach Trainer Girl"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Beat the Coach Trainers."
-                    for="letsgopikachueevee-checkbox-coach-trainer"
-                    >Coach Trainers</label
-                  >
+                  <input id="letsgopikachueevee-checkbox-coach-trainer" type="checkbox" />
+                  <img class="pokeicon npc" src="../images/icons/miscellaneous/gen7/npc/coachtrainer-boy.png" alt="Icon of Coach Trainer Boy" />
+                  <img class="pokeicon npc" src="../images/icons/miscellaneous/gen7/npc/coachtrainer-girl.png" alt="Icon of Coach Trainer Girl" />
+                  <label class="text-sm lg:tooltip" data-tip="Beat the Coach Trainers." for="letsgopikachueevee-checkbox-coach-trainer">Coach Trainers</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="letsgopikachueevee-checkbox-morimoto"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon npc"
-                    src="../images/icons/miscellaneous/gen7/npc/morimoto.png"
-                    alt="Icon of Morimoto"
-                  />
+                  <input id="letsgopikachueevee-checkbox-morimoto" type="checkbox" />
+                  <img class="pokeicon npc" src="../images/icons/miscellaneous/gen7/npc/morimoto.png" alt="Icon of Morimoto" />
                   <label
                     class="text-sm lg:tooltip"
                     data-tip="He is on the third floor of Celadon Condominiums after the player has entered the Hall of Fame."
@@ -962,11 +358,7 @@
                 </div>
                 <div class="checkbox-item">
                   <input id="letsgopikachueevee-checkbox-red" type="checkbox" />
-                  <img
-                    class="pokeicon npc"
-                    src="../images/icons/miscellaneous/gen7/npc/red.png"
-                    alt="Icon of Red"
-                  />
+                  <img class="pokeicon npc" src="../images/icons/miscellaneous/gen7/npc/red.png" alt="Icon of Red" />
                   <label
                     class="text-sm lg:tooltip"
                     data-tip="Defeat any six Master Trainers. Red will appear outside of the Pokemon League in the Indigo Plateau."
@@ -975,120 +367,42 @@
                   >
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="letsgopikachueevee-checkbox-rematch-elitefour"
-                    type="checkbox"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Rematch the Elite Four."
-                    for="letsgopikachueevee-checkbox-rematch-elitefour"
-                    >Rematch the Elite Four</label
-                  >
+                  <input id="letsgopikachueevee-checkbox-rematch-elitefour" type="checkbox" />
+                  <label class="text-sm lg:tooltip" data-tip="Rematch the Elite Four." for="letsgopikachueevee-checkbox-rematch-elitefour">Rematch the Elite Four</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="letsgopikachueevee-checkbox-master-trainer"
-                    type="checkbox"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Defeat every Master Trainer."
-                    for="letsgopikachueevee-checkbox-master-trainer"
-                    >Become Grand Master</label
-                  >
+                  <input id="letsgopikachueevee-checkbox-master-trainer" type="checkbox" />
+                  <label class="text-sm lg:tooltip" data-tip="Defeat every Master Trainer." for="letsgopikachueevee-checkbox-master-trainer">Become Grand Master</label>
                 </div>
               </div>
               <div class="battle-rightrow">
                 <div class="checkbox-item">
-                  <input
-                    id="letsgopikachueevee-checkbox-archer"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon npc"
-                    src="../images/icons/miscellaneous/gen7/npc/archer.png"
-                    alt="Icon of Archer"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Team Rocket Hideout after defeating it two times."
-                    for="letsgopikachueevee-checkbox-archer"
-                    >Rematch Rocket Admin Archer</label
-                  >
+                  <input id="letsgopikachueevee-checkbox-archer" type="checkbox" />
+                  <img class="pokeicon npc" src="../images/icons/miscellaneous/gen7/npc/archer.png" alt="Icon of Archer" />
+                  <label class="text-sm lg:tooltip" data-tip="Team Rocket Hideout after defeating it two times." for="letsgopikachueevee-checkbox-archer">Rematch Rocket Admin Archer</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="letsgopikachueevee-checkbox-jessie-james"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon npc"
-                    src="../images/icons/miscellaneous/gen7/npc/jessie.png"
-                    alt="Icon of Jessie"
-                  />
-                  <img
-                    class="pokeicon npc"
-                    src="../images/icons/miscellaneous/gen7/npc/james.png"
-                    alt="Icon of James"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Rematch for the last time. Route 17 after beating Team Rocket and the Elite Four."
-                    for="letsgopikachueevee-checkbox-jessie-james"
+                  <input id="letsgopikachueevee-checkbox-jessie-james" type="checkbox" />
+                  <img class="pokeicon npc" src="../images/icons/miscellaneous/gen7/npc/jessie.png" alt="Icon of Jessie" />
+                  <img class="pokeicon npc" src="../images/icons/miscellaneous/gen7/npc/james.png" alt="Icon of James" />
+                  <label class="text-sm lg:tooltip" data-tip="Rematch for the last time. Route 17 after beating Team Rocket and the Elite Four." for="letsgopikachueevee-checkbox-jessie-james"
                     >Rematch Jessie and James</label
                   >
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="letsgopikachueevee-checkbox-mina"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon npc"
-                    src="../images/icons/miscellaneous/gen7/npc/mina.png"
-                    alt="Icon of Mina"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Vermillion City after beating the Elite Four."
-                    for="letsgopikachueevee-checkbox-mina"
-                    >Rematch Mina</label
-                  >
+                  <input id="letsgopikachueevee-checkbox-mina" type="checkbox" />
+                  <img class="pokeicon npc" src="../images/icons/miscellaneous/gen7/npc/mina.png" alt="Icon of Mina" />
+                  <label class="text-sm lg:tooltip" data-tip="Vermillion City after beating the Elite Four." for="letsgopikachueevee-checkbox-mina">Rematch Mina</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="letsgopikachueevee-checkbox-green"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon npc"
-                    src="../images/icons/miscellaneous/gen7/npc/green.png"
-                    alt="Icon of Green"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Cerulean Cave after defeating the Elite Four."
-                    for="letsgopikachueevee-checkbox-green"
-                    >Battle Green</label
-                  >
+                  <input id="letsgopikachueevee-checkbox-green" type="checkbox" />
+                  <img class="pokeicon npc" src="../images/icons/miscellaneous/gen7/npc/green.png" alt="Icon of Green" />
+                  <label class="text-sm lg:tooltip" data-tip="Cerulean Cave after defeating the Elite Four." for="letsgopikachueevee-checkbox-green">Battle Green</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="letsgopikachueevee-checkbox-rematch-green"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon npc"
-                    src="../images/icons/miscellaneous/gen7/npc/green.png"
-                    alt="Icon of Green"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Cerulean City after rematching the Elite Four."
-                    for="letsgopikachueevee-checkbox-rematch-green"
-                    >Rematch Green</label
-                  >
+                  <input id="letsgopikachueevee-checkbox-rematch-green" type="checkbox" />
+                  <img class="pokeicon npc" src="../images/icons/miscellaneous/gen7/npc/green.png" alt="Icon of Green" />
+                  <label class="text-sm lg:tooltip" data-tip="Cerulean City after rematching the Elite Four." for="letsgopikachueevee-checkbox-rematch-green">Rematch Green</label>
                 </div>
               </div>
             </div>
@@ -1112,107 +426,73 @@
     <script src="../checklists/js/script.js"></script>
 
     <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        var letsgopikachuLogo = document.getElementById('letsgopikachu-logo');
-        var letsgoeeveeLogo = document.getElementById('letsgoeevee-logo');
+      document.addEventListener("DOMContentLoaded", function () {
+        var letsgopikachuLogo = document.getElementById("letsgopikachu-logo");
+        var letsgoeeveeLogo = document.getElementById("letsgoeevee-logo");
 
-        var headerTitle = document.querySelector('.title');
-        var widePanels = document.querySelectorAll('.wide-panel');
-        var footer = document.querySelector('footer');
-        var titleText = document.querySelectorAll('.panel-label');
-        var backgroundIcons = document.querySelector('body');
+        var headerTitle = document.querySelector(".title");
+        var widePanels = document.querySelectorAll(".wide-panel");
+        var footer = document.querySelector("footer");
+        var titleText = document.querySelectorAll(".panel-label");
+        var backgroundIcons = document.querySelector("body");
 
-        letsgopikachuLogo.addEventListener('click', function () {
-          headerTitle.style.color = '#f1b836';
-          footer.style.background = '#f1b836';
-          backgroundIcons.style.backgroundImage =
-            'url(../../images/patterns/pattern-letsgopikachu.png)';
+        letsgopikachuLogo.addEventListener("click", function () {
+          headerTitle.style.color = "#f1b836";
+          footer.style.background = "#f1b836";
+          backgroundIcons.style.backgroundImage = "url(../../images/patterns/pattern-letsgopikachu.png)";
 
           titleText.forEach(function (text) {
-            text.style.color = '#f1b836';
+            text.style.color = "#f1b836";
           });
 
           widePanels.forEach(function (panel) {
-            panel.style.border = '2px solid #f1b836';
+            panel.style.border = "2px solid #f1b836";
           });
         });
 
-        letsgoeeveeLogo.addEventListener('click', function () {
-          headerTitle.style.color = '#bc6436';
-          footer.style.backgroundColor = '#bc6436';
-          backgroundIcons.style.backgroundImage =
-            'url(../../images/patterns/pattern-letsgoeevee.png)';
+        letsgoeeveeLogo.addEventListener("click", function () {
+          headerTitle.style.color = "#bc6436";
+          footer.style.backgroundColor = "#bc6436";
+          backgroundIcons.style.backgroundImage = "url(../../images/patterns/pattern-letsgoeevee.png)";
 
           titleText.forEach(function (text) {
-            text.style.color = '#bc6436';
+            text.style.color = "#bc6436";
           });
 
           widePanels.forEach(function (panel) {
-            panel.style.border = '2px solid #bc6436';
+            panel.style.border = "2px solid #bc6436";
           });
         });
       });
     </script>
     <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        const completepokedexCheckboxes = document.querySelectorAll(
-          '.completepokedex input[type="checkbox"]'
-        );
-        const legendariesCheckboxes = document.querySelectorAll(
-          '.legendaries input[type="checkbox"]'
-        );
-        const giftpokemonCheckboxes = document.querySelectorAll(
-          '.giftpokemon input[type="checkbox"]'
-        );
-        const megaCheckboxes = document.querySelectorAll(
-          '.mega input[type="checkbox"]'
-        );
-        const battleCheckboxes = document.querySelectorAll(
-          '.battle input[type="checkbox"]'
-        );
-        const itemsCheckboxes = document.querySelectorAll(
-          '.items input[type="checkbox"]'
-        );
+      document.addEventListener("DOMContentLoaded", function () {
+        const completepokedexCheckboxes = document.querySelectorAll('.completepokedex input[type="checkbox"]');
+        const legendariesCheckboxes = document.querySelectorAll('.legendaries input[type="checkbox"]');
+        const giftpokemonCheckboxes = document.querySelectorAll('.giftpokemon input[type="checkbox"]');
+        const megaCheckboxes = document.querySelectorAll('.mega input[type="checkbox"]');
+        const battleCheckboxes = document.querySelectorAll('.battle input[type="checkbox"]');
+        const itemsCheckboxes = document.querySelectorAll('.items input[type="checkbox"]');
 
         function updateStyle(checkboxes, label) {
-          const allChecked = [...checkboxes].every(
-            (checkbox) => checkbox.checked
-          );
-          label.style.textDecoration = allChecked ? 'line-through' : 'none';
+          const allChecked = [...checkboxes].every((checkbox) => checkbox.checked);
+          label.style.textDecoration = allChecked ? "line-through" : "none";
         }
 
         function initializeCheckboxes(checkboxes, label) {
           checkboxes.forEach((checkbox) => {
-            checkbox.addEventListener('change', function () {
+            checkbox.addEventListener("change", function () {
               updateStyle(checkboxes, label);
             });
           });
           updateStyle(checkboxes, label);
         }
-        initializeCheckboxes(
-          completepokedexCheckboxes,
-          document.querySelector('.completepokedex .title label')
-        );
-        initializeCheckboxes(
-          legendariesCheckboxes,
-          document.querySelector('.legendaries .title label')
-        );
-        initializeCheckboxes(
-          giftpokemonCheckboxes,
-          document.querySelector('.giftpokemon .title label')
-        );
-        initializeCheckboxes(
-          megaCheckboxes,
-          document.querySelector('.mega .title label')
-        );
-        initializeCheckboxes(
-          battleCheckboxes,
-          document.querySelector('.battle .title label')
-        );
-        initializeCheckboxes(
-          itemsCheckboxes,
-          document.querySelector('.items .title label')
-        );
+        initializeCheckboxes(completepokedexCheckboxes, document.querySelector(".completepokedex .title label"));
+        initializeCheckboxes(legendariesCheckboxes, document.querySelector(".legendaries .title label"));
+        initializeCheckboxes(giftpokemonCheckboxes, document.querySelector(".giftpokemon .title label"));
+        initializeCheckboxes(megaCheckboxes, document.querySelector(".mega .title label"));
+        initializeCheckboxes(battleCheckboxes, document.querySelector(".battle .title label"));
+        initializeCheckboxes(itemsCheckboxes, document.querySelector(".items .title label"));
       });
     </script>
   </body>

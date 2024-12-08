@@ -3,146 +3,153 @@
 @tailwind utilities;
 
 * {
-	font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue;
-	padding: 0;
-	white-space: nowrap;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    Segoe UI,
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    Fira Sans,
+    Droid Sans,
+    Helvetica Neue;
+  padding: 0;
+  white-space: nowrap;
 }
 a {
-	text-decoration: none;
-	color: #FBFBFC;
+  text-decoration: none;
+  color: #fbfbfc;
 }
 body {
-	background: #fdfdfd;
-	/* url(../images/patterns/pattern-index.png) repeat center center; Icons Vectors by Vecteezy */
-	-webkit-font-smoothing: antialiased;
-	margin: 0;
+  background: #fdfdfd;
+  /* url(../images/patterns/pattern-index.png) repeat center center; Icons Vectors by Vecteezy */
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
 }
-
 
 .container {
-	margin-top: 50px;
-    margin-left: auto;
-    margin-right: auto; /* Add this line to center the container horizontally */
-    max-width: 1080px;
-    display: flex;
-    align-items: center;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto; /* Add this line to center the container horizontally */
+  max-width: 1080px;
+  display: flex;
+  align-items: center;
 }
 .header-left {
-	position: relative;
-	width: 550px;
-	max-width: 550px;
-	padding-top: 70px;
-	padding-bottom: 70px;
+  position: relative;
+  width: 550px;
+  max-width: 550px;
+  padding-top: 70px;
+  padding-bottom: 70px;
 }
 
 h1 {
-	font-size: 5rem;
+  font-size: 5rem;
 }
 
 p {
-	font-size: 1.2rem;
+  font-size: 1.2rem;
 }
 
 button {
-	min-width: 120px;
+  min-width: 120px;
 }
 .small-text {
-	margin-top: -10px;
-	text-align: center;
-	font-size: 15px;
-	color: #000000;
-	font-weight: 100;
+  margin-top: -10px;
+  text-align: center;
+  font-size: 15px;
+  color: #000000;
+  font-weight: 100;
 }
 
 .social a img.github {
-	width: 30px;
-	height: 30px;
-	margin: 10px;
+  width: 30px;
+  height: 30px;
+  margin: 10px;
 }
 .social {
-	position: absolute;
-	top: -50px;
-	right: 0px;
+  position: absolute;
+  top: -50px;
+  right: 0px;
 }
 .header-image {
-	max-height: 80vh;
-	margin-left: 200px;
-	z-index: 10;
+  max-height: 80vh;
+  margin-left: 200px;
+  z-index: 10;
 }
 footer {
-	text-align: center;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 50px;
-	width: 100%;
-	background: #23273E;
-	position: fixed;
-	bottom: 0;
-	color: white;
-	font-size: 1vw;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  background: #23273e;
+  position: fixed;
+  bottom: 0;
+  color: white;
+  font-size: 1vw;
 }
 footer ul {
-	display: flex;
-	list-style: circle;
-	padding: 0;
+  display: flex;
+  list-style: circle;
+  padding: 0;
 }
 footer li {
-	margin-right: 10px;
+  margin-right: 10px;
 }
 footer li a {
-	color: white;
-	text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
-
-
 
 /* Media queries for responsiveness */
 
 @media only screen and (max-width: 1200px) {
-	
-    .header-left {
-        width: 100%; 
-        max-width: none;
-        text-align: center; 
-    }
-    footer {
-        height: 50px; 
-        font-size: 15px;
-    }
-	.container {
-		display: flex;
-		flex-direction: column;
-	}
-	.header-image {
-		margin-left: 0px;
-		margin-top: -50px;
-	}
+  .header-left {
+    width: 100%;
+    max-width: none;
+    text-align: center;
+  }
+  footer {
+    height: 50px;
+    font-size: 15px;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .header-image {
+    margin-left: 0px;
+    margin-top: -50px;
+  }
 }
 
 @media only screen and (max-width: 530px) {
-	h1 {
-		font-size: 50px;
-	}
-	
-	p {
-		font-size: 16px;
-	}
-    .header-left {
-        width: 100%; 
-        max-width: none;
-        text-align: center; 
-    }
-    footer {
-        height: 30px; 
-        font-size: 10px;
-    }
-	.container {
-		display: flex;
-		flex-direction: column;
-	}
-	.header-image {
-		max-width: 400px;
-		margin-top: -70px;
-	}
+  h1 {
+    font-size: 50px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+  .header-left {
+    width: 100%;
+    max-width: none;
+    text-align: center;
+  }
+  footer {
+    height: 30px;
+    font-size: 10px;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .header-image {
+    max-width: 400px;
+    margin-top: -70px;
+  }
 }

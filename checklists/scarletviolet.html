@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,65 +6,29 @@
     <title>Progression Dex | Scarlet and Violet</title>
     <link href="../checklists/css/scarletviolet.css" rel="stylesheet" />
     <link href="../output.css" rel="stylesheet" />
-    <link
-      href="../images/icons/favicontab.ico"
-      rel="icon"
-      type="image/x-icon"
-    />
-    <link
-      href="../images/icons/favicontab.ico"
-      rel="shortcut icon"
-      type="image/x-icon"
-    />
-    <meta
-      name="description"
-      content="A tool for tracking your progression in Pokemon games. Easily choose between games and track your game progress."
-    />
-    <meta
-      name="keywords"
-      content="pokemon, checklist, pokedex, progress, completion, speedrun, checklist, check list, locations, characters, games, game"
-    />
+    <link href="../images/icons/favicontab.ico" rel="icon" type="image/x-icon" />
+    <link href="../images/icons/favicontab.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="description" content="A tool for tracking your progression in Pokemon games. Easily choose between games and track your game progress." />
+    <meta name="keywords" content="pokemon, checklist, pokedex, progress, completion, speedrun, checklist, check list, locations, characters, games, game" />
   </head>
   <!-- Google tag (gtag.js) -->
-  <script
-    async
-    src="https://www.googletagmanager.com/gtag/js?id=G-4PDLXC895H"
-  ></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4PDLXC895H"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() {
       dataLayer.push(arguments);
     }
-    gtag('js', new Date());
+    gtag("js", new Date());
 
-    gtag('config', 'G-4PDLXC895H');
+    gtag("config", "G-4PDLXC895H");
   </script>
   <body>
-    <div
-      class="navbar bg-white rounded-3xl shadow-lg mt-2 fixed top-0 flex items-center justify-between"
-      style="width: 95%; z-index: 1000; left: 50%; transform: translateX(-50%)"
-    >
+    <div class="navbar bg-white rounded-3xl shadow-lg mt-2 fixed top-0 flex items-center justify-between" style="width: 95%; z-index: 1000; left: 50%; transform: translateX(-50%)">
       <div class="flex items-center gap-4">
-        <a href="../index.html" class="btn btn-ghost text-2xl"
-          ><span class="title" style="color: #f25f36"
-            >Progression Dex |</span
-          ></a
-        >
+        <a href="../index.html" class="btn btn-ghost text-2xl"><span class="title" style="color: #f25f36">Progression Dex |</span></a>
         <div class="flex items-center gap-2">
-          <img
-            alt="Logo of Pokemon Scarlet"
-            src="id"
-            ="scarlet-logo"
-            src="../images/logos/scarlet-logo.webp"
-            class="w-20"
-          />
-          <img
-            alt="Logo of Pokemon Violet"
-            src="id"
-            ="violet-logo"
-            src="../images/logos/violet-logo.webp"
-            class="w-20"
-          />
+          <img alt="Logo of Pokemon Scarlet" src="id" ="scarlet-logo" src="../images/logos/scarlet-logo.webp" class="w-20" />
+          <img alt="Logo of Pokemon Violet" src="id" ="violet-logo" src="../images/logos/violet-logo.webp" class="w-20" />
         </div>
       </div>
     </div>
@@ -75,110 +39,51 @@
           <label class="panel-label">Pokédex</label>
           <div class="completepokedex">
             <div class="checkbox-item">
-              <span class="title"
-                ><label class="text-lg"
-                  >Complete the Paldea Pokédex</label
-                ></span
-              >
+              <span class="title"><label class="text-lg">Complete the Paldea Pokédex</label></span>
             </div>
             <div class="completepokedex-rowcontainer">
               <div class="completepokedex-leftrow">
                 <div class="checkbox-item">
-                  <input
-                    id="scarletviolet-checkbox-paldea-pokedex"
-                    type="checkbox"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="There are a total of 400 Pokemon in the Paldea Dex."
-                    for="scarletviolet-checkbox-paldea-pokedex"
-                    >Complete Hisui Pokedex</label
-                  >
+                  <input id="scarletviolet-checkbox-paldea-pokedex" type="checkbox" />
+                  <label class="text-sm lg:tooltip" data-tip="There are a total of 400 Pokemon in the Paldea Dex." for="scarletviolet-checkbox-paldea-pokedex">Complete Hisui Pokedex</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="scarletviolet-checkbox-starters" type="checkbox" />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Link your Pokemon Home to Scarlet or Violet to receive all three starters."
-                    for="scarletviolet-checkbox-starters"
+                  <label class="text-sm lg:tooltip" data-tip="Link your Pokemon Home to Scarlet or Violet to receive all three starters." for="scarletviolet-checkbox-starters"
                     >Obtain all starters</label
                   >
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="scarletviolet-checkbox-shiny-charm"
-                    type="checkbox"
-                  />
-                  <img
-                    alt="Icon of Shiny Charm"
-                    src="class"
-                    ="pokeicon item"
-                    src="../images/icons/miscellaneous/gen8/swordshield/charms/shiny-charm.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Location: Biology Lab. Speak to Jacq to get the Shiny Charm after catching all Pokemon."
-                    for="scarletviolet-checkbox-shiny-charm"
+                  <input id="scarletviolet-checkbox-shiny-charm" type="checkbox" />
+                  <img alt="Icon of Shiny Charm" src="class" ="pokeicon item" src="../images/icons/miscellaneous/gen8/swordshield/charms/shiny-charm.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Location: Biology Lab. Speak to Jacq to get the Shiny Charm after catching all Pokemon." for="scarletviolet-checkbox-shiny-charm"
                     >Get Shiny Charm</label
                   >
                 </div>
               </div>
               <div class="completepokedex-rightrow">
                 <div class="checkbox-item">
-                  <input
-                    id="scarletviolet-checkbox-terapokemon"
-                    type="checkbox"
-                  />
-                  <img
-                    alt="Icon of Terra Pokemon"
-                    src="class"
-                    ="pokeicon item"
-                    src="../images/icons/miscellaneous/gen9/Terestalicon.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Catch all 73 Tera Pokemon all accross Paldea."
-                    for="scarletviolet-checkbox-terapokemon"
-                    >Catch all Tera Pokemon</label
-                  >
+                  <input id="scarletviolet-checkbox-terapokemon" type="checkbox" />
+                  <img alt="Icon of Terra Pokemon" src="class" ="pokeicon item" src="../images/icons/miscellaneous/gen9/Terestalicon.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Catch all 73 Tera Pokemon all accross Paldea." for="scarletviolet-checkbox-terapokemon">Catch all Tera Pokemon</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="scarletviolet-checkbox-titanpokemon"
-                    type="checkbox"
-                  />
-                  <img
-                    alt="Icon of Titan Pokemon"
-                    src="class"
-                    ="pokeicon item"
-                    src="../images/icons/miscellaneous/gen9/marks/titanmark.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Catch all Titan Pokemon."
-                    for="scarletviolet-checkbox-titanpokemon"
-                    >Catch all Titan Pokemon</label
-                  >
+                  <input id="scarletviolet-checkbox-titanpokemon" type="checkbox" />
+                  <img alt="Icon of Titan Pokemon" src="class" ="pokeicon item" src="../images/icons/miscellaneous/gen9/marks/titanmark.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Catch all Titan Pokemon." for="scarletviolet-checkbox-titanpokemon">Catch all Titan Pokemon</label>
                 </div>
               </div>
             </div>
           </div>
           <div class="legendaries">
             <div class="checkbox-item">
-              <span class="title"
-                ><label class="text-lg">Catch all Legendaries</label></span
-              >
+              <span class="title"><label class="text-lg">Catch all Legendaries</label></span>
             </div>
             <div class="legendaries-rowcontainer">
               <div class="legendaries-leftrow">
                 <div class="checkbox-item">
                   <input id="scarletviolet-checkbox-miraidon" type="checkbox" />
-                  <img
-                    alt="Icon of Miraidon"
-                    src="class"
-                    ="pokeicon legendary"
-                    src="../images/icons/pokemon/gen9/miraidon.png"
-                  />
+                  <img alt="Icon of Miraidon" src="class" ="pokeicon legendary" src="../images/icons/pokemon/gen9/miraidon.png" />
                   <label
                     class="text-sm lg:tooltip"
                     data-tip="Location: Area Zero. Finish the base game and return to Area Zero, there you will be able to find the second Miraidon."
@@ -188,12 +93,7 @@
                 </div>
                 <div class="checkbox-item">
                   <input id="scarletviolet-checkbox-koraidon" type="checkbox" />
-                  <img
-                    alt="Icon of Koraidon"
-                    src="class"
-                    ="pokeicon legendary"
-                    src="../images/icons/pokemon/gen9/koraidon.png"
-                  />
+                  <img alt="Icon of Koraidon" src="class" ="pokeicon legendary" src="../images/icons/pokemon/gen9/koraidon.png" />
                   <label
                     class="text-sm lg:tooltip"
                     data-tip="Location: Area Zero. Finish the base game and return to Area Zero, there you will be able to find the second Koraidon."
@@ -205,48 +105,18 @@
               <div class="legendaries-rightrow">
                 <div class="checkbox-item">
                   <input id="scarletviolet-checkbox-tinglu" type="checkbox" />
-                  <img
-                    alt="Icon of Ting Lu"
-                    src="class"
-                    ="pokeicon legendary"
-                    src="../images/icons/pokemon/gen9/ting-lu.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Location: Socarrat Trail. Remove all 8 stakes around Casseroya Lake."
-                    for="scarletviolet-checkbox-tinglu"
-                    >Ting-Lu</label
-                  >
+                  <img alt="Icon of Ting Lu" src="class" ="pokeicon legendary" src="../images/icons/pokemon/gen9/ting-lu.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Location: Socarrat Trail. Remove all 8 stakes around Casseroya Lake." for="scarletviolet-checkbox-tinglu">Ting-Lu</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="scarletviolet-checkbox-chienpao" type="checkbox" />
-                  <img
-                    alt="Icon of Chien Pao"
-                    src="class"
-                    ="pokeicon legendary"
-                    src="../images/icons/pokemon/gen9/chien-pao.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Location: West Province. Remove all 8 stakes around West Province."
-                    for="scarletviolet-checkbox-chienpao"
-                    >Chien-Pao</label
-                  >
+                  <img alt="Icon of Chien Pao" src="class" ="pokeicon legendary" src="../images/icons/pokemon/gen9/chien-pao.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Location: West Province. Remove all 8 stakes around West Province." for="scarletviolet-checkbox-chienpao">Chien-Pao</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="scarletviolet-checkbox-wochien" type="checkbox" />
-                  <img
-                    alt="Icon of Wo Chien"
-                    src="class"
-                    ="pokeicon legendary"
-                    src="../images/icons/pokemon/gen9/wo-chien.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Location: South Province. Remove all 8 stakes around South Province."
-                    for="scarletviolet-checkbox-wochien"
-                    >Wo-Chien</label
-                  >
+                  <img alt="Icon of Wo Chien" src="class" ="pokeicon legendary" src="../images/icons/pokemon/gen9/wo-chien.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Location: South Province. Remove all 8 stakes around South Province." for="scarletviolet-checkbox-wochien">Wo-Chien</label>
                 </div>
               </div>
             </div>
@@ -254,20 +124,11 @@
 
           <div class="giftpokemon">
             <div class="checkbox-item">
-              <span class="title"
-                ><label class="text-lg"
-                  >Obtain all In-Game Gift Pokemon</label
-                ></span
-              >
+              <span class="title"><label class="text-lg">Obtain all In-Game Gift Pokemon</label></span>
             </div>
             <div class="checkbox-item">
               <input id="scarletviolet-checkbox-meowth" type="checkbox" />
-              <img
-                alt="Icon of Galarian Meowth"
-                src="class"
-                ="pokeicon"
-                src="../images/icons/pokemon/gen9/meowth-galarian.png"
-              />
+              <img alt="Icon of Galarian Meowth" src="class" ="pokeicon" src="../images/icons/pokemon/gen9/meowth-galarian.png" />
               <label
                 class="text-sm lg:tooltip"
                 data-tip="Location: The Academy. Help Salvatore to help a Pawmi. Convince him to keep the Pawmi, and you'll get a Galarian Meowth."
@@ -282,146 +143,52 @@
           <label class="panel-label" id="title">Exploration</label>
           <div class="exploration">
             <div class="checkbox-item">
-              <span class="title"
-                ><label class="text-lg">Explore Paldea</label></span
-              >
+              <span class="title"><label class="text-lg">Explore Paldea</label></span>
             </div>
             <div class="exploration-rowcontainer">
               <div class="exploration-leftrow">
                 <div class="checkbox-item">
-                  <input
-                    id="scarletviolet-checkbox-tensights"
-                    type="checkbox"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Take a picture at every sight."
-                    for="scarletviolet-checkbox-tensights"
-                    >Visit the 10 Great Sights</label
-                  >
+                  <input id="scarletviolet-checkbox-tensights" type="checkbox" />
+                  <label class="text-sm lg:tooltip" data-tip="Take a picture at every sight." for="scarletviolet-checkbox-tensights">Visit the 10 Great Sights</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="scarletviolet-checkbox-watchtowers"
-                    type="checkbox"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="There are a total of 13 watchtowers."
-                    for="scarletviolet-checkbox-watchtowers"
-                    >Climb every watchtower</label
-                  >
+                  <input id="scarletviolet-checkbox-watchtowers" type="checkbox" />
+                  <label class="text-sm lg:tooltip" data-tip="There are a total of 13 watchtowers." for="scarletviolet-checkbox-watchtowers">Climb every watchtower</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="scarletviolet-checkbox-defeatalltrainers"
-                    type="checkbox"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="According to my research, there are about 290 trainers."
-                    for="scarletviolet-checkbox-defeatalltrainers"
-                    >Defeat all trainers</label
-                  >
+                  <input id="scarletviolet-checkbox-defeatalltrainers" type="checkbox" />
+                  <label class="text-sm lg:tooltip" data-tip="According to my research, there are about 290 trainers." for="scarletviolet-checkbox-defeatalltrainers">Defeat all trainers</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="scarletviolet-checkbox-everyclothing"
-                    type="checkbox"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="There are 900 clothing items, I THINK you can buy them all?"
-                    for="scarletviolet-checkbox-everyclothing"
-                    >Buy every clothing item</label
-                  >
+                  <input id="scarletviolet-checkbox-everyclothing" type="checkbox" />
+                  <label class="text-sm lg:tooltip" data-tip="There are 900 clothing items, I THINK you can buy them all?" for="scarletviolet-checkbox-everyclothing">Buy every clothing item</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="scarletviolet-checkbox-everypicnic"
-                    type="checkbox"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="There are 83 picnic items."
-                    for="scarletviolet-checkbox-everypicnic"
-                    >Buy the picnic decorations</label
-                  >
+                  <input id="scarletviolet-checkbox-everypicnic" type="checkbox" />
+                  <label class="text-sm lg:tooltip" data-tip="There are 83 picnic items." for="scarletviolet-checkbox-everypicnic">Buy the picnic decorations</label>
                 </div>
               </div>
               <div class="exploration-rightrow">
                 <div class="checkbox-item">
-                  <input
-                    id="scarletviolet-checkbox-everytmrecipe"
-                    type="checkbox"
-                  />
-                  <img
-                    alt="Icon of TM"
-                    src="class"
-                    ="pokeicon"
-                    src="../images/icons/inventory/tms/normal.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Collect every TM recipe."
-                    for="scarletviolet-checkbox-everytmrecipe"
-                    >Collect every TM recipe</label
-                  >
+                  <input id="scarletviolet-checkbox-everytmrecipe" type="checkbox" />
+                  <img alt="Icon of TM" src="class" ="pokeicon" src="../images/icons/inventory/tms/normal.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Collect every TM recipe." for="scarletviolet-checkbox-everytmrecipe">Collect every TM recipe</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="scarletviolet-checkbox-everysandwichrecipe"
-                    type="checkbox"
-                  />
-                  <img
-                    alt="Icon of Sandwich"
-                    src="class"
-                    ="pokeicon"
-                    src="../images/icons/inventory/gen9/Sandwich.webp"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Collect every sandwich recipes."
-                    for="scarletviolet-checkbox-everysandwichrecipe"
-                    >Collect every sandwich recipes</label
-                  >
+                  <input id="scarletviolet-checkbox-everysandwichrecipe" type="checkbox" />
+                  <img alt="Icon of Sandwich" src="class" ="pokeicon" src="../images/icons/inventory/gen9/Sandwich.webp" />
+                  <label class="text-sm lg:tooltip" data-tip="Collect every sandwich recipes." for="scarletviolet-checkbox-everysandwichrecipe">Collect every sandwich recipes</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="scarletviolet-checkbox-everypokeball"
-                    type="checkbox"
-                  />
-                  <img
-                    alt="Icon of Pokeball"
-                    src="class"
-                    ="pokeicon"
-                    src="../images/icons/inventory/gen9/poke.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Collect every Pokéball."
-                    for="scarletviolet-checkbox-everypokeball"
-                    >Collect every Pokéball</label
-                  >
+                  <input id="scarletviolet-checkbox-everypokeball" type="checkbox" />
+                  <img alt="Icon of Pokeball" src="class" ="pokeicon" src="../images/icons/inventory/gen9/poke.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Collect every Pokéball." for="scarletviolet-checkbox-everypokeball">Collect every Pokéball</label>
                 </div>
 
                 <div class="checkbox-item">
-                  <input
-                    id="scarletviolet-checkbox-everymark"
-                    type="checkbox"
-                  />
-                  <img
-                    alt="Icon of Mark"
-                    src="class"
-                    ="pokeicon"
-                    src="../images/icons/miscellaneous/gen9/marks/alphamark.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Collect every mark."
-                    for="scarletviolet-checkbox-everymark"
-                    >Collect every mark</label
-                  >
+                  <input id="scarletviolet-checkbox-everymark" type="checkbox" />
+                  <img alt="Icon of Mark" src="class" ="pokeicon" src="../images/icons/miscellaneous/gen9/marks/alphamark.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Collect every mark." for="scarletviolet-checkbox-everymark">Collect every mark</label>
                 </div>
               </div>
             </div>
@@ -432,79 +199,27 @@
         <div class="wide-panel mainstory">
           <label class="panel-label" id="title">Main Story</label>
           <div class="checkbox-item">
-            <span class="title"
-              ><label class="text-lg">Complete all the storylines</label></span
-            >
+            <span class="title"><label class="text-lg">Complete all the storylines</label></span>
           </div>
           <div class="mainstory">
             <div class="checkbox-item">
-              <input
-                id="scarletviolet-checkbox-pathoflegends"
-                type="checkbox"
-              />
-              <img
-                alt="Icon of Path of Legends"
-                src="class"
-                ="pokeicon item"
-                src="../images/icons/miscellaneous/gen9/marks/titanmark.png"
-              />
-              <label
-                class="text-sm lg:tooltip"
-                data-tip="Complete the Titan Pokemon Storyline."
-                for="scarletviolet-checkbox-pathoflegends"
-                >Complete the Path of Legends</label
-              >
+              <input id="scarletviolet-checkbox-pathoflegends" type="checkbox" />
+              <img alt="Icon of Path of Legends" src="class" ="pokeicon item" src="../images/icons/miscellaneous/gen9/marks/titanmark.png" />
+              <label class="text-sm lg:tooltip" data-tip="Complete the Titan Pokemon Storyline." for="scarletviolet-checkbox-pathoflegends">Complete the Path of Legends</label>
             </div>
             <div class="checkbox-item">
-              <input
-                id="scarletviolet-checkbox-starfallstreet"
-                type="checkbox"
-              />
-              <img
-                alt="Icon of Starfall Street"
-                src="class"
-                ="pokeicon item"
-                src="../images/icons/miscellaneous/gen9/starlogo.png"
-              />
-              <label
-                class="text-sm lg:tooltip"
-                data-tip="Complete the Team Star Storyline."
-                for="scarletviolet-checkbox-starfallstreet"
-                >Complete Starfall Street</label
-              >
+              <input id="scarletviolet-checkbox-starfallstreet" type="checkbox" />
+              <img alt="Icon of Starfall Street" src="class" ="pokeicon item" src="../images/icons/miscellaneous/gen9/starlogo.png" />
+              <label class="text-sm lg:tooltip" data-tip="Complete the Team Star Storyline." for="scarletviolet-checkbox-starfallstreet">Complete Starfall Street</label>
             </div>
             <div class="checkbox-item">
-              <input
-                id="scarletviolet-checkbox-victoryroad"
-                type="checkbox"
-              /><img
-                alt="Icon of Victory Road"
-                src="class"
-                ="pokeicon item"
-                src="../images/icons/miscellaneous/gen9/leaguelogo.png"
-              />
-              <label
-                class="text-sm lg:tooltip"
-                data-tip="Complete the Gym Challenge Storyline."
-                for="scarletviolet-checkbox-victoryroad"
-                >Complete Victory Road</label
-              >
+              <input id="scarletviolet-checkbox-victoryroad" type="checkbox" /><img alt="Icon of Victory Road" src="class" ="pokeicon item" src="../images/icons/miscellaneous/gen9/leaguelogo.png" />
+              <label class="text-sm lg:tooltip" data-tip="Complete the Gym Challenge Storyline." for="scarletviolet-checkbox-victoryroad">Complete Victory Road</label>
             </div>
             <div class="checkbox-item">
               <input id="scarletviolet-checkbox-awayhome" type="checkbox" />
-              <img
-                alt="Icon of Sada"
-                src="id"
-                ="professorIcons"
-                class="pokeicon item"
-                src="../images/icons/miscellaneous/gen9/characters/sada.png"
-              />
-              <label
-                class="text-sm lg:tooltip"
-                data-tip="Complete the Journey to Area Zero Storyline."
-                for="scarletviolet-checkbox-awayhome"
-                >Complete A Way Home</label
-              >
+              <img alt="Icon of Sada" src="id" ="professorIcons" class="pokeicon item" src="../images/icons/miscellaneous/gen9/characters/sada.png" />
+              <label class="text-sm lg:tooltip" data-tip="Complete the Journey to Area Zero Storyline." for="scarletviolet-checkbox-awayhome">Complete A Way Home</label>
             </div>
           </div>
         </div>
@@ -512,100 +227,47 @@
           <label class="panel-label">Post Game</label>
           <div class="postgame">
             <div class="checkbox-item">
-              <span class="title"
-                ><label class="text-lg">Side Quests and Post Game</label></span
-              >
+              <span class="title"><label class="text-lg">Side Quests and Post Game</label></span>
             </div>
             <div class="checkbox-item">
               <input id="scarletviolet-checkbox-reprewards" type="checkbox" />
-              <label
-                class="text-sm lg:tooltip"
-                data-tip="If you defeat a certain amount of trainers in an area, they will give you a prize."
-                for="scarletviolet-checkbox-reprewards"
+              <label class="text-sm lg:tooltip" data-tip="If you defeat a certain amount of trainers in an area, they will give you a prize." for="scarletviolet-checkbox-reprewards"
                 >Receive all rewards from the League Challenge Reps</label
               >
             </div>
             <div class="checkbox-item">
-              <input
-                id="scarletviolet-checkbox-completeclasses"
-                type="checkbox"
-              />
-              <label
-                class="text-sm lg:tooltip"
-                data-tip="Pass the midterm and final exams to complete all classes."
-                for="scarletviolet-checkbox-completeclasses"
-                >Complete all classes</label
-              >
+              <input id="scarletviolet-checkbox-completeclasses" type="checkbox" />
+              <label class="text-sm lg:tooltip" data-tip="Pass the midterm and final exams to complete all classes." for="scarletviolet-checkbox-completeclasses">Complete all classes</label>
             </div>
             <div class="checkbox-item">
               <input id="scarletviolet-checkbox-formabond" type="checkbox" />
-              <label
-                class="text-sm lg:tooltip"
-                data-tip="Form a close bond with friends and teachers."
-                for="scarletviolet-checkbox-formabond"
-                >Form a close bond with all of the school faculty</label
-              >
+              <label class="text-sm lg:tooltip" data-tip="Form a close bond with friends and teachers." for="scarletviolet-checkbox-formabond">Form a close bond with all of the school faculty</label>
             </div>
             <div class="checkbox-item">
               <input id="scarletviolet-checkbox-inspectgyms" type="checkbox" />
-              <label
-                class="text-sm lg:tooltip"
-                data-tip="Rematch the Gym Leaders."
-                for="scarletviolet-checkbox-inspectgyms"
-                >Inspect the Gyms for Geeta</label
-              >
+              <label class="text-sm lg:tooltip" data-tip="Rematch the Gym Leaders." for="scarletviolet-checkbox-inspectgyms">Inspect the Gyms for Geeta</label>
             </div>
             <div class="checkbox-item">
-              <input
-                id="scarletviolet-checkbox-1staceacademy"
-                type="checkbox"
-              />
-              <label
-                class="text-sm lg:tooltip"
-                data-tip="Defeat the first Academy Ace Tournament."
-                for="scarletviolet-checkbox-1staceacademy"
-                >Win the 1st Academy Ace Tournament</label
-              >
+              <input id="scarletviolet-checkbox-1staceacademy" type="checkbox" />
+              <label class="text-sm lg:tooltip" data-tip="Defeat the first Academy Ace Tournament." for="scarletviolet-checkbox-1staceacademy">Win the 1st Academy Ace Tournament</label>
             </div>
             <div class="checkbox-item">
               <input id="scarletviolet-checkbox-6starraids" type="checkbox" />
-              <label
-                class="text-sm lg:tooltip"
-                data-tip="Finish the game and beat the Academy Ace Tournament."
-                for="scarletviolet-checkbox-6starraids"
-                >Unlock 6-Star Raids</label
-              >
+              <label class="text-sm lg:tooltip" data-tip="Finish the game and beat the Academy Ace Tournament." for="scarletviolet-checkbox-6starraids">Unlock 6-Star Raids</label>
             </div>
             <div class="checkbox-item">
               <input id="scarletviolet-checkbox-sociallinks" type="checkbox" />
-              <label
-                class="text-sm lg:tooltip"
-                data-tip="Complete School Social Links with friends."
-                for="scarletviolet-checkbox-sociallinks"
-                >Complete School Social Links with friends</label
-              >
+              <label class="text-sm lg:tooltip" data-tip="Complete School Social Links with friends." for="scarletviolet-checkbox-sociallinks">Complete School Social Links with friends</label>
             </div>
             <div class="checkbox-item">
-              <input
-                id="scarletviolet-checkbox-revisitteamstar"
-                type="checkbox"
-              />
-              <label
-                class="text-sm lg:tooltip"
-                data-tip="After completing the story, you will be able to visit the Team Star bosses in their old bases."
-                for="scarletviolet-checkbox-revisitteamstar"
+              <input id="scarletviolet-checkbox-revisitteamstar" type="checkbox" />
+              <label class="text-sm lg:tooltip" data-tip="After completing the story, you will be able to visit the Team Star bosses in their old bases." for="scarletviolet-checkbox-revisitteamstar"
                 >Revisit Team Star bases for Rematches</label
               >
             </div>
             <div class="checkbox-item">
-              <input
-                id="scarletviolet-checkbox-revisitacademytournament"
-                type="checkbox"
-              />
-              <label
-                class="text-sm lg:tooltip"
-                data-tip="There are 13 possible new battle options."
-                for="scarletviolet-checkbox-revisitacademytournament"
+              <input id="scarletviolet-checkbox-revisitacademytournament" type="checkbox" />
+              <label class="text-sm lg:tooltip" data-tip="There are 13 possible new battle options." for="scarletviolet-checkbox-revisitacademytournament"
                 >Revisit Academy Ace Tournament for new battles</label
               >
             </div>
@@ -630,114 +292,78 @@
     <script src="../checklists/js/script.js"></script>
 
     <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        var scarletLogo = document.getElementById('scarlet-logo');
-        var violetLogo = document.getElementById('violet-logo');
+      document.addEventListener("DOMContentLoaded", function () {
+        var scarletLogo = document.getElementById("scarlet-logo");
+        var violetLogo = document.getElementById("violet-logo");
 
-        var headerTitle = document.querySelector('.title');
-        var widePanels = document.querySelectorAll('.wide-panel');
-        var footer = document.querySelector('footer');
-        var titleText = document.querySelectorAll('.panel-label');
-        var backgroundIcons = document.querySelector('body');
+        var headerTitle = document.querySelector(".title");
+        var widePanels = document.querySelectorAll(".wide-panel");
+        var footer = document.querySelector("footer");
+        var titleText = document.querySelectorAll(".panel-label");
+        var backgroundIcons = document.querySelector("body");
 
-        var professorIcons = document.getElementById('professorIcons');
+        var professorIcons = document.getElementById("professorIcons");
 
-        scarletLogo.addEventListener('click', function () {
-          headerTitle.style.color = '#f25f36';
-          footer.style.background = '#f25f36';
-          backgroundIcons.style.backgroundImage =
-            'url(../../images/patterns/pattern-scarlet.png)';
-          professorIcons.src =
-            '../../images/icons/miscellaneous/gen9/characters/sada.png';
+        scarletLogo.addEventListener("click", function () {
+          headerTitle.style.color = "#f25f36";
+          footer.style.background = "#f25f36";
+          backgroundIcons.style.backgroundImage = "url(../../images/patterns/pattern-scarlet.png)";
+          professorIcons.src = "../../images/icons/miscellaneous/gen9/characters/sada.png";
 
           titleText.forEach(function (text) {
-            text.style.color = '#f25f36';
+            text.style.color = "#f25f36";
           });
 
           widePanels.forEach(function (panel) {
-            panel.style.border = '2px solid #f25f36';
+            panel.style.border = "2px solid #f25f36";
           });
         });
 
-        violetLogo.addEventListener('click', function () {
-          headerTitle.style.color = '#473a7e';
-          footer.style.background = '#473a7e';
-          backgroundIcons.style.backgroundImage =
-            'url(../../images/patterns/pattern-violet.png)';
-          professorIcons.src =
-            '../../images/icons/miscellaneous/gen9/characters/turo.png';
+        violetLogo.addEventListener("click", function () {
+          headerTitle.style.color = "#473a7e";
+          footer.style.background = "#473a7e";
+          backgroundIcons.style.backgroundImage = "url(../../images/patterns/pattern-violet.png)";
+          professorIcons.src = "../../images/icons/miscellaneous/gen9/characters/turo.png";
 
           titleText.forEach(function (text) {
-            text.style.color = '#473a7e';
+            text.style.color = "#473a7e";
           });
 
           widePanels.forEach(function (panel) {
-            panel.style.border = '2px solid #473a7e';
+            panel.style.border = "2px solid #473a7e";
           });
         });
       });
     </script>
 
     <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        const completepokedexCheckboxes = document.querySelectorAll(
-          '.completepokedex input[type="checkbox"]'
-        );
-        const legendariesCheckboxes = document.querySelectorAll(
-          '.legendaries input[type="checkbox"]'
-        );
-        const giftpokemonCheckboxes = document.querySelectorAll(
-          '.giftpokemon input[type="checkbox"]'
-        );
-        const postgameCheckboxes = document.querySelectorAll(
-          '.postgame input[type="checkbox"]'
-        );
-        const mainstoryCheckboxes = document.querySelectorAll(
-          '.mainstory input[type="checkbox"]'
-        );
-        const explorationCheckboxes = document.querySelectorAll(
-          '.exploration input[type="checkbox"]'
-        );
+      document.addEventListener("DOMContentLoaded", function () {
+        const completepokedexCheckboxes = document.querySelectorAll('.completepokedex input[type="checkbox"]');
+        const legendariesCheckboxes = document.querySelectorAll('.legendaries input[type="checkbox"]');
+        const giftpokemonCheckboxes = document.querySelectorAll('.giftpokemon input[type="checkbox"]');
+        const postgameCheckboxes = document.querySelectorAll('.postgame input[type="checkbox"]');
+        const mainstoryCheckboxes = document.querySelectorAll('.mainstory input[type="checkbox"]');
+        const explorationCheckboxes = document.querySelectorAll('.exploration input[type="checkbox"]');
 
         function updateStyle(checkboxes, label) {
-          const allChecked = [...checkboxes].every(
-            (checkbox) => checkbox.checked
-          );
-          label.style.textDecoration = allChecked ? 'line-through' : 'none';
+          const allChecked = [...checkboxes].every((checkbox) => checkbox.checked);
+          label.style.textDecoration = allChecked ? "line-through" : "none";
         }
 
         function initializeCheckboxes(checkboxes, label) {
           checkboxes.forEach((checkbox) => {
-            checkbox.addEventListener('change', function () {
+            checkbox.addEventListener("change", function () {
               updateStyle(checkboxes, label);
             });
           });
           updateStyle(checkboxes, label);
         }
-        initializeCheckboxes(
-          completepokedexCheckboxes,
-          document.querySelector('.completepokedex .title label')
-        );
-        initializeCheckboxes(
-          legendariesCheckboxes,
-          document.querySelector('.legendaries .title label')
-        );
-        initializeCheckboxes(
-          giftpokemonCheckboxes,
-          document.querySelector('.giftpokemon .title label')
-        );
-        initializeCheckboxes(
-          postgameCheckboxes,
-          document.querySelector('.postgame .title label')
-        );
-        initializeCheckboxes(
-          mainstoryCheckboxes,
-          document.querySelector('.mainstory .title label')
-        );
-        initializeCheckboxes(
-          explorationCheckboxes,
-          document.querySelector('.exploration .title label')
-        );
+        initializeCheckboxes(completepokedexCheckboxes, document.querySelector(".completepokedex .title label"));
+        initializeCheckboxes(legendariesCheckboxes, document.querySelector(".legendaries .title label"));
+        initializeCheckboxes(giftpokemonCheckboxes, document.querySelector(".giftpokemon .title label"));
+        initializeCheckboxes(postgameCheckboxes, document.querySelector(".postgame .title label"));
+        initializeCheckboxes(mainstoryCheckboxes, document.querySelector(".mainstory .title label"));
+        initializeCheckboxes(explorationCheckboxes, document.querySelector(".exploration .title label"));
       });
     </script>
   </body>

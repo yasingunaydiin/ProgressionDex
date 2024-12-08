@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,57 +6,28 @@
     <title>Progression Dex | The Crown Tundra</title>
     <link href="../checklists/css/crowntundra.css" rel="stylesheet" />
     <link href="../output.css" rel="stylesheet" />
-    <link
-      href="../images/icons/favicontab.ico"
-      rel="icon"
-      type="image/x-icon"
-    />
-    <link
-      href="../images/icons/favicontab.ico"
-      rel="shortcut icon"
-      type="image/x-icon"
-    />
-    <meta
-      name="description"
-      content="A tool for tracking your progression in Pokemon games. Easily choose between games and track your game progress."
-    />
-    <meta
-      name="keywords"
-      content="pokemon, checklist, pokedex, progress, completion, speedrun, checklist, check list, locations, characters, games, game"
-    />
+    <link href="../images/icons/favicontab.ico" rel="icon" type="image/x-icon" />
+    <link href="../images/icons/favicontab.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="description" content="A tool for tracking your progression in Pokemon games. Easily choose between games and track your game progress." />
+    <meta name="keywords" content="pokemon, checklist, pokedex, progress, completion, speedrun, checklist, check list, locations, characters, games, game" />
   </head>
   <!-- Google tag (gtag.js) -->
-  <script
-    async
-    src="https://www.googletagmanager.com/gtag/js?id=G-4PDLXC895H"
-  ></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4PDLXC895H"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() {
       dataLayer.push(arguments);
     }
-    gtag('js', new Date());
+    gtag("js", new Date());
 
-    gtag('config', 'G-4PDLXC895H');
+    gtag("config", "G-4PDLXC895H");
   </script>
   <body>
-    <div
-      class="navbar bg-white rounded-3xl shadow-lg mt-2 fixed top-0 flex items-center justify-between"
-      style="width: 95%; z-index: 1000; left: 50%; transform: translateX(-50%)"
-    >
+    <div class="navbar bg-white rounded-3xl shadow-lg mt-2 fixed top-0 flex items-center justify-between" style="width: 95%; z-index: 1000; left: 50%; transform: translateX(-50%)">
       <div class="flex items-center gap-4">
-        <a href="../index.html" class="btn btn-ghost text-2xl"
-          ><span class="title" style="color: #158b8c"
-            >Progression Dex |</span
-          ></a
-        >
+        <a href="../index.html" class="btn btn-ghost text-2xl"><span class="title" style="color: #158b8c">Progression Dex |</span></a>
         <div class="flex items-center gap-2">
-          <img
-            alt="Logo of Crown Tundra DLC"
-            src="src"
-            ="../images/logos/crowntundra-logo.png"
-            class="w-20"
-          />
+          <img alt="Logo of Crown Tundra DLC" src="src" ="../images/logos/crowntundra-logo.png" class="w-20" />
         </div>
       </div>
     </div>
@@ -66,119 +37,48 @@
           <label class="panel-label">Pokédex</label>
           <div class="completepokedex">
             <div class="checkbox-item">
-              <span class="title"
-                ><label class="text-lg"
-                  >Complete the Crown Tundra Pokédex</label
-                ></span
-              >
+              <span class="title"><label class="text-lg">Complete the Crown Tundra Pokédex</label></span>
             </div>
             <div class="checkbox-item">
-              <input
-                id="crowntundra-checkbox-crowntundra-pokedex"
-                type="checkbox"
-              />
-              <label
-                class="text-sm lg:tooltip"
-                data-tip="There are a total of 210 Pokemon in the Crown Tundra Dex."
-                for="crowntundra-checkbox-crowntundra-pokedex"
+              <input id="crowntundra-checkbox-crowntundra-pokedex" type="checkbox" />
+              <label class="text-sm lg:tooltip" data-tip="There are a total of 210 Pokemon in the Crown Tundra Dex." for="crowntundra-checkbox-crowntundra-pokedex"
                 >Complete Crown Tundra Pokedex</label
               >
             </div>
           </div>
           <div class="legendaries">
             <div class="checkbox-item">
-              <span class="title"
-                ><label class="text-lg">Catch all Legendaries</label></span
-              >
+              <span class="title"><label class="text-lg">Catch all Legendaries</label></span>
             </div>
             <div class="legendaries-rowcontainer">
               <div class="legendaries-leftrow">
                 <div class="checkbox-item">
                   <input id="crowntundra-checkbox-calyrex" type="checkbox" />
-                  <img
-                    alt="Icon of Calyrex"
-                    src="class"
-                    ="pokeicon legendary"
-                    src="../images/icons/pokemon/gen8/swordshield/crowntundra/calyrex.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Follow the Calyrex Story."
-                    for="crowntundra-checkbox-calyrex"
-                    >Calyrex</label
-                  >
+                  <img alt="Icon of Calyrex" src="class" ="pokeicon legendary" src="../images/icons/pokemon/gen8/swordshield/crowntundra/calyrex.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Follow the Calyrex Story." for="crowntundra-checkbox-calyrex">Calyrex</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="crowntundra-checkbox-cosmog" type="checkbox" />
-                  <img
-                    alt="Icon of Cosmog"
-                    src="class"
-                    ="pokeicon legendary"
-                    src="../images/icons/pokemon/gen8/swordshield/crowntundra/cosmog.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Freezington, save the village from Glastrier or Spectrier."
-                    for="crowntundra-checkbox-cosmog"
-                    style="white-space: normal"
-                    >Cosmog</label
-                  >
+                  <img alt="Icon of Cosmog" src="class" ="pokeicon legendary" src="../images/icons/pokemon/gen8/swordshield/crowntundra/cosmog.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Freezington, save the village from Glastrier or Spectrier." for="crowntundra-checkbox-cosmog" style="white-space: normal">Cosmog</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="crowntundra-checkbox-glastrier-spectrier"
-                    type="checkbox"
-                  />
-                  <img
-                    alt="Icon of Glastrier"
-                    src="class"
-                    ="pokeicon legendary"
-                    src="../images/icons/pokemon/gen8/swordshield/crowntundra/glastrier.png"
-                  />
-                  <img
-                    alt="Icon of Spectrier"
-                    src="class"
-                    ="pokeicon legendary"
-                    src="../images/icons/pokemon/gen8/swordshield/crowntundra/spectrier.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Follow the Calyrex Story."
-                    for="crowntundra-checkbox-glastrier-spectrier"
-                    >Glastrier / Spectrier</label
-                  >
+                  <input id="crowntundra-checkbox-glastrier-spectrier" type="checkbox" />
+                  <img alt="Icon of Glastrier" src="class" ="pokeicon legendary" src="../images/icons/pokemon/gen8/swordshield/crowntundra/glastrier.png" />
+                  <img alt="Icon of Spectrier" src="class" ="pokeicon legendary" src="../images/icons/pokemon/gen8/swordshield/crowntundra/spectrier.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Follow the Calyrex Story." for="crowntundra-checkbox-glastrier-spectrier">Glastrier / Spectrier</label>
                 </div>
               </div>
               <div class="legendaries-rightrow">
                 <div class="checkbox-item">
                   <input id="crowntundra-checkbox-regigigas" type="checkbox" />
-                  <img
-                    alt="Icon of Regigigas"
-                    src="class"
-                    ="pokeicon legendary"
-                    src="../images/icons/pokemon/gen8/swordshield/crowntundra/regigigas.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Giant's Bed."
-                    for="crowntundra-checkbox-regigigas"
-                    >Regigigas</label
-                  >
+                  <img alt="Icon of Regigigas" src="class" ="pokeicon legendary" src="../images/icons/pokemon/gen8/swordshield/crowntundra/regigigas.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Giant's Bed." for="crowntundra-checkbox-regigigas">Regigigas</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="crowntundra-checkbox-poipole" type="checkbox" />
-                  <img
-                    alt="Icon of Poipole"
-                    src="class"
-                    ="pokeicon legendary"
-                    src="../images/icons/pokemon/gen8/swordshield/crowntundra/poipole.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Max Lair, start the Ultra Beast story."
-                    for="crowntundra-checkbox-poipole"
-                    >Poipole</label
-                  >
+                  <img alt="Icon of Poipole" src="class" ="pokeicon legendary" src="../images/icons/pokemon/gen8/swordshield/crowntundra/poipole.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Max Lair, start the Ultra Beast story." for="crowntundra-checkbox-poipole">Poipole</label>
                 </div>
               </div>
             </div>
@@ -188,411 +88,139 @@
               <div class="quests-leftrow">
                 <div class="legendarythreestory">
                   <div class="checkbox-item">
-                    <span class="title"
-                      ><label class="text-lg"
-                        >Legendary Three Story</label
-                      ></span
-                    >
-                    <label
-                      class="text-sm lg:tooltip"
-                      data-tip="When you join Peony's Expedition detail, you'll get given some Legendary Clues. Legendary Clue 3 focuses on the Legendary Birds."
-                      ><img
-                        alt="Icon of Bulbasaur"
-                        src="class"
-                        ="icon-small"
-                        src="../images/icons/miscellaneous/other/moreinfo.png"
+                    <span class="title"><label class="text-lg">Legendary Three Story</label></span>
+                    <label class="text-sm lg:tooltip" data-tip="When you join Peony's Expedition detail, you'll get given some Legendary Clues. Legendary Clue 3 focuses on the Legendary Birds."
+                      ><img alt="Icon of Bulbasaur" src="class" ="icon-small" src="../images/icons/miscellaneous/other/moreinfo.png"
                     /></label>
                   </div>
                   <div class="checkbox-item">
-                    <input
-                      id="crowntundra-checkbox-galarian-articuno"
-                      type="checkbox"
-                    />
-                    <img
-                      alt="Icon of Galarian Articuno"
-                      src="class"
-                      ="pokeicon legendary"
-                      src="../images/icons/pokemon/gen8/swordshield/crowntundra/articuno-galarian.png"
-                    />
-                    <label
-                      class="text-sm lg:tooltip"
-                      data-tip="The Crown Tundra."
-                      for="crowntundra-checkbox-galarian-articuno"
-                      >Articuno</label
-                    >
+                    <input id="crowntundra-checkbox-galarian-articuno" type="checkbox" />
+                    <img alt="Icon of Galarian Articuno" src="class" ="pokeicon legendary" src="../images/icons/pokemon/gen8/swordshield/crowntundra/articuno-galarian.png" />
+                    <label class="text-sm lg:tooltip" data-tip="The Crown Tundra." for="crowntundra-checkbox-galarian-articuno">Articuno</label>
                   </div>
                   <div class="checkbox-item">
-                    <input
-                      id="crowntundra-checkbox-galarian-zapdos"
-                      type="checkbox"
-                    />
-                    <img
-                      alt="Icon of Galarian Zapdos"
-                      src="class"
-                      ="pokeicon legendary"
-                      src="../images/icons/pokemon/gen8/swordshield/crowntundra/zapdos-galarian.png"
-                    />
-                    <label
-                      class="text-sm lg:tooltip"
-                      data-tip="The Wild Area."
-                      for="crowntundra-checkbox-galarian-zapdos"
-                      >Zapdos</label
-                    >
+                    <input id="crowntundra-checkbox-galarian-zapdos" type="checkbox" />
+                    <img alt="Icon of Galarian Zapdos" src="class" ="pokeicon legendary" src="../images/icons/pokemon/gen8/swordshield/crowntundra/zapdos-galarian.png" />
+                    <label class="text-sm lg:tooltip" data-tip="The Wild Area." for="crowntundra-checkbox-galarian-zapdos">Zapdos</label>
                   </div>
                   <div class="checkbox-item">
-                    <input
-                      id="crowntundra-checkbox-galarian-moltres"
-                      type="checkbox"
-                    />
-                    <img
-                      alt="Icon of Galarian Moltres"
-                      src="class"
-                      ="pokeicon legendary"
-                      src="../images/icons/pokemon/gen8/swordshield/crowntundra/moltres-galarian.png"
-                    />
-                    <label
-                      class="text-sm lg:tooltip"
-                      data-tip="The Isle of Armor."
-                      for="crowntundra-checkbox-galarian-moltres"
-                      >Moltres</label
-                    >
+                    <input id="crowntundra-checkbox-galarian-moltres" type="checkbox" />
+                    <img alt="Icon of Galarian Moltres" src="class" ="pokeicon legendary" src="../images/icons/pokemon/gen8/swordshield/crowntundra/moltres-galarian.png" />
+                    <label class="text-sm lg:tooltip" data-tip="The Isle of Armor." for="crowntundra-checkbox-galarian-moltres">Moltres</label>
                   </div>
                 </div>
                 <div class="ultrabeyondstory">
                   <div class="checkbox-item">
-                    <span class="title"
-                      ><label class="text-lg">Ultra Beyond Story</label></span
-                    >
-                    <label
-                      class="text-sm lg:tooltip"
-                      data-tip="After completion of the other three Legendary Clue sections, you will find a new Legendary Clue on the doormat of Peony's basecamp."
-                      ><img
-                        alt="Icon of Bulbasaur"
-                        src="class"
-                        ="icon-small"
-                        src="../images/icons/miscellaneous/other/moreinfo.png"
+                    <span class="title"><label class="text-lg">Ultra Beyond Story</label></span>
+                    <label class="text-sm lg:tooltip" data-tip="After completion of the other three Legendary Clue sections, you will find a new Legendary Clue on the doormat of Peony's basecamp."
+                      ><img alt="Icon of Bulbasaur" src="class" ="icon-small" src="../images/icons/miscellaneous/other/moreinfo.png"
                     /></label>
                   </div>
                   <div class="checkbox-item">
                     <input id="crowntundra-checkbox-nihilego" type="checkbox" />
-                    <img
-                      alt="Icon of Nihilego"
-                      src="class"
-                      ="pokeicon legendary"
-                      src="../images/icons/pokemon/gen8/swordshield/crowntundra/nihilego.png"
-                    />
-                    <label
-                      class="text-sm lg:tooltip"
-                      data-tip="Max Lair."
-                      for="crowntundra-checkbox-nihilego"
-                      >Nihilego</label
-                    >
+                    <img alt="Icon of Nihilego" src="class" ="pokeicon legendary" src="../images/icons/pokemon/gen8/swordshield/crowntundra/nihilego.png" />
+                    <label class="text-sm lg:tooltip" data-tip="Max Lair." for="crowntundra-checkbox-nihilego">Nihilego</label>
                   </div>
                   <div class="checkbox-item">
                     <input id="crowntundra-checkbox-buzzwole" type="checkbox" />
-                    <img
-                      alt="Icon of Buzzwole"
-                      src="class"
-                      ="pokeicon legendary"
-                      src="../images/icons/pokemon/gen8/swordshield/crowntundra/buzzwole.png"
-                    />
-                    <label
-                      class="text-sm lg:tooltip"
-                      data-tip="Max Lair."
-                      for="crowntundra-checkbox-buzzwole"
-                      >Buzzwole</label
-                    >
+                    <img alt="Icon of Buzzwole" src="class" ="pokeicon legendary" src="../images/icons/pokemon/gen8/swordshield/crowntundra/buzzwole.png" />
+                    <label class="text-sm lg:tooltip" data-tip="Max Lair." for="crowntundra-checkbox-buzzwole">Buzzwole</label>
                   </div>
                   <div class="checkbox-item">
-                    <input
-                      id="crowntundra-checkbox-pheromosa"
-                      type="checkbox"
-                    />
-                    <img
-                      alt="Icon of Pheromose"
-                      src="class"
-                      ="pokeicon legendary"
-                      src="../images/icons/pokemon/gen8/swordshield/crowntundra/pheromosa.png"
-                    />
-                    <label
-                      class="text-sm lg:tooltip"
-                      data-tip="Max Lair."
-                      for="crowntundra-checkbox-pheromosa"
-                      >Pheromosa</label
-                    >
+                    <input id="crowntundra-checkbox-pheromosa" type="checkbox" />
+                    <img alt="Icon of Pheromose" src="class" ="pokeicon legendary" src="../images/icons/pokemon/gen8/swordshield/crowntundra/pheromosa.png" />
+                    <label class="text-sm lg:tooltip" data-tip="Max Lair." for="crowntundra-checkbox-pheromosa">Pheromosa</label>
                   </div>
                   <div class="checkbox-item">
-                    <input
-                      id="crowntundra-checkbox-xurkitree"
-                      type="checkbox"
-                    />
-                    <img
-                      alt="Icon of Xurkitree"
-                      src="class"
-                      ="pokeicon legendary"
-                      src="../images/icons/pokemon/gen8/swordshield/crowntundra/xurkitree.png"
-                    />
-                    <label
-                      class="text-sm lg:tooltip"
-                      data-tip="Max Lair."
-                      for="crowntundra-checkbox-xurkitree"
-                      >Xurkitree</label
-                    >
+                    <input id="crowntundra-checkbox-xurkitree" type="checkbox" />
+                    <img alt="Icon of Xurkitree" src="class" ="pokeicon legendary" src="../images/icons/pokemon/gen8/swordshield/crowntundra/xurkitree.png" />
+                    <label class="text-sm lg:tooltip" data-tip="Max Lair." for="crowntundra-checkbox-xurkitree">Xurkitree</label>
                   </div>
                   <div class="checkbox-item">
-                    <input
-                      id="crowntundra-checkbox-celesteela"
-                      type="checkbox"
-                    />
-                    <img
-                      alt="Icon of Celesteela"
-                      src="class"
-                      ="pokeicon legendary"
-                      src="../images/icons/pokemon/gen8/swordshield/crowntundra/celesteela.png"
-                    />
-                    <label
-                      class="text-sm lg:tooltip"
-                      data-tip="Max Lair."
-                      for="crowntundra-checkbox-celesteela"
-                      >Celesteela</label
-                    >
+                    <input id="crowntundra-checkbox-celesteela" type="checkbox" />
+                    <img alt="Icon of Celesteela" src="class" ="pokeicon legendary" src="../images/icons/pokemon/gen8/swordshield/crowntundra/celesteela.png" />
+                    <label class="text-sm lg:tooltip" data-tip="Max Lair." for="crowntundra-checkbox-celesteela">Celesteela</label>
                   </div>
                   <div class="checkbox-item">
                     <input id="crowntundra-checkbox-kartana" type="checkbox" />
-                    <img
-                      alt="Icon of Kartana"
-                      src="class"
-                      ="pokeicon legendary"
-                      src="../images/icons/pokemon/gen8/swordshield/crowntundra/kartana.png"
-                    />
-                    <label
-                      class="text-sm lg:tooltip"
-                      data-tip="Max Lair."
-                      for="crowntundra-checkbox-kartana"
-                      >Kartana</label
-                    >
+                    <img alt="Icon of Kartana" src="class" ="pokeicon legendary" src="../images/icons/pokemon/gen8/swordshield/crowntundra/kartana.png" />
+                    <label class="text-sm lg:tooltip" data-tip="Max Lair." for="crowntundra-checkbox-kartana">Kartana</label>
                   </div>
                   <div class="checkbox-item">
                     <input id="crowntundra-checkbox-guzzlord" type="checkbox" />
-                    <img
-                      alt="Icon of Guzzlord"
-                      src="class"
-                      ="pokeicon legendary"
-                      src="../images/icons/pokemon/gen8/swordshield/crowntundra/guzzlord.png"
-                    />
-                    <label
-                      class="text-sm lg:tooltip"
-                      data-tip="Max Lair."
-                      for="crowntundra-checkbox-guzzlord"
-                      >Guzzlord</label
-                    >
+                    <img alt="Icon of Guzzlord" src="class" ="pokeicon legendary" src="../images/icons/pokemon/gen8/swordshield/crowntundra/guzzlord.png" />
+                    <label class="text-sm lg:tooltip" data-tip="Max Lair." for="crowntundra-checkbox-guzzlord">Guzzlord</label>
                   </div>
                   <div class="checkbox-item">
-                    <input
-                      id="crowntundra-checkbox-stakataka"
-                      type="checkbox"
-                    />
-                    <img
-                      alt="Icon of Stakata"
-                      src="class"
-                      ="pokeicon legendary"
-                      src="../images/icons/pokemon/gen8/swordshield/crowntundra/stakataka.png"
-                    />
-                    <label
-                      class="text-sm lg:tooltip"
-                      data-tip="Max Lair."
-                      for="crowntundra-checkbox-stakataka"
-                      >Stakataka</label
-                    >
+                    <input id="crowntundra-checkbox-stakataka" type="checkbox" />
+                    <img alt="Icon of Stakata" src="class" ="pokeicon legendary" src="../images/icons/pokemon/gen8/swordshield/crowntundra/stakataka.png" />
+                    <label class="text-sm lg:tooltip" data-tip="Max Lair." for="crowntundra-checkbox-stakataka">Stakataka</label>
                   </div>
                   <div class="checkbox-item">
-                    <input
-                      id="crowntundra-checkbox-blacephalon"
-                      type="checkbox"
-                    />
-                    <img
-                      alt="Icon of Blacephalon"
-                      src="class"
-                      ="pokeicon legendary"
-                      src="../images/icons/pokemon/gen8/swordshield/crowntundra/blacephalon.png"
-                    />
-                    <label
-                      class="text-sm lg:tooltip"
-                      data-tip="Max Lair."
-                      for="crowntundra-checkbox-blacephalon"
-                      >Blacephalon</label
-                    >
+                    <input id="crowntundra-checkbox-blacephalon" type="checkbox" />
+                    <img alt="Icon of Blacephalon" src="class" ="pokeicon legendary" src="../images/icons/pokemon/gen8/swordshield/crowntundra/blacephalon.png" />
+                    <label class="text-sm lg:tooltip" data-tip="Max Lair." for="crowntundra-checkbox-blacephalon">Blacephalon</label>
                   </div>
                 </div>
               </div>
               <div class="quests-rightrow">
                 <div class="terribletitansstory">
                   <div class="checkbox-item">
-                    <span class="title"
-                      ><label class="text-lg"
-                        >Terrible Titans Story</label
-                      ></span
-                    >
+                    <span class="title"><label class="text-lg">Terrible Titans Story</label></span>
                     <label
                       class="text-sm lg:tooltip"
                       data-tip="At the start of the Crown Tundra's story, when you join Peony's Expedition detail, you'll get given some Legendary Clues. Legendary Clue 2 focuses on the Legendary Titans."
-                      ><img
-                        alt="Icon of Bulbasaur"
-                        src="class"
-                        ="icon-small"
-                        src="../images/icons/miscellaneous/other/moreinfo.png"
+                      ><img alt="Icon of Bulbasaur" src="class" ="icon-small" src="../images/icons/miscellaneous/other/moreinfo.png"
                     /></label>
                   </div>
                   <div class="checkbox-item">
                     <input id="crowntundra-checkbox-regirock" type="checkbox" />
-                    <img
-                      alt="Icon of Regirock"
-                      src="class"
-                      ="pokeicon legendary"
-                      src="../images/icons/pokemon/gen8/swordshield/crowntundra/regirock.png"
-                    />
-                    <label
-                      class="text-sm lg:tooltip"
-                      data-tip="Rock Peak Ruins."
-                      for="crowntundra-checkbox-regirock"
-                      >Regirock</label
-                    >
+                    <img alt="Icon of Regirock" src="class" ="pokeicon legendary" src="../images/icons/pokemon/gen8/swordshield/crowntundra/regirock.png" />
+                    <label class="text-sm lg:tooltip" data-tip="Rock Peak Ruins." for="crowntundra-checkbox-regirock">Regirock</label>
                   </div>
                   <div class="checkbox-item">
                     <input id="crowntundra-checkbox-regice" type="checkbox" />
-                    <img
-                      alt="Icon of Regice"
-                      src="class"
-                      ="pokeicon legendary"
-                      src="../images/icons/pokemon/gen8/swordshield/crowntundra/regice.png"
-                    />
-                    <label
-                      class="text-sm lg:tooltip"
-                      data-tip="Iceberg Ruins."
-                      for="crowntundra-checkbox-regice"
-                      >Regice</label
-                    >
+                    <img alt="Icon of Regice" src="class" ="pokeicon legendary" src="../images/icons/pokemon/gen8/swordshield/crowntundra/regice.png" />
+                    <label class="text-sm lg:tooltip" data-tip="Iceberg Ruins." for="crowntundra-checkbox-regice">Regice</label>
                   </div>
                   <div class="checkbox-item">
-                    <input
-                      id="crowntundra-checkbox-registeel"
-                      type="checkbox"
-                    />
-                    <img
-                      alt="Icon of Registeel"
-                      src="class"
-                      ="pokeicon legendary"
-                      src="../images/icons/pokemon/gen8/swordshield/crowntundra/registeel.png"
-                    />
-                    <label
-                      class="text-sm lg:tooltip"
-                      data-tip="Iron Ruins."
-                      for="crowntundra-checkbox-registeel"
-                      >Registeel</label
-                    >
+                    <input id="crowntundra-checkbox-registeel" type="checkbox" />
+                    <img alt="Icon of Registeel" src="class" ="pokeicon legendary" src="../images/icons/pokemon/gen8/swordshield/crowntundra/registeel.png" />
+                    <label class="text-sm lg:tooltip" data-tip="Iron Ruins." for="crowntundra-checkbox-registeel">Registeel</label>
                   </div>
                   <div class="checkbox-item">
-                    <input
-                      id="crowntundra-checkbox-regieleki-regidrago"
-                      type="checkbox"
-                    />
-                    <img
-                      alt="Icon of Regidrago"
-                      src="class"
-                      ="pokeicon legendary"
-                      src="../images/icons/pokemon/gen8/swordshield/crowntundra/regieleki.png"
-                    />
-                    <img
-                      alt="Icon of Bulbasaur"
-                      src="class"
-                      ="pokeicon legendary"
-                      src="../images/icons/pokemon/gen8/swordshield/crowntundra/regidrago.png"
-                    />
-                    <label
-                      class="text-sm lg:tooltip"
-                      data-tip="Split-DecisiRuins."
-                      for="crowntundra-checkbox-regieleki-regidrago"
-                      >Regieleki or Regidrago</label
-                    >
+                    <input id="crowntundra-checkbox-regieleki-regidrago" type="checkbox" />
+                    <img alt="Icon of Regidrago" src="class" ="pokeicon legendary" src="../images/icons/pokemon/gen8/swordshield/crowntundra/regieleki.png" />
+                    <img alt="Icon of Bulbasaur" src="class" ="pokeicon legendary" src="../images/icons/pokemon/gen8/swordshield/crowntundra/regidrago.png" />
+                    <label class="text-sm lg:tooltip" data-tip="Split-DecisiRuins." for="crowntundra-checkbox-regieleki-regidrago">Regieleki or Regidrago</label>
                   </div>
                 </div>
                 <div class="footprints">
                   <div class="checkbox-item">
-                    <span class="title"
-                      ><label class="text-lg">Footprints</label></span
-                    >
-                    <label
-                      class="text-sm lg:tooltip"
-                      data-tip="As you start going through the story in the Crown Tundra, near a house in Freezington you will find some footprints."
-                      ><img
-                        alt="Icon of Bulbasaur"
-                        src="class"
-                        ="icon-small"
-                        src="../images/icons/miscellaneous/other/moreinfo.png"
+                    <span class="title"><label class="text-lg">Footprints</label></span>
+                    <label class="text-sm lg:tooltip" data-tip="As you start going through the story in the Crown Tundra, near a house in Freezington you will find some footprints."
+                      ><img alt="Icon of Bulbasaur" src="class" ="icon-small" src="../images/icons/miscellaneous/other/moreinfo.png"
                     /></label>
                   </div>
                   <div class="checkbox-item">
                     <input id="crowntundra-checkbox-cobalion" type="checkbox" />
-                    <img
-                      alt="Icon of Cobalion"
-                      src="class"
-                      ="pokeicon legendary"
-                      src="../images/icons/pokemon/gen8/swordshield/crowntundra/cobalion.png"
-                    />
-                    <label
-                      class="text-sm lg:tooltip"
-                      data-tip="Frigid Sea, Roaring-Sea Caves, Three-Point Pass."
-                      for="crowntundra-checkbox-cobalion"
-                      >Cobalion</label
-                    >
+                    <img alt="Icon of Cobalion" src="class" ="pokeicon legendary" src="../images/icons/pokemon/gen8/swordshield/crowntundra/cobalion.png" />
+                    <label class="text-sm lg:tooltip" data-tip="Frigid Sea, Roaring-Sea Caves, Three-Point Pass." for="crowntundra-checkbox-cobalion">Cobalion</label>
                   </div>
                   <div class="checkbox-item">
-                    <input
-                      id="crowntundra-checkbox-terrakion"
-                      type="checkbox"
-                    />
-                    <img
-                      alt="Icon of Terrakion"
-                      src="class"
-                      ="pokeicon legendary"
-                      src="../images/icons/pokemon/gen8/swordshield/crowntundra/terrakion.png"
-                    />
-                    <label
-                      class="text-sm lg:tooltip"
-                      data-tip="Lakeside Cave, Ballimere Lake, Dyna Tree Hill."
-                      for="crowntundra-checkbox-terrakion"
-                      >Terrakion</label
-                    >
+                    <input id="crowntundra-checkbox-terrakion" type="checkbox" />
+                    <img alt="Icon of Terrakion" src="class" ="pokeicon legendary" src="../images/icons/pokemon/gen8/swordshield/crowntundra/terrakion.png" />
+                    <label class="text-sm lg:tooltip" data-tip="Lakeside Cave, Ballimere Lake, Dyna Tree Hill." for="crowntundra-checkbox-terrakion">Terrakion</label>
                   </div>
                   <div class="checkbox-item">
                     <input id="crowntundra-checkbox-virizion" type="checkbox" />
-                    <img
-                      alt="Icon of Virizion"
-                      src="class"
-                      ="pokeicon legendary"
-                      src="../images/icons/pokemon/gen8/swordshield/crowntundra/virizion.png"
-                    />
-                    <label
-                      class="text-sm lg:tooltip"
-                      data-tip="Frostpoint Field, Giant's Bed, Old Cemetery."
-                      for="crowntundra-checkbox-virizion"
-                      >Virizion</label
-                    >
+                    <img alt="Icon of Virizion" src="class" ="pokeicon legendary" src="../images/icons/pokemon/gen8/swordshield/crowntundra/virizion.png" />
+                    <label class="text-sm lg:tooltip" data-tip="Frostpoint Field, Giant's Bed, Old Cemetery." for="crowntundra-checkbox-virizion">Virizion</label>
                   </div>
                   <div class="checkbox-item">
                     <input id="crowntundra-checkbox-keldeo" type="checkbox" />
-                    <img
-                      alt="Icon of Keldeo"
-                      src="class"
-                      ="pokeicon legendary"
-                      src="../images/icons/pokemon/gen8/swordshield/crowntundra/keldeo-ordinary.png"
-                    />
-                    <label
-                      class="text-sm lg:tooltip"
-                      data-tip="Ballimere Lake."
-                      for="crowntundra-checkbox-keldeo"
-                      >Keldeo</label
-                    >
+                    <img alt="Icon of Keldeo" src="class" ="pokeicon legendary" src="../images/icons/pokemon/gen8/swordshield/crowntundra/keldeo-ordinary.png" />
+                    <label class="text-sm lg:tooltip" data-tip="Ballimere Lake." for="crowntundra-checkbox-keldeo">Keldeo</label>
                   </div>
                 </div>
               </div>
@@ -600,27 +228,12 @@
           </div>
           <div class="galarianforms">
             <div class="checkbox-item">
-              <span class="title"
-                ><label class="text-lg">Catch all Galarian Forms</label></span
-              >
+              <span class="title"><label class="text-lg">Catch all Galarian Forms</label></span>
             </div>
             <div class="checkbox-item">
-              <input
-                id="crowntundra-checkbox-galarian-slowking"
-                type="checkbox"
-              />
-              <img
-                alt="Icon of Galarian Slowking"
-                src="class"
-                ="pokeicon"
-                src="../images/icons/pokemon/gen8/swordshield/crowntundra/slowking-galarian.png"
-              />
-              <label
-                class="text-sm lg:tooltip"
-                data-tip="Glimwood Tangle (Shield)."
-                for="crowntundra-checkbox-galarian-slowking"
-                >Galarian Slowking</label
-              >
+              <input id="crowntundra-checkbox-galarian-slowking" type="checkbox" />
+              <img alt="Icon of Galarian Slowking" src="class" ="pokeicon" src="../images/icons/pokemon/gen8/swordshield/crowntundra/slowking-galarian.png" />
+              <label class="text-sm lg:tooltip" data-tip="Glimwood Tangle (Shield)." for="crowntundra-checkbox-galarian-slowking">Galarian Slowking</label>
             </div>
           </div>
         </div>
@@ -630,49 +243,21 @@
           <label class="panel-label">Collectibles</label>
           <div class="leaguecards">
             <div class="checkbox-item">
-              <span class="title"
-                ><label class="text-lg">League Cards</label></span
-              >
+              <span class="title"><label class="text-lg">League Cards</label></span>
             </div>
             <div class="leaguecards-rowcontainer">
               <div class="leaguecards-leftrow">
                 <div class="checkbox-item">
-                  <input
-                    id="crowntundra-checkbox-leaguecards-peony"
-                    type="checkbox"
-                  />
-                  <img
-                    alt="Icon of Peony Card"
-                    src="class"
-                    ="pokeicon leaguecards"
-                    src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Peony.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Start an Expedition with Peony."
-                    for="crowntundra-checkbox-leaguecards-peony"
-                    >Peony</label
-                  >
+                  <input id="crowntundra-checkbox-leaguecards-peony" type="checkbox" />
+                  <img alt="Icon of Peony Card" src="class" ="pokeicon leaguecards" src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Peony.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Start an Expedition with Peony." for="crowntundra-checkbox-leaguecards-peony">Peony</label>
                 </div>
               </div>
               <div class="leaguecards-rightrow">
                 <div class="checkbox-item">
-                  <input
-                    id="crowntundra-checkbox-leaguecards-peony-rare"
-                    type="checkbox"
-                  />
-                  <img
-                    alt="Icon of Peony Rare Card"
-                    src="class"
-                    ="pokeicon leaguecards"
-                    src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Peony_rare.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Complete all Legendary Clues."
-                    for="crowntundra-checkbox-leaguecards-peony-rare"
-                    >Peony Rare</label
-                  >
+                  <input id="crowntundra-checkbox-leaguecards-peony-rare" type="checkbox" />
+                  <img alt="Icon of Peony Rare Card" src="class" ="pokeicon leaguecards" src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Peony_rare.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Complete all Legendary Clues." for="crowntundra-checkbox-leaguecards-peony-rare">Peony Rare</label>
                 </div>
               </div>
             </div>
@@ -685,18 +270,8 @@
 
             <div class="checkbox-item">
               <input id="crowntundra-checkbox-alltms" type="checkbox" />
-              <img
-                alt="Icon of TMs"
-                src="class"
-                ="pokeicon item"
-                src="../images/icons/inventory/tms/normal.png"
-              />
-              <label
-                class="text-sm lg:tooltip"
-                data-tip="Find all TM's."
-                for="crowntundra-checkbox-alltms"
-                >Collect all TM's</label
-              >
+              <img alt="Icon of TMs" src="class" ="pokeicon item" src="../images/icons/inventory/tms/normal.png" />
+              <label class="text-sm lg:tooltip" data-tip="Find all TM's." for="crowntundra-checkbox-alltms">Collect all TM's</label>
             </div>
           </div>
         </div>
@@ -718,86 +293,39 @@
     <script src="../checklists/js/script.js"></script>
 
     <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        const completepokedexCheckboxes = document.querySelectorAll(
-          '.completepokedex input[type="checkbox"]'
-        );
-        const legendariesCheckboxes = document.querySelectorAll(
-          '.legendaries input[type="checkbox"]'
-        );
-        const galarianformsCheckboxes = document.querySelectorAll(
-          '.galarianforms input[type="checkbox"]'
-        );
-        const leaguecardsCheckboxes = document.querySelectorAll(
-          '.leaguecards input[type="checkbox"]'
-        );
-        const legendarythreestoryCheckboxes = document.querySelectorAll(
-          '.legendarythreestory input[type="checkbox"]'
-        );
-        const terribletitansstoryCheckboxes = document.querySelectorAll(
-          '.terribletitansstory input[type="checkbox"]'
-        );
-        const ultrabeyondstoryCheckboxes = document.querySelectorAll(
-          '.ultrabeyondstory input[type="checkbox"]'
-        );
-        const footprintsCheckboxes = document.querySelectorAll(
-          '.footprints input[type="checkbox"]'
-        );
-        const itemsCheckboxes = document.querySelectorAll(
-          '.items input[type="checkbox"]'
-        );
+      document.addEventListener("DOMContentLoaded", function () {
+        const completepokedexCheckboxes = document.querySelectorAll('.completepokedex input[type="checkbox"]');
+        const legendariesCheckboxes = document.querySelectorAll('.legendaries input[type="checkbox"]');
+        const galarianformsCheckboxes = document.querySelectorAll('.galarianforms input[type="checkbox"]');
+        const leaguecardsCheckboxes = document.querySelectorAll('.leaguecards input[type="checkbox"]');
+        const legendarythreestoryCheckboxes = document.querySelectorAll('.legendarythreestory input[type="checkbox"]');
+        const terribletitansstoryCheckboxes = document.querySelectorAll('.terribletitansstory input[type="checkbox"]');
+        const ultrabeyondstoryCheckboxes = document.querySelectorAll('.ultrabeyondstory input[type="checkbox"]');
+        const footprintsCheckboxes = document.querySelectorAll('.footprints input[type="checkbox"]');
+        const itemsCheckboxes = document.querySelectorAll('.items input[type="checkbox"]');
 
         function updateStyle(checkboxes, label) {
-          const allChecked = [...checkboxes].every(
-            (checkbox) => checkbox.checked
-          );
-          label.style.textDecoration = allChecked ? 'line-through' : 'none';
+          const allChecked = [...checkboxes].every((checkbox) => checkbox.checked);
+          label.style.textDecoration = allChecked ? "line-through" : "none";
         }
 
         function initializeCheckboxes(checkboxes, label) {
           checkboxes.forEach((checkbox) => {
-            checkbox.addEventListener('change', function () {
+            checkbox.addEventListener("change", function () {
               updateStyle(checkboxes, label);
             });
           });
           updateStyle(checkboxes, label);
         }
-        initializeCheckboxes(
-          completepokedexCheckboxes,
-          document.querySelector('.completepokedex .title label')
-        );
-        initializeCheckboxes(
-          legendariesCheckboxes,
-          document.querySelector('.legendaries .title label')
-        );
-        initializeCheckboxes(
-          galarianformsCheckboxes,
-          document.querySelector('.galarianforms .title label')
-        );
-        initializeCheckboxes(
-          leaguecardsCheckboxes,
-          document.querySelector('.leaguecards .title label')
-        );
-        initializeCheckboxes(
-          legendarythreestoryCheckboxes,
-          document.querySelector('.legendarythreestory .title label')
-        );
-        initializeCheckboxes(
-          terribletitansstoryCheckboxes,
-          document.querySelector('.terribletitansstory .title label')
-        );
-        initializeCheckboxes(
-          ultrabeyondstoryCheckboxes,
-          document.querySelector('.ultrabeyondstory .title label')
-        );
-        initializeCheckboxes(
-          footprintsCheckboxes,
-          document.querySelector('.footprints .title label')
-        );
-        initializeCheckboxes(
-          itemsCheckboxes,
-          document.querySelector('.items .title label')
-        );
+        initializeCheckboxes(completepokedexCheckboxes, document.querySelector(".completepokedex .title label"));
+        initializeCheckboxes(legendariesCheckboxes, document.querySelector(".legendaries .title label"));
+        initializeCheckboxes(galarianformsCheckboxes, document.querySelector(".galarianforms .title label"));
+        initializeCheckboxes(leaguecardsCheckboxes, document.querySelector(".leaguecards .title label"));
+        initializeCheckboxes(legendarythreestoryCheckboxes, document.querySelector(".legendarythreestory .title label"));
+        initializeCheckboxes(terribletitansstoryCheckboxes, document.querySelector(".terribletitansstory .title label"));
+        initializeCheckboxes(ultrabeyondstoryCheckboxes, document.querySelector(".ultrabeyondstory .title label"));
+        initializeCheckboxes(footprintsCheckboxes, document.querySelector(".footprints .title label"));
+        initializeCheckboxes(itemsCheckboxes, document.querySelector(".items .title label"));
       });
     </script>
   </body>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,61 +6,29 @@
     <title>Progression Dex | Black 2 and White 2</title>
     <link href="../checklists/css/black2white2.css" rel="stylesheet" />
     <link href="../output.css" rel="stylesheet" />
-    <link
-      href="../images/icons/favicontab.ico"
-      rel="icon"
-      type="image/x-icon"
-    />
-    <link
-      href="../images/icons/favicontab.ico"
-      rel="shortcut icon"
-      type="image/x-icon"
-    />
-    <meta
-      name="description"
-      content="A tool for tracking your progression in Pokemon games. Easily choose between games and track your game progress."
-    />
-    <meta
-      name="keywords"
-      content="pokemon, checklist, pokedex, progress, completion, speedrun, checklist, check list, locations, characters, games, game"
-    />
+    <link href="../images/icons/favicontab.ico" rel="icon" type="image/x-icon" />
+    <link href="../images/icons/favicontab.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="description" content="A tool for tracking your progression in Pokemon games. Easily choose between games and track your game progress." />
+    <meta name="keywords" content="pokemon, checklist, pokedex, progress, completion, speedrun, checklist, check list, locations, characters, games, game" />
   </head>
   <!-- Google tag (gtag.js) -->
-  <script
-    async
-    src="https://www.googletagmanager.com/gtag/js?id=G-4PDLXC895H"
-  ></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4PDLXC895H"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() {
       dataLayer.push(arguments);
     }
-    gtag('js', new Date());
+    gtag("js", new Date());
 
-    gtag('config', 'G-4PDLXC895H');
+    gtag("config", "G-4PDLXC895H");
   </script>
   <body>
-    <div
-      class="navbar bg-white rounded-3xl shadow-lg mt-2 fixed top-0 flex items-center justify-between"
-      style="width: 95%; z-index: 1000; left: 50%; transform: translateX(-50%)"
-    >
+    <div class="navbar bg-white rounded-3xl shadow-lg mt-2 fixed top-0 flex items-center justify-between" style="width: 95%; z-index: 1000; left: 50%; transform: translateX(-50%)">
       <div class="flex items-center gap-4">
-        <a href="../index.html" class="btn btn-ghost text-2xl"
-          ><span class="title">Progression Dex |</span></a
-        >
+        <a href="../index.html" class="btn btn-ghost text-2xl"><span class="title">Progression Dex |</span></a>
         <div class="flex items-center gap-2">
-          <img
-            id="black2-logo"
-            src="../images/logos/black2-logo.webp"
-            alt="Icon of Black 2 Logo"
-            class="w-20"
-          />
-          <img
-            id="white2-logo"
-            src="../images/logos/white2-logo.webp"
-            alt="Icon of White 2 Logo"
-            class="w-20"
-          />
+          <img id="black2-logo" src="../images/logos/black2-logo.webp" alt="Icon of Black 2 Logo" class="w-20" />
+          <img id="white2-logo" src="../images/logos/white2-logo.webp" alt="Icon of White 2 Logo" class="w-20" />
         </div>
       </div>
     </div>
@@ -71,280 +39,108 @@
           <label class="panel-label">Pokédex</label>
           <div class="completepokedex">
             <div class="checkbox-item">
-              <span class="title"
-                ><label class="text-lg">Complete the Unova Pokédex</label></span
-              >
+              <span class="title"><label class="text-lg">Complete the Unova Pokédex</label></span>
             </div>
 
             <div class="checkbox-item">
-              <input
-                id="black2white2-checkbox-nationalpokedex"
-                type="checkbox"
-              />
-              <label
-                class="text-sm lg:tooltip"
-                data-tip="There are a total of 649 Pokemon in the National Dex."
-                for="black2white2-checkbox-nationalpokedex"
-                >Complete the National Pokedex</label
-              >
+              <input id="black2white2-checkbox-nationalpokedex" type="checkbox" />
+              <label class="text-sm lg:tooltip" data-tip="There are a total of 649 Pokemon in the National Dex." for="black2white2-checkbox-nationalpokedex">Complete the National Pokedex</label>
             </div>
             <div class="checkbox-item">
               <input id="black2white2-checkbox-diploma" type="checkbox" />
-              <label
-                class="text-sm lg:tooltip"
-                data-tip="The lead developer is in the Game Freak building in Castelia City."
-                for="black2white2-checkbox-diploma"
-                >Get Diploma</label
-              >
+              <label class="text-sm lg:tooltip" data-tip="The lead developer is in the Game Freak building in Castelia City." for="black2white2-checkbox-diploma">Get Diploma</label>
             </div>
           </div>
           <div class="legendaries">
             <div class="checkbox-item">
-              <span class="title"
-                ><label class="text-lg">Catch all Legendaries</label></span
-              >
+              <span class="title"><label class="text-lg">Catch all Legendaries</label></span>
             </div>
             <div class="legendaries-rowcontainer">
               <div class="legendaries-leftrow">
                 <div class="checkbox-item">
                   <input id="black2white2-checkbox-reshiram" type="checkbox" />
-                  <img
-                    class="pokeicon legendary"
-                    src="../images/icons/pokemon/gen5/b2w2/reshiram.gif"
-                    alt="Icon of Reshiram"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Dragonspiral Tower. After you have beaten the Elite Four."
-                    for="black2white2-checkbox-reshiram"
-                    style="color: #0084ca"
-                    >Reshiram</label
-                  >
+                  <img class="pokeicon legendary" src="../images/icons/pokemon/gen5/b2w2/reshiram.gif" alt="Icon of Reshiram" />
+                  <label class="text-sm lg:tooltip" data-tip="Dragonspiral Tower. After you have beaten the Elite Four." for="black2white2-checkbox-reshiram" style="color: #0084ca">Reshiram</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="black2white2-checkbox-zekrom" type="checkbox" />
-                  <img
-                    class="pokeicon legendary"
-                    src="../images/icons/pokemon/gen5/b2w2/zekrom.gif"
-                    alt="Icon of Zekrom"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Dragonspiral Tower. After you have beaten the Elite Four."
-                    for="black2white2-checkbox-zekrom"
-                    style="color: #d92122"
-                    >Zekrom</label
-                  >
+                  <img class="pokeicon legendary" src="../images/icons/pokemon/gen5/b2w2/zekrom.gif" alt="Icon of Zekrom" />
+                  <label class="text-sm lg:tooltip" data-tip="Dragonspiral Tower. After you have beaten the Elite Four." for="black2white2-checkbox-zekrom" style="color: #d92122">Zekrom</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="black2white2-checkbox-kyurem" type="checkbox" />
-                  <img
-                    class="pokeicon legendary"
-                    src="../images/icons/pokemon/gen5/b2w2/kyurem.gif"
-                    alt="Icon of Kyurem"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Go to the Giant Chasm after having captured Reshiram/Zekrom."
-                    for="black2white2-checkbox-kyurem"
-                    >Kyurem</label
-                  >
+                  <img class="pokeicon legendary" src="../images/icons/pokemon/gen5/b2w2/kyurem.gif" alt="Icon of Kyurem" />
+                  <label class="text-sm lg:tooltip" data-tip="Go to the Giant Chasm after having captured Reshiram/Zekrom." for="black2white2-checkbox-kyurem">Kyurem</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="black2white2-checkbox-victini" type="checkbox" />
-                  <img
-                    class="pokeicon legendary"
-                    src="../images/icons/pokemon/gen5/b2w2/victini.gif"
-                    alt="Icon of Victini"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Route 11."
-                    for="black2white2-checkbox-victini"
-                    >Victini</label
-                  >
+                  <img class="pokeicon legendary" src="../images/icons/pokemon/gen5/b2w2/victini.gif" alt="Icon of Victini" />
+                  <label class="text-sm lg:tooltip" data-tip="Route 11." for="black2white2-checkbox-victini">Victini</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="black2white2-checkbox-cobalion" type="checkbox" />
-                  <img
-                    class="pokeicon legendary"
-                    src="../images/icons/pokemon/gen5/b2w2/cobalion.gif"
-                    alt="Icon of Cobalion"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Route 13."
-                    for="black2white2-checkbox-cobalion"
-                    >Cobalion</label
-                  >
+                  <img class="pokeicon legendary" src="../images/icons/pokemon/gen5/b2w2/cobalion.gif" alt="Icon of Cobalion" />
+                  <label class="text-sm lg:tooltip" data-tip="Route 13." for="black2white2-checkbox-cobalion">Cobalion</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="black2white2-checkbox-terrakion" type="checkbox" />
-                  <img
-                    class="pokeicon legendary"
-                    src="../images/icons/pokemon/gen5/b2w2/terrakion.gif"
-                    alt="Icon of Terrakion"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Route 22."
-                    for="black2white2-checkbox-terrakion"
-                    >Terrakion</label
-                  >
+                  <img class="pokeicon legendary" src="../images/icons/pokemon/gen5/b2w2/terrakion.gif" alt="Icon of Terrakion" />
+                  <label class="text-sm lg:tooltip" data-tip="Route 22." for="black2white2-checkbox-terrakion">Terrakion</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="black2white2-checkbox-virizion" type="checkbox" />
-                  <img
-                    class="pokeicon legendary"
-                    src="../images/icons/pokemon/gen5/b2w2/virizion.gif"
-                    alt="Icon of Virizion"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="After obtaining Cobalion, go to Pinwheel Forest."
-                    for="black2white2-checkbox-virizion"
-                    >Virizion</label
-                  >
+                  <img class="pokeicon legendary" src="../images/icons/pokemon/gen5/b2w2/virizion.gif" alt="Icon of Virizion" />
+                  <label class="text-sm lg:tooltip" data-tip="After obtaining Cobalion, go to Pinwheel Forest." for="black2white2-checkbox-virizion">Virizion</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="black2white2-checkbox-torandus" type="checkbox" />
-                  <img
-                    class="pokeicon legendary"
-                    src="../images/icons/pokemon/gen5/b2w2/tornadus-incarnate.gif"
-                    alt="Icon of Tornadus"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Go to Route 10, then Route 7."
-                    for="black2white2-checkbox-torandus"
-                    >Tornadus</label
-                  >
+                  <img class="pokeicon legendary" src="../images/icons/pokemon/gen5/b2w2/tornadus-incarnate.gif" alt="Icon of Tornadus" />
+                  <label class="text-sm lg:tooltip" data-tip="Go to Route 10, then Route 7." for="black2white2-checkbox-torandus">Tornadus</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="black2white2-checkbox-thundurus" type="checkbox" />
-                  <img
-                    class="pokeicon legendary"
-                    src="../images/icons/pokemon/gen5/b2w2/thundurus-incarnate.gif"
-                    alt="Icon of Thundurus"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Go to Route 10, then Route 7."
-                    for="black2white2-checkbox-thundurus"
-                    >Thundurus</label
-                  >
+                  <img class="pokeicon legendary" src="../images/icons/pokemon/gen5/b2w2/thundurus-incarnate.gif" alt="Icon of Thundurus" />
+                  <label class="text-sm lg:tooltip" data-tip="Go to Route 10, then Route 7." for="black2white2-checkbox-thundurus">Thundurus</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="black2white2-checkbox-landorus" type="checkbox" />
-                  <img
-                    class="pokeicon legendary"
-                    src="../images/icons/pokemon/gen5/b2w2/landorus-incarnate.gif"
-                    alt="Icon of Landorus"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Abundant Shrine after you got both Tornadus and Thundurus through trading."
-                    for="black2white2-checkbox-landorus"
-                    >Landorus</label
-                  >
+                  <img class="pokeicon legendary" src="../images/icons/pokemon/gen5/b2w2/landorus-incarnate.gif" alt="Icon of Landorus" />
+                  <label class="text-sm lg:tooltip" data-tip="Abundant Shrine after you got both Tornadus and Thundurus through trading." for="black2white2-checkbox-landorus">Landorus</label>
                 </div>
               </div>
               <div class="legendaries-rightrow">
                 <div class="checkbox-item">
-                  <input
-                    id="black2white2-checkbox-latios-latias"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon legendary"
-                    src="../images/icons/pokemon/gen5/b2w2/latios.gif"
-                    alt="Icon of Latios"
-                  />
-                  <img
-                    class="pokeicon legendary"
-                    src="../images/icons/pokemon/gen5/b2w2/latias.gif"
-                    alt="Icon of Latias"
-                    style="margin-left: -5px"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Dreamyard. Latios if playing Black 2, Latias if playing White 2."
-                    for="black2white2-checkbox-latios-latias"
-                    >Latios / Latias</label
-                  >
+                  <input id="black2white2-checkbox-latios-latias" type="checkbox" />
+                  <img class="pokeicon legendary" src="../images/icons/pokemon/gen5/b2w2/latios.gif" alt="Icon of Latios" />
+                  <img class="pokeicon legendary" src="../images/icons/pokemon/gen5/b2w2/latias.gif" alt="Icon of Latias" style="margin-left: -5px" />
+                  <label class="text-sm lg:tooltip" data-tip="Dreamyard. Latios if playing Black 2, Latias if playing White 2." for="black2white2-checkbox-latios-latias">Latios / Latias</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="black2white2-checkbox-uxie" type="checkbox" />
-                  <img
-                    class="pokeicon legendary"
-                    src="../images/icons/pokemon/gen5/b2w2/uxie.gif"
-                    alt="Icon of Uxie"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Visit the Cave of Being after completing the game. You can find Uxie at the Nacrene Museum."
-                    for="black2white2-checkbox-uxie"
-                    >Uxie</label
-                  >
+                  <img class="pokeicon legendary" src="../images/icons/pokemon/gen5/b2w2/uxie.gif" alt="Icon of Uxie" />
+                  <label class="text-sm lg:tooltip" data-tip="Visit the Cave of Being after completing the game. You can find Uxie at the Nacrene Museum." for="black2white2-checkbox-uxie">Uxie</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="black2white2-checkbox-mesprit" type="checkbox" />
-                  <img
-                    class="pokeicon legendary"
-                    src="../images/icons/pokemon/gen5/b2w2/mesprit.gif"
-                    alt="Icon of Mesprit"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Visit the Cave of Being after completing the game. You can find Mesprit at the Celestial Tower."
-                    for="black2white2-checkbox-mesprit"
+                  <img class="pokeicon legendary" src="../images/icons/pokemon/gen5/b2w2/mesprit.gif" alt="Icon of Mesprit" />
+                  <label class="text-sm lg:tooltip" data-tip="Visit the Cave of Being after completing the game. You can find Mesprit at the Celestial Tower." for="black2white2-checkbox-mesprit"
                     >Mesprit</label
                   >
                 </div>
                 <div class="checkbox-item">
                   <input id="black2white2-checkbox-azelf" type="checkbox" />
-                  <img
-                    class="pokeicon legendary"
-                    src="../images/icons/pokemon/gen5/b2w2/azelf.gif"
-                    alt="Icon of Azelf"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Visit the Cave of Being after completing the game. You can find Azelf at Route 23."
-                    for="black2white2-checkbox-azelf"
-                    >Azelf</label
-                  >
+                  <img class="pokeicon legendary" src="../images/icons/pokemon/gen5/b2w2/azelf.gif" alt="Icon of Azelf" />
+                  <label class="text-sm lg:tooltip" data-tip="Visit the Cave of Being after completing the game. You can find Azelf at Route 23." for="black2white2-checkbox-azelf">Azelf</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="black2white2-checkbox-regirock" type="checkbox" />
-                  <img
-                    class="pokeicon legendary"
-                    src="../images/icons/pokemon/gen5/b2w2/regirock.gif"
-                    alt="Icon of Regirock"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Clay Tunnel, Underground Ruins."
-                    for="black2white2-checkbox-regirock"
-                    >Regirock</label
-                  >
+                  <img class="pokeicon legendary" src="../images/icons/pokemon/gen5/b2w2/regirock.gif" alt="Icon of Regirock" />
+                  <label class="text-sm lg:tooltip" data-tip="Clay Tunnel, Underground Ruins." for="black2white2-checkbox-regirock">Regirock</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="black2white2-checkbox-registeel-regice"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon legendary"
-                    src="../images/icons/pokemon/gen5/b2w2/registeel.gif"
-                    alt="Icon of Registeel"
-                  />
-                  <img
-                    class="pokeicon legendary"
-                    src="../images/icons/pokemon/gen5/b2w2/regice.gif"
-                    alt="Icon of Regice"
-                    style="margin-left: -5px"
-                  />
+                  <input id="black2white2-checkbox-registeel-regice" type="checkbox" />
+                  <img class="pokeicon legendary" src="../images/icons/pokemon/gen5/b2w2/registeel.gif" alt="Icon of Registeel" />
+                  <img class="pokeicon legendary" src="../images/icons/pokemon/gen5/b2w2/regice.gif" alt="Icon of Regice" style="margin-left: -5px" />
                   <label
                     class="text-sm lg:tooltip"
                     data-tip="You will find them at the same place you caught Regirock after switching over to using these via teh Unova Link function."
@@ -354,66 +150,31 @@
                 </div>
                 <div class="checkbox-item">
                   <input id="black2white2-checkbox-regigigas" type="checkbox" />
-                  <img
-                    class="pokeicon legendary"
-                    src="../images/icons/pokemon/gen5/b2w2/regigigas.gif"
-                    alt="Icon of Regigigas"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Go to the basement of Twist Mountain after you have caught the Regi's."
-                    for="black2white2-checkbox-regigigas"
-                    >Regigigas</label
-                  >
+                  <img class="pokeicon legendary" src="../images/icons/pokemon/gen5/b2w2/regigigas.gif" alt="Icon of Regigigas" />
+                  <label class="text-sm lg:tooltip" data-tip="Go to the basement of Twist Mountain after you have caught the Regi's." for="black2white2-checkbox-regigigas">Regigigas</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="black2white2-checkbox-cresselia" type="checkbox" />
-                  <img
-                    class="pokeicon legendary"
-                    src="../images/icons/pokemon/gen5/b2w2/cresselia.gif"
-                    alt="Icon of Cresselia"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Go to the Strangers House near Lentimas Town."
-                    for="black2white2-checkbox-cresselia"
-                    >Cresselia</label
-                  >
+                  <img class="pokeicon legendary" src="../images/icons/pokemon/gen5/b2w2/cresselia.gif" alt="Icon of Cresselia" />
+                  <label class="text-sm lg:tooltip" data-tip="Go to the Strangers House near Lentimas Town." for="black2white2-checkbox-cresselia">Cresselia</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="black2white2-checkbox-heatran" type="checkbox" />
-                  <img
-                    class="pokeicon legendary"
-                    src="../images/icons/pokemon/gen5/b2w2/heatran.gif"
-                    alt="Icon of Heatran"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Find the Magma Stone at Route 18, then go to Reversal Mountain."
-                    for="black2white2-checkbox-heatran"
-                    >Heatran</label
-                  >
+                  <img class="pokeicon legendary" src="../images/icons/pokemon/gen5/b2w2/heatran.gif" alt="Icon of Heatran" />
+                  <label class="text-sm lg:tooltip" data-tip="Find the Magma Stone at Route 18, then go to Reversal Mountain." for="black2white2-checkbox-heatran">Heatran</label>
                 </div>
               </div>
             </div>
           </div>
           <div class="giftpokemon">
             <div class="checkbox-item">
-              <span class="title"
-                ><label class="text-lg"
-                  >Obtain all In-Game Gift Pokemon</label
-                ></span
-              >
+              <span class="title"><label class="text-lg">Obtain all In-Game Gift Pokemon</label></span>
             </div>
             <div class="giftpokemon-rowcontainer">
               <div class="giftpokemon-leftrow">
                 <div class="checkbox-item">
                   <input id="black2white2-checkbox-fossils" type="checkbox" />
-                  <img
-                    class="pokeicon item"
-                    src="../images/icons/inventory/gen5/fossils/Bag_Cover_Fossil_Sprite.png"
-                    alt="Icon of Cover Fossil"
-                  />
+                  <img class="pokeicon item" src="../images/icons/inventory/gen5/fossils/Bag_Cover_Fossil_Sprite.png" alt="Icon of Cover Fossil" />
                   <label
                     class="text-sm lg:tooltip"
                     data-tip="In the Twist Mountain Cave, a man will give you a fossil once a day after you've obtained the National Dex. Omanyte, Kabuto, Aerodactyl, Lileep, Anorith, Cranidos or Shieldon."
@@ -423,455 +184,178 @@
                 </div>
                 <div class="checkbox-item">
                   <input id="black2white2-checkbox-zorua" type="checkbox" />
-                  <img
-                    class="pokeicon gif"
-                    src="../images/icons/pokemon/gen5/b2w2/zorua.gif"
-                    alt="Icon of Zorua"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Driftveil City when you help Old Team Plasma out against New Team Plasma."
-                    for="black2white2-checkbox-zorua"
-                    >Zorua</label
-                  >
+                  <img class="pokeicon gif" src="../images/icons/pokemon/gen5/b2w2/zorua.gif" alt="Icon of Zorua" />
+                  <label class="text-sm lg:tooltip" data-tip="Driftveil City when you help Old Team Plasma out against New Team Plasma." for="black2white2-checkbox-zorua">Zorua</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="black2white2-checkbox-eevee" type="checkbox" />
-                  <img
-                    class="pokeicon gif"
-                    src="../images/icons/pokemon/gen5/b2w2/eevee.gif"
-                    alt="Icon of Eevee"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Castelia City."
-                    for="black2white2-checkbox-eevee"
-                    >Eevee</label
-                  >
+                  <img class="pokeicon gif" src="../images/icons/pokemon/gen5/b2w2/eevee.gif" alt="Icon of Eevee" />
+                  <label class="text-sm lg:tooltip" data-tip="Castelia City." for="black2white2-checkbox-eevee">Eevee</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="black2white2-checkbox-deerling" type="checkbox" />
-                  <img
-                    class="pokeicon gif"
-                    src="../images/icons/pokemon/gen5/b2w2/deerling-spring.gif"
-                    alt="Icon of Deerling"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Route 6."
-                    for="black2white2-checkbox-deerling"
-                    >Deerling</label
-                  >
+                  <img class="pokeicon gif" src="../images/icons/pokemon/gen5/b2w2/deerling-spring.gif" alt="Icon of Deerling" />
+                  <label class="text-sm lg:tooltip" data-tip="Route 6." for="black2white2-checkbox-deerling">Deerling</label>
                 </div>
               </div>
               <div class="giftpokemon-rightrow">
                 <div class="checkbox-item">
                   <input id="black2white2-checkbox-happiny" type="checkbox" />
-                  <img
-                    class="pokeicon gif"
-                    src="../images/icons/pokemon/gen5/b2w2/happiny.gif"
-                    alt="Icon of Happiny"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Route 6."
-                    for="black2white2-checkbox-happiny"
-                    >Happiny</label
-                  >
+                  <img class="pokeicon gif" src="../images/icons/pokemon/gen5/b2w2/happiny.gif" alt="Icon of Happiny" />
+                  <label class="text-sm lg:tooltip" data-tip="Route 6." for="black2white2-checkbox-happiny">Happiny</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="black2white2-checkbox-gible-dratini"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon gif"
-                    src="../images/icons/pokemon/gen5/b2w2/gible-f.gif"
-                    alt="Icon of Gible"
-                  />
-                  <img
-                    class="pokeicon gif"
-                    src="../images/icons/pokemon/gen5/b2w2/dratini.gif"
-                    alt="Icon of Dratini"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Floccesy Town, after defeating Benga in Black City or White Forest's main attraction."
-                    for="black2white2-checkbox-gible-dratini"
+                  <input id="black2white2-checkbox-gible-dratini" type="checkbox" />
+                  <img class="pokeicon gif" src="../images/icons/pokemon/gen5/b2w2/gible-f.gif" alt="Icon of Gible" />
+                  <img class="pokeicon gif" src="../images/icons/pokemon/gen5/b2w2/dratini.gif" alt="Icon of Dratini" />
+                  <label class="text-sm lg:tooltip" data-tip="Floccesy Town, after defeating Benga in Black City or White Forest's main attraction." for="black2white2-checkbox-gible-dratini"
                     >Gible / Dratini</label
                   >
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="black2white2-checkbox-tirtouga-archen"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon gif"
-                    src="../images/icons/pokemon/gen5/b2w2/tirtouga.gif"
-                    alt="Icon of Tirtouga"
-                  />
-                  <img
-                    class="pokeicon gif"
-                    src="../images/icons/pokemon/gen5/b2w2/archen.gif"
-                    alt="Icon of Archen"
-                    style="margin-left: -5px"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="In Nacrene City Museum, after having defeated the Elite Four. You may choose one."
-                    for="black2white2-checkbox-tirtouga-archen"
+                  <input id="black2white2-checkbox-tirtouga-archen" type="checkbox" />
+                  <img class="pokeicon gif" src="../images/icons/pokemon/gen5/b2w2/tirtouga.gif" alt="Icon of Tirtouga" />
+                  <img class="pokeicon gif" src="../images/icons/pokemon/gen5/b2w2/archen.gif" alt="Icon of Archen" style="margin-left: -5px" />
+                  <label class="text-sm lg:tooltip" data-tip="In Nacrene City Museum, after having defeated the Elite Four. You may choose one." for="black2white2-checkbox-tirtouga-archen"
                     >Tirtouga / Archen</label
                   >
                 </div>
                 <div class="checkbox-item">
                   <input id="black2white2-checkbox-magikarp" type="checkbox" />
-                  <img
-                    class="pokeicon gif"
-                    src="../images/icons/pokemon/gen5/b2w2/magikarp-f.gif"
-                    alt="Icon of Magikarp"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Marvelous Bridge. Buy the fish for 500 PokeDollars."
-                    for="black2white2-checkbox-magikarp"
-                    >Buy Magicarp</label
-                  >
+                  <img class="pokeicon gif" src="../images/icons/pokemon/gen5/b2w2/magikarp-f.gif" alt="Icon of Magikarp" />
+                  <label class="text-sm lg:tooltip" data-tip="Marvelous Bridge. Buy the fish for 500 PokeDollars." for="black2white2-checkbox-magikarp">Buy Magicarp</label>
                 </div>
               </div>
             </div>
           </div>
           <div class="n-pokemon">
             <div class="checkbox-item">
-              <span class="title"
-                ><label class="text-lg">Catch all of N's Pokemon</label></span
-              >
-              <label
-                class="text-sm lg:tooltip"
-                data-tip="N's Pokémon are obtainable via Memory Link if the player has completed the storyline of Pokémon Black and White. The OT will be 'N'"
-                ><img
-                  class="icon-small"
-                  src="../images/icons/miscellaneous/other/moreinfo.png"
-                  alt="Icon of More Info"
+              <span class="title"><label class="text-lg">Catch all of N's Pokemon</label></span>
+              <label class="text-sm lg:tooltip" data-tip="N's Pokémon are obtainable via Memory Link if the player has completed the storyline of Pokémon Black and White. The OT will be 'N'"
+                ><img class="icon-small" src="../images/icons/miscellaneous/other/moreinfo.png" alt="Icon of More Info"
               /></label>
             </div>
             <div class="n-pokemon-rowcontainer">
               <div class="n-pokemon-leftrow">
                 <div class="checkbox-item">
                   <input id="black2white2-checkbox-boldore" type="checkbox" />
-                  <img
-                    class="pokeicon gif"
-                    src="../images/icons/pokemon/gen5/b2w2/boldore.gif"
-                    alt="Icon of Boldore"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Chargestone Cave."
-                    for="black2white2-checkbox-boldore"
-                    >Boldore</label
-                  >
+                  <img class="pokeicon gif" src="../images/icons/pokemon/gen5/b2w2/boldore.gif" alt="Icon of Boldore" />
+                  <label class="text-sm lg:tooltip" data-tip="Chargestone Cave." for="black2white2-checkbox-boldore">Boldore</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="black2white2-checkbox-darmanitan"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon gif"
-                    src="../images/icons/pokemon/gen5/b2w2/darmanitan-standard-mode.gif"
-                    alt="Icon of Darmanitan"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Desert Resort."
-                    for="black2white2-checkbox-darmanitan"
-                    >Darmanitan</label
-                  >
+                  <input id="black2white2-checkbox-darmanitan" type="checkbox" />
+                  <img class="pokeicon gif" src="../images/icons/pokemon/gen5/b2w2/darmanitan-standard-mode.gif" alt="Icon of Darmanitan" />
+                  <label class="text-sm lg:tooltip" data-tip="Desert Resort." for="black2white2-checkbox-darmanitan">Darmanitan</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="black2white2-checkbox-darumaka" type="checkbox" />
-                  <img
-                    class="pokeicon gif"
-                    src="../images/icons/pokemon/gen5/b2w2/darumaka.gif"
-                    alt="Icon of Darumaka"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Desert Resort."
-                    for="black2white2-checkbox-darumaka"
-                    >Darumaka</label
-                  >
+                  <img class="pokeicon gif" src="../images/icons/pokemon/gen5/b2w2/darumaka.gif" alt="Icon of Darumaka" />
+                  <label class="text-sm lg:tooltip" data-tip="Desert Resort." for="black2white2-checkbox-darumaka">Darumaka</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="black2white2-checkbox-ferroseed" type="checkbox" />
-                  <img
-                    class="pokeicon gif"
-                    src="../images/icons/pokemon/gen5/b2w2/ferroseed.gif"
-                    alt="Icon of Ferroseed"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Chargestone Cave."
-                    for="black2white2-checkbox-ferroseed"
-                    >Ferroseed</label
-                  >
+                  <img class="pokeicon gif" src="../images/icons/pokemon/gen5/b2w2/ferroseed.gif" alt="Icon of Ferroseed" />
+                  <label class="text-sm lg:tooltip" data-tip="Chargestone Cave." for="black2white2-checkbox-ferroseed">Ferroseed</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="black2white2-checkbox-joltik" type="checkbox" />
-                  <img
-                    class="pokeicon gif"
-                    src="../images/icons/pokemon/gen5/b2w2/joltik.gif"
-                    alt="Icon of Joltik"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Chargestone Cave."
-                    for="black2white2-checkbox-joltik"
-                    >Joltik</label
-                  >
+                  <img class="pokeicon gif" src="../images/icons/pokemon/gen5/b2w2/joltik.gif" alt="Icon of Joltik" />
+                  <label class="text-sm lg:tooltip" data-tip="Chargestone Cave." for="black2white2-checkbox-joltik">Joltik</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="black2white2-checkbox-klink" type="checkbox" />
-                  <img
-                    class="pokeicon gif"
-                    src="../images/icons/pokemon/gen5/b2w2/klink.gif"
-                    alt="Icon of Klink"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Chargestone Cave."
-                    for="black2white2-checkbox-klink"
-                    >Klink</label
-                  >
+                  <img class="pokeicon gif" src="../images/icons/pokemon/gen5/b2w2/klink.gif" alt="Icon of Klink" />
+                  <label class="text-sm lg:tooltip" data-tip="Chargestone Cave." for="black2white2-checkbox-klink">Klink</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="black2white2-checkbox-pidove" type="checkbox" />
-                  <img
-                    class="pokeicon gif"
-                    src="../images/icons/pokemon/gen5/b2w2/pidove.gif"
-                    alt="Icon of Pidove"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Pinwheel Forest."
-                    for="black2white2-checkbox-pidove"
-                    >Pidove</label
-                  >
+                  <img class="pokeicon gif" src="../images/icons/pokemon/gen5/b2w2/pidove.gif" alt="Icon of Pidove" />
+                  <label class="text-sm lg:tooltip" data-tip="Pinwheel Forest." for="black2white2-checkbox-pidove">Pidove</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="black2white2-checkbox-purrloin" type="checkbox" />
-                  <img
-                    class="pokeicon gif"
-                    src="../images/icons/pokemon/gen5/b2w2/purrloin.gif"
-                    alt="Icon of Purrloin"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Route 2."
-                    for="black2white2-checkbox-purrloin"
-                    >Purrloin</label
-                  >
+                  <img class="pokeicon gif" src="../images/icons/pokemon/gen5/b2w2/purrloin.gif" alt="Icon of Purrloin" />
+                  <label class="text-sm lg:tooltip" data-tip="Route 2." for="black2white2-checkbox-purrloin">Purrloin</label>
                 </div>
               </div>
               <div class="n-pokemon-rightrow">
                 <div class="checkbox-item">
                   <input id="black2white2-checkbox-sandile" type="checkbox" />
-                  <img
-                    class="pokeicon gif"
-                    src="../images/icons/pokemon/gen5/b2w2/sandile.gif"
-                    alt="Icon of Sandile"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Desert Resort."
-                    for="black2white2-checkbox-sandile"
-                    >Sandile</label
-                  >
+                  <img class="pokeicon gif" src="../images/icons/pokemon/gen5/b2w2/sandile.gif" alt="Icon of Sandile" />
+                  <label class="text-sm lg:tooltip" data-tip="Desert Resort." for="black2white2-checkbox-sandile">Sandile</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="black2white2-checkbox-scraggy" type="checkbox" />
-                  <img
-                    class="pokeicon gif"
-                    src="../images/icons/pokemon/gen5/b2w2/scraggy.gif"
-                    alt="Icon of Scraggy"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Desert Resort."
-                    for="black2white2-checkbox-scraggy"
-                    >Scraggy</label
-                  >
+                  <img class="pokeicon gif" src="../images/icons/pokemon/gen5/b2w2/scraggy.gif" alt="Icon of Scraggy" />
+                  <label class="text-sm lg:tooltip" data-tip="Desert Resort." for="black2white2-checkbox-scraggy">Scraggy</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="black2white2-checkbox-sigilpyh" type="checkbox" />
-                  <img
-                    class="pokeicon gif"
-                    src="../images/icons/pokemon/gen5/b2w2/sigilyph.gif"
-                    alt="Icon of Sigilyph"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Desert Resort."
-                    for="black2white2-checkbox-sigilpyh"
-                    >Sigilyph</label
-                  >
+                  <img class="pokeicon gif" src="../images/icons/pokemon/gen5/b2w2/sigilyph.gif" alt="Icon of Sigilyph" />
+                  <label class="text-sm lg:tooltip" data-tip="Desert Resort." for="black2white2-checkbox-sigilpyh">Sigilyph</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="black2white2-checkbox-timburr" type="checkbox" />
-                  <img
-                    class="pokeicon gif"
-                    src="../images/icons/pokemon/gen5/b2w2/timburr.gif"
-                    alt="Icon of Timburr"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Pinwheel Forest."
-                    for="black2white2-checkbox-timburr"
-                    >Timburr</label
-                  >
+                  <img class="pokeicon gif" src="../images/icons/pokemon/gen5/b2w2/timburr.gif" alt="Icon of Timburr" />
+                  <label class="text-sm lg:tooltip" data-tip="Pinwheel Forest." for="black2white2-checkbox-timburr">Timburr</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="black2white2-checkbox-tympole" type="checkbox" />
-                  <img
-                    class="pokeicon gif"
-                    src="../images/icons/pokemon/gen5/b2w2/tympole.gif"
-                    alt="Icon of Tympole"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Pinwheel Forest."
-                    for="black2white2-checkbox-tympole"
-                    >Tympole</label
-                  >
+                  <img class="pokeicon gif" src="../images/icons/pokemon/gen5/b2w2/tympole.gif" alt="Icon of Tympole" />
+                  <label class="text-sm lg:tooltip" data-tip="Pinwheel Forest." for="black2white2-checkbox-tympole">Tympole</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="black2white2-checkbox-woobat" type="checkbox" />
-                  <img
-                    class="pokeicon gif"
-                    src="../images/icons/pokemon/gen5/b2w2/woobat.gif"
-                    alt="Icon of Woobat"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Wellspring Cave."
-                    for="black2white2-checkbox-woobat"
-                    >Woobat</label
-                  >
+                  <img class="pokeicon gif" src="../images/icons/pokemon/gen5/b2w2/woobat.gif" alt="Icon of Woobat" />
+                  <label class="text-sm lg:tooltip" data-tip="Wellspring Cave." for="black2white2-checkbox-woobat">Woobat</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="black2white2-checkbox-n-zorua" type="checkbox" />
-                  <img
-                    class="pokeicon gif"
-                    src="../images/icons/pokemon/gen5/b2w2/zorua.gif"
-                    alt="Icon of Zorua"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Driftveil City."
-                    for="black2white2-checkbox-n-zorua"
-                    >Zorua</label
-                  >
+                  <img class="pokeicon gif" src="../images/icons/pokemon/gen5/b2w2/zorua.gif" alt="Icon of Zorua" />
+                  <label class="text-sm lg:tooltip" data-tip="Driftveil City." for="black2white2-checkbox-n-zorua">Zorua</label>
                 </div>
               </div>
             </div>
           </div>
           <div class="ingametrades">
             <div class="checkbox-item">
-              <span class="title"
-                ><label class="text-lg"
-                  >Complete all In-Game Trades</label
-                ></span
-              >
+              <span class="title"><label class="text-lg">Complete all In-Game Trades</label></span>
             </div>
             <div class="ingametrades-rowcontainer">
               <div class="ingametrades-leftrow">
                 <div class="checkbox-item">
-                  <input
-                    id="black2white2-checkbox-petilil-cottonee"
-                    type="checkbox"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="In Pokemon White, Route 4."
-                    for="black2white2-checkbox-petilil-cottonee"
-                    >Trade Petilil for Cottonee</label
-                  >
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Trade Cottonee for Petilil in Pokemon Black"
-                    ><img
-                      class="icon-small"
-                      src="../images/icons/miscellaneous/other/moreinfo.png"
-                      alt="Icon of More Info"
+                  <input id="black2white2-checkbox-petilil-cottonee" type="checkbox" />
+                  <label class="text-sm lg:tooltip" data-tip="In Pokemon White, Route 4." for="black2white2-checkbox-petilil-cottonee">Trade Petilil for Cottonee</label>
+                  <label class="text-sm lg:tooltip" data-tip="Trade Cottonee for Petilil in Pokemon Black"
+                    ><img class="icon-small" src="../images/icons/miscellaneous/other/moreinfo.png" alt="Icon of More Info"
                   /></label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="black2white2-checkbox-emolga-gigalith"
-                    type="checkbox"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Route 7."
-                    for="black2white2-checkbox-emolga-gigalith"
-                    >Trade Emolga for Gigalith</label
-                  >
+                  <input id="black2white2-checkbox-emolga-gigalith" type="checkbox" />
+                  <label class="text-sm lg:tooltip" data-tip="Route 7." for="black2white2-checkbox-emolga-gigalith">Trade Emolga for Gigalith</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="black2white2-checkbox-mantine-tangela"
-                    type="checkbox"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Humilau City."
-                    for="black2white2-checkbox-mantine-tangela"
-                    >Trade Mantine for Tangela</label
-                  >
+                  <input id="black2white2-checkbox-mantine-tangela" type="checkbox" />
+                  <label class="text-sm lg:tooltip" data-tip="Humilau City." for="black2white2-checkbox-mantine-tangela">Trade Mantine for Tangela</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="black2white2-checkbox-ditto-rotom"
-                    type="checkbox"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Route 15."
-                    for="black2white2-checkbox-ditto-rotom"
-                    >Trade Ditto for Rotom</label
-                  >
+                  <input id="black2white2-checkbox-ditto-rotom" type="checkbox" />
+                  <label class="text-sm lg:tooltip" data-tip="Route 15." for="black2white2-checkbox-ditto-rotom">Trade Ditto for Rotom</label>
                 </div>
               </div>
               <div class="ingametrades-rightrow">
                 <div class="checkbox-item">
-                  <input
-                    id="black2white2-checkbox-excadrill-ambipom"
-                    type="checkbox"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Southernmost building in Accumula Town."
-                    for="black2white2-checkbox-excadrill-ambipom"
-                    >Trade Excadrill for Ambipom</label
-                  >
+                  <input id="black2white2-checkbox-excadrill-ambipom" type="checkbox" />
+                  <label class="text-sm lg:tooltip" data-tip="Southernmost building in Accumula Town." for="black2white2-checkbox-excadrill-ambipom">Trade Excadrill for Ambipom</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="black2white2-checkbox-hippowdon-alakazam"
-                    type="checkbox"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Southernmost building in Accumula Town after having traded with her."
-                    for="black2white2-checkbox-hippowdon-alakazam"
+                  <input id="black2white2-checkbox-hippowdon-alakazam" type="checkbox" />
+                  <label class="text-sm lg:tooltip" data-tip="Southernmost building in Accumula Town after having traded with her." for="black2white2-checkbox-hippowdon-alakazam"
                     >Trade Hippowdon for Alakazam</label
                   >
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="black2white2-checkbox-various-trades"
-                    type="checkbox"
-                  />
+                  <input id="black2white2-checkbox-various-trades" type="checkbox" />
                   <label
                     class="text-sm lg:tooltip"
                     data-tip="There are various trades in in Nimbasa City. Follow a guide on Serebii or other sites to obtain them all."
@@ -890,83 +374,31 @@
           <label class="panel-label">Items</label>
           <div class="medalHQ">
             <div class="checkbox-item">
-              <span class="title"
-                ><label class="text-lg"
-                  >Obtain Legend Rank at Medal HQ</label
-                ></span
-              >
+              <span class="title"><label class="text-lg">Obtain Legend Rank at Medal HQ</label></span>
             </div>
             <div class="medalHQ-rowcontainer">
               <div class="medalHQ-leftrow">
                 <div class="checkbox-item">
-                  <input
-                    id="black2white2-checkbox-rookie-rank"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon medal"
-                    src="../images/icons/miscellaneous/gen5/medals/Medal-special3.png"
-                    alt="Icon of Rookie Medal"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Earn 50 Medals."
-                    for="black2white2-checkbox-rookie-rank"
-                    >Rookie Rank</label
-                  >
+                  <input id="black2white2-checkbox-rookie-rank" type="checkbox" />
+                  <img class="pokeicon medal" src="../images/icons/miscellaneous/gen5/medals/Medal-special3.png" alt="Icon of Rookie Medal" />
+                  <label class="text-sm lg:tooltip" data-tip="Earn 50 Medals." for="black2white2-checkbox-rookie-rank">Rookie Rank</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="black2white2-checkbox-elite-rank"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon medal"
-                    src="../images/icons/miscellaneous/gen5/medals/Medal-special4.png"
-                    alt="Icon of Elite Medal"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Earn 100 Medals."
-                    for="black2white2-checkbox-elite-rank"
-                    >Elite Rank</label
-                  >
+                  <input id="black2white2-checkbox-elite-rank" type="checkbox" />
+                  <img class="pokeicon medal" src="../images/icons/miscellaneous/gen5/medals/Medal-special4.png" alt="Icon of Elite Medal" />
+                  <label class="text-sm lg:tooltip" data-tip="Earn 100 Medals." for="black2white2-checkbox-elite-rank">Elite Rank</label>
                 </div>
               </div>
               <div class="medalHQ-rightrow">
                 <div class="checkbox-item">
-                  <input
-                    id="black2white2-checkbox-master-rank"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon medal"
-                    src="../images/icons/miscellaneous/gen5/medals/Medal-special5.png"
-                    alt="Icon of Master Medal"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Earn 150 Medals."
-                    for="black2white2-checkbox-master-rank"
-                    >Master Rank</label
-                  >
+                  <input id="black2white2-checkbox-master-rank" type="checkbox" />
+                  <img class="pokeicon medal" src="../images/icons/miscellaneous/gen5/medals/Medal-special5.png" alt="Icon of Master Medal" />
+                  <label class="text-sm lg:tooltip" data-tip="Earn 150 Medals." for="black2white2-checkbox-master-rank">Master Rank</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="black2white2-checkbox-legend-rank"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon medal"
-                    src="../images/icons/miscellaneous/gen5/medals/Medal-special6.png"
-                    alt="Icon of Legend Medal"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Earn 200 Medals."
-                    for="black2white2-checkbox-legend-rank"
-                    >Legend Rank</label
-                  >
+                  <input id="black2white2-checkbox-legend-rank" type="checkbox" />
+                  <img class="pokeicon medal" src="../images/icons/miscellaneous/gen5/medals/Medal-special6.png" alt="Icon of Legend Medal" />
+                  <label class="text-sm lg:tooltip" data-tip="Earn 200 Medals." for="black2white2-checkbox-legend-rank">Legend Rank</label>
                 </div>
               </div>
             </div>
@@ -977,45 +409,18 @@
             </div>
             <div class="checkbox-item">
               <input id="black2white2-checkbox-oval-charm" type="checkbox" />
-              <img
-                class="pokeicon item"
-                src="../images/icons/inventory/gen5/charms/Key_Oval_Charm_Sprite.png"
-                alt="Icon of Oval Charm"
-              />
-              <label
-                class="text-sm lg:tooltip"
-                data-tip="To get the Oval Charm, catch all Pokemon in the Unova Pokédex."
-                for="black2white2-checkbox-oval-charm"
-                >Oval Charm</label
-              >
+              <img class="pokeicon item" src="../images/icons/inventory/gen5/charms/Key_Oval_Charm_Sprite.png" alt="Icon of Oval Charm" />
+              <label class="text-sm lg:tooltip" data-tip="To get the Oval Charm, catch all Pokemon in the Unova Pokédex." for="black2white2-checkbox-oval-charm">Oval Charm</label>
             </div>
             <div class="checkbox-item">
               <input id="black2white2-checkbox-shiny-charm" type="checkbox" />
-              <img
-                class="pokeicon item"
-                src="../images/icons/inventory/gen5/charms/Key_Shiny_Charm_Sprite.png"
-                alt="Icon of Shiny Charm"
-              />
-              <label
-                class="text-sm lg:tooltip"
-                data-tip="To get the Shiny Charm, catch all Pokémon in the National Pokédex."
-                for="black2white2-checkbox-shiny-charm"
-                >Shiny Charm</label
-              >
+              <img class="pokeicon item" src="../images/icons/inventory/gen5/charms/Key_Shiny_Charm_Sprite.png" alt="Icon of Shiny Charm" />
+              <label class="text-sm lg:tooltip" data-tip="To get the Shiny Charm, catch all Pokémon in the National Pokédex." for="black2white2-checkbox-shiny-charm">Shiny Charm</label>
             </div>
             <div class="checkbox-item">
               <input id="black2white2-checkbox-alltms" type="checkbox" />
-              <img
-                class="pokeicon item"
-                src="../images/icons/inventory/tms/normal.png"
-                alt="Icon of TM"
-              />
-              <label
-                class="text-sm lg:tooltip"
-                data-tip="Find all TM's."
-                for="black2white2-checkbox-alltms"
-                >Collect all TM's</label
-              >
+              <img class="pokeicon item" src="../images/icons/inventory/tms/normal.png" alt="Icon of TM" />
+              <label class="text-sm lg:tooltip" data-tip="Find all TM's." for="black2white2-checkbox-alltms">Collect all TM's</label>
             </div>
           </div>
         </div>
@@ -1023,262 +428,108 @@
           <label class="panel-label">Battles</label>
           <div class="worldtournament">
             <div class="checkbox-item">
-              <span class="title"
-                ><label class="text-lg"
-                  >Complete all World Tournaments</label
-                ></span
-              >
+              <span class="title"><label class="text-lg">Complete all World Tournaments</label></span>
             </div>
             <div class="worldtournament-rowcontainer">
               <div class="worldtournament-leftrow">
                 <div class="checkbox-item">
-                  <input
-                    id="black2white2-checkbox-tournament-driftveil"
-                    type="checkbox"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="All Pokémon are Level 25. Most trainers have doubles."
-                    for="black2white2-checkbox-tournament-driftveil"
-                    >Driftveil Tournament</label
-                  >
+                  <input id="black2white2-checkbox-tournament-driftveil" type="checkbox" />
+                  <label class="text-sm lg:tooltip" data-tip="All Pokémon are Level 25. Most trainers have doubles." for="black2white2-checkbox-tournament-driftveil">Driftveil Tournament</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="black2white2-checkbox-tournament-rental"
-                    type="checkbox"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Play using rental Pokémon."
-                    for="black2white2-checkbox-tournament-rental"
-                    >Rental Tournament</label
-                  >
+                  <input id="black2white2-checkbox-tournament-rental" type="checkbox" />
+                  <label class="text-sm lg:tooltip" data-tip="Play using rental Pokémon." for="black2white2-checkbox-tournament-rental">Rental Tournament</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="black2white2-checkbox-tournament-mix"
-                    type="checkbox"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="All Pokémon at Level 50, can switch a Pokémon with your opponent before combat."
-                    for="black2white2-checkbox-tournament-mix"
+                  <input id="black2white2-checkbox-tournament-mix" type="checkbox" />
+                  <label class="text-sm lg:tooltip" data-tip="All Pokémon at Level 50, can switch a Pokémon with your opponent before combat." for="black2white2-checkbox-tournament-mix"
                     >Mix Tournament</label
                   >
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="black2white2-checkbox-tournament-rental-masters"
-                    type="checkbox"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Play using rental Pokémon."
-                    for="black2white2-checkbox-tournament-rental-masters"
-                    >Rental Masters Tournament</label
-                  >
+                  <input id="black2white2-checkbox-tournament-rental-masters" type="checkbox" />
+                  <label class="text-sm lg:tooltip" data-tip="Play using rental Pokémon." for="black2white2-checkbox-tournament-rental-masters">Rental Masters Tournament</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="black2white2-checkbox-tournament-mix-masters"
-                    type="checkbox"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="All Pokémon at Level 50, can switch a Pokémon with your opponent before combat."
-                    for="black2white2-checkbox-tournament-mix-masters"
+                  <input id="black2white2-checkbox-tournament-mix-masters" type="checkbox" />
+                  <label class="text-sm lg:tooltip" data-tip="All Pokémon at Level 50, can switch a Pokémon with your opponent before combat." for="black2white2-checkbox-tournament-mix-masters"
                     >Mix Masters Tournament</label
                   >
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="black2white2-checkbox-tournament-type-expert"
-                    type="checkbox"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Play various tournaments focusing on a single type."
-                    for="black2white2-checkbox-tournament-type-expert"
-                    >Type Expert Tournament</label
-                  >
+                  <input id="black2white2-checkbox-tournament-type-expert" type="checkbox" />
+                  <label class="text-sm lg:tooltip" data-tip="Play various tournaments focusing on a single type." for="black2white2-checkbox-tournament-type-expert">Type Expert Tournament</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="black2white2-checkbox-tournament-download"
-                    type="checkbox"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Play various tournaments downlosded from Nintendo WiFi Connection."
-                    for="black2white2-checkbox-tournament-download"
+                  <input id="black2white2-checkbox-tournament-download" type="checkbox" />
+                  <label class="text-sm lg:tooltip" data-tip="Play various tournaments downlosded from Nintendo WiFi Connection." for="black2white2-checkbox-tournament-download"
                     >Download Tournament</label
                   >
                 </div>
               </div>
               <div class="worldtournament-rightrow">
                 <div class="checkbox-item">
-                  <input
-                    id="black2white2-checkbox-tournament-unova-leaders"
-                    type="checkbox"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Battle the Unova Gym Leaders."
-                    for="black2white2-checkbox-tournament-unova-leaders"
-                    >Unova Leaders Tournament</label
-                  >
+                  <input id="black2white2-checkbox-tournament-unova-leaders" type="checkbox" />
+                  <label class="text-sm lg:tooltip" data-tip="Battle the Unova Gym Leaders." for="black2white2-checkbox-tournament-unova-leaders">Unova Leaders Tournament</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="black2white2-checkbox-tournament-kanto-leaders"
-                    type="checkbox"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Battle the Kanto Gym Leaders."
-                    for="black2white2-checkbox-tournament-kanto-leaders"
-                    >Kanto Leaders Tournament</label
-                  >
+                  <input id="black2white2-checkbox-tournament-kanto-leaders" type="checkbox" />
+                  <label class="text-sm lg:tooltip" data-tip="Battle the Kanto Gym Leaders." for="black2white2-checkbox-tournament-kanto-leaders">Kanto Leaders Tournament</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="black2white2-checkbox-tournament-johto-leaders"
-                    type="checkbox"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Battle the Johto Gym Leaders."
-                    for="black2white2-checkbox-tournament-johto-leaders"
-                    >Johto Leaders Tournament</label
-                  >
+                  <input id="black2white2-checkbox-tournament-johto-leaders" type="checkbox" />
+                  <label class="text-sm lg:tooltip" data-tip="Battle the Johto Gym Leaders." for="black2white2-checkbox-tournament-johto-leaders">Johto Leaders Tournament</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="black2white2-checkbox-tournament-hoenn-leaders"
-                    type="checkbox"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Battle the Hoenn Gym Leaders."
-                    for="black2white2-checkbox-tournament-hoenn-leaders"
-                    >Hoenn Leaders Tournament</label
-                  >
+                  <input id="black2white2-checkbox-tournament-hoenn-leaders" type="checkbox" />
+                  <label class="text-sm lg:tooltip" data-tip="Battle the Hoenn Gym Leaders." for="black2white2-checkbox-tournament-hoenn-leaders">Hoenn Leaders Tournament</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="black2white2-checkbox-tournament-sinnoh-leaders"
-                    type="checkbox"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Battle the Sinnoh Gym Leaders."
-                    for="black2white2-checkbox-tournament-sinnoh-leaders"
-                    >Sinnoh Leaders Tournament</label
-                  >
+                  <input id="black2white2-checkbox-tournament-sinnoh-leaders" type="checkbox" />
+                  <label class="text-sm lg:tooltip" data-tip="Battle the Sinnoh Gym Leaders." for="black2white2-checkbox-tournament-sinnoh-leaders">Sinnoh Leaders Tournament</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="black2white2-checkbox-tournament-world-leaders"
-                    type="checkbox"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Battle against Gym Leaders from all regions."
-                    for="black2white2-checkbox-tournament-world-leaders"
-                    >World Leaders Tournament</label
-                  >
+                  <input id="black2white2-checkbox-tournament-world-leaders" type="checkbox" />
+                  <label class="text-sm lg:tooltip" data-tip="Battle against Gym Leaders from all regions." for="black2white2-checkbox-tournament-world-leaders">World Leaders Tournament</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="black2white2-checkbox-tournament-champions"
-                    type="checkbox"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Battle against the Champions of the regions."
-                    for="black2white2-checkbox-tournament-champions"
-                    >Champions Tournament</label
-                  >
+                  <input id="black2white2-checkbox-tournament-champions" type="checkbox" />
+                  <label class="text-sm lg:tooltip" data-tip="Battle against the Champions of the regions." for="black2white2-checkbox-tournament-champions">Champions Tournament</label>
                 </div>
               </div>
             </div>
           </div>
           <div class="battlesubway">
             <div class="checkbox-item">
-              <span class="title"
-                ><label class="text-lg">Battle Subway Lines</label></span
-              >
+              <span class="title"><label class="text-lg">Battle Subway Lines</label></span>
             </div>
             <div class="battlesubway-rowcontainer">
               <div class="battlesubway-leftrow">
                 <div class="checkbox-item">
-                  <input
-                    id="black2white2-checkbox-battlesubway-single"
-                    type="checkbox"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    for="black2white2-checkbox-battlesubway-single"
-                    >Single</label
-                  >
+                  <input id="black2white2-checkbox-battlesubway-single" type="checkbox" />
+                  <label class="text-sm lg:tooltip" for="black2white2-checkbox-battlesubway-single">Single</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="black2white2-checkbox-battlesubway-double"
-                    type="checkbox"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    for="black2white2-checkbox-battlesubway-double"
-                    >Double</label
-                  >
+                  <input id="black2white2-checkbox-battlesubway-double" type="checkbox" />
+                  <label class="text-sm lg:tooltip" for="black2white2-checkbox-battlesubway-double">Double</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="black2white2-checkbox-battlesubway-multi"
-                    type="checkbox"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    for="black2white2-checkbox-battlesubway-multi"
-                    >Multi</label
-                  >
+                  <input id="black2white2-checkbox-battlesubway-multi" type="checkbox" />
+                  <label class="text-sm lg:tooltip" for="black2white2-checkbox-battlesubway-multi">Multi</label>
                 </div>
               </div>
               <div class="battlesubway-rightrow">
                 <div class="checkbox-item">
-                  <input
-                    id="black2white2-checkbox-battlesubway-singlesuper"
-                    type="checkbox"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    for="black2white2-checkbox-battlesubway-singlesuper"
-                    >Single Super</label
-                  >
+                  <input id="black2white2-checkbox-battlesubway-singlesuper" type="checkbox" />
+                  <label class="text-sm lg:tooltip" for="black2white2-checkbox-battlesubway-singlesuper">Single Super</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="black2white2-checkbox-battlesubway-doublesuper"
-                    type="checkbox"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    for="black2white2-checkbox-battlesubway-doublesuper"
-                    >Double Super</label
-                  >
+                  <input id="black2white2-checkbox-battlesubway-doublesuper" type="checkbox" />
+                  <label class="text-sm lg:tooltip" for="black2white2-checkbox-battlesubway-doublesuper">Double Super</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="black2white2-checkbox-battlesubway-multisuper"
-                    type="checkbox"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    for="black2white2-checkbox-battlesubway-multisuper"
-                    >Multi Super</label
-                  >
+                  <input id="black2white2-checkbox-battlesubway-multisuper" type="checkbox" />
+                  <label class="text-sm lg:tooltip" for="black2white2-checkbox-battlesubway-multisuper">Multi Super</label>
                 </div>
               </div>
             </div>
@@ -1292,83 +543,35 @@
               <div class="battles-leftrow">
                 <div class="checkbox-item">
                   <input id="black2white2-checkbox-elitefour" type="checkbox" />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="After you've obtained the National Dex."
-                    for="black2white2-checkbox-elitefour"
-                    >Elite Four Rematch</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="After you've obtained the National Dex." for="black2white2-checkbox-elitefour">Elite Four Rematch</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="black2white2-checkbox-beatrival-hugh"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon npc"
-                    src="../images/icons/miscellaneous/gen5/Hugh_OD.png"
-                    alt="Icon of Hugh"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Driftveil City."
-                    for="black2white2-checkbox-beatrival-hugh"
-                    >Beat Hugh Final</label
-                  >
+                  <input id="black2white2-checkbox-beatrival-hugh" type="checkbox" />
+                  <img class="pokeicon npc" src="../images/icons/miscellaneous/gen5/Hugh_OD.png" alt="Icon of Hugh" />
+                  <label class="text-sm lg:tooltip" data-tip="Driftveil City." for="black2white2-checkbox-beatrival-hugh">Beat Hugh Final</label>
                 </div>
               </div>
               <div class="battles-rightrow">
                 <div class="checkbox-item">
-                  <input
-                    id="black2white2-checkbox-defeat-benga"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon npc"
-                    src="../images/icons/miscellaneous/gen5/Benga_OD.png"
-                    alt="Icon of Benga"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="You can fight him several times at White Forest/Black City."
-                    for="black2white2-checkbox-defeat-benga"
-                    >Beat Benga</label
-                  >
+                  <input id="black2white2-checkbox-defeat-benga" type="checkbox" />
+                  <img class="pokeicon npc" src="../images/icons/miscellaneous/gen5/Benga_OD.png" alt="Icon of Benga" />
+                  <label class="text-sm lg:tooltip" data-tip="You can fight him several times at White Forest/Black City." for="black2white2-checkbox-defeat-benga">Beat Benga</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="black2white2-checkbox-defeat-colress"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon npc"
-                    src="../images/icons/miscellaneous/gen5/Colress_OD.png"
-                    alt="Icon of Colress"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="P2 Lab."
-                    for="black2white2-checkbox-defeat-colress"
-                    >Beat Colress</label
-                  >
+                  <input id="black2white2-checkbox-defeat-colress" type="checkbox" />
+                  <img class="pokeicon npc" src="../images/icons/miscellaneous/gen5/Colress_OD.png" alt="Icon of Colress" />
+                  <label class="text-sm lg:tooltip" data-tip="P2 Lab." for="black2white2-checkbox-defeat-colress">Beat Colress</label>
                 </div>
               </div>
             </div>
           </div>
           <div class="battleinstitute">
             <div class="checkbox-item">
-              <span class="title"
-                ><label class="text-lg">Battle Institute</label></span
-              >
+              <span class="title"><label class="text-lg">Battle Institute</label></span>
             </div>
             <div class="checkbox-item">
               <input id="black2white2-checkbox-eliterank" type="checkbox" />
-              <label
-                class="text-sm lg:tooltip"
-                data-tip="At Nimbasa City."
-                for="black2white2-checkbox-eliterank"
-                >Elite Rank</label
-              >
+              <label class="text-sm lg:tooltip" data-tip="At Nimbasa City." for="black2white2-checkbox-eliterank">Elite Rank</label>
             </div>
           </div>
         </div>
@@ -1376,172 +579,85 @@
           <label class="panel-label">Post Game</label>
           <div class="trainercard">
             <div class="checkbox-item">
-              <span class="title"
-                ><label class="text-lg">Black Trainer Card</label></span
-              >
+              <span class="title"><label class="text-lg">Black Trainer Card</label></span>
             </div>
             <div class="checkbox-item">
-              <input
-                id="black2white2-checkbox-leaguechampion"
-                type="checkbox"
-              />
-              <label
-                class="text-sm lg:tooltip"
-                for="black2white2-checkbox-leaguechampion"
-                >Defeat the Pokemon League Champion.</label
-              >
+              <input id="black2white2-checkbox-leaguechampion" type="checkbox" />
+              <label class="text-sm lg:tooltip" for="black2white2-checkbox-leaguechampion">Defeat the Pokemon League Champion.</label>
             </div>
             <div class="checkbox-item">
-              <input
-                id="black2white2-checkbox-pokestarstudio"
-                type="checkbox"
-              />
-              <label
-                class="text-sm lg:tooltip"
-                for="black2white2-checkbox-pokestarstudio"
-                >Collect all PokeStar Studio Movies.</label
-              >
+              <input id="black2white2-checkbox-pokestarstudio" type="checkbox" />
+              <label class="text-sm lg:tooltip" for="black2white2-checkbox-pokestarstudio">Collect all PokeStar Studio Movies.</label>
             </div>
             <div class="checkbox-item">
-              <input
-                id="black2white2-checkbox-worldtournament"
-                type="checkbox"
-              />
-              <label
-                class="text-sm lg:tooltip"
-                for="black2white2-checkbox-worldtournament"
-                >Defeat the Pokémon World Tournament.</label
-              >
+              <input id="black2white2-checkbox-worldtournament" type="checkbox" />
+              <label class="text-sm lg:tooltip" for="black2white2-checkbox-worldtournament">Defeat the Pokémon World Tournament.</label>
             </div>
             <div class="checkbox-item">
               <input id="black2white2-checkbox-nationaldex" type="checkbox" />
-              <label
-                class="text-sm lg:tooltip"
-                for="black2white2-checkbox-nationaldex"
-                >Complete the National Dex.</label
-              >
+              <label class="text-sm lg:tooltip" for="black2white2-checkbox-nationaldex">Complete the National Dex.</label>
             </div>
             <div class="checkbox-item">
               <input id="black2white2-checkbox-entreelevels" type="checkbox" />
-              <label
-                class="text-sm lg:tooltip"
-                for="black2white2-checkbox-entreelevels"
-                >Gain Entree levels of 30 for Black & White.</label
-              >
+              <label class="text-sm lg:tooltip" for="black2white2-checkbox-entreelevels">Gain Entree levels of 30 for Black & White.</label>
             </div>
           </div>
 
           <div class="joinavenue">
             <div class="checkbox-item">
-              <span class="title"
-                ><label class="text-lg">Join Avenue</label></span
-              >
+              <span class="title"><label class="text-lg">Join Avenue</label></span>
             </div>
             <div class="checkbox-item">
               <input id="black2white2-checkbox-rank-10" type="checkbox" />
-              <label
-                class="text-sm lg:tooltip"
-                data-tip="Earn 50 Medals."
-                for="black2white2-checkbox-rank-10"
-                >Get to Rank
-              </label>
+              <label class="text-sm lg:tooltip" data-tip="Earn 50 Medals." for="black2white2-checkbox-rank-10">Get to Rank </label>
             </div>
           </div>
           <div class="pokestarstudios">
             <div class="checkbox-item">
-              <span class="title"
-                ><label class="text-lg">PokeStar Studios</label></span
-              >
-              <label
-                class="text-sm lg:tooltip"
-                data-tip="With a total of 6 ranks including EX."
-                ><img
-                  class="icon-small"
-                  src="../images/icons/miscellaneous/other/moreinfo.png"
-                  alt="Icon of More Info"
+              <span class="title"><label class="text-lg">PokeStar Studios</label></span>
+              <label class="text-sm lg:tooltip" data-tip="With a total of 6 ranks including EX."
+                ><img class="icon-small" src="../images/icons/miscellaneous/other/moreinfo.png" alt="Icon of More Info"
               /></label>
             </div>
             <div class="checkbox-item">
               <input id="black2white2-checkbox-rank-EX" type="checkbox" />
-              <label
-                class="text-sm lg:tooltip"
-                data-tip="Complete all movies."
-                for="black2white2-checkbox-rank-EX"
-                >Get to EX Ranking</label
-              >
+              <label class="text-sm lg:tooltip" data-tip="Complete all movies." for="black2white2-checkbox-rank-EX">Get to EX Ranking</label>
             </div>
           </div>
           <div class="droppeditemquest">
             <div class="checkbox-item">
-              <span class="title"
-                ><label class="text-lg">The Dropped Item Quest</label></span
-              >
-              <label
-                class="text-sm lg:tooltip"
-                data-tip="This quest will reward you with several Pokemon."
-                ><img
-                  class="icon-small"
-                  src="../images/icons/miscellaneous/other/moreinfo.png"
-                  alt="Icon of More Info"
+              <span class="title"><label class="text-lg">The Dropped Item Quest</label></span>
+              <label class="text-sm lg:tooltip" data-tip="This quest will reward you with several Pokemon."
+                ><img class="icon-small" src="../images/icons/miscellaneous/other/moreinfo.png" alt="Icon of More Info"
               /></label>
             </div>
             <div class="checkbox-item">
               <input id="black2white2-checkbox-droppeditem" type="checkbox" />
-              <label
-                class="text-sm lg:tooltip"
-                data-tip="Follow a guide on Serebii, Bulbapedia other sites."
-                for="black2white2-checkbox-droppeditem"
-                >Finish the Quest</label
-              >
+              <label class="text-sm lg:tooltip" data-tip="Follow a guide on Serebii, Bulbapedia other sites." for="black2white2-checkbox-droppeditem">Finish the Quest</label>
             </div>
           </div>
           <div class="funfestmissions">
             <div class="checkbox-item">
-              <span class="title"
-                ><label class="text-lg">Funfest Missions</label></span
-              >
-              <label
-                class="text-sm lg:tooltip"
-                data-tip="There are 25 missions."
-                ><img
-                  class="icon-small"
-                  src="../images/icons/miscellaneous/other/moreinfo.png"
-                  alt="Icon of More Info"
-              /></label>
+              <span class="title"><label class="text-lg">Funfest Missions</label></span>
+              <label class="text-sm lg:tooltip" data-tip="There are 25 missions."><img class="icon-small" src="../images/icons/miscellaneous/other/moreinfo.png" alt="Icon of More Info" /></label>
             </div>
             <div class="checkbox-item">
-              <input
-                id="black2white2-checkbox-complete-funfest"
-                type="checkbox"
-              />
-              <label
-                class="text-sm lg:tooltip"
-                data-tip="They are accessed by going to the Entralink through the C-Gear."
-                for="black2white2-checkbox-complete-funfest"
+              <input id="black2white2-checkbox-complete-funfest" type="checkbox" />
+              <label class="text-sm lg:tooltip" data-tip="They are accessed by going to the Entralink through the C-Gear." for="black2white2-checkbox-complete-funfest"
                 >Complete the Funfest Missions</label
               >
             </div>
           </div>
           <div class="abyssalruins">
             <div class="checkbox-item">
-              <span class="title"
-                ><label class="text-lg">Abyssal Ruins</label></span
-              >
-              <label
-                class="text-sm lg:tooltip"
-                data-tip="There are four floors in the ruins with different items. Collect them all."
-                ><img
-                  class="icon-small"
-                  src="../images/icons/miscellaneous/other/moreinfo.png"
-                  alt="Icon of More Info"
+              <span class="title"><label class="text-lg">Abyssal Ruins</label></span>
+              <label class="text-sm lg:tooltip" data-tip="There are four floors in the ruins with different items. Collect them all."
+                ><img class="icon-small" src="../images/icons/miscellaneous/other/moreinfo.png" alt="Icon of More Info"
               /></label>
             </div>
             <div class="checkbox-item">
               <input id="black2white2-checkbox-abyssalruins" type="checkbox" />
-              <label
-                class="text-sm lg:tooltip"
-                data-tip="They are accessed by going to the Entralink through the C-Gear."
-                for="black2white2-checkbox-abyssalruins"
+              <label class="text-sm lg:tooltip" data-tip="They are accessed by going to the Entralink through the C-Gear." for="black2white2-checkbox-abyssalruins"
                 >Get the Relic Crown at the Abyssal Ruins</label
               >
             </div>
@@ -1564,185 +680,96 @@
     </footer>
     <script src="../checklists/js/script.js"></script>
     <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        var black2Logo = document.getElementById('black2-logo');
-        var white2Logo = document.getElementById('white2-logo');
+      document.addEventListener("DOMContentLoaded", function () {
+        var black2Logo = document.getElementById("black2-logo");
+        var white2Logo = document.getElementById("white2-logo");
 
-        var headerTitle = document.querySelector('.title');
-        var widePanels = document.querySelectorAll('.wide-panel');
-        var footer = document.querySelector('footer');
-        var titleText = document.querySelectorAll('.panel-label');
-        var backgroundIcons = document.querySelector('body');
+        var headerTitle = document.querySelector(".title");
+        var widePanels = document.querySelectorAll(".wide-panel");
+        var footer = document.querySelector("footer");
+        var titleText = document.querySelectorAll(".panel-label");
+        var backgroundIcons = document.querySelector("body");
 
-        black2Logo.addEventListener('click', function () {
-          headerTitle.style.color = '#0084ca';
-          footer.style.background = '#0084ca';
-          backgroundIcons.style.backgroundImage =
-            'url(../../images/patterns/pattern-black2.png)';
+        black2Logo.addEventListener("click", function () {
+          headerTitle.style.color = "#0084ca";
+          footer.style.background = "#0084ca";
+          backgroundIcons.style.backgroundImage = "url(../../images/patterns/pattern-black2.png)";
 
           titleText.forEach(function (text) {
-            text.style.color = '#0084ca';
+            text.style.color = "#0084ca";
           });
 
           widePanels.forEach(function (panel) {
-            panel.style.border = '2px solid #0084ca';
+            panel.style.border = "2px solid #0084ca";
           });
         });
 
-        white2Logo.addEventListener('click', function () {
-          headerTitle.style.color = '#D92122';
-          footer.style.backgroundColor = '#D92122';
-          backgroundIcons.style.backgroundImage =
-            'url(../../images/patterns/pattern-white2.png)';
+        white2Logo.addEventListener("click", function () {
+          headerTitle.style.color = "#D92122";
+          footer.style.backgroundColor = "#D92122";
+          backgroundIcons.style.backgroundImage = "url(../../images/patterns/pattern-white2.png)";
 
           titleText.forEach(function (text) {
-            text.style.color = '#D92122';
+            text.style.color = "#D92122";
           });
 
           widePanels.forEach(function (panel) {
-            panel.style.border = '2px solid #D92122';
+            panel.style.border = "2px solid #D92122";
           });
         });
       });
     </script>
 
     <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        const completepokedexCheckboxes = document.querySelectorAll(
-          '.completepokedex input[type="checkbox"]'
-        );
-        const legendariesCheckboxes = document.querySelectorAll(
-          '.legendaries input[type="checkbox"]'
-        );
-        const giftpokemonCheckboxes = document.querySelectorAll(
-          '.giftpokemon input[type="checkbox"]'
-        );
-        const ingametradesCheckboxes = document.querySelectorAll(
-          '.ingametrades input[type="checkbox"]'
-        );
-        const trainercardCheckboxes = document.querySelectorAll(
-          '.trainercard input[type="checkbox"]'
-        );
-        const npokemonCheckboxes = document.querySelectorAll(
-          '.n-pokemon input[type="checkbox"]'
-        );
-        const medalHQCheckboxes = document.querySelectorAll(
-          '.medalHQ input[type="checkbox"]'
-        );
-        const joinavenueCheckboxes = document.querySelectorAll(
-          '.joinavenue input[type="checkbox"]'
-        );
-        const pokestarstudiosCheckboxes = document.querySelectorAll(
-          '.pokestarstudios input[type="checkbox"]'
-        );
-        const droppeditemquestCheckboxes = document.querySelectorAll(
-          '.droppeditemquest input[type="checkbox"]'
-        );
-        const funfestmissionsCheckboxes = document.querySelectorAll(
-          '.funfestmissions input[type="checkbox"]'
-        );
-        const abyssalruinsCheckboxes = document.querySelectorAll(
-          '.abyssalruins input[type="checkbox"]'
-        );
-        const battlesubwayCheckboxes = document.querySelectorAll(
-          '.battlesubway input[type="checkbox"]'
-        );
-        const worldtournamentCheckboxes = document.querySelectorAll(
-          '.worldtournament input[type="checkbox"]'
-        );
-        const battlesCheckboxes = document.querySelectorAll(
-          '.battles input[type="checkbox"]'
-        );
-        const battleinstituteCheckboxes = document.querySelectorAll(
-          '.battleinstitute input[type="checkbox"]'
-        );
-        const itemsCheckboxes = document.querySelectorAll(
-          '.items input[type="checkbox"]'
-        );
+      document.addEventListener("DOMContentLoaded", function () {
+        const completepokedexCheckboxes = document.querySelectorAll('.completepokedex input[type="checkbox"]');
+        const legendariesCheckboxes = document.querySelectorAll('.legendaries input[type="checkbox"]');
+        const giftpokemonCheckboxes = document.querySelectorAll('.giftpokemon input[type="checkbox"]');
+        const ingametradesCheckboxes = document.querySelectorAll('.ingametrades input[type="checkbox"]');
+        const trainercardCheckboxes = document.querySelectorAll('.trainercard input[type="checkbox"]');
+        const npokemonCheckboxes = document.querySelectorAll('.n-pokemon input[type="checkbox"]');
+        const medalHQCheckboxes = document.querySelectorAll('.medalHQ input[type="checkbox"]');
+        const joinavenueCheckboxes = document.querySelectorAll('.joinavenue input[type="checkbox"]');
+        const pokestarstudiosCheckboxes = document.querySelectorAll('.pokestarstudios input[type="checkbox"]');
+        const droppeditemquestCheckboxes = document.querySelectorAll('.droppeditemquest input[type="checkbox"]');
+        const funfestmissionsCheckboxes = document.querySelectorAll('.funfestmissions input[type="checkbox"]');
+        const abyssalruinsCheckboxes = document.querySelectorAll('.abyssalruins input[type="checkbox"]');
+        const battlesubwayCheckboxes = document.querySelectorAll('.battlesubway input[type="checkbox"]');
+        const worldtournamentCheckboxes = document.querySelectorAll('.worldtournament input[type="checkbox"]');
+        const battlesCheckboxes = document.querySelectorAll('.battles input[type="checkbox"]');
+        const battleinstituteCheckboxes = document.querySelectorAll('.battleinstitute input[type="checkbox"]');
+        const itemsCheckboxes = document.querySelectorAll('.items input[type="checkbox"]');
 
         function updateStyle(checkboxes, label) {
-          const allChecked = [...checkboxes].every(
-            (checkbox) => checkbox.checked
-          );
-          label.style.textDecoration = allChecked ? 'line-through' : 'none';
+          const allChecked = [...checkboxes].every((checkbox) => checkbox.checked);
+          label.style.textDecoration = allChecked ? "line-through" : "none";
         }
 
         function initializeCheckboxes(checkboxes, label) {
           checkboxes.forEach((checkbox) => {
-            checkbox.addEventListener('change', function () {
+            checkbox.addEventListener("change", function () {
               updateStyle(checkboxes, label);
             });
           });
           updateStyle(checkboxes, label);
         }
-        initializeCheckboxes(
-          completepokedexCheckboxes,
-          document.querySelector('.completepokedex .title label')
-        );
-        initializeCheckboxes(
-          legendariesCheckboxes,
-          document.querySelector('.legendaries .title label')
-        );
-        initializeCheckboxes(
-          giftpokemonCheckboxes,
-          document.querySelector('.giftpokemon .title label')
-        );
-        initializeCheckboxes(
-          ingametradesCheckboxes,
-          document.querySelector('.ingametrades .title label')
-        );
-        initializeCheckboxes(
-          trainercardCheckboxes,
-          document.querySelector('.trainercard .title label')
-        );
-        initializeCheckboxes(
-          npokemonCheckboxes,
-          document.querySelector('.n-pokemon .title label')
-        );
-        initializeCheckboxes(
-          medalHQCheckboxes,
-          document.querySelector('.medalHQ .title label')
-        );
-        initializeCheckboxes(
-          joinavenueCheckboxes,
-          document.querySelector('.joinavenue .title label')
-        );
-        initializeCheckboxes(
-          pokestarstudiosCheckboxes,
-          document.querySelector('.pokestarstudios .title label')
-        );
-        initializeCheckboxes(
-          droppeditemquestCheckboxes,
-          document.querySelector('.droppeditemquest .title label')
-        );
-        initializeCheckboxes(
-          funfestmissionsCheckboxes,
-          document.querySelector('.funfestmissions .title label')
-        );
-        initializeCheckboxes(
-          abyssalruinsCheckboxes,
-          document.querySelector('.abyssalruins .title label')
-        );
-        initializeCheckboxes(
-          battlesubwayCheckboxes,
-          document.querySelector('.battlesubway .title label')
-        );
-        initializeCheckboxes(
-          worldtournamentCheckboxes,
-          document.querySelector('.worldtournament .title label')
-        );
-        initializeCheckboxes(
-          battlesCheckboxes,
-          document.querySelector('.battles .title label')
-        );
-        initializeCheckboxes(
-          battleinstituteCheckboxes,
-          document.querySelector('.battleinstitute .title label')
-        );
-        initializeCheckboxes(
-          itemsCheckboxes,
-          document.querySelector('.items .title label')
-        );
+        initializeCheckboxes(completepokedexCheckboxes, document.querySelector(".completepokedex .title label"));
+        initializeCheckboxes(legendariesCheckboxes, document.querySelector(".legendaries .title label"));
+        initializeCheckboxes(giftpokemonCheckboxes, document.querySelector(".giftpokemon .title label"));
+        initializeCheckboxes(ingametradesCheckboxes, document.querySelector(".ingametrades .title label"));
+        initializeCheckboxes(trainercardCheckboxes, document.querySelector(".trainercard .title label"));
+        initializeCheckboxes(npokemonCheckboxes, document.querySelector(".n-pokemon .title label"));
+        initializeCheckboxes(medalHQCheckboxes, document.querySelector(".medalHQ .title label"));
+        initializeCheckboxes(joinavenueCheckboxes, document.querySelector(".joinavenue .title label"));
+        initializeCheckboxes(pokestarstudiosCheckboxes, document.querySelector(".pokestarstudios .title label"));
+        initializeCheckboxes(droppeditemquestCheckboxes, document.querySelector(".droppeditemquest .title label"));
+        initializeCheckboxes(funfestmissionsCheckboxes, document.querySelector(".funfestmissions .title label"));
+        initializeCheckboxes(abyssalruinsCheckboxes, document.querySelector(".abyssalruins .title label"));
+        initializeCheckboxes(battlesubwayCheckboxes, document.querySelector(".battlesubway .title label"));
+        initializeCheckboxes(worldtournamentCheckboxes, document.querySelector(".worldtournament .title label"));
+        initializeCheckboxes(battlesCheckboxes, document.querySelector(".battles .title label"));
+        initializeCheckboxes(battleinstituteCheckboxes, document.querySelector(".battleinstitute .title label"));
+        initializeCheckboxes(itemsCheckboxes, document.querySelector(".items .title label"));
       });
     </script>
   </body>

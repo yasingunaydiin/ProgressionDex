@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,61 +6,29 @@
     <title>Progression Dex | Sword and Shield</title>
     <link href="../checklists/css/swordshield.css" rel="stylesheet" />
     <link href="../output.css" rel="stylesheet" />
-    <link
-      href="../images/icons/favicontab.ico"
-      rel="icon"
-      type="image/x-icon"
-    />
-    <link
-      href="../images/icons/favicontab.ico"
-      rel="shortcut icon"
-      type="image/x-icon"
-    />
-    <meta
-      name="description"
-      content="A tool for tracking your progression in Pokemon games. Easily choose between games and track your game progress."
-    />
-    <meta
-      name="keywords"
-      content="pokemon, checklist, pokedex, progress, completion, speedrun, checklist, check list, locations, characters, games, game"
-    />
+    <link href="../images/icons/favicontab.ico" rel="icon" type="image/x-icon" />
+    <link href="../images/icons/favicontab.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="description" content="A tool for tracking your progression in Pokemon games. Easily choose between games and track your game progress." />
+    <meta name="keywords" content="pokemon, checklist, pokedex, progress, completion, speedrun, checklist, check list, locations, characters, games, game" />
   </head>
   <!-- Google tag (gtag.js) -->
-  <script
-    async
-    src="https://www.googletagmanager.com/gtag/js?id=G-4PDLXC895H"
-  ></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4PDLXC895H"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() {
       dataLayer.push(arguments);
     }
-    gtag('js', new Date());
+    gtag("js", new Date());
 
-    gtag('config', 'G-4PDLXC895H');
+    gtag("config", "G-4PDLXC895H");
   </script>
   <body>
-    <div
-      class="navbar bg-white rounded-3xl shadow-lg mt-2 fixed top-0 flex items-center justify-between"
-      style="width: 95%; z-index: 1000; left: 50%; transform: translateX(-50%)"
-    >
+    <div class="navbar bg-white rounded-3xl shadow-lg mt-2 fixed top-0 flex items-center justify-between" style="width: 95%; z-index: 1000; left: 50%; transform: translateX(-50%)">
       <div class="flex items-center gap-4">
-        <a href="../index.html" class="btn btn-ghost text-2xl"
-          ><span class="title">Progression Dex |</span></a
-        >
+        <a href="../index.html" class="btn btn-ghost text-2xl"><span class="title">Progression Dex |</span></a>
         <div class="flex items-center gap-2">
-          <img
-            id="sword-logo"
-            src="../images/logos/sword-logo.webp"
-            alt="Icon of Sword Logo"
-            class="w-20"
-          />
-          <img
-            id="shield-logo"
-            src="../images/logos/shield-logo.webp"
-            alt="Icon of Shield Logo"
-            class="w-20"
-          />
+          <img id="sword-logo" src="../images/logos/sword-logo.webp" alt="Icon of Sword Logo" class="w-20" />
+          <img id="shield-logo" src="../images/logos/shield-logo.webp" alt="Icon of Shield Logo" class="w-20" />
         </div>
       </div>
     </div>
@@ -71,923 +39,338 @@
           <label class="panel-label">Pokédex</label>
           <div class="completepokedex">
             <div class="checkbox-item">
-              <span class="title"
-                ><label class="text-lg">Complete the Galar Pokédex</label></span
-              >
+              <span class="title"><label class="text-lg">Complete the Galar Pokédex</label></span>
             </div>
             <div class="checkbox-item">
               <input id="swordshield-checkbox-galar-pokedex" type="checkbox" />
-              <label
-                class="text-sm lg:tooltip"
-                data-tip="There are a total of 400 Pokemon in the Galar Dex."
-                for="swordshield-checkbox-galar-pokedex"
-                >Complete Galar Pokedex</label
-              >
+              <label class="text-sm lg:tooltip" data-tip="There are a total of 400 Pokemon in the Galar Dex." for="swordshield-checkbox-galar-pokedex">Complete Galar Pokedex</label>
             </div>
           </div>
           <div class="legendaries">
             <div class="checkbox-item">
-              <span class="title"
-                ><label class="text-lg">Catch all Legendaries</label></span
-              >
+              <span class="title"><label class="text-lg">Catch all Legendaries</label></span>
             </div>
             <div class="checkbox-item">
               <input id="swordshield-checkbox-eternatus" type="checkbox" />
-              <img
-                class="pokeicon legendary"
-                src="../images/icons/pokemon/gen8/swordshield/eternatus.png"
-                alt="Icon of Eternatus"
-              />
-              <label
-                class="text-sm lg:tooltip"
-                data-tip="Energy Plant."
-                for="swordshield-checkbox-eternatus"
-                >Eternatus</label
-              >
+              <img class="pokeicon legendary" src="../images/icons/pokemon/gen8/swordshield/eternatus.png" alt="Icon of Eternatus" />
+              <label class="text-sm lg:tooltip" data-tip="Energy Plant." for="swordshield-checkbox-eternatus">Eternatus</label>
             </div>
             <div class="checkbox-item">
               <input id="swordshield-checkbox-zacian" type="checkbox" />
-              <img
-                class="pokeicon legendary"
-                src="../images/icons/pokemon/gen8/swordshield/zacian.png"
-                alt="Icon of Zacian"
-              />
-              <label
-                class="text-sm lg:tooltip"
-                data-tip="Energy Plant."
-                for="swordshield-checkbox-zacian"
-                ><span style="color: #181369">Zacian</span></label
-              >
+              <img class="pokeicon legendary" src="../images/icons/pokemon/gen8/swordshield/zacian.png" alt="Icon of Zacian" />
+              <label class="text-sm lg:tooltip" data-tip="Energy Plant." for="swordshield-checkbox-zacian"><span style="color: #181369">Zacian</span></label>
             </div>
             <div class="checkbox-item">
               <input id="swordshield-checkbox-zamazenta" type="checkbox" />
-              <img
-                class="pokeicon legendary"
-                src="../images/icons/pokemon/gen8/swordshield/zamazenta.png"
-                alt="Icon of Zamazenta"
-              />
-              <label
-                class="text-sm lg:tooltip"
-                data-tip="Energy Plant."
-                for="swordshield-checkbox-zamazenta"
-                ><span style="color: #a40045">Zamazenta</span></label
-              >
+              <img class="pokeicon legendary" src="../images/icons/pokemon/gen8/swordshield/zamazenta.png" alt="Icon of Zamazenta" />
+              <label class="text-sm lg:tooltip" data-tip="Energy Plant." for="swordshield-checkbox-zamazenta"><span style="color: #a40045">Zamazenta</span></label>
             </div>
           </div>
           <div class="giftpokemon">
             <div class="checkbox-item">
-              <span class="title"
-                ><label class="text-lg"
-                  >Obtain all In-Game Gift Pokemon</label
-                ></span
-              >
+              <span class="title"><label class="text-lg">Obtain all In-Game Gift Pokemon</label></span>
             </div>
             <div class="giftpokemon-rowcontainer">
               <div class="giftpokemon-leftrow">
                 <div class="checkbox-item">
-                  <input
-                    id="swordshield-checkbox-gigantamax-pikachu-eevee"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon gigantamax"
-                    src="../images/icons/pokemon/gen8/swordshield/gigantamax/pikachu-gigantamax.png"
-                  />
-                  <img
-                    class="pokeicon gigantamax"
-                    src="../images/icons/pokemon/gen8/swordshield/gigantamax/eevee-gigantamax.png"
-                    style="margin-left: -5px"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Meetup Spot."
-                    for="swordshield-checkbox-gigantamax-pikachu-eevee"
-                    ><span style="color: #f1b836">Pikachu</span> /
-                    <span style="color: #bc6436">Eevee</span></label
+                  <input id="swordshield-checkbox-gigantamax-pikachu-eevee" type="checkbox" />
+                  <img class="pokeicon gigantamax" src="../images/icons/pokemon/gen8/swordshield/gigantamax/pikachu-gigantamax.png" />
+                  <img class="pokeicon gigantamax" src="../images/icons/pokemon/gen8/swordshield/gigantamax/eevee-gigantamax.png" style="margin-left: -5px" />
+                  <label class="text-sm lg:tooltip" data-tip="Meetup Spot." for="swordshield-checkbox-gigantamax-pikachu-eevee"
+                    ><span style="color: #f1b836">Pikachu</span> / <span style="color: #bc6436">Eevee</span></label
                   >
                 </div>
                 <div class="checkbox-item" style="margin-bottom: -10px">
                   <input id="swordshield-checkbox-charmander" type="checkbox" />
-                  <img
-                    class="pokeicon small"
-                    src="../images/icons/pokemon/gen8/swordshield/charmander.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Postwick."
-                    for="swordshield-checkbox-charmander"
-                    >Charmander</label
-                  >
+                  <img class="pokeicon small" src="../images/icons/pokemon/gen8/swordshield/charmander.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Postwick." for="swordshield-checkbox-charmander">Charmander</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="swordshield-checkbox-toxel" type="checkbox" />
-                  <img
-                    class="pokeicon small"
-                    src="../images/icons/pokemon/gen8/swordshield/toxel.png"
-                    alt="Icon of Toxel"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Route 5."
-                    for="swordshield-checkbox-toxel"
-                    >Toxel</label
-                  >
+                  <img class="pokeicon small" src="../images/icons/pokemon/gen8/swordshield/toxel.png" alt="Icon of Toxel" />
+                  <label class="text-sm lg:tooltip" data-tip="Route 5." for="swordshield-checkbox-toxel">Toxel</label>
                 </div>
               </div>
               <div class="giftpokemon-rightrow">
                 <div class="checkbox-item">
                   <input id="swordshield-checkbox-typenull" type="checkbox" />
-                  <img
-                    class="pokeicon"
-                    src="../images/icons/pokemon/gen8/swordshield/type-null.png"
-                    alt="Icon of Type: Null"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Battle Tower."
-                    for="swordshield-checkbox-typenull"
-                    >Type: Null</label
-                  >
+                  <img class="pokeicon" src="../images/icons/pokemon/gen8/swordshield/type-null.png" alt="Icon of Type: Null" />
+                  <label class="text-sm lg:tooltip" data-tip="Battle Tower." for="swordshield-checkbox-typenull">Type: Null</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="swordshield-checkbox-dino" type="checkbox" />
-                  <img
-                    class="pokeicon"
-                    src="../images/icons/inventory/gen8/swordshield/dino.png"
-                    style="height: 30px"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Route 6."
-                    for="swordshield-checkbox-dino"
-                    >Fossils</label
-                  >
+                  <img class="pokeicon" src="../images/icons/inventory/gen8/swordshield/dino.png" style="height: 30px" />
+                  <label class="text-sm lg:tooltip" data-tip="Route 6." for="swordshield-checkbox-dino">Fossils</label>
                 </div>
               </div>
             </div>
           </div>
           <div class="galarianforms">
             <div class="checkbox-item">
-              <span class="title"
-                ><label class="text-lg">Catch all Galarian Forms</label></span
-              >
+              <span class="title"><label class="text-lg">Catch all Galarian Forms</label></span>
             </div>
             <div class="galarianforms-rowcontainer">
               <div class="galarianforms-leftrow">
                 <div class="checkbox-item">
-                  <input
-                    id="swordshield-checkbox-galarian-ponyta"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon small"
-                    src="../images/icons/pokemon/gen8/swordshield/galarianforms/ponyta-galarian.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Glimwood Tangle (Shield)."
-                    for="swordshield-checkbox-galarian-ponyta"
-                    ><span style="color: #a40045">Ponyta</span></label
-                  >
+                  <input id="swordshield-checkbox-galarian-ponyta" type="checkbox" />
+                  <img class="pokeicon small" src="../images/icons/pokemon/gen8/swordshield/galarianforms/ponyta-galarian.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Glimwood Tangle (Shield)." for="swordshield-checkbox-galarian-ponyta"><span style="color: #a40045">Ponyta</span></label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="swordshield-checkbox-galarian-weezing"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon"
-                    src="../images/icons/pokemon/gen8/swordshield/galarianforms/weezing-galarian.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Slumbering Weald."
-                    for="swordshield-checkbox-galarian-weezing"
-                    >Weezing</label
-                  >
+                  <input id="swordshield-checkbox-galarian-weezing" type="checkbox" />
+                  <img class="pokeicon" src="../images/icons/pokemon/gen8/swordshield/galarianforms/weezing-galarian.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Slumbering Weald." for="swordshield-checkbox-galarian-weezing">Weezing</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="swordshield-checkbox-galarian-zigzagoon"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon small"
-                    src="../images/icons/pokemon/gen8/swordshield/galarianforms/zigzagoon-galarian.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Route 2, Route 3."
-                    for="swordshield-checkbox-galarian-zigzagoon"
-                    >Zigzagoon</label
-                  >
+                  <input id="swordshield-checkbox-galarian-zigzagoon" type="checkbox" />
+                  <img class="pokeicon small" src="../images/icons/pokemon/gen8/swordshield/galarianforms/zigzagoon-galarian.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Route 2, Route 3." for="swordshield-checkbox-galarian-zigzagoon">Zigzagoon</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="swordshield-checkbox-galarian-linoone"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon small"
-                    src="../images/icons/pokemon/gen8/swordshield/galarianforms/linoone-galarian.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Giant's Cap (Except Thunder., Clear, & Sand.), Evolve from Galarian Zigzagoon at Lv.20"
-                    for="swordshield-checkbox-galarian-linoone"
+                  <input id="swordshield-checkbox-galarian-linoone" type="checkbox" />
+                  <img class="pokeicon small" src="../images/icons/pokemon/gen8/swordshield/galarianforms/linoone-galarian.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Giant's Cap (Except Thunder., Clear, & Sand.), Evolve from Galarian Zigzagoon at Lv.20" for="swordshield-checkbox-galarian-linoone"
                     >Linoone</label
                   >
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="swordshield-checkbox-galarian-farfetchd"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon"
-                    src="../images/icons/pokemon/gen8/swordshield/galarianforms/farfetchd-galarian.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Route 5 (Sword)."
-                    for="swordshield-checkbox-galarian-farfetchd"
-                    ><span style="color: #181369">Farfetch'd</span></label
-                  >
+                  <input id="swordshield-checkbox-galarian-farfetchd" type="checkbox" />
+                  <img class="pokeicon" src="../images/icons/pokemon/gen8/swordshield/galarianforms/farfetchd-galarian.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Route 5 (Sword)." for="swordshield-checkbox-galarian-farfetchd"><span style="color: #181369">Farfetch'd</span></label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="swordshield-checkbox-galarian-meowth"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon small"
-                    src="../images/icons/pokemon/gen8/swordshield/galarianforms/meowth-galarian.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Route 4."
-                    for="swordshield-checkbox-galarian-meowth"
-                    >Meowth</label
-                  >
+                  <input id="swordshield-checkbox-galarian-meowth" type="checkbox" />
+                  <img class="pokeicon small" src="../images/icons/pokemon/gen8/swordshield/galarianforms/meowth-galarian.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Route 4." for="swordshield-checkbox-galarian-meowth">Meowth</label>
                 </div>
               </div>
               <div class="galarianforms-rightrow">
                 <div class="checkbox-item">
-                  <input
-                    id="swordshield-checkbox-galarian-stunfisk"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon"
-                    src="../images/icons/pokemon/gen8/swordshield/galarianforms/stunfisk-galarian.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Galar Mine No. 2, Slumbering Weald."
-                    for="swordshield-checkbox-galarian-stunfisk"
-                    >Stunfisk</label
-                  >
+                  <input id="swordshield-checkbox-galarian-stunfisk" type="checkbox" />
+                  <img class="pokeicon" src="../images/icons/pokemon/gen8/swordshield/galarianforms/stunfisk-galarian.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Galar Mine No. 2, Slumbering Weald." for="swordshield-checkbox-galarian-stunfisk">Stunfisk</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="swordshield-checkbox-galarian-corsola"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon small"
-                    src="../images/icons/pokemon/gen8/swordshield/galarianforms/corsola-galarian.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Giant's Mirror (Shield)."
-                    for="swordshield-checkbox-galarian-corsola"
-                    ><span style="color: #a40045">Corsola</span></label
-                  >
+                  <input id="swordshield-checkbox-galarian-corsola" type="checkbox" />
+                  <img class="pokeicon small" src="../images/icons/pokemon/gen8/swordshield/galarianforms/corsola-galarian.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Giant's Mirror (Shield)." for="swordshield-checkbox-galarian-corsola"><span style="color: #a40045">Corsola</span></label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="swordshield-checkbox-galarian-yamask"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon small"
-                    src="../images/icons/pokemon/gen8/swordshield/galarianforms/yamask-galarian.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Route 6."
-                    for="swordshield-checkbox-galarian-yamask"
-                    >Yamask</label
-                  >
+                  <input id="swordshield-checkbox-galarian-yamask" type="checkbox" />
+                  <img class="pokeicon small" src="../images/icons/pokemon/gen8/swordshield/galarianforms/yamask-galarian.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Route 6." for="swordshield-checkbox-galarian-yamask">Yamask</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="swordshield-checkbox-galarian-mrmime"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon"
-                    src="../images/icons/pokemon/gen8/swordshield/galarianforms/mr-mime-galarian.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Route 10."
-                    for="swordshield-checkbox-galarian-mrmime"
-                    >Mr. Mime</label
-                  >
+                  <input id="swordshield-checkbox-galarian-mrmime" type="checkbox" />
+                  <img class="pokeicon" src="../images/icons/pokemon/gen8/swordshield/galarianforms/mr-mime-galarian.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Route 10." for="swordshield-checkbox-galarian-mrmime">Mr. Mime</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="swordshield-checkbox-galarian-darumaka"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon small"
-                    src="../images/icons/pokemon/gen8/swordshield/galarianforms/darumaka-galarian.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Route 10, Route 8 (Sword)."
-                    for="swordshield-checkbox-galarian-darumaka"
-                    ><span style="color: #181369">Darumaka</span></label
-                  >
+                  <input id="swordshield-checkbox-galarian-darumaka" type="checkbox" />
+                  <img class="pokeicon small" src="../images/icons/pokemon/gen8/swordshield/galarianforms/darumaka-galarian.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Route 10, Route 8 (Sword)." for="swordshield-checkbox-galarian-darumaka"><span style="color: #181369">Darumaka</span></label>
                 </div>
               </div>
             </div>
           </div>
           <div class="ingametrades">
             <div class="checkbox-item">
-              <span class="title"
-                ><label class="text-lg">In-Game Trades</label></span
-              >
+              <span class="title"><label class="text-lg">In-Game Trades</label></span>
             </div>
             <div class="ingametrades-rowcontainer">
               <div class="ingametrades-leftrow">
                 <div class="checkbox-item">
                   <input id="swordshield-checkbox-throh-sawk" type="checkbox" />
-                  <img
-                    class="pokeicon"
-                    src="../images/icons/pokemon/gen8/swordshield/throh.png"
-                  />
-                  <img
-                    class="pokeicon"
-                    src="../images/icons/pokemon/gen8/swordshield/sawk.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Circhester."
-                    for="swordshield-checkbox-throh-sawk"
-                    ><span style="color: #181369">Throh</span> /
-                    <span style="color: #a40045">Sawk</span></label
+                  <img class="pokeicon" src="../images/icons/pokemon/gen8/swordshield/throh.png" />
+                  <img class="pokeicon" src="../images/icons/pokemon/gen8/swordshield/sawk.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Circhester." for="swordshield-checkbox-throh-sawk"
+                    ><span style="color: #181369">Throh</span> / <span style="color: #a40045">Sawk</span></label
                   >
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="swordshield-checkbox-hatenna-impidimp"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon small"
-                    src="../images/icons/pokemon/gen8/swordshield/hatenna.png"
-                  /><img
-                    class="pokeicon small"
-                    src="../images/icons/pokemon/gen8/swordshield/impidimp.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Stow-on-Side."
-                    for="swordshield-checkbox-hatenna-impidimp"
-                    ><span style="color: #181369">Hatenna</span> /
-                    <span style="color: #a40045">Impidimp</span></label
+                  <input id="swordshield-checkbox-hatenna-impidimp" type="checkbox" />
+                  <img class="pokeicon small" src="../images/icons/pokemon/gen8/swordshield/hatenna.png" /><img class="pokeicon small" src="../images/icons/pokemon/gen8/swordshield/impidimp.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Stow-on-Side." for="swordshield-checkbox-hatenna-impidimp"
+                    ><span style="color: #181369">Hatenna</span> / <span style="color: #a40045">Impidimp</span></label
                   >
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="swordshield-checkbox-kantonian-mrmime"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon"
-                    src="../images/icons/pokemon/gen8/swordshield/mr-mime.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Spikemuth."
-                    for="swordshield-checkbox-kantonian-mrmime"
-                    >Kantonian Mr. Mime</label
-                  >
+                  <input id="swordshield-checkbox-kantonian-mrmime" type="checkbox" />
+                  <img class="pokeicon" src="../images/icons/pokemon/gen8/swordshield/mr-mime.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Spikemuth." for="swordshield-checkbox-kantonian-mrmime">Kantonian Mr. Mime</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="swordshield-checkbox-kantonian-meowth"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon small"
-                    src="../images/icons/pokemon/gen8/swordshield/meowth.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Turrfield."
-                    for="swordshield-checkbox-kantonian-meowth"
-                    >Kantonian Meowth</label
-                  >
+                  <input id="swordshield-checkbox-kantonian-meowth" type="checkbox" />
+                  <img class="pokeicon small" src="../images/icons/pokemon/gen8/swordshield/meowth.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Turrfield." for="swordshield-checkbox-kantonian-meowth">Kantonian Meowth</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="swordshield-checkbox-yamask" type="checkbox" />
-                  <img
-                    class="pokeicon small"
-                    src="../images/icons/pokemon/gen8/swordshield/yamask.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Ballonlea."
-                    for="swordshield-checkbox-yamask"
-                    >Unovan Yamask</label
-                  >
+                  <img class="pokeicon small" src="../images/icons/pokemon/gen8/swordshield/yamask.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Ballonlea." for="swordshield-checkbox-yamask">Unovan Yamask</label>
                 </div>
               </div>
               <div class="ingametrades-rightrow">
                 <div class="checkbox-item">
                   <input id="swordshield-checkbox-cottonnee" type="checkbox" />
-                  <img
-                    class="pokeicon small"
-                    src="../images/icons/pokemon/gen8/swordshield/cottonee.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Hulbury."
-                    for="swordshield-checkbox-cottonnee"
-                    >Cottonee</label
-                  >
+                  <img class="pokeicon small" src="../images/icons/pokemon/gen8/swordshield/cottonee.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Hulbury." for="swordshield-checkbox-cottonnee">Cottonee</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="swordshield-checkbox-skwovet" type="checkbox" />
-                  <img
-                    class="pokeicon small"
-                    src="../images/icons/pokemon/gen8/swordshield/skwovet.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Motostoke."
-                    for="swordshield-checkbox-skwovet"
-                    >Skwovet</label
-                  >
+                  <img class="pokeicon small" src="../images/icons/pokemon/gen8/swordshield/skwovet.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Motostoke." for="swordshield-checkbox-skwovet">Skwovet</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="swordshield-checkbox-togepi" type="checkbox" />
-                  <img
-                    class="pokeicon small"
-                    src="../images/icons/pokemon/gen8/swordshield/togepi.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Hammerlocke."
-                    for="swordshield-checkbox-togepi"
-                    >Togepi</label
-                  >
+                  <img class="pokeicon small" src="../images/icons/pokemon/gen8/swordshield/togepi.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Hammerlocke." for="swordshield-checkbox-togepi">Togepi</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="swordshield-checkbox-duraludon" type="checkbox" />
-                  <img
-                    class="pokeicon"
-                    src="../images/icons/pokemon/gen8/swordshield/duraludon.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Wyndon."
-                    for="swordshield-checkbox-duraludon"
-                    >Darulodon</label
-                  >
+                  <img class="pokeicon" src="../images/icons/pokemon/gen8/swordshield/duraludon.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Wyndon." for="swordshield-checkbox-duraludon">Darulodon</label>
                 </div>
               </div>
             </div>
           </div>
           <div class="gigantamax">
             <div class="checkbox-item">
-              <span class="title"
-                ><label class="text-lg">Gigantamax Pokemon</label></span
-              >
+              <span class="title"><label class="text-lg">Gigantamax Pokemon</label></span>
             </div>
             <div class="gigantamax-rowcontainer">
               <div class="gigantamax-leftrow">
                 <div class="checkbox-item">
-                  <input
-                    id="swordshield-checkbox-gigantamax-charizard"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon"
-                    src="../images/icons/pokemon/gen8/swordshield/gigantamax/charizard-gigantamax.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Lake of Outrage."
-                    for="swordshield-checkbox-gigantamax-charizard"
-                    >Charizard</label
-                  >
+                  <input id="swordshield-checkbox-gigantamax-charizard" type="checkbox" />
+                  <img class="pokeicon" src="../images/icons/pokemon/gen8/swordshield/gigantamax/charizard-gigantamax.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Lake of Outrage." for="swordshield-checkbox-gigantamax-charizard">Charizard</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="swordshield-checkbox-gigantamax-butterfree"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon"
-                    src="../images/icons/pokemon/gen8/swordshield/gigantamax/butterfree-gigantamax.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Rolling Fields."
-                    for="swordshield-checkbox-gigantamax-butterfree"
-                    >Butterfree</label
-                  >
+                  <input id="swordshield-checkbox-gigantamax-butterfree" type="checkbox" />
+                  <img class="pokeicon" src="../images/icons/pokemon/gen8/swordshield/gigantamax/butterfree-gigantamax.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Rolling Fields." for="swordshield-checkbox-gigantamax-butterfree">Butterfree</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="swordshield-checkbox-gigantamax-pikachu"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon"
-                    src="../images/icons/pokemon/gen8/swordshield/gigantamax/pikachu-gigantamax.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Meetup Spot."
-                    for="swordshield-checkbox-gigantamax-pikachu"
-                    >Pikachu</label
-                  >
+                  <input id="swordshield-checkbox-gigantamax-pikachu" type="checkbox" />
+                  <img class="pokeicon" src="../images/icons/pokemon/gen8/swordshield/gigantamax/pikachu-gigantamax.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Meetup Spot." for="swordshield-checkbox-gigantamax-pikachu">Pikachu</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="swordshield-checkbox-gigantamax-meowth"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon"
-                    src="../images/icons/pokemon/gen8/swordshield/gigantamax/meowth-gigantamax.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Stony Wilderness."
-                    for="swordshield-checkbox-gigantamax-meowth"
-                    >Meowth</label
-                  >
+                  <input id="swordshield-checkbox-gigantamax-meowth" type="checkbox" />
+                  <img class="pokeicon" src="../images/icons/pokemon/gen8/swordshield/gigantamax/meowth-gigantamax.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Stony Wilderness." for="swordshield-checkbox-gigantamax-meowth">Meowth</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="swordshield-checkbox-gigantamax-machamp"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon"
-                    src="../images/icons/pokemon/gen8/swordshield/gigantamax/machamp-gigantamax.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Stony Wilderness."
-                    for="swordshield-checkbox-gigantamax-machamp"
-                    ><span style="color: #181369">Machamp</span></label
-                  >
+                  <input id="swordshield-checkbox-gigantamax-machamp" type="checkbox" />
+                  <img class="pokeicon" src="../images/icons/pokemon/gen8/swordshield/gigantamax/machamp-gigantamax.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Stony Wilderness." for="swordshield-checkbox-gigantamax-machamp"><span style="color: #181369">Machamp</span></label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="swordshield-checkbox-gigantamax-gengar"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon"
-                    src="../images/icons/pokemon/gen8/swordshield/gigantamax/gengar-gigantamax.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Stony Wilderness."
-                    for="swordshield-checkbox-gigantamax-gengar"
-                    ><span style="color: #a40045">Gengar</span></label
-                  >
+                  <input id="swordshield-checkbox-gigantamax-gengar" type="checkbox" />
+                  <img class="pokeicon" src="../images/icons/pokemon/gen8/swordshield/gigantamax/gengar-gigantamax.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Stony Wilderness." for="swordshield-checkbox-gigantamax-gengar"><span style="color: #a40045">Gengar</span></label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="swordshield-checkbox-gigantamax-kingler"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon"
-                    src="../images/icons/pokemon/gen8/swordshield/gigantamax/kingler-gigantamax.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="West Lake Axewell, South Lake Miloch."
-                    for="swordshield-checkbox-gigantamax-kingler"
-                    >Kingler</label
-                  >
+                  <input id="swordshield-checkbox-gigantamax-kingler" type="checkbox" />
+                  <img class="pokeicon" src="../images/icons/pokemon/gen8/swordshield/gigantamax/kingler-gigantamax.png" />
+                  <label class="text-sm lg:tooltip" data-tip="West Lake Axewell, South Lake Miloch." for="swordshield-checkbox-gigantamax-kingler">Kingler</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="swordshield-checkbox-gigantamax-lapras"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon"
-                    src="../images/icons/pokemon/gen8/swordshield/gigantamax/lapras-gigantamax.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Giant's Seat."
-                    for="swordshield-checkbox-gigantamax-lapras"
-                    ><span style="color: #a40045">Lapras</span></label
-                  >
+                  <input id="swordshield-checkbox-gigantamax-lapras" type="checkbox" />
+                  <img class="pokeicon" src="../images/icons/pokemon/gen8/swordshield/gigantamax/lapras-gigantamax.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Giant's Seat." for="swordshield-checkbox-gigantamax-lapras"><span style="color: #a40045">Lapras</span></label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="swordshield-checkbox-gigantamax-eevee"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon"
-                    src="../images/icons/pokemon/gen8/swordshield/gigantamax/eevee-gigantamax.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Meetup Spot."
-                    for="swordshield-checkbox-gigantamax-eevee"
-                    >Eevee</label
-                  >
+                  <input id="swordshield-checkbox-gigantamax-eevee" type="checkbox" />
+                  <img class="pokeicon" src="../images/icons/pokemon/gen8/swordshield/gigantamax/eevee-gigantamax.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Meetup Spot." for="swordshield-checkbox-gigantamax-eevee">Eevee</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="swordshield-checkbox-gigantamax-snorlax"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon"
-                    src="../images/icons/pokemon/gen8/swordshield/gigantamax/snorlax-gigantamax.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Special Event Raid Battles."
-                    for="swordshield-checkbox-gigantamax-snorlax"
-                    >Snorlax</label
-                  >
+                  <input id="swordshield-checkbox-gigantamax-snorlax" type="checkbox" />
+                  <img class="pokeicon" src="../images/icons/pokemon/gen8/swordshield/gigantamax/snorlax-gigantamax.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Special Event Raid Battles." for="swordshield-checkbox-gigantamax-snorlax">Snorlax</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="swordshield-checkbox-gigantamax-garbodor"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon"
-                    src="../images/icons/pokemon/gen8/swordshield/gigantamax/garbodor-gigantamax.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="East Lake Axewell."
-                    for="swordshield-checkbox-gigantamax-garbodor"
-                    >Garbodor</label
-                  >
+                  <input id="swordshield-checkbox-gigantamax-garbodor" type="checkbox" />
+                  <img class="pokeicon" src="../images/icons/pokemon/gen8/swordshield/gigantamax/garbodor-gigantamax.png" />
+                  <label class="text-sm lg:tooltip" data-tip="East Lake Axewell." for="swordshield-checkbox-gigantamax-garbodor">Garbodor</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="swordshield-checkbox-gigantamax-melmetal"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon"
-                    src="../images/icons/pokemon/gen8/swordshield/gigantamax/melmetal-gigantamax.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="GO to HOME Event Only."
-                    for="swordshield-checkbox-gigantamax-melmetal"
-                    >Melmetal</label
-                  >
+                  <input id="swordshield-checkbox-gigantamax-melmetal" type="checkbox" />
+                  <img class="pokeicon" src="../images/icons/pokemon/gen8/swordshield/gigantamax/melmetal-gigantamax.png" />
+                  <label class="text-sm lg:tooltip" data-tip="GO to HOME Event Only." for="swordshield-checkbox-gigantamax-melmetal">Melmetal</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="swordshield-checkbox-gigantamax-corviknight"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon"
-                    src="../images/icons/pokemon/gen8/swordshield/gigantamax/corviknight-gigantamax.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Giant's Cap."
-                    for="swordshield-checkbox-gigantamax-corviknight"
-                    >Corviknight</label
-                  >
+                  <input id="swordshield-checkbox-gigantamax-corviknight" type="checkbox" />
+                  <img class="pokeicon" src="../images/icons/pokemon/gen8/swordshield/gigantamax/corviknight-gigantamax.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Giant's Cap." for="swordshield-checkbox-gigantamax-corviknight">Corviknight</label>
                 </div>
               </div>
               <div class="gigantamax-rightrow">
                 <div class="checkbox-item">
-                  <input
-                    id="swordshield-checkbox-gigantamax-orbeetle"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon"
-                    src="../images/icons/pokemon/gen8/swordshield/gigantamax/orbeetle-gigantamax.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Bridge Field, Dappled Grove."
-                    for="swordshield-checkbox-gigantamax-orbeetle"
-                    >Orbeetle</label
-                  >
+                  <input id="swordshield-checkbox-gigantamax-orbeetle" type="checkbox" />
+                  <img class="pokeicon" src="../images/icons/pokemon/gen8/swordshield/gigantamax/orbeetle-gigantamax.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Bridge Field, Dappled Grove." for="swordshield-checkbox-gigantamax-orbeetle">Orbeetle</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="swordshield-checkbox-gigantamax-drednaw"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon"
-                    src="../images/icons/pokemon/gen8/swordshield/gigantamax/drednaw-gigantamax.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Giant's Cap."
-                    for="swordshield-checkbox-gigantamax-drednaw"
-                    >Drednaw</label
-                  >
+                  <input id="swordshield-checkbox-gigantamax-drednaw" type="checkbox" />
+                  <img class="pokeicon" src="../images/icons/pokemon/gen8/swordshield/gigantamax/drednaw-gigantamax.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Giant's Cap." for="swordshield-checkbox-gigantamax-drednaw">Drednaw</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="swordshield-checkbox-gigantamax-coalossal"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon"
-                    src="../images/icons/pokemon/gen8/swordshield/gigantamax/coalossal-gigantamax.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Giant's Seat."
-                    for="swordshield-checkbox-gigantamax-coalossal"
-                    ><span style="color: #181369">Coalossal</span></label
-                  >
+                  <input id="swordshield-checkbox-gigantamax-coalossal" type="checkbox" />
+                  <img class="pokeicon" src="../images/icons/pokemon/gen8/swordshield/gigantamax/coalossal-gigantamax.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Giant's Seat." for="swordshield-checkbox-gigantamax-coalossal"><span style="color: #181369">Coalossal</span></label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="swordshield-checkbox-gigantamax-flapple"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon"
-                    src="../images/icons/pokemon/gen8/swordshield/gigantamax/flapple-gigantamax.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Dappled Grove."
-                    for="swordshield-checkbox-gigantamax-flapple"
-                    ><span style="color: #181369">Flapple</span></label
-                  >
+                  <input id="swordshield-checkbox-gigantamax-flapple" type="checkbox" />
+                  <img class="pokeicon" src="../images/icons/pokemon/gen8/swordshield/gigantamax/flapple-gigantamax.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Dappled Grove." for="swordshield-checkbox-gigantamax-flapple"><span style="color: #181369">Flapple</span></label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="swordshield-checkbox-gigantamax-appletun"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon"
-                    src="../images/icons/pokemon/gen8/swordshield/gigantamax/appletun-gigantamax.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Dappled Grove."
-                    for="swordshield-checkbox-gigantamax-appletun"
-                    ><span style="color: #a40045">Appletun</span></label
-                  >
+                  <input id="swordshield-checkbox-gigantamax-appletun" type="checkbox" />
+                  <img class="pokeicon" src="../images/icons/pokemon/gen8/swordshield/gigantamax/appletun-gigantamax.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Dappled Grove." for="swordshield-checkbox-gigantamax-appletun"><span style="color: #a40045">Appletun</span></label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="swordshield-checkbox-gigantamax-sandaconda"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon"
-                    src="../images/icons/pokemon/gen8/swordshield/gigantamax/sandaconda-gigantamax.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Dusty Bowl."
-                    for="swordshield-checkbox-gigantamax-sandaconda"
-                    >Sandaconda</label
-                  >
+                  <input id="swordshield-checkbox-gigantamax-sandaconda" type="checkbox" />
+                  <img class="pokeicon" src="../images/icons/pokemon/gen8/swordshield/gigantamax/sandaconda-gigantamax.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Dusty Bowl." for="swordshield-checkbox-gigantamax-sandaconda">Sandaconda</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="swordshield-checkbox-gigantamax-toxtricity"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon"
-                    src="../images/icons/pokemon/gen8/swordshield/gigantamax/toxtricity-gigantamax.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Special Event Raid Battles."
-                    for="swordshield-checkbox-gigantamax-toxtricity"
-                    >Toxtricity</label
-                  >
+                  <input id="swordshield-checkbox-gigantamax-toxtricity" type="checkbox" />
+                  <img class="pokeicon" src="../images/icons/pokemon/gen8/swordshield/gigantamax/toxtricity-gigantamax.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Special Event Raid Battles." for="swordshield-checkbox-gigantamax-toxtricity">Toxtricity</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="swordshield-checkbox-gigantamax-centiskorch"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon"
-                    src="../images/icons/pokemon/gen8/swordshield/gigantamax/centiskorch-gigantamax.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Stony Wilderness."
-                    for="swordshield-checkbox-gigantamax-centiskorch"
-                    >Centiskorch</label
-                  >
+                  <input id="swordshield-checkbox-gigantamax-centiskorch" type="checkbox" />
+                  <img class="pokeicon" src="../images/icons/pokemon/gen8/swordshield/gigantamax/centiskorch-gigantamax.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Stony Wilderness." for="swordshield-checkbox-gigantamax-centiskorch">Centiskorch</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="swordshield-checkbox-gigantamax-hatterene"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon"
-                    src="../images/icons/pokemon/gen8/swordshield/gigantamax/hatterene-gigantamax.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Bridge Field."
-                    for="swordshield-checkbox-gigantamax-hatterene"
-                    >Hatterene</label
-                  >
+                  <input id="swordshield-checkbox-gigantamax-hatterene" type="checkbox" />
+                  <img class="pokeicon" src="../images/icons/pokemon/gen8/swordshield/gigantamax/hatterene-gigantamax.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Bridge Field." for="swordshield-checkbox-gigantamax-hatterene">Hatterene</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="swordshield-checkbox-gigantamax-grimsnarl"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon"
-                    src="../images/icons/pokemon/gen8/swordshield/gigantamax/grimmsnarl-gigantamax.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Dusty Bowl."
-                    for="swordshield-checkbox-gigantamax-grimsnarl"
-                    >Grimmsnarl</label
-                  >
+                  <input id="swordshield-checkbox-gigantamax-grimsnarl" type="checkbox" />
+                  <img class="pokeicon" src="../images/icons/pokemon/gen8/swordshield/gigantamax/grimmsnarl-gigantamax.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Dusty Bowl." for="swordshield-checkbox-gigantamax-grimsnarl">Grimmsnarl</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="swordshield-checkbox-gigantamax-alcremie"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon"
-                    src="../images/icons/pokemon/gen8/swordshield/gigantamax/alcremie-gigantamax.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Bridge Field."
-                    for="swordshield-checkbox-gigantamax-alcremie"
-                    >Alcremie</label
-                  >
+                  <input id="swordshield-checkbox-gigantamax-alcremie" type="checkbox" />
+                  <img class="pokeicon" src="../images/icons/pokemon/gen8/swordshield/gigantamax/alcremie-gigantamax.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Bridge Field." for="swordshield-checkbox-gigantamax-alcremie">Alcremie</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="swordshield-checkbox-gigantamax-copperajah"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon"
-                    src="../images/icons/pokemon/gen8/swordshield/gigantamax/copperajah-gigantamax.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Stony Wilderness."
-                    for="swordshield-checkbox-gigantamax-copperajah"
-                    >Copperajah</label
-                  >
+                  <input id="swordshield-checkbox-gigantamax-copperajah" type="checkbox" />
+                  <img class="pokeicon" src="../images/icons/pokemon/gen8/swordshield/gigantamax/copperajah-gigantamax.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Stony Wilderness." for="swordshield-checkbox-gigantamax-copperajah">Copperajah</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="swordshield-checkbox-gigantamax-duraludon"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon"
-                    src="../images/icons/pokemon/gen8/swordshield/gigantamax/duraludon-gigantamax.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Giant's Seat."
-                    for="swordshield-checkbox-gigantamax-duraludon"
-                    >Duraludon</label
-                  >
+                  <input id="swordshield-checkbox-gigantamax-duraludon" type="checkbox" />
+                  <img class="pokeicon" src="../images/icons/pokemon/gen8/swordshield/gigantamax/duraludon-gigantamax.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Giant's Seat." for="swordshield-checkbox-gigantamax-duraludon">Duraludon</label>
                 </div>
               </div>
             </div>
@@ -1004,55 +387,25 @@
             </div>
             <div class="checkbox-item">
               <input id="swordshield-checkbox-shiny-charm" type="checkbox" />
-              <img
-                class="pokeicon item"
-                src="../images/icons/miscellaneous/gen8/swordshield/charms/shiny-charm.png"
-              />
-              <label
-                class="text-sm lg:tooltip"
-                data-tip="Circhester from the Game Freak game director after obtaining all the Pokémon."
-                for="swordshield-checkbox-shiny-charm"
-                >Shiny Charm</label
-              >
+              <img class="pokeicon item" src="../images/icons/miscellaneous/gen8/swordshield/charms/shiny-charm.png" />
+              <label class="text-sm lg:tooltip" data-tip="Circhester from the Game Freak game director after obtaining all the Pokémon." for="swordshield-checkbox-shiny-charm">Shiny Charm</label>
             </div>
             <div class="checkbox-item">
               <input id="swordshield-checkbox-oval-charm" type="checkbox" />
-              <img
-                class="pokeicon item"
-                src="../images/icons/miscellaneous/gen8/swordshield/charms/oval-charm.png"
-              />
-              <label
-                class="text-sm lg:tooltip"
-                data-tip="Circhester from Morimoto after defeating him for the first time."
-                for="swordshield-checkbox-oval-charm"
-                >Oval Charm</label
-              >
+              <img class="pokeicon item" src="../images/icons/miscellaneous/gen8/swordshield/charms/oval-charm.png" />
+              <label class="text-sm lg:tooltip" data-tip="Circhester from Morimoto after defeating him for the first time." for="swordshield-checkbox-oval-charm">Oval Charm</label>
             </div>
             <div class="checkbox-item">
               <input id="swordshield-checkbox-catching-charm" type="checkbox" />
-              <img
-                class="pokeicon item"
-                src="../images/icons/miscellaneous/gen8/swordshield/charms/catching-charm.png"
-              />
-              <label
-                class="text-sm lg:tooltip"
-                data-tip="Circhester from the Game Freak director in the western building of Hotel Ionia."
-                for="swordshield-checkbox-catching-charm"
+              <img class="pokeicon item" src="../images/icons/miscellaneous/gen8/swordshield/charms/catching-charm.png" />
+              <label class="text-sm lg:tooltip" data-tip="Circhester from the Game Freak director in the western building of Hotel Ionia." for="swordshield-checkbox-catching-charm"
                 >Catching Charm</label
               >
             </div>
             <div class="checkbox-item">
               <input id="swordshield-checkbox-alltms" type="checkbox" />
-              <img
-                class="pokeicon item"
-                src="../images/icons/inventory/tms/normal.png"
-              />
-              <label
-                class="text-sm lg:tooltip"
-                data-tip="Find all TM's."
-                for="swordshield-checkbox-alltms"
-                >Collect all TM's</label
-              >
+              <img class="pokeicon item" src="../images/icons/inventory/tms/normal.png" />
+              <label class="text-sm lg:tooltip" data-tip="Find all TM's." for="swordshield-checkbox-alltms">Collect all TM's</label>
             </div>
           </div>
           <div class="ribbons">
@@ -1062,86 +415,31 @@
             <div class="ribbons-rowcontainer">
               <div class="ribbons-leftrow">
                 <div class="checkbox-item">
-                  <input
-                    id="swordshield-checkbox-ribbon-galarchampion"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon item"
-                    src="../images/icons/miscellaneous/gen8/swordshield/ribbons/galar-champion-ribbon.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Defeat the Champion Cup."
-                    for="swordshield-checkbox-ribbon-galarchampion"
-                    >Galar Champion</label
-                  >
+                  <input id="swordshield-checkbox-ribbon-galarchampion" type="checkbox" />
+                  <img class="pokeicon item" src="../images/icons/miscellaneous/gen8/swordshield/ribbons/galar-champion-ribbon.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Defeat the Champion Cup." for="swordshield-checkbox-ribbon-galarchampion">Galar Champion</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="swordshield-checkbox-ribbon-towermaster"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon item"
-                    src="../images/icons/miscellaneous/gen8/swordshield/ribbons/tower-master-ribbon.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Defeat Leon in one of the higher tiers of the Battle Tower."
-                    for="swordshield-checkbox-ribbon-towermaster"
-                    >Tower Master</label
-                  >
+                  <input id="swordshield-checkbox-ribbon-towermaster" type="checkbox" />
+                  <img class="pokeicon item" src="../images/icons/miscellaneous/gen8/swordshield/ribbons/tower-master-ribbon.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Defeat Leon in one of the higher tiers of the Battle Tower." for="swordshield-checkbox-ribbon-towermaster">Tower Master</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="swordshield-checkbox-ribbon-masterrank"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon item"
-                    src="../images/icons/miscellaneous/gen8/swordshield/ribbons/master-rank-ribbon.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Defeat a Master Ball tier trainer in Ranked Battle."
-                    for="swordshield-checkbox-ribbon-masterrank"
-                    >Master Rank</label
-                  >
+                  <input id="swordshield-checkbox-ribbon-masterrank" type="checkbox" />
+                  <img class="pokeicon item" src="../images/icons/miscellaneous/gen8/swordshield/ribbons/master-rank-ribbon.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Defeat a Master Ball tier trainer in Ranked Battle." for="swordshield-checkbox-ribbon-masterrank">Master Rank</label>
                 </div>
               </div>
               <div class="ribbons-rightrow">
                 <div class="checkbox-item">
-                  <input
-                    id="swordshield-checkbox-ribbon-effort"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon item"
-                    src="../images/icons/miscellaneous/gen8/swordshield/ribbons/effort-ribbon.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Show a Pokémon with max Evs to the girl in Hammerlocke."
-                    for="swordshield-checkbox-ribbon-effort"
-                    >Effort</label
-                  >
+                  <input id="swordshield-checkbox-ribbon-effort" type="checkbox" />
+                  <img class="pokeicon item" src="../images/icons/miscellaneous/gen8/swordshield/ribbons/effort-ribbon.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Show a Pokémon with max Evs to the girl in Hammerlocke." for="swordshield-checkbox-ribbon-effort">Effort</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="swordshield-checkbox-ribbon-bestfriends"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon item"
-                    src="../images/icons/miscellaneous/gen8/swordshield/ribbons/best-friends-ribbon.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Show a Pokémon with max Happiness to the boy in Hammerlocke."
-                    for="swordshield-checkbox-ribbon-bestfriends"
-                    >Best Friends</label
-                  >
+                  <input id="swordshield-checkbox-ribbon-bestfriends" type="checkbox" />
+                  <img class="pokeicon item" src="../images/icons/miscellaneous/gen8/swordshield/ribbons/best-friends-ribbon.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Show a Pokémon with max Happiness to the boy in Hammerlocke." for="swordshield-checkbox-ribbon-bestfriends">Best Friends</label>
                 </div>
               </div>
             </div>
@@ -1151,151 +449,57 @@
           <label class="panel-label">Post Game</label>
           <div class="battletower">
             <div class="checkbox-item">
-              <span class="title"
-                ><label class="text-lg">Battle Tower</label></span
-              >
+              <span class="title"><label class="text-lg">Battle Tower</label></span>
             </div>
             <div class="battletower-rowcontainer">
               <div class="battletower-leftrow">
                 <div class="checkbox-item">
-                  <span class="title"
-                    ><label class="text-lg">Single Tier</label></span
-                  >
+                  <span class="title"><label class="text-lg">Single Tier</label></span>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="swordshield-checkbox-single-pokeball"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon npc"
-                    src="../images/icons/inventory/gen8/swordshield/balls/poke.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Defeat the Poke Ball Tier."
-                    for="swordshield-checkbox-single-pokeball"
-                    >Poke Ball</label
-                  >
+                  <input id="swordshield-checkbox-single-pokeball" type="checkbox" />
+                  <img class="pokeicon npc" src="../images/icons/inventory/gen8/swordshield/balls/poke.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Defeat the Poke Ball Tier." for="swordshield-checkbox-single-pokeball">Poke Ball</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="swordshield-checkbox-single-greatball"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon npc"
-                    src="../images/icons/inventory/gen8/swordshield/balls/great.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Defeat the Great Ball Tier."
-                    for="swordshield-checkbox-single-greatball"
-                    >Great Ball</label
-                  >
+                  <input id="swordshield-checkbox-single-greatball" type="checkbox" />
+                  <img class="pokeicon npc" src="../images/icons/inventory/gen8/swordshield/balls/great.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Defeat the Great Ball Tier." for="swordshield-checkbox-single-greatball">Great Ball</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="swordshield-checkbox-single-ultraball"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon npc"
-                    src="../images/icons/inventory/gen8/swordshield/balls/ultra.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Defeat the Ultra Ball Tier."
-                    for="swordshield-checkbox-single-ultraball"
-                    >Ultra Ball</label
-                  >
+                  <input id="swordshield-checkbox-single-ultraball" type="checkbox" />
+                  <img class="pokeicon npc" src="../images/icons/inventory/gen8/swordshield/balls/ultra.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Defeat the Ultra Ball Tier." for="swordshield-checkbox-single-ultraball">Ultra Ball</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="swordshield-checkbox-single-masterball"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon npc"
-                    src="../images/icons/inventory/gen8/swordshield/balls/master.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Defeat the Master Ball Tier."
-                    for="swordshield-checkbox-single-masterball"
-                    >Master Ball</label
-                  >
+                  <input id="swordshield-checkbox-single-masterball" type="checkbox" />
+                  <img class="pokeicon npc" src="../images/icons/inventory/gen8/swordshield/balls/master.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Defeat the Master Ball Tier." for="swordshield-checkbox-single-masterball">Master Ball</label>
                 </div>
               </div>
               <div class="battletower-rightrow">
                 <div class="checkbox-item">
-                  <span class="title"
-                    ><label class="text-lg">Double Tier</label></span
-                  >
+                  <span class="title"><label class="text-lg">Double Tier</label></span>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="swordshield-checkbox-double-pokeball"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon npc"
-                    src="../images/icons/inventory/gen8/swordshield/balls/poke.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Defeat the Poke Ball Tier."
-                    for="swordshield-checkbox-double-pokeball"
-                    >Poke Ball</label
-                  >
+                  <input id="swordshield-checkbox-double-pokeball" type="checkbox" />
+                  <img class="pokeicon npc" src="../images/icons/inventory/gen8/swordshield/balls/poke.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Defeat the Poke Ball Tier." for="swordshield-checkbox-double-pokeball">Poke Ball</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="swordshield-checkbox-double-greatball"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon npc"
-                    src="../images/icons/inventory/gen8/swordshield/balls/great.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Defeat the Great Ball Tier."
-                    for="swordshield-checkbox-double-greatball"
-                    >Great Ball</label
-                  >
+                  <input id="swordshield-checkbox-double-greatball" type="checkbox" />
+                  <img class="pokeicon npc" src="../images/icons/inventory/gen8/swordshield/balls/great.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Defeat the Great Ball Tier." for="swordshield-checkbox-double-greatball">Great Ball</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="swordshield-checkbox-double-ultraball"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon npc"
-                    src="../images/icons/inventory/gen8/swordshield/balls/ultra.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Defeat the Ultra Ball Tier."
-                    for="swordshield-checkbox-double-ultraball"
-                    >Ultra Ball</label
-                  >
+                  <input id="swordshield-checkbox-double-ultraball" type="checkbox" />
+                  <img class="pokeicon npc" src="../images/icons/inventory/gen8/swordshield/balls/ultra.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Defeat the Ultra Ball Tier." for="swordshield-checkbox-double-ultraball">Ultra Ball</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="swordshield-checkbox-double-masterball"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon npc"
-                    src="../images/icons/inventory/gen8/swordshield/balls/master.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Defeat the Master Ball Tier."
-                    for="swordshield-checkbox-double-masterball"
-                    >Master Ball</label
-                  >
+                  <input id="swordshield-checkbox-double-masterball" type="checkbox" />
+                  <img class="pokeicon npc" src="../images/icons/inventory/gen8/swordshield/balls/master.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Defeat the Master Ball Tier." for="swordshield-checkbox-double-masterball">Master Ball</label>
                 </div>
               </div>
             </div>
@@ -1303,97 +507,37 @@
 
           <div class="currydex">
             <div class="checkbox-item">
-              <span class="title"
-                ><label class="text-lg">Curry Dex</label></span
-              >
+              <span class="title"><label class="text-lg">Curry Dex</label></span>
             </div>
             <div class="currydex-rowcontainer">
               <div class="currydex-leftrow">
                 <div class="checkbox-item">
-                  <input
-                    id="swordshield-checkbox-currydex-koffing"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon item"
-                    src="../images/icons/miscellaneous/gen8/swordshield/medals/koffingclass.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="A milestone."
-                    for="swordshield-checkbox-currydex-koffing"
-                    >Koffing</label
-                  >
+                  <input id="swordshield-checkbox-currydex-koffing" type="checkbox" />
+                  <img class="pokeicon item" src="../images/icons/miscellaneous/gen8/swordshield/medals/koffingclass.png" />
+                  <label class="text-sm lg:tooltip" data-tip="A milestone." for="swordshield-checkbox-currydex-koffing">Koffing</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="swordshield-checkbox-currydex-wobbuffet"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon item"
-                    src="../images/icons/miscellaneous/gen8/swordshield/medals/wobbuffetclass.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="A milestone."
-                    for="swordshield-checkbox-currydex-wobbuffet"
-                    >Wobbuffet</label
-                  >
+                  <input id="swordshield-checkbox-currydex-wobbuffet" type="checkbox" />
+                  <img class="pokeicon item" src="../images/icons/miscellaneous/gen8/swordshield/medals/wobbuffetclass.png" />
+                  <label class="text-sm lg:tooltip" data-tip="A milestone." for="swordshield-checkbox-currydex-wobbuffet">Wobbuffet</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="swordshield-checkbox-currydex-milcery"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon item"
-                    src="../images/icons/miscellaneous/gen8/swordshield/medals/milceryclass.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="A milestone."
-                    for="swordshield-checkbox-currydex-milcery"
-                    >Milcery</label
-                  >
+                  <input id="swordshield-checkbox-currydex-milcery" type="checkbox" />
+                  <img class="pokeicon item" src="../images/icons/miscellaneous/gen8/swordshield/medals/milceryclass.png" />
+                  <label class="text-sm lg:tooltip" data-tip="A milestone." for="swordshield-checkbox-currydex-milcery">Milcery</label>
                 </div>
               </div>
               <div class="currydex-rightrow">
                 <div class="checkbox-item">
-                  <input
-                    id="swordshield-checkbox-currydex-copperajah"
-                    type="checkbox"
-                  /><img
-                    class="pokeicon item"
-                    src="../images/icons/miscellaneous/gen8/swordshield/medals/copperajahclass.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="A milestone."
-                    for="swordshield-checkbox-currydex-copperajah"
-                    >Copperajah</label
-                  >
+                  <input id="swordshield-checkbox-currydex-copperajah" type="checkbox" /><img class="pokeicon item" src="../images/icons/miscellaneous/gen8/swordshield/medals/copperajahclass.png" />
+                  <label class="text-sm lg:tooltip" data-tip="A milestone." for="swordshield-checkbox-currydex-copperajah">Copperajah</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="swordshield-checkbox-currydex-charizard"
-                    type="checkbox"
-                  /><img
-                    class="pokeicon item"
-                    src="../images/icons/miscellaneous/gen8/swordshield/medals/charizardclass.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Charizard Class is the highest class you can recceive."
-                    for="swordshield-checkbox-currydex-charizard"
-                    >Charizard</label
-                  >
+                  <input id="swordshield-checkbox-currydex-charizard" type="checkbox" /><img class="pokeicon item" src="../images/icons/miscellaneous/gen8/swordshield/medals/charizardclass.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Charizard Class is the highest class you can recceive." for="swordshield-checkbox-currydex-charizard">Charizard</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="swordshield-checkbox-currydex-goldenutensils"
-                    type="checkbox"
-                  />
+                  <input id="swordshield-checkbox-currydex-goldenutensils" type="checkbox" />
                   <label
                     class="text-sm lg:tooltip"
                     data-tip="Go to the Camping Guru in Hammerlocke Hills and he will give you some golden cooking utensils after completing the Curry Dex."
@@ -1406,185 +550,72 @@
           </div>
           <div class="sidequests">
             <div class="checkbox-item">
-              <span class="title"
-                ><label class="text-lg">Side Quests</label></span
-              >
+              <span class="title"><label class="text-lg">Side Quests</label></span>
             </div>
             <div class="sidequests-rowcontainer">
               <div class="sidequests-leftrow">
                 <div class="checkbox-item">
-                  <input
-                    id="swordshield-checkbox-sidequest-minccino"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon item"
-                    src="../images/icons/inventory/gen8/swordshield/throat-spray.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Motostoke."
-                    for="swordshield-checkbox-sidequest-minccino"
-                    >Find Minccino</label
-                  >
+                  <input id="swordshield-checkbox-sidequest-minccino" type="checkbox" />
+                  <img class="pokeicon item" src="../images/icons/inventory/gen8/swordshield/throat-spray.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Motostoke." for="swordshield-checkbox-sidequest-minccino">Find Minccino</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="swordshield-checkbox-sidequest-letter"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon item"
-                    src="../images/icons/inventory/gen8/swordshield/choice-scarf.png"
-                  />
-                  <img
-                    class="pokeicon item"
-                    src="../images/icons/inventory/gen8/swordshield/reaper-cloth.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Hammerlocke."
-                    for="swordshield-checkbox-sidequest-letter"
-                    >Deliver the Letter</label
-                  >
+                  <input id="swordshield-checkbox-sidequest-letter" type="checkbox" />
+                  <img class="pokeicon item" src="../images/icons/inventory/gen8/swordshield/choice-scarf.png" />
+                  <img class="pokeicon item" src="../images/icons/inventory/gen8/swordshield/reaper-cloth.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Hammerlocke." for="swordshield-checkbox-sidequest-letter">Deliver the Letter</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="swordshield-checkbox-sidequest-riddle"
-                    type="checkbox"
-                  /><img
-                    class="pokeicon item"
-                    src="../images/icons/inventory/gen8/swordshield/expert-belt.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Turffield."
-                    for="swordshield-checkbox-sidequest-riddle"
-                    >Turffield Riddle Hidden Treasure</label
-                  >
+                  <input id="swordshield-checkbox-sidequest-riddle" type="checkbox" /><img class="pokeicon item" src="../images/icons/inventory/gen8/swordshield/expert-belt.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Turffield." for="swordshield-checkbox-sidequest-riddle">Turffield Riddle Hidden Treasure</label>
                 </div>
               </div>
               <div class="sidequests-rightrow">
                 <div class="checkbox-item">
-                  <input
-                    id="swordshield-checkbox-sidequest-applinaway"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon item"
-                    src="../images/icons/inventory/gen8/swordshield/tart-apple.png"
-                  />
-                  <img
-                    class="pokeicon item"
-                    src="../images/icons/inventory/gen8/swordshield/sweet-apple.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Hammerlocke."
-                    for="swordshield-checkbox-sidequest-applinaway"
-                    >Give Applin Away</label
-                  >
+                  <input id="swordshield-checkbox-sidequest-applinaway" type="checkbox" />
+                  <img class="pokeicon item" src="../images/icons/inventory/gen8/swordshield/tart-apple.png" />
+                  <img class="pokeicon item" src="../images/icons/inventory/gen8/swordshield/sweet-apple.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Hammerlocke." for="swordshield-checkbox-sidequest-applinaway">Give Applin Away</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="swordshield-checkbox-sidequest-fieryspirit"
-                    type="checkbox"
-                  />
-                  <img
-                    class="pokeicon item"
-                    src="../images/icons/inventory/gen8/swordshield/flying.png"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Ballonlea."
-                    for="swordshield-checkbox-sidequest-fieryspirit"
-                    >Clothes With a Fiery Spirit</label
-                  >
+                  <input id="swordshield-checkbox-sidequest-fieryspirit" type="checkbox" />
+                  <img class="pokeicon item" src="../images/icons/inventory/gen8/swordshield/flying.png" />
+                  <label class="text-sm lg:tooltip" data-tip="Ballonlea." for="swordshield-checkbox-sidequest-fieryspirit">Clothes With a Fiery Spirit</label>
                 </div>
               </div>
             </div>
           </div>
           <div class="campingtoys">
             <div class="checkbox-item">
-              <span class="title"
-                ><label class="text-lg">Camping Toys</label></span
-              >
+              <span class="title"><label class="text-lg">Camping Toys</label></span>
             </div>
             <div class="campingtoys-rowcontainer">
               <div class="campingtoys-leftrow">
                 <div class="checkbox-item">
-                  <input
-                    id="swordshield-checkbox-camping-freshball"
-                    type="checkbox"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="5 Kinds of Curry."
-                    for="swordshield-checkbox-camping-freshball"
-                    >Fresh Ball</label
-                  >
+                  <input id="swordshield-checkbox-camping-freshball" type="checkbox" />
+                  <label class="text-sm lg:tooltip" data-tip="5 Kinds of Curry." for="swordshield-checkbox-camping-freshball">Fresh Ball</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="swordshield-checkbox-camping-weightedball"
-                    type="checkbox"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="10 Kinds of Curry."
-                    for="swordshield-checkbox-camping-weightedball"
-                    >Weighted Ball</label
-                  >
+                  <input id="swordshield-checkbox-camping-weightedball" type="checkbox" />
+                  <label class="text-sm lg:tooltip" data-tip="10 Kinds of Curry." for="swordshield-checkbox-camping-weightedball">Weighted Ball</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="swordshield-checkbox-camping-sootheball"
-                    type="checkbox"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="15 Kinds of Curry."
-                    for="swordshield-checkbox-camping-sootheball"
-                    >Soothe Ball</label
-                  >
+                  <input id="swordshield-checkbox-camping-sootheball" type="checkbox" />
+                  <label class="text-sm lg:tooltip" data-tip="15 Kinds of Curry." for="swordshield-checkbox-camping-sootheball">Soothe Ball</label>
                 </div>
               </div>
               <div class="campingtoys-rightrow">
                 <div class="checkbox-item">
-                  <input
-                    id="swordshield-checkbox-camping-mirrorball"
-                    type="checkbox"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="30 Kinds of Curry."
-                    for="swordshield-checkbox-camping-mirrorball"
-                    >Mirror Ball</label
-                  >
+                  <input id="swordshield-checkbox-camping-mirrorball" type="checkbox" />
+                  <label class="text-sm lg:tooltip" data-tip="30 Kinds of Curry." for="swordshield-checkbox-camping-mirrorball">Mirror Ball</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="swordshield-checkbox-camping-tympoleball"
-                    type="checkbox"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="50 Kinds of Curry."
-                    for="swordshield-checkbox-camping-tympoleball"
-                    >Tympole Ball</label
-                  >
+                  <input id="swordshield-checkbox-camping-tympoleball" type="checkbox" />
+                  <label class="text-sm lg:tooltip" data-tip="50 Kinds of Curry." for="swordshield-checkbox-camping-tympoleball">Tympole Ball</label>
                 </div>
                 <div class="checkbox-item">
-                  <input
-                    id="swordshield-checkbox-camping-championball"
-                    type="checkbox"
-                  />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="80 Kinds of Curry."
-                    for="swordshield-checkbox-camping-championball"
-                    >Champion Ball</label
-                  >
+                  <input id="swordshield-checkbox-camping-championball" type="checkbox" />
+                  <label class="text-sm lg:tooltip" data-tip="80 Kinds of Curry." for="swordshield-checkbox-camping-championball">Champion Ball</label>
                 </div>
               </div>
             </div>
@@ -1594,36 +625,19 @@
               <span class="title"><label class="text-lg">Battles</label></span>
             </div>
             <div class="checkbox-item">
-              <input
-                id="swordshield-checkbox-rematch-championship"
-                type="checkbox"
-              />
-              <label
-                class="text-sm lg:tooltip"
-                data-tip="Rematch the Elite Four."
-                for="swordshield-checkbox-rematch-championship"
-                >Championship Cup Rematches</label
-              >
+              <input id="swordshield-checkbox-rematch-championship" type="checkbox" />
+              <label class="text-sm lg:tooltip" data-tip="Rematch the Elite Four." for="swordshield-checkbox-rematch-championship">Championship Cup Rematches</label>
             </div>
             <div class="checkbox-item">
               <input id="swordshield-checkbox-morimoto" type="checkbox" />
-              <img
-                class="pokeicon npc"
-                src="../images/icons/miscellaneous/gen8/swordshield/npc/morimoto.png"
-              />
-              <label
-                class="text-sm lg:tooltip"
-                data-tip="He is on the third floor of Celadon Condominiums after the player has entered the Hall of Fame."
-                for="swordshield-checkbox-morimoto"
+              <img class="pokeicon npc" src="../images/icons/miscellaneous/gen8/swordshield/npc/morimoto.png" />
+              <label class="text-sm lg:tooltip" data-tip="He is on the third floor of Celadon Condominiums after the player has entered the Hall of Fame." for="swordshield-checkbox-morimoto"
                 >Battle Morimoto</label
               >
             </div>
             <div class="checkbox-item">
               <input id="swordshield-checkbox-clothing" type="checkbox" />
-              <label
-                class="text-sm lg:tooltip"
-                data-tip="He is on the third floor of Celadon Condominiums after the player has entered the Hall of Fame."
-                for="swordshield-checkbox-clothing"
+              <label class="text-sm lg:tooltip" data-tip="He is on the third floor of Celadon Condominiums after the player has entered the Hall of Fame." for="swordshield-checkbox-clothing"
                 >Purchase all Clothes</label
               >
             </div>
@@ -1634,626 +648,202 @@
         <label class="panel-label">League Cards</label>
         <div class="leaguecard">
           <div class="checkbox-item">
-            <span class="title"
-              ><label class="text-lg">Obtain all League Cards</label></span
-            >
+            <span class="title"><label class="text-lg">Obtain all League Cards</label></span>
           </div>
           <div class="leaguecard-rowcontainer">
             <div class="leaguecard-leftrow">
               <div class="checkbox-item">
-                <input
-                  id="swordshield-checkbox-leaguecard-hop"
-                  type="checkbox"
-                />
-                <img
-                  class="pokeicon leaguecard"
-                  src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Hop.png"
-                  alt="Icon of Hop League Card"
-                />
-                <label
-                  class="text-sm lg:tooltip"
-                  data-tip="Motostoke."
-                  for="swordshield-checkbox-leaguecard-hop"
-                  >Hop</label
-                >
+                <input id="swordshield-checkbox-leaguecard-hop" type="checkbox" />
+                <img class="pokeicon leaguecard" src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Hop.png" alt="Icon of Hop League Card" />
+                <label class="text-sm lg:tooltip" data-tip="Motostoke." for="swordshield-checkbox-leaguecard-hop">Hop</label>
               </div>
               <div class="checkbox-item">
-                <input
-                  id="swordshield-checkbox-leaguecard-marnie"
-                  type="checkbox"
-                />
-                <img
-                  class="pokeicon leaguecard"
-                  src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Marnie.png"
-                  alt="Icon of Marnie League Card"
-                />
-                <label
-                  class="text-sm lg:tooltip"
-                  data-tip="Ballonlea Stadium."
-                  for="swordshield-checkbox-leaguecard-marnie"
-                  >Marnie</label
-                >
+                <input id="swordshield-checkbox-leaguecard-marnie" type="checkbox" />
+                <img class="pokeicon leaguecard" src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Marnie.png" alt="Icon of Marnie League Card" />
+                <label class="text-sm lg:tooltip" data-tip="Ballonlea Stadium." for="swordshield-checkbox-leaguecard-marnie">Marnie</label>
               </div>
               <div class="checkbox-item">
-                <input
-                  id="swordshield-checkbox-leaguecard-milo"
-                  type="checkbox"
-                />
-                <img
-                  class="pokeicon leaguecard"
-                  src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Milo.png"
-                  alt="Icon of Milo League Card"
-                />
-                <label
-                  class="text-sm lg:tooltip"
-                  data-tip="Turffield."
-                  for="swordshield-checkbox-leaguecard-milo"
-                  >Milo</label
-                >
+                <input id="swordshield-checkbox-leaguecard-milo" type="checkbox" />
+                <img class="pokeicon leaguecard" src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Milo.png" alt="Icon of Milo League Card" />
+                <label class="text-sm lg:tooltip" data-tip="Turffield." for="swordshield-checkbox-leaguecard-milo">Milo</label>
               </div>
               <div class="checkbox-item">
-                <input
-                  id="swordshield-checkbox-leaguecard-nessa"
-                  type="checkbox"
-                />
-                <img
-                  class="pokeicon leaguecard"
-                  src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Nessa.png"
-                  alt="Icon of Nessa League Card"
-                />
-                <label
-                  class="text-sm lg:tooltip"
-                  data-tip="Hulbury."
-                  for="swordshield-checkbox-leaguecard-nessa"
-                  >Nessa</label
-                >
+                <input id="swordshield-checkbox-leaguecard-nessa" type="checkbox" />
+                <img class="pokeicon leaguecard" src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Nessa.png" alt="Icon of Nessa League Card" />
+                <label class="text-sm lg:tooltip" data-tip="Hulbury." for="swordshield-checkbox-leaguecard-nessa">Nessa</label>
               </div>
               <div class="checkbox-item">
-                <input
-                  id="swordshield-checkbox-leaguecard-kabu"
-                  type="checkbox"
-                />
-                <img
-                  class="pokeicon leaguecard"
-                  src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Kabu.png"
-                  alt="Icon of Kabu League Card"
-                />
-                <label
-                  class="text-sm lg:tooltip"
-                  data-tip="Motostoke."
-                  for="swordshield-checkbox-leaguecard-kabu"
-                  >Kabu</label
-                >
+                <input id="swordshield-checkbox-leaguecard-kabu" type="checkbox" />
+                <img class="pokeicon leaguecard" src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Kabu.png" alt="Icon of Kabu League Card" />
+                <label class="text-sm lg:tooltip" data-tip="Motostoke." for="swordshield-checkbox-leaguecard-kabu">Kabu</label>
               </div>
               <div class="checkbox-item">
-                <input
-                  id="swordshield-checkbox-leaguecard-bea"
-                  type="checkbox"
-                />
-                <img
-                  class="pokeicon leaguecard"
-                  src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Bea.png"
-                  alt="Icon of Bea League Card"
-                />
-                <label
-                  class="text-sm lg:tooltip"
-                  data-tip="Stow-on-Side."
-                  for="swordshield-checkbox-leaguecard-bea"
-                  >Bea</label
-                >
+                <input id="swordshield-checkbox-leaguecard-bea" type="checkbox" />
+                <img class="pokeicon leaguecard" src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Bea.png" alt="Icon of Bea League Card" />
+                <label class="text-sm lg:tooltip" data-tip="Stow-on-Side." for="swordshield-checkbox-leaguecard-bea">Bea</label>
               </div>
               <div class="checkbox-item">
-                <input
-                  id="swordshield-checkbox-leaguecard-allister"
-                  type="checkbox"
-                />
-                <img
-                  class="pokeicon leaguecard"
-                  src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Allister.png"
-                  alt="Icon of Allister League Card"
-                />
-                <label
-                  class="text-sm lg:tooltip"
-                  data-tip="Stow-on-Side."
-                  for="swordshield-checkbox-leaguecard-allister"
-                  ><span style="color: #a40045">Allister</span></label
-                >
+                <input id="swordshield-checkbox-leaguecard-allister" type="checkbox" />
+                <img class="pokeicon leaguecard" src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Allister.png" alt="Icon of Allister League Card" />
+                <label class="text-sm lg:tooltip" data-tip="Stow-on-Side." for="swordshield-checkbox-leaguecard-allister"><span style="color: #a40045">Allister</span></label>
               </div>
               <div class="checkbox-item">
-                <input
-                  id="swordshield-checkbox-leaguecard-opal"
-                  type="checkbox"
-                />
-                <img
-                  class="pokeicon leaguecard"
-                  src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Opal.png"
-                  alt="Icon of Opal League Card"
-                />
-                <label
-                  class="text-sm lg:tooltip"
-                  data-tip="Route 6."
-                  for="swordshield-checkbox-leaguecard-opal"
-                  >Opal</label
-                >
+                <input id="swordshield-checkbox-leaguecard-opal" type="checkbox" />
+                <img class="pokeicon leaguecard" src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Opal.png" alt="Icon of Opal League Card" />
+                <label class="text-sm lg:tooltip" data-tip="Route 6." for="swordshield-checkbox-leaguecard-opal">Opal</label>
               </div>
             </div>
             <div class="leaguecard-leftmiddlerow">
               <div class="checkbox-item">
-                <input
-                  id="swordshield-checkbox-leaguecard-hop-rare"
-                  type="checkbox"
-                />
-                <img
-                  class="pokeicon leaguecard"
-                  src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Hop_rare.png"
-                  alt="Icon of Hop Rare League Card"
-                />
-                <label
-                  class="text-sm lg:tooltip"
-                  data-tip="Slumbering Weald."
-                  for="swordshield-checkbox-leaguecard-hop-rare"
-                  >Hop Rare</label
-                >
+                <input id="swordshield-checkbox-leaguecard-hop-rare" type="checkbox" />
+                <img class="pokeicon leaguecard" src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Hop_rare.png" alt="Icon of Hop Rare League Card" />
+                <label class="text-sm lg:tooltip" data-tip="Slumbering Weald." for="swordshield-checkbox-leaguecard-hop-rare">Hop Rare</label>
               </div>
               <div class="checkbox-item">
-                <input
-                  id="swordshield-checkbox-leaguecard-marnie-rare"
-                  type="checkbox"
-                />
-                <img
-                  class="pokeicon leaguecard"
-                  src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Marnie_rare.png"
-                  alt="Icon of Marnie Rare League Card"
-                />
-                <label
-                  class="text-sm lg:tooltip"
-                  data-tip="Spikemuth."
-                  for="swordshield-checkbox-leaguecard-marnie-rare"
-                  >Marnie Rare</label
-                >
+                <input id="swordshield-checkbox-leaguecard-marnie-rare" type="checkbox" />
+                <img class="pokeicon leaguecard" src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Marnie_rare.png" alt="Icon of Marnie Rare League Card" />
+                <label class="text-sm lg:tooltip" data-tip="Spikemuth." for="swordshield-checkbox-leaguecard-marnie-rare">Marnie Rare</label>
               </div>
               <div class="checkbox-item">
-                <input
-                  id="swordshield-checkbox-leaguecard-milo-rare"
-                  type="checkbox"
-                />
-                <img
-                  class="pokeicon leaguecard"
-                  src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Milo_rare.png"
-                  alt="Icon of Milo Rare League Card"
-                />
-                <label
-                  class="text-sm lg:tooltip"
-                  data-tip="Turtffield Stadium."
-                  for="swordshield-checkbox-leaguecard-milo-rare"
-                  >Milo Rare</label
-                >
+                <input id="swordshield-checkbox-leaguecard-milo-rare" type="checkbox" />
+                <img class="pokeicon leaguecard" src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Milo_rare.png" alt="Icon of Milo Rare League Card" />
+                <label class="text-sm lg:tooltip" data-tip="Turtffield Stadium." for="swordshield-checkbox-leaguecard-milo-rare">Milo Rare</label>
               </div>
               <div class="checkbox-item">
-                <input
-                  id="swordshield-checkbox-leaguecard-nessa-rare"
-                  type="checkbox"
-                />
-                <img
-                  class="pokeicon leaguecard"
-                  src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Nessa_rare.png"
-                  alt="Icon of Nessa Rare League Card"
-                />
-                <label
-                  class="text-sm lg:tooltip"
-                  data-tip="Hulbury Stadium."
-                  for="swordshield-checkbox-leaguecard-nessa-rare"
-                  >Nessa Rare</label
-                >
+                <input id="swordshield-checkbox-leaguecard-nessa-rare" type="checkbox" />
+                <img class="pokeicon leaguecard" src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Nessa_rare.png" alt="Icon of Nessa Rare League Card" />
+                <label class="text-sm lg:tooltip" data-tip="Hulbury Stadium." for="swordshield-checkbox-leaguecard-nessa-rare">Nessa Rare</label>
               </div>
               <div class="checkbox-item">
-                <input
-                  id="swordshield-checkbox-leaguecard-kabu-rare"
-                  type="checkbox"
-                />
-                <img
-                  class="pokeicon leaguecard"
-                  src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Kabu_rare.png"
-                  alt="Icon of Kabu Rare League Card"
-                />
-                <label
-                  class="text-sm lg:tooltip"
-                  data-tip="Motostoke Stadium."
-                  for="swordshield-checkbox-leaguecard-kabu-rare"
-                  >Kabu Rare</label
-                >
+                <input id="swordshield-checkbox-leaguecard-kabu-rare" type="checkbox" />
+                <img class="pokeicon leaguecard" src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Kabu_rare.png" alt="Icon of Kabu Rare League Card" />
+                <label class="text-sm lg:tooltip" data-tip="Motostoke Stadium." for="swordshield-checkbox-leaguecard-kabu-rare">Kabu Rare</label>
               </div>
               <div class="checkbox-item">
-                <input
-                  id="swordshield-checkbox-leaguecard-bea-rare"
-                  type="checkbox"
-                />
-                <img
-                  class="pokeicon leaguecard"
-                  src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Bea_rare.png"
-                  alt="Icon of Bea Rare League Card"
-                />
-                <label
-                  class="text-sm lg:tooltip"
-                  data-tip="Stow-on-Side Staium."
-                  for="swordshield-checkbox-leaguecard-bea-rare"
-                  ><span style="color: #181369">Bea Rare</span></label
-                >
+                <input id="swordshield-checkbox-leaguecard-bea-rare" type="checkbox" />
+                <img class="pokeicon leaguecard" src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Bea_rare.png" alt="Icon of Bea Rare League Card" />
+                <label class="text-sm lg:tooltip" data-tip="Stow-on-Side Staium." for="swordshield-checkbox-leaguecard-bea-rare"><span style="color: #181369">Bea Rare</span></label>
               </div>
               <div class="checkbox-item">
-                <input
-                  id="swordshield-checkbox-leaguecard-allister-rare"
-                  type="checkbox"
-                />
-                <img
-                  class="pokeicon leaguecard"
-                  src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Allister_rare.png"
-                  alt="Icon of Allister Rare League Card"
-                />
-                <label
-                  class="text-sm lg:tooltip"
-                  data-tip="Stow-on-Side Stadium."
-                  for="swordshield-checkbox-leaguecard-allister-rare"
-                  ><span style="color: #a40045">Allister Rare</span></label
-                >
+                <input id="swordshield-checkbox-leaguecard-allister-rare" type="checkbox" />
+                <img class="pokeicon leaguecard" src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Allister_rare.png" alt="Icon of Allister Rare League Card" />
+                <label class="text-sm lg:tooltip" data-tip="Stow-on-Side Stadium." for="swordshield-checkbox-leaguecard-allister-rare"><span style="color: #a40045">Allister Rare</span></label>
               </div>
               <div class="checkbox-item">
-                <input
-                  id="swordshield-checkbox-leaguecard-opal-rare"
-                  type="checkbox"
-                />
-                <img
-                  class="pokeicon leaguecard"
-                  src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Opal_rare.png"
-                  alt="Icon of Opal Rare League Card"
-                />
-                <label
-                  class="text-sm lg:tooltip"
-                  data-tip="Ballonlea Stadium."
-                  for="swordshield-checkbox-leaguecard-opal-rare"
-                  >Opal Rare</label
-                >
+                <input id="swordshield-checkbox-leaguecard-opal-rare" type="checkbox" />
+                <img class="pokeicon leaguecard" src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Opal_rare.png" alt="Icon of Opal Rare League Card" />
+                <label class="text-sm lg:tooltip" data-tip="Ballonlea Stadium." for="swordshield-checkbox-leaguecard-opal-rare">Opal Rare</label>
               </div>
             </div>
             <div class="leaguecard-rightmiddlerow">
               <div class="checkbox-item">
-                <input
-                  id="swordshield-checkbox-leaguecard-gordie"
-                  type="checkbox"
-                />
-                <img
-                  class="pokeicon leaguecard"
-                  src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Gordie.png"
-                  alt="Icon of Gordie League Card"
-                />
-                <label
-                  class="text-sm lg:tooltip"
-                  data-tip="Circhester Stadium."
-                  for="swordshield-checkbox-leaguecard-gordie"
-                  ><span style="color: #181369">Allister</span></label
-                >
+                <input id="swordshield-checkbox-leaguecard-gordie" type="checkbox" />
+                <img class="pokeicon leaguecard" src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Gordie.png" alt="Icon of Gordie League Card" />
+                <label class="text-sm lg:tooltip" data-tip="Circhester Stadium." for="swordshield-checkbox-leaguecard-gordie"><span style="color: #181369">Allister</span></label>
               </div>
               <div class="checkbox-item">
-                <input
-                  id="swordshield-checkbox-leaguecard-melony"
-                  type="checkbox"
-                />
-                <img
-                  class="pokeicon leaguecard"
-                  src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Melony.png"
-                  alt="Icon of Melony League Card"
-                />
-                <label
-                  class="text-sm lg:tooltip"
-                  data-tip="Circhester Stadium."
-                  for="swordshield-checkbox-leaguecard-melony"
-                  ><span style="color: #a40045">Melony</span></label
-                >
+                <input id="swordshield-checkbox-leaguecard-melony" type="checkbox" />
+                <img class="pokeicon leaguecard" src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Melony.png" alt="Icon of Melony League Card" />
+                <label class="text-sm lg:tooltip" data-tip="Circhester Stadium." for="swordshield-checkbox-leaguecard-melony"><span style="color: #a40045">Melony</span></label>
               </div>
               <div class="checkbox-item">
-                <input
-                  id="swordshield-checkbox-leaguecard-piers"
-                  type="checkbox"
-                />
-                <img
-                  class="pokeicon leaguecard"
-                  src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Piers.png"
-                  alt="Icon of Piers League Card"
-                />
-                <label
-                  class="text-sm lg:tooltip"
-                  data-tip="Spikemuth."
-                  for="swordshield-checkbox-leaguecard-piers"
-                  >Piers</label
-                >
+                <input id="swordshield-checkbox-leaguecard-piers" type="checkbox" />
+                <img class="pokeicon leaguecard" src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Piers.png" alt="Icon of Piers League Card" />
+                <label class="text-sm lg:tooltip" data-tip="Spikemuth." for="swordshield-checkbox-leaguecard-piers">Piers</label>
               </div>
               <div class="checkbox-item">
-                <input
-                  id="swordshield-checkbox-leaguecard-raihan"
-                  type="checkbox"
-                />
-                <img
-                  class="pokeicon leaguecard"
-                  src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Raihan.png"
-                  alt="Icon of Raihan League Card"
-                />
-                <label
-                  class="text-sm lg:tooltip"
-                  data-tip="Hammerlocke."
-                  for="swordshield-checkbox-leaguecard-raihan"
-                  >Raihan</label
-                >
+                <input id="swordshield-checkbox-leaguecard-raihan" type="checkbox" />
+                <img class="pokeicon leaguecard" src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Raihan.png" alt="Icon of Raihan League Card" />
+                <label class="text-sm lg:tooltip" data-tip="Hammerlocke." for="swordshield-checkbox-leaguecard-raihan">Raihan</label>
               </div>
               <div class="checkbox-item">
-                <input
-                  id="swordshield-checkbox-leaguecard-leon"
-                  type="checkbox"
-                />
-                <img
-                  class="pokeicon leaguecard"
-                  src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Leon.png"
-                  alt="Icon of Leon League Card"
-                />
-                <label
-                  class="text-sm lg:tooltip"
-                  data-tip="Motostoke."
-                  for="swordshield-checkbox-leaguecard-leon-rare"
-                  >Leon</label
-                >
+                <input id="swordshield-checkbox-leaguecard-leon" type="checkbox" />
+                <img class="pokeicon leaguecard" src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Leon.png" alt="Icon of Leon League Card" />
+                <label class="text-sm lg:tooltip" data-tip="Motostoke." for="swordshield-checkbox-leaguecard-leon-rare">Leon</label>
               </div>
               <div class="checkbox-item">
-                <input
-                  id="swordshield-checkbox-leaguecard-rose"
-                  type="checkbox"
-                />
-                <img
-                  class="pokeicon leaguecard"
-                  src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Rose.png"
-                  alt="Icon of Rose League Card"
-                />
-                <label
-                  class="text-sm lg:tooltip"
-                  data-tip="Hulbury."
-                  for="swordshield-checkbox-leaguecard-rose"
-                  >Rose</label
-                >
+                <input id="swordshield-checkbox-leaguecard-rose" type="checkbox" />
+                <img class="pokeicon leaguecard" src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Rose.png" alt="Icon of Rose League Card" />
+                <label class="text-sm lg:tooltip" data-tip="Hulbury." for="swordshield-checkbox-leaguecard-rose">Rose</label>
               </div>
               <div class="checkbox-item">
-                <input
-                  id="swordshield-checkbox-leaguecard-bede"
-                  type="checkbox"
-                />
-                <img
-                  class="pokeicon leaguecard"
-                  src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Bede.png"
-                  alt="Icon of Bede League Card"
-                />
-                <label
-                  class="text-sm lg:tooltip"
-                  data-tip="Galar Mine No. 2."
-                  for="swordshield-checkbox-leaguecard-bede"
-                  >Bede</label
-                >
+                <input id="swordshield-checkbox-leaguecard-bede" type="checkbox" />
+                <img class="pokeicon leaguecard" src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Bede.png" alt="Icon of Bede League Card" />
+                <label class="text-sm lg:tooltip" data-tip="Galar Mine No. 2." for="swordshield-checkbox-leaguecard-bede">Bede</label>
               </div>
               <div class="checkbox-item">
-                <input
-                  id="swordshield-checkbox-leaguecard-ballguy"
-                  type="checkbox"
-                />
-                <img
-                  class="pokeicon leaguecard"
-                  src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Ball_Guy.png"
-                  alt="Icon of Ball Guy League Card"
-                />
-                <label
-                  class="text-sm lg:tooltip"
-                  data-tip="Motostoke."
-                  for="swordshield-checkbox-leaguecard-ballguy"
-                  >Ball Guy</label
-                >
+                <input id="swordshield-checkbox-leaguecard-ballguy" type="checkbox" />
+                <img class="pokeicon leaguecard" src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Ball_Guy.png" alt="Icon of Ball Guy League Card" />
+                <label class="text-sm lg:tooltip" data-tip="Motostoke." for="swordshield-checkbox-leaguecard-ballguy">Ball Guy</label>
               </div>
             </div>
             <div class="leaguecard-rightrow">
               <div class="checkbox-item">
-                <input
-                  id="swordshield-checkbox-leaguecard-gordie-rare"
-                  type="checkbox"
-                />
-                <img
-                  class="pokeicon leaguecard"
-                  src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Gordie_rare.png"
-                  alt="Icon of Gordie Rare League Card"
-                />
-                <label
-                  class="text-sm lg:tooltip"
-                  data-tip="Circhester Stadium."
-                  for="swordshield-checkbox-leaguecard-gordie-rare"
-                  ><span style="color: #181369">Gordie Rare</span></label
-                >
+                <input id="swordshield-checkbox-leaguecard-gordie-rare" type="checkbox" />
+                <img class="pokeicon leaguecard" src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Gordie_rare.png" alt="Icon of Gordie Rare League Card" />
+                <label class="text-sm lg:tooltip" data-tip="Circhester Stadium." for="swordshield-checkbox-leaguecard-gordie-rare"><span style="color: #181369">Gordie Rare</span></label>
               </div>
               <div class="checkbox-item">
-                <input
-                  id="swordshield-checkbox-leaguecard-melony-rare"
-                  type="checkbox"
-                />
-                <img
-                  class="pokeicon leaguecard"
-                  src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Melony_rare.png"
-                  alt="Icon of Melony Rare League Card"
-                />
-                <label
-                  class="text-sm lg:tooltip"
-                  data-tip="Circhester Stadium."
-                  for="swordshield-checkbox-leaguecard-melony-rare"
-                  ><span style="color: #a40045">Melony Rare</span></label
-                >
+                <input id="swordshield-checkbox-leaguecard-melony-rare" type="checkbox" />
+                <img class="pokeicon leaguecard" src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Melony_rare.png" alt="Icon of Melony Rare League Card" />
+                <label class="text-sm lg:tooltip" data-tip="Circhester Stadium." for="swordshield-checkbox-leaguecard-melony-rare"><span style="color: #a40045">Melony Rare</span></label>
               </div>
               <div class="checkbox-item">
-                <input
-                  id="swordshield-checkbox-leaguecard-piers-rare"
-                  type="checkbox"
-                />
-                <img
-                  class="pokeicon leaguecard"
-                  src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Piers_rare.png"
-                  alt="Icon of Piers Rare League Card"
-                />
-                <label
-                  class="text-sm lg:tooltip"
-                  data-tip="Tower Summit."
-                  for="swordshield-checkbox-leaguecard-piers-rare"
-                  >Piers Rare</label
-                >
+                <input id="swordshield-checkbox-leaguecard-piers-rare" type="checkbox" />
+                <img class="pokeicon leaguecard" src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Piers_rare.png" alt="Icon of Piers Rare League Card" />
+                <label class="text-sm lg:tooltip" data-tip="Tower Summit." for="swordshield-checkbox-leaguecard-piers-rare">Piers Rare</label>
               </div>
               <div class="checkbox-item">
-                <input
-                  id="swordshield-checkbox-leaguecard-raihan-rare"
-                  type="checkbox"
-                />
-                <img
-                  class="pokeicon leaguecard"
-                  src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Raihan_rare.png"
-                  alt="Icon of Raihan Rare League Card"
-                />
-                <label
-                  class="text-sm lg:tooltip"
-                  data-tip="Hammerlocke Stadium."
-                  for="swordshield-checkbox-leaguecard-raihan-rare"
-                  >Raihan Rare</label
-                >
+                <input id="swordshield-checkbox-leaguecard-raihan-rare" type="checkbox" />
+                <img class="pokeicon leaguecard" src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Raihan_rare.png" alt="Icon of Raihan Rare League Card" />
+                <label class="text-sm lg:tooltip" data-tip="Hammerlocke Stadium." for="swordshield-checkbox-leaguecard-raihan-rare">Raihan Rare</label>
               </div>
               <div class="checkbox-item">
-                <input
-                  id="swordshield-checkbox-leaguecard-leon-rare"
-                  type="checkbox"
-                />
-                <img
-                  class="pokeicon leaguecard"
-                  src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Leon_rare.png"
-                  alt="Icon of Leon Rare League Card"
-                />
-                <label
-                  class="text-sm lg:tooltip"
-                  data-tip="Battle Tower."
-                  for="swordshield-checkbox-leaguecard-leon-rare"
-                  >Leon Rare</label
-                >
+                <input id="swordshield-checkbox-leaguecard-leon-rare" type="checkbox" />
+                <img class="pokeicon leaguecard" src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Leon_rare.png" alt="Icon of Leon Rare League Card" />
+                <label class="text-sm lg:tooltip" data-tip="Battle Tower." for="swordshield-checkbox-leaguecard-leon-rare">Leon Rare</label>
               </div>
               <div class="checkbox-item">
-                <input
-                  id="swordshield-checkbox-leaguecard-rose-rare"
-                  type="checkbox"
-                />
-                <img
-                  class="pokeicon leaguecard"
-                  src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Rose_rare.png"
-                  alt="Icon of Rose Rare League Card"
-                />
-                <label
-                  class="text-sm lg:tooltip"
-                  data-tip="Galar Mine."
-                  for="swordshield-checkbox-leaguecard-rose-rare"
-                  >Rose Rare</label
-                >
+                <input id="swordshield-checkbox-leaguecard-rose-rare" type="checkbox" />
+                <img class="pokeicon leaguecard" src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Rose_rare.png" alt="Icon of Rose Rare League Card" />
+                <label class="text-sm lg:tooltip" data-tip="Galar Mine." for="swordshield-checkbox-leaguecard-rose-rare">Rose Rare</label>
               </div>
               <div class="checkbox-item">
-                <input
-                  id="swordshield-checkbox-leaguecard-bede-rare"
-                  type="checkbox"
-                />
-                <img
-                  class="pokeicon leaguecard"
-                  src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Bede_rare.png"
-                  alt="Icon of Bede Rare League Card"
-                />
-                <label
-                  class="text-sm lg:tooltip"
-                  data-tip="Ballonlea Stadium."
-                  for="swordshield-checkbox-leaguecard-bede-rare"
-                  >Bede Rare</label
-                >
+                <input id="swordshield-checkbox-leaguecard-bede-rare" type="checkbox" />
+                <img class="pokeicon leaguecard" src="../images/icons/miscellaneous/gen8/swordshield/leaguecard/400px-League_Card_Bede_rare.png" alt="Icon of Bede Rare League Card" />
+                <label class="text-sm lg:tooltip" data-tip="Ballonlea Stadium." for="swordshield-checkbox-leaguecard-bede-rare">Bede Rare</label>
               </div>
               <div class="leaguecard-customizations">
                 <div class="checkbox-item">
-                  <span class="title"
-                    ><label class="text-lg">Customizations</label></span
-                  >
+                  <span class="title"><label class="text-lg">Customizations</label></span>
                 </div>
                 <div class="leaguecard-customizations-rowcontainer">
                   <div class="leaguecard-customizations-leftrow">
                     <div class="checkbox-item">
-                      <input
-                        id="swordshield-checkbox-customizations-backgrounds"
-                        type="checkbox"
-                      />
-                      <label
-                        class="text-sm lg:tooltip"
-                        data-tip="Use guides to collect them."
-                        for="swordshield-checkbox-customizations-backgrounds"
-                        >Backgrounds</label
-                      >
+                      <input id="swordshield-checkbox-customizations-backgrounds" type="checkbox" />
+                      <label class="text-sm lg:tooltip" data-tip="Use guides to collect them." for="swordshield-checkbox-customizations-backgrounds">Backgrounds</label>
                     </div>
                     <div class="checkbox-item">
-                      <input
-                        id="swordshield-checkbox-customizations-effects"
-                        type="checkbox"
-                      />
-                      <label
-                        class="text-sm lg:tooltip"
-                        data-tip="Use guides to collect them."
-                        for="swordshield-checkbox-customizations-effects"
-                        >Effects</label
-                      >
+                      <input id="swordshield-checkbox-customizations-effects" type="checkbox" />
+                      <label class="text-sm lg:tooltip" data-tip="Use guides to collect them." for="swordshield-checkbox-customizations-effects">Effects</label>
                     </div>
                     <div class="checkbox-item">
-                      <input
-                        id="swordshield-checkbox-customizations-frames"
-                        type="checkbox"
-                      />
-                      <label
-                        class="text-sm lg:tooltip"
-                        data-tip="Use guides to collect them."
-                        for="swordshield-checkbox-customizations-frames"
-                        >Frames</label
-                      >
+                      <input id="swordshield-checkbox-customizations-frames" type="checkbox" />
+                      <label class="text-sm lg:tooltip" data-tip="Use guides to collect them." for="swordshield-checkbox-customizations-frames">Frames</label>
                     </div>
                   </div>
                   <div class="leaguecard-customizations-rightrow">
                     <div class="checkbox-item">
-                      <input
-                        id="swordshield-checkbox-customizations-expressions"
-                        type="checkbox"
-                      />
-                      <label
-                        class="text-sm lg:tooltip"
-                        data-tip="Use guides to collect them."
-                        for="swordshield-checkbox-customizations-expressions"
-                        >Expressions</label
-                      >
+                      <input id="swordshield-checkbox-customizations-expressions" type="checkbox" />
+                      <label class="text-sm lg:tooltip" data-tip="Use guides to collect them." for="swordshield-checkbox-customizations-expressions">Expressions</label>
                     </div>
                     <div class="checkbox-item">
-                      <input
-                        id="swordshield-checkbox-customizations-poses"
-                        type="checkbox"
-                      />
-                      <label
-                        class="text-sm lg:tooltip"
-                        data-tip="Use guides to collect them."
-                        for="swordshield-checkbox-customizations-poses"
-                        >Poses</label
-                      >
+                      <input id="swordshield-checkbox-customizations-poses" type="checkbox" />
+                      <label class="text-sm lg:tooltip" data-tip="Use guides to collect them." for="swordshield-checkbox-customizations-poses">Poses</label>
                     </div>
                     <div class="checkbox-item">
-                      <input
-                        id="swordshield-checkbox-customizations-foils"
-                        type="checkbox"
-                      />
-                      <label
-                        class="text-sm lg:tooltip"
-                        data-tip="Use guides to collect them."
-                        for="swordshield-checkbox-customizations-foils"
-                        >Foils</label
-                      >
+                      <input id="swordshield-checkbox-customizations-foils" type="checkbox" />
+                      <label class="text-sm lg:tooltip" data-tip="Use guides to collect them." for="swordshield-checkbox-customizations-foils">Foils</label>
                     </div>
                   </div>
                 </div>
@@ -2278,184 +868,95 @@
     </footer>
     <script src="../checklists/js/script.js"></script>
     <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        var swordLogo = document.getElementById('sword-logo');
-        var shieldLogo = document.getElementById('shield-logo');
+      document.addEventListener("DOMContentLoaded", function () {
+        var swordLogo = document.getElementById("sword-logo");
+        var shieldLogo = document.getElementById("shield-logo");
 
-        var headerTitle = document.querySelector('.title');
-        var widePanels = document.querySelectorAll('.wide-panel');
-        var footer = document.querySelector('footer');
-        var titleText = document.querySelectorAll('.panel-label');
-        var backgroundIcons = document.querySelector('body');
+        var headerTitle = document.querySelector(".title");
+        var widePanels = document.querySelectorAll(".wide-panel");
+        var footer = document.querySelector("footer");
+        var titleText = document.querySelectorAll(".panel-label");
+        var backgroundIcons = document.querySelector("body");
 
-        swordLogo.addEventListener('click', function () {
-          headerTitle.style.color = '#181369';
-          footer.style.background = '#181369';
-          backgroundIcons.style.backgroundImage =
-            'url(../../images/patterns/pattern-sword.png)';
+        swordLogo.addEventListener("click", function () {
+          headerTitle.style.color = "#181369";
+          footer.style.background = "#181369";
+          backgroundIcons.style.backgroundImage = "url(../../images/patterns/pattern-sword.png)";
 
           titleText.forEach(function (text) {
-            text.style.color = '#181369';
+            text.style.color = "#181369";
           });
 
           widePanels.forEach(function (panel) {
-            panel.style.border = '2px solid #181369';
+            panel.style.border = "2px solid #181369";
           });
         });
 
-        shieldLogo.addEventListener('click', function () {
-          headerTitle.style.color = '#a40045';
-          footer.style.backgroundColor = '#a40045';
-          backgroundIcons.style.backgroundImage =
-            'url(../../images/patterns/pattern-shield.png)';
+        shieldLogo.addEventListener("click", function () {
+          headerTitle.style.color = "#a40045";
+          footer.style.backgroundColor = "#a40045";
+          backgroundIcons.style.backgroundImage = "url(../../images/patterns/pattern-shield.png)";
 
           titleText.forEach(function (text) {
-            text.style.color = '#a40045';
+            text.style.color = "#a40045";
           });
 
           widePanels.forEach(function (panel) {
-            panel.style.border = '2px solid #a40045';
+            panel.style.border = "2px solid #a40045";
           });
         });
       });
     </script>
     <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        const completepokedexCheckboxes = document.querySelectorAll(
-          '.completepokedex input[type="checkbox"]'
-        );
-        const legendariesCheckboxes = document.querySelectorAll(
-          '.legendaries input[type="checkbox"]'
-        );
-        const giftpokemonCheckboxes = document.querySelectorAll(
-          '.giftpokemon input[type="checkbox"]'
-        );
-        const otherCheckboxes = document.querySelectorAll(
-          '.other input[type="checkbox"]'
-        );
-        const galarianformsCheckboxes = document.querySelectorAll(
-          '.galarianforms input[type="checkbox"]'
-        );
-        const ingametradesCheckboxes = document.querySelectorAll(
-          '.ingametrades input[type="checkbox"]'
-        );
-        const gigantamaxCheckboxes = document.querySelectorAll(
-          '.gigantamax input[type="checkbox"]'
-        );
-        const battletowerCheckboxes = document.querySelectorAll(
-          '.battletower input[type="checkbox"]'
-        );
-        const battletowerleftrowCheckboxes = document.querySelectorAll(
-          '.battletower-leftrow input[type="checkbox"]'
-        );
-        const battletowerrightrowCheckboxes = document.querySelectorAll(
-          '.battletower-rightrow input[type="checkbox"]'
-        );
-        const ribbonsCheckboxes = document.querySelectorAll(
-          '.ribbons input[type="checkbox"]'
-        );
-        const campingtoysCheckboxes = document.querySelectorAll(
-          '.campingtoys input[type="checkbox"]'
-        );
-        const sidequestsCheckboxes = document.querySelectorAll(
-          '.sidequests input[type="checkbox"]'
-        );
-        const currydexCheckboxes = document.querySelectorAll(
-          '.currydex input[type="checkbox"]'
-        );
-        const leaguecardCheckboxes = document.querySelectorAll(
-          '.leaguecard input[type="checkbox"]'
-        );
-        const customizationsCheckboxes = document.querySelectorAll(
-          '.leaguecard-customizations input[type="checkbox"]'
-        );
-        const itemsCheckboxes = document.querySelectorAll(
-          '.items input[type="checkbox"]'
-        );
+      document.addEventListener("DOMContentLoaded", function () {
+        const completepokedexCheckboxes = document.querySelectorAll('.completepokedex input[type="checkbox"]');
+        const legendariesCheckboxes = document.querySelectorAll('.legendaries input[type="checkbox"]');
+        const giftpokemonCheckboxes = document.querySelectorAll('.giftpokemon input[type="checkbox"]');
+        const otherCheckboxes = document.querySelectorAll('.other input[type="checkbox"]');
+        const galarianformsCheckboxes = document.querySelectorAll('.galarianforms input[type="checkbox"]');
+        const ingametradesCheckboxes = document.querySelectorAll('.ingametrades input[type="checkbox"]');
+        const gigantamaxCheckboxes = document.querySelectorAll('.gigantamax input[type="checkbox"]');
+        const battletowerCheckboxes = document.querySelectorAll('.battletower input[type="checkbox"]');
+        const battletowerleftrowCheckboxes = document.querySelectorAll('.battletower-leftrow input[type="checkbox"]');
+        const battletowerrightrowCheckboxes = document.querySelectorAll('.battletower-rightrow input[type="checkbox"]');
+        const ribbonsCheckboxes = document.querySelectorAll('.ribbons input[type="checkbox"]');
+        const campingtoysCheckboxes = document.querySelectorAll('.campingtoys input[type="checkbox"]');
+        const sidequestsCheckboxes = document.querySelectorAll('.sidequests input[type="checkbox"]');
+        const currydexCheckboxes = document.querySelectorAll('.currydex input[type="checkbox"]');
+        const leaguecardCheckboxes = document.querySelectorAll('.leaguecard input[type="checkbox"]');
+        const customizationsCheckboxes = document.querySelectorAll('.leaguecard-customizations input[type="checkbox"]');
+        const itemsCheckboxes = document.querySelectorAll('.items input[type="checkbox"]');
 
         function updateStyle(checkboxes, label) {
-          const allChecked = [...checkboxes].every(
-            (checkbox) => checkbox.checked
-          );
-          label.style.textDecoration = allChecked ? 'line-through' : 'none';
+          const allChecked = [...checkboxes].every((checkbox) => checkbox.checked);
+          label.style.textDecoration = allChecked ? "line-through" : "none";
         }
 
         function initializeCheckboxes(checkboxes, label) {
           checkboxes.forEach((checkbox) => {
-            checkbox.addEventListener('change', function () {
+            checkbox.addEventListener("change", function () {
               updateStyle(checkboxes, label);
             });
           });
           updateStyle(checkboxes, label);
         }
-        initializeCheckboxes(
-          completepokedexCheckboxes,
-          document.querySelector('.completepokedex .title label')
-        );
-        initializeCheckboxes(
-          legendariesCheckboxes,
-          document.querySelector('.legendaries .title label')
-        );
-        initializeCheckboxes(
-          giftpokemonCheckboxes,
-          document.querySelector('.giftpokemon .title label')
-        );
-        initializeCheckboxes(
-          otherCheckboxes,
-          document.querySelector('.other .title label')
-        );
-        initializeCheckboxes(
-          galarianformsCheckboxes,
-          document.querySelector('.galarianforms .title label')
-        );
-        initializeCheckboxes(
-          ingametradesCheckboxes,
-          document.querySelector('.ingametrades .title label')
-        );
-        initializeCheckboxes(
-          gigantamaxCheckboxes,
-          document.querySelector('.gigantamax .title label')
-        );
-        initializeCheckboxes(
-          battletowerCheckboxes,
-          document.querySelector('.battletower .title label')
-        );
-        initializeCheckboxes(
-          battletowerleftrowCheckboxes,
-          document.querySelector('.battletower-leftrow .title label')
-        );
-        initializeCheckboxes(
-          battletowerrightrowCheckboxes,
-          document.querySelector('.battletower-rightrow .title label')
-        );
-        initializeCheckboxes(
-          ribbonsCheckboxes,
-          document.querySelector('.ribbons .title label')
-        );
-        initializeCheckboxes(
-          campingtoysCheckboxes,
-          document.querySelector('.campingtoys .title label')
-        );
-        initializeCheckboxes(
-          sidequestsCheckboxes,
-          document.querySelector('.sidequests .title label')
-        );
-        initializeCheckboxes(
-          currydexCheckboxes,
-          document.querySelector('.currydex .title label')
-        );
-        initializeCheckboxes(
-          leaguecardCheckboxes,
-          document.querySelector('.leaguecard .title label')
-        );
-        initializeCheckboxes(
-          customizationsCheckboxes,
-          document.querySelector('.leaguecard-customizations .title label')
-        );
-        initializeCheckboxes(
-          itemsCheckboxes,
-          document.querySelector('.items .title label')
-        );
+        initializeCheckboxes(completepokedexCheckboxes, document.querySelector(".completepokedex .title label"));
+        initializeCheckboxes(legendariesCheckboxes, document.querySelector(".legendaries .title label"));
+        initializeCheckboxes(giftpokemonCheckboxes, document.querySelector(".giftpokemon .title label"));
+        initializeCheckboxes(otherCheckboxes, document.querySelector(".other .title label"));
+        initializeCheckboxes(galarianformsCheckboxes, document.querySelector(".galarianforms .title label"));
+        initializeCheckboxes(ingametradesCheckboxes, document.querySelector(".ingametrades .title label"));
+        initializeCheckboxes(gigantamaxCheckboxes, document.querySelector(".gigantamax .title label"));
+        initializeCheckboxes(battletowerCheckboxes, document.querySelector(".battletower .title label"));
+        initializeCheckboxes(battletowerleftrowCheckboxes, document.querySelector(".battletower-leftrow .title label"));
+        initializeCheckboxes(battletowerrightrowCheckboxes, document.querySelector(".battletower-rightrow .title label"));
+        initializeCheckboxes(ribbonsCheckboxes, document.querySelector(".ribbons .title label"));
+        initializeCheckboxes(campingtoysCheckboxes, document.querySelector(".campingtoys .title label"));
+        initializeCheckboxes(sidequestsCheckboxes, document.querySelector(".sidequests .title label"));
+        initializeCheckboxes(currydexCheckboxes, document.querySelector(".currydex .title label"));
+        initializeCheckboxes(leaguecardCheckboxes, document.querySelector(".leaguecard .title label"));
+        initializeCheckboxes(customizationsCheckboxes, document.querySelector(".leaguecard-customizations .title label"));
+        initializeCheckboxes(itemsCheckboxes, document.querySelector(".items .title label"));
       });
     </script>
   </body>
