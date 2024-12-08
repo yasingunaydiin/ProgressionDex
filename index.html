@@ -26,7 +26,7 @@
     <div class="container">
       <div class="header-left">
         <div>
-          <h1 class="mb-0 text-blue-950">Progression Dex</h1>
+          <h1>Progression Dex</h1>
           <p>
             A tool for tracking your 100% progression. <br />
             Easily choose games and track your game progress.
@@ -37,14 +37,51 @@
         </div>
       </div>
       <div class="header-right">
-        <div class="social">
-          <a href="https://github.com/yasingunaydiin" target="_blank"><img alt="Github logo" class="github" src="../images/icons/github-mark.png" /></a>
-        </div>
         <img alt="Header image" class="header-image skew-y-12" src="../images/images/index1.png" />
       </div>
     </div>
+
+    <div id="chevronIcon" class="chevron-container">
+      <svg class="chevron-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+        <path id="bottomChevron" d="m7 15 5 5 5-5" style="display: none" />
+        <path id="topChevron" d="m7 9 5-5 5 5" style="display: block" />
+      </svg>
+    </div>
+
+    <!-- Add this section inside your existing HTML, before the footer -->
+    <section class="faq-minimal">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-container">
+        <div class="faq-item">
+          <h3>What is ProgressionDex?</h3>
+          <p>ProgressionDex is a tool designed to help gamers track their 100% completion progress across various games, providing detailed insights and progress tracking capabilities.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Is ProgressionDex free?</h3>
+          <p>Yes, ProgressionDex is completely free. Users can track progress, and manage their game completion journey without any costs.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Is the platform suitable for all users?</h3>
+          <p>Yes, ProgressionDex has a user-friendly interface that makes it accessible for users of all experience levels.</p>
+        </div>
+        <div class="faq-item">
+          <h3>How can I start using ProgressionDex?</h3>
+          <p>Getting started is easy! Click the "Continue without creating an account" button, select your game, and begin tracking your progress.</p>
+        </div>
+      </div>
+    </section>
     <footer>Made with <img alt="Icons of Pokemon" id="dynamicImage" style="margin: 8px; height: 40px" /> in a Cafe</footer>
   </body>
+  <script>
+    const toggleChevron = () => {
+      const atTop = window.scrollY === 0;
+      document.getElementById("bottomChevron").style.display = atTop ? "block" : "none";
+      document.getElementById("topChevron").style.display = atTop ? "none" : "block";
+    };
+
+    window.addEventListener("scroll", toggleChevron);
+    window.addEventListener("load", toggleChevron);
+  </script>
 
   <script>
     // Array of image URLs

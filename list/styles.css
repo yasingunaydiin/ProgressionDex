@@ -1,8 +1,3 @@
-/* Remove comments if something is broken
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-*/
 * {
   font-family:
     system-ui,
@@ -23,7 +18,6 @@ a {
   color: #fff;
   cursor: pointer;
 }
-/* Header*/
 
 /* Body */
 
@@ -50,6 +44,7 @@ button {
   margin-bottom: 10px;
   margin-top: 20px;
 }
+
 /* Container */
 html,
 body {
@@ -65,7 +60,7 @@ body {
   display: flex;
   flex-direction: column;
   margin-top: 0px;
-  overflow-y: scroll; /* Enable vertical scrolling */
+  overflow-y: scroll;
 }
 
 .gen-row {
@@ -76,7 +71,7 @@ body {
   margin-bottom: 30px;
   position: relative;
   padding-top: 100px;
-  scroll-snap-align: start; /* Adjust as needed: start, center, end */
+  scroll-snap-align: start;
   margin-top: -50px;
 }
 
@@ -124,9 +119,7 @@ footer ul {
 }
 footer li {
   display: inline-block;
-  /* Display list items horizontally */
   margin-right: 10px;
-  /* Add spacing between links */
 }
 footer {
   background: rgb(23 37 84);
@@ -143,9 +136,7 @@ footer {
 footer a {
   text-decoration: none;
   color: #fff;
-  /* Adjust link color */
   margin-right: 10px;
-  /* Add spacing between links */
 }
 
 /* Media queries for responsiveness on smaller window size than usual  */
@@ -264,3 +255,5 @@ footer a {
     font-size: 12px;
   }
 }
+
+/*  */
