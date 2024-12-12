@@ -10,6 +10,7 @@
     <link href="../images/icons/favicontab.ico" rel="shortcut icon" type="image/x-icon" />
     <meta name="description" content="A tool for tracking your progression in Pokemon games. Easily choose between games and track your game progress." />
     <meta name="keywords" content="pokemon, checklist, pokedex, progress, completion, speedrun, checklist, check list, locations, characters, games, game" />
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
   </head>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-4PDLXC895H"></script>
@@ -32,6 +33,10 @@
       </div>
     </div>
 
+    <div class="progress-container">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+
     <div class="page-container" data-game="thetealmask">
       <div class="page-container-left">
         <div class="wide-panel pokedex"></div>
@@ -42,52 +47,83 @@
         <div class="wide-panel mainstory"></div>
         <div class="wide-panel postgame"></div>
       </div>
-      <footer>
-        <ul>
-          <li>
-            <a href="../index/index.html">Progression Dex</a>
-          </li>
-          <li>
-            <a href="#">Twitter</a>
-          </li>
-          <li>
-            <a href="https://github.com/yasingunaydiin">GitHub</a>
-          </li>
-        </ul>
-      </footer>
-
-      <script src="../checklists/js/script.js"></script>
-
-      <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          const completepokedexCheckboxes = document.querySelectorAll('.completepokedex input[type="checkbox"]');
-          const legendariesCheckboxes = document.querySelectorAll('.legendaries input[type="checkbox"]');
-          const giftpokemonCheckboxes = document.querySelectorAll('.giftpokemon input[type="checkbox"]');
-          const postgameCheckboxes = document.querySelectorAll('.postgame input[type="checkbox"]');
-          const mainstoryCheckboxes = document.querySelectorAll('.mainstory input[type="checkbox"]');
-          const explorationCheckboxes = document.querySelectorAll('.exploration input[type="checkbox"]');
-
-          function updateStyle(checkboxes, label) {
-            const allChecked = [...checkboxes].every((checkbox) => checkbox.checked);
-            label.style.textDecoration = allChecked ? "line-through" : "none";
-          }
-
-          function initializeCheckboxes(checkboxes, label) {
-            checkboxes.forEach((checkbox) => {
-              checkbox.addEventListener("change", function () {
-                updateStyle(checkboxes, label);
-              });
-            });
-            updateStyle(checkboxes, label);
-          }
-          initializeCheckboxes(completepokedexCheckboxes, document.querySelector(".completepokedex .title label"));
-          initializeCheckboxes(legendariesCheckboxes, document.querySelector(".legendaries .title label"));
-          initializeCheckboxes(giftpokemonCheckboxes, document.querySelector(".giftpokemon .title label"));
-          initializeCheckboxes(postgameCheckboxes, document.querySelector(".postgame .title label"));
-          initializeCheckboxes(mainstoryCheckboxes, document.querySelector(".mainstory .title label"));
-          initializeCheckboxes(explorationCheckboxes, document.querySelector(".exploration .title label"));
-        });
-      </script>
     </div>
+    <footer>
+      <ul>
+        <li>
+          <a href="../index/index.html">Progression Dex</a>
+        </li>
+        <li>
+          <a href="#">Twitter</a>
+        </li>
+        <li>
+          <a href="https://github.com/yasingunaydiin">GitHub</a>
+        </li>
+      </ul>
+    </footer>
+
+    <script src="../checklists/js/script.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const completepokedexCheckboxes = document.querySelectorAll('.completepokedex input[type="checkbox"]');
+        const legendariesCheckboxes = document.querySelectorAll('.legendaries input[type="checkbox"]');
+        const giftpokemonCheckboxes = document.querySelectorAll('.giftpokemon input[type="checkbox"]');
+        const postgameCheckboxes = document.querySelectorAll('.postgame input[type="checkbox"]');
+        const mainstoryCheckboxes = document.querySelectorAll('.mainstory input[type="checkbox"]');
+        const explorationCheckboxes = document.querySelectorAll('.exploration input[type="checkbox"]');
+
+        function updateStyle(checkboxes, label) {
+          const allChecked = [...checkboxes].every((checkbox) => checkbox.checked);
+          label.style.textDecoration = allChecked ? "line-through" : "none";
+        }
+
+        function initializeCheckboxes(checkboxes, label) {
+          checkboxes.forEach((checkbox) => {
+            checkbox.addEventListener("change", function () {
+              updateStyle(checkboxes, label);
+            });
+          });
+          updateStyle(checkboxes, label);
+        }
+        initializeCheckboxes(completepokedexCheckboxes, document.querySelector(".completepokedex .title label"));
+        initializeCheckboxes(legendariesCheckboxes, document.querySelector(".legendaries .title label"));
+        initializeCheckboxes(giftpokemonCheckboxes, document.querySelector(".giftpokemon .title label"));
+        initializeCheckboxes(postgameCheckboxes, document.querySelector(".postgame .title label"));
+        initializeCheckboxes(mainstoryCheckboxes, document.querySelector(".mainstory .title label"));
+        initializeCheckboxes(explorationCheckboxes, document.querySelector(".exploration .title label"));
+      });
+    </script>
+    <script>
+      function updateProgressBar() {
+        const totalCheckboxes = document.querySelectorAll('input[type="checkbox"]').length;
+        const checkedCheckboxes = document.querySelectorAll('input[type="checkbox"]:checked').length;
+
+        const progress = (checkedCheckboxes / totalCheckboxes) * 100;
+        document.getElementById("progressBar").style.width = progress + "%";
+      }
+
+      document.querySelectorAll('input[type="checkbox"]').forEach((checkbox) => {
+        checkbox.addEventListener("change", updateProgressBar);
+      });
+
+      updateProgressBar();
+    </script>
+
+    <script>
+      function checkedAllCheckboxes() {
+        const allChecked = Array.from(checkboxes).every((checkbox) => checkbox.checked);
+
+        if (allChecked) {
+          confetti();
+        }
+      }
+
+      // Add event listeners to checkboxes
+      const checkboxes = document.querySelectorAll('.checkbox-item input[type="checkbox"]');
+      checkboxes.forEach((checkbox) => {
+        checkbox.addEventListener("change", checkedAllCheckboxes);
+      });
+    </script>
   </body>
 </html>

@@ -10,6 +10,7 @@
     <link href="../images/icons/favicontab.ico" rel="shortcut icon" type="image/x-icon" />
     <meta name="description" content="A tool for tracking your progression in Pokemon games. Easily choose between games and track your game progress." />
     <meta name="keywords" content="pokemon, checklist, pokedex, progress, completion, speedrun, checklist, check list, locations, characters, games, game" />
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
   </head>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-4PDLXC895H"></script>
@@ -31,6 +32,10 @@
           <img id="white2-logo" src="../images/logos/white2-logo.webp" alt="Icon of White 2 Logo" class="w-20" />
         </div>
       </div>
+    </div>
+
+    <div class="progress-container">
+      <div class="progress-bar" id="progressBar"></div>
     </div>
 
     <div class="page-container" data-game="black2white2">
@@ -123,9 +128,7 @@
                 <div class="checkbox-item">
                   <input id="black2white2-checkbox-mesprit" type="checkbox" />
                   <img class="pokeicon legendary" src="../images/icons/pokemon/gen5/b2w2/mesprit.gif" alt="Icon of Mesprit" />
-                  <label class="text-sm lg:tooltip" data-tip="Visit the Cave of Being after completing the game. You can find Mesprit at the Celestial Tower." for="black2white2-checkbox-mesprit"
-                    >Mesprit</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Visit the Cave of Being after completing the game. You can find Mesprit at the Celestial Tower." for="black2white2-checkbox-mesprit">Mesprit</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="black2white2-checkbox-azelf" type="checkbox" />
@@ -141,10 +144,7 @@
                   <input id="black2white2-checkbox-registeel-regice" type="checkbox" />
                   <img class="pokeicon legendary" src="../images/icons/pokemon/gen5/b2w2/registeel.gif" alt="Icon of Registeel" />
                   <img class="pokeicon legendary" src="../images/icons/pokemon/gen5/b2w2/regice.gif" alt="Icon of Regice" style="margin-left: -5px" />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="You will find them at the same place you caught Regirock after switching over to using these via teh Unova Link function."
-                    for="black2white2-checkbox-registeel-regice"
+                  <label class="text-sm lg:tooltip" data-tip="You will find them at the same place you caught Regirock after switching over to using these via teh Unova Link function." for="black2white2-checkbox-registeel-regice"
                     >Registeel / Regice</label
                   >
                 </div>
@@ -208,17 +208,13 @@
                   <input id="black2white2-checkbox-gible-dratini" type="checkbox" />
                   <img class="pokeicon gif" src="../images/icons/pokemon/gen5/b2w2/gible-f.gif" alt="Icon of Gible" />
                   <img class="pokeicon gif" src="../images/icons/pokemon/gen5/b2w2/dratini.gif" alt="Icon of Dratini" />
-                  <label class="text-sm lg:tooltip" data-tip="Floccesy Town, after defeating Benga in Black City or White Forest's main attraction." for="black2white2-checkbox-gible-dratini"
-                    >Gible / Dratini</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Floccesy Town, after defeating Benga in Black City or White Forest's main attraction." for="black2white2-checkbox-gible-dratini">Gible / Dratini</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="black2white2-checkbox-tirtouga-archen" type="checkbox" />
                   <img class="pokeicon gif" src="../images/icons/pokemon/gen5/b2w2/tirtouga.gif" alt="Icon of Tirtouga" />
                   <img class="pokeicon gif" src="../images/icons/pokemon/gen5/b2w2/archen.gif" alt="Icon of Archen" style="margin-left: -5px" />
-                  <label class="text-sm lg:tooltip" data-tip="In Nacrene City Museum, after having defeated the Elite Four. You may choose one." for="black2white2-checkbox-tirtouga-archen"
-                    >Tirtouga / Archen</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="In Nacrene City Museum, after having defeated the Elite Four. You may choose one." for="black2white2-checkbox-tirtouga-archen">Tirtouga / Archen</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="black2white2-checkbox-magikarp" type="checkbox" />
@@ -326,9 +322,7 @@
                 <div class="checkbox-item">
                   <input id="black2white2-checkbox-petilil-cottonee" type="checkbox" />
                   <label class="text-sm lg:tooltip" data-tip="In Pokemon White, Route 4." for="black2white2-checkbox-petilil-cottonee">Trade Petilil for Cottonee</label>
-                  <label class="text-sm lg:tooltip" data-tip="Trade Cottonee for Petilil in Pokemon Black"
-                    ><img class="icon-small" src="../images/icons/miscellaneous/other/moreinfo.png" alt="Icon of More Info"
-                  /></label>
+                  <label class="text-sm lg:tooltip" data-tip="Trade Cottonee for Petilil in Pokemon Black"><img class="icon-small" src="../images/icons/miscellaneous/other/moreinfo.png" alt="Icon of More Info" /></label>
                 </div>
                 <div class="checkbox-item">
                   <input id="black2white2-checkbox-emolga-gigalith" type="checkbox" />
@@ -350,18 +344,11 @@
                 </div>
                 <div class="checkbox-item">
                   <input id="black2white2-checkbox-hippowdon-alakazam" type="checkbox" />
-                  <label class="text-sm lg:tooltip" data-tip="Southernmost building in Accumula Town after having traded with her." for="black2white2-checkbox-hippowdon-alakazam"
-                    >Trade Hippowdon for Alakazam</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Southernmost building in Accumula Town after having traded with her." for="black2white2-checkbox-hippowdon-alakazam">Trade Hippowdon for Alakazam</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="black2white2-checkbox-various-trades" type="checkbox" />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="There are various trades in in Nimbasa City. Follow a guide on Serebii or other sites to obtain them all."
-                    for="black2white2-checkbox-various-trades"
-                    >Various Trades</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="There are various trades in in Nimbasa City. Follow a guide on Serebii or other sites to obtain them all." for="black2white2-checkbox-various-trades">Various Trades</label>
                 </div>
               </div>
             </div>
@@ -442,9 +429,7 @@
                 </div>
                 <div class="checkbox-item">
                   <input id="black2white2-checkbox-tournament-mix" type="checkbox" />
-                  <label class="text-sm lg:tooltip" data-tip="All Pokémon at Level 50, can switch a Pokémon with your opponent before combat." for="black2white2-checkbox-tournament-mix"
-                    >Mix Tournament</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="All Pokémon at Level 50, can switch a Pokémon with your opponent before combat." for="black2white2-checkbox-tournament-mix">Mix Tournament</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="black2white2-checkbox-tournament-rental-masters" type="checkbox" />
@@ -452,9 +437,7 @@
                 </div>
                 <div class="checkbox-item">
                   <input id="black2white2-checkbox-tournament-mix-masters" type="checkbox" />
-                  <label class="text-sm lg:tooltip" data-tip="All Pokémon at Level 50, can switch a Pokémon with your opponent before combat." for="black2white2-checkbox-tournament-mix-masters"
-                    >Mix Masters Tournament</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="All Pokémon at Level 50, can switch a Pokémon with your opponent before combat." for="black2white2-checkbox-tournament-mix-masters">Mix Masters Tournament</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="black2white2-checkbox-tournament-type-expert" type="checkbox" />
@@ -462,9 +445,7 @@
                 </div>
                 <div class="checkbox-item">
                   <input id="black2white2-checkbox-tournament-download" type="checkbox" />
-                  <label class="text-sm lg:tooltip" data-tip="Play various tournaments downlosded from Nintendo WiFi Connection." for="black2white2-checkbox-tournament-download"
-                    >Download Tournament</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Play various tournaments downlosded from Nintendo WiFi Connection." for="black2white2-checkbox-tournament-download">Download Tournament</label>
                 </div>
               </div>
               <div class="worldtournament-rightrow">
@@ -615,9 +596,7 @@
           <div class="pokestarstudios">
             <div class="checkbox-item">
               <span class="title"><label class="text-lg">PokeStar Studios</label></span>
-              <label class="text-sm lg:tooltip" data-tip="With a total of 6 ranks including EX."
-                ><img class="icon-small" src="../images/icons/miscellaneous/other/moreinfo.png" alt="Icon of More Info"
-              /></label>
+              <label class="text-sm lg:tooltip" data-tip="With a total of 6 ranks including EX."><img class="icon-small" src="../images/icons/miscellaneous/other/moreinfo.png" alt="Icon of More Info" /></label>
             </div>
             <div class="checkbox-item">
               <input id="black2white2-checkbox-rank-EX" type="checkbox" />
@@ -627,9 +606,7 @@
           <div class="droppeditemquest">
             <div class="checkbox-item">
               <span class="title"><label class="text-lg">The Dropped Item Quest</label></span>
-              <label class="text-sm lg:tooltip" data-tip="This quest will reward you with several Pokemon."
-                ><img class="icon-small" src="../images/icons/miscellaneous/other/moreinfo.png" alt="Icon of More Info"
-              /></label>
+              <label class="text-sm lg:tooltip" data-tip="This quest will reward you with several Pokemon."><img class="icon-small" src="../images/icons/miscellaneous/other/moreinfo.png" alt="Icon of More Info" /></label>
             </div>
             <div class="checkbox-item">
               <input id="black2white2-checkbox-droppeditem" type="checkbox" />
@@ -643,23 +620,17 @@
             </div>
             <div class="checkbox-item">
               <input id="black2white2-checkbox-complete-funfest" type="checkbox" />
-              <label class="text-sm lg:tooltip" data-tip="They are accessed by going to the Entralink through the C-Gear." for="black2white2-checkbox-complete-funfest"
-                >Complete the Funfest Missions</label
-              >
+              <label class="text-sm lg:tooltip" data-tip="They are accessed by going to the Entralink through the C-Gear." for="black2white2-checkbox-complete-funfest">Complete the Funfest Missions</label>
             </div>
           </div>
           <div class="abyssalruins">
             <div class="checkbox-item">
               <span class="title"><label class="text-lg">Abyssal Ruins</label></span>
-              <label class="text-sm lg:tooltip" data-tip="There are four floors in the ruins with different items. Collect them all."
-                ><img class="icon-small" src="../images/icons/miscellaneous/other/moreinfo.png" alt="Icon of More Info"
-              /></label>
+              <label class="text-sm lg:tooltip" data-tip="There are four floors in the ruins with different items. Collect them all."><img class="icon-small" src="../images/icons/miscellaneous/other/moreinfo.png" alt="Icon of More Info" /></label>
             </div>
             <div class="checkbox-item">
               <input id="black2white2-checkbox-abyssalruins" type="checkbox" />
-              <label class="text-sm lg:tooltip" data-tip="They are accessed by going to the Entralink through the C-Gear." for="black2white2-checkbox-abyssalruins"
-                >Get the Relic Crown at the Abyssal Ruins</label
-              >
+              <label class="text-sm lg:tooltip" data-tip="They are accessed by going to the Entralink through the C-Gear." for="black2white2-checkbox-abyssalruins">Get the Relic Crown at the Abyssal Ruins</label>
             </div>
           </div>
         </div>
@@ -770,6 +741,37 @@
         initializeCheckboxes(battlesCheckboxes, document.querySelector(".battles .title label"));
         initializeCheckboxes(battleinstituteCheckboxes, document.querySelector(".battleinstitute .title label"));
         initializeCheckboxes(itemsCheckboxes, document.querySelector(".items .title label"));
+      });
+    </script>
+    <script>
+      function updateProgressBar() {
+        const totalCheckboxes = document.querySelectorAll('input[type="checkbox"]').length;
+        const checkedCheckboxes = document.querySelectorAll('input[type="checkbox"]:checked').length;
+
+        const progress = (checkedCheckboxes / totalCheckboxes) * 100;
+        document.getElementById("progressBar").style.width = progress + "%";
+      }
+
+      document.querySelectorAll('input[type="checkbox"]').forEach((checkbox) => {
+        checkbox.addEventListener("change", updateProgressBar);
+      });
+
+      updateProgressBar();
+    </script>
+
+    <script>
+      function checkedAllCheckboxes() {
+        const allChecked = Array.from(checkboxes).every((checkbox) => checkbox.checked);
+
+        if (allChecked) {
+          confetti();
+        }
+      }
+
+      // Add event listeners to checkboxes
+      const checkboxes = document.querySelectorAll('.checkbox-item input[type="checkbox"]');
+      checkboxes.forEach((checkbox) => {
+        checkbox.addEventListener("change", checkedAllCheckboxes);
       });
     </script>
   </body>

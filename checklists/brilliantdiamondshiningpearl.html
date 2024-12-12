@@ -10,6 +10,7 @@
     <link href="../images/icons/favicontab.ico" rel="shortcut icon" type="image/x-icon" />
     <meta name="description" content="A tool for tracking your progression in Pokemon games. Easily choose between games and track your game progress." />
     <meta name="keywords" content="pokemon, checklist, pokedex, progress, completion, speedrun, checklist, check list, locations, characters, games, game" />
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
   </head>
 
   <body>
@@ -22,6 +23,11 @@
         </div>
       </div>
     </div>
+
+    <div class="progress-container">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+
     <div class="page-container" data-game="brilliantdiamondshiningpearl">
       <div class="page-container-left">
         <div class="wide-panel pokedex">
@@ -33,15 +39,11 @@
 
             <div class="checkbox-item">
               <input id="brilliantdiamondshiningpearl-checkbox-sinnoh-pokedex" type="checkbox" />
-              <label class="text-sm lg:tooltip" data-tip="There are a total of 210 Pokemon in the Sinnoh Dex." for="brilliantdiamondshiningpearl-checkbox-sinnoh-pokedex"
-                >Complete the Sinnoh Pokedex</label
-              >
+              <label class="text-sm lg:tooltip" data-tip="There are a total of 210 Pokemon in the Sinnoh Dex." for="brilliantdiamondshiningpearl-checkbox-sinnoh-pokedex">Complete the Sinnoh Pokedex</label>
             </div>
             <div class="checkbox-item">
               <input id="brilliantdiamondshiningpearl-checkbox-national-pokedex" type="checkbox" />
-              <label class="text-sm lg:tooltip" data-tip="There are a total of 493 Pokemon in the Sinnoh Dex." for="brilliantdiamondshiningpearl-checkbox-national-pokedex"
-                >Complete the National Pokedex</label
-              >
+              <label class="text-sm lg:tooltip" data-tip="There are a total of 493 Pokemon in the Sinnoh Dex." for="brilliantdiamondshiningpearl-checkbox-national-pokedex">Complete the National Pokedex</label>
             </div>
             <div class="checkbox-item">
               <input id="brilliantdiamondshiningpearl-checkbox-spiritomb" type="checkbox" />
@@ -58,16 +60,12 @@
                 <div class="checkbox-item">
                   <input id="brilliantdiamondshiningpearl-checkbox-dialga" type="checkbox" />
                   <img class="pokeicon legendary" src="../images/icons/pokemon/gen8/brilliantdiamondshiningpearl/dialga.png" alt="Icon of Dialga" />
-                  <label class="text-sm lg:tooltip" data-tip="Spear Pillar, as you progress your story." for="brilliantdiamondshiningpearl-checkbox-dialga"
-                    ><span style="color: #4583bd">Dialga</span></label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Spear Pillar, as you progress your story." for="brilliantdiamondshiningpearl-checkbox-dialga"><span style="color: #4583bd">Dialga</span></label>
                 </div>
                 <div class="checkbox-item">
                   <input id="brilliantdiamondshiningpearl-checkbox-palkia" type="checkbox" />
                   <img class="pokeicon legendary" src="../images/icons/pokemon/gen8/brilliantdiamondshiningpearl/palkia.png" alt="Icon of Palkia" />
-                  <label class="text-sm lg:tooltip" data-tip="Spear Pillar, as you progress your story." for="brilliantdiamondshiningpearl-checkbox-palkia"
-                    ><span style="color: #f1aec6">Palkia</span></label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Spear Pillar, as you progress your story." for="brilliantdiamondshiningpearl-checkbox-palkia"><span style="color: #f1aec6">Palkia</span></label>
                 </div>
                 <div class="checkbox-item">
                   <input id="brilliantdiamondshiningpearl-checkbox-uxie" type="checkbox" />
@@ -87,9 +85,7 @@
                 <div class="checkbox-item">
                   <input id="brilliantdiamondshiningpearl-checkbox-heatran" type="checkbox" />
                   <img class="pokeicon legendary" src="../images/icons/pokemon/gen8/brilliantdiamondshiningpearl/heatran.png" alt="Icon of Heatran" />
-                  <label class="text-sm lg:tooltip" data-tip="Stark Mountain, after getting the National Dex and going to the Fight Arena." for="brilliantdiamondshiningpearl-checkbox-heatran"
-                    >Heatran</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Stark Mountain, after getting the National Dex and going to the Fight Arena." for="brilliantdiamondshiningpearl-checkbox-heatran">Heatran</label>
                 </div>
               </div>
               <div class="legendaries-rightrow">
@@ -111,16 +107,12 @@
                 <div class="checkbox-item">
                   <input id="brilliantdiamondshiningpearl-checkbox-shaymin" type="checkbox" />
                   <img class="pokeicon legendary" src="../images/icons/pokemon/gen8/brilliantdiamondshiningpearl/shaymin-land.png" alt="Icon of Shaymin" />
-                  <label class="text-sm lg:tooltip" data-tip="Flower Paradise, after getting Oak's Letter." for="brilliantdiamondshiningpearl-checkbox-shaymin"
-                    ><span style="color: #7ac49a">Shaymin</span></label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Flower Paradise, after getting Oak's Letter." for="brilliantdiamondshiningpearl-checkbox-shaymin"><span style="color: #7ac49a">Shaymin</span></label>
                 </div>
                 <div class="checkbox-item">
                   <input id="brilliantdiamondshiningpearl-checkbox-darkrai" type="checkbox" />
                   <img class="pokeicon legendary" src="../images/icons/pokemon/gen8/brilliantdiamondshiningpearl/darkrai.png" alt="Icon of Darkrai" />
-                  <label class="text-sm lg:tooltip" data-tip="Newmoon Island, after getting the Member Card." for="brilliantdiamondshiningpearl-checkbox-darkrai"
-                    ><span style="color: #7ac49a">Darkrai</span></label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Newmoon Island, after getting the Member Card." for="brilliantdiamondshiningpearl-checkbox-darkrai"><span style="color: #7ac49a">Darkrai</span></label>
                 </div>
                 <div class="checkbox-item">
                   <input id="brilliantdiamondshiningpearl-checkbox-arceus" type="checkbox" />
@@ -154,16 +146,12 @@
                 <div class="checkbox-item">
                   <input id="brilliantdiamondshiningpearl-checkbox-raikou" type="checkbox" />
                   <img class="pokeicon" src="../images/icons/pokemon/gen8/brilliantdiamondshiningpearl/raikou.png" alt="Icon of Raikou" />
-                  <label class="text-sm lg:tooltip" data-tip="After catching the Regi trio, you get access to the Johto Slate in Brilliant Diamond." for="brilliantdiamondshiningpearl-checkbox-raikou"
-                    ><span style="color: #4583bd">Raikou</span></label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="After catching the Regi trio, you get access to the Johto Slate in Brilliant Diamond." for="brilliantdiamondshiningpearl-checkbox-raikou"><span style="color: #4583bd">Raikou</span></label>
                 </div>
                 <div class="checkbox-item">
                   <input id="brilliantdiamondshiningpearl-checkbox-entei" type="checkbox" />
                   <img class="pokeicon" src="../images/icons/pokemon/gen8/brilliantdiamondshiningpearl/entei.png" alt="Icon of Entei" />
-                  <label class="text-sm lg:tooltip" data-tip="After catching the Regi trio, you get access to the Johto Slate in Brilliant Diamond." for="brilliantdiamondshiningpearl-checkbox-entei"
-                    ><span style="color: #4583bd">Entei</span></label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="After catching the Regi trio, you get access to the Johto Slate in Brilliant Diamond." for="brilliantdiamondshiningpearl-checkbox-entei"><span style="color: #4583bd">Entei</span></label>
                 </div>
                 <div class="checkbox-item">
                   <input id="brilliantdiamondshiningpearl-checkbox-suicune" type="checkbox" />
@@ -175,23 +163,17 @@
                 <div class="checkbox-item">
                   <input id="brilliantdiamondshiningpearl-checkbox-articuno" type="checkbox" />
                   <img class="pokeicon" src="../images/icons/pokemon/gen8/brilliantdiamondshiningpearl/articuno.png" alt="Icon of Articuno" />
-                  <label class="text-sm lg:tooltip" data-tip="After catching the Regi trio, you get access to the Kanto Slate in Shining Pearl." for="brilliantdiamondshiningpearl-checkbox-articuno"
-                    ><span style="color: #f1aec6">Articuno</span></label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="After catching the Regi trio, you get access to the Kanto Slate in Shining Pearl." for="brilliantdiamondshiningpearl-checkbox-articuno"><span style="color: #f1aec6">Articuno</span></label>
                 </div>
                 <div class="checkbox-item">
                   <input id="brilliantdiamondshiningpearl-checkbox-zapdos" type="checkbox" />
                   <img class="pokeicon" src="../images/icons/pokemon/gen8/brilliantdiamondshiningpearl/zapdos.png" alt="Icon of Zapdos" />
-                  <label class="text-sm lg:tooltip" data-tip="After catching the Regi trio, you get access to the Kanto Slate in Shining Pearl." for="brilliantdiamondshiningpearl-checkbox-zapdos"
-                    ><span style="color: #f1aec6">Zapdos</span></label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="After catching the Regi trio, you get access to the Kanto Slate in Shining Pearl." for="brilliantdiamondshiningpearl-checkbox-zapdos"><span style="color: #f1aec6">Zapdos</span></label>
                 </div>
                 <div class="checkbox-item">
                   <input id="brilliantdiamondshiningpearl-checkbox-moltres" type="checkbox" />
                   <img class="pokeicon" src="../images/icons/pokemon/gen8/brilliantdiamondshiningpearl/moltres.png" alt="Icon of Moltres" />
-                  <label class="text-sm lg:tooltip" data-tip="After catching the Regi trio, you get access to the Kanto Slate in Shining Pearl." for="brilliantdiamondshiningpearl-checkbox-moltres"
-                    ><span style="color: #f1aec6">Moltres</span></label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="After catching the Regi trio, you get access to the Kanto Slate in Shining Pearl." for="brilliantdiamondshiningpearl-checkbox-moltres"><span style="color: #f1aec6">Moltres</span></label>
                 </div>
               </div>
               <div class="legendaries-ramanas-rightrow">
@@ -208,72 +190,41 @@
                 <div class="checkbox-item">
                   <input id="brilliantdiamondshiningpearl-checkbox-giratina" type="checkbox" />
                   <img class="pokeicon" src="../images/icons/pokemon/gen8/brilliantdiamondshiningpearl/giratina-altered.png" alt="Icon of Giratina" />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="After catching the Regi trio, and have captured Giratina, you get access to the Distortion Slate."
-                    for="brilliantdiamondshiningpearl-checkbox-giratina"
-                    >Giratina</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="After catching the Regi trio, and have captured Giratina, you get access to the Distortion Slate." for="brilliantdiamondshiningpearl-checkbox-giratina">Giratina</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="brilliantdiamondshiningpearl-checkbox-ho-oh" type="checkbox" />
                   <img class="pokeicon" src="../images/icons/pokemon/gen8/brilliantdiamondshiningpearl/ho-oh.png" alt="Icon of Ho-Oh" />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="After catching the legendary beasts, you get access to the Rainbow Slate in Brilliant Diamond."
-                    for="brilliantdiamondshiningpearl-checkbox-ho-oh"
+                  <label class="text-sm lg:tooltip" data-tip="After catching the legendary beasts, you get access to the Rainbow Slate in Brilliant Diamond." for="brilliantdiamondshiningpearl-checkbox-ho-oh"
                     ><span style="color: #4583bd">Ho-Oh</span></label
                   >
                 </div>
                 <div class="checkbox-item">
                   <input id="brilliantdiamondshiningpearl-checkbox-lugia" type="checkbox" />
                   <img class="pokeicon" src="../images/icons/pokemon/gen8/brilliantdiamondshiningpearl/lugia.png" alt="Icon of Lugia" />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="After catching the legendary birds, you get access to the Squall Slate in Shining Pearl."
-                    for="brilliantdiamondshiningpearl-checkbox-lugia"
+                  <label class="text-sm lg:tooltip" data-tip="After catching the legendary birds, you get access to the Squall Slate in Shining Pearl." for="brilliantdiamondshiningpearl-checkbox-lugia"
                     ><span style="color: #f1aec6">Lugia</span></label
                   >
                 </div>
                 <div class="checkbox-item">
                   <input id="brilliantdiamondshiningpearl-checkbox-kyogre" type="checkbox" />
                   <img class="pokeicon" src="../images/icons/pokemon/gen8/brilliantdiamondshiningpearl/kyogre.png" alt="Icon of Kyogre" />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="After catching the legendary beasts or birds, latios and latios, you get access to the Oceanic Slate."
-                    for="brilliantdiamondshiningpearl-checkbox-kyogre"
-                    >Kyogre</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="After catching the legendary beasts or birds, latios and latios, you get access to the Oceanic Slate." for="brilliantdiamondshiningpearl-checkbox-kyogre">Kyogre</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="brilliantdiamondshiningpearl-checkbox-groudon" type="checkbox" />
                   <img class="pokeicon" src="../images/icons/pokemon/gen8/brilliantdiamondshiningpearl/groudon.png" alt="Icon of Groudon" />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="After catching the legendary beasts or birds, latios and latios, you get access to the Tectonic Slate."
-                    for="brilliantdiamondshiningpearl-checkbox-groudon"
-                    >Groudon</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="After catching the legendary beasts or birds, latios and latios, you get access to the Tectonic Slate." for="brilliantdiamondshiningpearl-checkbox-groudon">Groudon</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="brilliantdiamondshiningpearl-checkbox-rayquaza" type="checkbox" />
                   <img class="pokeicon" src="../images/icons/pokemon/gen8/brilliantdiamondshiningpearl/rayquaza.png" alt="Icon of Rayquaza" />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="After catching the legendary beasts or birds, latios and latios, you get access to the Stratospheric Slate."
-                    for="brilliantdiamondshiningpearl-checkbox-rayquaza"
-                    >Rayquaza</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="After catching the legendary beasts or birds, latios and latios, you get access to the Stratospheric Slate." for="brilliantdiamondshiningpearl-checkbox-rayquaza">Rayquaza</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="brilliantdiamondshiningpearl-checkbox-mewtwo" type="checkbox" />
                   <img class="pokeicon" src="../images/icons/pokemon/gen8/brilliantdiamondshiningpearl/mewtwo.png" alt="Icon of Mewtwo" />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="After catching the legendary beasts or birds, latios and latios, you get access to the Genome Slate."
-                    for="brilliantdiamondshiningpearl-checkbox-mewtwo"
-                    >Mewtwo</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="After catching the legendary beasts or birds, latios and latios, you get access to the Genome Slate." for="brilliantdiamondshiningpearl-checkbox-mewtwo">Mewtwo</label>
                 </div>
               </div>
             </div>
@@ -428,9 +379,7 @@
                 </div>
                 <div class="checkbox-item">
                   <input id="brilliantdiamondshiningpearl-checkbox-markingmap" type="checkbox" />
-                  <label class="text-sm lg:tooltip" data-tip="Jubilife City, from the President of the Pokétch company after you have 3 Badges." for="brilliantdiamondshiningpearl-checkbox-markingmap"
-                    >Marking Map</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Jubilife City, from the President of the Pokétch company after you have 3 Badges." for="brilliantdiamondshiningpearl-checkbox-markingmap">Marking Map</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="brilliantdiamondshiningpearl-checkbox-chaincounter" type="checkbox" />
@@ -452,36 +401,19 @@
                 </div>
                 <div class="checkbox-item">
                   <input id="brilliantdiamondshiningpearl-checkbox-cointoss" type="checkbox" />
-                  <label class="text-sm lg:tooltip" data-tip="Hotel Grand Lake, from Rich Boy in secluded house - Requires Rock Clumb." for="brilliantdiamondshiningpearl-checkbox-cointoss"
-                    >Coin Toss</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Hotel Grand Lake, from Rich Boy in secluded house - Requires Rock Clumb." for="brilliantdiamondshiningpearl-checkbox-cointoss">Coin Toss</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="brilliantdiamondshiningpearl-checkbox-calendar" type="checkbox" />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Sunnyshore City, show man in house to the east a Pokémon with a Serious nature - Requires Rock Climb."
-                    for="brilliantdiamondshiningpearl-checkbox-calendar"
-                    >Calendar</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Sunnyshore City, show man in house to the east a Pokémon with a Serious nature - Requires Rock Climb." for="brilliantdiamondshiningpearl-checkbox-calendar">Calendar</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="brilliantdiamondshiningpearl-checkbox-dotartist" type="checkbox" />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Sunnyshore City, show man in house to the east a Pokémon with a Naive nature - Requires Rock Climb."
-                    for="brilliantdiamondshiningpearl-checkbox-dotartist"
-                    >Dot Artist</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Sunnyshore City, show man in house to the east a Pokémon with a Naive nature - Requires Rock Climb." for="brilliantdiamondshiningpearl-checkbox-dotartist">Dot Artist</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="brilliantdiamondshiningpearl-checkbox-spinner" type="checkbox" />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Sunyshore City, show man in house to the east a Pokémon with a Quirky nature - Requires Rock Climb."
-                    for="brilliantdiamondshiningpearl-checkbox-spinner"
-                    >Spinner</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Sunyshore City, show man in house to the east a Pokémon with a Quirky nature - Requires Rock Climb." for="brilliantdiamondshiningpearl-checkbox-spinner">Spinner</label>
                 </div>
               </div>
             </div>
@@ -506,9 +438,7 @@
                 <div class="checkbox-item">
                   <input id="brilliantdiamondshiningpearl-checkbox-oval-charm" type="checkbox" />
                   <img class="pokeicon item" src="../images/icons/miscellaneous/gen8/brilliantdiamondshiningpearl/charms/Bag_Oval_Charm_BDSP_Sprite.png" />
-                  <label class="text-sm lg:tooltip" data-tip="Valor Lakefront from Morimoto after defeating him for the first time." for="brilliantdiamondshiningpearl-checkbox-oval-charm"
-                    >Oval Charm</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Valor Lakefront from Morimoto after defeating him for the first time." for="brilliantdiamondshiningpearl-checkbox-oval-charm">Oval Charm</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="brilliantdiamondshiningpearl-checkbox-catching-charm" type="checkbox" />
@@ -530,19 +460,12 @@
                 <div class="checkbox-item">
                   <input id="brilliantdiamondshiningpearl-checkbox-ds-sounds" type="checkbox" />
                   <img class="pokeicon item" src="../images/icons/inventory/gen8/brilliantdiamondshiningpearl/Register_DS_Sounds_Sprite.png" />
-                  <label class="text-sm lg:tooltip" data-tip="Hotel Grand Lake (from the sound designer after entering the Hall of Fame)." for="brilliantdiamondshiningpearl-checkbox-ds-sounds"
-                    >DS Sounds</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Hotel Grand Lake (from the sound designer after entering the Hall of Fame)." for="brilliantdiamondshiningpearl-checkbox-ds-sounds">DS Sounds</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="brilliantdiamondshiningpearl-checkbox-pokeradar" type="checkbox" />
                   <img class="pokeicon item" src="../images/icons/inventory/gen8/brilliantdiamondshiningpearl/poke-radar.png" />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Sandgem Town (from Professor Rowan after obtaining the National Pokédex from Professor Oak)."
-                    for="brilliantdiamondshiningpearl-checkbox-pokeradar"
-                    >Poké Radar</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Sandgem Town (from Professor Rowan after obtaining the National Pokédex from Professor Oak)." for="brilliantdiamondshiningpearl-checkbox-pokeradar">Poké Radar</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="brilliantdiamondshiningpearl-checkbox-alltms" type="checkbox" />
@@ -658,9 +581,7 @@
                   <div class="checkbox-item">
                     <input id="brilliantdiamondshiningpearl-checkbox-twinkling-star" type="checkbox" />
                     <img class="pokeicon" src="../images/icons/miscellaneous/gen8/brilliantdiamondshiningpearl/ribbons/twinklingstarribbon.png" alt="Icon of Twinkling Star Ribbon" />
-                    <label class="text-sm lg:tooltip" data-tip="Hearthome City - Be Star of the Show in all Ranks of Super Contest" for="brilliantdiamondshiningpearl-checkbox-twinkling-star"
-                      >Twinkling Star</label
-                    >
+                    <label class="text-sm lg:tooltip" data-tip="Hearthome City - Be Star of the Show in all Ranks of Super Contest" for="brilliantdiamondshiningpearl-checkbox-twinkling-star">Twinkling Star</label>
                   </div>
                 </div>
                 <div class="achievementribbons">
@@ -670,12 +591,7 @@
                   <div class="checkbox-item">
                     <input id="brilliantdiamondshiningpearl-checkbox-sinnoh-champion" type="checkbox" />
                     <img class="pokeicon" src="../images/icons/miscellaneous/gen8/brilliantdiamondshiningpearl/ribbons/sinnohchampionribbon.png" alt="Icon of Sinnoh Champion Ribbon" />
-                    <label
-                      class="text-sm lg:tooltip"
-                      data-tip="Ribbon awarded for beating the Sinnoh Champion and entering the Hall of Fame."
-                      for="brilliantdiamondshiningpearl-checkbox-sinnoh-champion"
-                      >Sinnoh Champion</label
-                    >
+                    <label class="text-sm lg:tooltip" data-tip="Ribbon awarded for beating the Sinnoh Champion and entering the Hall of Fame." for="brilliantdiamondshiningpearl-checkbox-sinnoh-champion">Sinnoh Champion</label>
                   </div>
                   <div class="checkbox-item">
                     <input id="brilliantdiamondshiningpearl-checkbox-effort-ribbon" type="checkbox" />
@@ -695,9 +611,7 @@
                   <div class="checkbox-item">
                     <input id="brilliantdiamondshiningpearl-checkbox-towermaster-ribbon" type="checkbox" />
                     <img class="pokeicon" src="../images/icons/miscellaneous/gen8/brilliantdiamondshiningpearl/ribbons/towermasterribbon.png" />
-                    <label class="text-sm lg:tooltip" data-tip="Defeat Palmer in one of the Master Class of the Battle Tower." for="brilliantdiamondshiningpearl-checkbox-towermaster-ribbon"
-                      >Tower Master</label
-                    >
+                    <label class="text-sm lg:tooltip" data-tip="Defeat Palmer in one of the Master Class of the Battle Tower." for="brilliantdiamondshiningpearl-checkbox-towermaster-ribbon">Tower Master</label>
                   </div>
                 </div>
               </div>
@@ -790,9 +704,7 @@
                 </div>
                 <div class="checkbox-item">
                   <input id="brilliantdiamondshiningpearl-checkbox-doublebattles-barry-palmer" type="checkbox" />
-                  <label class="text-sm lg:tooltip" for="brilliantdiamondshiningpearl-checkbox-doublebattles-barry-palmer" data-tip="Defeat Double Battle Barry & Palmer."
-                    >Defeat Double Battle Barry & Palmer</label
-                  >
+                  <label class="text-sm lg:tooltip" for="brilliantdiamondshiningpearl-checkbox-doublebattles-barry-palmer" data-tip="Defeat Double Battle Barry & Palmer.">Defeat Double Battle Barry & Palmer</label>
                 </div>
               </div>
             </div>
@@ -852,10 +764,7 @@
                   >
                 </div>
                 <div class="checkbox-item">
-                  <input id="brilliantdiamondshiningpearl-checkbox-rematch-byron" type="checkbox" /><img
-                    class="pokeicon badge"
-                    src="../images/icons/miscellaneous/gen8/brilliantdiamondshiningpearl/badges/100px-Mine_Badge.png"
-                  />
+                  <input id="brilliantdiamondshiningpearl-checkbox-rematch-byron" type="checkbox" /><img class="pokeicon badge" src="../images/icons/miscellaneous/gen8/brilliantdiamondshiningpearl/badges/100px-Mine_Badge.png" />
                   <label class="text-sm lg:tooltip" for="brilliantdiamondshiningpearl-checkbox-rematch-byron" data-tip="At Canalave Gym.">Defeat Byron</label>
                 </div>
                 <div class="checkbox-item">
@@ -901,111 +810,141 @@
           </div>
         </div>
       </div>
-      <footer>
-        <ul>
-          <li>
-            <a href="../index.html">Progression Dex</a>
-          </li>
-          <li>
-            <a href="#">Twitter</a>
-          </li>
-          <li>
-            <a href="https://github.com/yasingunaydiin">GitHub</a>
-          </li>
-        </ul>
-      </footer>
-      <script src="../checklists/js/script.js" />
-
-      <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          var brilliantdiamondLogo = document.getElementById("brilliantdiamond-logo");
-          var shiningpearlLogo = document.getElementById("shiningpearl-logo");
-
-          var headerTitle = document.querySelector(".title");
-          var widePanels = document.querySelectorAll(".wide-panel");
-          var footer = document.querySelector("footer");
-          var titleText = document.querySelectorAll(".panel-label");
-          var backgroundIcons = document.querySelector("body");
-
-          brilliantdiamondLogo.addEventListener("click", function () {
-            headerTitle.style.color = "#174b7d";
-            footer.style.background = "#174b7d";
-            backgroundIcons.style.backgroundImage = "url(../../images/patterns/pattern-brilliantdiamond.png)";
-
-            titleText.forEach(function (text) {
-              text.style.color = "#174b7d";
-            });
-
-            widePanels.forEach(function (panel) {
-              panel.style.border = "2px solid #174b7d";
-            });
-          });
-
-          shiningpearlLogo.addEventListener("click", function () {
-            headerTitle.style.color = "#F1AEC6";
-            footer.style.backgroundColor = "#F1AEC6";
-            backgroundIcons.style.backgroundImage = "url(../../images/patterns/pattern-shiningpearl.png)";
-
-            titleText.forEach(function (text) {
-              text.style.color = "#F1AEC6";
-            });
-
-            widePanels.forEach(function (panel) {
-              panel.style.border = "2px solid #F1AEC6";
-            });
-          });
-        });
-      </script>
-      <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          const completepokedexCheckboxes = document.querySelectorAll('.completepokedex input[type="checkbox"]');
-          const legendariesCheckboxes = document.querySelectorAll('.legendaries input[type="checkbox"]');
-          const giftpokemonCheckboxes = document.querySelectorAll('.giftpokemon input[type="checkbox"]');
-          const ingametradesCheckboxes = document.querySelectorAll('.ingametrades input[type="checkbox"]');
-          const trainercardCheckboxes = document.querySelectorAll('.trainercard input[type="checkbox"]');
-          const poketchCheckboxes = document.querySelectorAll('.poketch input[type="checkbox"]');
-          const itemsCheckboxes = document.querySelectorAll('.items input[type="checkbox"]');
-          const outfitsCheckboxes = document.querySelectorAll('.outfits input[type="checkbox"]');
-          const ribbonsCheckboxes = document.querySelectorAll('.ribbons input[type="checkbox"]');
-          const contestribbonsCheckboxes = document.querySelectorAll('.contestribbons input[type="checkbox"]');
-          const dailyribbonsCheckboxes = document.querySelectorAll('.dailyribbons input[type="checkbox"]');
-          const achievementribbonsCheckboxes = document.querySelectorAll('.achievementribbons input[type="checkbox"]');
-          const ribbonsocietyCheckboxes = document.querySelectorAll('.ribbonsociety input[type="checkbox"]');
-          const battletowerCheckboxes = document.querySelectorAll('.battletower input[type="checkbox"]');
-          const gymleadersCheckboxes = document.querySelectorAll('.gymleaders input[type="checkbox"]');
-          const rematchesCheckboxes = document.querySelectorAll('.rematches input[type="checkbox"]');
-
-          function updateStyle(checkboxes, label) {
-            const allChecked = [...checkboxes].every((checkbox) => checkbox.checked);
-            label.style.textDecoration = allChecked ? "line-through" : "none";
-          }
-
-          function initializeCheckboxes(checkboxes, label) {
-            checkboxes.forEach((checkbox) => {
-              checkbox.addEventListener("change", function () {
-                updateStyle(checkboxes, label);
-              });
-            });
-            updateStyle(checkboxes, label);
-          }
-          initializeCheckboxes(completepokedexCheckboxes, document.querySelector(".completepokedex .title label"));
-          initializeCheckboxes(legendariesCheckboxes, document.querySelector(".legendaries .title label"));
-          initializeCheckboxes(giftpokemonCheckboxes, document.querySelector(".giftpokemon .title label"));
-          initializeCheckboxes(ingametradesCheckboxes, document.querySelector(".ingametrades .title label"));
-          initializeCheckboxes(trainercardCheckboxes, document.querySelector(".trainercard .title label"));
-          initializeCheckboxes(poketchCheckboxes, document.querySelector(".poketch .title label"));
-          initializeCheckboxes(itemsCheckboxes, document.querySelector(".items .title label"));
-          initializeCheckboxes(outfitsCheckboxes, document.querySelector(".outfits .title label"));
-          initializeCheckboxes(ribbonsCheckboxes, document.querySelector(".ribbons .title label"));
-          initializeCheckboxes(contestribbonsCheckboxes, document.querySelector(".contestribbons .title label"));
-          initializeCheckboxes(dailyribbonsCheckboxes, document.querySelector(".dailyribbons .title label"));
-          initializeCheckboxes(achievementribbonsCheckboxes, document.querySelector(".achievementribbons .title label"));
-          initializeCheckboxes(ribbonsocietyCheckboxes, document.querySelector(".ribbonsociety .title label"));
-          initializeCheckboxes(battletowerCheckboxes, document.querySelector(".battletower .title label"));
-          initializeCheckboxes(gymleadersCheckboxes, document.querySelector(".gymleaders .title label"));
-          initializeCheckboxes(rematchesCheckboxes, document.querySelector(".rematches .title label"));
-        });
-      </script>
     </div>
+    <footer>
+      <ul>
+        <li>
+          <a href="../index.html">Progression Dex</a>
+        </li>
+        <li>
+          <a href="#">Twitter</a>
+        </li>
+        <li>
+          <a href="https://github.com/yasingunaydiin">GitHub</a>
+        </li>
+      </ul>
+    </footer>
+    <script src="../checklists/js/script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var brilliantdiamondLogo = document.getElementById("brilliantdiamond-logo");
+        var shiningpearlLogo = document.getElementById("shiningpearl-logo");
+
+        var headerTitle = document.querySelector(".title");
+        var widePanels = document.querySelectorAll(".wide-panel");
+        var footer = document.querySelector("footer");
+        var titleText = document.querySelectorAll(".panel-label");
+        var backgroundIcons = document.querySelector("body");
+
+        brilliantdiamondLogo.addEventListener("click", function () {
+          headerTitle.style.color = "#174b7d";
+          footer.style.background = "#174b7d";
+          backgroundIcons.style.backgroundImage = "url(../../images/patterns/pattern-brilliantdiamond.png)";
+
+          titleText.forEach(function (text) {
+            text.style.color = "#174b7d";
+          });
+
+          widePanels.forEach(function (panel) {
+            panel.style.border = "2px solid #174b7d";
+          });
+        });
+
+        shiningpearlLogo.addEventListener("click", function () {
+          headerTitle.style.color = "#F1AEC6";
+          footer.style.backgroundColor = "#F1AEC6";
+          backgroundIcons.style.backgroundImage = "url(../../images/patterns/pattern-shiningpearl.png)";
+
+          titleText.forEach(function (text) {
+            text.style.color = "#F1AEC6";
+          });
+
+          widePanels.forEach(function (panel) {
+            panel.style.border = "2px solid #F1AEC6";
+          });
+        });
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const completepokedexCheckboxes = document.querySelectorAll('.completepokedex input[type="checkbox"]');
+        const legendariesCheckboxes = document.querySelectorAll('.legendaries input[type="checkbox"]');
+        const giftpokemonCheckboxes = document.querySelectorAll('.giftpokemon input[type="checkbox"]');
+        const ingametradesCheckboxes = document.querySelectorAll('.ingametrades input[type="checkbox"]');
+        const trainercardCheckboxes = document.querySelectorAll('.trainercard input[type="checkbox"]');
+        const poketchCheckboxes = document.querySelectorAll('.poketch input[type="checkbox"]');
+        const itemsCheckboxes = document.querySelectorAll('.items input[type="checkbox"]');
+        const outfitsCheckboxes = document.querySelectorAll('.outfits input[type="checkbox"]');
+        const ribbonsCheckboxes = document.querySelectorAll('.ribbons input[type="checkbox"]');
+        const contestribbonsCheckboxes = document.querySelectorAll('.contestribbons input[type="checkbox"]');
+        const dailyribbonsCheckboxes = document.querySelectorAll('.dailyribbons input[type="checkbox"]');
+        const achievementribbonsCheckboxes = document.querySelectorAll('.achievementribbons input[type="checkbox"]');
+        const ribbonsocietyCheckboxes = document.querySelectorAll('.ribbonsociety input[type="checkbox"]');
+        const battletowerCheckboxes = document.querySelectorAll('.battletower input[type="checkbox"]');
+        const gymleadersCheckboxes = document.querySelectorAll('.gymleaders input[type="checkbox"]');
+        const rematchesCheckboxes = document.querySelectorAll('.rematches input[type="checkbox"]');
+
+        function updateStyle(checkboxes, label) {
+          const allChecked = [...checkboxes].every((checkbox) => checkbox.checked);
+          label.style.textDecoration = allChecked ? "line-through" : "none";
+        }
+
+        function initializeCheckboxes(checkboxes, label) {
+          checkboxes.forEach((checkbox) => {
+            checkbox.addEventListener("change", function () {
+              updateStyle(checkboxes, label);
+            });
+          });
+          updateStyle(checkboxes, label);
+        }
+        initializeCheckboxes(completepokedexCheckboxes, document.querySelector(".completepokedex .title label"));
+        initializeCheckboxes(legendariesCheckboxes, document.querySelector(".legendaries .title label"));
+        initializeCheckboxes(giftpokemonCheckboxes, document.querySelector(".giftpokemon .title label"));
+        initializeCheckboxes(ingametradesCheckboxes, document.querySelector(".ingametrades .title label"));
+        initializeCheckboxes(trainercardCheckboxes, document.querySelector(".trainercard .title label"));
+        initializeCheckboxes(poketchCheckboxes, document.querySelector(".poketch .title label"));
+        initializeCheckboxes(itemsCheckboxes, document.querySelector(".items .title label"));
+        initializeCheckboxes(outfitsCheckboxes, document.querySelector(".outfits .title label"));
+        initializeCheckboxes(ribbonsCheckboxes, document.querySelector(".ribbons .title label"));
+        initializeCheckboxes(contestribbonsCheckboxes, document.querySelector(".contestribbons .title label"));
+        initializeCheckboxes(dailyribbonsCheckboxes, document.querySelector(".dailyribbons .title label"));
+        initializeCheckboxes(achievementribbonsCheckboxes, document.querySelector(".achievementribbons .title label"));
+        initializeCheckboxes(ribbonsocietyCheckboxes, document.querySelector(".ribbonsociety .title label"));
+        initializeCheckboxes(battletowerCheckboxes, document.querySelector(".battletower .title label"));
+        initializeCheckboxes(gymleadersCheckboxes, document.querySelector(".gymleaders .title label"));
+        initializeCheckboxes(rematchesCheckboxes, document.querySelector(".rematches .title label"));
+      });
+    </script>
+    <script>
+      function updateProgressBar() {
+        const totalCheckboxes = document.querySelectorAll('input[type="checkbox"]').length;
+        const checkedCheckboxes = document.querySelectorAll('input[type="checkbox"]:checked').length;
+
+        const progress = (checkedCheckboxes / totalCheckboxes) * 100;
+        document.getElementById("progressBar").style.width = progress + "%";
+      }
+
+      document.querySelectorAll('input[type="checkbox"]').forEach((checkbox) => {
+        checkbox.addEventListener("change", updateProgressBar);
+      });
+
+      updateProgressBar();
+    </script>
+
+    <script>
+      function checkedAllCheckboxes() {
+        const allChecked = Array.from(checkboxes).every((checkbox) => checkbox.checked);
+
+        if (allChecked) {
+          confetti();
+        }
+      }
+
+      // Add event listeners to checkboxes
+      const checkboxes = document.querySelectorAll('.checkbox-item input[type="checkbox"]');
+      checkboxes.forEach((checkbox) => {
+        checkbox.addEventListener("change", checkedAllCheckboxes);
+      });
+    </script>
   </body>
 </html>

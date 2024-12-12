@@ -10,6 +10,7 @@
     <link href="../images/icons/favicontab.ico" rel="shortcut icon" type="image/x-icon" />
     <meta name="description" content="A tool for tracking your progression in Pokemon games. Easily choose between games and track your game progress." />
     <meta name="keywords" content="pokemon, checklist, pokedex, progress, completion, speedrun, checklist, check list, locations, characters, games, game" />
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
   </head>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-4PDLXC895H"></script>
@@ -32,7 +33,9 @@
         </div>
       </div>
     </div>
-
+    <div class="progress-container">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
     <div class="page-container" data-game="omegarubyalphasapphire">
       <div class="page-container-left">
         <div class="wide-panel pokedex">
@@ -45,35 +48,25 @@
               <div class="completepokedex-leftrow">
                 <div class="checkbox-item">
                   <input id="omegarubyalphasapphire-checkbox-hoenn-pokedex" type="checkbox" />
-                  <label class="text-sm lg:tooltip" data-tip="There are a total of 211 Pokemon in the National Dex." for="omegarubyalphasapphire-checkbox-hoenn-pokedex"
-                    >Complete the Hoenn Pokedex</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="There are a total of 211 Pokemon in the National Dex." for="omegarubyalphasapphire-checkbox-hoenn-pokedex">Complete the Hoenn Pokedex</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="omegarubyalphasapphire-checkbox-complete-nationaldex" type="checkbox" />
-                  <label class="text-sm lg:tooltip" data-tip="There are a total of 719 Pokemon in the National Dex." for="omegarubyalphasapphire-checkbox-complete-nationaldex"
-                    >Complete the National Pokedex</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="There are a total of 719 Pokemon in the National Dex." for="omegarubyalphasapphire-checkbox-complete-nationaldex">Complete the National Pokedex</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="omegarubyalphasapphire-checkbox-pokedex-diploma" type="checkbox" />
-                  <label class="text-sm lg:tooltip" data-tip="The lead developer is on the top floor of Cove Lily Motel in Lilycove City." for="omegarubyalphasapphire-checkbox-pokedex-diploma"
-                    >Obtain the Pokedex Diploma</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="The lead developer is on the top floor of Cove Lily Motel in Lilycove City." for="omegarubyalphasapphire-checkbox-pokedex-diploma">Obtain the Pokedex Diploma</label>
                 </div>
               </div>
               <div class="completepokedex-rightrow">
                 <div class="checkbox-item">
                   <input id="omegarubyalphasapphire-checkbox-national-diploma" type="checkbox" />
-                  <label class="text-sm lg:tooltip" data-tip="The lead developer is on the top floor of Cove Lily Motel in Lilycove City." for="omegarubyalphasapphire-checkbox-national-diploma"
-                    >Obtain the National Dex Diploma</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="The lead developer is on the top floor of Cove Lily Motel in Lilycove City." for="omegarubyalphasapphire-checkbox-national-diploma">Obtain the National Dex Diploma</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="omegarubyalphasapphire-checkbox-timetravel-diploma" type="checkbox" />
-                  <label class="text-sm lg:tooltip" data-tip="The lead developer is on the top floor of Cove Lily Motel in Lilycove City." for="omegarubyalphasapphire-checkbox-timetravel-diploma"
-                    >Obtain the Time Travel Award Diploma</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="The lead developer is on the top floor of Cove Lily Motel in Lilycove City." for="omegarubyalphasapphire-checkbox-timetravel-diploma">Obtain the Time Travel Award Diploma</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="omegarubyalphasapphire-checkbox-diploma" type="checkbox" />
@@ -124,9 +117,7 @@
                   <div class="checkbox-item">
                     <input id="omegarubyalphasapphire-checkbox-regirock" type="checkbox" />
                     <img class="pokeicon legendary" src="../images/icons/pokemon/gen6/oras/regirock.png" alt="Icon of Regirock" />
-                    <label class="text-sm lg:tooltip" data-tip="Desert Tomb at the bottom of Route 111. You have to follow certain steps." for="omegarubyalphasapphire-checkbox-regirock"
-                      >Regirock</label
-                    >
+                    <label class="text-sm lg:tooltip" data-tip="Desert Tomb at the bottom of Route 111. You have to follow certain steps." for="omegarubyalphasapphire-checkbox-regirock">Regirock</label>
                   </div>
                   <div class="checkbox-item">
                     <input id="omegarubyalphasapphire-checkbox-regice" type="checkbox" />
@@ -141,9 +132,7 @@
                   <div class="checkbox-item">
                     <input id="omegarubyalphasapphire-checkbox-regigigas" type="checkbox" />
                     <img class="pokeicon legendary" src="../images/icons/pokemon/gen6/oras/regigigas.png" alt="Icon of Regigigas" />
-                    <label class="text-sm lg:tooltip" data-tip="Island Cave, once you have the three Regis. You have to follow certain steps." for="omegarubyalphasapphire-checkbox-regigigas"
-                      >Regigigas</label
-                    >
+                    <label class="text-sm lg:tooltip" data-tip="Island Cave, once you have the three Regis. You have to follow certain steps." for="omegarubyalphasapphire-checkbox-regigigas">Regigigas</label>
                   </div>
                 </div>
                 <div class="legendaries-johto">
@@ -199,47 +188,33 @@
                     <input id="omegarubyalphasapphire-checkbox-dialga-palkia" type="checkbox" />
                     <img class="pokeicon legendary" src="../images/icons/pokemon/gen6/oras/dialga.png" alt="Icon of Dialga" />
                     <img class="pokeicon legendary" src="../images/icons/pokemon/gen6/oras/palkia.png" alt="Icon of Palkia" />
-                    <label
-                      class="text-sm lg:tooltip"
-                      data-tip="Soaring in the sky with Azelf, Uxie and Mesprit in your team, a new area will open up near Dewford Town."
-                      for="omegarubyalphasapphire-checkbox-dialga-palkia"
+                    <label class="text-sm lg:tooltip" data-tip="Soaring in the sky with Azelf, Uxie and Mesprit in your team, a new area will open up near Dewford Town." for="omegarubyalphasapphire-checkbox-dialga-palkia"
                       ><span style="color: #8d0406">Palkia</span> / <span style="color: #21409a">Dialga</span></label
                     >
                   </div>
                   <div class="checkbox-item">
                     <input id="omegarubyalphasapphire-checkbox-giratina" type="checkbox" />
                     <img class="pokeicon legendary" src="../images/icons/pokemon/gen6/oras/giratina-altered.png" />
-                    <label class="text-sm lg:tooltip" data-tip="Return to the area where you caught Dialga/Palkia with both in your team." for="omegarubyalphasapphire-checkbox-giratina"
-                      >Giratina</label
-                    >
+                    <label class="text-sm lg:tooltip" data-tip="Return to the area where you caught Dialga/Palkia with both in your team." for="omegarubyalphasapphire-checkbox-giratina">Giratina</label>
                   </div>
                   <div class="checkbox-item">
                     <input id="omegarubyalphasapphire-checkbox-uxie" type="checkbox" />
                     <img class="pokeicon legendarysmall" src="../images/icons/pokemon/gen6/oras/uxie.png" />
-                    <label
-                      class="text-sm lg:tooltip"
-                      data-tip="Soaring around near Sootopolis City, you will discover a small area called the Nameless Cavern. Pokemon will change depending on the time."
-                      for="omegarubyalphasapphire-checkbox-uxie"
+                    <label class="text-sm lg:tooltip" data-tip="Soaring around near Sootopolis City, you will discover a small area called the Nameless Cavern. Pokemon will change depending on the time." for="omegarubyalphasapphire-checkbox-uxie"
                       >Uxie</label
                     >
                   </div>
                   <div class="checkbox-item">
                     <input id="omegarubyalphasapphire-checkbox-mesprit" type="checkbox" />
                     <img class="pokeicon legendarysmall" src="../images/icons/pokemon/gen6/oras/mesprit.png" />
-                    <label
-                      class="text-sm lg:tooltip"
-                      data-tip="Soaring around near Sootopolis City, you will discover a small area called the Nameless Cavern. Pokemon will change depending on the time."
-                      for="omegarubyalphasapphire-checkbox-mesprit"
+                    <label class="text-sm lg:tooltip" data-tip="Soaring around near Sootopolis City, you will discover a small area called the Nameless Cavern. Pokemon will change depending on the time." for="omegarubyalphasapphire-checkbox-mesprit"
                       >Mesprit</label
                     >
                   </div>
                   <div class="checkbox-item">
                     <input id="omegarubyalphasapphire-checkbox-azelf" type="checkbox" />
                     <img class="pokeicon legendarysmall" src="../images/icons/pokemon/gen6/oras/azelf.png" />
-                    <label
-                      class="text-sm lg:tooltip"
-                      data-tip="Soaring around near Sootopolis City, you will discover a small area called the Nameless Cavern. Pokemon will change depending on the time."
-                      for="omegarubyalphasapphire-checkbox-azelf"
+                    <label class="text-sm lg:tooltip" data-tip="Soaring around near Sootopolis City, you will discover a small area called the Nameless Cavern. Pokemon will change depending on the time." for="omegarubyalphasapphire-checkbox-azelf"
                       >Azelf</label
                     >
                   </div>
@@ -251,9 +226,7 @@
                   <div class="checkbox-item">
                     <input id="omegarubyalphasapphire-checkbox-cresselia" type="checkbox" />
                     <img class="pokeicon legendary" src="../images/icons/pokemon/gen6/oras/cresselia.png" />
-                    <label class="text-sm lg:tooltip" data-tip="With the daily Mirage Spot change, an island will appear south of Ever Grande City." for="omegarubyalphasapphire-checkbox-cresselia"
-                      >Cresselia</label
-                    >
+                    <label class="text-sm lg:tooltip" data-tip="With the daily Mirage Spot change, an island will appear south of Ever Grande City." for="omegarubyalphasapphire-checkbox-cresselia">Cresselia</label>
                   </div>
                 </div>
                 <div class="legendaries-unova">
@@ -271,39 +244,22 @@
                   <div class="checkbox-item">
                     <input id="omegarubyalphasapphire-checkbox-kyurem" type="checkbox" />
                     <img class="pokeicon legendary" src="../images/icons/pokemon/gen6/oras/kyurem-normal.png" />
-                    <label class="text-sm lg:tooltip" data-tip="Soaring in the sky with both Reshiram and Zekrom, an area will open up behind Mt. Chimney." for="omegarubyalphasapphire-checkbox-kyurem"
-                      >Kyurem</label
-                    >
+                    <label class="text-sm lg:tooltip" data-tip="Soaring in the sky with both Reshiram and Zekrom, an area will open up behind Mt. Chimney." for="omegarubyalphasapphire-checkbox-kyurem">Kyurem</label>
                   </div>
                   <div class="checkbox-item">
                     <input id="omegarubyalphasapphire-checkbox-virizion" type="checkbox" />
                     <img class="pokeicon legendary" src="../images/icons/pokemon/gen6/oras/virizion.png" />
-                    <label
-                      class="text-sm lg:tooltip"
-                      data-tip="Soaring around Pacifidlog Towh, you will discover a large island. Pokemon will change depending on the day."
-                      for="omegarubyalphasapphire-checkbox-virizion"
-                      >Virizon</label
-                    >
+                    <label class="text-sm lg:tooltip" data-tip="Soaring around Pacifidlog Towh, you will discover a large island. Pokemon will change depending on the day." for="omegarubyalphasapphire-checkbox-virizion">Virizon</label>
                   </div>
                   <div class="checkbox-item">
                     <input id="omegarubyalphasapphire-checkbox-terrakion" type="checkbox" />
                     <img class="pokeicon legendary" src="../images/icons/pokemon/gen6/oras/terrakion.png" />
-                    <label
-                      class="text-sm lg:tooltip"
-                      data-tip="Soaring around Pacifidlog Towh, you will discover a large island. Pokemon will change depending on the day."
-                      for="omegarubyalphasapphire-checkbox-terrakion"
-                      >Terrakion</label
-                    >
+                    <label class="text-sm lg:tooltip" data-tip="Soaring around Pacifidlog Towh, you will discover a large island. Pokemon will change depending on the day." for="omegarubyalphasapphire-checkbox-terrakion">Terrakion</label>
                   </div>
                   <div class="checkbox-item">
                     <input id="omegarubyalphasapphire-checkbox-cobalion" type="checkbox" />
                     <img class="pokeicon legendary" src="../images/icons/pokemon/gen6/oras/cobalion.png" />
-                    <label
-                      class="text-sm lg:tooltip"
-                      data-tip="Soaring around Pacifidlog Towh, you will discover a large island. Pokemon will change depending on the day."
-                      for="omegarubyalphasapphire-checkbox-cobalion"
-                      >Cobalion</label
-                    >
+                    <label class="text-sm lg:tooltip" data-tip="Soaring around Pacifidlog Towh, you will discover a large island. Pokemon will change depending on the day." for="omegarubyalphasapphire-checkbox-cobalion">Cobalion</label>
                   </div>
                   <div class="checkbox-item">
                     <input id="omegarubyalphasapphire-checkbox-tornadus-thundurus" type="checkbox" />
@@ -316,12 +272,7 @@
                   <div class="checkbox-item">
                     <input id="omegarubyalphasapphire-checkbox-landorus" type="checkbox" />
                     <img class="pokeicon legendary" src="../images/icons/pokemon/gen6/oras/landorus-incarnate.png" />
-                    <label
-                      class="text-sm lg:tooltip"
-                      data-tip="Soaring through the sky if you have Tornadus and Thundurus on your team near Fortree City."
-                      for="omegarubyalphasapphire-checkbox-landorus"
-                      >Landorus</label
-                    >
+                    <label class="text-sm lg:tooltip" data-tip="Soaring through the sky if you have Tornadus and Thundurus on your team near Fortree City." for="omegarubyalphasapphire-checkbox-landorus">Landorus</label>
                   </div>
                 </div>
               </div>
@@ -338,10 +289,7 @@
                   <img class="pokeicon" src="../images/icons/pokemon/gen6/oras/chikorita.png" />
                   <img class="pokeicon" src="../images/icons/pokemon/gen6/oras/cyndaquil.png" style="margin-left: -15px; margin-right: -15px" />
                   <img class="pokeicon" src="../images/icons/pokemon/gen6/oras/totodile.png" />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="After defeating the Elite Four, whne you exit your house in Littleroot Town, Professor Birch will call you over."
-                    for="omegarubyalphasapphire-checkbox-johto-starters"
+                  <label class="text-sm lg:tooltip" data-tip="After defeating the Elite Four, whne you exit your house in Littleroot Town, Professor Birch will call you over." for="omegarubyalphasapphire-checkbox-johto-starters"
                     >Johto Starters</label
                   >
                 </div>
@@ -350,10 +298,7 @@
                   <img class="pokeicon" src="../images/icons/pokemon/gen6/oras/snivy.png" />
                   <img class="pokeicon" src="../images/icons/pokemon/gen6/oras/tepig.png" style="margin-left: -15px; margin-right: -15px" />
                   <img class="pokeicon" src="../images/icons/pokemon/gen6/oras/oshawott.png" />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="After finishing the Delta Episode, whne you exit your house in Littleroot Town, Professor Birch will call you over.."
-                    for="omegarubyalphasapphire-checkbox-unova-starters"
+                  <label class="text-sm lg:tooltip" data-tip="After finishing the Delta Episode, whne you exit your house in Littleroot Town, Professor Birch will call you over.." for="omegarubyalphasapphire-checkbox-unova-starters"
                     >Unova Starters</label
                   >
                 </div>
@@ -362,10 +307,7 @@
                   <img class="pokeicon" src="../images/icons/pokemon/gen6/oras/turtwig.png" />
                   <img class="pokeicon" src="../images/icons/pokemon/gen6/oras/chimchar.png" style="margin-left: -15px; margin-right: -15px" />
                   <img class="pokeicon" src="../images/icons/pokemon/gen6/oras/piplup.png" />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="After defeating the Elite Four again, whne you exit your house in Littleroot Town, Professor Birch will call you over.."
-                    for="omegarubyalphasapphire-checkbox-sinnoh-starters"
+                  <label class="text-sm lg:tooltip" data-tip="After defeating the Elite Four again, whne you exit your house in Littleroot Town, Professor Birch will call you over.." for="omegarubyalphasapphire-checkbox-sinnoh-starters"
                     >Sinnoh Starters</label
                   >
                 </div>
@@ -379,10 +321,7 @@
                   <input id="omegarubyalphasapphire-checkbox-camerupt-sharpedo" type="checkbox" />
                   <img class="pokeicon" src="../images/icons/pokemon/gen6/oras/camerupt.png" style="margin-right: -10px" />
                   <img class="pokeicon" src="../images/icons/pokemon/gen6/oras/sharpedo.png" />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="After having completed the Delta Epsiode, go to the Battle Resort. You will receive one from a couple grunts."
-                    for="omegarubyalphasapphire-checkbox-camerupt-sharpedo"
+                  <label class="text-sm lg:tooltip" data-tip="After having completed the Delta Epsiode, go to the Battle Resort. You will receive one from a couple grunts." for="omegarubyalphasapphire-checkbox-camerupt-sharpedo"
                     >Camerupt / Sharpedo</label
                   >
                 </div>
@@ -497,15 +436,11 @@
               <div class="opower-rightrow">
                 <div class="checkbox-item">
                   <input id="omegarubyalphasapphire-checkbox-prize-money-power" type="checkbox" />
-                  <label class="text-sm lg:tooltip" data-tip="Mauville Pokémon Center - From Bard (After Balance Badge)." for="omegarubyalphasapphire-checkbox-prize-money-power"
-                    >Prize Money Power</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Mauville Pokémon Center - From Bard (After Balance Badge)." for="omegarubyalphasapphire-checkbox-prize-money-power">Prize Money Power</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="omegarubyalphasapphire-checkbox-befriending-power" type="checkbox" />
-                  <label class="text-sm lg:tooltip" data-tip="Mauville Pokémon Center - From Hipster (After Dynamo Badge)." for="omegarubyalphasapphire-checkbox-befriending-power"
-                    >Befriending Power</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Mauville Pokémon Center - From Hipster (After Dynamo Badge)." for="omegarubyalphasapphire-checkbox-befriending-power">Befriending Power</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="omegarubyalphasapphire-checkbox-encounter-power" type="checkbox" />
@@ -517,9 +452,7 @@
                 </div>
                 <div class="checkbox-item">
                   <input id="omegarubyalphasapphire-checkbox-pp-restoring-power" type="checkbox" />
-                  <label class="text-sm lg:tooltip" data-tip="Mauville Pokémon Center - From Storyteller (After Ever Grande City)." for="omegarubyalphasapphire-checkbox-pp-restoring-power"
-                    >PP Restoring Power</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Mauville Pokémon Center - From Storyteller (After Ever Grande City)." for="omegarubyalphasapphire-checkbox-pp-restoring-power">PP Restoring Power</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="omegarubyalphasapphire-checkbox-bargain-power" type="checkbox" />
@@ -567,23 +500,17 @@
             <div class="checkbox-item">
               <input id="omegarubyalphasapphire-checkbox-machbike" type="checkbox" />
               <img class="pokeicon small" src="../images/icons/inventory/gen7/bikes/mach-bike.png" />
-              <label class="text-sm lg:tooltip" data-tip="Show the Mach Bike to a Hex Maniac in the Route 111 Desert." for="omegarubyalphasapphire-checkbox-machbike"
-                >Show your Mach bike to Hex Maniac</label
-              >
+              <label class="text-sm lg:tooltip" data-tip="Show the Mach Bike to a Hex Maniac in the Route 111 Desert." for="omegarubyalphasapphire-checkbox-machbike">Show your Mach bike to Hex Maniac</label>
             </div>
             <div class="checkbox-item">
               <input id="omegarubyalphasapphire-checkbox-acrobike" type="checkbox" />
               <img class="pokeicon small" src="../images/icons/inventory/gen7/bikes/acro-bike.png" />
-              <label class="text-sm lg:tooltip" data-tip="Show the Acro Bike to a Bird Keeper in the Acro Bike area of Route 119." for="omegarubyalphasapphire-checkbox-acrobike"
-                >Show your Acro bike to Hex Maniac</label
-              >
+              <label class="text-sm lg:tooltip" data-tip="Show the Acro Bike to a Bird Keeper in the Acro Bike area of Route 119." for="omegarubyalphasapphire-checkbox-acrobike">Show your Acro bike to Hex Maniac</label>
             </div>
             <div class="checkbox-item">
               <input id="omegarubyalphasapphire-checkbox-bikeshow" type="checkbox" />
               <img class="pokeicon npc" src="../images/icons/miscellaneous/gen6/100px-Triathlete_Runner_ORAS_OD.png" />
-              <label class="text-sm lg:tooltip" data-tip="Return to Rydel's Cycles in Mauville City and he will give you the other bike." for="omegarubyalphasapphire-checkbox-bikeshow"
-                >Speak to a Triathlete in Battle Resort</label
-              >
+              <label class="text-sm lg:tooltip" data-tip="Return to Rydel's Cycles in Mauville City and he will give you the other bike." for="omegarubyalphasapphire-checkbox-bikeshow">Speak to a Triathlete in Battle Resort</label>
             </div>
           </div>
           <div class="capturetheflag">
@@ -626,15 +553,11 @@
                 </div>
                 <div class="checkbox-item">
                   <input id="omegarubyalphasapphire-checkbox-elitefour-rematch" type="checkbox" />
-                  <label class="text-sm lg:tooltip" data-tip="Elite Four Rematch after the Delta Episode. Their teams now have Megas." for="omegarubyalphasapphire-checkbox-elitefour-rematch"
-                    >Elite Four Rematch</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Elite Four Rematch after the Delta Episode. Their teams now have Megas." for="omegarubyalphasapphire-checkbox-elitefour-rematch">Elite Four Rematch</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="omegarubyalphasapphire-checkbox-supertraining" type="checkbox" />
-                  <label class="text-sm lg:tooltip" data-tip="Elite Four Rematch after the Delta Episode. Their teams now have Megas." for="omegarubyalphasapphire-checkbox-supertraining"
-                    >Complete Super Training</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Elite Four Rematch after the Delta Episode. Their teams now have Megas." for="omegarubyalphasapphire-checkbox-supertraining">Complete Super Training</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="omegarubyalphasapphire-checkbox-masterrank" type="checkbox" />
@@ -734,16 +657,12 @@
                 <div class="checkbox-item">
                   <input id="omegarubyalphasapphire-checkbox-sharpedonite" type="checkbox" />
                   <img class="pokeicon megastone" src="../images/icons/inventory/gen6/megastones/Dream_Sharpedonite_Sprite-2.png" alt="Icon of Sharpedonite" />
-                  <label class="text-sm lg:tooltip" data-tip="Battle Resort (Omega Ruby), Aqua Hideout - Delta Episode (Alpha Sapphire)" for="omegarubyalphasapphire-checkbox-sharpedonite"
-                    >Sharpedonite</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Battle Resort (Omega Ruby), Aqua Hideout - Delta Episode (Alpha Sapphire)" for="omegarubyalphasapphire-checkbox-sharpedonite">Sharpedonite</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="omegarubyalphasapphire-checkbox-cameruptite" type="checkbox" />
                   <img class="pokeicon megastone" src="../images/icons/inventory/gen6/megastones/Dream_Cameruptite_Sprite.png" alt="Icon of Cameruptite" />
-                  <label class="text-sm lg:tooltip" data-tip="Magma Hideout - Delta Episode (Omega Ruby), Battle Resort (Alpha Sapphire)" for="omegarubyalphasapphire-checkbox-cameruptite"
-                    >Cameruptite</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Magma Hideout - Delta Episode (Omega Ruby), Battle Resort (Alpha Sapphire)" for="omegarubyalphasapphire-checkbox-cameruptite">Cameruptite</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="omegarubyalphasapphire-checkbox-mewtwoniteX" type="checkbox" />
@@ -810,9 +729,7 @@
                 <div class="checkbox-item">
                   <input id="omegarubyalphasapphire-checkbox-gardevoirite" type="checkbox" />
                   <img class="pokeicon megastone" src="../images/icons/inventory/gen6/megastones/Dream_Gardevoirite_Sprite.png" alt="Icon of Gardevoirite" />
-                  <label class="text-sm lg:tooltip" data-tip="Verdanturf Town - From Wanda - After Primal Groudon/Kyogre narrative" for="omegarubyalphasapphire-checkbox-gardevoirite"
-                    >Gardevoirite</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Verdanturf Town - From Wanda - After Primal Groudon/Kyogre narrative" for="omegarubyalphasapphire-checkbox-gardevoirite">Gardevoirite</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="omegarubyalphasapphire-checkbox-sablenite" type="checkbox" />
@@ -866,12 +783,7 @@
                 <div class="checkbox-item">
                   <input id="omegarubyalphasapphire-checkbox-latiasite" type="checkbox" />
                   <img class="pokeicon megastone" src="../images/icons/inventory/gen6/megastones/Dream_Latiasite_Sprite.png" alt="Icon of Latiasite" />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Littleroot Town - From Mother - From Delta Episode (Omega Ruby), On Latias (Alpha Sapphire)"
-                    for="omegarubyalphasapphire-checkbox-latiasite"
-                    >Latiasite</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Littleroot Town - From Mother - From Delta Episode (Omega Ruby), On Latias (Alpha Sapphire)" for="omegarubyalphasapphire-checkbox-latiasite">Latiasite</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="omegarubyalphasapphire-checkbox-latiosite" type="checkbox" />
@@ -885,9 +797,7 @@
                 <div class="checkbox-item">
                   <input id="omegarubyalphasapphire-checkbox-lopunnite" type="checkbox" />
                   <img class="pokeicon megastone" src="../images/icons/inventory/gen6/megastones/Dream_Lopunnite_Sprite.png" />
-                  <label class="text-sm lg:tooltip" data-tip="Mauville City - Man in suit in Mauville Hills - After Primal Groudon/Kyogre narrative" for="omegarubyalphasapphire-checkbox-lopunnite"
-                    >Lopunnite</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Mauville City - Man in suit in Mauville Hills - After Primal Groudon/Kyogre narrative" for="omegarubyalphasapphire-checkbox-lopunnite">Lopunnite</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="omegarubyalphasapphire-checkbox-aggronite" type="checkbox" />
@@ -897,9 +807,7 @@
                 <div class="checkbox-item">
                   <input id="omegarubyalphasapphire-checkbox-lucarionite" type="checkbox" />
                   <img class="pokeicon megastone" src="../images/icons/inventory/gen6/megastones/Dream_Lucarionite_Sprite.png" />
-                  <label class="text-sm lg:tooltip" data-tip="From Lisia after beating all Master Rank Contests and then defeating her" for="omegarubyalphasapphire-checkbox-lucarionite"
-                    >Lucarionite</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="From Lisia after beating all Master Rank Contests and then defeating her" for="omegarubyalphasapphire-checkbox-lucarionite">Lucarionite</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="omegarubyalphasapphire-checkbox-abomasite" type="checkbox" />
@@ -1267,6 +1175,37 @@
         initializeCheckboxes(capturetheflagCheckboxes, document.querySelector(".capturetheflag .title label"));
         initializeCheckboxes(otherCheckboxes, document.querySelector(".other .title label"));
         initializeCheckboxes(itemsCheckboxes, document.querySelector(".items .title label"));
+      });
+    </script>
+    <script>
+      function updateProgressBar() {
+        const totalCheckboxes = document.querySelectorAll('input[type="checkbox"]').length;
+        const checkedCheckboxes = document.querySelectorAll('input[type="checkbox"]:checked').length;
+
+        const progress = (checkedCheckboxes / totalCheckboxes) * 100;
+        document.getElementById("progressBar").style.width = progress + "%";
+      }
+
+      document.querySelectorAll('input[type="checkbox"]').forEach((checkbox) => {
+        checkbox.addEventListener("change", updateProgressBar);
+      });
+
+      updateProgressBar();
+    </script>
+
+    <script>
+      function checkedAllCheckboxes() {
+        const allChecked = Array.from(checkboxes).every((checkbox) => checkbox.checked);
+
+        if (allChecked) {
+          confetti();
+        }
+      }
+
+      // Add event listeners to checkboxes
+      const checkboxes = document.querySelectorAll('.checkbox-item input[type="checkbox"]');
+      checkboxes.forEach((checkbox) => {
+        checkbox.addEventListener("change", checkedAllCheckboxes);
       });
     </script>
   </body>

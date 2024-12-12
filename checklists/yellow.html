@@ -10,6 +10,7 @@
     <link href="../images/icons/favicontab.ico" rel="shortcut icon" type="image/x-icon" />
     <meta name="description" content="A tool for tracking your progression in Pokemon games. Easily choose between games and track your game progress." />
     <meta name="keywords" content="pokemon, checklist, pokedex, progress, completion, speedrun, checklist, check list, locations, characters, games, game" />
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
   </head>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-4PDLXC895H"></script>
@@ -31,6 +32,11 @@
         </div>
       </div>
     </div>
+
+    <div class="progress-container">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+
     <div class="page-container" data-game="yellow">
       <div class="wide-panel pokedex">
         <label class="panel-label">Pokédex</label>
@@ -41,9 +47,7 @@
           <div class="checkbox-item">
             <input id="yellow-checkbox-bulbasaur" type="checkbox" />
             <img alt="Icon of Bulbasaur" class="pokeicon small" src="../images/icons/pokemon/gen1/yellow/bulbasaur.png" />
-            <label class="text-sm lg:tooltip" data-tip="A girl in Cerulean City is willing to give you her Bulbasaur if your Pikachu is in good spirits." for="yellow-checkbox-bulbasaur"
-              >Bulbasaur</label
-            >
+            <label class="text-sm lg:tooltip" data-tip="A girl in Cerulean City is willing to give you her Bulbasaur if your Pikachu is in good spirits." for="yellow-checkbox-bulbasaur">Bulbasaur</label>
           </div>
           <div class="checkbox-item">
             <input id="yellow-checkbox-charmender" type="checkbox" />
@@ -53,18 +57,11 @@
           <div class="checkbox-item">
             <input id="yellow-checkbox-squirtle" type="checkbox" />
             <img alt="Icon of Squirtle" class="pokeicon small" src="../images/icons/pokemon/gen1/yellow/squirtle.png" />
-            <label class="text-sm lg:tooltip" data-tip="In Vermillion City, Officer Jenny will present you with a Squirtle once you have obtained the Thunderbadge." for="yellow-checkbox-squirtle"
-              >Squirtle</label
-            >
+            <label class="text-sm lg:tooltip" data-tip="In Vermillion City, Officer Jenny will present you with a Squirtle once you have obtained the Thunderbadge." for="yellow-checkbox-squirtle">Squirtle</label>
           </div>
           <div class="checkbox-item">
             <input id="yellow-checkbox-diploma" type="checkbox" />
-            <label
-              class="text-sm lg:tooltip"
-              data-tip="After catching all Pokemon, go to the Game Freak Headquarters in Celadon Condominiums and speak with the lead developer."
-              for="yellow-checkbox-diploma"
-              >Get Diploma</label
-            >
+            <label class="text-sm lg:tooltip" data-tip="After catching all Pokemon, go to the Game Freak Headquarters in Celadon Condominiums and speak with the lead developer." for="yellow-checkbox-diploma">Get Diploma</label>
           </div>
         </div>
         <div class="legendaries">
@@ -241,6 +238,37 @@
         initializeCheckboxes(giftpokemonCheckboxes, document.querySelector(".giftpokemon .title label"));
         initializeCheckboxes(ingametradesCheckboxes, document.querySelector(".ingametrades .title label"));
         initializeCheckboxes(itemsCheckboxes, document.querySelector(".items .title label"));
+      });
+    </script>
+    <script>
+      function updateProgressBar() {
+        const totalCheckboxes = document.querySelectorAll('input[type="checkbox"]').length;
+        const checkedCheckboxes = document.querySelectorAll('input[type="checkbox"]:checked').length;
+
+        const progress = (checkedCheckboxes / totalCheckboxes) * 100;
+        document.getElementById("progressBar").style.width = progress + "%";
+      }
+
+      document.querySelectorAll('input[type="checkbox"]').forEach((checkbox) => {
+        checkbox.addEventListener("change", updateProgressBar);
+      });
+
+      updateProgressBar();
+    </script>
+
+    <script>
+      function checkedAllCheckboxes() {
+        const allChecked = Array.from(checkboxes).every((checkbox) => checkbox.checked);
+
+        if (allChecked) {
+          confetti();
+        }
+      }
+
+      // Add event listeners to checkboxes
+      const checkboxes = document.querySelectorAll('.checkbox-item input[type="checkbox"]');
+      checkboxes.forEach((checkbox) => {
+        checkbox.addEventListener("change", checkedAllCheckboxes);
       });
     </script>
   </body>

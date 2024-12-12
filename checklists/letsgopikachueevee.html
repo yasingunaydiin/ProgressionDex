@@ -10,6 +10,7 @@
     <link href="../images/icons/favicontab.ico" rel="shortcut icon" type="image/x-icon" />
     <meta name="description" content="A tool for tracking your progression in Pokemon games. Easily choose between games and track your game progress." />
     <meta name="keywords" content="pokemon, checklist, pokedex, progress, completion, speedrun, checklist, check list, locations, characters, games, game" />
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
   </head>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-4PDLXC895H"></script>
@@ -32,7 +33,9 @@
         </div>
       </div>
     </div>
-
+    <div class="progress-container">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
     <div class="page-container" data-game="letsgopikachueevee">
       <div class="page-container-left">
         <div class="wide-panel pokedex">
@@ -107,9 +110,7 @@
                   <input id="letsgopikachueevee-checkbox-persian-arcanine" type="checkbox" />
                   <img class="pokeicon" src="../images/icons/pokemon/gen7/lpge/persian.png" alt="Icon of Persian" />
                   <img class="pokeicon" src="../images/icons/pokemon/gen7/lpge/arcanine.png" alt="Icon of Arcanine" />
-                  <label class="text-sm lg:tooltip" data-tip="Vermilion City." for="letsgopikachueevee-checkbox-persian-arcanine"
-                    ><span style="color: #f1b836">Persian</span> / <span style="color: #bc6436">Arcanine</span></label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Vermilion City." for="letsgopikachueevee-checkbox-persian-arcanine"><span style="color: #f1b836">Persian</span> / <span style="color: #bc6436">Arcanine</span></label>
                 </div>
                 <div class="checkbox-item">
                   <input id="letsgopikachueevee-checkbox-hitmonlee-hitmonchan" type="checkbox" />
@@ -166,9 +167,7 @@
           <div class="alolanforms">
             <div class="checkbox-item">
               <span class="title"><label class="text-lg">Catch all Alolan Forms</label></span>
-              <label class="text-sm lg:tooltip" data-tip="These are all the In-game Trades you can get. You can obtain them infinitely."
-                ><img class="icon-small" src="../images/icons/miscellaneous/other/moreinfo.png"
-              /></label>
+              <label class="text-sm lg:tooltip" data-tip="These are all the In-game Trades you can get. You can obtain them infinitely."><img class="icon-small" src="../images/icons/miscellaneous/other/moreinfo.png" /></label>
             </div>
             <div class="alolanforms-rowcontainer">
               <div class="alolanforms-leftrow">
@@ -176,17 +175,13 @@
                   <input id="letsgopikachueevee-checkbox-grimer-meowth" type="checkbox" />
                   <img class="pokeicon small" src="../images/icons/pokemon/gen7/lpge/alolanforms/grimer-alolan.png" alt="Icon of Alolan Grimer" />
                   <img class="pokeicon small" src="../images/icons/pokemon/gen7/lpge/alolanforms/meowth-alolan.png" alt="Icon of Alolan Meowth" />
-                  <label class="text-sm lg:tooltip" data-tip="Cinnabar Island." for="letsgopikachueevee-checkbox-grimer-meowth"
-                    ><span style="color: #f1b836">Grimer</span> / <span style="color: #bc6436">Meowth</span></label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Cinnabar Island." for="letsgopikachueevee-checkbox-grimer-meowth"><span style="color: #f1b836">Grimer</span> / <span style="color: #bc6436">Meowth</span></label>
                 </div>
                 <div class="checkbox-item">
                   <input id="letsgopikachueevee-checkbox-sandshrew-vulpix" type="checkbox" />
                   <img class="pokeicon small" src="../images/icons/pokemon/gen7/lpge/alolanforms/sandshrew-alolan.png" alt="Icon of Alolan Sandshrew" />
                   <img class="pokeicon small" src="../images/icons/pokemon/gen7/lpge/alolanforms/vulpix-alolan.png" alt="Icon of Alolan Vulpix" />
-                  <label class="text-sm lg:tooltip" data-tip="Celadon City." for="letsgopikachueevee-checkbox-sandshrew-vulpix"
-                    ><span style="color: #f1b836">Sandshrew</span> / <span style="color: #bc6436">Vulpix</span></label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Celadon City." for="letsgopikachueevee-checkbox-sandshrew-vulpix"><span style="color: #f1b836">Sandshrew</span> / <span style="color: #bc6436">Vulpix</span></label>
                 </div>
                 <div class="checkbox-item">
                   <input id="letsgopikachueevee-checkbox-rattata" type="checkbox" />
@@ -349,22 +344,12 @@
                 <div class="checkbox-item">
                   <input id="letsgopikachueevee-checkbox-morimoto" type="checkbox" />
                   <img class="pokeicon npc" src="../images/icons/miscellaneous/gen7/npc/morimoto.png" alt="Icon of Morimoto" />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="He is on the third floor of Celadon Condominiums after the player has entered the Hall of Fame."
-                    for="letsgopikachueevee-checkbox-morimoto"
-                    >Battle Morimoto</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="He is on the third floor of Celadon Condominiums after the player has entered the Hall of Fame." for="letsgopikachueevee-checkbox-morimoto">Battle Morimoto</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="letsgopikachueevee-checkbox-red" type="checkbox" />
                   <img class="pokeicon npc" src="../images/icons/miscellaneous/gen7/npc/red.png" alt="Icon of Red" />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Defeat any six Master Trainers. Red will appear outside of the Pokemon League in the Indigo Plateau."
-                    for="letsgopikachueevee-checkbox-red"
-                    >Battle Red</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Defeat any six Master Trainers. Red will appear outside of the Pokemon League in the Indigo Plateau." for="letsgopikachueevee-checkbox-red">Battle Red</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="letsgopikachueevee-checkbox-rematch-elitefour" type="checkbox" />
@@ -385,9 +370,7 @@
                   <input id="letsgopikachueevee-checkbox-jessie-james" type="checkbox" />
                   <img class="pokeicon npc" src="../images/icons/miscellaneous/gen7/npc/jessie.png" alt="Icon of Jessie" />
                   <img class="pokeicon npc" src="../images/icons/miscellaneous/gen7/npc/james.png" alt="Icon of James" />
-                  <label class="text-sm lg:tooltip" data-tip="Rematch for the last time. Route 17 after beating Team Rocket and the Elite Four." for="letsgopikachueevee-checkbox-jessie-james"
-                    >Rematch Jessie and James</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Rematch for the last time. Route 17 after beating Team Rocket and the Elite Four." for="letsgopikachueevee-checkbox-jessie-james">Rematch Jessie and James</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="letsgopikachueevee-checkbox-mina" type="checkbox" />
@@ -493,6 +476,37 @@
         initializeCheckboxes(megaCheckboxes, document.querySelector(".mega .title label"));
         initializeCheckboxes(battleCheckboxes, document.querySelector(".battle .title label"));
         initializeCheckboxes(itemsCheckboxes, document.querySelector(".items .title label"));
+      });
+    </script>
+    <script>
+      function updateProgressBar() {
+        const totalCheckboxes = document.querySelectorAll('input[type="checkbox"]').length;
+        const checkedCheckboxes = document.querySelectorAll('input[type="checkbox"]:checked').length;
+
+        const progress = (checkedCheckboxes / totalCheckboxes) * 100;
+        document.getElementById("progressBar").style.width = progress + "%";
+      }
+
+      document.querySelectorAll('input[type="checkbox"]').forEach((checkbox) => {
+        checkbox.addEventListener("change", updateProgressBar);
+      });
+
+      updateProgressBar();
+    </script>
+
+    <script>
+      function checkedAllCheckboxes() {
+        const allChecked = Array.from(checkboxes).every((checkbox) => checkbox.checked);
+
+        if (allChecked) {
+          confetti();
+        }
+      }
+
+      // Add event listeners to checkboxes
+      const checkboxes = document.querySelectorAll('.checkbox-item input[type="checkbox"]');
+      checkboxes.forEach((checkbox) => {
+        checkbox.addEventListener("change", checkedAllCheckboxes);
       });
     </script>
   </body>

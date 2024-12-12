@@ -10,6 +10,7 @@
     <link href="../images/icons/favicontab.ico" rel="shortcut icon" type="image/x-icon" />
     <meta name="description" content="A tool for tracking your progression in Pokemon games. Easily choose between games and track your game progress." />
     <meta name="keywords" content="pokemon, checklist, pokedex, progress, completion, speedrun, checklist, check list, locations, characters, games, game" />
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
   </head>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-4PDLXC895H"></script>
@@ -32,6 +33,11 @@
         </div>
       </div>
     </div>
+
+    <div class="progress-container">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+
     <div class="page-container" data-game="diamondpearl">
       <div class="page-container-left">
         <div class="wide-panel pokedex">
@@ -46,9 +52,7 @@
             </div>
             <div class="checkbox-item">
               <input id="diamondpearl-checkbox-diploma" type="checkbox" />
-              <label class="text-sm lg:tooltip" data-tip="The lead developer is in the north-westernmost house in the Hotel Grand Lake at the Valor Lakefront." for="diamondpearl-checkbox-diploma"
-                >Get Diploma</label
-              >
+              <label class="text-sm lg:tooltip" data-tip="The lead developer is in the north-westernmost house in the Hotel Grand Lake at the Valor Lakefront." for="diamondpearl-checkbox-diploma">Get Diploma</label>
             </div>
           </div>
           <div class="legendaries">
@@ -60,16 +64,12 @@
                 <div class="checkbox-item">
                   <input id="diamondpearl-checkbox-dialga" type="checkbox" />
                   <img class="pokeicon legendary" src="../images/icons/pokemon/gen4/diamondpearl/dialga.png" alt="Icon of Dialga" />
-                  <label class="text-sm lg:tooltip" data-tip="At the peak of Mt. Coronet, depending on your version." for="diamondpearl-checkbox-dialga"
-                    ><span style="color: #86bff3">Dialga</span></label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="At the peak of Mt. Coronet, depending on your version." for="diamondpearl-checkbox-dialga"><span style="color: #86bff3">Dialga</span></label>
                 </div>
                 <div class="checkbox-item">
                   <input id="diamondpearl-checkbox-palkia" type="checkbox" />
                   <img class="pokeicon legendary" src="../images/icons/pokemon/gen4/diamondpearl/palkia.png" alt="Icon of Palkia" />
-                  <label class="text-sm lg:tooltip" data-tip="At the peak of Mt. Coronet, depending on your version." for="diamondpearl-checkbox-palkia"
-                    ><span style="color: #fdcfd9">Palkia</span></label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="At the peak of Mt. Coronet, depending on your version." for="diamondpearl-checkbox-palkia"><span style="color: #fdcfd9">Palkia</span></label>
                 </div>
                 <div class="checkbox-item">
                   <input id="diamondpearl-checkbox-giratina" type="checkbox" />
@@ -96,19 +96,12 @@
                 <div class="checkbox-item">
                   <input id="diamondpearl-checkbox-cresselia" type="checkbox" />
                   <img class="pokeicon legendary" src="../images/icons/pokemon/gen4/diamondpearl/cresselia.png" alt="Icon of Cresselia" />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Once you have obtained the National Dex, go to Canalave Town and speak with the guy above the Sailor by the boat."
-                    for="diamondpearl-checkbox-cresselia"
-                    >Cresselia</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Once you have obtained the National Dex, go to Canalave Town and speak with the guy above the Sailor by the boat." for="diamondpearl-checkbox-cresselia">Cresselia</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="diamondpearl-checkbox-regigigas" type="checkbox" />
                   <img class="pokeicon legendary" src="../images/icons/pokemon/gen4/diamondpearl/regigigas.png" alt="Icon of Regigigas" />
-                  <label class="text-sm lg:tooltip" data-tip="Transfer your Regirock, Regice and Registeel from past games, then go to Snowpoint City." for="diamondpearl-checkbox-regigigas"
-                    >Regigigas</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Transfer your Regirock, Regice and Registeel from past games, then go to Snowpoint City." for="diamondpearl-checkbox-regigigas">Regigigas</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="diamondpearl-checkbox-heatran" type="checkbox" />
@@ -122,27 +115,17 @@
                   <div class="checkbox-item">
                     <input id="diamondpearl-checkbox-darkrai" type="checkbox" />
                     <img class="pokeicon legendary" src="../images/icons/pokemon/gen4/diamondpearl/darkrai.png" alt="Icon of Darkrai" />
-                    <label
-                      class="text-sm lg:tooltip"
-                      data-tip="If you have the item Membership Pass, go to Canalave City in the motel that was previously locked."
-                      for="diamondpearl-checkbox-darkrai"
-                      style="color: #7ac49a"
-                      >Darkrai</label
-                    >
+                    <label class="text-sm lg:tooltip" data-tip="If you have the item Membership Pass, go to Canalave City in the motel that was previously locked." for="diamondpearl-checkbox-darkrai" style="color: #7ac49a">Darkrai</label>
                   </div>
                   <div class="checkbox-item">
                     <input id="diamondpearl-checkbox-shaymin" type="checkbox" />
                     <img class="pokeicon legendary" src="../images/icons/pokemon/gen4/diamondpearl/shaymin-land.png" alt="Icon of Shaymin" />
-                    <label class="text-sm lg:tooltip" data-tip="If you have the item Oak's Letter, go to the White Rock in Route 224." for="diamondpearl-checkbox-shaymin" style="color: #7ac49a"
-                      >Shaymin</label
-                    >
+                    <label class="text-sm lg:tooltip" data-tip="If you have the item Oak's Letter, go to the White Rock in Route 224." for="diamondpearl-checkbox-shaymin" style="color: #7ac49a">Shaymin</label>
                   </div>
                   <div class="checkbox-item">
                     <input id="diamondpearl-checkbox-arceus" type="checkbox" />
                     <img class="pokeicon legendary" src="../images/icons/pokemon/gen4/diamondpearl/arceus-normal.png" alt="Icon of Arceus" />
-                    <label class="text-sm lg:tooltip" data-tip="If you have a Azure Flute, go to the Spear Pillar in Mt. Coronet." for="diamondpearl-checkbox-arceus" style="color: #7ac49a"
-                      >Arceus</label
-                    >
+                    <label class="text-sm lg:tooltip" data-tip="If you have a Azure Flute, go to the Spear Pillar in Mt. Coronet." for="diamondpearl-checkbox-arceus" style="color: #7ac49a">Arceus</label>
                   </div>
                 </div>
               </div>
@@ -263,17 +246,13 @@
                 </div>
                 <div class="checkbox-item">
                   <input id="diamondpearl-checkbox-calendar" type="checkbox" />
-                  <label class="text-sm lg:tooltip" data-tip="Obtained from resident in Sunyshore City by bringing a Pokémon with a Serious Nature." for="diamondpearl-checkbox-calendar"
-                    >Calendar</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Obtained from resident in Sunyshore City by bringing a Pokémon with a Serious Nature." for="diamondpearl-checkbox-calendar">Calendar</label>
                 </div>
               </div>
               <div class="poketch-middlerow">
                 <div class="checkbox-item">
                   <input id="diamondpearl-checkbox-roulette" type="checkbox" />
-                  <label class="text-sm lg:tooltip" data-tip="Obtained from resident in Sunyshore City by bringing a Pokémon with a Quirky Nature." for="diamondpearl-checkbox-roulette"
-                    >Roulette</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Obtained from resident in Sunyshore City by bringing a Pokémon with a Quirky Nature." for="diamondpearl-checkbox-roulette">Roulette</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="diamondpearl-checkbox-kitchen-timer" type="checkbox" />
@@ -315,9 +294,7 @@
                 </div>
                 <div class="checkbox-item">
                   <input id="diamondpearl-checkbox-wireless-searcher" type="checkbox" />
-                  <label class="text-sm lg:tooltip" data-tip="Obtained from President of Poketch Company after obtaining 5th Badge." for="diamondpearl-checkbox-wireless-searcher"
-                    >Wireless Searcher</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Obtained from President of Poketch Company after obtaining 5th Badge." for="diamondpearl-checkbox-wireless-searcher">Wireless Searcher</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="diamondpearl-checkbox-type-chart" type="checkbox" />
@@ -325,9 +302,7 @@
                 </div>
                 <div class="checkbox-item">
                   <input id="diamondpearl-checkbox-drawing-board" type="checkbox" />
-                  <label class="text-sm lg:tooltip" data-tip="Obtained from resident in Sunyshore City by bringing a Pokémon with a Naive Nature." for="diamondpearl-checkbox-drawing-board"
-                    >Drawing Board</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Obtained from resident in Sunyshore City by bringing a Pokémon with a Naive Nature." for="diamondpearl-checkbox-drawing-board">Drawing Board</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="diamondpearl-checkbox-pokeradar-checker" type="checkbox" />
@@ -547,9 +522,7 @@
                   <div class="checkbox-item">
                     <input id="diamondpearl-checkbox-champion-ribbon" type="checkbox" />
                     <img class="pokeicon ribbon" src="../images/icons/miscellaneous/gen4/ribbons/sinnoh-champion-ribbon.png" alt="Icon of Champion Ribbon" />
-                    <label class="text-sm lg:tooltip" data-tip="Ribbon awarded for beating the Sinnoh Champion and entering the Hall of Fame." for="diamondpearl-checkbox-champion-ribbon"
-                      >Champion</label
-                    >
+                    <label class="text-sm lg:tooltip" data-tip="Ribbon awarded for beating the Sinnoh Champion and entering the Hall of Fame." for="diamondpearl-checkbox-champion-ribbon">Champion</label>
                   </div>
                   <div class="checkbox-item">
                     <input id="diamondpearl-checkbox-effort-ribbon" type="checkbox" />
@@ -855,6 +828,37 @@
           initializeCheckboxes(cutenessribbonCheckboxes, document.querySelector(".cutenessribbon .title label"));
           initializeCheckboxes(coolnessribbonCheckboxes, document.querySelector(".coolnessribbon .title label"));
           initializeCheckboxes(itemsCheckboxes, document.querySelector(".items .title label"));
+        });
+      </script>
+      <script>
+        function updateProgressBar() {
+          const totalCheckboxes = document.querySelectorAll('input[type="checkbox"]').length;
+          const checkedCheckboxes = document.querySelectorAll('input[type="checkbox"]:checked').length;
+
+          const progress = (checkedCheckboxes / totalCheckboxes) * 100;
+          document.getElementById("progressBar").style.width = progress + "%";
+        }
+
+        document.querySelectorAll('input[type="checkbox"]').forEach((checkbox) => {
+          checkbox.addEventListener("change", updateProgressBar);
+        });
+
+        updateProgressBar();
+      </script>
+
+      <script>
+        function checkedAllCheckboxes() {
+          const allChecked = Array.from(checkboxes).every((checkbox) => checkbox.checked);
+
+          if (allChecked) {
+            confetti();
+          }
+        }
+
+        // Add event listeners to checkboxes
+        const checkboxes = document.querySelectorAll('.checkbox-item input[type="checkbox"]');
+        checkboxes.forEach((checkbox) => {
+          checkbox.addEventListener("change", checkedAllCheckboxes);
         });
       </script>
     </div>

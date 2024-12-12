@@ -10,6 +10,7 @@
     <link href="../images/icons/favicontab.ico" rel="shortcut icon" type="image/x-icon" />
     <meta name="description" content="A tool for tracking your progression in Pokemon games. Easily choose between games and track your game progress." />
     <meta name="keywords" content="pokemon, checklist, pokedex, progress, completion, speedrun, checklist, check list, locations, characters, games, game" />
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
   </head>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-4PDLXC895H"></script>
@@ -31,6 +32,10 @@
           <img id="shield-logo" src="../images/logos/shield-logo.webp" alt="Icon of Shield Logo" class="w-20" />
         </div>
       </div>
+    </div>
+
+    <div class="progress-container">
+      <div class="progress-bar" id="progressBar"></div>
     </div>
 
     <div class="page-container" data-game="swordshield">
@@ -76,9 +81,7 @@
                   <input id="swordshield-checkbox-gigantamax-pikachu-eevee" type="checkbox" />
                   <img class="pokeicon gigantamax" src="../images/icons/pokemon/gen8/swordshield/gigantamax/pikachu-gigantamax.png" />
                   <img class="pokeicon gigantamax" src="../images/icons/pokemon/gen8/swordshield/gigantamax/eevee-gigantamax.png" style="margin-left: -5px" />
-                  <label class="text-sm lg:tooltip" data-tip="Meetup Spot." for="swordshield-checkbox-gigantamax-pikachu-eevee"
-                    ><span style="color: #f1b836">Pikachu</span> / <span style="color: #bc6436">Eevee</span></label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Meetup Spot." for="swordshield-checkbox-gigantamax-pikachu-eevee"><span style="color: #f1b836">Pikachu</span> / <span style="color: #bc6436">Eevee</span></label>
                 </div>
                 <div class="checkbox-item" style="margin-bottom: -10px">
                   <input id="swordshield-checkbox-charmander" type="checkbox" />
@@ -129,9 +132,7 @@
                 <div class="checkbox-item">
                   <input id="swordshield-checkbox-galarian-linoone" type="checkbox" />
                   <img class="pokeicon small" src="../images/icons/pokemon/gen8/swordshield/galarianforms/linoone-galarian.png" />
-                  <label class="text-sm lg:tooltip" data-tip="Giant's Cap (Except Thunder., Clear, & Sand.), Evolve from Galarian Zigzagoon at Lv.20" for="swordshield-checkbox-galarian-linoone"
-                    >Linoone</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Giant's Cap (Except Thunder., Clear, & Sand.), Evolve from Galarian Zigzagoon at Lv.20" for="swordshield-checkbox-galarian-linoone">Linoone</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="swordshield-checkbox-galarian-farfetchd" type="checkbox" />
@@ -183,16 +184,12 @@
                   <input id="swordshield-checkbox-throh-sawk" type="checkbox" />
                   <img class="pokeicon" src="../images/icons/pokemon/gen8/swordshield/throh.png" />
                   <img class="pokeicon" src="../images/icons/pokemon/gen8/swordshield/sawk.png" />
-                  <label class="text-sm lg:tooltip" data-tip="Circhester." for="swordshield-checkbox-throh-sawk"
-                    ><span style="color: #181369">Throh</span> / <span style="color: #a40045">Sawk</span></label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Circhester." for="swordshield-checkbox-throh-sawk"><span style="color: #181369">Throh</span> / <span style="color: #a40045">Sawk</span></label>
                 </div>
                 <div class="checkbox-item">
                   <input id="swordshield-checkbox-hatenna-impidimp" type="checkbox" />
                   <img class="pokeicon small" src="../images/icons/pokemon/gen8/swordshield/hatenna.png" /><img class="pokeicon small" src="../images/icons/pokemon/gen8/swordshield/impidimp.png" />
-                  <label class="text-sm lg:tooltip" data-tip="Stow-on-Side." for="swordshield-checkbox-hatenna-impidimp"
-                    ><span style="color: #181369">Hatenna</span> / <span style="color: #a40045">Impidimp</span></label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Stow-on-Side." for="swordshield-checkbox-hatenna-impidimp"><span style="color: #181369">Hatenna</span> / <span style="color: #a40045">Impidimp</span></label>
                 </div>
                 <div class="checkbox-item">
                   <input id="swordshield-checkbox-kantonian-mrmime" type="checkbox" />
@@ -398,9 +395,7 @@
             <div class="checkbox-item">
               <input id="swordshield-checkbox-catching-charm" type="checkbox" />
               <img class="pokeicon item" src="../images/icons/miscellaneous/gen8/swordshield/charms/catching-charm.png" />
-              <label class="text-sm lg:tooltip" data-tip="Circhester from the Game Freak director in the western building of Hotel Ionia." for="swordshield-checkbox-catching-charm"
-                >Catching Charm</label
-              >
+              <label class="text-sm lg:tooltip" data-tip="Circhester from the Game Freak director in the western building of Hotel Ionia." for="swordshield-checkbox-catching-charm">Catching Charm</label>
             </div>
             <div class="checkbox-item">
               <input id="swordshield-checkbox-alltms" type="checkbox" />
@@ -538,10 +533,7 @@
                 </div>
                 <div class="checkbox-item">
                   <input id="swordshield-checkbox-currydex-goldenutensils" type="checkbox" />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Go to the Camping Guru in Hammerlocke Hills and he will give you some golden cooking utensils after completing the Curry Dex."
-                    for="swordshield-checkbox-currydex-goldenutensils"
+                  <label class="text-sm lg:tooltip" data-tip="Go to the Camping Guru in Hammerlocke Hills and he will give you some golden cooking utensils after completing the Curry Dex." for="swordshield-checkbox-currydex-goldenutensils"
                     >Golden Cooking Utensils</label
                   >
                 </div>
@@ -631,15 +623,11 @@
             <div class="checkbox-item">
               <input id="swordshield-checkbox-morimoto" type="checkbox" />
               <img class="pokeicon npc" src="../images/icons/miscellaneous/gen8/swordshield/npc/morimoto.png" />
-              <label class="text-sm lg:tooltip" data-tip="He is on the third floor of Celadon Condominiums after the player has entered the Hall of Fame." for="swordshield-checkbox-morimoto"
-                >Battle Morimoto</label
-              >
+              <label class="text-sm lg:tooltip" data-tip="He is on the third floor of Celadon Condominiums after the player has entered the Hall of Fame." for="swordshield-checkbox-morimoto">Battle Morimoto</label>
             </div>
             <div class="checkbox-item">
               <input id="swordshield-checkbox-clothing" type="checkbox" />
-              <label class="text-sm lg:tooltip" data-tip="He is on the third floor of Celadon Condominiums after the player has entered the Hall of Fame." for="swordshield-checkbox-clothing"
-                >Purchase all Clothes</label
-              >
+              <label class="text-sm lg:tooltip" data-tip="He is on the third floor of Celadon Condominiums after the player has entered the Hall of Fame." for="swordshield-checkbox-clothing">Purchase all Clothes</label>
             </div>
           </div>
         </div>
@@ -957,6 +945,37 @@
         initializeCheckboxes(leaguecardCheckboxes, document.querySelector(".leaguecard .title label"));
         initializeCheckboxes(customizationsCheckboxes, document.querySelector(".leaguecard-customizations .title label"));
         initializeCheckboxes(itemsCheckboxes, document.querySelector(".items .title label"));
+      });
+    </script>
+    <script>
+      function updateProgressBar() {
+        const totalCheckboxes = document.querySelectorAll('input[type="checkbox"]').length;
+        const checkedCheckboxes = document.querySelectorAll('input[type="checkbox"]:checked').length;
+
+        const progress = (checkedCheckboxes / totalCheckboxes) * 100;
+        document.getElementById("progressBar").style.width = progress + "%";
+      }
+
+      document.querySelectorAll('input[type="checkbox"]').forEach((checkbox) => {
+        checkbox.addEventListener("change", updateProgressBar);
+      });
+
+      updateProgressBar();
+    </script>
+
+    <script>
+      function checkedAllCheckboxes() {
+        const allChecked = Array.from(checkboxes).every((checkbox) => checkbox.checked);
+
+        if (allChecked) {
+          confetti();
+        }
+      }
+
+      // Add event listeners to checkboxes
+      const checkboxes = document.querySelectorAll('.checkbox-item input[type="checkbox"]');
+      checkboxes.forEach((checkbox) => {
+        checkbox.addEventListener("change", checkedAllCheckboxes);
       });
     </script>
   </body>

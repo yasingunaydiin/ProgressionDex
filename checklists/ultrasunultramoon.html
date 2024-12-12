@@ -10,6 +10,7 @@
     <link href="../images/icons/favicontab.ico" rel="shortcut icon" type="image/x-icon" />
     <meta name="description" content="A tool for tracking your progression in Pokemon games. Easily choose between games and track your game progress." />
     <meta name="keywords" content="pokemon, checklist, pokedex, progress, completion, speedrun, checklist, check list, locations, characters, games, game" />
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
   </head>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-4PDLXC895H"></script>
@@ -31,6 +32,10 @@
           <img id="ultramoon-logo" src="../images/logos/ultramoon-logo.webp" alt="Icon of Ultra Moon Logo" class="w-20" />
         </div>
       </div>
+    </div>
+
+    <div class="progress-container">
+      <div class="progress-bar" id="progressBar"></div>
     </div>
 
     <div class="page-container" data-game="ultrasunultramoon">
@@ -134,16 +139,12 @@
                 <div class="checkbox-item">
                   <input id="ultrasunultramoon-checkbox-solgaleo" type="checkbox" /> <img class="pokeicon legendary" src="../images/icons/pokemon/gen7/usum/solgaleo.png" alt="Icon of Solgaleo" />
                   <label class="text-sm lg:tooltip" data-tip="Mahalo Trail (Ultra Sun)." for="ultrasunultramoon-checkbox-solgaleo" style="color: #f79c1a">Solgaleo</label>
-                  <label class="text-sm lg:tooltip" data-tip="Trade from Ultra Sun to get in Pokemon Ultra Moon"
-                    ><img class="icon-small" src="../images/icons/miscellaneous/other/moreinfo.png"
-                  /></label>
+                  <label class="text-sm lg:tooltip" data-tip="Trade from Ultra Sun to get in Pokemon Ultra Moon"><img class="icon-small" src="../images/icons/miscellaneous/other/moreinfo.png" /></label>
                 </div>
                 <div class="checkbox-item">
                   <input id="ultrasunultramoon-checkbox-lunala" type="checkbox" /> <img class="pokeicon legendary" src="../images/icons/pokemon/gen7/usum/lunala.png" alt="Icon of Lunala" />
                   <label class="text-sm lg:tooltip" data-tip="Mahalo Trail (Ultra Moon)." for="ultrasunultramoon-checkbox-lunala" style="color: #0f92d0">Lunala</label>
-                  <label class="text-sm lg:tooltip" data-tip="Trade from Ultra Moon to get in Pokemon Ultra Sun."
-                    ><img class="icon-small" src="../images/icons/miscellaneous/other/moreinfo.png"
-                  /></label>
+                  <label class="text-sm lg:tooltip" data-tip="Trade from Ultra Moon to get in Pokemon Ultra Sun."><img class="icon-small" src="../images/icons/miscellaneous/other/moreinfo.png" /></label>
                 </div>
                 <div class="checkbox-item">
                   <input id="ultrasunultramoon-checkbox-cosmog" type="checkbox" /> <img class="pokeicon legendary" src="../images/icons/pokemon/gen7/cosmog.png" alt="Icon of Cosmog" />
@@ -203,9 +204,7 @@
                 <div class="checkbox-item">
                   <input id="ultrasunultramoon-checkbox-raikou-entei" type="checkbox" /> <img class="pokeicon legendary" src="../images/icons/pokemon/gen7/entei.png" alt="Icon of Entei" />
                   <img class="pokeicon legendary" src="../images/icons/pokemon/gen7/raikou.png" alt="Icon of Raikou" />
-                  <label class="text-sm lg:tooltip" data-tip="Mahalo Trail." for="ultrasunultramoon-checkbox-raikou-entei"
-                    ><span style="color: #f79c1a">Raikou</span> / <span style="color: #0f92d0">Entei</span></label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Mahalo Trail." for="ultrasunultramoon-checkbox-raikou-entei"><span style="color: #f79c1a">Raikou</span> / <span style="color: #0f92d0">Entei</span></label>
                 </div>
                 <div class="checkbox-item">
                   <input id="ultrasunultramoon-checkbox-suicune" type="checkbox" /> <img class="pokeicon legendary" src="../images/icons/pokemon/gen7/suicune.png" alt="Icon of Suicune" />
@@ -214,9 +213,7 @@
                 <div class="checkbox-item">
                   <input id="ultrasunultramoon-checkbox-lugia-ho-oh" type="checkbox" /> <img class="pokeicon legendary" src="../images/icons/pokemon/gen7/lugia.png" alt="Icon of Lugia" />
                   <img class="pokeicon legendary" src="../images/icons/pokemon/gen7/ho-oh.png" alt="Icon of Ho-Oh" />
-                  <label class="text-sm lg:tooltip" data-tip="Mahalo Trail." for="ultrasunultramoon-checkbox-lugia-ho-oh"
-                    ><span style="color: #f79c1a">Ho-Oh</span> / <span style="color: #0f92d0">Lugia</span></label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Mahalo Trail." for="ultrasunultramoon-checkbox-lugia-ho-oh"><span style="color: #f79c1a">Ho-Oh</span> / <span style="color: #0f92d0">Lugia</span></label>
                 </div>
                 <div class="checkbox-item">
                   <input id="ultrasunultramoon-checkbox-regirock" type="checkbox" /> <img class="pokeicon legendary" src="../images/icons/pokemon/gen7/regirock.png" alt="Icon of Regirock" />
@@ -233,16 +230,12 @@
                 <div class="checkbox-item">
                   <input id="ultrasunultramoon-checkbox-latias-latios" type="checkbox" /> <img class="pokeicon legendary" src="../images/icons/pokemon/gen7/latias.png" alt="Icon of Latias" />
                   <img class="pokeicon legendary" src="../images/icons/pokemon/gen7/latios.png" alt="Icon of Latios" />
-                  <label class="text-sm lg:tooltip" data-tip="Mahalo Trail." for="ultrasunultramoon-checkbox-latias-latios"
-                    ><span style="color: #f79c1a">Latios</span> / <span style="color: #0f92d0">Latias</span></label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Mahalo Trail." for="ultrasunultramoon-checkbox-latias-latios"><span style="color: #f79c1a">Latios</span> / <span style="color: #0f92d0">Latias</span></label>
                 </div>
                 <div class="checkbox-item">
                   <input id="ultrasunultramoon-checkbox-groudon-kyogre" type="checkbox" /> <img class="pokeicon legendary" src="../images/icons/pokemon/gen7/groudon.png" alt="Icon of Groudon" />
                   <img class="pokeicon legendary" src="../images/icons/pokemon/gen7/kyogre.png" alt="Icon of Kyogre" />
-                  <label class="text-sm lg:tooltip" data-tip="Mahalo Trail." for="ultrasunultramoon-checkbox-groudon-kyogre"
-                    ><span style="color: #f79c1a">Groudon</span> / <span style="color: #0f92d0">Kyogre</span></label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Mahalo Trail." for="ultrasunultramoon-checkbox-groudon-kyogre"><span style="color: #f79c1a">Groudon</span> / <span style="color: #0f92d0">Kyogre</span></label>
                 </div>
                 <div class="checkbox-item">
                   <input id="ultrasunultramoon-checkbox-rayquaza" type="checkbox" /> <img class="pokeicon legendary" src="../images/icons/pokemon/gen7/rayquaza.png" alt="Icon of Rayquaza" />
@@ -265,16 +258,12 @@
                 <div class="checkbox-item">
                   <input id="ultrasunultramoon-checkbox-dialga-palkia" type="checkbox" /> <img class="pokeicon legendary" src="../images/icons/pokemon/gen7/dialga.png" alt="Icon of Dialga" />
                   <img class="pokeicon legendary" src="../images/icons/pokemon/gen7/palkia.png" alt="Icon of Palkia" />
-                  <label class="text-sm lg:tooltip" data-tip="Mahalo Trail." for="ultrasunultramoon-checkbox-dialga-palkia"
-                    ><span style="color: #f79c1a">Dialga</span> / <span style="color: #0f92d0">Palkia</span></label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Mahalo Trail." for="ultrasunultramoon-checkbox-dialga-palkia"><span style="color: #f79c1a">Dialga</span> / <span style="color: #0f92d0">Palkia</span></label>
                 </div>
                 <div class="checkbox-item">
                   <input id="ultrasunultramoon-checkbox-heatran-regigigas" type="checkbox" /> <img class="pokeicon legendary" src="../images/icons/pokemon/gen7/heatran.png" alt="Icon of Heatran" />
                   <img class="pokeicon legendary" src="../images/icons/pokemon/gen7/regigigas.png" alt="Icon of Regigigas" />
-                  <label class="text-sm lg:tooltip" data-tip="Mahalo Trail." for="ultrasunultramoon-checkbox-heatran-regigigas"
-                    ><span style="color: #f79c1a">Heatran</span> / <span style="color: #0f92d0">Regigigas</span></label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Mahalo Trail." for="ultrasunultramoon-checkbox-heatran-regigigas"><span style="color: #f79c1a">Heatran</span> / <span style="color: #0f92d0">Regigigas</span></label>
                 </div>
                 <div class="checkbox-item">
                   <input id="ultrasunultramoon-checkbox-giratina" type="checkbox" /> <img class="pokeicon legendary" src="../images/icons/pokemon/gen7/giratina-altered.png" alt="Icon of Giratina" />
@@ -300,16 +289,12 @@
                   <input id="ultrasunultramoon-checkbox-tornadus-thundurus" type="checkbox" />
                   <img class="pokeicon legendary" src="../images/icons/pokemon/gen7/tornadus-incarnate.png" alt="Icon of Tornadus" />
                   <img class="pokeicon legendary" src="../images/icons/pokemon/gen7/thundurus-incarnate.png" alt="Icon of Thundurus" />
-                  <label class="text-sm lg:tooltip" data-tip="Mahalo Trail." for="ultrasunultramoon-checkbox-tornadus-thundurus"
-                    ><span style="color: #f79c1a">Tornadus</span> / <span style="color: #0f92d0">Thundurus</span></label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Mahalo Trail." for="ultrasunultramoon-checkbox-tornadus-thundurus"><span style="color: #f79c1a">Tornadus</span> / <span style="color: #0f92d0">Thundurus</span></label>
                 </div>
                 <div class="checkbox-item">
                   <input id="ultrasunultramoon-checkbox-reshiram-zekrom" type="checkbox" /> <img class="pokeicon legendary" src="../images/icons/pokemon/gen7/reshiram.png" alt="Icon of Reshiram" />
                   <img class="pokeicon legendary" src="../images/icons/pokemon/gen7/zekrom.png" alt="Icon of Zekrom" />
-                  <label class="text-sm lg:tooltip" data-tip="Mahalo Trail." for="ultrasunultramoon-checkbox-reshiram-zekrom"
-                    ><span style="color: #f79c1a">Reshiram</span> / <span style="color: #0f92d0">Zekrom</span></label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Mahalo Trail." for="ultrasunultramoon-checkbox-reshiram-zekrom"><span style="color: #f79c1a">Reshiram</span> / <span style="color: #0f92d0">Zekrom</span></label>
                 </div>
                 <div class="checkbox-item">
                   <input id="ultrasunultramoon-checkbox-kyurem" type="checkbox" /> <img class="pokeicon legendary" src="../images/icons/pokemon/gen7/kyurem.png" alt="Icon of Kyurem" />
@@ -319,9 +304,7 @@
                   <input id="ultrasunultramoon-checkbox-xerneas-yveltal" type="checkbox" />
                   <img class="pokeicon legendary" src="../images/icons/pokemon/gen7/xerneas-active.png" alt="Icon of Xerneas" />
                   <img class="pokeicon legendary" src="../images/icons/pokemon/gen7/yveltal.png" alt="Icon of Yveltal" />
-                  <label class="text-sm lg:tooltip" data-tip="Mahalo Trail." for="ultrasunultramoon-checkbox-xerneas-yveltal"
-                    ><span style="color: #f79c1a">Xerneas</span> / <span style="color: #0f92d0">Yveltal</span></label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Mahalo Trail." for="ultrasunultramoon-checkbox-xerneas-yveltal"><span style="color: #f79c1a">Xerneas</span> / <span style="color: #0f92d0">Yveltal</span></label>
                 </div>
               </div>
             </div>
@@ -336,9 +319,7 @@
                   <input id="ultrasunultramoon-checkbox-stakataka-blacephalon" type="checkbox" />
                   <img class="pokeicon legendary" src="../images/icons/pokemon/gen7/usum/ultrabeasts/stakataka.png" alt="Icon of Stakataka" />
                   <img class="pokeicon legendary" src="../images/icons/pokemon/gen7/usum/ultrabeasts//blacephalon.png" alt="Icon of Blacephalon" />
-                  <label class="text-sm lg:tooltip" data-tip="Poni Grove." for="ultrasunultramoon-checkbox-stakataka-blacephalon"
-                    ><span style="color: #f79c1a">Stakataka</span> / <span style="color: #0f92d0">Blacephalon</span></label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Poni Grove." for="ultrasunultramoon-checkbox-stakataka-blacephalon"><span style="color: #f79c1a">Stakataka</span> / <span style="color: #0f92d0">Blacephalon</span></label>
                 </div>
                 <div class="checkbox-item">
                   <input id="ultrasunultramoon-checkbox-celesteela" type="checkbox" />
@@ -459,21 +440,13 @@
               <div class="giftpokemon-totem-rightrow">
                 <div class="checkbox-item">
                   <input id="ultrasunultramoon-checkbox-totem-vikavolt-togedemaru" type="checkbox" /> <img class="pokeicon totem" src="../images/icons/pokemon/gen7/usum/totem/vikavolt.png" />
-                  <img class="pokeicon totem" src="../images/icons/pokemon/gen7/usum/totem/togedemaru.png" /><label
-                    class="text-sm lg:tooltip"
-                    data-tip="Paniola Ranch."
-                    for="ultrasunultramoon-checkbox-totem-vikavolt-togedemaru"
+                  <img class="pokeicon totem" src="../images/icons/pokemon/gen7/usum/totem/togedemaru.png" /><label class="text-sm lg:tooltip" data-tip="Paniola Ranch." for="ultrasunultramoon-checkbox-totem-vikavolt-togedemaru"
                     >Vikavolt / Togedemaru</label
                   >
                 </div>
                 <div class="checkbox-item">
                   <input id="ultrasunultramoon-checkbox-totem-ribombee-kommo-o" type="checkbox" /> <img class="pokeicon totem" src="../images/icons/pokemon/gen7/usum/totem/ribombee.png" />
-                  <img class="pokeicon totem" src="../images/icons/pokemon/gen7/usum/totem/kommo-o.png" /><label
-                    class="text-sm lg:tooltip"
-                    data-tip="Paniola Ranch."
-                    for="ultrasunultramoon-checkbox-totem-ribombee-kommo-o"
-                    >Ribombee / Kommo-o</label
-                  >
+                  <img class="pokeicon totem" src="../images/icons/pokemon/gen7/usum/totem/kommo-o.png" /><label class="text-sm lg:tooltip" data-tip="Paniola Ranch." for="ultrasunultramoon-checkbox-totem-ribombee-kommo-o">Ribombee / Kommo-o</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="ultrasunultramoon-checkbox-totem-mimikyu" type="checkbox" /> <img class="pokeicon totem" src="../images/icons/pokemon/gen7/usum/totem/mimikyu.png" />
@@ -622,15 +595,9 @@
               </div>
               <div class="battletree-rowcontainer">
                 <div class="battletree-leftrow">
-                  <div class="checkbox-item">
-                    <input id="ultrasunultramoon-checkbox-battletree-single" type="checkbox" /> <label class="text-sm lg:tooltip" for="ultrasunultramoon-checkbox-battletree-single">Single</label>
-                  </div>
-                  <div class="checkbox-item">
-                    <input id="ultrasunultramoon-checkbox-battletree-double" type="checkbox" /> <label class="text-sm lg:tooltip" for="ultrasunultramoon-checkbox-battletree-double">Double</label>
-                  </div>
-                  <div class="checkbox-item">
-                    <input id="ultrasunultramoon-checkbox-battletree-multi" type="checkbox" /> <label class="text-sm lg:tooltip" for="ultrasunultramoon-checkbox-battletree-multi">Multi</label>
-                  </div>
+                  <div class="checkbox-item"><input id="ultrasunultramoon-checkbox-battletree-single" type="checkbox" /> <label class="text-sm lg:tooltip" for="ultrasunultramoon-checkbox-battletree-single">Single</label></div>
+                  <div class="checkbox-item"><input id="ultrasunultramoon-checkbox-battletree-double" type="checkbox" /> <label class="text-sm lg:tooltip" for="ultrasunultramoon-checkbox-battletree-double">Double</label></div>
+                  <div class="checkbox-item"><input id="ultrasunultramoon-checkbox-battletree-multi" type="checkbox" /> <label class="text-sm lg:tooltip" for="ultrasunultramoon-checkbox-battletree-multi">Multi</label></div>
                 </div>
                 <div class="battletree-rightrow">
                   <div class="checkbox-item">
@@ -652,15 +619,9 @@
               <div class="checkbox-item">
                 <span class="title"><label class="text-lg">Battle Royal</label></span>
               </div>
-              <div class="checkbox-item">
-                <input id="ultrasunultramoon-checkbox-battleroyal-super" type="checkbox" /> <label class="text-sm lg:tooltip" for="ultrasunultramoon-checkbox-battleroyal-super">Super</label>
-              </div>
-              <div class="checkbox-item">
-                <input id="ultrasunultramoon-checkbox-battleroyal-hyper" type="checkbox" /> <label class="text-sm lg:tooltip" for="ultrasunultramoon-checkbox-battleroyal-hyper">Hyper</label>
-              </div>
-              <div class="checkbox-item">
-                <input id="ultrasunultramoon-checkbox-battleroyal-master" type="checkbox" /> <label class="text-sm lg:tooltip" for="ultrasunultramoon-checkbox-battleroyal-master">Master</label>
-              </div>
+              <div class="checkbox-item"><input id="ultrasunultramoon-checkbox-battleroyal-super" type="checkbox" /> <label class="text-sm lg:tooltip" for="ultrasunultramoon-checkbox-battleroyal-super">Super</label></div>
+              <div class="checkbox-item"><input id="ultrasunultramoon-checkbox-battleroyal-hyper" type="checkbox" /> <label class="text-sm lg:tooltip" for="ultrasunultramoon-checkbox-battleroyal-hyper">Hyper</label></div>
+              <div class="checkbox-item"><input id="ultrasunultramoon-checkbox-battleroyal-master" type="checkbox" /> <label class="text-sm lg:tooltip" for="ultrasunultramoon-checkbox-battleroyal-master">Master</label></div>
             </div>
           </div>
         </div>
@@ -672,9 +633,7 @@
           <div class="mega">
             <div class="checkbox-item">
               <span class="title"><label class="text-lg">Find all Mega Stones</label></span
-              ><label class="text-sm lg:tooltip" data-tip="Receive the Key Stone from Dexio at Ancient Poni Path."
-                ><img class="icon-small" src="../images/icons/miscellaneous/other/moreinfo.png"
-              /></label>
+              ><label class="text-sm lg:tooltip" data-tip="Receive the Key Stone from Dexio at Ancient Poni Path."><img class="icon-small" src="../images/icons/miscellaneous/other/moreinfo.png" /></label>
             </div>
             <div class="mega-rowcontainer">
               <div class="mega-leftrow">
@@ -746,9 +705,7 @@
                 </div>
                 <div class="checkbox-item">
                   <input id="ultrasunultramoon-checkbox-cameruptite" type="checkbox" /> <img class="pokeicon megastone" src="../images/icons/inventory/gen7/megastones/Dream_Cameruptite_Sprite.png" />
-                  <label class="text-sm lg:tooltip" data-tip="Magma Hideout - Delta Episode (Omega Ruby), Battle Resort (Alpha Sapphire)." for="ultrasunultramoon-checkbox-cameruptite"
-                    >Cameruptite</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Magma Hideout - Delta Episode (Omega Ruby), Battle Resort (Alpha Sapphire)." for="ultrasunultramoon-checkbox-cameruptite">Cameruptite</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="ultrasunultramoon-checkbox-mewtwoniteX" type="checkbox" />
@@ -854,10 +811,7 @@
                 </div>
                 <div class="checkbox-item">
                   <input id="ultrasunultramoon-checkbox-latiosite" type="checkbox" />
-                  <img class="pokeicon megastone" src="../images/icons/inventory/gen7/megastones/Dream_Latiosite_Sprite.png" /><label
-                    class="text-sm lg:tooltip"
-                    data-tip="Latiosite download code."
-                    for="ultrasunultramoon-checkbox-latiosite"
+                  <img class="pokeicon megastone" src="../images/icons/inventory/gen7/megastones/Dream_Latiosite_Sprite.png" /><label class="text-sm lg:tooltip" data-tip="Latiosite download code." for="ultrasunultramoon-checkbox-latiosite"
                     >Latiosite</label
                   >
                 </div>
@@ -912,21 +866,11 @@
               <div class="z-crystals-leftrow">
                 <div class="checkbox-item">
                   <input id="ultrasunultramoon-checkbox-aloraichium" type="checkbox" /> <img class="pokeicon z-crystal" src="../images/icons/inventory/gen7/z-crystals/aloraichiumz.png" />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Have an Alolan Raichu in your party and speak to the woman inside the Steelix boat in Seafolk Village."
-                    for="ultrasunultramoon-checkbox-aloraichium"
-                    >Aloraichium</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Have an Alolan Raichu in your party and speak to the woman inside the Steelix boat in Seafolk Village." for="ultrasunultramoon-checkbox-aloraichium">Aloraichium</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="ultrasunultramoon-checkbox-buginium" type="checkbox" /> <img class="pokeicon z-crystal" src="../images/icons/inventory/gen7/z-crystals/buginiumz.png" />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="After defeating Guzma in the Shady House, grab the crystal from the chest to the right on the purple chair."
-                    for="ultrasunultramoon-checkbox-buginium"
-                    >Buginium</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="After defeating Guzma in the Shady House, grab the crystal from the chest to the right on the purple chair." for="ultrasunultramoon-checkbox-buginium">Buginium</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="ultrasunultramoon-checkbox-darkinium" type="checkbox" /> <img class="pokeicon z-crystal" src="../images/icons/inventory/gen7/z-crystals/darkiniumz.png" />
@@ -950,9 +894,7 @@
                 </div>
                 <div class="checkbox-item">
                   <input id="ultrasunultramoon-checkbox-fairium" type="checkbox" /> <img class="pokeicon z-crystal" src="../images/icons/inventory/gen7/z-crystals/fairiumz.png" />
-                  <label class="text-sm lg:tooltip" data-tip="Mine gives you this Z-Crystal when you walk across the bridge in Vast Poni Canyon." for="ultrasunultramoon-checkbox-fairium"
-                    >Fairium</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Mine gives you this Z-Crystal when you walk across the bridge in Vast Poni Canyon." for="ultrasunultramoon-checkbox-fairium">Fairium</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="ultrasunultramoon-checkbox-fightinium" type="checkbox" /> <img class="pokeicon z-crystal" src="../images/icons/inventory/gen7/z-crystals/fightiniumz.png" />
@@ -982,25 +924,17 @@
                 </div>
                 <div class="checkbox-item">
                   <input id="ultrasunultramoon-checkbox-icium" type="checkbox" /> <img class="pokeicon z-crystal" src="../images/icons/inventory/gen7/z-crystals/iciumz.png" />
-                  <label class="text-sm lg:tooltip" data-tip="On Mount Lanakila, enter the cave and find a podium with the crystal on the right path." for="ultrasunultramoon-checkbox-icium"
-                    >Icium</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="On Mount Lanakila, enter the cave and find a podium with the crystal on the right path." for="ultrasunultramoon-checkbox-icium">Icium</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="ultrasunultramoon-checkbox-incinium" type="checkbox" /> <img class="pokeicon z-crystal" src="../images/icons/inventory/gen7/z-crystals/inciniumz.png" />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Given to you by Professor Kukui in Malie Garden. If this was not your starter, grab it from Hau at your house after you complete the game."
-                    for="ultrasunultramoon-checkbox-incinium"
+                  <label class="text-sm lg:tooltip" data-tip="Given to you by Professor Kukui in Malie Garden. If this was not your starter, grab it from Hau at your house after you complete the game." for="ultrasunultramoon-checkbox-incinium"
                     >Incinium</label
                   >
                 </div>
                 <div class="checkbox-item">
                   <input id="ultrasunultramoon-checkbox-primarium" type="checkbox" /> <img class="pokeicon z-crystal" src="../images/icons/inventory/gen7/z-crystals/primariumz.png" />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Given to you by Professor Kukui in Malie Garden. If this was not your starter, grab it from Hau at your house after you complete the game."
-                    for="ultrasunultramoon-checkbox-primarium"
+                  <label class="text-sm lg:tooltip" data-tip="Given to you by Professor Kukui in Malie Garden. If this was not your starter, grab it from Hau at your house after you complete the game." for="ultrasunultramoon-checkbox-primarium"
                     >Primarium</label
                   >
                 </div>
@@ -1027,9 +961,7 @@
 
                 <div class="checkbox-item">
                   <input id="ultrasunultramoon-checkbox-pikashunium" type="checkbox" /> <img class="pokeicon z-crystal" src="../images/icons/inventory/gen7/z-crystals/pikashuniumz.png" />
-                  <label class="text-sm lg:tooltip" data-tip="Ash-Hat Pikachu distrubted in Japan hold this item. Move: 10,000 Volt Thunderbolt." for="ultrasunultramoon-checkbox-pikashunium"
-                    >Pikashunium</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Ash-Hat Pikachu distrubted in Japan hold this item. Move: 10,000 Volt Thunderbolt." for="ultrasunultramoon-checkbox-pikashunium">Pikashunium</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="ultrasunultramoon-checkbox-ultranecrozium" type="checkbox" /> <img class="pokeicon z-crystal" src="../images/icons/inventory/gen7/z-crystals/ultranecroziumz.png" />
@@ -1051,25 +983,16 @@
                 </div>
                 <div class="checkbox-item">
                   <input id="ultrasunultramoon-checkbox-poisonium" type="checkbox" /> <img class="pokeicon z-crystal" src="../images/icons/inventory/gen7/z-crystals/poisoniumz.png" />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Before entering the Vast Poni Canyon, fight the Team Skull thugs and Plumeria will give you this crystal."
-                    for="ultrasunultramoon-checkbox-poisonium"
-                    >Poisonium</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Before entering the Vast Poni Canyon, fight the Team Skull thugs and Plumeria will give you this crystal." for="ultrasunultramoon-checkbox-poisonium">Poisonium</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="ultrasunultramoon-checkbox-pikanium" type="checkbox" /> <img class="pokeicon z-crystal" src="../images/icons/inventory/gen7/z-crystals/pikaniumz.png" />
-                  <label class="text-sm lg:tooltip" data-tip="Have Pikachu in your party and speak to the woman near the lighthouse in Konikoni City." for="ultrasunultramoon-checkbox-pikanium"
-                    >Pikanium</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Have Pikachu in your party and speak to the woman near the lighthouse in Konikoni City." for="ultrasunultramoon-checkbox-pikanium">Pikanium</label>
                 </div>
 
                 <div class="checkbox-item">
                   <input id="ultrasunultramoon-checkbox-psychium" type="checkbox" /> <img class="pokeicon z-crystal" src="../images/icons/inventory/gen7/z-crystals/psychiumz.png" />
-                  <label class="text-sm lg:tooltip" data-tip="Once you enter the Haina Desert, go north one screen, then east, then north, then east again." for="ultrasunultramoon-checkbox-psychium"
-                    >Psychium</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Once you enter the Haina Desert, go north one screen, then east, then north, then east again." for="ultrasunultramoon-checkbox-psychium">Psychium</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="ultrasunultramoon-checkbox-rockium" type="checkbox" /> <img class="pokeicon z-crystal" src="../images/icons/inventory/gen7/z-crystals/rockiumz.png" />
@@ -1120,20 +1043,12 @@
             </div>
             <div class="pokefinder-rowcontainer">
               <div class="pokefinder-leftrow">
-                <div class="checkbox-item">
-                  <input id="ultrasunultramoon-checkbox-ver1" type="checkbox" /> <label class="text-sm lg:tooltip" data-tip="0 Points." for="ultrasunultramoon-checkbox-ver1">Standard Features</label>
-                </div>
-                <div class="checkbox-item">
-                  <input id="ultrasunultramoon-checkbox-ver2" type="checkbox" /> <label class="text-sm lg:tooltip" data-tip="1,500 Points." for="ultrasunultramoon-checkbox-ver2">Zoom</label>
-                </div>
-                <div class="checkbox-item">
-                  <input id="ultrasunultramoon-checkbox-ver3" type="checkbox" /> <label class="text-sm lg:tooltip" data-tip="10,000 Points." for="ultrasunultramoon-checkbox-ver3">Enhanced Zoom</label>
-                </div>
+                <div class="checkbox-item"><input id="ultrasunultramoon-checkbox-ver1" type="checkbox" /> <label class="text-sm lg:tooltip" data-tip="0 Points." for="ultrasunultramoon-checkbox-ver1">Standard Features</label></div>
+                <div class="checkbox-item"><input id="ultrasunultramoon-checkbox-ver2" type="checkbox" /> <label class="text-sm lg:tooltip" data-tip="1,500 Points." for="ultrasunultramoon-checkbox-ver2">Zoom</label></div>
+                <div class="checkbox-item"><input id="ultrasunultramoon-checkbox-ver3" type="checkbox" /> <label class="text-sm lg:tooltip" data-tip="10,000 Points." for="ultrasunultramoon-checkbox-ver3">Enhanced Zoom</label></div>
               </div>
               <div class="pokefinder-rightrow">
-                <div class="checkbox-item">
-                  <input id="ultrasunultramoon-checkbox-ver4" type="checkbox" /> <label class="text-sm lg:tooltip" data-tip="100,000 Points." for="ultrasunultramoon-checkbox-ver4">Max Zoom</label>
-                </div>
+                <div class="checkbox-item"><input id="ultrasunultramoon-checkbox-ver4" type="checkbox" /> <label class="text-sm lg:tooltip" data-tip="100,000 Points." for="ultrasunultramoon-checkbox-ver4">Max Zoom</label></div>
                 <div class="checkbox-item">
                   <input id="ultrasunultramoon-checkbox-ver5" type="checkbox" />
                   <label class="text-sm lg:tooltip" data-tip="1,500,000 Points." for="ultrasunultramoon-checkbox-ver5">Call Pokémon to you</label>
@@ -1199,21 +1114,15 @@
                 </div>
                 <div class="checkbox-item">
                   <input id="ultrasunultramoon-checkbox-single-battle" type="checkbox" />
-                  <label class="text-sm lg:tooltip" data-tip="You achieved 50 consecutive wins in Single Battles at the Battle Tree." for="ultrasunultramoon-checkbox-single-battle"
-                    >50 Single Battle Wins</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="You achieved 50 consecutive wins in Single Battles at the Battle Tree." for="ultrasunultramoon-checkbox-single-battle">50 Single Battle Wins</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="ultrasunultramoon-checkbox-double-battle" type="checkbox" />
-                  <label class="text-sm lg:tooltip" data-tip="You achieved 50 consecutive wins in Double Battles at the Battle Tree." for="ultrasunultramoon-checkbox-double-battle"
-                    >50 Double Battle Wins</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="You achieved 50 consecutive wins in Double Battles at the Battle Tree." for="ultrasunultramoon-checkbox-double-battle">50 Double Battle Wins</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="ultrasunultramoon-checkbox-multi-battle" type="checkbox" />
-                  <label class="text-sm lg:tooltip" data-tip="You achieved 50 consecutive wins in Multi Battles at the Battle Tree." for="ultrasunultramoon-checkbox-multi-battle"
-                    >50 Multi Battle Wins</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="You achieved 50 consecutive wins in Multi Battles at the Battle Tree." for="ultrasunultramoon-checkbox-multi-battle">50 Multi Battle Wins</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="ultrasunultramoon-checkbox-pokefinder" type="checkbox" />
@@ -1427,10 +1336,7 @@
                   </div>
                   <div class="checkbox-item">
                     <input id="ultrasunultramoon-checkbox-isle-aphun-rank2" type="checkbox" />
-                    <label
-                      class="text-sm lg:tooltip"
-                      data-tip="Pokémon in Box: 45, Poké Beans: 90, Path for Odd-Shard Hunting, Path for Brilliant-Stone Hunting, Path for Interesting-Item Hunting."
-                      for="ultrasunultramoon-checkbox-isle-aphun-rank2"
+                    <label class="text-sm lg:tooltip" data-tip="Pokémon in Box: 45, Poké Beans: 90, Path for Odd-Shard Hunting, Path for Brilliant-Stone Hunting, Path for Interesting-Item Hunting." for="ultrasunultramoon-checkbox-isle-aphun-rank2"
                       >Rank 2</label
                     >
                   </div>
@@ -1509,9 +1415,7 @@
                 </div>
                 <div class="checkbox-item">
                   <input id="ultrasunultramoon-checkbox-mantinesurf-surfassociation" type="checkbox" />
-                  <label class="text-sm lg:tooltip" data-tip="Go to the Surf Association to receive a special Pikachu with Surf." for="ultrasunultramoon-checkbox-mantinesurf-surfassociation"
-                    >Surf Association</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Go to the Surf Association to receive a special Pikachu with Surf." for="ultrasunultramoon-checkbox-mantinesurf-surfassociation">Surf Association</label>
                 </div>
               </div>
             </div>
@@ -1544,9 +1448,7 @@
                 </div>
                 <div class="checkbox-item">
                   <input id="ultrasunultramoon-checkbox-judgefunction" type="checkbox" />
-                  <label class="text-sm lg:tooltip" data-tip="From the Ace Trainer at the Battle Tree after hatching 20 eggs." for="ultrasunultramoon-checkbox-judgefunction"
-                    >Get the Judge Function</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="From the Ace Trainer at the Battle Tree after hatching 20 eggs." for="ultrasunultramoon-checkbox-judgefunction">Get the Judge Function</label>
                 </div>
               </div>
               <div class="other-rightrow">
@@ -1570,9 +1472,7 @@
                 </div>
                 <div class="checkbox-item">
                   <input id="ultrasunultramoon-checkbox-battleagency" type="checkbox" />
-                  <label class="text-sm lg:tooltip" data-tip="The Battle Agency is located at the Festival Plaza." for="ultrasunultramoon-checkbox-battleagency"
-                    >Reach Rank 50 at the Battle Agency</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="The Battle Agency is located at the Festival Plaza." for="ultrasunultramoon-checkbox-battleagency">Reach Rank 50 at the Battle Agency</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="ultrasunultramoon-checkbox-teamrainbowrocket" type="checkbox" />
@@ -1583,130 +1483,161 @@
           </div>
         </div>
       </div>
-      <footer>
-        <ul>
-          <li>
-            <a href="../index.html">Progression Dex</a>
-          </li>
-          <li>
-            <a href="#">Twitter</a>
-          </li>
-          <li>
-            <a href="https://github.com/yasingunaydiin">GitHub</a>
-          </li>
-        </ul>
-      </footer>
-      <script src="../checklists/js/script.js"></script>
-      <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          var ultrasunLogo = document.getElementById("ultrasun-logo");
-          var ultramoonLogo = document.getElementById("ultramoon-logo");
-
-          var headerTitle = document.querySelector(".title");
-          var widePanels = document.querySelectorAll(".wide-panel");
-          var footer = document.querySelector("footer");
-          var titleText = document.querySelectorAll(".panel-label");
-          var backgroundIcons = document.querySelector("body");
-
-          ultrasunLogo.addEventListener("click", function () {
-            headerTitle.style.color = "#fdda84";
-            footer.style.background = "#fdda84";
-            backgroundIcons.style.backgroundImage = "url(../../images/patterns/pattern-ultrasun.png)";
-
-            titleText.forEach(function (text) {
-              text.style.color = "#fdda84";
-            });
-
-            widePanels.forEach(function (panel) {
-              panel.style.border = "2px solid #fdda84";
-            });
-          });
-
-          ultramoonLogo.addEventListener("click", function () {
-            headerTitle.style.color = "#99dcfa";
-            footer.style.backgroundColor = "#99dcfa";
-            backgroundIcons.style.backgroundImage = "url(../../images/patterns/pattern-ultramoon.png)";
-
-            titleText.forEach(function (text) {
-              text.style.color = "#99dcfa";
-            });
-
-            widePanels.forEach(function (panel) {
-              panel.style.border = "2px solid #99dcfa";
-            });
-          });
-        });
-      </script>
-      <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          const completepokedexCheckboxes = document.querySelectorAll('.completepokedex input[type="checkbox"]');
-          const legendariesCheckboxes = document.querySelectorAll('.legendaries input[type="checkbox"]');
-          const giftpokemonCheckboxes = document.querySelectorAll('.giftpokemon input[type="checkbox"]');
-          const ingametradesCheckboxes = document.querySelectorAll('.ingametrades input[type="checkbox"]');
-          const megaCheckboxes = document.querySelectorAll('.mega input[type="checkbox"]');
-          const otherCheckboxes = document.querySelectorAll('.other input[type="checkbox"]');
-          const oricorioCheckboxes = document.querySelectorAll('.oricorio input[type="checkbox"]');
-          const miniorCheckboxes = document.querySelectorAll('.minior input[type="checkbox"]');
-          const ultrawormholeCheckboxes = document.querySelectorAll('.ultrawormhole input[type="checkbox"]');
-          const ultrabeastsCheckboxes = document.querySelectorAll('.ultrabeasts input[type="checkbox"]');
-          const alolanformsCheckboxes = document.querySelectorAll('.alolanforms input[type="checkbox"]');
-          const giftpokemontotemCheckboxes = document.querySelectorAll('.giftpokemon-totem input[type="checkbox"]');
-          const pokefinderCheckboxes = document.querySelectorAll('.pokefinder input[type="checkbox"]');
-          const trainerpassportCheckboxes = document.querySelectorAll('.trainerpassport input[type="checkbox"]');
-          const zcrystalsCheckboxes = document.querySelectorAll('.z-crystals input[type="checkbox"]');
-          const battletreeCheckboxes = document.querySelectorAll('.battletree input[type="checkbox"]');
-          const battleroyalCheckboxes = document.querySelectorAll('.battleroyal input[type="checkbox"]');
-          const isleabeensCheckboxes = document.querySelectorAll('.pokepelago-island-abeens input[type="checkbox"]');
-          const isleaphunCheckboxes = document.querySelectorAll('.pokepelago-island-aphun input[type="checkbox"]');
-          const isleaplennyCheckboxes = document.querySelectorAll('.pokepelago-island-aplenny input[type="checkbox"]');
-          const isleevelupCheckboxes = document.querySelectorAll('.pokepelago-island-evelup input[type="checkbox"]');
-          const isleavueCheckboxes = document.querySelectorAll('.pokepelago-island-avue input[type="checkbox"]');
-          const pokepelagoCheckboxes = document.querySelectorAll('.pokepelago input[type="checkbox"]');
-          const mantinesurfCheckboxes = document.querySelectorAll('.mantinesurf input[type="checkbox"]');
-          const sidequestsCheckboxes = document.querySelectorAll('.sidequests input[type="checkbox"]');
-          const itemsCheckboxes = document.querySelectorAll('.items input[type="checkbox"]');
-
-          function updateStyle(checkboxes, label) {
-            const allChecked = [...checkboxes].every((checkbox) => checkbox.checked);
-            label.style.textDecoration = allChecked ? "line-through" : "none";
-          }
-
-          function initializeCheckboxes(checkboxes, label) {
-            checkboxes.forEach((checkbox) => {
-              checkbox.addEventListener("change", function () {
-                updateStyle(checkboxes, label);
-              });
-            });
-            updateStyle(checkboxes, label);
-          }
-          initializeCheckboxes(completepokedexCheckboxes, document.querySelector(".completepokedex .title label"));
-          initializeCheckboxes(legendariesCheckboxes, document.querySelector(".legendaries .title label"));
-          initializeCheckboxes(giftpokemonCheckboxes, document.querySelector(".giftpokemon .title label"));
-          initializeCheckboxes(ingametradesCheckboxes, document.querySelector(".ingametrades .title label"));
-          initializeCheckboxes(megaCheckboxes, document.querySelector(".mega .title label"));
-          initializeCheckboxes(otherCheckboxes, document.querySelector(".other .title label"));
-          initializeCheckboxes(oricorioCheckboxes, document.querySelector(".oricorio .title label"));
-          initializeCheckboxes(miniorCheckboxes, document.querySelector(".minior .title label"));
-          initializeCheckboxes(ultrawormholeCheckboxes, document.querySelector(".ultrawormhole .title label"));
-          initializeCheckboxes(ultrabeastsCheckboxes, document.querySelector(".ultrabeasts .title label"));
-          initializeCheckboxes(alolanformsCheckboxes, document.querySelector(".alolanforms .title label"));
-          initializeCheckboxes(giftpokemontotemCheckboxes, document.querySelector(".giftpokemon-totem .title label"));
-          initializeCheckboxes(pokefinderCheckboxes, document.querySelector(".pokefinder .title label"));
-          initializeCheckboxes(trainerpassportCheckboxes, document.querySelector(".trainerpassport .title label"));
-          initializeCheckboxes(zcrystalsCheckboxes, document.querySelector(".z-crystals .title label"));
-          initializeCheckboxes(battletreeCheckboxes, document.querySelector(".battletree .title label"));
-          initializeCheckboxes(battleroyalCheckboxes, document.querySelector(".battleroyal .title label"));
-          initializeCheckboxes(isleabeensCheckboxes, document.querySelector(".pokepelago-island-abeens .title label"));
-          initializeCheckboxes(isleaphunCheckboxes, document.querySelector(".pokepelago-island-aphun .title label"));
-          initializeCheckboxes(isleaplennyCheckboxes, document.querySelector(".pokepelago-island-aplenny .title label"));
-          initializeCheckboxes(isleevelupCheckboxes, document.querySelector(".pokepelago-island-evelup .title label"));
-          initializeCheckboxes(isleavueCheckboxes, document.querySelector(".pokepelago-island-avue .title label"));
-          initializeCheckboxes(pokepelagoCheckboxes, document.querySelector(".pokepelago .title label"));
-          initializeCheckboxes(mantinesurfCheckboxes, document.querySelector(".mantinesurf .title label"));
-          initializeCheckboxes(sidequestsCheckboxes, document.querySelector(".sidequests .title label"));
-          initializeCheckboxes(itemsCheckboxes, document.querySelector(".items .title label"));
-        });
-      </script>
     </div>
+    <footer>
+      <ul>
+        <li>
+          <a href="../index.html">Progression Dex</a>
+        </li>
+        <li>
+          <a href="#">Twitter</a>
+        </li>
+        <li>
+          <a href="https://github.com/yasingunaydiin">GitHub</a>
+        </li>
+      </ul>
+    </footer>
+    <script src="../checklists/js/script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var ultrasunLogo = document.getElementById("ultrasun-logo");
+        var ultramoonLogo = document.getElementById("ultramoon-logo");
+
+        var headerTitle = document.querySelector(".title");
+        var widePanels = document.querySelectorAll(".wide-panel");
+        var footer = document.querySelector("footer");
+        var titleText = document.querySelectorAll(".panel-label");
+        var backgroundIcons = document.querySelector("body");
+
+        ultrasunLogo.addEventListener("click", function () {
+          headerTitle.style.color = "#fdda84";
+          footer.style.background = "#fdda84";
+          backgroundIcons.style.backgroundImage = "url(../../images/patterns/pattern-ultrasun.png)";
+
+          titleText.forEach(function (text) {
+            text.style.color = "#fdda84";
+          });
+
+          widePanels.forEach(function (panel) {
+            panel.style.border = "2px solid #fdda84";
+          });
+        });
+
+        ultramoonLogo.addEventListener("click", function () {
+          headerTitle.style.color = "#99dcfa";
+          footer.style.backgroundColor = "#99dcfa";
+          backgroundIcons.style.backgroundImage = "url(../../images/patterns/pattern-ultramoon.png)";
+
+          titleText.forEach(function (text) {
+            text.style.color = "#99dcfa";
+          });
+
+          widePanels.forEach(function (panel) {
+            panel.style.border = "2px solid #99dcfa";
+          });
+        });
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const completepokedexCheckboxes = document.querySelectorAll('.completepokedex input[type="checkbox"]');
+        const legendariesCheckboxes = document.querySelectorAll('.legendaries input[type="checkbox"]');
+        const giftpokemonCheckboxes = document.querySelectorAll('.giftpokemon input[type="checkbox"]');
+        const ingametradesCheckboxes = document.querySelectorAll('.ingametrades input[type="checkbox"]');
+        const megaCheckboxes = document.querySelectorAll('.mega input[type="checkbox"]');
+        const otherCheckboxes = document.querySelectorAll('.other input[type="checkbox"]');
+        const oricorioCheckboxes = document.querySelectorAll('.oricorio input[type="checkbox"]');
+        const miniorCheckboxes = document.querySelectorAll('.minior input[type="checkbox"]');
+        const ultrawormholeCheckboxes = document.querySelectorAll('.ultrawormhole input[type="checkbox"]');
+        const ultrabeastsCheckboxes = document.querySelectorAll('.ultrabeasts input[type="checkbox"]');
+        const alolanformsCheckboxes = document.querySelectorAll('.alolanforms input[type="checkbox"]');
+        const giftpokemontotemCheckboxes = document.querySelectorAll('.giftpokemon-totem input[type="checkbox"]');
+        const pokefinderCheckboxes = document.querySelectorAll('.pokefinder input[type="checkbox"]');
+        const trainerpassportCheckboxes = document.querySelectorAll('.trainerpassport input[type="checkbox"]');
+        const zcrystalsCheckboxes = document.querySelectorAll('.z-crystals input[type="checkbox"]');
+        const battletreeCheckboxes = document.querySelectorAll('.battletree input[type="checkbox"]');
+        const battleroyalCheckboxes = document.querySelectorAll('.battleroyal input[type="checkbox"]');
+        const isleabeensCheckboxes = document.querySelectorAll('.pokepelago-island-abeens input[type="checkbox"]');
+        const isleaphunCheckboxes = document.querySelectorAll('.pokepelago-island-aphun input[type="checkbox"]');
+        const isleaplennyCheckboxes = document.querySelectorAll('.pokepelago-island-aplenny input[type="checkbox"]');
+        const isleevelupCheckboxes = document.querySelectorAll('.pokepelago-island-evelup input[type="checkbox"]');
+        const isleavueCheckboxes = document.querySelectorAll('.pokepelago-island-avue input[type="checkbox"]');
+        const pokepelagoCheckboxes = document.querySelectorAll('.pokepelago input[type="checkbox"]');
+        const mantinesurfCheckboxes = document.querySelectorAll('.mantinesurf input[type="checkbox"]');
+        const sidequestsCheckboxes = document.querySelectorAll('.sidequests input[type="checkbox"]');
+        const itemsCheckboxes = document.querySelectorAll('.items input[type="checkbox"]');
+
+        function updateStyle(checkboxes, label) {
+          const allChecked = [...checkboxes].every((checkbox) => checkbox.checked);
+          label.style.textDecoration = allChecked ? "line-through" : "none";
+        }
+
+        function initializeCheckboxes(checkboxes, label) {
+          checkboxes.forEach((checkbox) => {
+            checkbox.addEventListener("change", function () {
+              updateStyle(checkboxes, label);
+            });
+          });
+          updateStyle(checkboxes, label);
+        }
+        initializeCheckboxes(completepokedexCheckboxes, document.querySelector(".completepokedex .title label"));
+        initializeCheckboxes(legendariesCheckboxes, document.querySelector(".legendaries .title label"));
+        initializeCheckboxes(giftpokemonCheckboxes, document.querySelector(".giftpokemon .title label"));
+        initializeCheckboxes(ingametradesCheckboxes, document.querySelector(".ingametrades .title label"));
+        initializeCheckboxes(megaCheckboxes, document.querySelector(".mega .title label"));
+        initializeCheckboxes(otherCheckboxes, document.querySelector(".other .title label"));
+        initializeCheckboxes(oricorioCheckboxes, document.querySelector(".oricorio .title label"));
+        initializeCheckboxes(miniorCheckboxes, document.querySelector(".minior .title label"));
+        initializeCheckboxes(ultrawormholeCheckboxes, document.querySelector(".ultrawormhole .title label"));
+        initializeCheckboxes(ultrabeastsCheckboxes, document.querySelector(".ultrabeasts .title label"));
+        initializeCheckboxes(alolanformsCheckboxes, document.querySelector(".alolanforms .title label"));
+        initializeCheckboxes(giftpokemontotemCheckboxes, document.querySelector(".giftpokemon-totem .title label"));
+        initializeCheckboxes(pokefinderCheckboxes, document.querySelector(".pokefinder .title label"));
+        initializeCheckboxes(trainerpassportCheckboxes, document.querySelector(".trainerpassport .title label"));
+        initializeCheckboxes(zcrystalsCheckboxes, document.querySelector(".z-crystals .title label"));
+        initializeCheckboxes(battletreeCheckboxes, document.querySelector(".battletree .title label"));
+        initializeCheckboxes(battleroyalCheckboxes, document.querySelector(".battleroyal .title label"));
+        initializeCheckboxes(isleabeensCheckboxes, document.querySelector(".pokepelago-island-abeens .title label"));
+        initializeCheckboxes(isleaphunCheckboxes, document.querySelector(".pokepelago-island-aphun .title label"));
+        initializeCheckboxes(isleaplennyCheckboxes, document.querySelector(".pokepelago-island-aplenny .title label"));
+        initializeCheckboxes(isleevelupCheckboxes, document.querySelector(".pokepelago-island-evelup .title label"));
+        initializeCheckboxes(isleavueCheckboxes, document.querySelector(".pokepelago-island-avue .title label"));
+        initializeCheckboxes(pokepelagoCheckboxes, document.querySelector(".pokepelago .title label"));
+        initializeCheckboxes(mantinesurfCheckboxes, document.querySelector(".mantinesurf .title label"));
+        initializeCheckboxes(sidequestsCheckboxes, document.querySelector(".sidequests .title label"));
+        initializeCheckboxes(itemsCheckboxes, document.querySelector(".items .title label"));
+      });
+    </script>
+    <script>
+      function updateProgressBar() {
+        const totalCheckboxes = document.querySelectorAll('input[type="checkbox"]').length;
+        const checkedCheckboxes = document.querySelectorAll('input[type="checkbox"]:checked').length;
+
+        const progress = (checkedCheckboxes / totalCheckboxes) * 100;
+        document.getElementById("progressBar").style.width = progress + "%";
+      }
+
+      document.querySelectorAll('input[type="checkbox"]').forEach((checkbox) => {
+        checkbox.addEventListener("change", updateProgressBar);
+      });
+
+      updateProgressBar();
+    </script>
+
+    <script>
+      function checkedAllCheckboxes() {
+        const allChecked = Array.from(checkboxes).every((checkbox) => checkbox.checked);
+
+        if (allChecked) {
+          confetti();
+        }
+      }
+
+      // Add event listeners to checkboxes
+      const checkboxes = document.querySelectorAll('.checkbox-item input[type="checkbox"]');
+      checkboxes.forEach((checkbox) => {
+        checkbox.addEventListener("change", checkedAllCheckboxes);
+      });
+    </script>
   </body>
 </html>

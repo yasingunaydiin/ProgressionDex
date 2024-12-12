@@ -10,6 +10,7 @@
     <link href="../images/icons/favicontab.ico" rel="shortcut icon" type="image/x-icon" />
     <meta name="description" content="A tool for tracking your progression in Pokemon games. Easily choose between games and track your game progress." />
     <meta name="keywords" content="pokemon, checklist, pokedex, progress, completion, speedrun, checklist, check list, locations, characters, games, game" />
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
   </head>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-4PDLXC895H"></script>
@@ -31,6 +32,10 @@
           <img id="moon-logo" src="../images/logos/moon-logo.webp" alt="Icon of Moon Logo" class="w-20" />
         </div>
       </div>
+    </div>
+
+    <div class="progress-container">
+      <div class="progress-bar" id="progressBar"></div>
     </div>
 
     <div class="page-container" data-game="sunmoon">
@@ -139,17 +144,13 @@
                   <input id="sunmoon-checkbox-solgaleo" type="checkbox" />
                   <img class="pokeicon legendary" src="../images/icons/pokemon/gen7/usum/solgaleo.png" alt="Icon of Solgaleo" />
                   <label class="text-sm lg:tooltip" data-tip="Altar of the Sunne (Sun)." for="sunmoon-checkbox-solgaleo" style="color: #f79c1a">Solgaleo</label>
-                  <label class="text-sm lg:tooltip" data-tip="Trade from Sun to get in Pokemon Moon"
-                    ><img class="icon-small" src="../images/icons/miscellaneous/other/moreinfo.png" alt="Icon of More Info"
-                  /></label>
+                  <label class="text-sm lg:tooltip" data-tip="Trade from Sun to get in Pokemon Moon"><img class="icon-small" src="../images/icons/miscellaneous/other/moreinfo.png" alt="Icon of More Info" /></label>
                 </div>
                 <div class="checkbox-item">
                   <input id="sunmoon-checkbox-lunala" type="checkbox" />
                   <img class="pokeicon legendary" src="../images/icons/pokemon/gen7/usum/lunala.png" alt="Icon of Lunala" />
                   <label class="text-sm lg:tooltip" data-tip="Altar of the Moone (Moon)." for="sunmoon-checkbox-lunala" style="color: #0f92d0">Lunala</label>
-                  <label class="text-sm lg:tooltip" data-tip="Trade from Moon to get in Pokemon Sun."
-                    ><img class="icon-small" src="../images/icons/miscellaneous/other/moreinfo.png" alt="Icon of More Info"
-                  /></label>
+                  <label class="text-sm lg:tooltip" data-tip="Trade from Moon to get in Pokemon Sun."><img class="icon-small" src="../images/icons/miscellaneous/other/moreinfo.png" alt="Icon of More Info" /></label>
                 </div>
                 <div class="checkbox-item">
                   <input id="sunmoon-checkbox-cosmog" type="checkbox" />
@@ -572,10 +573,7 @@
                   </div>
                   <div class="checkbox-item">
                     <input id="sunmoon-checkbox-isle-aphun-rank2" type="checkbox" />
-                    <label
-                      class="text-sm lg:tooltip"
-                      data-tip="Pokémon in Box: 45, Poké Beans: 90, Path for Odd-Shard Hunting!, Path for Brilliant-Stone Hunting!, Path for Interesting-Item Hunting!"
-                      for="sunmoon-checkbox-isle-aphun-rank2"
+                    <label class="text-sm lg:tooltip" data-tip="Pokémon in Box: 45, Poké Beans: 90, Path for Odd-Shard Hunting!, Path for Brilliant-Stone Hunting!, Path for Interesting-Item Hunting!" for="sunmoon-checkbox-isle-aphun-rank2"
                       >Rank 2</label
                     >
                   </div>
@@ -644,12 +642,7 @@
                 </div>
                 <div class="checkbox-item">
                   <input id="sunmoon-checkbox-eevee-quest" type="checkbox" />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="After finishing the game, go to the Thrifty Megamart at Royal Avenue and speak to the cashier to start the quest."
-                    for="sunmoon-checkbox-eevee-quest"
-                    >Eevee Quest</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="After finishing the game, go to the Thrifty Megamart at Royal Avenue and speak to the cashier to start the quest." for="sunmoon-checkbox-eevee-quest">Eevee Quest</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="sunmoon-checkbox-zygarde-cells" type="checkbox" />
@@ -885,12 +878,7 @@
                 </div>
                 <div class="checkbox-item">
                   <input id="sunmoon-checkbox-latiosite" type="checkbox" />
-                  <img class="pokeicon megastone" src="../images/icons/inventory/gen7/megastones/Dream_Latiosite_Sprite.png" /><label
-                    class="text-sm lg:tooltip"
-                    data-tip="Latiosite download code."
-                    for="sunmoon-checkbox-latiosite"
-                    >Latiosite</label
-                  >
+                  <img class="pokeicon megastone" src="../images/icons/inventory/gen7/megastones/Dream_Latiosite_Sprite.png" /><label class="text-sm lg:tooltip" data-tip="Latiosite download code." for="sunmoon-checkbox-latiosite">Latiosite</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="sunmoon-checkbox-lopunnite" type="checkbox" />
@@ -954,19 +942,12 @@
                 <div class="checkbox-item">
                   <input id="sunmoon-checkbox-aloraichium" type="checkbox" />
                   <img class="pokeicon z-crystal" src="../images/icons/inventory/gen7/z-crystals/aloraichiumz.png" />
-                  <label class="text-sm lg:tooltip" data-tip="Have an Alolan Raichu in your party and speak to the woman inside the Steelix boat in Seafolk Village." for="sunmoon-checkbox-aloraichium"
-                    >Aloraichium</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Have an Alolan Raichu in your party and speak to the woman inside the Steelix boat in Seafolk Village." for="sunmoon-checkbox-aloraichium">Aloraichium</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="sunmoon-checkbox-buginium" type="checkbox" />
                   <img class="pokeicon z-crystal" src="../images/icons/inventory/gen7/z-crystals/buginiumz.png" />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="After defeating Guzma in the Shady House, grab the crystal from the chest to the right on the purple chair."
-                    for="sunmoon-checkbox-buginium"
-                    >Buginium</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="After defeating Guzma in the Shady House, grab the crystal from the chest to the right on the purple chair." for="sunmoon-checkbox-buginium">Buginium</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="sunmoon-checkbox-darkinium" type="checkbox" />
@@ -1038,20 +1019,12 @@
                 <div class="checkbox-item">
                   <input id="sunmoon-checkbox-incinium" type="checkbox" />
                   <img class="pokeicon z-crystal" src="../images/icons/inventory/gen7/z-crystals/inciniumz.png" />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Given to you by Professor Kukui in Malie Garden. If this was not your starter, grab it from Hau at your house after you complete the game."
-                    for="sunmoon-checkbox-incinium"
-                    >Incinium</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Given to you by Professor Kukui in Malie Garden. If this was not your starter, grab it from Hau at your house after you complete the game." for="sunmoon-checkbox-incinium">Incinium</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="sunmoon-checkbox-primarium" type="checkbox" />
                   <img class="pokeicon z-crystal" src="../images/icons/inventory/gen7/z-crystals/primariumz.png" />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Given to you by Professor Kukui in Malie Garden. If this was not your starter, grab it from Hau at your house after you complete the game."
-                    for="sunmoon-checkbox-primarium"
+                  <label class="text-sm lg:tooltip" data-tip="Given to you by Professor Kukui in Malie Garden. If this was not your starter, grab it from Hau at your house after you complete the game." for="sunmoon-checkbox-primarium"
                     >Primarium</label
                   >
                 </div>
@@ -1075,12 +1048,7 @@
                 <div class="checkbox-item">
                   <input id="sunmoon-checkbox-poisonium" type="checkbox" />
                   <img class="pokeicon z-crystal" src="../images/icons/inventory/gen7/z-crystals/poisoniumz.png" />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Before entering the Vast Poni Canyon, fight the Team Skull thugs and Plumeria will give you this crystal."
-                    for="sunmoon-checkbox-poisonium"
-                    >Poisonium</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Before entering the Vast Poni Canyon, fight the Team Skull thugs and Plumeria will give you this crystal." for="sunmoon-checkbox-poisonium">Poisonium</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="sunmoon-checkbox-pikanium" type="checkbox" />
@@ -1095,9 +1063,7 @@
                 <div class="checkbox-item">
                   <input id="sunmoon-checkbox-psychium" type="checkbox" />
                   <img class="pokeicon z-crystal" src="../images/icons/inventory/gen7/z-crystals/psychiumz.png" />
-                  <label class="text-sm lg:tooltip" data-tip="Once you enter the Haina Desert, go north one screen, then east, then north, then east again." for="sunmoon-checkbox-psychium"
-                    >Psychium</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Once you enter the Haina Desert, go north one screen, then east, then north, then east again." for="sunmoon-checkbox-psychium">Psychium</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="sunmoon-checkbox-rockium" type="checkbox" />
@@ -1314,6 +1280,37 @@
         initializeCheckboxes(isleavueCheckboxes, document.querySelector(".pokepelago-island-avue .title label"));
         initializeCheckboxes(pokepelagoCheckboxes, document.querySelector(".pokepelago .title label"));
         initializeCheckboxes(itemsCheckboxes, document.querySelector(".items .title label"));
+      });
+    </script>
+    <script>
+      function updateProgressBar() {
+        const totalCheckboxes = document.querySelectorAll('input[type="checkbox"]').length;
+        const checkedCheckboxes = document.querySelectorAll('input[type="checkbox"]:checked').length;
+
+        const progress = (checkedCheckboxes / totalCheckboxes) * 100;
+        document.getElementById("progressBar").style.width = progress + "%";
+      }
+
+      document.querySelectorAll('input[type="checkbox"]').forEach((checkbox) => {
+        checkbox.addEventListener("change", updateProgressBar);
+      });
+
+      updateProgressBar();
+    </script>
+
+    <script>
+      function checkedAllCheckboxes() {
+        const allChecked = Array.from(checkboxes).every((checkbox) => checkbox.checked);
+
+        if (allChecked) {
+          confetti();
+        }
+      }
+
+      // Add event listeners to checkboxes
+      const checkboxes = document.querySelectorAll('.checkbox-item input[type="checkbox"]');
+      checkboxes.forEach((checkbox) => {
+        checkbox.addEventListener("change", checkedAllCheckboxes);
       });
     </script>
   </body>

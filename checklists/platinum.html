@@ -10,6 +10,7 @@
     <link href="../images/icons/favicontab.ico" rel="shortcut icon" type="image/x-icon" />
     <meta name="description" content="A tool for tracking your progression in Pokemon games. Easily choose between games and track your game progress." />
     <meta name="keywords" content="pokemon, checklist, pokedex, progress, completion, speedrun, checklist, check list, locations, characters, games, game" />
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
   </head>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-4PDLXC895H"></script>
@@ -31,6 +32,9 @@
         </div>
       </div>
     </div>
+    <div class="progress-container">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
 
     <div class="page-container" data-game="platinum">
       <div class="page-container-left">
@@ -47,9 +51,7 @@
             </div>
             <div class="checkbox-item">
               <input id="platinum-checkbox-diploma" type="checkbox" />
-              <label class="text-sm lg:tooltip" data-tip="The lead developer is in the north-westernmost house in the Hotel Grand Lake at the Valor Lakefront." for="platinum-checkbox-diploma"
-                >Get Diploma</label
-              >
+              <label class="text-sm lg:tooltip" data-tip="The lead developer is in the north-westernmost house in the Hotel Grand Lake at the Valor Lakefront." for="platinum-checkbox-diploma">Get Diploma</label>
             </div>
           </div>
           <div class="legendaries">
@@ -93,12 +95,7 @@
                 <div class="checkbox-item">
                   <input id="platinum-checkbox-cresselia" type="checkbox" />
                   <img class="pokeicon legendary" src="../images/icons/pokemon/gen4/platinum/cresselia.png" alt="Icon of Cresselia" />
-                  <label
-                    class="text-sm lg:tooltip"
-                    data-tip="Once you have obtained the National Dex, go to Canalave City and speak with the guy above the Sailor by the boat."
-                    for="platinum-checkbox-cresselia"
-                    >Cresselia</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Once you have obtained the National Dex, go to Canalave City and speak with the guy above the Sailor by the boat." for="platinum-checkbox-cresselia">Cresselia</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="platinum-checkbox-heatran" type="checkbox" />
@@ -117,20 +114,12 @@
                   <div class="checkbox-item">
                     <input id="platinum-checkbox-darkrai" type="checkbox" />
                     <img class="pokeicon legendary" src="../images/icons/pokemon/gen4/platinum/darkrai.png" alt="Icon of Darkrai" />
-                    <label
-                      class="text-sm lg:tooltip"
-                      data-tip="If you have the item Membership Pass, go to Canalave City in the motel that was previously locked."
-                      for="platinum-checkbox-darkrai"
-                      style="color: #7ac49a"
-                      >Darkrai</label
-                    >
+                    <label class="text-sm lg:tooltip" data-tip="If you have the item Membership Pass, go to Canalave City in the motel that was previously locked." for="platinum-checkbox-darkrai" style="color: #7ac49a">Darkrai</label>
                   </div>
                   <div class="checkbox-item">
                     <input id="platinum-checkbox-shaymin" type="checkbox" />
                     <img class="pokeicon legendary" src="../images/icons/pokemon/gen4/platinum/shaymin-land.png" alt="Icon of Shaymin" />
-                    <label class="text-sm lg:tooltip" data-tip="If you have the item Oak's Letter, go to the White Rock in Route 224." for="platinum-checkbox-shaymin" style="color: #7ac49a"
-                      >Shaymin</label
-                    >
+                    <label class="text-sm lg:tooltip" data-tip="If you have the item Oak's Letter, go to the White Rock in Route 224." for="platinum-checkbox-shaymin" style="color: #7ac49a">Shaymin</label>
                   </div>
                   <div class="checkbox-item">
                     <input id="platinum-checkbox-arceus" type="checkbox" />
@@ -323,9 +312,7 @@
                 </div>
                 <div class="checkbox-item">
                   <input id="platinum-checkbox-drawing-board" type="checkbox" />
-                  <label class="text-sm lg:tooltip" data-tip="Obtained from resident in Sunyshore City by bringing a Pokémon with a Naive Nature." for="platinum-checkbox-drawing-board"
-                    >Drawing Board</label
-                  >
+                  <label class="text-sm lg:tooltip" data-tip="Obtained from resident in Sunyshore City by bringing a Pokémon with a Naive Nature." for="platinum-checkbox-drawing-board">Drawing Board</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="platinum-checkbox-pokeradar-checker" type="checkbox" />
@@ -962,6 +949,37 @@
         initializeCheckboxes(cutenessribbonCheckboxes, document.querySelector(".cutenessribbon .title label"));
         initializeCheckboxes(beautyribbonCheckboxes, document.querySelector(".beautyribbon .title label"));
         initializeCheckboxes(itemsCheckboxes, document.querySelector(".items .title label"));
+      });
+    </script>
+    <script>
+      function updateProgressBar() {
+        const totalCheckboxes = document.querySelectorAll('input[type="checkbox"]').length;
+        const checkedCheckboxes = document.querySelectorAll('input[type="checkbox"]:checked').length;
+
+        const progress = (checkedCheckboxes / totalCheckboxes) * 100;
+        document.getElementById("progressBar").style.width = progress + "%";
+      }
+
+      document.querySelectorAll('input[type="checkbox"]').forEach((checkbox) => {
+        checkbox.addEventListener("change", updateProgressBar);
+      });
+
+      updateProgressBar();
+    </script>
+
+    <script>
+      function checkedAllCheckboxes() {
+        const allChecked = Array.from(checkboxes).every((checkbox) => checkbox.checked);
+
+        if (allChecked) {
+          confetti();
+        }
+      }
+
+      // Add event listeners to checkboxes
+      const checkboxes = document.querySelectorAll('.checkbox-item input[type="checkbox"]');
+      checkboxes.forEach((checkbox) => {
+        checkbox.addEventListener("change", checkedAllCheckboxes);
       });
     </script>
   </body>

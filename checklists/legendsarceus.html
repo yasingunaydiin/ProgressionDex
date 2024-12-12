@@ -10,6 +10,7 @@
     <link href="../images/icons/favicontab.ico" rel="shortcut icon" type="image/x-icon" />
     <meta name="description" content="A tool for tracking your progression in Pokemon games. Easily choose between games and track your game progress." />
     <meta name="keywords" content="pokemon, checklist, pokedex, progress, completion, speedrun, checklist, check list, locations, characters, games, game" />
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
   </head>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-4PDLXC895H"></script>
@@ -31,7 +32,9 @@
         </div>
       </div>
     </div>
-
+    <div class="progress-container">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
     <div class="page-container" data-game="legendsarceus">
       <div class="page-container-left">
         <div class="wide-panel pokedex">
@@ -46,10 +49,7 @@
             </div>
             <div class="checkbox-item">
               <input id="legendsarceus-checkbox-starters" type="checkbox" />
-              <label
-                class="text-sm lg:tooltip"
-                data-tip="After finishing the main story, the player can talk to Laventon to obtain the two first partner Pokémon that they hadn't picked."
-                for="legendsarceus-checkbox-starters"
+              <label class="text-sm lg:tooltip" data-tip="After finishing the main story, the player can talk to Laventon to obtain the two first partner Pokémon that they hadn't picked." for="legendsarceus-checkbox-starters"
                 >Obtain all starters</label
               >
             </div>
@@ -317,11 +317,7 @@
             <div class="recipes-rowcontainer">
               <div class="recipes-leftrow">
                 <div class="checkbox-item">
-                  <input id="legendsarceus-checkbox-recipe-pokeball" type="checkbox" /><img
-                    class="pokeicon item"
-                    src="../images/icons/inventory/gen8/legendsarceus/hisuian-poke.png"
-                    alt="Icon of Hisuian Poke"
-                  />
+                  <input id="legendsarceus-checkbox-recipe-pokeball" type="checkbox" /><img class="pokeicon item" src="../images/icons/inventory/gen8/legendsarceus/hisuian-poke.png" alt="Icon of Hisuian Poke" />
                   <label class="text-sm lg:tooltip" data-tip="Purchase all Poke Ball Recipes." for="legendsarceus-checkbox-recipe-pokeball">Collect all Poke Ball Recipes</label>
                 </div>
                 <div class="checkbox-item">
@@ -449,6 +445,37 @@
         initializeCheckboxes(otherCheckboxes, document.querySelector(".other .title label"));
         initializeCheckboxes(unownCheckboxes, document.querySelector(".unown .title label"));
         initializeCheckboxes(recipesCheckboxes, document.querySelector(".recipes .title label"));
+      });
+    </script>
+    <script>
+      function updateProgressBar() {
+        const totalCheckboxes = document.querySelectorAll('input[type="checkbox"]').length;
+        const checkedCheckboxes = document.querySelectorAll('input[type="checkbox"]:checked').length;
+
+        const progress = (checkedCheckboxes / totalCheckboxes) * 100;
+        document.getElementById("progressBar").style.width = progress + "%";
+      }
+
+      document.querySelectorAll('input[type="checkbox"]').forEach((checkbox) => {
+        checkbox.addEventListener("change", updateProgressBar);
+      });
+
+      updateProgressBar();
+    </script>
+
+    <script>
+      function checkedAllCheckboxes() {
+        const allChecked = Array.from(checkboxes).every((checkbox) => checkbox.checked);
+
+        if (allChecked) {
+          confetti();
+        }
+      }
+
+      // Add event listeners to checkboxes
+      const checkboxes = document.querySelectorAll('.checkbox-item input[type="checkbox"]');
+      checkboxes.forEach((checkbox) => {
+        checkbox.addEventListener("change", checkedAllCheckboxes);
       });
     </script>
   </body>
