@@ -1,121 +1,71 @@
-var currentGen = null;
+// Game list: progress from each checklist's saved summary, plus search and filters.
+const cards = [...document.querySelectorAll(".card")];
+const state = { status: null, gen: null, query: "" };
 
-function toggleGen(generationClass) {
-  var allDivs = document.querySelectorAll(".gen-row");
-
-  // Check if the current generation is already shown
-  if (currentGen === generationClass) {
-    // Show all divs
-    allDivs.forEach(function (div) {
-      div.classList.remove("hidden");
-    });
-    currentGen = null;
-  } else {
-    // Hide all divs
-    allDivs.forEach(function (div) {
-      div.classList.add("hidden");
-    });
-
-    // Show only the selected generation
-    var genDivs = document.querySelectorAll("." + generationClass);
-    genDivs.forEach(function (div) {
-      div.classList.remove("hidden");
-    });
-
-    currentGen = generationClass;
+function summary(game) {
+  try {
+    const s = JSON.parse(localStorage.getItem(`pdex-summary-${game}`));
+    if (s && s.total) return s;
+  } catch {
+    /* storage unavailable or corrupt */
   }
-  markActive("[data-gen]", "gen", currentGen);
+  return null;
 }
 
-function markActive(selector, attr, value) {
-  document.querySelectorAll(selector).forEach((chip) => chip.classList.toggle("is-active", chip.dataset[attr] === value));
+function statusOf(game) {
+  const s = summary(game);
+  if (!s || !s.done) return "new";
+  return s.done >= s.total ? "completed" : "inprogress";
 }
 
-// toggleGen1() ... toggleGen9() are called from inline onclick handlers in index.html
-for (let n = 1; n <= 9; n++) {
-  window[`toggleGen${n}`] = () => toggleGen(`generation-${n}`);
-}
-window.toggleHome = () => toggleGen("home");
-
-// Status filters (New = not started)
-let currentStatus = null;
-function toggleStatus(status) {
-  currentStatus = currentStatus === status ? null : status;
-  markActive("[data-status]", "status", currentStatus);
-  applyItemFilters();
-}
-
-// Hides cards that do not match the status chip or search box
-function applyItemFilters() {
-  const query = (document.getElementById("gameSearch")?.value || "").trim().toLowerCase();
+function apply() {
+  const q = state.query.trim().toLowerCase();
   let visible = 0;
-  document.querySelectorAll(".gen-item[data-game]").forEach((item) => {
-    const text =
-      [...item.querySelectorAll("img")]
-        .map((i) => i.alt)
-        .join(" ")
-        .toLowerCase() +
-      " " +
-      item.dataset.game;
-    const show = (currentStatus === null || getStatus(item.dataset.game) === currentStatus) && (!query || text.includes(query));
-    item.classList.toggle("hidden", !show);
+  cards.forEach((card) => {
+    const show = (!state.status || statusOf(card.dataset.game) === state.status) && (!state.gen || card.dataset.gen === state.gen) && (!q || card.dataset.name.toLowerCase().includes(q));
+    card.hidden = !show;
     if (show) visible++;
   });
-  document.querySelectorAll(".gen-row").forEach((row) => {
-    row.classList.toggle("hidden", !row.querySelector(".gen-item:not(.hidden)") && (currentStatus !== null || query !== ""));
-  });
-  const empty = document.getElementById("emptyMessage");
-  if (empty) empty.style.display = visible ? "none" : "block";
+  document.getElementById("emptyMessage").style.display = visible ? "none" : "block";
 }
-window.toggleNew = () => toggleStatus("new");
-window.toggleInProgress = () => toggleStatus("inprogress");
-window.toggleCompleted = () => toggleStatus("completed");
 
-// Progress summaries are written by checklists/js/script.js as "pdex-summary-<game>"
-function getStatus(gameId) {
-  let summary = null;
-  try {
-    summary = JSON.parse(localStorage.getItem(`pdex-summary-${gameId}`));
-  } catch {
-    /* ignore corrupt or unavailable storage */
+// progress on every card + the summary line
+const counts = { new: 0, inprogress: 0, completed: 0 };
+cards.forEach((card) => {
+  const status = statusOf(card.dataset.game);
+  counts[status]++;
+  card.dataset.status = status;
+  const s = summary(card.dataset.game);
+  const pct = s ? Math.round((s.done / s.total) * 100) : 0;
+  card.querySelector(".meter i").style.width = `${pct}%`;
+  card.querySelector(".pct").textContent = status === "new" ? "Not started" : status === "completed" ? "Completed" : `${s.done} / ${s.total} · ${pct}%`;
+  card.querySelector(".status").textContent = status === "completed" ? "\u2713 Done" : status === "inprogress" ? `${pct}%` : "";
+});
+document.getElementById("listSummary").innerHTML = `<b>${counts.completed}</b> completed &middot; <b>${counts.inprogress}</b> in progress &middot; <b>${counts.new}</b> not started`;
+
+document.querySelectorAll(".chip").forEach((chip) => {
+  chip.addEventListener("click", () => {
+    const key = chip.dataset.status ? "status" : "gen";
+    const value = chip.dataset.status || chip.dataset.gen;
+    state[key] = state[key] === value ? null : value;
+    document.querySelectorAll(key === "status" ? "[data-status].chip" : "[data-gen].chip").forEach((c) => c.classList.toggle("is-active", (c.dataset.status || c.dataset.gen) === state[key]));
+    apply();
+  });
+});
+
+const search = document.getElementById("gameSearch");
+search.addEventListener("input", () => {
+  state.query = search.value;
+  apply();
+});
+document.addEventListener("keydown", (e) => {
+  if (e.key === "/" && document.activeElement !== search) {
+    e.preventDefault();
+    search.focus();
+  } else if (e.key === "Escape" && document.activeElement === search) {
+    search.value = "";
+    state.query = "";
+    apply();
+    search.blur();
   }
-  if (!summary || !summary.done) return "new";
-  return summary.done >= summary.total ? "completed" : "inprogress";
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-  document.getElementById("gameSearch")?.addEventListener("input", applyItemFilters);
-
-  // Section headings, taken from each row's generation badge
-  // Short generation chip on every card instead of section headings
-  document.querySelectorAll(".gen-row").forEach((row) => {
-    row.querySelectorAll(".badge span:last-child").forEach((chip) => (chip.textContent = chip.textContent.replace("Generation", "Gen")));
-  });
-  document.querySelector(".games-container")?.insertAdjacentHTML("beforeend", '<p class="empty" id="emptyMessage">No games match your filters.</p>');
-
-  const counts = { new: 0, inprogress: 0, completed: 0 };
-  document.querySelectorAll(".gen-item[data-game]").forEach((item) => {
-    const gameId = item.dataset.game;
-    const status = getStatus(gameId);
-    const show = (name, on) => {
-      const badge = document.getElementById(`${name}Badge_${gameId}`);
-      if (badge) badge.style.display = on ? "inline" : "none";
-    };
-    show("inProgress", status === "inprogress");
-    show("completed", status === "completed");
-    counts[status]++;
-
-    // Progress bar from the summary the checklist page saved
-    try {
-      const sum = JSON.parse(localStorage.getItem(`pdex-summary-${gameId}`));
-      if (sum && sum.done) {
-        const pct = Math.round((sum.done / sum.total) * 100);
-        item.querySelector("button")?.insertAdjacentHTML("beforebegin", `<div class="progress show"><span>${sum.done} / ${sum.total} (${pct}%)</span><i><b style="width:${pct}%"></b></i></div>`);
-      }
-    } catch {
-      /* ignore */
-    }
-  });
-  const summary = document.getElementById("listSummary");
-  if (summary) summary.innerHTML = `<b>${counts.completed}</b> completed &middot; <b>${counts.inprogress}</b> in progress &middot; <b>${counts.new}</b> not started`;
 });
