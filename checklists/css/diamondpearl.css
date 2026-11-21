@@ -30,20 +30,6 @@
   margin-left: 40px;
   margin-right: 40px;
 }
-* {
-  font-family:
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    Segoe UI,
-    Roboto,
-    Oxygen,
-    Ubuntu,
-    Cantarell,
-    Fira Sans,
-    Droid Sans,
-    Helvetica Neue;
-}
 .pokeicon.trophy {
   height: 20px;
   margin-right: 5px;
@@ -64,12 +50,10 @@
   padding: 0 18px;
   display: none;
 }
-/* Header */
 
 #female {
   color: pink;
 }
-/* Pokeicon */
 
 .pokeicon {
   height: 40px;
@@ -79,15 +63,6 @@
   margin-right: 5px;
   margin-left: 5px;
 }
-/* Logo Container */
-
-/* Links */
-
-a {
-  text-decoration: none;
-  color: #fff;
-}
-/* Body */
 
 body {
   margin: 0;
@@ -98,24 +73,12 @@ body {
   display: flex;
   flex-direction: column;
 }
-/* Page Container */
-
-.checkbox-item input[type="checkbox"] {
-  margin-right: 5px;
-  /* Adjust this value to control the space between the checkbox and the label */
-}
 .page-container {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
   align-items: baseline;
 }
-/* Span */
-
-span {
-  pointer-events: none;
-}
-/* Wide Panel */
 
 .wide-panel {
   text-align: center;
@@ -140,12 +103,6 @@ span {
   font-weight: 1000;
   color: #7a95c4;
 }
-.checkbox-item {
-  margin-bottom: 10px;
-  display: flex;
-  align-items: center;
-}
-/* Footer */
 
 footer {
   height: 50px;
@@ -158,18 +115,12 @@ footer {
   align-items: center;
   font-size: 1vw;
 }
-footer ul {
-  display: flex;
-  list-style: circle;
-  padding: 0;
-}
 footer li {
   margin-right: 10px;
   text-decoration: none;
   list-style: none;
   font-size: 15px;
 }
-/* Event container */
 
 @media only screen and (max-width: 768px) {
   /* Constant */
@@ -210,20 +161,4 @@ footer li {
   .pokeicon.unown {
     height: 30px;
   }
-}
-/* Progress Bar Styles */
-.progress-container {
-  width: 100%;
-  background-color: #f3f3f3;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1001;
-}
-
-.progress-bar {
-  width: 0%;
-  height: 5px;
-  background-color: #4caf50;
-  transition: width 0.5s ease-in-out;
 }

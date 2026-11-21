@@ -1,0 +1,50 @@
+/* Rules shared by every game page. Per-game files add the accent colour, pattern and game-specific layout. */
+* {
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    Segoe UI,
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    Fira Sans,
+    Droid Sans,
+    Helvetica Neue;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+span {
+  pointer-events: none;
+}
+.checkbox-item {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+.checkbox-item input[type="checkbox"] {
+  margin-right: 5px;
+  /* Adjust this value to control the space between the checkbox and the label */
+}
+footer ul {
+  display: flex;
+  list-style: circle;
+  padding: 0;
+}
+.progress-container {
+  width: 100%;
+  background-color: #f3f3f3;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1001;
+}
+.progress-bar {
+  width: 0%;
+  height: 5px;
+  background-color: #4caf50;
+  transition: width 0.5s ease-in-out;
+}

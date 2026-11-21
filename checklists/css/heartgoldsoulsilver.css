@@ -1,19 +1,3 @@
-* {
-  font-family:
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    Segoe UI,
-    Roboto,
-    Oxygen,
-    Ubuntu,
-    Cantarell,
-    Fira Sans,
-    Droid Sans,
-    Helvetica Neue;
-}
-/* Header */
-
 .legendaries,
 .giftpokemon,
 .ingametrades,
@@ -72,7 +56,6 @@
 #female {
   color: pink;
 }
-/* Pokeicon */
 
 .pokeicon {
   height: 40px;
@@ -85,17 +68,10 @@
 .pokeicon.npc {
   height: 30px;
 }
-/* Logo Container */
 
 .icon-small {
   height: 25px;
   margin-left: 5px;
-}
-/* Links */
-
-a {
-  text-decoration: none;
-  color: #fff;
 }
 .pokeicon.unown {
   height: 30px;
@@ -104,7 +80,6 @@ a {
   margin-left: 40px;
   margin-right: 40px;
 }
-/* Body */
 
 body {
   margin: 0;
@@ -115,24 +90,12 @@ body {
   display: flex;
   flex-direction: column;
 }
-/* Page Container */
-
-.checkbox-item input[type="checkbox"] {
-  margin-right: 5px;
-  /* Adjust this value to control the space between the checkbox and the label */
-}
 .page-container {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
   align-items: baseline;
 }
-/* Span */
-
-span {
-  pointer-events: none;
-}
-/* Wide Panel */
 
 .wide-panel {
   text-align: center;
@@ -150,7 +113,6 @@ span {
   margin-bottom: 50px;
   margin-top: 50px;
 }
-/* Panel Label */
 
 .panel-label {
   display: block;
@@ -159,14 +121,6 @@ span {
   font-weight: 1000;
   color: #ffb346;
 }
-/* Checkbox Item */
-
-.checkbox-item {
-  margin-bottom: 10px;
-  display: flex;
-  align-items: center;
-}
-/* Footer */
 
 footer {
   height: 50px;
@@ -179,18 +133,12 @@ footer {
   align-items: center;
   font-size: 1vw;
 }
-footer ul {
-  display: flex;
-  list-style: circle;
-  padding: 0;
-}
 footer li {
   margin-right: 10px;
   text-decoration: none;
   list-style: none;
   font-size: 15px;
 }
-/* Event container */
 
 .event-right {
   display: flex;
@@ -239,20 +187,4 @@ footer li {
   .pokeicon.unown {
     height: 30px;
   }
-}
-/* Progress Bar Styles */
-.progress-container {
-  width: 100%;
-  background-color: #f3f3f3;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1001;
-}
-
-.progress-bar {
-  width: 0%;
-  height: 5px;
-  background-color: #4caf50;
-  transition: width 0.5s ease-in-out;
 }
