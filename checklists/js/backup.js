@@ -33,8 +33,13 @@
   }
 
   document.addEventListener("DOMContentLoaded", () => {
-    const bar = document.createElement("div");
-    bar.style.cssText = "position:fixed;right:12px;bottom:12px;z-index:1100;display:flex;gap:8px";
+    // Sit in the checklist toolbar when there is one; otherwise float in the corner (list page).
+    const host = document.querySelector(".toolbar-extra");
+    const bar = host || document.createElement("div");
+    if (!host) {
+      bar.style.cssText = "position:fixed;right:12px;bottom:12px;z-index:1100;display:flex;gap:8px";
+      document.body.append(bar);
+    }
     const make = (text, onClick) => {
       const b = document.createElement("button");
       b.type = "button";
@@ -50,6 +55,5 @@
       make("Import progress", () => input.click()),
       input,
     );
-    document.body.append(bar);
   });
 })();

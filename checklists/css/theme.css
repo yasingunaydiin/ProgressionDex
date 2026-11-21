@@ -1,0 +1,594 @@
+/*
+ * Progression Dex - checklist theme.
+ * Loaded after base.css, <game>.css and output.css. Each game sets --accent in its own file.
+ * Every collectible becomes a tile in a responsive grid; the whole tile is clickable.
+ */
+
+:root {
+  --bg: #f3f4f8;
+  --bg-veil: rgba(243, 244, 248, 0.86);
+  --card: #ffffff;
+  --tile: #f7f8fb;
+  --text: #1c2233;
+  --muted: #667085;
+  --line: #e2e5ec;
+  --line-strong: #b9c0cf;
+  --shadow: 0 1px 2px rgba(16, 24, 40, 0.05), 0 10px 30px rgba(16, 24, 40, 0.07);
+  --cols: repeat(auto-fill, minmax(140px, 1fr));
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #11141b;
+    --bg-veil: rgba(17, 20, 27, 0.9);
+    --card: #1a1f2a;
+    --tile: #212736;
+    --text: #e9ecf4;
+    --muted: #9aa3b7;
+    --line: #2b3243;
+    --line-strong: #4a5368;
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 10px 30px rgba(0, 0, 0, 0.35);
+  }
+}
+
+/* ---------- page ---------- */
+
+body {
+  color: var(--text);
+  min-height: 100vh;
+}
+
+/* Fade the game's pattern so it is decoration, not noise */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: var(--bg-veil);
+  pointer-events: none;
+}
+
+.page-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 560px), 1fr));
+  align-items: start;
+  gap: 24px;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 104px 16px 40px;
+}
+
+.page-container-left,
+.page-container-right {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  min-width: 0;
+}
+
+/* ---------- top bar ---------- */
+
+.navbar {
+  width: min(1280px, calc(100% - 24px)) !important;
+  background: color-mix(in srgb, var(--card) 88%, transparent) !important;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--line);
+  border-radius: 18px !important;
+  box-shadow: var(--shadow) !important;
+  min-height: 0;
+  padding: 6px 14px;
+}
+
+.navbar .title {
+  color: var(--text) !important;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.navbar img {
+  height: 44px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.15s ease;
+}
+
+.navbar img[data-theme-color] {
+  cursor: pointer;
+}
+
+.navbar img[data-theme-color]:hover {
+  transform: translateY(-2px) scale(1.05);
+}
+
+.progress-container {
+  background: transparent;
+}
+
+.progress-bar {
+  background: var(--accent);
+  height: 4px;
+  border-radius: 0 4px 4px 0;
+}
+
+/* ---------- toolbar (injected by script.js) ---------- */
+
+.toolbar {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 14px;
+  padding: 12px 16px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+}
+
+.toolbar .summary {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-right: auto;
+  min-width: 160px;
+}
+
+.toolbar .summary strong {
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
+.toolbar .summary small {
+  color: var(--muted);
+}
+
+.toolbar input[type="search"] {
+  appearance: none;
+  border: 1px solid var(--line-strong);
+  background: var(--tile);
+  color: var(--text);
+  border-radius: 10px;
+  padding: 7px 12px;
+  min-width: 180px;
+  font-size: 0.9rem;
+}
+
+.toolbar input[type="search"]:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+.toolbar .btn,
+.toolbar button {
+  min-height: 0;
+  height: 34px;
+  border-radius: 10px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-transform: none;
+  background: var(--tile);
+  color: var(--text);
+  border: 1px solid var(--line-strong);
+  box-shadow: none;
+  cursor: pointer;
+  padding: 0 12px;
+}
+
+.toolbar button:hover {
+  border-color: var(--accent);
+}
+
+.toolbar button[aria-pressed="true"] {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.55);
+}
+
+/* ---------- panels ---------- */
+
+.page-container .wide-panel {
+  width: auto;
+  max-width: none;
+  margin: 0;
+  padding: 22px 22px 26px;
+  display: block;
+  text-align: left;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+}
+
+.page-container .wide-panel .panel-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 6px;
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+
+.wide-panel .panel-label::before {
+  content: "";
+  width: 8px;
+  height: 22px;
+  border-radius: 4px;
+  background: var(--accent);
+}
+
+/* Sections: every direct <div> of a panel is a grid of tiles */
+.page-container .wide-panel > div {
+  display: grid;
+  grid-template-columns: var(--cols);
+  gap: 10px;
+  align-items: stretch;
+  margin: 18px 0 0;
+  padding: 18px 0 0;
+  border-top: 1px solid var(--line);
+}
+
+.page-container .wide-panel > .panel-label + div {
+  border-top: 0;
+  padding-top: 6px;
+  margin-top: 8px;
+}
+
+.page-container .wide-panel > div:has(.leaguecard, .leaguecards) {
+  --cols: repeat(auto-fill, minmax(176px, 1fr));
+}
+
+/* Old row wrappers just pass their children up to the grid */
+.page-container .wide-panel div div:not(.checkbox-item):not(.content) {
+  display: contents;
+}
+
+/* ---------- section titles ---------- */
+
+.page-container .checkbox-item:has(> .title) {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: 0;
+  border-radius: 0;
+  cursor: default;
+}
+
+.page-container .checkbox-item > .title {
+  pointer-events: auto;
+}
+
+.page-container .checkbox-item > .title label {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text);
+  text-decoration: none !important;
+  cursor: inherit;
+}
+
+/* Top-level section header (gets .section-head from script.js) */
+.checkbox-item.section-head {
+  cursor: pointer;
+  user-select: none;
+  padding-bottom: 2px;
+}
+
+.section-head .count {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.section-head .meter {
+  width: 64px;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--line);
+  overflow: hidden;
+}
+
+.section-head .meter i {
+  display: block;
+  height: 100%;
+  width: 0;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+
+.section-head .chevron {
+  width: 18px;
+  height: 18px;
+  color: var(--muted);
+  transition: transform 0.2s ease;
+}
+
+.is-collapsed .section-head .chevron {
+  transform: rotate(-90deg);
+}
+
+.is-complete .section-head .count {
+  color: #12805c;
+}
+
+.is-complete .section-head .count::before {
+  content: "\2713";
+}
+
+@media (prefers-color-scheme: dark) {
+  .is-complete .section-head .count {
+    color: #4fd1a1;
+  }
+}
+
+.page-container .wide-panel > div.is-collapsed {
+  row-gap: 0;
+}
+
+.wide-panel > div.is-collapsed > :not(:first-child) {
+  display: none;
+}
+
+/* Sub-headings inside a section ("Johto Legendaries") */
+.page-container .checkbox-item:has(> .title):not(.section-head) {
+  margin-top: 8px;
+}
+
+.page-container .checkbox-item:has(> .title):not(.section-head) > .title label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ---------- tiles ---------- */
+
+.page-container .checkbox-item:not(:has(> .title)) {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+  gap: 6px 4px;
+  min-height: 64px;
+  margin: 0;
+  padding: 28px 8px 10px;
+  text-align: center;
+  background: var(--tile);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  cursor: pointer;
+  transition:
+    border-color 0.15s ease,
+    background-color 0.15s ease,
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.page-container .checkbox-item:not(:has(> .title)):hover {
+  border-color: var(--accent);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(16, 24, 40, 0.1);
+}
+
+/* text-only items read as compact rows */
+.page-container .checkbox-item:not(:has(> .title)):not(:has(img)) {
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  gap: 10px;
+  padding: 10px 12px;
+  text-align: left;
+}
+
+.page-container .checkbox-item:not(:has(> .title)):not(:has(img)) input[type="checkbox"] {
+  position: static;
+}
+
+.page-container .checkbox-item:not(:has(> .title)):not(:has(img)) label {
+  width: auto;
+  flex: 1;
+}
+
+.page-container .checkbox-item input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  flex: none;
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  border: 2px solid var(--line-strong);
+  border-radius: 6px;
+  background: var(--card) center / 100% no-repeat;
+  cursor: pointer;
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.page-container .checkbox-item input[type="checkbox"]:checked {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3.5 8.5l3 3 6-6.5' stroke='%23000' stroke-opacity='.55' stroke-width='3.2'/%3E%3Cpath d='M3.5 8.5l3 3 6-6.5' stroke='%23fff' stroke-width='1.8'/%3E%3C/svg%3E");
+}
+
+.page-container .checkbox-item input[type="checkbox"]:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.page-container .checkbox-item:not(:has(> .title)):has(input:checked) {
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 17%, var(--card));
+}
+
+.page-container .checkbox-item:has(input:checked) > img {
+  filter: none;
+}
+
+.page-container .checkbox-item:not(:has(> .title)) img {
+  order: 1;
+  width: auto;
+  max-width: 100%;
+  height: 48px;
+  margin: 0;
+  object-fit: contain;
+  image-rendering: auto;
+}
+
+.page-container .checkbox-item:not(:has(> .title)) img.leaguecard,
+.page-container .checkbox-item:not(:has(> .title)) img.leaguecards {
+  height: auto;
+  max-height: 160px;
+  border-radius: 8px;
+}
+
+.page-container .checkbox-item:not(:has(> .title)) img.gif,
+.page-container .checkbox-item:not(:has(> .title)) img.trophy,
+.page-container .checkbox-item:not(:has(> .title)) img.sticker,
+.page-container .checkbox-item:not(:has(> .title)) img.vivillion {
+  height: 60px;
+}
+
+.page-container .checkbox-item:not(:has(> .title)) label {
+  order: 2;
+  width: 100%;
+  margin: 0;
+  font-size: 0.82rem;
+  line-height: 1.3;
+  font-weight: 500;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.page-container .checkbox-item:not(:has(> .title)):has(input:checked) label {
+  font-weight: 600;
+}
+
+/* Keep the DaisyUI tooltip readable */
+.page-container .checkbox-item .tooltip::before {
+  max-width: 260px;
+  white-space: normal;
+  text-align: left;
+  font-size: 0.78rem;
+  z-index: 30;
+}
+
+.page-container .checkbox-item {
+  z-index: 0;
+}
+
+.page-container .checkbox-item:hover {
+  z-index: 5;
+}
+
+/* ---------- collapsible groups (TM/TR lists) ---------- */
+
+.collapsible {
+  grid-column: 1 / -1;
+  width: 100% !important;
+  padding: 12px 16px !important;
+  background: var(--tile) !important;
+  color: var(--text);
+  border: 1px solid var(--line) !important;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+.content {
+  display: none;
+  grid-column: 1 / -1;
+  padding: 0 !important;
+}
+
+.content.open {
+  display: grid;
+  grid-template-columns: var(--cols);
+  gap: 10px;
+}
+
+/* ---------- filtering ---------- */
+
+body.hide-done .checkbox-item:not(:has(> .title)):has(input:checked),
+.checkbox-item.is-filtered {
+  display: none !important;
+}
+
+/* ---------- footer ---------- */
+
+footer {
+  width: 100%;
+  height: auto !important;
+  margin-top: auto;
+  padding: 22px 16px 30px;
+  background: transparent !important;
+  color: var(--muted);
+  font-size: 0.85rem !important;
+}
+
+footer a {
+  color: var(--muted);
+}
+
+footer a:hover {
+  color: var(--text);
+}
+
+footer ul {
+  gap: 4px 18px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* ---------- small screens ---------- */
+
+@media (max-width: 700px) {
+  .page-container {
+    padding-top: 92px;
+    gap: 16px;
+  }
+
+  .page-container .wide-panel {
+    padding: 16px 14px 20px;
+    border-radius: 16px;
+  }
+
+  :root {
+    --cols: repeat(auto-fill, minmax(112px, 1fr));
+  }
+
+  .toolbar .summary {
+    flex-basis: 100%;
+  }
+
+  .toolbar input[type="search"] {
+    flex: 1 1 100%;
+  }
+
+  .section-head .meter {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}

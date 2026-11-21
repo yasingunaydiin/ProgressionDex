@@ -4,127 +4,139 @@
     <meta charset="UTF-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>ProgressionDex | Log your 100% progression</title>
+    <link href="site.css" rel="stylesheet" />
     <link href="styles.css" rel="stylesheet" />
     <link href="images/icons/favicontab.ico" rel="icon" type="image/x-icon" />
     <link href="images/icons/favicontab.ico" rel="shortcut icon" type="image/x-icon" />
-    <link href="output.css" rel="stylesheet" />
     <meta name="description" content="A tool for tracking your progression in Pokemon games. Easily choose between games and track your game progress." />
     <meta name="keywords" content="pokemon, checklist, pokedex, progress, completion, speedrun, checklist, check list, locations, characters, games, game" />
-  </head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4PDLXC895H"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4PDLXC895H"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-    gtag("config", "G-4PDLXC895H");
-  </script>
+      gtag("config", "G-4PDLXC895H");
+    </script>
+  </head>
   <body>
-    <div class="container">
-      <div class="header-left">
+    <nav class="site-nav">
+      <a class="brand" href="index.html"><img alt="" src="images/icons/ProgressionDex_logo.png" /> Progression Dex</a>
+      <a class="link spacer" href="#features">Features</a>
+      <a class="link" href="#faq">FAQ</a>
+      <a class="button primary" style="height: 36px; padding: 0 14px" href="list/index.html">Open games</a>
+    </nav>
+
+    <main>
+      <section class="hero">
         <div>
-          <h1>Progression Dex</h1>
-          <p>
-            A tool for tracking your 100% progression. <br />
-            Easily choose games and track your game progress.
-          </p>
-          <div>
-            <a href="list/index.html"><h1 class="btn btn-primary">Continue without creating an account</h1></a>
+          <span class="eyebrow">Free &middot; no account</span>
+          <h1>Track your <span>100%</span> in every Pok&eacute;mon game</h1>
+          <p>Pick a game, tick off Pok&eacute;mon, items, ribbons and more, and watch your progress fill up. Everything is saved in your browser.</p>
+          <div class="actions">
+            <a class="button primary" href="list/index.html">Choose your game</a>
+            <a class="button" href="#features">See how it works</a>
           </div>
         </div>
-      </div>
-      <div class="header-right">
-        <img alt="Header image" class="header-image skew-y-12" src="images/images/index1.png" />
-      </div>
-    </div>
+        <div class="hero-shot">
+          <img alt="A Progression Dex checklist with collectible tiles and a progress bar" src="images/images/hero.webp" width="1400" height="900" />
+        </div>
+      </section>
 
-    <div id="chevronIcon" class="chevron-container">
-      <svg class="chevron-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
-        <path id="bottomChevron" d="m7 15 5 5 5-5" style="display: none" />
-        <path id="topChevron" d="m7 9 5-5 5 5" style="display: block" />
-      </svg>
-    </div>
+      <section class="section" id="features">
+        <h2>Everything for a full completion run</h2>
+        <p class="lead">Each game has its own checklist, colors and progress bar, so you always know what is left.</p>
+        <div class="features">
+          <div class="feature">
+            <div class="icon">&#9745;</div>
+            <h3>26 checklists</h3>
+            <p>From Red and Blue to Scarlet and Violet, plus Pok&eacute;mon Home: Pok&eacute;dex, legendaries, mega stones, ribbons and more.</p>
+          </div>
+          <div class="feature">
+            <div class="icon">&#128200;</div>
+            <h3>Live progress</h3>
+            <p>Per-section counters, a progress bar and confetti when you hit 100%. Games show In Progress or Completed on the list.</p>
+          </div>
+          <div class="feature">
+            <div class="icon">&#128269;</div>
+            <h3>Search and filter</h3>
+            <p>Find any item instantly, hide what you already collected, and collapse sections you have finished.</p>
+          </div>
+          <div class="feature">
+            <div class="icon">&#128190;</div>
+            <h3>Yours to keep</h3>
+            <p>Progress lives in your browser. Export it to a file to back it up or move to another device.</p>
+          </div>
+        </div>
+      </section>
 
-    <!-- Add this section inside your existing HTML, before the footer -->
-    <section class="faq-minimal">
-      <h2>Frequently Asked Questions</h2>
-      <div class="faq-container">
-        <div class="faq-item">
-          <h3>What is ProgressionDex?</h3>
-          <p>ProgressionDex is a tool designed to help gamers track their 100% completion progress across various games, providing detailed insights and progress tracking capabilities.</p>
+      <section class="section" id="faq">
+        <h2>Frequently asked questions</h2>
+        <div class="faq">
+          <details>
+            <summary>What is ProgressionDex?</summary>
+            <p>ProgressionDex is a tool designed to help gamers track their 100% completion progress across various games, providing detailed insights and progress tracking capabilities.</p>
+          </details>
+          <details>
+            <summary>Is ProgressionDex free?</summary>
+            <p>Yes, ProgressionDex is completely free. Users can track progress, and manage their game completion journey without any costs.</p>
+          </details>
+          <details>
+            <summary>Is the platform suitable for all users?</summary>
+            <p>Yes, ProgressionDex has a user-friendly interface that makes it accessible for users of all experience levels.</p>
+          </details>
+          <details>
+            <summary>How can I start using ProgressionDex?</summary>
+            <p>Getting started is easy! Click &ldquo;Choose your game&rdquo;, select your game, and begin tracking your progress.</p>
+          </details>
+          <details>
+            <summary>Where is my progress stored?</summary>
+            <p>In your browser only. Use Export progress on any page to save a backup file, and Import progress to restore it.</p>
+          </details>
         </div>
-        <div class="faq-item">
-          <h3>Is ProgressionDex free?</h3>
-          <p>Yes, ProgressionDex is completely free. Users can track progress, and manage their game completion journey without any costs.</p>
-        </div>
-        <div class="faq-item">
-          <h3>Is the platform suitable for all users?</h3>
-          <p>Yes, ProgressionDex has a user-friendly interface that makes it accessible for users of all experience levels.</p>
-        </div>
-        <div class="faq-item">
-          <h3>How can I start using ProgressionDex?</h3>
-          <p>Getting started is easy! Click the "Continue without creating an account" button, select your game, and begin tracking your progress.</p>
-        </div>
-      </div>
-    </section>
-    <footer>Made with <img alt="Icons of Pokemon" id="dynamicImage" style="margin: 8px; height: 40px" /> in a Cafe</footer>
+      </section>
+    </main>
+
+    <footer class="site-footer">Made with <img alt="Icons of Pokemon" id="dynamicImage" /> in a Cafe</footer>
+
+    <script>
+      // Random Gigantamax sprite in the footer
+      const sprites = [
+        "alcremie",
+        "appletun",
+        "blastoise",
+        "butterfree",
+        "centiskorch",
+        "charizard",
+        "cinderace",
+        "coalossal",
+        "copperajah",
+        "eevee",
+        "flapple",
+        "garbodor",
+        "gengar",
+        "grimmsnarl",
+        "hatterene",
+        "inteleon",
+        "lapras",
+        "machamp",
+        "melmetal",
+        "meowth",
+        "orbeetle",
+        "pikachu",
+        "rillaboom",
+        "sandaconda",
+        "snorlax",
+        "toxtricity",
+        "venusaur",
+        "kingler",
+        "corviknight",
+      ];
+      const pick = sprites[Math.floor(Math.random() * sprites.length)];
+      document.getElementById("dynamicImage").src = `images/icons/pokemon/gen8/swordshield/gigantamax/${pick}-gigantamax.png`;
+    </script>
   </body>
-  <script>
-    const toggleChevron = () => {
-      const atTop = window.scrollY === 0;
-      document.getElementById("bottomChevron").style.display = atTop ? "block" : "none";
-      document.getElementById("topChevron").style.display = atTop ? "none" : "block";
-    };
-
-    window.addEventListener("scroll", toggleChevron);
-    window.addEventListener("load", toggleChevron);
-  </script>
-
-  <script>
-    // Array of image URLs
-    var images = [
-      "images/icons/pokemon/gen8/swordshield/gigantamax/alcremie-gigantamax.png",
-      "images/icons/pokemon/gen8/swordshield/gigantamax/appletun-gigantamax.png",
-      "images/icons/pokemon/gen8/swordshield/gigantamax/blastoise-gigantamax.png",
-      "images/icons/pokemon/gen8/swordshield/gigantamax/butterfree-gigantamax.png",
-      "images/icons/pokemon/gen8/swordshield/gigantamax/centiskorch-gigantamax.png",
-      "images/icons/pokemon/gen8/swordshield/gigantamax/charizard-gigantamax.png",
-      "images/icons/pokemon/gen8/swordshield/gigantamax/cinderace-gigantamax.png",
-      "images/icons/pokemon/gen8/swordshield/gigantamax/coalossal-gigantamax.png",
-      "images/icons/pokemon/gen8/swordshield/gigantamax/copperajah-gigantamax.png",
-      "images/icons/pokemon/gen8/swordshield/gigantamax/eevee-gigantamax.png",
-      "images/icons/pokemon/gen8/swordshield/gigantamax/flapple-gigantamax.png",
-      "images/icons/pokemon/gen8/swordshield/gigantamax/garbodor-gigantamax.png",
-      "images/icons/pokemon/gen8/swordshield/gigantamax/gengar-gigantamax.png",
-      "images/icons/pokemon/gen8/swordshield/gigantamax/grimmsnarl-gigantamax.png",
-      "images/icons/pokemon/gen8/swordshield/gigantamax/hatterene-gigantamax.png",
-      "images/icons/pokemon/gen8/swordshield/gigantamax/inteleon-gigantamax.png",
-      "images/icons/pokemon/gen8/swordshield/gigantamax/lapras-gigantamax.png",
-      "images/icons/pokemon/gen8/swordshield/gigantamax/machamp-gigantamax.png",
-      "images/icons/pokemon/gen8/swordshield/gigantamax/melmetal-gigantamax.png",
-      "images/icons/pokemon/gen8/swordshield/gigantamax/meowth-gigantamax.png",
-      "images/icons/pokemon/gen8/swordshield/gigantamax/orbeetle-gigantamax.png",
-      "images/icons/pokemon/gen8/swordshield/gigantamax/pikachu-gigantamax.png",
-      "images/icons/pokemon/gen8/swordshield/gigantamax/rillaboom-gigantamax.png",
-      "images/icons/pokemon/gen8/swordshield/gigantamax/sandaconda-gigantamax.png",
-      "images/icons/pokemon/gen8/swordshield/gigantamax/snorlax-gigantamax.png",
-      "images/icons/pokemon/gen8/swordshield/gigantamax/toxtricity-gigantamax.png",
-      "images/icons/pokemon/gen8/swordshield/gigantamax/urshifu-gigantamax-rapid-strike.png",
-      "images/icons/pokemon/gen8/swordshield/gigantamax/venusaur-gigantamax.png",
-      "images/icons/pokemon/gen8/swordshield/gigantamax/kingler-gigantamax.png",
-      "images/icons/pokemon/gen8/swordshield/gigantamax/corviknight-gigantamax.png",
-      "images/icons/pokemon/gen8/swordshield/gigantamax/urshifu-gigantamax-single-strike.png",
-    ];
-
-    // Function to change the image
-    const changeImage = () => {
-      document.getElementById("dynamicImage").src = images[Math.floor(Math.random() * images.length)];
-    };
-
-    // Call changeImage function when page loads
-    window.onload = changeImage;
-  </script>
 </html>

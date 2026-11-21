@@ -1,3 +1,6 @@
+:root {
+  --accent: #158b8c;
+}
 .collapsible {
   background-color: #f1f1f1;
   cursor: pointer;

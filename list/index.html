@@ -3,54 +3,59 @@
   <head>
     <meta charset="UTF-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="../site.css" rel="stylesheet" />
     <link href="styles.css" rel="stylesheet" />
-    <link href="../output.css" rel="stylesheet" />
     <link href="../images/icons/favicontab.ico" rel="icon" type="image/x-icon" />
     <link href="../images/icons/favicontab.ico" rel="shortcut icon" type="image/x-icon" />
     <title>Progression Dex | Choose your game</title>
     <meta name="description" content="A tool for tracking your progression in Pokemon games. Easily choose between games and track your game progress." />
     <meta name="keywords" content="pokemon, checklist, pokedex, progress, completion, speedrun, checklist, check list, locations, characters, games, game" />
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4PDLXC895H"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-4PDLXC895H");
+    </script>
   </head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4PDLXC895H"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
-
-    gtag("config", "G-4PDLXC895H");
-  </script>
   <body>
-    <div class="navbar bg-white rounded-3xl shadow-lg fixed mt-2 top-0" style="width: 95%; z-index: 1000; left: 50%; transform: translateX(-50%)">
-      <div class="flex-1">
-        <a href="../index.html" class="btn btn-ghost text-2xl text-blue-950">Progression Dex</a>
-      </div>
-    </div>
+    <nav class="site-nav">
+      <a class="brand" href="../index.html"><img alt="" src="../images/icons/ProgressionDex_logo.png" /> Progression Dex</a>
+      <span class="spacer"></span>
+      <a class="link" href="../index.html#faq">FAQ</a>
+    </nav>
 
-    <div class="filter flex justify-center">
-      <a onclick="toggleNew()" class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-800 ring-1 ring-inset ring-blue-600/20">New</a>
-      <a onclick="toggleInProgress()" class="ml-3 inline-flex items-center rounded-md bg-yellow-50 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-inset ring-yellow-600/20">In Progress</a>
-      <a onclick="toggleCompleted()" class="ml-3 inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-800 ring-1 ring-inset ring-green-600/20">Completed</a>
-    </div>
-    <div class="filter flex justify-center mt-1">
-      <div class="generations">
-        <a onclick="toggleGen1()" class="mt-3 inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-800 ring-1 ring-inset ring-red-600/20">Gen 1</a>
-        <a onclick="toggleGen2()" class="mt-3 ml-3 inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-800 ring-1 ring-inset ring-red-600/20">Gen 2</a>
-        <a onclick="toggleGen3()" class="mt-3 ml-3 inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-800 ring-1 ring-inset ring-red-600/20">Gen 3</a>
-        <a onclick="toggleGen4()" class="mt-3 ml-3 inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-800 ring-1 ring-inset ring-red-600/20">Gen 4</a>
-        <a onclick="toggleGen5()" class="mt-3 ml-3 inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-800 ring-1 ring-inset ring-red-600/20">Gen 5</a>
-        <a onclick="toggleGen6()" class="mt-3 ml-3 inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-800 ring-1 ring-inset ring-red-600/20">Gen 6</a>
-        <a onclick="toggleGen7()" class="mt-3 ml-3 inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-800 ring-1 ring-inset ring-red-600/20">Gen 7</a>
-        <a onclick="toggleGen8()" class="mt-3 ml-3 inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-800 ring-1 ring-inset ring-red-600/20">Gen 8</a>
-        <a onclick="toggleGen9()" class="mt-3 ml-3 inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-800 ring-1 ring-inset ring-red-600/20">Gen 9</a>
-        <a onclick="toggleHome()" class="mt-3 ml-3 inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-800 ring-1 ring-inset ring-red-600/20">Home</a>
+    <header class="list-head">
+      <h1>Choose your game</h1>
+      <p>Pick a game to open its checklist. Games you have started show their progress.</p>
+      <div class="filters">
+        <input type="search" id="gameSearch" placeholder="Search games..." aria-label="Search games" />
+        <div class="chips" role="group" aria-label="Filter by status">
+          <button type="button" class="chip" data-status="new" onclick="toggleNew()">Not started</button>
+          <button type="button" class="chip" data-status="inprogress" onclick="toggleInProgress()">In progress</button>
+          <button type="button" class="chip" data-status="completed" onclick="toggleCompleted()">Completed</button>
+        </div>
+        <div class="chips" role="group" aria-label="Filter by generation">
+          <button type="button" class="chip" data-gen="generation-1" onclick="toggleGen1()">Gen 1</button>
+          <button type="button" class="chip" data-gen="generation-2" onclick="toggleGen2()">Gen 2</button>
+          <button type="button" class="chip" data-gen="generation-3" onclick="toggleGen3()">Gen 3</button>
+          <button type="button" class="chip" data-gen="generation-4" onclick="toggleGen4()">Gen 4</button>
+          <button type="button" class="chip" data-gen="generation-5" onclick="toggleGen5()">Gen 5</button>
+          <button type="button" class="chip" data-gen="generation-6" onclick="toggleGen6()">Gen 6</button>
+          <button type="button" class="chip" data-gen="generation-7" onclick="toggleGen7()">Gen 7</button>
+          <button type="button" class="chip" data-gen="generation-8" onclick="toggleGen8()">Gen 8</button>
+          <button type="button" class="chip" data-gen="generation-9" onclick="toggleGen9()">Gen 9</button>
+          <button type="button" class="chip" data-gen="home" onclick="toggleHome()">Home</button>
+        </div>
       </div>
-    </div>
+    </header>
 
-    <div class="games-container">
+    <main class="games-container">
       <div class="gen-row generation-1">
         <div class="gen-container">
           <div class="gen-item" data-game="redblue">
@@ -383,6 +388,6 @@
       </div>
       <script src="script.js"></script>
       <script src="../checklists/js/backup.js"></script>
-    </div>
+    </main>
   </body>
 </html>
