@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>ProgressionDex | Log your 100% progression</title>
-    <link href="site.css" rel="stylesheet" />
     <link href="styles.css" rel="stylesheet" />
     <link href="images/icons/favicontab.ico" rel="icon" type="image/x-icon" />
     <link href="images/icons/favicontab.ico" rel="shortcut icon" type="image/x-icon" />
@@ -23,81 +22,34 @@
     </script>
   </head>
   <body>
-    <nav class="site-nav">
-      <a class="brand" href="index.html"><img alt="" src="images/icons/ProgressionDex_logo.png" /> Progression Dex</a>
-      <a class="link spacer" href="#features">Features</a>
-      <a class="link" href="#faq">FAQ</a>
-      <a class="button primary" style="height: 36px; padding: 0 14px" href="list/index.html">Open games</a>
-    </nav>
+    <main class="poster">
+      <img class="logo" alt="Progression Dex logo" src="images/icons/ProgressionDex_logo.png" width="96" height="96" />
+      <h1>Progression Dex</h1>
+      <p class="intro">A tool for tracking your 100% progress in Pok&eacute;mon games! We currently support:</p>
 
-    <main>
-      <section class="hero">
-        <div>
-          <span class="eyebrow">Free &middot; no account</span>
-          <h1>Track your <span>100%</span> in every Pok&eacute;mon game</h1>
-          <p>Pick a game, tick off Pok&eacute;mon, items, ribbons and more, and watch your progress fill up. Everything is saved in your browser.</p>
-          <div class="actions">
-            <a class="button primary" href="list/index.html">Choose your game</a>
-            <a class="button" href="#features">See how it works</a>
-          </div>
-        </div>
-        <div class="hero-shot">
-          <img alt="A Progression Dex checklist with collectible tiles and a progress bar" src="images/images/hero.webp" width="1400" height="900" />
-        </div>
-      </section>
+      <ul class="games">
+        <li><strong>Gen 1:</strong> <a href="checklists/redblue.html">Red &amp; Blue</a>, <a href="checklists/yellow.html">Yellow</a></li>
+        <li><strong>Gen 2:</strong> <a href="checklists/goldsilver.html">Gold &amp; Silver</a>, <a href="checklists/crystal.html">Crystal</a></li>
+        <li><strong>Gen 3:</strong> <a href="checklists/rubysapphire.html">Ruby &amp; Sapphire</a>, <a href="checklists/emerald.html">Emerald</a>, <a href="checklists/fireredleafgreen.html">FireRed &amp; LeafGreen</a></li>
+        <li><strong>Gen 4:</strong> <a href="checklists/diamondpearl.html">Diamond &amp; Pearl</a>, <a href="checklists/platinum.html">Platinum</a>, <a href="checklists/heartgoldsoulsilver.html">HeartGold &amp; SoulSilver</a></li>
+        <li><strong>Gen 5:</strong> <a href="checklists/blackwhite.html">Black &amp; White</a>, <a href="checklists/black2white2.html">Black 2 &amp; White 2</a></li>
+        <li><strong>Gen 6:</strong> <a href="checklists/xy.html">X &amp; Y</a>, <a href="checklists/omegarubyalphasapphire.html">Omega Ruby &amp; Alpha Sapphire</a></li>
+        <li>
+          <strong>Gen 7:</strong> <a href="checklists/sunmoon.html">Sun &amp; Moon</a>, <a href="checklists/ultrasunultramoon.html">Ultra Sun &amp; Ultra Moon</a>, <a href="checklists/letsgopikachueevee.html">Let&rsquo;s Go, Pikachu &amp; Eevee</a>
+        </li>
+        <li>
+          <strong>Gen 8:</strong> <a href="checklists/swordshield.html">Sword &amp; Shield</a> (<a href="checklists/isleofarmor.html">Isle of Armor</a>, <a href="checklists/crowntundra.html">Crown Tundra</a>),
+          <a href="checklists/brilliantdiamondshiningpearl.html">Brilliant Diamond &amp; Shining Pearl</a>, <a href="checklists/legendsarceus.html">Legends: Arceus</a>
+        </li>
+        <li><strong>Gen 9:</strong> <a href="checklists/scarletviolet.html">Scarlet &amp; Violet</a> (<a href="checklists/thetealmask.html">The Teal Mask</a>, <a href="checklists/theindigodisk.html">The Indigo Disk</a>)</li>
+        <li><strong>Home:</strong> <a href="checklists/pokemonhome.html">Pok&eacute;mon Home</a></li>
+      </ul>
 
-      <section class="section" id="features">
-        <h2>Everything for a full completion run</h2>
-        <p class="lead">Each game has its own checklist, colors and progress bar, so you always know what is left.</p>
-        <div class="features">
-          <div class="feature">
-            <div class="icon">&#9745;</div>
-            <h3>26 checklists</h3>
-            <p>From Red and Blue to Scarlet and Violet, plus Pok&eacute;mon Home: Pok&eacute;dex, legendaries, mega stones, ribbons and more.</p>
-          </div>
-          <div class="feature">
-            <div class="icon">&#128200;</div>
-            <h3>Live progress</h3>
-            <p>Per-section counters, a progress bar and confetti when you hit 100%. Games show In Progress or Completed on the list.</p>
-          </div>
-          <div class="feature">
-            <div class="icon">&#128269;</div>
-            <h3>Search and filter</h3>
-            <p>Find any item instantly, hide what you already collected, and collapse sections you have finished.</p>
-          </div>
-          <div class="feature">
-            <div class="icon">&#128190;</div>
-            <h3>Yours to keep</h3>
-            <p>Progress lives in your browser. Export it to a file to back it up or move to another device.</p>
-          </div>
-        </div>
-      </section>
+      <a class="cta" href="list/index.html">Choose your game &rarr;</a>
 
-      <section class="section" id="faq">
-        <h2>Frequently asked questions</h2>
-        <div class="faq">
-          <details>
-            <summary>What is ProgressionDex?</summary>
-            <p>ProgressionDex is a tool designed to help gamers track their 100% completion progress across various games, providing detailed insights and progress tracking capabilities.</p>
-          </details>
-          <details>
-            <summary>Is ProgressionDex free?</summary>
-            <p>Yes, ProgressionDex is completely free. Users can track progress, and manage their game completion journey without any costs.</p>
-          </details>
-          <details>
-            <summary>Is the platform suitable for all users?</summary>
-            <p>Yes, ProgressionDex has a user-friendly interface that makes it accessible for users of all experience levels.</p>
-          </details>
-          <details>
-            <summary>How can I start using ProgressionDex?</summary>
-            <p>Getting started is easy! Click &ldquo;Choose your game&rdquo;, select your game, and begin tracking your progress.</p>
-          </details>
-          <details>
-            <summary>Where is my progress stored?</summary>
-            <p>In your browser only. Use Export progress on any page to save a backup file, and Import progress to restore it.</p>
-          </details>
-        </div>
-      </section>
+      <p class="blurb">Pick a game, tick off Pok&eacute;mon, items, ribbons and more, and watch your progress bar fill up. Search every list, hide what you have already collected, and see your overall progress on the game list.</p>
+      <p class="blurb">No account needed: your progress is saved in your browser. Use <em>Export progress</em> on any page to back it up or move to another device.</p>
+      <p class="blurb">This project is open source, and you can find the code on <a href="https://github.com/yasingunaydiin">GitHub</a>. Feel free to report issues or suggest features.</p>
     </main>
 
     <footer class="site-footer">Made with <img alt="Icons of Pokemon" id="dynamicImage" /> in a Cafe</footer>
