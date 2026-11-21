@@ -100,7 +100,7 @@ body::before {
 /* One grid for every game; generation rows only contribute headings */
 .games-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
   gap: 16px;
 }
 
@@ -110,6 +110,7 @@ body::before {
 }
 
 .games-container .gen-heading {
+  display: none;
   grid-column: 1 / -1;
   margin: 18px 0 -4px;
   font-size: 0.85rem;
@@ -217,7 +218,9 @@ body::before {
 }
 
 .gen-item .badge span:last-child {
-  display: none;
+  background: var(--tile) !important;
+  color: var(--muted) !important;
+  --tw-ring-color: var(--line) !important;
 }
 
 .gen-item .badge span {
@@ -269,4 +272,14 @@ body::before {
   .gen-container {
     grid-template-columns: 1fr;
   }
+}
+
+.list-summary {
+  margin: 14px 2px 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.list-summary b {
+  color: var(--text);
 }

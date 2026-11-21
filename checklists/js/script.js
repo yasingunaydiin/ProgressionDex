@@ -149,26 +149,52 @@
 
     sections.forEach((s) => {
       s.head.classList.add("section-head");
-      s.head.insertAdjacentHTML("beforeend", `<span class="count"><span class="num"></span><span class="meter"><i></i></span></span>${CHEVRON}`);
+      s.head.insertAdjacentHTML("beforeend", `<span class="count"><span class="num"></span><span class="meter"><i></i></span></span><button type="button" class="mark-all">Mark all</button>${CHEVRON}`);
+      s.markAll = s.head.querySelector(".mark-all");
+      s.markAll.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const target = !s.boxes.every((c) => c.checked);
+        s.boxes.forEach((c) => {
+          if (c.checked !== target) {
+            c.checked = target;
+            c.dispatchEvent(new Event("change"));
+          }
+        });
+      });
       s.num = s.head.querySelector(".num");
       s.fill = s.head.querySelector(".meter i");
       s.head.addEventListener("click", () => s.el.classList.toggle("is-collapsed"));
     });
 
     // ---------- toolbar ----------
-    let summaryStrong, summarySmall;
+    let summaryStrong, summarySmall, summaryBar;
     if (page) {
       const toolbar = document.createElement("div");
       toolbar.className = "toolbar";
       toolbar.innerHTML = `
-        <div class="summary"><strong></strong><small></small></div>
-        <input type="search" placeholder="Search this game..." aria-label="Search checklist" />
+        <div class="summary"><strong></strong><small></small><i class="bar"><b></b></i></div>
+        <input type="search" placeholder="Search this game... (press / )" aria-label="Search checklist" />
         <button type="button" data-action="hide-done" aria-pressed="false">Hide collected</button>
         <button type="button" data-action="collapse">Collapse all</button>
         <span class="toolbar-extra" style="display: contents"></span>`;
       page.prepend(toolbar);
       summaryStrong = toolbar.querySelector("strong");
       summarySmall = toolbar.querySelector("small");
+      summaryBar = toolbar.querySelector(".bar b");
+
+      // "/" jumps to the search box, Escape clears it (like pokedextracker.com)
+      const search = toolbar.querySelector('input[type="search"]');
+      document.addEventListener("keydown", (e) => {
+        const typing = /^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement?.tagName);
+        if (e.key === "/" && !typing && !e.metaKey && !e.ctrlKey) {
+          e.preventDefault();
+          search.focus();
+        } else if (e.key === "Escape" && document.activeElement === search) {
+          search.value = "";
+          search.dispatchEvent(new Event("input"));
+          search.blur();
+        }
+      });
 
       toolbar.querySelector('[data-action="hide-done"]').addEventListener("click", (e) => {
         const on = document.body.classList.toggle("hide-done");
@@ -199,8 +225,9 @@
       const pct = total ? (done / total) * 100 : 0;
       if (progressBar) progressBar.style.width = `${pct}%`;
       if (summaryStrong) {
-        summaryStrong.textContent = `${done} / ${total} collected`;
-        summarySmall.textContent = `${Math.round(pct)}% complete`;
+        summaryStrong.textContent = `${pct.toFixed(1)}% done`;
+        summarySmall.textContent = `${done} collected, ${total - done} to go`;
+        summaryBar.style.width = `${pct}%`;
       }
       // Summary read by the game list page to show In Progress / Completed badges.
       if (game && total) storage.set(`pdex-summary-${game}`, JSON.stringify({ done, total }));
@@ -210,6 +237,7 @@
         s.num.textContent = `${d}/${s.boxes.length}`;
         s.fill.style.width = `${(d / s.boxes.length) * 100}%`;
         s.el.classList.toggle("is-complete", d === s.boxes.length);
+        s.markAll.textContent = d === s.boxes.length ? "Clear" : "Mark all";
       });
     }
 

@@ -33,7 +33,8 @@
     <header class="list-head">
       <h1>Choose your game</h1>
       <p>Pick a game to open its checklist. Games you have started show their progress.</p>
-      <div class="filters">
+      <p class="list-summary" id="listSummary"></p>
+      <div class="filters" style="margin-top: 14px">
         <input type="search" id="gameSearch" placeholder="Search games..." aria-label="Search games" />
         <div class="chips" role="group" aria-label="Filter by status">
           <button type="button" class="chip" data-status="new" onclick="toggleNew()">Not started</button>

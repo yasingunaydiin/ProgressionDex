@@ -87,14 +87,13 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("gameSearch")?.addEventListener("input", applyItemFilters);
 
   // Section headings, taken from each row's generation badge
-  let lastName = null;
+  // Short generation chip on every card instead of section headings
   document.querySelectorAll(".gen-row").forEach((row) => {
-    const name = row.querySelector(".badge span:last-child")?.textContent.trim();
-    if (name && name !== lastName) row.insertAdjacentHTML("afterbegin", `<h2 class="gen-heading">${name}</h2>`);
-    lastName = name;
+    row.querySelectorAll(".badge span:last-child").forEach((chip) => (chip.textContent = chip.textContent.replace("Generation", "Gen")));
   });
   document.querySelector(".games-container")?.insertAdjacentHTML("beforeend", '<p class="empty" id="emptyMessage">No games match your filters.</p>');
 
+  const counts = { new: 0, inprogress: 0, completed: 0 };
   document.querySelectorAll(".gen-item[data-game]").forEach((item) => {
     const gameId = item.dataset.game;
     const status = getStatus(gameId);
@@ -104,6 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
     show("inProgress", status === "inprogress");
     show("completed", status === "completed");
+    counts[status]++;
 
     // Progress bar from the summary the checklist page saved
     try {
@@ -116,4 +116,6 @@ document.addEventListener("DOMContentLoaded", () => {
       /* ignore */
     }
   });
+  const summary = document.getElementById("listSummary");
+  if (summary) summary.innerHTML = `<b>${counts.completed}</b> completed &middot; <b>${counts.inprogress}</b> in progress &middot; <b>${counts.new}</b> not started`;
 });
