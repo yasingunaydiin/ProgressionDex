@@ -6,7 +6,7 @@ A tool for tracking your 100% progress in Pokemon games. Pick a game, tick thing
 
 ## Features
 
-- Checklists for 25 mainline and spin-off games (Red/Blue through Scarlet/Violet, plus Pokemon Home)
+- Checklists for 26 games and apps (Red/Blue through Scarlet/Violet DLC, plus Pokemon Home)
 - Progress bar per game, struck-through sections once complete, confetti at 100%
 - In Progress / Completed badges and filters on the game list
 - Progress is saved in your browser (`localStorage`) - no account needed
