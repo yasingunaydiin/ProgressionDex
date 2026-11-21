@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>ProgressionDex | Log your 100% progression</title>
+    <title>Progression Dex | Pick a game</title>
     <link href="styles.css" rel="stylesheet" />
     <link href="images/icons/favicontab.ico" rel="icon" type="image/x-icon" />
     <link href="images/icons/favicontab.ico" rel="shortcut icon" type="image/x-icon" />
@@ -22,148 +22,249 @@
     </script>
   </head>
   <body>
-    <header class="masthead">
-      <img class="sprite left" alt="" src="images/icons/pokemon/gen8/swordshield/gigantamax/charizard-gigantamax.png" width="120" height="112" />
-      <h1>Progression Dex</h1>
-      <img class="sprite right" alt="" src="images/icons/pokemon/gen8/swordshield/gigantamax/pikachu-gigantamax.png" width="120" height="112" />
-    </header>
+    <div class="bg" id="bgA"></div>
+    <div class="bg" id="bgB"></div>
 
-    <div class="page">
-      <div class="main">
-        <h2>Your Pok&eacute;mon completion checklists</h2>
-        <p class="note">
-          Welcome! Progression Dex is a set of checklists for getting 100% in the main Pok&eacute;mon games: every Pok&eacute;mon, legendary, gift, in-game trade, ribbon, battle facility and a lot of small things you only notice once the credits have
-          rolled.
-        </p>
-        <p class="note">Pick your game below. Each box is a game version in its own colour, and both versions of a pair open the same checklist. Everything you tick is saved in this browser, so there is nothing to sign up for.</p>
+    <div class="screen">
+      <header class="top">
+        <div class="brand"><img alt="" src="images/icons/ProgressionDex_logo.png" width="36" height="36" /> Progression Dex</div>
+        <nav>
+          <a href="list/index.html">Game list</a>
+          <a href="https://github.com/yasingunaydiin">GitHub</a>
+        </nav>
+      </header>
 
-        <table class="games">
-          <tr>
-            <th scope="row">Generation I</th>
-            <td>
-              <a class="v" style="--c: #c23a22" href="checklists/redblue.html">Red</a><a class="v light" style="--c: #84add7" href="checklists/redblue.html">Blue</a><a class="v light" style="--c: #fad61d" href="checklists/yellow.html">Yellow</a>
-            </td>
-          </tr>
-          <tr>
-            <th scope="row">Generation II</th>
-            <td>
-              <a class="v light" style="--c: #e3c07d" href="checklists/goldsilver.html">Gold</a><a class="v light" style="--c: #cce4eb" href="checklists/goldsilver.html">Silver</a
-              ><a class="v light" style="--c: #62cccc" href="checklists/crystal.html">Crystal</a>
-            </td>
-          </tr>
-          <tr>
-            <th scope="row">Generation III</th>
-            <td>
-              <a class="v" style="--c: #b13131" href="checklists/rubysapphire.html">Ruby</a><a class="v" style="--c: #065a9c" href="checklists/rubysapphire.html">Sapphire</a><a class="v" style="--c: #588e47" href="checklists/emerald.html">Emerald</a
-              ><a class="v" style="--c: #e4571a" href="checklists/fireredleafgreen.html">FireRed</a><a class="v" style="--c: #5f9569" href="checklists/fireredleafgreen.html">LeafGreen</a>
-            </td>
-          </tr>
-          <tr>
-            <th scope="row">Generation IV</th>
-            <td>
-              <a class="v light" style="--c: #86bff3" href="checklists/diamondpearl.html">Diamond</a><a class="v light" style="--c: #fdcfd9" href="checklists/diamondpearl.html">Pearl</a
-              ><a class="v light" style="--c: #cea435" href="checklists/platinum.html">Platinum</a><a class="v light" style="--c: #ffb346" href="checklists/heartgoldsoulsilver.html">HeartGold</a
-              ><a class="v" style="--c: #7a95c4" href="checklists/heartgoldsoulsilver.html">SoulSilver</a>
-            </td>
-          </tr>
-          <tr>
-            <th scope="row">Generation V</th>
-            <td>
-              <a class="v" style="--c: #323232" href="checklists/blackwhite.html">Black</a><a class="v light" style="--c: #b7b7b7" href="checklists/blackwhite.html">White</a
-              ><a class="v" style="--c: #0084ca" href="checklists/black2white2.html">Black 2</a><a class="v" style="--c: #d92122" href="checklists/black2white2.html">White 2</a>
-            </td>
-          </tr>
-          <tr>
-            <th scope="row">Generation VI</th>
-            <td>
-              <a class="v" style="--c: #354698" href="checklists/xy.html">X</a><a class="v" style="--c: #b11d2c" href="checklists/xy.html">Y</a><a class="v" style="--c: #8d0406" href="checklists/omegarubyalphasapphire.html">Omega Ruby</a
-              ><a class="v" style="--c: #21409a" href="checklists/omegarubyalphasapphire.html">Alpha Sapphire</a>
-            </td>
-          </tr>
-          <tr>
-            <th scope="row">Generation VII</th>
-            <td>
-              <a class="v light" style="--c: #f79c1a" href="checklists/sunmoon.html">Sun</a><a class="v" style="--c: #0f92d0" href="checklists/sunmoon.html">Moon</a
-              ><a class="v light" style="--c: #fdda84" href="checklists/ultrasunultramoon.html">Ultra Sun</a><a class="v light" style="--c: #99dcfa" href="checklists/ultrasunultramoon.html">Ultra Moon</a
-              ><a class="v light" style="--c: #f1b836" href="checklists/letsgopikachueevee.html">Let&rsquo;s Go, Pikachu</a><a class="v" style="--c: #bc6436" href="checklists/letsgopikachueevee.html">Let&rsquo;s Go, Eevee</a>
-            </td>
-          </tr>
-          <tr>
-            <th scope="row">Generation VIII</th>
-            <td>
-              <a class="v" style="--c: #181369" href="checklists/swordshield.html">Sword</a><a class="v" style="--c: #a40045" href="checklists/swordshield.html">Shield</a
-              ><a class="v light" style="--c: #f6ce31" href="checklists/isleofarmor.html">Isle of Armor</a><a class="v" style="--c: #158b8c" href="checklists/crowntundra.html">Crown Tundra</a
-              ><a class="v" style="--c: #174b7d" href="checklists/brilliantdiamondshiningpearl.html">Brilliant Diamond</a><a class="v light" style="--c: #f1aec6" href="checklists/brilliantdiamondshiningpearl.html">Shining Pearl</a
-              ><a class="v" style="--c: #01629e" href="checklists/legendsarceus.html">Legends: Arceus</a>
-            </td>
-          </tr>
-          <tr>
-            <th scope="row">Generation IX</th>
-            <td>
-              <a class="v" style="--c: #f25f36" href="checklists/scarletviolet.html">Scarlet</a><a class="v" style="--c: #473a7e" href="checklists/scarletviolet.html">Violet</a
-              ><a class="v light" style="--c: #00bbb9" href="checklists/thetealmask.html">The Teal Mask</a><a class="v" style="--c: #006987" href="checklists/theindigodisk.html">The Indigo Disk</a>
-            </td>
-          </tr>
-          <tr>
-            <th scope="row">Pokémon Home</th>
-            <td><a class="v" style="--c: #239a5b" href="checklists/pokemonhome.html">Pokémon Home</a></td>
-          </tr>
-        </table>
+      <main class="home">
+        <div class="row" id="row" role="listbox" aria-label="Games">
+          <a class="tile" href="checklists/redblue.html" data-game="redblue" data-name="Red &amp; Blue" data-gen="Generation I" data-pattern="red" style="--c1: #c23a22; --c2: #84add7" aria-label="Red &amp; Blue"
+            ><img alt="" src="images/logos/red-logo.webp" width="160" height="90" /><img alt="" src="images/logos/blue-logo.webp" width="160" height="90"
+          /></a>
+          <a class="tile" href="checklists/yellow.html" data-game="yellow" data-name="Yellow" data-gen="Generation I" data-pattern="yellow" style="--c1: #fad61d" aria-label="Yellow"
+            ><img alt="" src="images/logos/yellow-logo.webp" width="160" height="90"
+          /></a>
+          <a class="tile" href="checklists/goldsilver.html" data-game="goldsilver" data-name="Gold &amp; Silver" data-gen="Generation II" data-pattern="gold" style="--c1: #e3c07d; --c2: #cce4eb" aria-label="Gold &amp; Silver"
+            ><img alt="" src="images/logos/gold-logo.webp" width="160" height="90" /><img alt="" src="images/logos/silver-logo.webp" width="160" height="90"
+          /></a>
+          <a class="tile" href="checklists/crystal.html" data-game="crystal" data-name="Crystal" data-gen="Generation II" data-pattern="crystal" style="--c1: #62cccc" aria-label="Crystal"
+            ><img alt="" src="images/logos/crystal-logo.webp" width="160" height="90"
+          /></a>
+          <a class="tile" href="checklists/rubysapphire.html" data-game="rubysapphire" data-name="Ruby &amp; Sapphire" data-gen="Generation III" data-pattern="ruby" style="--c1: #b13131; --c2: #065a9c" aria-label="Ruby &amp; Sapphire"
+            ><img alt="" src="images/logos/ruby-logo.webp" width="160" height="90" /><img alt="" src="images/logos/sapphire-logo.webp" width="160" height="90"
+          /></a>
+          <a class="tile" href="checklists/emerald.html" data-game="emerald" data-name="Emerald" data-gen="Generation III" data-pattern="emerald" style="--c1: #588e47" aria-label="Emerald"
+            ><img alt="" src="images/logos/emerald-logo.webp" width="160" height="90"
+          /></a>
+          <a
+            class="tile"
+            href="checklists/fireredleafgreen.html"
+            data-game="fireredleafgreen"
+            data-name="FireRed &amp; LeafGreen"
+            data-gen="Generation III"
+            data-pattern="firered"
+            style="--c1: #e4571a; --c2: #5f9569"
+            aria-label="FireRed &amp; LeafGreen"
+            ><img alt="" src="images/logos/firered-logo.webp" width="160" height="90" /><img alt="" src="images/logos/leafgreen-logo.webp" width="160" height="90"
+          /></a>
+          <a class="tile" href="checklists/diamondpearl.html" data-game="diamondpearl" data-name="Diamond &amp; Pearl" data-gen="Generation IV" data-pattern="diamond" style="--c1: #86bff3; --c2: #fdcfd9" aria-label="Diamond &amp; Pearl"
+            ><img alt="" src="images/logos/diamond-logo.webp" width="160" height="90" /><img alt="" src="images/logos/pearl-logo.webp" width="160" height="90"
+          /></a>
+          <a class="tile" href="checklists/platinum.html" data-game="platinum" data-name="Platinum" data-gen="Generation IV" data-pattern="platinum" style="--c1: #cea435" aria-label="Platinum"
+            ><img alt="" src="images/logos/platinum-logo.webp" width="160" height="90"
+          /></a>
+          <a
+            class="tile"
+            href="checklists/heartgoldsoulsilver.html"
+            data-game="heartgoldsoulsilver"
+            data-name="HeartGold &amp; SoulSilver"
+            data-gen="Generation IV"
+            data-pattern="heartgold"
+            style="--c1: #ffb346; --c2: #7a95c4"
+            aria-label="HeartGold &amp; SoulSilver"
+            ><img alt="" src="images/logos/heartgold-logo.webp" width="160" height="90" /><img alt="" src="images/logos/soulsilver-logo.webp" width="160" height="90"
+          /></a>
+          <a class="tile" href="checklists/blackwhite.html" data-game="blackwhite" data-name="Black &amp; White" data-gen="Generation V" data-pattern="black" style="--c1: #323232; --c2: #b7b7b7" aria-label="Black &amp; White"
+            ><img alt="" src="images/logos/black-logo.webp" width="160" height="90" /><img alt="" src="images/logos/white-logo.webp" width="160" height="90"
+          /></a>
+          <a class="tile" href="checklists/black2white2.html" data-game="black2white2" data-name="Black 2 &amp; White 2" data-gen="Generation V" data-pattern="black2" style="--c1: #0084ca; --c2: #d92122" aria-label="Black 2 &amp; White 2"
+            ><img alt="" src="images/logos/black2-logo.webp" width="160" height="90" /><img alt="" src="images/logos/white2-logo.webp" width="160" height="90"
+          /></a>
+          <a class="tile" href="checklists/xy.html" data-game="xy" data-name="X &amp; Y" data-gen="Generation VI" data-pattern="x" style="--c1: #354698; --c2: #b11d2c" aria-label="X &amp; Y"
+            ><img alt="" src="images/logos/x-logo.webp" width="160" height="90" /><img alt="" src="images/logos/y-logo.webp" width="160" height="90"
+          /></a>
+          <a
+            class="tile"
+            href="checklists/omegarubyalphasapphire.html"
+            data-game="omegarubyalphasapphire"
+            data-name="Omega Ruby &amp; Alpha Sapphire"
+            data-gen="Generation VI"
+            data-pattern="omegaruby"
+            style="--c1: #8d0406; --c2: #21409a"
+            aria-label="Omega Ruby &amp; Alpha Sapphire"
+            ><img alt="" src="images/logos/omegaruby-logo.webp" width="160" height="90" /><img alt="" src="images/logos/alphasapphire-logo.webp" width="160" height="90"
+          /></a>
+          <a class="tile" href="checklists/sunmoon.html" data-game="sunmoon" data-name="Sun &amp; Moon" data-gen="Generation VII" data-pattern="sun" style="--c1: #f79c1a; --c2: #0f92d0" aria-label="Sun &amp; Moon"
+            ><img alt="" src="images/logos/sun-logo.webp" width="160" height="90" /><img alt="" src="images/logos/moon-logo.webp" width="160" height="90"
+          /></a>
+          <a
+            class="tile"
+            href="checklists/ultrasunultramoon.html"
+            data-game="ultrasunultramoon"
+            data-name="Ultra Sun &amp; Ultra Moon"
+            data-gen="Generation VII"
+            data-pattern="ultrasun"
+            style="--c1: #fdda84; --c2: #99dcfa"
+            aria-label="Ultra Sun &amp; Ultra Moon"
+            ><img alt="" src="images/logos/ultrasun-logo.webp" width="160" height="90" /><img alt="" src="images/logos/ultramoon-logo.webp" width="160" height="90"
+          /></a>
+          <a
+            class="tile"
+            href="checklists/letsgopikachueevee.html"
+            data-game="letsgopikachueevee"
+            data-name="Let's Go, Pikachu &amp; Eevee"
+            data-gen="Generation VII"
+            data-pattern="letsgopikachu"
+            style="--c1: #f1b836; --c2: #bc6436"
+            aria-label="Let's Go, Pikachu &amp; Eevee"
+            ><img alt="" src="images/logos/letsgopikachu-logo.webp" width="160" height="90" /><img alt="" src="images/logos/letsgoeevee-logo.webp" width="160" height="90"
+          /></a>
+          <a class="tile" href="checklists/swordshield.html" data-game="swordshield" data-name="Sword &amp; Shield" data-gen="Generation VIII" data-pattern="sword" style="--c1: #181369; --c2: #a40045" aria-label="Sword &amp; Shield"
+            ><img alt="" src="images/logos/sword-logo.webp" width="160" height="90" /><img alt="" src="images/logos/shield-logo.webp" width="160" height="90"
+          /></a>
+          <a class="tile" href="checklists/isleofarmor.html" data-game="isleofarmor" data-name="The Isle of Armor" data-gen="Generation VIII" data-pattern="isleofarmor" style="--c1: #f6ce31" aria-label="The Isle of Armor"
+            ><img alt="" src="images/logos/isleofarmor-logo.webp" width="160" height="90"
+          /></a>
+          <a class="tile" href="checklists/crowntundra.html" data-game="crowntundra" data-name="The Crown Tundra" data-gen="Generation VIII" data-pattern="crowntundra" style="--c1: #158b8c" aria-label="The Crown Tundra"
+            ><img alt="" src="images/logos/crowntundra-logo.webp" width="160" height="90"
+          /></a>
+          <a
+            class="tile"
+            href="checklists/brilliantdiamondshiningpearl.html"
+            data-game="brilliantdiamondshiningpearl"
+            data-name="Brilliant Diamond &amp; Shining Pearl"
+            data-gen="Generation VIII"
+            data-pattern="brilliantdiamond"
+            style="--c1: #174b7d; --c2: #f1aec6"
+            aria-label="Brilliant Diamond &amp; Shining Pearl"
+            ><img alt="" src="images/logos/brilliantdiamond-logo.webp" width="160" height="90" /><img alt="" src="images/logos/shiningpearl-logo.webp" width="160" height="90"
+          /></a>
+          <a class="tile" href="checklists/legendsarceus.html" data-game="legendsarceus" data-name="Legends: Arceus" data-gen="Generation VIII" data-pattern="legendsarceus" style="--c1: #01629e" aria-label="Legends: Arceus"
+            ><img alt="" src="images/logos/legendsarceus-logo.webp" width="160" height="90"
+          /></a>
+          <a class="tile" href="checklists/scarletviolet.html" data-game="scarletviolet" data-name="Scarlet &amp; Violet" data-gen="Generation IX" data-pattern="scarlet" style="--c1: #f25f36; --c2: #473a7e" aria-label="Scarlet &amp; Violet"
+            ><img alt="" src="images/logos/scarlet-logo.webp" width="160" height="90" /><img alt="" src="images/logos/violet-logo.webp" width="160" height="90"
+          /></a>
+          <a class="tile" href="checklists/thetealmask.html" data-game="thetealmask" data-name="The Teal Mask" data-gen="Generation IX" data-pattern="tealmask" style="--c1: #00bbb9" aria-label="The Teal Mask"
+            ><img alt="" src="images/logos/tealmask-logo.webp" width="160" height="90"
+          /></a>
+          <a class="tile" href="checklists/theindigodisk.html" data-game="theindigodisk" data-name="The Indigo Disk" data-gen="Generation IX" data-pattern="indigodisk" style="--c1: #006987" aria-label="The Indigo Disk"
+            ><img alt="" src="images/logos/indigodisk-logo.webp" width="160" height="90"
+          /></a>
+          <a class="tile" href="checklists/pokemonhome.html" data-game="pokemonhome" data-name="Pokémon Home" data-gen="Pokémon Home" data-pattern="home" style="--c1: #239a5b" aria-label="Pokémon Home"
+            ><img alt="" src="images/logos/home-logo.webp" width="160" height="90"
+          /></a>
+        </div>
 
-        <p class="small">Looking for a list with progress bars and filters? Use the <a href="list/index.html">game list</a>.</p>
-      </div>
+        <section class="details" aria-live="polite">
+          <p class="gen" id="dGen"></p>
+          <h1 id="dName"></h1>
+          <div class="progress">
+            <i><b id="dBar"></b></i><span id="dText"></span>
+          </div>
+          <a class="open" id="dOpen" href="#">Open checklist</a>
+        </section>
+      </main>
 
-      <aside class="side">
-        <h3>Quick links</h3>
-        <ul>
-          <li><a href="list/index.html">All games, with progress</a></li>
-          <li><a href="checklists/pokemonhome.html">Pok&eacute;mon Home regional lists</a></li>
-          <li><a href="https://github.com/yasingunaydiin">Source code on GitHub</a></li>
-        </ul>
-        <h3>Good to know</h3>
-        <ul class="plain">
-          <li>Press <kbd>/</kbd> on a checklist to search it.</li>
-          <li>Hover the pin or the (i) on a tile for where to find it.</li>
-          <li>Export your progress from any page to back it up or move devices.</li>
-        </ul>
-      </aside>
+      <footer class="hints">
+        <span><kbd>&larr;</kbd><kbd>&rarr;</kbd> Select</span>
+        <span><kbd>Enter</kbd> Open</span>
+        <a href="list/index.html"><kbd>L</kbd> Game list</a>
+      </footer>
     </div>
 
-    <footer class="site-footer">Made with <img alt="Icons of Pokemon" id="dynamicImage" /> in a Cafe</footer>
-
     <script>
-      // Random Gigantamax sprite in the footer
-      const sprites = [
-        "alcremie",
-        "appletun",
-        "blastoise",
-        "butterfree",
-        "centiskorch",
-        "cinderace",
-        "coalossal",
-        "copperajah",
-        "eevee",
-        "flapple",
-        "garbodor",
-        "gengar",
-        "grimmsnarl",
-        "hatterene",
-        "inteleon",
-        "lapras",
-        "machamp",
-        "melmetal",
-        "meowth",
-        "orbeetle",
-        "rillaboom",
-        "sandaconda",
-        "snorlax",
-        "toxtricity",
-        "venusaur",
-        "kingler",
-        "corviknight",
-      ];
-      const pick = sprites[Math.floor(Math.random() * sprites.length)];
-      document.getElementById("dynamicImage").src = `images/icons/pokemon/gen8/swordshield/gigantamax/${pick}-gigantamax.png`;
+      const row = document.getElementById("row");
+      const tiles = [...row.querySelectorAll(".tile")];
+      const bgs = [document.getElementById("bgA"), document.getElementById("bgB")];
+      let current = -1;
+      let layer = 0;
+
+      function progress(game) {
+        try {
+          const s = JSON.parse(localStorage.getItem(`pdex-summary-${game}`));
+          if (s && s.total) return s;
+        } catch {}
+        return null;
+      }
+
+      function select(index, scroll = true) {
+        index = Math.max(0, Math.min(tiles.length - 1, index));
+        if (index === current) return;
+        current = index;
+        const t = tiles[index];
+        tiles.forEach((x) => x.classList.toggle("selected", x === t));
+        if (scroll) t.scrollIntoView({ inline: "center", block: "nearest", behavior: "smooth" });
+
+        const c1 = getComputedStyle(t).getPropertyValue("--c1").trim();
+        layer = 1 - layer;
+        bgs[layer].style.setProperty("--glow", c1);
+        bgs[layer].style.backgroundImage = `url(images/patterns/pattern-${t.dataset.pattern}.png)`;
+        bgs[layer].classList.add("on");
+        bgs[1 - layer].classList.remove("on");
+
+        document.getElementById("dGen").textContent = t.dataset.gen;
+        document.getElementById("dName").textContent = t.dataset.name;
+        document.getElementById("dOpen").href = t.href;
+        const p = progress(t.dataset.game);
+        const pct = p ? Math.round((p.done / p.total) * 100) : 0;
+        document.getElementById("dBar").style.width = pct + "%";
+        document.getElementById("dText").textContent = !p || !p.done ? "Not started" : p.done >= p.total ? "Completed" : `${p.done} / ${p.total} · ${pct}%`;
+        try {
+          localStorage.setItem("pdex-last-game", t.dataset.game);
+        } catch {}
+      }
+
+      tiles.forEach((t, i) => {
+        t.addEventListener("click", (e) => {
+          if (i !== current) {
+            e.preventDefault();
+            select(i);
+          }
+        });
+        t.addEventListener("mouseenter", () => matchMedia("(hover: hover)").matches && select(i));
+      });
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "ArrowRight") select(current + 1);
+        else if (e.key === "ArrowLeft") select(current - 1);
+        else if (e.key === "Home") select(0);
+        else if (e.key === "End") select(tiles.length - 1);
+        else if (e.key === "Enter" && !e.target.closest("a")) location.href = tiles[current].href;
+        else if (e.key.toLowerCase() === "l" && !e.metaKey && !e.ctrlKey) location.href = "list/index.html";
+        else return;
+        if (e.key.startsWith("Arrow") || e.key === "Home" || e.key === "End") e.preventDefault();
+      });
+
+      // a plain mouse wheel scrolls the row sideways
+      row.addEventListener(
+        "wheel",
+        (e) => {
+          if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+            row.scrollLeft += e.deltaY;
+            e.preventDefault();
+          }
+        },
+        { passive: false },
+      );
+
+      let start = 0;
+      try {
+        start = Math.max(
+          0,
+          tiles.findIndex((t) => t.dataset.game === localStorage.getItem("pdex-last-game")),
+        );
+      } catch {}
+      select(start, false);
+      tiles[start].scrollIntoView({ inline: "center", block: "nearest" });
     </script>
   </body>
 </html>
