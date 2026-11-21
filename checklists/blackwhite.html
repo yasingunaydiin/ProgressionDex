@@ -10,26 +10,26 @@
     <link href="../images/icons/favicontab.ico" rel="shortcut icon" type="image/x-icon" />
     <meta name="description" content="A tool for tracking your progression in Pokemon games. Easily choose between games and track your game progress." />
     <meta name="keywords" content="pokemon, checklist, pokedex, progress, completion, speedrun, checklist, check list, locations, characters, games, game" />
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
-  </head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4PDLXC895H"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js" defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4PDLXC895H"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-    gtag("config", "G-4PDLXC895H");
-  </script>
+      gtag("config", "G-4PDLXC895H");
+    </script>
+  </head>
   <body>
     <div class="navbar bg-white rounded-3xl shadow-lg mt-2 fixed top-0 flex items-center justify-between" style="width: 95%; z-index: 1000; left: 50%; transform: translateX(-50%)">
       <div class="flex items-center gap-4">
         <a href="../index.html" class="btn btn-ghost text-2xl"><span class="title">Progression Dex |</span></a>
         <div class="flex items-center gap-2">
-          <img alt="Logo of Pokemon Black" id="black-logo" src="../images/logos/black-logo.webp" class="w-20" />
-          <img alt="Logo of Pokemon White" id="white-logo" src="../images/logos/white-logo.webp" class="w-20" />
+          <img alt="Logo of Pokemon Black" id="black-logo" src="../images/logos/black-logo.webp" class="w-20" data-theme-color="#323232" data-theme-pattern="pattern-black.png" />
+          <img alt="Logo of Pokemon White" id="white-logo" src="../images/logos/white-logo.webp" class="w-20" data-theme-color="#b7b7b7" data-theme-pattern="pattern-white.png" />
         </div>
       </div>
     </div>
@@ -363,117 +363,6 @@
       </ul>
     </footer>
     <script src="../checklists/js/script.js"></script>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        var blackLogo = document.getElementById("black-logo");
-        var whiteLogo = document.getElementById("white-logo");
-
-        var headerTitle = document.querySelector(".title");
-        var widePanels = document.querySelectorAll(".wide-panel");
-        var footer = document.querySelector("footer");
-        var titleText = document.querySelectorAll(".panel-label");
-        var backgroundIcons = document.querySelector("body");
-
-        blackLogo.addEventListener("click", function () {
-          headerTitle.style.color = "#323232";
-          footer.style.background = "#323232";
-          backgroundIcons.style.backgroundImage = "url(../../images/patterns/pattern-black.png)";
-
-          titleText.forEach(function (text) {
-            text.style.color = "#323232";
-          });
-
-          widePanels.forEach(function (panel) {
-            panel.style.border = "2px solid #323232";
-          });
-        });
-
-        whiteLogo.addEventListener("click", function () {
-          headerTitle.style.color = "#b7b7b7";
-          footer.style.backgroundColor = "#b7b7b7";
-          backgroundIcons.style.backgroundImage = "url(../../images/patterns/pattern-white.png)";
-
-          titleText.forEach(function (text) {
-            text.style.color = "#b7b7b7";
-          });
-
-          widePanels.forEach(function (panel) {
-            panel.style.border = "2px solid #b7b7b7";
-          });
-        });
-      });
-    </script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const completepokedexCheckboxes = document.querySelectorAll('.completepokedex input[type="checkbox"]');
-        const legendariesCheckboxes = document.querySelectorAll('.legendaries input[type="checkbox"]');
-        const giftpokemonCheckboxes = document.querySelectorAll('.giftpokemon input[type="checkbox"]');
-        const ingametradesCheckboxes = document.querySelectorAll('.ingametrades input[type="checkbox"]');
-        const trainercardCheckboxes = document.querySelectorAll('.trainercard input[type="checkbox"]');
-        const battlesubwayCheckboxes = document.querySelectorAll('.battlesubway input[type="checkbox"]');
-        const musicalitemsCheckboxes = document.querySelectorAll('.musicalitems input[type="checkbox"]');
-        const battlesCheckboxes = document.querySelectorAll('.battles input[type="checkbox"]');
-        const battleinstituteCheckboxes = document.querySelectorAll('.battleinstitute input[type="checkbox"]');
-        const sagesCheckboxes = document.querySelectorAll('.sages input[type="checkbox"]');
-        const itemsCheckboxes = document.querySelectorAll('.items input[type="checkbox"]');
-
-        function updateStyle(checkboxes, label) {
-          const allChecked = [...checkboxes].every((checkbox) => checkbox.checked);
-          label.style.textDecoration = allChecked ? "line-through" : "none";
-        }
-
-        function initializeCheckboxes(checkboxes, label) {
-          checkboxes.forEach((checkbox) => {
-            checkbox.addEventListener("change", function () {
-              updateStyle(checkboxes, label);
-            });
-          });
-          updateStyle(checkboxes, label);
-        }
-        initializeCheckboxes(completepokedexCheckboxes, document.querySelector(".completepokedex .title label"));
-        initializeCheckboxes(legendariesCheckboxes, document.querySelector(".legendaries .title label"));
-        initializeCheckboxes(giftpokemonCheckboxes, document.querySelector(".giftpokemon .title label"));
-        initializeCheckboxes(ingametradesCheckboxes, document.querySelector(".ingametrades .title label"));
-        initializeCheckboxes(trainercardCheckboxes, document.querySelector(".trainercard .title label"));
-        initializeCheckboxes(battlesubwayCheckboxes, document.querySelector(".battlesubway .title label"));
-        initializeCheckboxes(musicalitemsCheckboxes, document.querySelector(".musicalitems .title label"));
-        initializeCheckboxes(battlesCheckboxes, document.querySelector(".battles .title label"));
-        initializeCheckboxes(battleinstituteCheckboxes, document.querySelector(".battleinstitute .title label"));
-        initializeCheckboxes(sagesCheckboxes, document.querySelector(".sages .title label"));
-        initializeCheckboxes(itemsCheckboxes, document.querySelector(".items .title label"));
-      });
-    </script>
-    <script>
-      function updateProgressBar() {
-        const totalCheckboxes = document.querySelectorAll('input[type="checkbox"]').length;
-        const checkedCheckboxes = document.querySelectorAll('input[type="checkbox"]:checked').length;
-
-        const progress = (checkedCheckboxes / totalCheckboxes) * 100;
-        document.getElementById("progressBar").style.width = progress + "%";
-      }
-
-      document.querySelectorAll('input[type="checkbox"]').forEach((checkbox) => {
-        checkbox.addEventListener("change", updateProgressBar);
-      });
-
-      updateProgressBar();
-    </script>
-
-    <script>
-      function checkedAllCheckboxes() {
-        const allChecked = Array.from(checkboxes).every((checkbox) => checkbox.checked);
-
-        if (allChecked) {
-          confetti();
-        }
-      }
-
-      // Add event listeners to checkboxes
-      const checkboxes = document.querySelectorAll('.checkbox-item input[type="checkbox"]');
-      checkboxes.forEach((checkbox) => {
-        checkbox.addEventListener("change", checkedAllCheckboxes);
-      });
-    </script>
+    <script src="../checklists/js/backup.js"></script>
   </body>
 </html>

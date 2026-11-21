@@ -14,19 +14,19 @@
     <link href="../images/icons/favicontab.ico" rel="shortcut icon" type="image/x-icon" />
     <meta name="description" content="A tool for tracking your progression in Pokemon games. Easily choose between games and track your game progress." />
     <meta name="keywords" content="pokemon, checklist, pokedex, progress, completion, speedrun, checklist, check list, locations, characters, games, game" />
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
-  </head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4PDLXC895H"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js" defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4PDLXC895H"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-    gtag("config", "G-4PDLXC895H");
-  </script>
+      gtag("config", "G-4PDLXC895H");
+    </script>
+  </head>
 
   <body>
     <div class="navbar bg-white rounded-3xl shadow-lg mt-2 fixed top-0 flex items-center justify-between" style="width: 95%; z-index: 1000; left: 50%; transform: translateX(-50%)">
@@ -1487,65 +1487,6 @@
     </footer>
 
     <script src="../checklists/js/script.js"></script>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const kantotasksCheckboxes = document.querySelectorAll('.kantotasks input[type="checkbox"]');
-        const hisuitasksCheckboxes = document.querySelectorAll('.hisuitasks input[type="checkbox"]');
-        const sinnohtasksCheckboxes = document.querySelectorAll('.sinnohtasks input[type="checkbox"]');
-        const galartasksCheckboxes = document.querySelectorAll('.galartasks input[type="checkbox"]');
-        const paldeatasksCheckboxes = document.querySelectorAll('.paldeatasks input[type="checkbox"]');
-
-        function updateStyle(checkboxes, label) {
-          const allChecked = [...checkboxes].every((checkbox) => checkbox.checked);
-          label.style.textDecoration = allChecked ? "line-through" : "none";
-        }
-
-        function initializeCheckboxes(checkboxes, label) {
-          checkboxes.forEach((checkbox) => {
-            checkbox.addEventListener("change", function () {
-              updateStyle(checkboxes, label);
-            });
-          });
-          updateStyle(checkboxes, label);
-        }
-        initializeCheckboxes(kantotasksCheckboxes, document.querySelector(".kantotasks .title label"));
-        initializeCheckboxes(hisuitasksCheckboxes, document.querySelector(".hisuitasks .title label"));
-        initializeCheckboxes(sinnohtasksCheckboxes, document.querySelector(".sinnohtasks .title label"));
-        initializeCheckboxes(galartasksCheckboxes, document.querySelector(".galartasks .title label"));
-        initializeCheckboxes(paldeatasksCheckboxes, document.querySelector(".paldeatasks .title label"));
-      });
-    </script>
-    <script>
-      function updateProgressBar() {
-        const totalCheckboxes = document.querySelectorAll('input[type="checkbox"]').length;
-        const checkedCheckboxes = document.querySelectorAll('input[type="checkbox"]:checked').length;
-
-        const progress = (checkedCheckboxes / totalCheckboxes) * 100;
-        document.getElementById("progressBar").style.width = progress + "%";
-      }
-
-      document.querySelectorAll('input[type="checkbox"]').forEach((checkbox) => {
-        checkbox.addEventListener("change", updateProgressBar);
-      });
-
-      updateProgressBar();
-    </script>
-
-    <script>
-      function checkedAllCheckboxes() {
-        const allChecked = Array.from(checkboxes).every((checkbox) => checkbox.checked);
-
-        if (allChecked) {
-          confetti();
-        }
-      }
-
-      // Add event listeners to checkboxes
-      const checkboxes = document.querySelectorAll('.checkbox-item input[type="checkbox"]');
-      checkboxes.forEach((checkbox) => {
-        checkbox.addEventListener("change", checkedAllCheckboxes);
-      });
-    </script>
+    <script src="../checklists/js/backup.js"></script>
   </body>
 </html>

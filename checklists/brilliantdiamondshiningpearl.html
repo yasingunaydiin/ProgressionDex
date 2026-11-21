@@ -10,7 +10,7 @@
     <link href="../images/icons/favicontab.ico" rel="shortcut icon" type="image/x-icon" />
     <meta name="description" content="A tool for tracking your progression in Pokemon games. Easily choose between games and track your game progress." />
     <meta name="keywords" content="pokemon, checklist, pokedex, progress, completion, speedrun, checklist, check list, locations, characters, games, game" />
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js" defer></script>
   </head>
 
   <body>
@@ -18,8 +18,8 @@
       <div class="flex items-center gap-4">
         <a href="../index.html" class="btn btn-ghost text-2xl"><span class="title">Progression Dex |</span></a>
         <div class="flex items-center gap-2">
-          <img id="brilliantdiamond-logo" src="../images/logos/brilliantdiamond-logo.webp" class="w-20" alt="Icon of Brilliant Diamond Logo" />
-          <img id="shiningpearl-logo" src="../images/logos/shiningpearl-logo.webp" class="w-20" alt="Icon of Shining Pearl Logo" />
+          <img id="brilliantdiamond-logo" src="../images/logos/brilliantdiamond-logo.webp" class="w-20" alt="Icon of Brilliant Diamond Logo" data-theme-color="#174b7d" data-theme-pattern="pattern-brilliantdiamond.png" />
+          <img id="shiningpearl-logo" src="../images/logos/shiningpearl-logo.webp" class="w-20" alt="Icon of Shining Pearl Logo" data-theme-color="#F1AEC6" data-theme-pattern="pattern-shiningpearl.png" />
         </div>
       </div>
     </div>
@@ -188,9 +188,9 @@
                   <label class="text-sm lg:tooltip" data-tip="After catching the Regi trio, you get access to the Soul Slate." for="brilliantdiamondshiningpearl-checkbox-latios">Latios</label>
                 </div>
                 <div class="checkbox-item">
-                  <input id="brilliantdiamondshiningpearl-checkbox-giratina" type="checkbox" />
+                  <input id="brilliantdiamondshiningpearl-checkbox-giratina-distortion-slate" type="checkbox" />
                   <img class="pokeicon" src="../images/icons/pokemon/gen8/brilliantdiamondshiningpearl/giratina-altered.png" alt="Icon of Giratina" />
-                  <label class="text-sm lg:tooltip" data-tip="After catching the Regi trio, and have captured Giratina, you get access to the Distortion Slate." for="brilliantdiamondshiningpearl-checkbox-giratina">Giratina</label>
+                  <label class="text-sm lg:tooltip" data-tip="After catching the Regi trio, and have captured Giratina, you get access to the Distortion Slate." for="brilliantdiamondshiningpearl-checkbox-giratina-distortion-slate">Giratina</label>
                 </div>
                 <div class="checkbox-item">
                   <input id="brilliantdiamondshiningpearl-checkbox-ho-oh" type="checkbox" />
@@ -825,126 +825,6 @@
       </ul>
     </footer>
     <script src="../checklists/js/script.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        var brilliantdiamondLogo = document.getElementById("brilliantdiamond-logo");
-        var shiningpearlLogo = document.getElementById("shiningpearl-logo");
-
-        var headerTitle = document.querySelector(".title");
-        var widePanels = document.querySelectorAll(".wide-panel");
-        var footer = document.querySelector("footer");
-        var titleText = document.querySelectorAll(".panel-label");
-        var backgroundIcons = document.querySelector("body");
-
-        brilliantdiamondLogo.addEventListener("click", function () {
-          headerTitle.style.color = "#174b7d";
-          footer.style.background = "#174b7d";
-          backgroundIcons.style.backgroundImage = "url(../../images/patterns/pattern-brilliantdiamond.png)";
-
-          titleText.forEach(function (text) {
-            text.style.color = "#174b7d";
-          });
-
-          widePanels.forEach(function (panel) {
-            panel.style.border = "2px solid #174b7d";
-          });
-        });
-
-        shiningpearlLogo.addEventListener("click", function () {
-          headerTitle.style.color = "#F1AEC6";
-          footer.style.backgroundColor = "#F1AEC6";
-          backgroundIcons.style.backgroundImage = "url(../../images/patterns/pattern-shiningpearl.png)";
-
-          titleText.forEach(function (text) {
-            text.style.color = "#F1AEC6";
-          });
-
-          widePanels.forEach(function (panel) {
-            panel.style.border = "2px solid #F1AEC6";
-          });
-        });
-      });
-    </script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const completepokedexCheckboxes = document.querySelectorAll('.completepokedex input[type="checkbox"]');
-        const legendariesCheckboxes = document.querySelectorAll('.legendaries input[type="checkbox"]');
-        const giftpokemonCheckboxes = document.querySelectorAll('.giftpokemon input[type="checkbox"]');
-        const ingametradesCheckboxes = document.querySelectorAll('.ingametrades input[type="checkbox"]');
-        const trainercardCheckboxes = document.querySelectorAll('.trainercard input[type="checkbox"]');
-        const poketchCheckboxes = document.querySelectorAll('.poketch input[type="checkbox"]');
-        const itemsCheckboxes = document.querySelectorAll('.items input[type="checkbox"]');
-        const outfitsCheckboxes = document.querySelectorAll('.outfits input[type="checkbox"]');
-        const ribbonsCheckboxes = document.querySelectorAll('.ribbons input[type="checkbox"]');
-        const contestribbonsCheckboxes = document.querySelectorAll('.contestribbons input[type="checkbox"]');
-        const dailyribbonsCheckboxes = document.querySelectorAll('.dailyribbons input[type="checkbox"]');
-        const achievementribbonsCheckboxes = document.querySelectorAll('.achievementribbons input[type="checkbox"]');
-        const ribbonsocietyCheckboxes = document.querySelectorAll('.ribbonsociety input[type="checkbox"]');
-        const battletowerCheckboxes = document.querySelectorAll('.battletower input[type="checkbox"]');
-        const gymleadersCheckboxes = document.querySelectorAll('.gymleaders input[type="checkbox"]');
-        const rematchesCheckboxes = document.querySelectorAll('.rematches input[type="checkbox"]');
-
-        function updateStyle(checkboxes, label) {
-          const allChecked = [...checkboxes].every((checkbox) => checkbox.checked);
-          label.style.textDecoration = allChecked ? "line-through" : "none";
-        }
-
-        function initializeCheckboxes(checkboxes, label) {
-          checkboxes.forEach((checkbox) => {
-            checkbox.addEventListener("change", function () {
-              updateStyle(checkboxes, label);
-            });
-          });
-          updateStyle(checkboxes, label);
-        }
-        initializeCheckboxes(completepokedexCheckboxes, document.querySelector(".completepokedex .title label"));
-        initializeCheckboxes(legendariesCheckboxes, document.querySelector(".legendaries .title label"));
-        initializeCheckboxes(giftpokemonCheckboxes, document.querySelector(".giftpokemon .title label"));
-        initializeCheckboxes(ingametradesCheckboxes, document.querySelector(".ingametrades .title label"));
-        initializeCheckboxes(trainercardCheckboxes, document.querySelector(".trainercard .title label"));
-        initializeCheckboxes(poketchCheckboxes, document.querySelector(".poketch .title label"));
-        initializeCheckboxes(itemsCheckboxes, document.querySelector(".items .title label"));
-        initializeCheckboxes(outfitsCheckboxes, document.querySelector(".outfits .title label"));
-        initializeCheckboxes(ribbonsCheckboxes, document.querySelector(".ribbons .title label"));
-        initializeCheckboxes(contestribbonsCheckboxes, document.querySelector(".contestribbons .title label"));
-        initializeCheckboxes(dailyribbonsCheckboxes, document.querySelector(".dailyribbons .title label"));
-        initializeCheckboxes(achievementribbonsCheckboxes, document.querySelector(".achievementribbons .title label"));
-        initializeCheckboxes(ribbonsocietyCheckboxes, document.querySelector(".ribbonsociety .title label"));
-        initializeCheckboxes(battletowerCheckboxes, document.querySelector(".battletower .title label"));
-        initializeCheckboxes(gymleadersCheckboxes, document.querySelector(".gymleaders .title label"));
-        initializeCheckboxes(rematchesCheckboxes, document.querySelector(".rematches .title label"));
-      });
-    </script>
-    <script>
-      function updateProgressBar() {
-        const totalCheckboxes = document.querySelectorAll('input[type="checkbox"]').length;
-        const checkedCheckboxes = document.querySelectorAll('input[type="checkbox"]:checked').length;
-
-        const progress = (checkedCheckboxes / totalCheckboxes) * 100;
-        document.getElementById("progressBar").style.width = progress + "%";
-      }
-
-      document.querySelectorAll('input[type="checkbox"]').forEach((checkbox) => {
-        checkbox.addEventListener("change", updateProgressBar);
-      });
-
-      updateProgressBar();
-    </script>
-
-    <script>
-      function checkedAllCheckboxes() {
-        const allChecked = Array.from(checkboxes).every((checkbox) => checkbox.checked);
-
-        if (allChecked) {
-          confetti();
-        }
-      }
-
-      // Add event listeners to checkboxes
-      const checkboxes = document.querySelectorAll('.checkbox-item input[type="checkbox"]');
-      checkboxes.forEach((checkbox) => {
-        checkbox.addEventListener("change", checkedAllCheckboxes);
-      });
-    </script>
+    <script src="../checklists/js/backup.js"></script>
   </body>
 </html>

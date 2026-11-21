@@ -10,26 +10,26 @@
     <link href="../images/icons/favicontab.ico" rel="shortcut icon" type="image/x-icon" />
     <meta name="description" content="A tool for tracking your progression in Pokemon games. Easily choose between games and track your game progress." />
     <meta name="keywords" content="pokemon, checklist, pokedex, progress, completion, speedrun, checklist, check list, locations, characters, games, game" />
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
-  </head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4PDLXC895H"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js" defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4PDLXC895H"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-    gtag("config", "G-4PDLXC895H");
-  </script>
+      gtag("config", "G-4PDLXC895H");
+    </script>
+  </head>
   <body>
     <div class="navbar bg-white rounded-3xl shadow-lg mt-2 fixed top-0 flex items-center justify-between" style="width: 95%; z-index: 1000; left: 50%; transform: translateX(-50%)">
       <div class="flex items-center gap-4">
         <a href="../index.html" class="btn btn-ghost text-2xl"><span class="title">Progression Dex |</span></a>
         <div class="flex items-center gap-2">
-          <img id="heartgold-logo" src="../images/logos/heartgold-logo.webp" class="w-20" alt="Icon of HeartGold Logo" />
-          <img id="soulsilver-logo" src="../images/logos/soulsilver-logo.webp" class="w-20" alt="Icon of SoulSilver Logo" />
+          <img id="heartgold-logo" src="../images/logos/heartgold-logo.webp" class="w-20" alt="Icon of HeartGold Logo" data-theme-color="#FFB346" data-theme-pattern="pattern-heartgold.png" />
+          <img id="soulsilver-logo" src="../images/logos/soulsilver-logo.webp" class="w-20" alt="Icon of SoulSilver Logo" data-theme-color="#7A95C4" data-theme-pattern="pattern-soulsilver.png" />
         </div>
       </div>
     </div>
@@ -768,127 +768,6 @@
       </ul>
     </footer>
     <script src="../checklists/js/script.js"></script>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        var heartgoldLogo = document.getElementById("heartgold-logo");
-        var soulsilverLogo = document.getElementById("soulsilver-logo");
-
-        var headerTitle = document.querySelector(".title");
-        var widePanels = document.querySelectorAll(".wide-panel");
-        var footer = document.querySelector("footer");
-        var titleText = document.querySelectorAll(".panel-label");
-        var backgroundIcons = document.querySelector("body");
-
-        heartgoldLogo.addEventListener("click", function () {
-          headerTitle.style.color = "#FFB346";
-          footer.style.background = "#FFB346";
-          backgroundIcons.style.backgroundImage = "url(../../images/patterns/pattern-heartgold.png)";
-
-          titleText.forEach(function (text) {
-            text.style.color = "#FFB346";
-          });
-
-          widePanels.forEach(function (panel) {
-            panel.style.border = "2px solid #FFB346";
-          });
-        });
-
-        soulsilverLogo.addEventListener("click", function () {
-          headerTitle.style.color = "#7A95C4";
-          footer.style.backgroundColor = "#7A95C4";
-          backgroundIcons.style.backgroundImage = "url(../../images/patterns/pattern-soulsilver.png)";
-
-          titleText.forEach(function (text) {
-            text.style.color = "#7A95C4";
-          });
-
-          widePanels.forEach(function (panel) {
-            panel.style.border = "2px solid #7A95C4";
-          });
-        });
-      });
-    </script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const completepokedexCheckboxes = document.querySelectorAll('.completepokedex input[type="checkbox"]');
-        const legendariesCheckboxes = document.querySelectorAll('.legendaries input[type="checkbox"]');
-        const eventpokemonCheckboxes = document.querySelectorAll('.eventpokemon input[type="checkbox"]');
-        const giftpokemonCheckboxes = document.querySelectorAll('.giftpokemon input[type="checkbox"]');
-        const ingametradesCheckboxes = document.querySelectorAll('.ingametrades input[type="checkbox"]');
-        const unownCheckboxes = document.querySelectorAll('.unown input[type="checkbox"]');
-        const trainercardCheckboxes = document.querySelectorAll('.trainercard input[type="checkbox"]');
-        const pokeathlonCheckboxes = document.querySelectorAll('.pokeathlon input[type="checkbox"]');
-        const battlefrontierCheckboxes = document.querySelectorAll('.battlefrontier input[type="checkbox"]');
-        const commerativephotosCheckboxes = document.querySelectorAll('.commerativephotos input[type="checkbox"]');
-        const storyeventsCheckboxes = document.querySelectorAll('.storyevents input[type="checkbox"]');
-        const battlesCheckboxes = document.querySelectorAll('.battles input[type="checkbox"]');
-        const ribbongiverCheckboxes = document.querySelectorAll('.ribbongiver input[type="checkbox"]');
-        const abilitybattleCheckboxes = document.querySelectorAll('.abilitybattle input[type="checkbox"]');
-        const moreribbonsCheckboxes = document.querySelectorAll('.moreribbons input[type="checkbox"]');
-        const itemsCheckboxes = document.querySelectorAll('.items input[type="checkbox"]');
-
-        function updateStyle(checkboxes, label) {
-          const allChecked = [...checkboxes].every((checkbox) => checkbox.checked);
-          label.style.textDecoration = allChecked ? "line-through" : "none";
-        }
-
-        function initializeCheckboxes(checkboxes, label) {
-          checkboxes.forEach((checkbox) => {
-            checkbox.addEventListener("change", function () {
-              updateStyle(checkboxes, label);
-            });
-          });
-          updateStyle(checkboxes, label);
-        }
-        initializeCheckboxes(completepokedexCheckboxes, document.querySelector(".completepokedex .title label"));
-        initializeCheckboxes(legendariesCheckboxes, document.querySelector(".legendaries .title label"));
-        initializeCheckboxes(eventpokemonCheckboxes, document.querySelector(".eventpokemon .title label"));
-        initializeCheckboxes(giftpokemonCheckboxes, document.querySelector(".giftpokemon .title label"));
-        initializeCheckboxes(ingametradesCheckboxes, document.querySelector(".ingametrades .title label"));
-        initializeCheckboxes(unownCheckboxes, document.querySelector(".unown .title label"));
-        initializeCheckboxes(trainercardCheckboxes, document.querySelector(".trainercard .title label"));
-        initializeCheckboxes(pokeathlonCheckboxes, document.querySelector(".pokeathlon .title label"));
-        initializeCheckboxes(battlefrontierCheckboxes, document.querySelector(".battlefrontier .title label"));
-        initializeCheckboxes(commerativephotosCheckboxes, document.querySelector(".commerativephotos .title label"));
-        initializeCheckboxes(storyeventsCheckboxes, document.querySelector(".storyevents .title label"));
-        initializeCheckboxes(battlesCheckboxes, document.querySelector(".battles .title label"));
-        initializeCheckboxes(ribbongiverCheckboxes, document.querySelector(".ribbongiver .title label"));
-        initializeCheckboxes(abilitybattleCheckboxes, document.querySelector(".abilitybattle .title label"));
-        initializeCheckboxes(moreribbonsCheckboxes, document.querySelector(".moreribbons .title label"));
-        initializeCheckboxes(itemsCheckboxes, document.querySelector(".items .title label"));
-      });
-    </script>
-    <script>
-      function updateProgressBar() {
-        const totalCheckboxes = document.querySelectorAll('input[type="checkbox"]').length;
-        const checkedCheckboxes = document.querySelectorAll('input[type="checkbox"]:checked').length;
-
-        const progress = (checkedCheckboxes / totalCheckboxes) * 100;
-        document.getElementById("progressBar").style.width = progress + "%";
-      }
-
-      document.querySelectorAll('input[type="checkbox"]').forEach((checkbox) => {
-        checkbox.addEventListener("change", updateProgressBar);
-      });
-
-      updateProgressBar();
-    </script>
-
-    <script>
-      function checkedAllCheckboxes() {
-        const allChecked = Array.from(checkboxes).every((checkbox) => checkbox.checked);
-
-        if (allChecked) {
-          confetti();
-        }
-      }
-
-      // Add event listeners to checkboxes
-      const checkboxes = document.querySelectorAll('.checkbox-item input[type="checkbox"]');
-      checkboxes.forEach((checkbox) => {
-        checkbox.addEventListener("change", checkedAllCheckboxes);
-      });
-    </script>
+    <script src="../checklists/js/backup.js"></script>
   </body>
 </html>
