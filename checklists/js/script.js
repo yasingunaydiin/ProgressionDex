@@ -27,6 +27,7 @@
   onReady(() => {
     const checkboxes = [...document.querySelectorAll('input[type="checkbox"]')];
     const progressBar = document.getElementById("progressBar");
+    const game = document.querySelector(".page-container")?.dataset.game;
 
     // Each ".checkbox-item > .title" heads a section; the section is its parent container.
     const sections = [...document.querySelectorAll(".checkbox-item > .title")]
@@ -40,6 +41,8 @@
       if (progressBar && checkboxes.length) {
         const done = checkboxes.filter((c) => c.checked).length;
         progressBar.style.width = `${(done / checkboxes.length) * 100}%`;
+        // Summary read by the game list page to show In Progress / Completed badges.
+        if (game) storage.set(`pdex-summary-${game}`, JSON.stringify({ done, total: checkboxes.length }));
       }
       sections.forEach(({ label, boxes }) => {
         label.style.textDecoration = boxes.every((c) => c.checked) ? "line-through" : "none";

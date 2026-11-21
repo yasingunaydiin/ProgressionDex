@@ -1,7 +1,7 @@
 // Export / import saved progress as a JSON file so it survives clearing browser data.
 (() => {
   "use strict";
-  const isProgressKey = (key) => /-checkbox-/.test(key);
+  const isProgressKey = (key) => /-checkbox-/.test(key) || key.startsWith("pdex-summary-");
 
   function exportProgress() {
     const data = {};
@@ -25,7 +25,7 @@
       }
       const progress = parsed && parsed.app === "progressiondex" ? parsed.progress : null;
       if (!progress || typeof progress !== "object") return alert("That file is not a Progression Dex backup.");
-      const entries = Object.entries(progress).filter(([k, v]) => isProgressKey(k) && (v === "true" || v === "false"));
+      const entries = Object.entries(progress).filter(([k, v]) => isProgressKey(k) && typeof v === "string");
       entries.forEach(([k, v]) => localStorage.setItem(k, v));
       alert(`Imported ${entries.length} entries.`);
       location.reload();
@@ -45,7 +45,11 @@
     };
     const input = Object.assign(document.createElement("input"), { type: "file", accept: "application/json,.json", hidden: true });
     input.addEventListener("change", () => input.files[0] && importProgress(input.files[0]));
-    bar.append(make("Export progress", exportProgress), make("Import progress", () => input.click()), input);
+    bar.append(
+      make("Export progress", exportProgress),
+      make("Import progress", () => input.click()),
+      input,
+    );
     document.body.append(bar);
   });
 })();
