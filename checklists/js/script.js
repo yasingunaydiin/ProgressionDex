@@ -26,11 +26,116 @@
   const onReady = (fn) => (document.readyState === "loading" ? document.addEventListener("DOMContentLoaded", fn) : fn());
   const CHEVRON = '<svg class="chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8l5 5 5-5"/></svg>';
 
+  // ---------- info balloons ----------
+  // Tooltips used to hang off every name label. Now a Pokemon's "where to find it" text sits behind a pin button,
+  // and any other note sits behind an (i) in the tile's top-right corner. Text only shows when hovering that button.
+  const PIN = '<svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>';
+  const NOT_LOCATION = /evolv|breed|hatch|see a guide|event only|go to home|transfer|mystery gift|download|\bcode\b/i;
+  const LOCATION =
+    /\b(route|city|town|cave|forest|island|isle|lake|mount|mt\.?|tower|path|area|road|park|zone|woods|garden|ruins?|tunnel|temple|desert|beach|bay|sea|field|plains?|trail|mine|falls|hollow|valley|safari|village|league|sanctuary|chamber|cavern|bridge|harbor|lighthouse|hideout|castle|stadium|tundra|swamp|marsh|meadow|volcano|crater|canyon|plateau|peak|summit|shrine|arena|mansion|museum|factory|plant|slab|spring|river|ocean|waters?|palace|facility|frontier|wormhole|catch|found|appears?|encounter|located|roam|wild|fish|surf|grass)\b/i;
+
+  function isLocationTip(tip) {
+    if (NOT_LOCATION.test(tip)) return false;
+    return tip.split(/\s+/).length <= 4 || LOCATION.test(tip);
+  }
+
+  function setupInfo() {
+    document.querySelectorAll(".checkbox-item").forEach((item) => {
+      const isHeading = item.querySelector(":scope > .title") !== null;
+      const labels = isHeading ? [...item.querySelectorAll(".title label")] : [...item.querySelectorAll(":scope > label")];
+      const isPokemon = !isHeading && item.querySelector('img[src*="/icons/pokemon/"]') !== null;
+      const location = [];
+      const other = [];
+
+      labels.forEach((label) => {
+        const raw = label.getAttribute("data-tip");
+        if (raw === null) return;
+        label.removeAttribute("data-tip");
+        label.classList.remove("lg:tooltip");
+        const tip = raw.trim();
+        const hasText = label.textContent.trim() !== "";
+        const iconOnly = !label.hasAttribute("for");
+
+        if (iconOnly && !hasText && tip && /^[\p{L}][\p{L}\p{N}' .:\-]*$/u.test(tip) && tip.split(/\s+/).length <= 3 && !/\.$/.test(tip)) {
+          label.append(tip); // Home tiles: the "tip" is just the Pokemon's name, so show it as the caption
+          return;
+        }
+        if (iconOnly && !hasText && label.querySelector("img.icon-small")) label.remove(); // old "more info" icon
+        if (!tip || location.includes(tip) || other.includes(tip)) return;
+        (isPokemon && isLocationTip(tip) ? location : other).push(tip);
+      });
+
+      const add = (kind, tips, title) => {
+        if (!tips.length) return;
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = `info-btn ${kind}`;
+        btn.dataset.tip = tips.join("\n\n");
+        btn.setAttribute("aria-label", title);
+        btn.innerHTML = kind === "loc" ? PIN : "i";
+        item.append(btn);
+      };
+      // A tile with several icon-only labels is a group of Pokemon (Home regional lists): lay the icons out as a row.
+      if (item.querySelectorAll(":scope > label:not([for])").length >= 2) item.classList.add("is-group");
+      add("loc", location, "Where to find it");
+      add("note", other, "More info");
+      item.dataset.tips = [...location, ...other].join(" ");
+    });
+
+    // One shared balloon, positioned next to whichever button is hovered/focused/tapped.
+    const balloon = document.createElement("div");
+    balloon.className = "pdex-tip";
+    balloon.setAttribute("role", "tooltip");
+    document.body.append(balloon);
+    let current = null;
+
+    function show(btn) {
+      current = btn;
+      balloon.textContent = btn.dataset.tip;
+      balloon.style.visibility = "hidden";
+      balloon.classList.add("show");
+      const r = btn.getBoundingClientRect();
+      const b = balloon.getBoundingClientRect();
+      const left = Math.min(Math.max(8, r.left + r.width / 2 - b.width / 2), window.innerWidth - b.width - 8);
+      const above = r.top - b.height - 10 >= 8;
+      balloon.style.left = `${left}px`;
+      balloon.style.top = `${above ? r.top - b.height - 10 : r.bottom + 10}px`;
+      balloon.dataset.side = above ? "top" : "bottom";
+      balloon.style.setProperty("--arrow", `${r.left + r.width / 2 - left}px`);
+      balloon.style.visibility = "visible";
+    }
+    function hide() {
+      current = null;
+      balloon.classList.remove("show");
+    }
+    const target = (e) => e.target.closest?.(".info-btn");
+    document.addEventListener("mouseover", (e) => target(e) && show(target(e)));
+    document.addEventListener("mouseout", (e) => target(e) && hide());
+    document.addEventListener("focusin", (e) => target(e) && show(target(e)));
+    document.addEventListener("focusout", (e) => target(e) && hide());
+    document.addEventListener("click", (e) => {
+      const btn = target(e);
+      if (btn) current === btn && balloon.classList.contains("show") && e.detail === 0 ? hide() : show(btn);
+      else hide();
+    });
+    window.addEventListener("scroll", hide, { passive: true });
+  }
+
   onReady(() => {
+    setupInfo();
     const checkboxes = [...document.querySelectorAll('input[type="checkbox"]')];
     const page = document.querySelector(".page-container");
     const progressBar = document.getElementById("progressBar");
     const game = page?.dataset.game;
+
+    // Some pages (Home) put the section title straight into the section instead of inside a ".checkbox-item" row.
+    document.querySelectorAll(".wide-panel > div > .title:first-child").forEach((title) => {
+      const row = document.createElement("div");
+      row.className = "checkbox-item";
+      title.replaceWith(row);
+      row.append(title);
+      title.querySelector("label")?.classList.remove("panel-label");
+    });
 
     // ---------- sections ----------
     // A top-level section is a direct child <div> of a ".wide-panel" whose first child is a title row.
@@ -80,7 +185,7 @@
       toolbar.querySelector('input[type="search"]').addEventListener("input", (e) => {
         const q = e.target.value.trim().toLowerCase();
         document.querySelectorAll(".checkbox-item:not(:has(> .title))").forEach((item) => {
-          const text = item.textContent.toLowerCase() + " " + (item.querySelector("label")?.dataset.tip || "").toLowerCase();
+          const text = (item.textContent + " " + (item.dataset.tips || "")).toLowerCase();
           item.classList.toggle("is-filtered", q !== "" && !text.includes(q));
         });
         // searching should reveal matches, so open every section
@@ -123,7 +228,7 @@
     // Clicking anywhere on a tile (not just the label) toggles it.
     document.addEventListener("click", (e) => {
       const item = e.target.closest(".checkbox-item");
-      if (!item || e.target.closest("label, input, .section-head")) return;
+      if (!item || e.target.closest("label[for], input, .section-head, .info-btn")) return;
       const box = item.querySelector(':scope > input[type="checkbox"]');
       if (box) box.click();
     });

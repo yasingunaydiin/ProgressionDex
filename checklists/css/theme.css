@@ -190,6 +190,7 @@ body::before {
 /* ---------- panels ---------- */
 
 .page-container .wide-panel {
+  height: auto;
   width: auto;
   max-width: none;
   margin: 0;
@@ -232,6 +233,7 @@ body::before {
   border-top: 1px solid var(--line);
 }
 
+.page-container .wide-panel > div:first-child,
 .page-container .wide-panel > .panel-label + div {
   border-top: 0;
   padding-top: 6px;
@@ -482,13 +484,110 @@ body::before {
   font-weight: 600;
 }
 
-/* Keep the DaisyUI tooltip readable */
-.page-container .checkbox-item .tooltip::before {
-  max-width: 260px;
-  white-space: normal;
+/* ---------- info buttons + balloon ---------- */
+
+.info-btn {
+  appearance: none;
+  display: inline-grid;
+  place-items: center;
+  flex: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid var(--line-strong);
+  background: var(--card);
+  color: var(--muted);
+  cursor: help;
+  transition:
+    color 0.15s ease,
+    border-color 0.15s ease,
+    background-color 0.15s ease;
+}
+
+.info-btn:hover,
+.info-btn:focus-visible {
+  color: #fff;
+  background: var(--accent);
+  border-color: var(--accent);
+  outline: none;
+}
+
+/* (i) for anything that is not a Pokemon location: top-right of the tile */
+.info-btn.note {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  font:
+    italic 700 0.8rem/1 Georgia,
+    "Times New Roman",
+    serif;
+}
+
+/* pin for "where to find this Pokemon": under the name */
+.info-btn.loc {
+  order: 3;
+  width: 30px;
+  height: 26px;
+  margin: 2px auto 0;
+  border-radius: 999px;
+}
+
+.page-container .checkbox-item:not(:has(> .title)):not(:has(img)) {
+  padding-right: 34px;
+}
+
+.page-container .checkbox-item:has(> .title) .info-btn.note {
+  position: static;
+}
+
+.page-container .checkbox-item:not(:has(> .title)) label:has(> img) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.pdex-tip {
+  position: fixed;
+  z-index: 2000;
+  max-width: min(320px, calc(100vw - 16px));
+  padding: 9px 12px;
+  border-radius: 10px;
+  background: #1c2233;
+  color: #f4f6fb;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  white-space: pre-line;
   text-align: left;
-  font-size: 0.78rem;
-  z-index: 30;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.12s ease;
+}
+
+.pdex-tip.show {
+  opacity: 1;
+}
+
+.pdex-tip::after {
+  content: "";
+  position: absolute;
+  left: var(--arrow, 50%);
+  margin-left: -6px;
+  border: 6px solid transparent;
+}
+
+.pdex-tip[data-side="top"]::after {
+  top: 100%;
+  border-top-color: #1c2233;
+}
+
+.pdex-tip[data-side="bottom"]::after {
+  bottom: 100%;
+  border-bottom-color: #1c2233;
 }
 
 .page-container .checkbox-item {
@@ -497,6 +596,50 @@ body::before {
 
 .page-container .checkbox-item:hover {
   z-index: 5;
+}
+
+/* ---------- grouped tiles (Pokemon Home regional lists) ---------- */
+
+.page-container .checkbox-item.is-group {
+  grid-column: span 2;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 8px 6px;
+  padding: 30px 10px 12px;
+}
+
+.page-container .checkbox-item.is-group > label[for] {
+  order: 0;
+  width: 100%;
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.page-container .checkbox-item.is-group > label:not([for]) {
+  order: 1;
+  width: 64px;
+  flex: 0 0 64px;
+  font-size: 0.68rem;
+  line-height: 1.15;
+  color: var(--muted);
+  word-break: break-word;
+}
+
+.page-container .checkbox-item.is-group > label:not([for]) img {
+  height: 40px;
+}
+
+.page-container .checkbox-item.is-group > .info-btn.loc {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  margin: 0;
+  width: 26px;
+  height: 22px;
 }
 
 /* ---------- collapsible groups (TM/TR lists) ---------- */
