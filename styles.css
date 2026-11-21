@@ -169,3 +169,24 @@ main {
     gap: 32px;
   }
 }
+
+/* Background: icons from several game pages, layered at different offsets */
+body {
+  background-color: var(--bg);
+  background-image: url(images/patterns/pattern-red.png), url(images/patterns/pattern-ruby.png), url(images/patterns/pattern-sword.png), url(images/patterns/pattern-scarlet.png);
+  background-size: 500px 250px;
+  background-position:
+    0 0,
+    250px 125px,
+    250px 0,
+    0 125px;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: color-mix(in srgb, var(--bg) 70%, transparent);
+  pointer-events: none;
+}
