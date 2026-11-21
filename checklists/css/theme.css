@@ -617,17 +617,17 @@ body::before {
 }
 
 .page-container .checkbox-item.is-group {
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
-  align-content: flex-start;
-  gap: 8px 2px;
+  display: grid;
+  grid-template-columns: repeat(var(--icons, 4), minmax(0, 1fr));
+  justify-items: center;
+  align-items: start;
+  align-content: start;
+  gap: 8px 4px;
   padding: 30px 8px 12px;
 }
 
 .page-container .checkbox-item.is-group > label[for] {
-  order: 0;
+  grid-column: 1 / -1;
   width: 100%;
   font-size: 0.88rem;
   font-weight: 700;
@@ -635,17 +635,18 @@ body::before {
 }
 
 .page-container .checkbox-item.is-group > label:not([for]) {
-  order: 1;
-  width: 62px;
-  flex: 0 0 62px;
+  width: 100%;
+  min-width: 0;
   font-size: 0.6rem;
   line-height: 1.15;
   color: var(--muted);
-  word-break: break-word;
+  text-align: center;
+  overflow-wrap: break-word;
 }
 
 .page-container .checkbox-item.is-group > label:not([for]) img {
   height: 40px;
+  max-width: 100%;
 }
 
 .page-container .checkbox-item.is-group > .info-btn.loc {

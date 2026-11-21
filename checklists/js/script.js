@@ -76,7 +76,12 @@
         item.append(btn);
       };
       // A tile with several icon-only labels is a group of Pokemon (Home regional lists): lay the icons out as a row.
-      if (item.querySelectorAll(":scope > label:not([for])").length >= 2) item.classList.add("is-group");
+      const icons = item.querySelectorAll(":scope > label:not([for])").length;
+      if (icons >= 2) {
+        item.classList.add("is-group");
+        // one even row of icons; long lists split into two balanced rows
+        item.style.setProperty("--icons", icons <= 5 ? icons : Math.ceil(icons / 2));
+      }
       add("loc", location, "Where to find it");
       add("note", other, "More info");
       item.dataset.tips = [...location, ...other].join(" ");
