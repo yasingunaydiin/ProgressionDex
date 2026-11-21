@@ -605,15 +605,25 @@ body::before {
 
 /* ---------- grouped tiles (Pokemon Home regional lists) ---------- */
 
+/* sections with grouped tiles use two equal columns so every box has the same width */
+.page-container .wide-panel > div:has(.is-group) {
+  --cols: repeat(2, minmax(0, 1fr));
+}
+
+@media (max-width: 700px) {
+  .page-container .wide-panel > div:has(.is-group) {
+    --cols: minmax(0, 1fr);
+  }
+}
+
 .page-container .checkbox-item.is-group {
-  grid-column: span 2;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
   align-content: flex-start;
-  gap: 8px 6px;
-  padding: 30px 10px 12px;
+  gap: 8px 2px;
+  padding: 30px 8px 12px;
 }
 
 .page-container .checkbox-item.is-group > label[for] {
@@ -626,9 +636,9 @@ body::before {
 
 .page-container .checkbox-item.is-group > label:not([for]) {
   order: 1;
-  width: 64px;
-  flex: 0 0 64px;
-  font-size: 0.68rem;
+  width: 62px;
+  flex: 0 0 62px;
+  font-size: 0.6rem;
   line-height: 1.15;
   color: var(--muted);
   word-break: break-word;
