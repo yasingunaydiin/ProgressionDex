@@ -44,13 +44,199 @@
 
     <div class="page-container" data-game="thetealmask">
       <div class="page-container-left">
-        <div class="wide-panel pokedex"></div>
-
-        <div class="wide-panel exploration"></div>
+        <div class="wide-panel pokedex">
+          <label class="panel-label">Pokédex</label>
+          <div class="completepokedex">
+            <div class="checkbox-item">
+              <span class="title"><label class="text-lg">Complete the Kitakami Pokédex</label></span>
+            </div>
+            <div class="checkbox-item">
+              <input id="thetealmask-checkbox-kitakami-pokedex" type="checkbox" />
+              <label class="text-sm lg:tooltip" data-tip="Register all 200 Pokémon in the Kitakami Pokédex. Progress from your Paldea Pokédex carries over, and Pokémon HOME transfers count." for="thetealmask-checkbox-kitakami-pokedex"
+                >Complete the Kitakami Pokédex</label
+              >
+            </div>
+            <div class="checkbox-item">
+              <input id="thetealmask-checkbox-pokedex-diploma" type="checkbox" />
+              <label class="text-sm lg:tooltip" data-tip="Reward for completing the Kitakami Pokédex. Jaq hands it over." for="thetealmask-checkbox-pokedex-diploma">Get the Pokédex Diploma</label>
+            </div>
+            <div class="checkbox-item">
+              <input id="thetealmask-checkbox-glimmering-charm" type="checkbox" />
+              <label class="text-sm lg:tooltip" data-tip="Reward for completing the Kitakami Pokédex. It increases the Tera Shards you get from Tera Raids." for="thetealmask-checkbox-glimmering-charm">Glimmering Charm</label>
+            </div>
+          </div>
+          <div class="newpokemon">
+            <div class="checkbox-item">
+              <span class="title"><label class="text-lg">Catch the new Pokémon</label></span>
+            </div>
+            <div class="checkbox-item">
+              <input id="thetealmask-checkbox-dipplin" type="checkbox" />
+              <img alt="Icon of Dipplin" class="pokeicon" src="../images/icons/pokemon/gen9/dipplin.png" />
+              <label class="text-sm lg:tooltip" data-tip="Evolve Applin using a Syrupy Apple." for="thetealmask-checkbox-dipplin">Dipplin</label>
+            </div>
+            <div class="checkbox-item">
+              <input id="thetealmask-checkbox-poltchageist" type="checkbox" />
+              <img alt="Icon of Poltchageist" class="pokeicon" src="../images/icons/pokemon/gen9/poltchageist.png" />
+              <label class="text-sm lg:tooltip" data-tip="Wild Poltchageist appear in Kitakami." for="thetealmask-checkbox-poltchageist">Poltchageist</label>
+            </div>
+            <div class="checkbox-item">
+              <input id="thetealmask-checkbox-sinistcha" type="checkbox" />
+              <img alt="Icon of Sinistcha" class="pokeicon" src="../images/icons/pokemon/gen9/sinistcha.png" />
+              <label class="text-sm lg:tooltip" data-tip="Evolve Poltchageist with an Unremarkable Teacup (Counterfeit form) or a Masterpiece Teacup (Artisan form)." for="thetealmask-checkbox-sinistcha">Sinistcha</label>
+            </div>
+            <div class="checkbox-item">
+              <input id="thetealmask-checkbox-bloodmoon-ursaluna" type="checkbox" />
+              <img alt="Icon of Bloodmoon Ursaluna" class="pokeicon" src="../images/icons/pokemon/gen9/ursaluna-bloodmoon.png" />
+              <label class="text-sm lg:tooltip" data-tip="Finish the Bloodmoon Ursaluna quest in Kitakami. It cannot be shiny, and the quest is also needed for Iron Boulder in The Indigo Disk." for="thetealmask-checkbox-bloodmoon-ursaluna"
+                >Bloodmoon Ursaluna</label
+              >
+            </div>
+          </div>
+          <div class="legendaries">
+            <div class="checkbox-item">
+              <span class="title"><label class="text-lg">Catch the Loyal Three and Ogerpon</label></span>
+            </div>
+            <div class="checkbox-item">
+              <input id="thetealmask-checkbox-okidogi" type="checkbox" />
+              <img alt="Icon of Okidogi" class="pokeicon" src="../images/icons/pokemon/gen9/okidogi.png" />
+              <label
+                class="text-sm lg:tooltip"
+                data-tip="Only after the main story. Found in the north-west corner of Kitakami, in Paradise Barrens. You get one chance to catch it, so save first. It cannot be shiny."
+                for="thetealmask-checkbox-okidogi"
+                >Okidogi</label
+              >
+            </div>
+            <div class="checkbox-item">
+              <input id="thetealmask-checkbox-munkidori" type="checkbox" />
+              <img alt="Icon of Munkidori" class="pokeicon" src="../images/icons/pokemon/gen9/munkidori.png" />
+              <label
+                class="text-sm lg:tooltip"
+                data-tip="Only after the main story. Found in the south-west of Kitakami, around the pond near Wistful Fields. You get one chance to catch it, so save first. It cannot be shiny."
+                for="thetealmask-checkbox-munkidori"
+                >Munkidori</label
+              >
+            </div>
+            <div class="checkbox-item">
+              <input id="thetealmask-checkbox-fezandipiti" type="checkbox" />
+              <img alt="Icon of Fezandipiti" class="pokeicon" src="../images/icons/pokemon/gen9/fezandipiti.png" />
+              <label class="text-sm lg:tooltip" data-tip="Only after the main story. Found in the mountains east of Crystal Pool. You get one chance to catch it, so save first. It cannot be shiny." for="thetealmask-checkbox-fezandipiti"
+                >Fezandipiti</label
+              >
+            </div>
+            <div class="checkbox-item">
+              <input id="thetealmask-checkbox-ogerpon" type="checkbox" />
+              <img alt="Icon of Ogerpon" class="pokeicon" src="../images/icons/pokemon/gen9/ogerpon.png" />
+              <label
+                class="text-sm lg:tooltip"
+                data-tip="Only after the main story, once you have beaten the Loyal Three and recovered its masks. Break its four masks in order (Hearthflame, Wellspring, Cornerstone, Teal), then throw a Poké Ball. It cannot be shiny."
+                for="thetealmask-checkbox-ogerpon"
+                >Ogerpon</label
+              >
+            </div>
+            <div class="checkbox-item">
+              <input id="thetealmask-checkbox-ogerpon-wellspring" type="checkbox" />
+              <img alt="Icon of Wellspring Mask" class="pokeicon" src="../images/icons/pokemon/gen9/ogerpon-wellspring.png" />
+              <label class="text-sm lg:tooltip" data-tip="Hold this mask to turn Ogerpon into its Wellspring form." for="thetealmask-checkbox-ogerpon-wellspring">Wellspring Mask</label>
+            </div>
+            <div class="checkbox-item">
+              <input id="thetealmask-checkbox-ogerpon-hearthflame" type="checkbox" />
+              <img alt="Icon of Hearthflame Mask" class="pokeicon" src="../images/icons/pokemon/gen9/ogerpon-hearthflame.png" />
+              <label class="text-sm lg:tooltip" data-tip="Hold this mask to turn Ogerpon into its Hearthflame form." for="thetealmask-checkbox-ogerpon-hearthflame">Hearthflame Mask</label>
+            </div>
+            <div class="checkbox-item">
+              <input id="thetealmask-checkbox-ogerpon-cornerstone" type="checkbox" />
+              <img alt="Icon of Cornerstone Mask" class="pokeicon" src="../images/icons/pokemon/gen9/ogerpon-cornerstone.png" />
+              <label class="text-sm lg:tooltip" data-tip="Hold this mask to turn Ogerpon into its Cornerstone form." for="thetealmask-checkbox-ogerpon-cornerstone">Cornerstone Mask</label>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="page-container-right">
-        <div class="wide-panel mainstory"></div>
-        <div class="wide-panel postgame"></div>
+        <div class="wide-panel mainstory">
+          <label class="panel-label">Main Story</label>
+          <div class="mainstory-quests">
+            <div class="checkbox-item">
+              <span class="title"><label class="text-lg">Complete the main story</label></span>
+            </div>
+            <div class="checkbox-item">
+              <input id="thetealmask-checkbox-fix-teal-mask" type="checkbox" />
+              <label class="text-sm lg:tooltip" for="thetealmask-checkbox-fix-teal-mask">Fix the Teal Mask</label>
+            </div>
+            <div class="checkbox-item">
+              <input id="thetealmask-checkbox-festival-of-masks" type="checkbox" />
+              <label class="text-sm lg:tooltip" for="thetealmask-checkbox-festival-of-masks">Attend the Festival of Masks</label>
+            </div>
+            <div class="checkbox-item">
+              <input id="thetealmask-checkbox-defeat-loyal-three" type="checkbox" />
+              <label class="text-sm lg:tooltip" data-tip="You can fight them during the story, but they cannot be caught yet." for="thetealmask-checkbox-defeat-loyal-three">Defeat the Loyal Three</label>
+            </div>
+            <div class="checkbox-item">
+              <input id="thetealmask-checkbox-prove-yourself" type="checkbox" />
+              <label class="text-sm lg:tooltip" for="thetealmask-checkbox-prove-yourself">Prove yourself to Ogerpon</label>
+            </div>
+          </div>
+          <div class="festival">
+            <div class="checkbox-item">
+              <span class="title"><label class="text-lg">Festival of Masks</label></span>
+            </div>
+            <div class="checkbox-item">
+              <input id="thetealmask-checkbox-ogre-oustin-easy" type="checkbox" />
+              <label class="text-sm lg:tooltip" data-tip="Pop the balloons and collect the berries while keeping greedy wild Pokémon away. Carmine challenges you to beat her score." for="thetealmask-checkbox-ogre-oustin-easy"
+                >Ogre Oustin&#x27; (Easy)</label
+              >
+            </div>
+            <div class="checkbox-item">
+              <input id="thetealmask-checkbox-ogre-oustin-hard" type="checkbox" />
+              <label class="text-sm lg:tooltip" data-tip="Clear the minigame on Hard difficulty." for="thetealmask-checkbox-ogre-oustin-hard">Ogre Oustin&#x27; (Hard)</label>
+            </div>
+            <div class="checkbox-item">
+              <input id="thetealmask-checkbox-shiny-munchlax" type="checkbox" />
+              <img alt="Icon of Shiny Munchlax" class="pokeicon" src="../images/icons/pokemon/home/sinnoh/munchlax.png" />
+              <label class="text-sm lg:tooltip" data-tip="Reward for clearing Ogre Oustin’ on Hard difficulty." for="thetealmask-checkbox-shiny-munchlax">Shiny Munchlax</label>
+            </div>
+          </div>
+        </div>
+        <div class="wide-panel postgame">
+          <label class="panel-label">Post Game</label>
+          <div class="kitakamipost">
+            <div class="checkbox-item">
+              <span class="title"><label class="text-lg">Kitakami post game</label></span>
+            </div>
+            <div class="checkbox-item">
+              <input id="thetealmask-checkbox-rematch-loyal-three" type="checkbox" />
+              <label class="text-sm lg:tooltip" data-tip="Available after the main story." for="thetealmask-checkbox-rematch-loyal-three">Rematch the Loyal Three</label>
+            </div>
+            <div class="checkbox-item">
+              <input id="thetealmask-checkbox-ogre-clan" type="checkbox" />
+              <label class="text-sm lg:tooltip" for="thetealmask-checkbox-ogre-clan">Beat the Kitakami Ogre Clan</label>
+            </div>
+            <div class="checkbox-item">
+              <input id="thetealmask-checkbox-six-wonders" type="checkbox" />
+              <label class="text-sm lg:tooltip" for="thetealmask-checkbox-six-wonders">Visit the Six Wonders of Kitakami</label>
+            </div>
+            <div class="checkbox-item">
+              <input id="thetealmask-checkbox-kitakami-tms" type="checkbox" />
+              <label class="text-sm lg:tooltip" data-tip="The DLC adds 30 TMs. Some are found while exploring Kitakami; the rest are made at a TM Machine with League Points and materials." for="thetealmask-checkbox-kitakami-tms"
+                >Get all 30 new TMs</label
+              >
+            </div>
+          </div>
+          <div class="loyaltyplaza">
+            <div class="checkbox-item">
+              <span class="title"><label class="text-lg">Loyalty Plaza</label></span>
+            </div>
+            <div class="checkbox-item">
+              <input id="thetealmask-checkbox-loyalty-drive" type="checkbox" />
+              <label class="text-sm lg:tooltip" data-tip="After the main story, the caretaker at Kitakami Hall asks for donations to rebuild the plaza. Raise 1,000,000 Pokédollars." for="thetealmask-checkbox-loyalty-drive"
+                >Finish the Loyalty Plaza drive</label
+              >
+            </div>
+            <div class="checkbox-item">
+              <input id="thetealmask-checkbox-festival-jinbei" type="checkbox" />
+              <label class="text-sm lg:tooltip" data-tip="Reward for finishing the Loyalty Plaza drive, together with a “Hurray!” emote." for="thetealmask-checkbox-festival-jinbei">Festival Jinbei (Flashy)</label>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <footer>
