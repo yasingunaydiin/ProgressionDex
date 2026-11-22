@@ -331,13 +331,14 @@
       places: KANTO_PLACES,
       alt: {
         sevii: { image: "maps/sevii.png", title: "Sevii Islands", places: SEVII_PLACES },
+        birthisland: { image: "maps/birthisland.png", title: "Birth Island", places: { "Birth Island": { x: 80.7, y: 84.7, w: 6.5, h: 8.7 } } },
         navelrock: { image: "maps/navelrock.png", title: "Navel Rock", places: { "Navel Rock": { x: 47.9, y: 57.6, w: 6.5, h: 8.7 } } },
       },
       pins: {
         moltres: ["Mt. Ember", "Mt. Ember, on One Island", "sevii"],
         lugia: ["Navel Rock", "Navel Rock (needs the MysticTicket).", "navelrock"],
         "ho-oh": ["Navel Rock", "Navel Rock (needs the MysticTicket).", "navelrock"],
-        deoxys: ["Birth Island", "Birth Island (needs the AuroraTicket)", "sevii"],
+        deoxys: ["Birth Island", "Birth Island (needs the AuroraTicket)", "birthisland"],
         togepi: ["Five Island", "Water Labyrinth, Five Island", "sevii"],
         unownA: ["Tanoby Ruins", "Tanoby Ruins, Monean Chamber.", "sevii"],
         unownB: ["Tanoby Ruins", "Tanoby Ruins, Rixy Chamber.", "sevii"],

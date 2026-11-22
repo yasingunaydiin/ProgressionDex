@@ -1022,7 +1022,8 @@ footer ul {
   height: auto;
 }
 
-.pdex-map img[src$="navelrock.png"] {
+.pdex-map img[src$="navelrock.png"],
+.pdex-map img[src$="birthisland.png"] {
   image-rendering: pixelated;
   width: 576px;
 }
