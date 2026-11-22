@@ -145,7 +145,7 @@
 
   // Games that have map links so far (the Pokemon's Bulbapedia location list, plus the region map)
   const KANTO_LINK = { region: "Kanto", url: "https://bulbapedia.bulbagarden.net/wiki/Kanto" };
-  const MAP_GAMES = { redblue: KANTO_LINK, yellow: KANTO_LINK, fireredleafgreen: KANTO_LINK };
+  const MAP_GAMES = { goldsilver: { region: "Johto", url: "https://bulbapedia.bulbagarden.net/wiki/Johto" }, redblue: KANTO_LINK, yellow: KANTO_LINK, fireredleafgreen: KANTO_LINK };
 
   // Schematic maps with pins. Positions are percentages of the picture and only as accurate as the guides they came from.
   const KANTO_PLACES = {
@@ -174,6 +174,28 @@
     "Navel Rock": { x: 65.8, y: 68.8 },
     "Birth Island": { x: 81.0, y: 94.4 },
     "Five Island": { x: 76.8, y: 80.2 },
+  };
+
+  const JOHTO_PLACES = {
+    "New Bark Town": { x: 91.6, y: 71.8 },
+    "Cherrygrove City": { x: 64.0, y: 71.8 },
+    "Violet City": { x: 52.6, y: 40.4 },
+    "Ecruteak City": { x: 41.3, y: 27.6 },
+    "Mahogany Town": { x: 69.2, y: 27.6 },
+    "Blackthorn City": { x: 86.2, y: 27.6 },
+    "Goldenrod City": { x: 19.1, y: 40.4 },
+    "Olivine City": { x: 30.2, y: 65.3 },
+    "Cianwood City": { x: 7.7, y: 71.8 },
+    "Azalea Town": { x: 41.6, y: 90.4 },
+    "Lake of Rage": { x: 69.2, y: 14.9 },
+    "Mt. Mortar": { x: 52.6, y: 27.6 },
+    "Ilex Forest": { x: 30.2, y: 40.0 },
+    "Union Cave": { x: 46.9, y: 52.7 },
+    "Whirl Islands": { x: 13.6, y: 65.5 },
+    "Mt. Silver": { x: 97.2, y: 46.3 },
+    "Slowpoke Well": { x: 52.6, y: 90.4 },
+    "Ruins of Alph": { x: 43.7, y: 44.7 },
+    "Route 35": { x: 16.8, y: 32.5 },
   };
 
   const PIN_MAPS = {
@@ -292,6 +314,51 @@
         ponyta: ["Cinnabar Island", "Cinnabar Island"],
         raichu: ["Cinnabar Island", "Cinnabar Island"],
         venonat: ["Cinnabar Island", "Cinnabar Island"],
+      },
+    },
+    goldsilver: {
+      image: "maps/goldsilver.svg",
+      title: "Johto (schematic)",
+      places: JOHTO_PLACES,
+      pins: {
+        lugia: ["Whirl Islands", "Whirl Islands (with the Silver Wing)"],
+        "ho-oh": ["Ecruteak City", "Tin Tower, Ecruteak City (with the Rainbow Wing)"],
+        spearow: ["Route 35", "Route 35 south gate"],
+        eevee: ["Goldenrod City", "Bill's house, Goldenrod City"],
+        togepi: ["Violet City", "Pokémon Center, Violet City"],
+        shuckle: ["Cianwood City", "Cianwood City"],
+        tyrogue: ["Mt. Mortar", "Mt. Mortar, basement 1F"],
+        "bellsprout-onix": ["Violet City", "House in Violet City"],
+        "drowzee-machop": ["Goldenrod City", "Goldenrod Department Store"],
+        "krabby-voltorb": ["Olivine City", "Olivine City"],
+        "dragonair-rhydon": ["Blackthorn City", "Blackthorn City"],
+        defeatred: ["Mt. Silver", "Mt. Silver, after getting all 16 badges"],
+        a: ["Ruins of Alph", "Ruins of Alph, northeast chamber"],
+        b: ["Ruins of Alph", "Ruins of Alph, northeast chamber"],
+        c: ["Ruins of Alph", "Ruins of Alph, northeast chamber"],
+        d: ["Ruins of Alph", "Ruins of Alph, northeast chamber"],
+        e: ["Ruins of Alph", "Ruins of Alph, northeast chamber"],
+        f: ["Ruins of Alph", "Ruins of Alph, northeast chamber"],
+        g: ["Ruins of Alph", "Ruins of Alph, northeast chamber"],
+        h: ["Ruins of Alph", "Ruins of Alph, northeast chamber"],
+        i: ["Ruins of Alph", "Ruins of Alph, northeast chamber"],
+        j: ["Ruins of Alph", "Ruins of Alph, northeast chamber"],
+        k: ["Ruins of Alph", "Ruins of Alph, northeast chamber"],
+        l: ["Ruins of Alph", "Ruins of Alph, southwest chamber"],
+        m: ["Ruins of Alph", "Ruins of Alph, southwest chamber"],
+        n: ["Ruins of Alph", "Ruins of Alph, southwest chamber"],
+        o: ["Ruins of Alph", "Ruins of Alph, southwest chamber"],
+        p: ["Ruins of Alph", "Ruins of Alph, southwest chamber"],
+        q: ["Ruins of Alph", "Ruins of Alph, southwest chamber"],
+        r: ["Ruins of Alph", "Ruins of Alph, southwest chamber"],
+        s: ["Ruins of Alph", "Ruins of Alph, southeast chamber"],
+        t: ["Ruins of Alph", "Ruins of Alph, southeast chamber"],
+        u: ["Ruins of Alph", "Ruins of Alph, southeast chamber"],
+        v: ["Ruins of Alph", "Ruins of Alph, southeast chamber"],
+        w: ["Ruins of Alph", "Ruins of Alph, southeast chamber"],
+        x: ["Ruins of Alph", "Ruins of Alph, northwest chamber"],
+        y: ["Ruins of Alph", "Ruins of Alph, northwest chamber"],
+        z: ["Ruins of Alph", "Ruins of Alph, northwest chamber"],
       },
     },
     thetealmask: {
