@@ -20,6 +20,17 @@ A tool for tracking your 100% progress in Pokemon games. Pick a game, tick thing
 
 <img width="1920px" src="images/screenshots/game_screenshot.png" alt="screenshot" align="left" />
 
+## Accounts and sync (optional)
+
+By default nothing leaves your browser. If you want sign-in and syncing across devices, the site can use [Supabase](https://supabase.com) (free tier). Without the steps below the site behaves exactly as before and no sign-in button is shown.
+
+1. Create a Supabase project.
+2. In the SQL editor run [supabase/schema.sql](supabase/schema.sql). It creates the `progress` table and row level security so people can only read and write their own rows.
+3. Under Project Settings > API copy the project URL and the `anon` public key into [config.js](config.js).
+4. Under Authentication > URL Configuration add your site address (for example `http://localhost:8000` and your real domain) as the Site URL / redirect URLs so confirmation and password-reset emails come back to the site.
+
+How it behaves: checkboxes always live in `localStorage` first, so the site works offline and for people without an account. When signed in, every change is also saved to the account. The first time a browser signs in, ticks from the browser and from the account are merged (nothing is lost); after that the most recent change wins per game.
+
 ## Development
 
 It is a static site; there is no server code. Serve the repo root with any static file server (for example `python3 -m http.server`) and open `index.html`.

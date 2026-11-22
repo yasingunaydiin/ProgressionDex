@@ -27,6 +27,8 @@
       if (!progress || typeof progress !== "object") return alert("That file is not a Progression Dex backup.");
       const entries = Object.entries(progress).filter(([k, v]) => isProgressKey(k) && typeof v === "string");
       entries.forEach(([k, v]) => localStorage.setItem(k, v));
+      // mark the imported games as modified so a signed-in account picks the import up
+      new Set(entries.map(([k]) => (/^([a-z0-9]+)-checkbox-/.exec(k) || [])[1]).filter(Boolean)).forEach((g) => localStorage.setItem(`pdex-mod-${g}`, String(Date.now())));
       alert(`Imported ${entries.length} entries.`);
       location.reload();
     });

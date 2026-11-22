@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <script src="../theme.js"></script>
+    <script src="../config.js"></script>
+    <script src="../auth.js"></script>
     <link href="styles.css" rel="stylesheet" />
     <link href="../images/icons/favicontab.ico" rel="icon" type="image/x-icon" />
     <link href="../images/icons/favicontab.ico" rel="shortcut icon" type="image/x-icon" />
@@ -224,7 +226,8 @@
     </main>
 
     <script>
-      document.querySelector(".top nav").append(pdexTheme.button("dark"));
+      document.querySelector(".top nav").append(pdexAuth.button(), pdexTheme.button("dark"));
+      document.addEventListener("pdex-synced", () => location.reload());
     </script>
     <script src="script.js"></script>
     <script src="../checklists/js/backup.js"></script>

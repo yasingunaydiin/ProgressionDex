@@ -183,7 +183,9 @@
         <button type="button" data-action="collapse">Collapse all</button>
         <span class="toolbar-extra" style="display: contents"></span>`;
       page.prepend(toolbar);
-      if (window.pdexTheme) toolbar.querySelector(".toolbar-extra").before(window.pdexTheme.button());
+      const extra = toolbar.querySelector(".toolbar-extra");
+      if (window.pdexAuth) extra.before(window.pdexAuth.button());
+      if (window.pdexTheme) extra.before(window.pdexTheme.button());
       summaryStrong = toolbar.querySelector("strong");
       summarySmall = toolbar.querySelector("small");
       summaryBar = toolbar.querySelector(".bar b");
@@ -253,11 +255,20 @@
       box.addEventListener("change", () => {
         if (box.id) storage.set(box.id, box.checked);
         refresh();
+        if (window.pdexSync) window.pdexSync.changed(game);
         const items = checkboxes.filter((c) => c.closest(".checkbox-item"));
         if (box.checked && items.length && items.every((c) => c.checked) && typeof confetti === "function") confetti();
       });
     });
     refresh();
+
+    // progress pulled from the user's account while this page is open
+    document.addEventListener("pdex-synced", () => {
+      checkboxes.forEach((box) => {
+        if (box.id) box.checked = storage.get(box.id) === "true";
+      });
+      refresh();
+    });
 
     // Clicking anywhere on a tile (not just the label) toggles it.
     document.addEventListener("click", (e) => {
