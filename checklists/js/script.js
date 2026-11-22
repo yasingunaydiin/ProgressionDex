@@ -146,7 +146,8 @@
   // Games that have map links so far (the Pokemon's Bulbapedia location list, plus the region map)
   const KANTO_LINK = { region: "Kanto", url: "https://bulbapedia.bulbagarden.net/wiki/Kanto" };
   const JOHTO_LINK = { region: "Johto", url: "https://bulbapedia.bulbagarden.net/wiki/Johto" };
-  const MAP_GAMES = { goldsilver: JOHTO_LINK, crystal: JOHTO_LINK, redblue: KANTO_LINK, yellow: KANTO_LINK, fireredleafgreen: KANTO_LINK };
+  const HOENN_LINK = { region: "Hoenn", url: "https://bulbapedia.bulbagarden.net/wiki/Hoenn" };
+  const MAP_GAMES = { goldsilver: JOHTO_LINK, crystal: JOHTO_LINK, redblue: KANTO_LINK, emerald: HOENN_LINK, rubysapphire: HOENN_LINK, yellow: KANTO_LINK, fireredleafgreen: KANTO_LINK };
 
   // Schematic maps with pins. Positions are percentages of the picture and only as accurate as the guides they came from.
   const KANTO_PLACES = {
@@ -212,6 +213,31 @@
     "Power Plant": { x: 86.1, y: 36.7 },
     "Pewter City": { x: 30.6, y: 30 },
     "Route 14": { x: 38.9, y: 75 },
+  };
+
+  const HOENN_PLACES = {
+    "Rustboro City": { x: 3.9, y: 40.9, w: 3.1, h: 8.8 },
+    "Petalburg City": { x: 7.8, y: 56.6, w: 3.1, h: 5.0 },
+    "Verdanturf Town": { x: 17.1, y: 42.1, w: 3.1, h: 5.0 },
+    "Oldale Town": { x: 17.1, y: 57.9, w: 3.1, h: 5.0 },
+    "Littleroot Town": { x: 17.1, y: 67.9, w: 3.1, h: 5.0 },
+    "Fallarbor Town": { x: 13.6, y: 12.6, w: 3.1, h: 5.0 },
+    "Lavaridge Town": { x: 20.2, y: 27.0, w: 3.1, h: 5.0 },
+    "Mauville City": { x: 31.1, y: 42.1, w: 6.2, h: 5.0 },
+    "Slateport City": { x: 29.6, y: 64.8, w: 3.1, h: 12.6 },
+    "Fortree City": { x: 42.0, y: 12.6, w: 3.1, h: 5.0 },
+    "Lilycove City": { x: 63.0, y: 27.7, w: 6.2, h: 5.0 },
+    "Mossdeep City": { x: 80.9, y: 36.5, w: 6.2, h: 5.0 },
+    "Sootopolis City": { x: 70.0, y: 47.8, w: 3.1, h: 5.0 },
+    "Pacifidlog Town": { x: 57.6, y: 61.6, w: 3.1, h: 5.0 },
+    "Dewford Town": { x: 10.9, y: 81.8, w: 3.1, h: 5.0 },
+    "Route 111 desert": { x: 31.9, y: 28.9, w: 4.7, h: 5.0 },
+    "Weather Institute": { x: 40.9, y: 18.9, w: 3.1, h: 5.0 },
+    "Island Cave": { x: 7.8, y: 70.4, w: 3.1, h: 5.0 },
+    "Ancient Tomb": { x: 48.6, y: 17.6, w: 3.1, h: 5.0 },
+    "Sky Pillar": { x: 53.7, y: 61.6, w: 3.1, h: 5.0 },
+    "Marine Cave": { x: 77.8, y: 61.6, w: 3.1, h: 5.0 },
+    "Terra Cave": { x: 15.6, y: 20.1, w: 3.1, h: 5.0 },
   };
 
   const SEVII_PLACES = {
@@ -359,6 +385,51 @@
         ponyta: ["Cinnabar Island", "Cinnabar Island"],
         raichu: ["Cinnabar Island", "Cinnabar Island"],
         venonat: ["Cinnabar Island", "Cinnabar Island"],
+      },
+    },
+    emerald: {
+      image: "maps/hoenn.png",
+      title: "Hoenn",
+      places: HOENN_PLACES,
+      pins: {
+        kyogre: ["Marine Cave", "Marine Cave, Route 127"],
+        groudon: ["Terra Cave", "Terra Cave, Route 114"],
+        rayquaza: ["Sky Pillar", "Sky Pillar, near Pacifidlog Town"],
+        regirock: ["Route 111 desert", "Desert Tomb, Route 111 desert"],
+        regice: ["Island Cave", "Island Cave, Route 105"],
+        registeel: ["Ancient Tomb", "Ancient Tomb, Route 120"],
+        lileep: ["Route 111 desert", "Route 111, Mirage Tower (only one can be chosen)"],
+        anorith: ["Route 111 desert", "Route 111, Mirage Tower (only one can be chosen)"],
+        castform: ["Weather Institute", "Weather Institute, Route 119"],
+        wynaut: ["Lavaridge Town", "Lavaridge Town"],
+        beldum: ["Lavaridge Town", "Lavaridge Town, after defeating the Champion"],
+        diploma: ["Lilycove City", "Cove Lily Motel, Lilycove City"],
+        "seedot-ralts": ["Rustboro City", "Rustboro City"],
+        "volbeat-plusle": ["Fortree City", "Fortree City"],
+        "bagon-horsea": ["Pacifidlog Town", "Pacifidlog Town"],
+        "johto-starter": ["Littleroot Town", "Professor Birch's lab, Littleroot Town"],
+      },
+    },
+    rubysapphire: {
+      image: "maps/hoenn.png",
+      title: "Hoenn",
+      places: HOENN_PLACES,
+      pins: {
+        kyogre: ["Sootopolis City", "Cave of Origin, Sootopolis City"],
+        groudon: ["Sootopolis City", "Cave of Origin, Sootopolis City"],
+        rayquaza: ["Sky Pillar", "Sky Pillar, near Pacifidlog Town"],
+        regirock: ["Route 111 desert", "Desert Tomb, Route 111 desert"],
+        regice: ["Island Cave", "Island Cave, Route 105"],
+        registeel: ["Ancient Tomb", "Ancient Tomb, Route 120"],
+        lileep: ["Route 111 desert", "Route 111, Mirage Tower (only one can be chosen)"],
+        anorith: ["Route 111 desert", "Route 111, Mirage Tower (only one can be chosen)"],
+        castform: ["Weather Institute", "Weather Institute, Route 119"],
+        wynaut: ["Lavaridge Town", "Lavaridge Town"],
+        beldum: ["Lavaridge Town", "Lavaridge Town, after defeating the Champion"],
+        diploma: ["Lilycove City", "Cove Lily Motel, Lilycove City"],
+        slakoth: ["Rustboro City", "Rustboro City"],
+        pikachu: ["Fortree City", "Fortree City"],
+        bellossum: ["Pacifidlog Town", "Pacifidlog Town"],
       },
     },
     goldsilver: {

@@ -1022,6 +1022,11 @@ footer ul {
   height: auto;
 }
 
+.pdex-map img[src$="hoenn.png"] {
+  image-rendering: pixelated;
+  width: 514px;
+}
+
 .pdex-map img[src$="kanto-rby.png"],
 .pdex-map img[src$="-gsc.png"] {
   image-rendering: pixelated;
