@@ -167,6 +167,25 @@
     "Route 24": { x: 66.7, y: 24.0 },
   };
 
+  const RBY_PLACES = {
+    "Power Plant": { x: 82.5, y: 20.6 },
+    "Victory Road": { x: 12.5, y: 26.5 },
+    "Seafoam Islands": { x: 37.5, y: 91.2 },
+    "Cerulean Cave": { x: 62.5, y: 11.8 },
+    "Saffron City": { x: 62.5, y: 32.4 },
+    "Celadon City": { x: 47.5, y: 32.4 },
+    "Mt. Moon": { x: 42.5, y: 14.7 },
+    "Pewter City": { x: 22.5, y: 20.6 },
+    "Route 2": { x: 22.5, y: 35.3 },
+    "Route 5": { x: 62.5, y: 22.1 },
+    "Route 11": { x: 72.5, y: 55.9 },
+    "Route 18": { x: 67.5, y: 77.9 },
+    "Cerulean City": { x: 62.5, y: 11.8 },
+    "Vermilion City": { x: 62.5, y: 55.9 },
+    "Cinnabar Island": { x: 22.5, y: 91.2 },
+    "Route 24": { x: 62.5, y: 4.4 },
+  };
+
   const SEVII_PLACES = {
     "Mt. Ember": { x: 14.6, y: 10.0 },
     "Trainer Tower": { x: 27.0, y: 82.0 },
@@ -198,9 +217,9 @@
 
   const PIN_MAPS = {
     redblue: {
-      image: "maps/kanto.png",
+      image: "maps/kanto-rby.png",
       title: "Kanto",
-      places: KANTO_PLACES,
+      places: RBY_PLACES,
       pins: {
         zapdos: ["Power Plant", "Power Plant, on the east side near Rock Tunnel"],
         moltres: ["Victory Road", "Victory Road, near the Indigo Plateau"],
@@ -225,9 +244,9 @@
       },
     },
     yellow: {
-      image: "maps/kanto.png",
+      image: "maps/kanto-rby.png",
       title: "Kanto",
-      places: KANTO_PLACES,
+      places: RBY_PLACES,
       pins: {
         zapdos: ["Power Plant", "Power Plant, on the east side near Rock Tunnel"],
         moltres: ["Victory Road", "Victory Road, near the Indigo Plateau"],
