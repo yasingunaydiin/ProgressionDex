@@ -271,6 +271,7 @@
 
   function button() {
     if (!enabled) return document.createDocumentFragment();
+    injectStyle(); // the picture and status dot need these styles before the dialog is ever opened
     var b = document.createElement("button");
     b.type = "button";
     b.className = "theme-btn pdex-account";
@@ -291,7 +292,7 @@
     var s = document.createElement("style");
     s.id = "pdex-auth-style";
     s.textContent =
-      ".pdex-account{position:relative}.pdex-pic{width:calc(100% - 4px);height:calc(100% - 4px);border-radius:50%;object-fit:cover;display:block}.pdex-avatar{width:64px;height:64px;border-radius:50%;object-fit:cover;display:grid;place-items:center;flex:none;background:var(--accent,#4f6bed);color:#fff;font:800 1.5rem system-ui,sans-serif;overflow:hidden}.pdex-avatar-row{display:flex;align-items:center;gap:14px}.pdex-avatar-row .pdex-col{display:grid;gap:6px;justify-items:start}" +
+      ".pdex-account{position:relative}.pdex-pic{position:absolute;inset:3px;width:calc(100% - 6px);height:calc(100% - 6px);max-width:none;border-radius:50%;object-fit:cover;display:block}.pdex-avatar{width:64px;height:64px;border-radius:50%;object-fit:cover;display:grid;place-items:center;flex:none;background:var(--accent,#4f6bed);color:#fff;font:800 1.5rem system-ui,sans-serif;overflow:hidden}.pdex-avatar-row{display:flex;align-items:center;gap:14px}.pdex-avatar-row .pdex-col{display:grid;gap:6px;justify-items:start}" +
       ".pdex-account[data-state=synced]::after,.pdex-account[data-state=syncing]::after,.pdex-account[data-state=error]::after{content:'';position:absolute;top:1px;right:1px;width:9px;height:9px;border-radius:50%;border:2px solid var(--card,var(--bg,#fff));background:#2ecf9c}" +
       ".pdex-account[data-state=syncing]::after{background:#f5a524}.pdex-account[data-state=error]::after{background:#e5484d}" +
       ".pdex-dialog{border:1px solid var(--line-strong,rgba(128,128,128,.5));border-radius:18px;padding:0;background:var(--card,var(--bg,#fff));color:var(--text,var(--fg,#111));width:min(380px,calc(100% - 32px));box-shadow:0 24px 60px rgba(0,0,0,.5);font:15px/1.5 system-ui,sans-serif}" +
