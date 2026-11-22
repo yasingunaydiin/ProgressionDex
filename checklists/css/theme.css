@@ -853,3 +853,26 @@ footer ul {
   padding-top: 14px;
   padding-bottom: 10px;
 }
+
+/* some game stylesheets centre the left column, which shrank the panel; panels always fill their column */
+.page-container .page-container-left,
+.page-container .page-container-right {
+  align-items: stretch;
+}
+
+/* utility class used by a few pages to hide a block (an empty placeholder panel on Gold/Silver) */
+.hidden {
+  display: none !important;
+}
+
+/* version-exclusive colour (e.g. Lugia silver / Ho-Oh gold) shown as a coloured bottom edge, so pale colours stay readable */
+.page-container .checkbox-item.has-ver {
+  border-bottom: 4px solid var(--ver);
+}
+
+/* version names are coloured inline (Lugia silver, Ho-Oh gold); a thin dark outline keeps the pale ones readable */
+.page-container .checkbox-item label span[style*="color"] {
+  font-weight: 700;
+  -webkit-text-stroke: 1.6px rgba(20, 30, 50, 0.75);
+  paint-order: stroke fill;
+}

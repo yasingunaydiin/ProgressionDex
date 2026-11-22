@@ -48,6 +48,11 @@
       const other = [];
 
       labels.forEach((label) => {
+        if (!isHeading && label.hasAttribute("for") && label.style.color) {
+          item.style.setProperty("--ver", label.style.color);
+          item.classList.add("has-ver");
+          label.style.color = "";
+        }
         const raw = label.getAttribute("data-tip");
         if (raw === null) return;
         label.removeAttribute("data-tip");
