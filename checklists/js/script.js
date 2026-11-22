@@ -146,6 +146,31 @@
   // Games that have map links so far (the Pokemon's Bulbapedia location list, plus the region map)
   const MAP_GAMES = { redblue: { region: "Kanto", url: "https://bulbapedia.bulbagarden.net/wiki/Kanto" } };
 
+  // Schematic maps with pins. Positions are percentages of the picture and only as accurate as the guides they came from.
+  const PIN_MAPS = {
+    thetealmask: {
+      image: "maps/thetealmask.svg",
+      title: "Kitakami (schematic)",
+      pins: {
+        okidogi: { x: 25, y: 27, place: "Paradise Barrens, north-west corner" },
+        munkidori: { x: 26, y: 73, place: "Wistful Fields, by the lake in the south-west" },
+        fezandipiti: { x: 79, y: 41, place: "A cliff on the east side of Oni Mountain" },
+      },
+    },
+  };
+
+  function pinMap(item) {
+    const game = document.querySelector(".page-container")?.dataset.game;
+    const cfg = PIN_MAPS[game];
+    const id = item.querySelector(':scope > input[type="checkbox"]')?.id || "";
+    const pin = cfg && cfg.pins[id.replace(`${game}-checkbox-`, "")];
+    if (!pin) return "";
+    return (
+      `<h3>Map</h3><div class="pdex-map"><img alt="${cfg.title}" src="${cfg.image}" /><span class="pdex-pin" style="left:${pin.x}%;top:${pin.y}%"></span></div>` +
+      `<p class="pdex-map-note"><b>${pin.place}.</b><br />Schematic map, not to scale. The pin shows the area guides describe, not an exact spot.</p>`
+    );
+  }
+
   function mapLinks(query, isPokemon) {
     const info = MAP_GAMES[document.querySelector(".page-container")?.dataset.game];
     if (!info) return "";
@@ -184,6 +209,7 @@
       (img ? `<img class="pdex-drawer-img" alt="" src="${esc(img.getAttribute("src"))}" />` : "") +
       `<h2>${esc(name)}</h2>` +
       sections.map((x) => `<h3>${x.kind}</h3><p>${esc(x.text)}</p>`).join("") +
+      pinMap(item) +
       mapLinks(query, !!(img && /\/icons\/pokemon\//.test(img.getAttribute("src")))) +
       `<h3>Look it up</h3><div class="pdex-drawer-links">${searchLinks(query)
         .map(([n, u]) => `<a href="${esc(u)}" target="_blank" rel="noopener noreferrer">${n} &#8599;</a>`)

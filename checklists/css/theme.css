@@ -1001,3 +1001,44 @@ footer ul {
     transition: none;
   }
 }
+
+/* schematic map with a pin in the details panel */
+.pdex-map {
+  position: relative;
+  border: 1px solid var(--line-strong);
+  border-radius: 12px;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.pdex-map img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.pdex-pin {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  margin: -22px 0 0 -11px;
+  border-radius: 50% 50% 50% 0;
+  background: #e5484d;
+  border: 3px solid #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.45);
+  transform: rotate(-45deg);
+}
+
+.pdex-pin::after {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.pdex-map-note {
+  margin-top: 8px !important;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
