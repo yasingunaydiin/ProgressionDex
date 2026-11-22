@@ -261,14 +261,24 @@
         if (e.key.startsWith("Arrow") || e.key === "Home" || e.key === "End") e.preventDefault();
       });
 
-      // a plain mouse wheel scrolls the row sideways
-      row.addEventListener(
+      // the wheel (or a trackpad swipe) works anywhere on the page: each notch moves the selection one game
+      let wheelAcc = 0;
+      let wheelAt = 0;
+      document.addEventListener(
         "wheel",
         (e) => {
+          if (e.ctrlKey || e.metaKey || document.querySelector("dialog[open]")) return;
+          e.preventDefault();
           lastScroll = Date.now();
-          if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
-            row.scrollLeft += e.deltaY * 0.7;
-            e.preventDefault();
+          const d = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY;
+          wheelAcc += d;
+          const now = Date.now();
+          if (Math.abs(wheelAcc) >= 40 && now - wheelAt > 140) {
+            select(current + (wheelAcc > 0 ? 1 : -1));
+            wheelAcc = 0;
+            wheelAt = now;
+          } else if (now - wheelAt > 400) {
+            wheelAcc = d; // a pause resets the accumulated amount
           }
         },
         { passive: false },
