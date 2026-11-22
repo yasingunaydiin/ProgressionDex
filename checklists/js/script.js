@@ -1658,7 +1658,11 @@
       title: "Jubilife Village",
       places: { "Galaxy Hall": { x: 51.1, y: 6.9, w: 6.8, h: 6.9 } },
       alt: {
-        cobalt: { image: "maps/arceus-cobalt.png", title: "Cobalt Coastlands", places: { "Spring Path": { x: 15.5, y: 22.8, w: 6.8, h: 6.8 }, "Firespit Island": { x: 85.9, y: 14.8, w: 6.8, h: 6.8 } } },
+        cobalt: {
+          image: "maps/arceus-cobalt.png",
+          title: "Cobalt Coastlands",
+          places: { "Seabreak Hollow": { x: 50.5, y: 30.4, w: 6.8, h: 6.8 }, "Spring Path": { x: 15.5, y: 22.8, w: 6.8, h: 6.8 }, "Firespit Island": { x: 85.9, y: 14.8, w: 6.8, h: 6.8 } },
+        },
         crimson: { image: "maps/arceus-crimson.png", title: "Crimson Mirelands", places: { "Lake Valor": { x: 74.0, y: 28.6, w: 6.8, h: 6.8 }, "Scarlet Bog": { x: 56.9, y: 59.5, w: 6.8, h: 6.8 } } },
         obsidian: {
           image: "maps/arceus-obsidian.png",
@@ -1691,6 +1695,8 @@
         shaymin: ["Floaro Gardens", "Floaro Gardens", "obsidian"],
         azelf: ["Lake Valor", "Lake Valor", "crimson"],
         enamorus: ["Scarlet Bog", "Scarlet Bog", "crimson"],
+        manaphy: ["Seabreak Hollow", "Seabreak Hollow", "cobalt"],
+        phione: ["Seabreak Hollow", "Seabreak Hollow", "cobalt"],
         heatran: ["Firespit Island", "Firespit Island", "cobalt"],
         giratina: ["Spring Path", "Spring Path", "cobalt"],
       },
