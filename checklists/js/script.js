@@ -148,7 +148,19 @@
   const JOHTO_LINK = { region: "Johto", url: "https://bulbapedia.bulbagarden.net/wiki/Johto" };
   const HOENN_LINK = { region: "Hoenn", url: "https://bulbapedia.bulbagarden.net/wiki/Hoenn" };
   const SINNOH_LINK = { region: "Sinnoh", url: "https://bulbapedia.bulbagarden.net/wiki/Sinnoh" };
-  const MAP_GAMES = { goldsilver: JOHTO_LINK, crystal: JOHTO_LINK, redblue: KANTO_LINK, diamondpearl: SINNOH_LINK, platinum: SINNOH_LINK, emerald: HOENN_LINK, rubysapphire: HOENN_LINK, yellow: KANTO_LINK, fireredleafgreen: KANTO_LINK };
+  const UNOVA_LINK = { region: "Unova", url: "https://bulbapedia.bulbagarden.net/wiki/Unova" };
+  const MAP_GAMES = {
+    goldsilver: JOHTO_LINK,
+    crystal: JOHTO_LINK,
+    redblue: KANTO_LINK,
+    blackwhite: UNOVA_LINK,
+    diamondpearl: SINNOH_LINK,
+    platinum: SINNOH_LINK,
+    emerald: HOENN_LINK,
+    rubysapphire: HOENN_LINK,
+    yellow: KANTO_LINK,
+    fireredleafgreen: KANTO_LINK,
+  };
 
   // Schematic maps with pins. Positions are percentages of the picture and only as accurate as the guides they came from.
   const KANTO_PLACES = {
@@ -267,6 +279,39 @@
     "Lake Valor": { x: 71.8, y: 75.6, w: 4.6, h: 4.8 },
     "Mt. Coronet": { x: 48.6, y: 56.5, w: 6.5, h: 11.9 },
     "Route 214": { x: 63.4, y: 52.4, w: 11.1, h: 3.6 },
+  };
+
+  const UNOVA_PLACES = {
+    "Mistralton City": { x: 15.6, y: 39.3, w: 4.7, h: 7.1 },
+    "Icirrus City": { x: 28.9, y: 25.6, w: 4.7, h: 7.1 },
+    "Opelucid City": { x: 51.6, y: 25.6, w: 4.7, h: 7.1 },
+    "Lacunosa Town": { x: 74.2, y: 25.6, w: 4.7, h: 7.1 },
+    "Undella Town": { x: 87.5, y: 39.3, w: 4.7, h: 7.1 },
+    "Driftveil City": { x: 28.9, y: 53.6, w: 4.7, h: 7.1 },
+    "Nimbasa City": { x: 51.6, y: 53.6, w: 4.7, h: 7.1 },
+    "Black City": { x: 74.2, y: 53.6, w: 4.7, h: 7.1 },
+    "Castelia City": { x: 51.6, y: 77.4, w: 4.7, h: 7.1 },
+    "Nacrene City": { x: 79.3, y: 69.6, w: 4.7, h: 7.1 },
+    "Striaton City": { x: 88.7, y: 69.6, w: 4.7, h: 7.1 },
+    "Accumula Town": { x: 90.6, y: 82.1, w: 4.7, h: 7.1 },
+    "Nuvema Town": { x: 91.0, y: 94.0, w: 4.7, h: 7.1 },
+    "Pokémon League": { x: 66.4, y: 8.9, w: 4.7, h: 7.1 },
+    "Victory Road": { x: 63.7, y: 14.3, w: 3.1, h: 4.8 },
+    "Dragonspiral Tower": { x: 25.8, y: 17.9, w: 3.1, h: 4.8 },
+    "Celestial Tower": { x: 21.1, y: 29.2, w: 3.1, h: 4.8 },
+    "Mistralton Cave": { x: 27.0, y: 44.0, w: 3.1, h: 4.8 },
+    "Giant Chasm": { x: 77.3, y: 17.9, w: 3.1, h: 4.8 },
+    Entralink: { x: 51.6, y: 39.9, w: 3.1, h: 4.8 },
+    "Relic Castle": { x: 44.9, y: 61.9, w: 3.1, h: 4.8 },
+    "Pinwheel Forest": { x: 75.4, y: 74.4, w: 3.1, h: 4.8 },
+    Dreamyard: { x: 93.4, y: 69.6, w: 3.1, h: 4.8 },
+    "Abundant Shrine": { x: 77.0, y: 45.2, w: 3.1, h: 4.8 },
+    "Poké Transfer Lab": { x: 69.1, y: 50.0, w: 3.1, h: 4.8 },
+    "Liberty Garden": { x: 28.5, y: 85.7, w: 3.1, h: 4.8 },
+    "Route 7": { x: 22.3, y: 32.7, w: 3.1, h: 4.8 },
+    "Route 15": { x: 70.3, y: 53.6, w: 3.9, h: 3.0 },
+    "Marvelous Bridge": { x: 62.5, y: 53.6, w: 7.8, h: 3.0 },
+    "Route 18": { x: 83.6, y: 94.0, w: 8.6, h: 2.4 },
   };
 
   const SEVII_PLACES = {
@@ -568,6 +613,52 @@
         "bronze-trophy": ["Hearthome City", "Mr. Goods, Hearthome City"],
         "silver-trophy": ["Hearthome City", "Mr. Goods, Hearthome City"],
         "gold-trophy": ["Hearthome City", "Mr. Goods, Hearthome City"],
+      },
+    },
+    blackwhite: {
+      image: "maps/unova.png",
+      title: "Unova",
+      places: UNOVA_PLACES,
+      pins: {
+        diploma: ["Castelia City", "Game Freak building, Castelia City"],
+        reshiram: ["Dragonspiral Tower", "Dragonspiral Tower / N's Castle, after the Elite Four"],
+        zekrom: ["Dragonspiral Tower", "Dragonspiral Tower / N's Castle, after the Elite Four"],
+        kyurem: ["Giant Chasm", "Giant Chasm, north of Route 13"],
+        victini: ["Liberty Garden", "Liberty Garden (Liberty Island)"],
+        cobalion: ["Mistralton Cave", "Mistralton Cave, off Route 6 (needs Surf)"],
+        terrakion: ["Victory Road", "Victory Road"],
+        virizion: ["Pinwheel Forest", "Pinwheel Forest"],
+        torandus: ["Route 7", "Roams Unova. Go to Route 10, then Route 7"],
+        thundurus: ["Route 7", "Roams Unova. Go to Route 10, then Route 7"],
+        landorus: ["Abundant Shrine", "Abundant Shrine"],
+        pans: ["Dreamyard", "Dreamyard, Striaton City"],
+        "tirtouga-archen": ["Relic Castle", "Relic Castle"],
+        larvesta: ["Route 18", "Route 18"],
+        zorua: ["Poké Transfer Lab", "Poké Transfer Lab (transfer Celebi)"],
+        magikarp: ["Marvelous Bridge", "Marvelous Bridge"],
+        "petilil-cottonee": ["Nacrene City", "Nacrene City"],
+        "minccino-basculin": ["Driftveil City", "Driftveil City"],
+        "boldore-emolga": ["Route 7", "Route 7"],
+        "ditto-rotom": ["Route 15", "Route 15"],
+        cinccino: ["Undella Town", "Undella Town"],
+        musicalitems: ["Opelucid City", "Opelucid City"],
+        musicalgoods: ["Nimbasa City", "Musical Theater, Nimbasa City"],
+        entralink: ["Entralink", "Entralink, centre of Unova"],
+        eliterank: ["Nimbasa City", "Nimbasa City"],
+        leaguechampion: ["Pokémon League", "Pokémon League"],
+        elitefour: ["Pokémon League", "Pokémon League"],
+        "beatrival-cheren": ["Victory Road", "Victory Road"],
+        "beatrival-bianca": ["Nuvema Town", "Juniper's Lab, Nuvema Town"],
+        cynthia: ["Undella Town", "Cynthia's House, Undella Town"],
+        morimoto: ["Castelia City", "Game Freak building, Castelia City"],
+        richesfamily: ["Undella Town", "Riches' Villa, Undella Town"],
+        battlesubway: ["Nimbasa City", "Battle Subway, Nimbasa City"],
+        "battlesubway-single": ["Nimbasa City", "Battle Subway, Nimbasa City"],
+        "battlesubway-double": ["Nimbasa City", "Battle Subway, Nimbasa City"],
+        "battlesubway-multi": ["Nimbasa City", "Battle Subway, Nimbasa City"],
+        "battlesubway-singlesuper": ["Nimbasa City", "Battle Subway, Nimbasa City"],
+        "battlesubway-doublesuper": ["Nimbasa City", "Battle Subway, Nimbasa City"],
+        "battlesubway-multisuper": ["Nimbasa City", "Battle Subway, Nimbasa City"],
       },
     },
     goldsilver: {
