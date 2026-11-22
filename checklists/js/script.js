@@ -145,7 +145,8 @@
 
   // Games that have map links so far (the Pokemon's Bulbapedia location list, plus the region map)
   const KANTO_LINK = { region: "Kanto", url: "https://bulbapedia.bulbagarden.net/wiki/Kanto" };
-  const MAP_GAMES = { goldsilver: { region: "Johto", url: "https://bulbapedia.bulbagarden.net/wiki/Johto" }, redblue: KANTO_LINK, yellow: KANTO_LINK, fireredleafgreen: KANTO_LINK };
+  const JOHTO_LINK = { region: "Johto", url: "https://bulbapedia.bulbagarden.net/wiki/Johto" };
+  const MAP_GAMES = { goldsilver: JOHTO_LINK, crystal: JOHTO_LINK, redblue: KANTO_LINK, yellow: KANTO_LINK, fireredleafgreen: KANTO_LINK };
 
   // Schematic maps with pins. Positions are percentages of the picture and only as accurate as the guides they came from.
   const KANTO_PLACES = {
@@ -184,6 +185,33 @@
     "Vermilion City": { x: 62.5, y: 55.9 },
     "Cinnabar Island": { x: 22.5, y: 91.2 },
     "Route 24": { x: 62.5, y: 4.4 },
+  };
+
+  const GSC_JOHTO_PLACES = {
+    "New Bark Town": { x: 91.7, y: 69.2 },
+    "Cherrygrove City": { x: 63.9, y: 69.2 },
+    "Violet City": { x: 51.4, y: 35.8 },
+    "Ecruteak City": { x: 41.7, y: 22.5 },
+    "Mahogany Town": { x: 69.4, y: 22.5 },
+    "Blackthorn City": { x: 85.4, y: 22.5 },
+    "Goldenrod City": { x: 30.6, y: 62.5 },
+    "Olivine City": { x: 19.4, y: 35.8 },
+    "Cianwood City": { x: 8.3, y: 69.2 },
+    "Azalea Town": { x: 41.7, y: 90 },
+    "Lake of Rage": { x: 68.8, y: 10 },
+    "Mt. Mortar": { x: 52.8, y: 22.5 },
+    "Union Cave": { x: 52.8, y: 89.2 },
+    "Whirl Islands": { x: 13.2, y: 63.3 },
+    "Mt. Silver": { x: 96.5, y: 43.3 },
+    "Ruins of Alph": { x: 47.2, y: 50 },
+    "Route 35": { x: 30.6, y: 35.8 },
+    "Dragon's Den": { x: 85.4, y: 15.8 },
+  };
+
+  const GSC_KANTO_PLACES = {
+    "Power Plant": { x: 86.1, y: 36.7 },
+    "Pewter City": { x: 30.6, y: 30 },
+    "Route 14": { x: 38.9, y: 75 },
   };
 
   const SEVII_PLACES = {
@@ -334,9 +362,10 @@
       },
     },
     goldsilver: {
-      image: "maps/johto.png",
+      image: "maps/johto-gsc.png",
       title: "Johto",
-      places: JOHTO_PLACES,
+      places: GSC_JOHTO_PLACES,
+      alt: { kanto: { image: "maps/kanto-gsc.png", title: "Kanto", places: GSC_KANTO_PLACES } },
       pins: {
         lugia: ["Whirl Islands", "Whirl Islands (with the Silver Wing)"],
         "ho-oh": ["Ecruteak City", "Tin Tower, Ecruteak City (with the Rainbow Wing)"],
@@ -349,6 +378,58 @@
         "drowzee-machop": ["Goldenrod City", "Goldenrod Department Store"],
         "krabby-voltorb": ["Olivine City", "Olivine City"],
         "dragonair-rhydon": ["Blackthorn City", "Blackthorn City"],
+        "gloom-rapidash": ["Pewter City", "Pewter City", "kanto"],
+        "chansey-aerodactyl": ["Route 14", "Route 14", "kanto"],
+        defeatred: ["Mt. Silver", "Mt. Silver, after getting all 16 badges"],
+        a: ["Ruins of Alph", "Ruins of Alph, northeast chamber"],
+        b: ["Ruins of Alph", "Ruins of Alph, northeast chamber"],
+        c: ["Ruins of Alph", "Ruins of Alph, northeast chamber"],
+        d: ["Ruins of Alph", "Ruins of Alph, northeast chamber"],
+        e: ["Ruins of Alph", "Ruins of Alph, northeast chamber"],
+        f: ["Ruins of Alph", "Ruins of Alph, northeast chamber"],
+        g: ["Ruins of Alph", "Ruins of Alph, northeast chamber"],
+        h: ["Ruins of Alph", "Ruins of Alph, northeast chamber"],
+        i: ["Ruins of Alph", "Ruins of Alph, northeast chamber"],
+        j: ["Ruins of Alph", "Ruins of Alph, northeast chamber"],
+        k: ["Ruins of Alph", "Ruins of Alph, northeast chamber"],
+        l: ["Ruins of Alph", "Ruins of Alph, southwest chamber"],
+        m: ["Ruins of Alph", "Ruins of Alph, southwest chamber"],
+        n: ["Ruins of Alph", "Ruins of Alph, southwest chamber"],
+        o: ["Ruins of Alph", "Ruins of Alph, southwest chamber"],
+        p: ["Ruins of Alph", "Ruins of Alph, southwest chamber"],
+        q: ["Ruins of Alph", "Ruins of Alph, southwest chamber"],
+        r: ["Ruins of Alph", "Ruins of Alph, southwest chamber"],
+        s: ["Ruins of Alph", "Ruins of Alph, southeast chamber"],
+        t: ["Ruins of Alph", "Ruins of Alph, southeast chamber"],
+        u: ["Ruins of Alph", "Ruins of Alph, southeast chamber"],
+        v: ["Ruins of Alph", "Ruins of Alph, southeast chamber"],
+        w: ["Ruins of Alph", "Ruins of Alph, southeast chamber"],
+        x: ["Ruins of Alph", "Ruins of Alph, northwest chamber"],
+        y: ["Ruins of Alph", "Ruins of Alph, northwest chamber"],
+        z: ["Ruins of Alph", "Ruins of Alph, northwest chamber"],
+      },
+    },
+    crystal: {
+      image: "maps/johto-gsc.png",
+      title: "Johto",
+      places: GSC_JOHTO_PLACES,
+      alt: { kanto: { image: "maps/kanto-gsc.png", title: "Kanto", places: GSC_KANTO_PLACES } },
+      pins: {
+        lugia: ["Whirl Islands", "Whirl Islands (with the Silver Wing)"],
+        "ho-oh": ["Ecruteak City", "Tin Tower, Ecruteak City (with the Rainbow Wing)"],
+        spearow: ["Route 35", "Route 35 south gate"],
+        eevee: ["Goldenrod City", "Bill's house, Goldenrod City"],
+        togepi: ["Violet City", "Pokémon Center, Violet City"],
+        shuckle: ["Cianwood City", "Cianwood City"],
+        tyrogue: ["Mt. Mortar", "Mt. Mortar, basement 1F"],
+        bellsprout: ["Violet City", "House in Violet City"],
+        abra: ["Goldenrod City", "Goldenrod Department Store"],
+        krabby: ["Olivine City", "Olivine City"],
+        dragonair: ["Blackthorn City", "Blackthorn City"],
+        dratini: ["Dragon's Den", "Dragon's Den, after Clair's test"],
+        dugtrio: ["Power Plant", "Power Plant", "kanto"],
+        haunter: ["Pewter City", "Pewter City", "kanto"],
+        chansey: ["Route 14", "Route 14", "kanto"],
         defeatred: ["Mt. Silver", "Mt. Silver, after getting all 16 badges"],
         a: ["Ruins of Alph", "Ruins of Alph, northeast chamber"],
         b: ["Ruins of Alph", "Ruins of Alph, northeast chamber"],
