@@ -1022,7 +1022,8 @@ footer ul {
   height: auto;
 }
 
-.pdex-map img[src$="unova.png"] {
+.pdex-map img[src$="unova.png"],
+.pdex-map img[src$="unova2.png"] {
   width: 768px;
 }
 
