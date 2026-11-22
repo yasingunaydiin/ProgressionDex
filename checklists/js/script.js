@@ -216,6 +216,8 @@
   };
 
   const HOENN_PLACES = {
+    "Route 110": { x: 29.6, y: 52.2, w: 3.1, h: 15.1 },
+    "Ever Grande City": { x: 88.7, y: 55.3, w: 3.1, h: 10.1 },
     "Rustboro City": { x: 3.9, y: 40.9, w: 3.1, h: 8.8 },
     "Petalburg City": { x: 7.8, y: 56.6, w: 3.1, h: 5.0 },
     "Verdanturf Town": { x: 17.1, y: 42.1, w: 3.1, h: 5.0 },
@@ -400,6 +402,15 @@
         birthisland: { image: "maps/birthisland.png", title: "Birth Island", places: { "Birth Island": { x: 80.7, y: 84.7, w: 6.5, h: 8.7 } } },
       },
       pins: {
+        chamber1: ["Route 110", "Trick House, Route 110"],
+        chamber2: ["Route 110", "Trick House, Route 110"],
+        chamber3: ["Route 110", "Trick House, Route 110"],
+        chamber4: ["Route 110", "Trick House, Route 110"],
+        chamber5: ["Route 110", "Trick House, Route 110"],
+        chamber6: ["Route 110", "Trick House, Route 110"],
+        chamber7: ["Route 110", "Trick House, Route 110"],
+        chamber8: ["Route 110", "Trick House, Route 110"],
+        "defeat-champion": ["Ever Grande City", "Pokémon League, Ever Grande City"],
         lugia: ["Navel Rock", "Navel Rock (needs the MysticTicket)", "navelrock"],
         "ho-oh": ["Navel Rock", "Navel Rock (needs the MysticTicket)", "navelrock"],
         deoxys: ["Birth Island", "Birth Island (needs the AuroraTicket)", "birthisland"],
@@ -426,6 +437,15 @@
       title: "Hoenn",
       places: HOENN_PLACES,
       pins: {
+        chamber1: ["Route 110", "Trick House, Route 110"],
+        chamber2: ["Route 110", "Trick House, Route 110"],
+        chamber3: ["Route 110", "Trick House, Route 110"],
+        chamber4: ["Route 110", "Trick House, Route 110"],
+        chamber5: ["Route 110", "Trick House, Route 110"],
+        chamber6: ["Route 110", "Trick House, Route 110"],
+        chamber7: ["Route 110", "Trick House, Route 110"],
+        chamber8: ["Route 110", "Trick House, Route 110"],
+        "pokemon-league-champion": ["Ever Grande City", "Pokémon League, Ever Grande City"],
         kyogre: ["Sootopolis City", "Cave of Origin, Sootopolis City"],
         groudon: ["Sootopolis City", "Cave of Origin, Sootopolis City"],
         rayquaza: ["Sky Pillar", "Sky Pillar, near Pacifidlog Town"],
