@@ -167,6 +167,14 @@
     "Route 24": { x: 69.4, y: 4.4 },
   };
 
+  const SEVII_PLACES = {
+    "Mt. Ember": { x: 14.6, y: 10.0 },
+    "Trainer Tower": { x: 27.0, y: 82.0 },
+    "Tanoby Ruins": { x: 43.6, y: 93.1 },
+    "Birth Island": { x: 81.0, y: 94.4 },
+    "Five Island": { x: 76.8, y: 80.2 },
+  };
+
   const PIN_MAPS = {
     redblue: {
       image: "maps/redblue.svg",
@@ -227,7 +235,43 @@
       image: "maps/redblue.svg",
       title: "Kanto (schematic)",
       places: KANTO_PLACES,
+      alt: { sevii: { image: "maps/sevii.svg", title: "Sevii Islands (schematic)", places: SEVII_PLACES } },
       pins: {
+        moltres: ["Mt. Ember", "Mt. Ember, on One Island", "sevii"],
+        deoxys: ["Birth Island", "Birth Island (needs the AuroraTicket)", "sevii"],
+        togepi: ["Five Island", "Water Labyrinth, Five Island", "sevii"],
+        unownA: ["Tanoby Ruins", "Tanoby Ruins, Monean Chamber.", "sevii"],
+        unownB: ["Tanoby Ruins", "Tanoby Ruins, Rixy Chamber.", "sevii"],
+        unownC: ["Tanoby Ruins", "Tanoby Ruins, Liptoo Chamber.", "sevii"],
+        unownD: ["Tanoby Ruins", "Tanoby Ruins, Liptoo Chamber.", "sevii"],
+        unownE: ["Tanoby Ruins", "Tanoby Ruins, Weepth Chamber.", "sevii"],
+        unownF: ["Tanoby Ruins", "Tanoby Ruins, Scufib Chamber.", "sevii"],
+        unownG: ["Tanoby Ruins", "Tanoby Ruins, Scufib Chamber.", "sevii"],
+        unownH: ["Tanoby Ruins", "Tanoby Ruins, Liptoo Chamber.", "sevii"],
+        unownI: ["Tanoby Ruins", "Tanoby Ruins, Weepth Chamber.", "sevii"],
+        unownJ: ["Tanoby Ruins", "Tanoby Ruins, Dilford Chamber.", "sevii"],
+        unownK: ["Tanoby Ruins", "Tanoby Ruins, Scufib Chamber.", "sevii"],
+        unownL: ["Tanoby Ruins", "Tanoby Ruins, Dilford Chamber.", "sevii"],
+        unownM: ["Tanoby Ruins", "Tanoby Ruins, Rixy Chamber.", "sevii"],
+        unownN: ["Tanoby Ruins", "Tanoby Ruins, Weepth Chamber.", "sevii"],
+        unownO: ["Tanoby Ruins", "Tanoby Ruins, Liptoo Chamber.", "sevii"],
+        unownP: ["Tanoby Ruins", "Tanoby Ruins, Dilford Chamber.", "sevii"],
+        unownQ: ["Tanoby Ruins", "Tanoby Ruins, Dilford Chamber.", "sevii"],
+        unownR: ["Tanoby Ruins", "Tanoby Ruins, Dilford Chamber.", "sevii"],
+        unownS: ["Tanoby Ruins", "Tanoby Ruins, Weepth Chamber.", "sevii"],
+        unownT: ["Tanoby Ruins", "Tanoby Ruins, Scufib Chamber.", "sevii"],
+        unownU: ["Tanoby Ruins", "Tanoby Ruins, Liptoo Chamber.", "sevii"],
+        unownV: ["Tanoby Ruins", "Tanoby Ruins, Rixy Chamber.", "sevii"],
+        unownW: ["Tanoby Ruins", "Tanoby Ruins, Rixy Chamber.", "sevii"],
+        unownX: ["Tanoby Ruins", "Tanoby Ruins, Rixy Chamber.", "sevii"],
+        unownY: ["Tanoby Ruins", "Tanoby Ruins, Scufib Chamber.", "sevii"],
+        unownZ: ["Tanoby Ruins", "Tanoby Ruins, Viapois Chamber.", "sevii"],
+        "unown?": ["Tanoby Ruins", "Tanoby Ruins, Monean Chamber.", "sevii"],
+        "unown!": ["Tanoby Ruins", "Tanoby Ruins, Viapois Chamber.", "sevii"],
+        "trainertower-single": ["Trainer Tower", "Trainer Tower, Seven Island", "sevii"],
+        "trainertower-souble": ["Trainer Tower", "Trainer Tower, Seven Island", "sevii"],
+        "trainertower-mixed": ["Trainer Tower", "Trainer Tower, Seven Island", "sevii"],
+        "trainertower-knockout": ["Trainer Tower", "Trainer Tower, Seven Island", "sevii"],
         zapdos: ["Power Plant", "Power Plant, on the east side near Rock Tunnel"],
         articuno: ["Seafoam Islands", "Seafoam Islands, between Fuchsia City and Cinnabar Island"],
         mewtwo: ["Cerulean Cave", "Cerulean Cave, near Cerulean City"],
@@ -263,10 +307,14 @@
     const cfg = PIN_MAPS[game];
     const id = item.querySelector(':scope > input[type="checkbox"]')?.id || "";
     let pin = cfg && cfg.pins[id.replace(`${game}-checkbox-`, "")];
-    if (pin && Array.isArray(pin)) pin = { ...cfg.places[pin[0]], place: pin[1] };
+    let map = cfg;
+    if (pin && Array.isArray(pin)) {
+      if (pin[2] && cfg.alt && cfg.alt[pin[2]]) map = cfg.alt[pin[2]];
+      pin = { ...map.places[pin[0]], place: pin[1] };
+    }
     if (!pin) return "";
     return (
-      `<h3>Map</h3><div class="pdex-map"><img alt="${cfg.title}" src="${cfg.image}" /><span class="pdex-pin" style="left:${pin.x}%;top:${pin.y}%"></span></div>` +
+      `<h3>Map</h3><div class="pdex-map"><img alt="${map.title}" src="${map.image}" /><span class="pdex-pin" style="left:${pin.x}%;top:${pin.y}%"></span></div>` +
       `<p class="pdex-map-note"><b>${pin.place}.</b><br />Schematic map, not to scale. The pin shows the area guides describe, not an exact spot.</p>`
     );
   }
