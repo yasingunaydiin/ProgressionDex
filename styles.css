@@ -182,6 +182,32 @@ a {
   filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.45));
 }
 
+/* corner ribbon for games that are still being built */
+.tile {
+  overflow: hidden;
+}
+
+.tile .ribbon {
+  position: absolute;
+  z-index: 2;
+  top: 28px;
+  left: -38px;
+  width: 148px;
+  padding: 6px 0;
+  transform: rotate(-45deg);
+  background: linear-gradient(#ffe27a, #ffc533);
+  border-block: 1px dashed rgba(0, 0, 0, 0.35);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+  color: #2a1f00;
+  font:
+    800 0.56rem/1 system-ui,
+    sans-serif;
+  letter-spacing: 0.1em;
+  text-align: center;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
 .tile.selected {
   transform: scale(1.18);
   box-shadow:
