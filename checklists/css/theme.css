@@ -357,7 +357,7 @@ body::before {
 }
 
 .wide-panel > div.is-collapsed > :not(:first-child) {
-  display: none;
+  display: none !important;
 }
 
 /* Sub-headings inside a section ("Johto Legendaries") */
