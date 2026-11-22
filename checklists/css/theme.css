@@ -61,6 +61,7 @@ body::before {
 }
 
 .page-container {
+  box-sizing: border-box; /* width: 100% plus padding used to push the page wider than the screen */
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 560px), 1fr));
   align-items: start;
@@ -709,6 +710,7 @@ body.hide-done .checkbox-item:not(:has(> .title)):has(input:checked),
 /* ---------- footer ---------- */
 
 footer {
+  box-sizing: border-box;
   width: 100%;
   height: auto !important;
   margin-top: auto;
@@ -821,4 +823,9 @@ footer ul {
   width: 34px;
   padding: 0;
   border-radius: 50%;
+}
+
+/* sections made only of text tiles ("Trade Abra for Mr. Mime") need wider boxes than icon tiles */
+.page-container .wide-panel > div:not(:has(.checkbox-item img)) {
+  --cols: repeat(auto-fill, minmax(170px, 1fr));
 }
