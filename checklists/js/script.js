@@ -1857,7 +1857,7 @@
     }
     if (!pin) return "";
     return (
-      `<h3>Map</h3><div class="pdex-map"><img alt="${map.title}" src="${map.image}" /><span class="pdex-blink" style="left:${pin.x}%;top:${pin.y}%;width:${pin.w || 5}%;${pin.h ? `height:${pin.h}%` : "aspect-ratio:1"}"></span></div>` +
+      `<h3>Map</h3><div class="pdex-map"><img alt="${map.title}" src="${map.image}" /><span class="pdex-blink" data-x="${pin.x}" data-y="${pin.y}" data-w="${pin.w || 5}" data-h="${pin.h || ""}" style="left:${pin.x}%;top:${pin.y}%;width:${pin.w || 5}%;${pin.h ? `height:${pin.h}%` : "aspect-ratio:1"}"></span></div>` +
       `<p class="pdex-map-note"><b>${pin.place}.</b><br />The flashing area shows where guides describe it, not an exact spot.</p>`
     );
   }
@@ -1905,10 +1905,34 @@
       `<h3>Look it up</h3><div class="pdex-drawer-links">${searchLinks(query)
         .map(([n, u]) => `<a href="${esc(u)}" target="_blank" rel="noopener noreferrer">${n} &#8599;</a>`)
         .join("")}</div>`;
+    snapBlink(drawer);
     drawerOpener = btn;
     drawer.classList.add("open");
     document.body.classList.add("drawer-open");
     drawer.querySelector(".pdex-drawer-close").focus({ preventScroll: true });
+  }
+
+  // Put the flashing area on whole pixels of the map picture, so its edges line up with the map's own squares and roads.
+  function snapBlink(root) {
+    root.querySelectorAll(".pdex-map").forEach((box) => {
+      const img = box.querySelector("img");
+      const blink = box.querySelector(".pdex-blink");
+      if (!img || !blink) return;
+      const place = () => {
+        const cw = img.offsetWidth;
+        const ch = img.offsetHeight;
+        if (!cw || !img.naturalWidth) return;
+        const scale = cw / img.naturalWidth;
+        const snap = (v) => Math.round(v / scale) * scale;
+        const w = Math.max(scale, snap((parseFloat(blink.dataset.w) / 100) * cw));
+        const h = blink.dataset.h ? Math.max(scale, snap((parseFloat(blink.dataset.h) / 100) * ch)) : w;
+        const x = snap((parseFloat(blink.dataset.x) / 100) * cw - w / 2);
+        const y = snap((parseFloat(blink.dataset.y) / 100) * ch - h / 2);
+        Object.assign(blink.style, { left: `${x}px`, top: `${y}px`, width: `${w}px`, height: `${h}px`, aspectRatio: "auto", transform: "none" });
+      };
+      if (img.complete) place();
+      else img.addEventListener("load", place, { once: true });
+    });
   }
 
   function closeDrawer() {
