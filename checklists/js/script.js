@@ -154,6 +154,7 @@
     goldsilver: JOHTO_LINK,
     crystal: JOHTO_LINK,
     redblue: KANTO_LINK,
+    scarletviolet: { region: "Paldea", url: "https://bulbapedia.bulbagarden.net/wiki/Paldea" },
     swordshield: { region: "Galar", url: "https://bulbapedia.bulbagarden.net/wiki/Galar" },
     letsgopikachueevee: KANTO_LINK,
     blackwhite: UNOVA_LINK,
@@ -646,6 +647,14 @@
     "Route 214": { x: 70.0, y: 66.8, w: 4.4, h: 5.5 },
     "Lake Valor": { x: 65.0, y: 73.4, w: 2.4, h: 4.2 },
     "Ramanas Park": { x: 37.6, y: 90.7, w: 2.0, h: 3.5 },
+  };
+
+  const PALDEA_PLACES = {
+    "Area Zero": { x: 48.1, y: 57.5, w: 18.6, h: 17.1 },
+    Mesagoza: { x: 48.4, y: 73.2, w: 8.8, h: 7.8 },
+    "Socarrat Trail": { x: 24.8, y: 36.2, w: 26.9, h: 20.7 },
+    "West Province": { x: 23.3, y: 59.5, w: 23.3, h: 26.9 },
+    "South Province": { x: 48.1, y: 84.9, w: 31.1, h: 11.4 },
   };
 
   const SEVII_PLACES = {
@@ -1627,6 +1636,20 @@
         "griseous-orb": ["Ramanas Park", "Ramanas Park"],
         "ds-sounds": ["Lake Valor", "Hotel Grand Lake"],
         pokeradar: ["Sandgem Town", "Sandgem Town"],
+      },
+    },
+    scarletviolet: {
+      image: "maps/paldea.png",
+      title: "Paldea",
+      places: PALDEA_PLACES,
+      pins: {
+        miraidon: ["Area Zero", "Area Zero"],
+        koraidon: ["Area Zero", "Area Zero"],
+        tinglu: ["Socarrat Trail", "Socarrat Trail, around Casseroya Lake. The stakes are spread around the lake, so this area is approximate"],
+        chienpao: ["West Province", "West Province. The stakes are spread around the province, so this area is approximate"],
+        wochien: ["South Province", "South Province. The stakes are spread around the province, so this area is approximate"],
+        meowth: ["Mesagoza", "Naranja/Uva Academy, Mesagoza"],
+        "shiny-charm": ["Mesagoza", "Biology Lab, Naranja/Uva Academy"],
       },
     },
     goldsilver: {
