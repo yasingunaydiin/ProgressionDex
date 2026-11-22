@@ -876,3 +876,11 @@ footer ul {
   -webkit-text-stroke: 1.6px rgba(20, 30, 50, 0.75);
   paint-order: stroke fill;
 }
+
+/* small character portrait in a section title row (Snacksworth) */
+.page-container .checkbox-item:has(> .title) > .section-portrait {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  object-fit: contain;
+}

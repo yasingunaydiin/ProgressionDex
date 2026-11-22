@@ -62,6 +62,20 @@
             </div>
           </div>
 
+          <div class="bbrewards">
+            <div class="checkbox-item">
+              <span class="title"><label class="text-lg">Blueberry Pokédex rewards</label></span>
+            </div>
+            <div class="checkbox-item">
+              <input id="theindigodisk-checkbox-ability-capsule" type="checkbox" />
+              <label class="text-sm lg:tooltip" data-tip="Reward for registering 90 Pokémon in the Blueberry Pokédex. Claim it from the Blueberry Pokédex menu." for="theindigodisk-checkbox-ability-capsule">Ability Capsule (90 Pokémon)</label>
+            </div>
+            <div class="checkbox-item">
+              <input id="theindigodisk-checkbox-master-ball" type="checkbox" />
+              <label class="text-sm lg:tooltip" data-tip="Reward for completing the Blueberry Pokédex (240 Pokémon). Claim it from the Blueberry Pokédex menu." for="theindigodisk-checkbox-master-ball">Master Ball (240 Pokémon)</label>
+            </div>
+          </div>
+
           <div class="legendaries">
             <div class="checkbox-item">
               <span class="title"><label class="text-lg">Catch all the legendaries</label></span>
@@ -103,7 +117,7 @@
                 <div class="checkbox-item">
                   <input id="scarletviolet-checkbox-pecharunt" type="checkbox" />
                   <img alt="Icon of Pecharunt" class="pokeicon" src="../images/icons/pokemon/gen9/pecharunt.png" />
-                  <label class="text-sm lg:tooltip" data-tip="Location: Loyalty Plaza, during the Mochi Madness storyline." for="scarletviolet-checkbox-pecharunt">Pecharunt</label>
+                  <label data-tip="Loyalty Plaza in Kitakami, during the Mochi Mayhem storyline." class="text-sm lg:tooltip" for="scarletviolet-checkbox-pecharunt">Pecharunt</label>
                 </div>
               </div>
             </div>
@@ -111,9 +125,9 @@
 
           <div class="snacksworth">
             <div class="checkbox-item">
+              <img alt="Snacksworth" class="section-portrait" src="../images/icons/miscellaneous/gen9/characters/Snacksworth.png" />
               <span class="title"><label class="text-lg">The legendaries of Snacksworth</label></span>
             </div>
-            <img alt="Icon of Bulbasaur" class="pokeicon" src="../images/icons/miscellaneous/gen9/characters/Snacksworth.png" />
             <div class="snacksworth-rowcontainer">
               <div class="snacksworth-leftrow">
                 <div class="checkbox-item">
@@ -244,6 +258,42 @@
         </div>
       </div>
       <div class="page-container-right">
+        <div class="wide-panel mainstory">
+          <label class="panel-label">Main Story</label>
+          <div class="bbstory">
+            <div class="checkbox-item">
+              <span class="title"><label class="text-lg">Complete the main story</label></span>
+            </div>
+            <div class="checkbox-item">
+              <input id="theindigodisk-checkbox-indigo-story" type="checkbox" />
+              <label class="text-sm lg:tooltip" data-tip="Play through the Blueberry Academy story. Several post-game rewards unlock after it." for="theindigodisk-checkbox-indigo-story">Complete The Indigo Disk story</label>
+            </div>
+            <div class="checkbox-item">
+              <input id="theindigodisk-checkbox-elite-four-crispin" type="checkbox" />
+              <label class="text-sm lg:tooltip" data-tip="Blueberry League Elite Four member." for="theindigodisk-checkbox-elite-four-crispin">Defeat Crispin</label>
+            </div>
+            <div class="checkbox-item">
+              <input id="theindigodisk-checkbox-elite-four-amarys" type="checkbox" />
+              <label class="text-sm lg:tooltip" data-tip="Blueberry League Elite Four member." for="theindigodisk-checkbox-elite-four-amarys">Defeat Amarys</label>
+            </div>
+            <div class="checkbox-item">
+              <input id="theindigodisk-checkbox-elite-four-lacey" type="checkbox" />
+              <label class="text-sm lg:tooltip" data-tip="Blueberry League Elite Four member." for="theindigodisk-checkbox-elite-four-lacey">Defeat Lacey</label>
+            </div>
+            <div class="checkbox-item">
+              <input id="theindigodisk-checkbox-elite-four-drayton" type="checkbox" />
+              <label class="text-sm lg:tooltip" data-tip="Blueberry League Elite Four member." for="theindigodisk-checkbox-elite-four-drayton">Defeat Drayton</label>
+            </div>
+            <div class="checkbox-item">
+              <input id="theindigodisk-checkbox-champion-kieran" type="checkbox" />
+              <label class="text-sm lg:tooltip" data-tip="After the Elite Four, Kieran invites you to challenge him for the Champion title." for="theindigodisk-checkbox-champion-kieran">Defeat Champion Kieran</label>
+            </div>
+            <div class="checkbox-item">
+              <input id="theindigodisk-checkbox-mochi-mayhem" type="checkbox" />
+              <label class="text-sm lg:tooltip" data-tip="The epilogue at Loyalty Plaza in Kitakami. It leads to Pecharunt." for="theindigodisk-checkbox-mochi-mayhem">Complete Mochi Mayhem</label>
+            </div>
+          </div>
+        </div>
         <div class="wide-panel postgame">
           <label class="panel-label">Post Game</label>
           <div class="postgame">
@@ -253,7 +303,12 @@
             <div class="checkbox-item">
               <input id="scarletviolet-checkbox-markcharm" type="checkbox" />
               <img alt="Icon of Mark Charm" class="pokeicon" src="../images/icons/inventory/gen9/markcharm.png" />
-              <label class="text-sm lg:tooltip" data-tip="Catch all 210 Pokémon and return to Blueberry Academy. Speak to Director Cyrano." for="scarletviolet-checkbox-markcharm">Complete Indigo Disk Pokédex for Mark Charm</label>
+              <label
+                data-tip="Register 240 Pokémon in the Blueberry Pokédex (it has 243 entries; Walking Wake, Iron Leaves and Pecharunt are not required), then speak to Director Cyrano at the entrance of Blueberry Academy."
+                class="text-sm lg:tooltip"
+                for="scarletviolet-checkbox-markcharm"
+                >Complete Indigo Disk Pokédex for Mark Charm</label
+              >
             </div>
             <div class="checkbox-item">
               <input id="scarletviolet-checkbox-itemprinter" type="checkbox" />
@@ -263,7 +318,7 @@
             <div class="checkbox-item">
               <input id="scarletviolet-checkbox-allclothing" type="checkbox" />
               <img alt="Icon of Clothing" class="pokeicon" src="../images/icons/inventory/gen9/ghostphonecase.png" />
-              <label class="text-sm lg:tooltip" for="scarletviolet-checkbox-allclothing">Buy all clothing</label>
+              <label data-tip="Clothes are bought at the shops in Blueberry Academy using Blueberry Points (BP)." class="text-sm lg:tooltip" for="scarletviolet-checkbox-allclothing">Buy all clothing</label>
             </div>
             <div class="checkbox-item">
               <input id="scarletviolet-checkbox-sportball" type="checkbox" />
@@ -278,7 +333,12 @@
             <div class="checkbox-item">
               <input id="scarletviolet-checkbox-alltms" type="checkbox" />
               <img alt="Icon of TM" class="pokeicon" src="../images/icons/inventory/tms/normal.png" />
-              <label class="text-sm lg:tooltip" for="scarletviolet-checkbox-alltms">Collect all Indigo Disk TM's</label>
+              <label
+                data-tip="Blueberry Academy adds new TMs. Make them at any TM machine with BP and materials; defeating or catching wild Stellar Tera Pokémon in the Terarium drops TM materials."
+                class="text-sm lg:tooltip"
+                for="scarletviolet-checkbox-alltms"
+                >Collect all Indigo Disk TM's</label
+              >
             </div>
             <div class="checkbox-item">
               <input id="scarletviolet-checkbox-teamstarsidequest" type="checkbox" />
@@ -293,7 +353,9 @@
             </div>
             <div class="checkbox-item">
               <input id="scarletviolet-checkbox-secretbossfight" type="checkbox" />
-              <label class="text-sm lg:tooltip" data-tip="I read its a lenghty process." for="scarletviolet-checkbox-secretbossfight">Complete secret boss fight after inviting special coaches</label>
+              <label data-tip="Invite every special coach first. Unlocking the secret boss fight is a long process." class="text-sm lg:tooltip" for="scarletviolet-checkbox-secretbossfight"
+                >Complete secret boss fight after inviting special coaches</label
+              >
             </div>
             <div class="checkbox-item">
               <input id="scarletviolet-checkbox-crystalpool" type="checkbox" />
@@ -315,6 +377,20 @@
             <div class="checkbox-item">
               <input id="scarletviolet-checkbox-flyingtimetrial" type="checkbox" />
               <label class="text-sm lg:tooltip" data-tip="Challenge the Flying Time Trial." for="scarletviolet-checkbox-flyingtimetrial">Challenge the Flying Time Trial</label>
+            </div>
+            <div class="checkbox-item">
+              <input id="theindigodisk-checkbox-briars-book" type="checkbox" />
+              <label class="text-sm lg:tooltip" data-tip="Briar gives it to you after you catch Terapagos." for="theindigodisk-checkbox-briars-book">Get Briar&#x27;s Book</label>
+            </div>
+            <div class="checkbox-item">
+              <input id="theindigodisk-checkbox-rematch-crispin" type="checkbox" />
+              <label class="text-sm lg:tooltip" data-tip="After you have caught Terapagos, Crispin sometimes waits in the League Club Room and offers a rematch once a day." for="theindigodisk-checkbox-rematch-crispin">Rematch Crispin</label>
+            </div>
+            <div class="checkbox-item">
+              <input id="theindigodisk-checkbox-terarium-biodiversity" type="checkbox" />
+              <label class="text-sm lg:tooltip" data-tip="Donate Blueberry Points (BP) to the Terarium Club. Each donation increases the biodiversity of the biomes." for="theindigodisk-checkbox-terarium-biodiversity"
+                >Raise the biodiversity of every Terarium biome</label
+              >
             </div>
           </div>
         </div>
