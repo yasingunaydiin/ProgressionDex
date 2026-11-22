@@ -148,6 +148,32 @@
 
   // Schematic maps with pins. Positions are percentages of the picture and only as accurate as the guides they came from.
   const PIN_MAPS = {
+    redblue: {
+      image: "maps/redblue.svg",
+      title: "Kanto (schematic)",
+      pins: {
+        zapdos: { x: 87.5, y: 28.9, place: "Power Plant, east of Cerulean City" },
+        moltres: { x: 12.1, y: 32.8, place: "Victory Road, near the Indigo Plateau" },
+        articuno: { x: 39.6, y: 92.2, place: "Seafoam Islands, between Fuchsia City and Cinnabar Island" },
+        mewtwo: { x: 70.4, y: 14.4, place: "Cerulean Cave, near Cerulean City" },
+        hitmonlee: { x: 65.0, y: 47.2, place: "Fighting Dojo, Saffron City" },
+        hitmonchan: { x: 65.0, y: 47.2, place: "Fighting Dojo, Saffron City" },
+        lapras: { x: 65.0, y: 47.2, place: "Silph Co., Saffron City" },
+        eevee: { x: 47.1, y: 47.2, place: "Celadon Mansion roof, Celadon City" },
+        omanyte: { x: 48.3, y: 24.4, place: "Mt. Moon" },
+        kabuto: { x: 48.3, y: 24.4, place: "Mt. Moon" },
+        aerodactyl: { x: 31.2, y: 25.6, place: "Old Amber is in the Pewter City museum" },
+        "abra-mr-mime": { x: 23.3, y: 41.7, place: "Route 2, outside Diglett's Cave" },
+        "nidoran-m-f": { x: 68.8, y: 36.7, place: "Route 5, underground path north exit" },
+        "nidorino-nidorina": { x: 78.8, y: 70.0, place: "Route 11, inside the gatehouse" },
+        "slowbro-lickitung": { x: 48.3, y: 78.9, place: "Route 18, inside the gatehouse" },
+        "poliwhirl-jynx": { x: 65.0, y: 25.6, place: "Cerulean City, house next to the Pokémon Center" },
+        "spearow-farfetchd": { x: 65.0, y: 68.9, place: "Vermilion City" },
+        "ponyta-seel": { x: 16.2, y: 92.8, place: "Cinnabar Island, inside the Cinnabar Lab" },
+        "raichu-electrode": { x: 16.2, y: 92.8, place: "Cinnabar Island, inside the Cinnabar Lab" },
+        "venonat-tangela": { x: 16.2, y: 92.8, place: "Cinnabar Island, inside the Cinnabar Lab" },
+      },
+    },
     thetealmask: {
       image: "maps/thetealmask.svg",
       title: "Kitakami (schematic)",
