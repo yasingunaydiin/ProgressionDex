@@ -191,6 +191,7 @@
       const tiles = [...row.querySelectorAll(".tile")];
       const bgs = [document.getElementById("bgA"), document.getElementById("bgB")];
       let current = -1;
+      let lastScroll = 0;
       let layer = 0;
 
       function progress(game) {
@@ -235,7 +236,16 @@
             select(i);
           }
         });
-        t.addEventListener("mouseenter", () => matchMedia("(hover: hover)").matches && select(i));
+        // hover only selects once the pointer has rested on a tile for a moment, and not while the row is scrolling
+        let dwell;
+        t.addEventListener("mouseenter", () => {
+          if (!matchMedia("(hover: hover)").matches) return;
+          clearTimeout(dwell);
+          dwell = setTimeout(() => {
+            if (Date.now() - lastScroll > 350) select(i);
+          }, 280);
+        });
+        t.addEventListener("mouseleave", () => clearTimeout(dwell));
       });
 
       document.addEventListener("keydown", (e) => {
@@ -255,14 +265,16 @@
       row.addEventListener(
         "wheel",
         (e) => {
+          lastScroll = Date.now();
           if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
-            row.scrollLeft += e.deltaY;
+            row.scrollLeft += e.deltaY * 0.7;
             e.preventDefault();
           }
         },
         { passive: false },
       );
 
+      row.addEventListener("scroll", () => (lastScroll = Date.now()), { passive: true });
       let start = 0;
       try {
         start = Math.max(
