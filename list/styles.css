@@ -27,15 +27,15 @@
 }
 
 .theme-btn {
-  height: 32px;
-  padding: 0 13px;
+  display: inline-grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
   border: 1px solid var(--line-strong);
-  border-radius: 999px;
+  border-radius: 50%;
   background: transparent;
   color: var(--fg-2);
-  font:
-    600 0.8rem system-ui,
-    sans-serif;
   cursor: pointer;
 }
 
@@ -102,6 +102,7 @@ a {
 
 .top nav {
   display: flex;
+  align-items: center;
   gap: 24px;
   font-size: 0.9rem;
   font-weight: 600;

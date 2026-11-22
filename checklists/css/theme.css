@@ -813,3 +813,12 @@ footer ul {
     display: none;
   }
 }
+
+/* icon-only light/dark button in the toolbar */
+.toolbar .theme-btn {
+  display: inline-grid;
+  place-items: center;
+  width: 34px;
+  padding: 0;
+  border-radius: 50%;
+}
