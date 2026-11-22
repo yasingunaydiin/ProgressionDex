@@ -1927,7 +1927,7 @@
     }
     if (!pin) return "";
     return (
-      `<h3>Map</h3><div class="pdex-map"><img alt="${map.title}" src="${map.image}" /><span class="pdex-blink" data-x="${pin.x}" data-y="${pin.y}" data-w="${pin.w || 5}" data-h="${pin.h || ""}" style="left:${pin.x}%;top:${pin.y}%;width:${pin.w || 5}%;${pin.h ? `height:${pin.h}%` : "aspect-ratio:1"}"></span></div>` +
+      `<h3>Map</h3><div class="pdex-map"><img alt="${map.title}" src="${map.image}" /><span class="pdex-blink" data-x="${pin.x}" data-y="${pin.y}" data-w="${pin.w || 3.4}" data-h="${pin.h || ""}" style="left:${pin.x}%;top:${pin.y}%;width:${pin.w || 3.4}%;${pin.h ? `height:${pin.h}%` : "aspect-ratio:1"}"></span></div>` +
       `<p class="pdex-map-note"><b>${pin.place}.</b><br />The flashing area shows where guides describe it, not an exact spot.</p>`
     );
   }
