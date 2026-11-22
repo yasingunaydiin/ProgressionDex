@@ -172,19 +172,19 @@
     "Power Plant": { x: 82.5, y: 20.6 },
     "Victory Road": { x: 12.5, y: 26.5 },
     "Seafoam Islands": { x: 37.5, y: 91.2 },
-    "Cerulean Cave": { x: 62.5, y: 11.8 },
+    "Cerulean Cave": { x: 62.5, y: 14.7 },
     "Saffron City": { x: 62.5, y: 32.4 },
     "Celadon City": { x: 47.5, y: 32.4 },
     "Mt. Moon": { x: 42.5, y: 14.7 },
     "Pewter City": { x: 22.5, y: 20.6 },
-    "Route 2": { x: 22.5, y: 35.3 },
-    "Route 5": { x: 62.5, y: 22.1 },
-    "Route 11": { x: 72.5, y: 55.9 },
-    "Route 18": { x: 67.5, y: 77.9 },
-    "Cerulean City": { x: 62.5, y: 11.8 },
+    "Route 2": { x: 22.5, y: 34.9, w: 5, h: 20.6 },
+    "Route 5": { x: 62.5, y: 23.5, w: 5, h: 11.8 },
+    "Route 11": { x: 72.5, y: 55.9, w: 15, h: 5.9 },
+    "Route 18": { x: 62.5, y: 79.4, w: 15, h: 5.9 },
+    "Cerulean City": { x: 62.5, y: 14.7 },
     "Vermilion City": { x: 62.5, y: 55.9 },
     "Cinnabar Island": { x: 22.5, y: 91.2 },
-    "Route 24": { x: 62.5, y: 4.4 },
+    "Route 24": { x: 62.5, y: 5.9, w: 5, h: 11.8 },
   };
 
   const GSC_JOHTO_PLACES = {
@@ -482,8 +482,8 @@
     }
     if (!pin) return "";
     return (
-      `<h3>Map</h3><div class="pdex-map"><img alt="${map.title}" src="${map.image}" /><span class="pdex-pin" style="left:${pin.x}%;top:${pin.y}%"></span></div>` +
-      `<p class="pdex-map-note"><b>${pin.place}.</b><br />The pin shows the area guides describe, not an exact spot.</p>`
+      `<h3>Map</h3><div class="pdex-map"><img alt="${map.title}" src="${map.image}" /><span class="pdex-blink" style="left:${pin.x}%;top:${pin.y}%;width:${pin.w || 5}%;${pin.h ? `height:${pin.h}%` : "aspect-ratio:1"}"></span></div>` +
+      `<p class="pdex-map-note"><b>${pin.place}.</b><br />The flashing area shows where guides describe it, not an exact spot.</p>`
     );
   }
 

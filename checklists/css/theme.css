@@ -1028,24 +1028,31 @@ footer ul {
   width: 480px;
 }
 
-.pdex-pin {
+/* flashing area, like the game's Town Map */
+.pdex-blink {
   position: absolute;
-  width: 14px;
-  height: 14px;
-  margin: -14px 0 0 -7px;
-  border-radius: 50% 50% 50% 0;
+  transform: translate(-50%, -50%);
   background: #e5484d;
-  border: 2px solid #fff;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.45);
-  transform: rotate(-45deg);
+  border: 1px solid rgba(120, 0, 0, 0.6);
+  box-sizing: border-box;
+  animation: pdex-blink 1s steps(1) infinite;
 }
 
-.pdex-pin::after {
-  content: "";
-  position: absolute;
-  inset: 2px;
-  border-radius: 50%;
-  background: #fff;
+@keyframes pdex-blink {
+  0%,
+  100% {
+    opacity: 0.95;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pdex-blink {
+    animation: none;
+    opacity: 0.8;
+  }
 }
 
 .pdex-map-note {
