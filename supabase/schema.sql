@@ -13,6 +13,10 @@ create table if not exists public.progress (
 
 alter table public.progress enable row level security;
 
+-- Only signed-in users may use the table through the API (anonymous visitors get nothing).
+-- This is needed because "Grant API access to new tables automatically" is off in the project settings.
+grant select, insert, update, delete on public.progress to authenticated;
+
 create policy "read own progress"   on public.progress for select using (auth.uid() = user_id);
 create policy "insert own progress" on public.progress for insert with check (auth.uid() = user_id);
 create policy "update own progress" on public.progress for update using (auth.uid() = user_id) with check (auth.uid() = user_id);
