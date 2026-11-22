@@ -255,6 +255,28 @@ h1 {
   filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.45));
 }
 
+/* diagonal corner ribbon for games that are still being built */
+.ribbon {
+  position: absolute;
+  z-index: 2;
+  top: 22px;
+  left: -46px;
+  width: 170px;
+  padding: 7px 0;
+  transform: rotate(-45deg);
+  background: linear-gradient(#ffe27a, #ffc533);
+  border-block: 1px dashed rgba(0, 0, 0, 0.35);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+  color: #2a1f00;
+  font:
+    800 0.66rem/1 system-ui,
+    sans-serif;
+  letter-spacing: 0.1em;
+  text-align: center;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
 .status {
   position: absolute;
   top: 10px;
