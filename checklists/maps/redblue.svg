@@ -1,65 +1,33 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img" aria-label="Schematic map of Kanto">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 440" role="img" aria-label="Schematic map of Kanto">
 <defs><linearGradient id="sea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#bfe3f2"/><stop offset="1" stop-color="#9ccbe6"/></linearGradient><linearGradient id="land" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d4e9b9"/><stop offset="1" stop-color="#aed18f"/></linearGradient></defs>
-<rect width="480" height="360" fill="url(#sea)"/>
-<!-- mainland -->
-<path d="M30 30 L452 30 L452 218 Q452 272 408 278 L346 282 Q330 326 276 330 L214 318 Q182 304 160 316 L140 304 Q124 292 120 270 L40 270 Q22 258 22 232 Z" fill="url(#land)" stroke="#6f9a58" stroke-width="3" stroke-linejoin="round"/>
-<!-- Cinnabar island -->
-<ellipse cx="78" cy="332" rx="30" ry="15" fill="url(#land)" stroke="#6f9a58" stroke-width="3"/>
-<!-- Seafoam islands -->
-<ellipse cx="190" cy="330" rx="26" ry="13" fill="url(#land)" stroke="#6f9a58" stroke-width="3"/>
-<!-- sea notch between mainland and routes -->
-<!-- Mt. Moon and mountains -->
-<g fill="#b7a98c" stroke="#8a7d63" stroke-width="2" stroke-linejoin="round">
-<path d="M214 100 l18 -34 l18 34 z"/><path d="M236 106 l14 -26 l14 26 z"/>
-<path d="M36 100 l16 -30 l16 30 z"/><path d="M40 138 l14 -26 l14 26 z"/>
-</g>
-<!-- routes (dashed) -->
-<g fill="none" stroke="#7a6a45" stroke-width="2.5" stroke-dasharray="5 5" stroke-linecap="round" stroke-linejoin="round">
-<path d="M75 262 L75 192 L112 150 L150 92"/><path d="M75 192 L58 118 L58 62"/>
-<path d="M150 92 L232 88 L312 92 L330 132 L312 170"/><path d="M312 92 L338 52"/>
-<path d="M312 170 L226 170"/><path d="M312 170 L312 248 L300 306"/><path d="M312 170 L408 150 L420 104"/>
-<path d="M312 248 L378 252"/><path d="M226 170 L232 284 L300 306"/><path d="M300 306 L190 332 L78 334"/>
-</g>
-<!-- cities -->
-<g fill="#fff" stroke="#3a5a2c" stroke-width="2.5">
-<rect x="69" y="256" width="12" height="12" rx="2"/>
-<rect x="69" y="186" width="12" height="12" rx="2"/>
-<rect x="144" y="86" width="12" height="12" rx="2"/>
-<rect x="306" y="86" width="12" height="12" rx="2"/>
-<rect x="306" y="164" width="12" height="12" rx="2"/>
-<rect x="220" y="164" width="12" height="12" rx="2"/>
-<rect x="402" y="144" width="12" height="12" rx="2"/>
-<rect x="306" y="242" width="12" height="12" rx="2"/>
-<rect x="294" y="300" width="12" height="12" rx="2"/>
-<rect x="72" y="328" width="12" height="12" rx="2"/>
-<rect x="52" y="56" width="12" height="12" rx="2"/>
-</g><g fill="#fff" stroke="#3a5a2c" stroke-width="2.5">
-<circle cx="338" cy="52" r="5.5"/>
-<circle cx="420" cy="104" r="5.5"/>
-<circle cx="190" cy="332" r="5.5"/>
-<circle cx="58" cy="118" r="5.5"/>
-</g>
+<rect width="480" height="440" fill="url(#sea)"/>
+<path d="M28 24 L456 24 L458 300 Q458 356 410 362 L300 366 Q256 372 232 358 L152 356 Q132 350 130 330 L100 304 Q58 300 34 288 Q22 262 28 228 Z" fill="url(#land)" stroke="#6f9a58" stroke-width="3" stroke-linejoin="round"/>
+<ellipse cx="136" cy="396" rx="30" ry="15" fill="url(#land)" stroke="#6f9a58" stroke-width="3"/>
+<ellipse cx="225" cy="396" rx="28" ry="14" fill="url(#land)" stroke="#6f9a58" stroke-width="3"/>
+<g fill="#b7a98c" stroke="#8a7d63" stroke-width="2" stroke-linejoin="round"><path d="M198 135 l16 -30 l16 30 z"/><path d="M222 139 l13 -24 l13 24 z"/><path d="M37 129 l16 -30 l16 30 z"/><path d="M63 133 l14 -26 l14 26 z"/></g>
+<g fill="none" stroke="#7a6a45" stroke-width="2.5" stroke-dasharray="5 5" stroke-linecap="round" stroke-linejoin="round"><path d="M127 285 L139 228 L136 172 L133 140"/><path d="M139 228 L101 208 L65 139 L61 109 L60 44"/><path d="M133 140 L214 121 L323 114"/><path d="M323 114 L286 78"/><path d="M323 114 L323 148 L323 184"/><path d="M323 184 L255 183"/><path d="M255 183 L231 292 L242 318"/><path d="M323 184 L316 249"/><path d="M323 184 L420 180"/><path d="M420 180 L420 121"/><path d="M316 249 L367 259 L434 279 L420 180"/><path d="M434 279 L434 324 L242 318"/><path d="M242 318 L225 392 L136 392"/><path d="M136 392 L127 285"/></g>
+<g fill="#fff" stroke="#3a5a2c" stroke-width="2.5"><rect x="121" y="279" width="12" height="12" rx="2"/><rect x="133" y="222" width="12" height="12" rx="2"/><rect x="127" y="134" width="12" height="12" rx="2"/><rect x="317" y="108" width="12" height="12" rx="2"/><rect x="317" y="178" width="12" height="12" rx="2"/><rect x="249" y="177" width="12" height="12" rx="2"/><rect x="414" y="174" width="12" height="12" rx="2"/><rect x="310" y="243" width="12" height="12" rx="2"/><rect x="236" y="312" width="12" height="12" rx="2"/><rect x="130" y="386" width="12" height="12" rx="2"/><rect x="54" y="38" width="12" height="12" rx="2"/></g>
+<g fill="#fff" stroke="#3a5a2c" stroke-width="2.5"><circle cx="286" cy="78" r="5.5"/><circle cx="420" cy="121" r="5.5"/><circle cx="225" cy="392" r="5.5"/><circle cx="61" cy="109" r="5.5"/></g>
 <g font-family="system-ui, sans-serif" font-size="11.5" font-weight="700" fill="#27421d" paint-order="stroke" stroke="#ffffff" stroke-width="3.5" stroke-linejoin="round">
-<text x="90" y="282">Pallet Town</text>
-<text x="90" y="206">Viridian City</text>
-<text x="72" y="66">Indigo Plateau</text>
-<text x="70" y="124">Victory Road</text>
-<text x="138" y="112">Pewter City</text>
-<text x="190" y="60">Mt. Moon</text>
-<text x="286" y="112">Cerulean City</text>
-<text x="350" y="56">Cerulean Cave</text>
-<text x="322" y="190">Saffron City</text>
-<text x="190" y="190">Celadon City</text>
-<text x="386" y="172">Lavender Town</text>
-<text x="408" y="124" text-anchor="end">Power Plant</text>
-<text x="324" y="268">Vermilion City</text>
-<text x="310" y="326">Fuchsia City</text>
-<text x="44" y="356">Cinnabar Island</text>
-<text x="160" y="352">Seafoam Islands</text>
+<text x="137" y="303" text-anchor="start">Pallet Town</text>
+<text x="149" y="246" text-anchor="start">Viridian City</text>
+<text x="70" y="48" text-anchor="start">Indigo Plateau</text>
+<text x="99" y="115" text-anchor="start">Victory Road</text>
+<text x="125" y="160" text-anchor="start">Pewter City</text>
+<text x="222" y="95" text-anchor="middle">Mt. Moon</text>
+<text x="321" y="138" text-anchor="middle">Cerulean City</text>
+<text x="296" y="70" text-anchor="start">Cerulean Cave</text>
+<text x="323" y="208" text-anchor="middle">Saffron City</text>
+<text x="245" y="187" text-anchor="end">Celadon City</text>
+<text x="420" y="204" text-anchor="middle">Lavender Town</text>
+<text x="410" y="125" text-anchor="end">Power Plant</text>
+<text x="306" y="253" text-anchor="end">Vermilion City</text>
+<text x="252" y="340" text-anchor="start">Fuchsia City</text>
+<text x="134" y="424" text-anchor="middle">Cinnabar Island</text>
+<text x="247" y="424" text-anchor="middle">Seafoam Islands</text>
 </g><g font-family="system-ui, sans-serif" font-size="9.5" font-weight="700" fill="#7a6a45" paint-order="stroke" stroke="#ffffff" stroke-width="3" stroke-linejoin="round">
-<text x="118" y="153">Route 2</text>
-<text x="336" y="135">Route 5</text>
-<text x="384" y="255">Route 11</text>
-<text x="238" y="287">Route 18</text>
-</g>
-<g transform="translate(446 54)" font-family="system-ui, sans-serif" font-weight="800" font-size="12" fill="#27421d" text-anchor="middle"><path d="M0 -4 L6 12 L0 8 L-6 12 Z"/><text y="-10">N</text></g></svg>
+<text x="143" y="175">Route 2</text>
+<text x="330" y="151">Route 5</text>
+<text x="374" y="262">Route 11</text>
+<text x="238" y="295">Route 18</text>
+</g><g transform="translate(450 50)" font-family="system-ui, sans-serif" font-weight="800" font-size="12" fill="#27421d" text-anchor="middle"><path d="M0 -4 L6 12 L0 8 L-6 12 Z"/><text y="-10">N</text></g></svg>
