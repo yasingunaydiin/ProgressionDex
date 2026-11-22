@@ -1022,6 +1022,11 @@ footer ul {
   height: auto;
 }
 
+.pdex-map img[src$="galar.png"] {
+  max-height: none;
+  width: 300px;
+}
+
 .pdex-map img[src$="letsgo.png"] {
   width: 675px;
 }
