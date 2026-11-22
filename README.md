@@ -26,7 +26,7 @@ By default nothing leaves your browser. If you want sign-in and syncing across d
 
 1. Create a Supabase project.
 2. In the SQL editor run [supabase/schema.sql](supabase/schema.sql). It creates the `progress` table and row level security so people can only read and write their own rows.
-3. Under Project Settings > API copy the project URL and the `anon` public key into [config.js](config.js).
+3. Under Project Settings > API copy the project URL and the publishable key (`sb_publishable_...`, or the older `anon` key) into [config.js](config.js).
 4. Under Authentication > URL Configuration add your site address (for example `http://localhost:8000` and your real domain) as the Site URL / redirect URLs so confirmation and password-reset emails come back to the site.
 
 How it behaves: checkboxes always live in `localStorage` first, so the site works offline and for people without an account. When signed in, every change is also saved to the account. The first time a browser signs in, ticks from the browser and from the account are merged (nothing is lost); after that the most recent change wins per game.

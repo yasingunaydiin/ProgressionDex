@@ -4,7 +4,7 @@
   "use strict";
   var cfg = window.PDEX_CONFIG || {};
   var enabled = !!(cfg.supabaseUrl && cfg.supabaseAnonKey);
-  var SDK = "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js";
+  var SDK = "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.118.0/dist/umd/supabase.min.js";
 
   var client = null;
   var session = null;
