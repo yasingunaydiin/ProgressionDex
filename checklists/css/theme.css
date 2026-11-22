@@ -1024,12 +1024,12 @@ footer ul {
 
 .pdex-pin {
   position: absolute;
-  width: 22px;
-  height: 22px;
-  margin: -22px 0 0 -11px;
+  width: 14px;
+  height: 14px;
+  margin: -14px 0 0 -7px;
   border-radius: 50% 50% 50% 0;
   background: #e5484d;
-  border: 3px solid #fff;
+  border: 2px solid #fff;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.45);
   transform: rotate(-45deg);
 }
@@ -1037,7 +1037,7 @@ footer ul {
 .pdex-pin::after {
   content: "";
   position: absolute;
-  inset: 4px;
+  inset: 2px;
   border-radius: 50%;
   background: #fff;
 }
