@@ -143,6 +143,18 @@
     ];
   }
 
+  // Games that have map links so far (the Pokemon's Bulbapedia location list, plus the region map)
+  const MAP_GAMES = { redblue: { region: "Kanto", url: "https://bulbapedia.bulbagarden.net/wiki/Kanto" } };
+
+  function mapLinks(query, isPokemon) {
+    const info = MAP_GAMES[document.querySelector(".page-container")?.dataset.game];
+    if (!info) return "";
+    const links = [];
+    if (isPokemon) links.push(["Where to catch it", `https://bulbapedia.bulbagarden.net/wiki/${encodeURIComponent(query.replace(/\s+/g, "_"))}_(Pok%C3%A9mon)#Game_locations`]);
+    links.push([`${info.region} map`, info.url]);
+    return '<h3>Map</h3><div class="pdex-drawer-links">' + links.map(([n, u]) => `<a href="${u}" target="_blank" rel="noopener noreferrer">${n} &#8599;</a>`).join("") + "</div>";
+  }
+
   function openDrawer(btn) {
     const item = btn.closest(".checkbox-item");
     if (!item) return;
@@ -172,6 +184,7 @@
       (img ? `<img class="pdex-drawer-img" alt="" src="${esc(img.getAttribute("src"))}" />` : "") +
       `<h2>${esc(name)}</h2>` +
       sections.map((x) => `<h3>${x.kind}</h3><p>${esc(x.text)}</p>`).join("") +
+      mapLinks(query, !!(img && /\/icons\/pokemon\//.test(img.getAttribute("src")))) +
       `<h3>Look it up</h3><div class="pdex-drawer-links">${searchLinks(query)
         .map(([n, u]) => `<a href="${esc(u)}" target="_blank" rel="noopener noreferrer">${n} &#8599;</a>`)
         .join("")}</div>`;
