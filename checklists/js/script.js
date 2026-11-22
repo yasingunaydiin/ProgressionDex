@@ -152,7 +152,7 @@
     "Power Plant": { x: 81.2, y: 35.8 },
     "Victory Road": { x: 14.5, y: 35.8 },
     "Seafoam Islands": { x: 39.6, y: 91.3 },
-    "Cerulean Cave": { x: 68.2, y: 21.0 },
+    "Cerulean Cave": { x: 64.3, y: 30.2 },
     "Saffron City": { x: 64.3, y: 47.0 },
     "Celadon City": { x: 52.0, y: 47.0 },
     "Mt. Moon": { x: 43.5, y: 30.2 },
