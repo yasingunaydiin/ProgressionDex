@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="../theme.js"></script>
     <link href="styles.css" rel="stylesheet" />
     <link href="../images/icons/favicontab.ico" rel="icon" type="image/x-icon" />
     <link href="../images/icons/favicontab.ico" rel="shortcut icon" type="image/x-icon" />
@@ -222,6 +223,9 @@
       <p class="empty" id="emptyMessage">No games match your filters.</p>
     </main>
 
+    <script>
+      document.querySelector(".top nav").append(pdexTheme.button("dark"));
+    </script>
     <script src="script.js"></script>
     <script src="../checklists/js/backup.js"></script>
   </body>

@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Progression Dex | Pick a game</title>
+    <script src="theme.js"></script>
     <link href="styles.css" rel="stylesheet" />
     <link href="images/icons/favicontab.ico" rel="icon" type="image/x-icon" />
     <link href="images/icons/favicontab.ico" rel="shortcut icon" type="image/x-icon" />
@@ -182,6 +183,7 @@
     </div>
 
     <script>
+      document.querySelector(".top nav").append(pdexTheme.button("dark"));
       const row = document.getElementById("row");
       const tiles = [...row.querySelectorAll(".tile")];
       const bgs = [document.getElementById("bgA"), document.getElementById("bgB")];

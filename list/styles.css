@@ -1,4 +1,49 @@
 /* Game list: dark, tile grid in the same family as the home menu */
+/* theme: dark by default; the button in the header switches to light (saved by theme.js) */
+:root {
+  --bg: #14161b;
+  --fg: #ffffff;
+  --fg-2: rgba(255, 255, 255, 0.8);
+  --fg-3: rgba(255, 255, 255, 0.58);
+  --line: rgba(255, 255, 255, 0.12);
+  --line-strong: rgba(255, 255, 255, 0.3);
+  --glass: rgba(255, 255, 255, 0.07);
+  --field: rgba(0, 0, 0, 0.3);
+  --track: rgba(255, 255, 255, 0.18);
+  --veil: 20, 22, 27;
+}
+
+:root[data-theme="light"] {
+  --bg: #f1f2f7;
+  --fg: #1c2233;
+  --fg-2: rgba(28, 34, 51, 0.82);
+  --fg-3: rgba(28, 34, 51, 0.6);
+  --line: rgba(28, 34, 51, 0.12);
+  --line-strong: rgba(28, 34, 51, 0.3);
+  --glass: rgba(255, 255, 255, 0.75);
+  --field: rgba(255, 255, 255, 0.9);
+  --track: rgba(28, 34, 51, 0.14);
+  --veil: 241, 242, 247;
+}
+
+.theme-btn {
+  height: 32px;
+  padding: 0 13px;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--fg-2);
+  font:
+    600 0.8rem system-ui,
+    sans-serif;
+  cursor: pointer;
+}
+
+.theme-btn:hover {
+  border-color: var(--fg);
+  color: var(--fg);
+}
+
 * {
   box-sizing: border-box;
 }
@@ -6,8 +51,8 @@
 body {
   margin: 0;
   min-height: 100vh;
-  background: #14161b;
-  color: #fff;
+  background: var(--bg);
+  color: var(--fg);
   font-family:
     system-ui,
     -apple-system,
@@ -28,7 +73,7 @@ a {
   z-index: -1;
   background:
     radial-gradient(ellipse 80% 50% at 50% -10%, rgba(79, 107, 237, 0.35), transparent 70%),
-    linear-gradient(rgba(20, 22, 27, 0.82), rgba(20, 22, 27, 0.94)),
+    linear-gradient(rgba(var(--veil), 0.82), rgba(var(--veil), 0.94)),
     url(../images/patterns/pattern-list.png) center / 500px 250px;
 }
 
@@ -60,11 +105,11 @@ a {
   gap: 24px;
   font-size: 0.9rem;
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.75);
+  color: var(--fg-2);
 }
 
 .top nav a:hover {
-  color: #fff;
+  color: var(--fg);
 }
 
 .page {
@@ -81,12 +126,12 @@ h1 {
 
 .summary {
   margin: 0 0 22px;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--fg-3);
   font-size: 0.95rem;
 }
 
 .summary b {
-  color: #fff;
+  color: var(--fg);
 }
 
 .filters {
@@ -96,8 +141,8 @@ h1 {
   gap: 10px 18px;
   margin-bottom: 26px;
   padding: 12px 14px;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--glass);
+  border: 1px solid var(--line);
   border-radius: 16px;
   backdrop-filter: blur(8px);
 }
@@ -106,15 +151,15 @@ h1 {
   appearance: none;
   min-width: 210px;
   padding: 9px 14px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid var(--track);
   border-radius: 10px;
-  background: rgba(0, 0, 0, 0.3);
-  color: #fff;
+  background: var(--field);
+  color: var(--fg);
   font-size: 0.9rem;
 }
 
 .filters input::placeholder {
-  color: rgba(255, 255, 255, 0.45);
+  color: var(--fg-3);
 }
 
 .filters input:focus-visible,
@@ -134,10 +179,10 @@ h1 {
 .btn {
   height: 32px;
   padding: 0 13px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid var(--line-strong);
   border-radius: 999px;
   background: transparent;
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--fg-2);
   font:
     600 0.8rem system-ui,
     sans-serif;
@@ -146,14 +191,14 @@ h1 {
 
 .chip:hover,
 .btn:hover {
-  border-color: #fff;
-  color: #fff;
+  border-color: var(--fg);
+  color: var(--fg);
 }
 
 .chip.is-active {
-  background: #fff;
-  border-color: #fff;
-  color: #14161b;
+  background: var(--fg);
+  border-color: var(--fg);
+  color: var(--bg);
 }
 
 .toolbar-extra {
@@ -172,8 +217,8 @@ h1 {
   display: flex;
   flex-direction: column;
   border-radius: 18px;
-  background: rgba(255, 255, 255, 0.07);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--glass);
+  border: 1px solid var(--line);
   overflow: hidden;
   transition:
     transform 0.18s ease,
@@ -187,7 +232,7 @@ h1 {
 
 .card:hover {
   transform: translateY(-4px);
-  border-color: #fff;
+  border-color: var(--fg);
   box-shadow: 0 14px 30px rgba(0, 0, 0, 0.45);
 }
 
@@ -245,7 +290,7 @@ h1 {
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--fg-3);
 }
 
 .meter {
@@ -253,7 +298,7 @@ h1 {
   height: 6px;
   margin-top: 8px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.15);
+  background: var(--track);
   overflow: hidden;
 }
 
@@ -261,7 +306,7 @@ h1 {
   display: block;
   height: 100%;
   width: 0;
-  background: #fff;
+  background: var(--fg);
 }
 
 .card[data-status="completed"] .meter i {
@@ -271,7 +316,7 @@ h1 {
 .pct {
   font-style: normal;
   font-size: 0.8rem;
-  color: rgba(255, 255, 255, 0.65);
+  color: var(--fg-3);
   font-variant-numeric: tabular-nums;
 }
 
@@ -279,7 +324,7 @@ h1 {
   display: none;
   padding: 60px 0;
   text-align: center;
-  color: rgba(255, 255, 255, 0.55);
+  color: var(--fg-3);
 }
 
 @media (max-width: 560px) {

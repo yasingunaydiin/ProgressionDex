@@ -183,6 +183,7 @@
         <button type="button" data-action="collapse">Collapse all</button>
         <span class="toolbar-extra" style="display: contents"></span>`;
       page.prepend(toolbar);
+      if (window.pdexTheme) toolbar.querySelector(".toolbar-extra").before(window.pdexTheme.button());
       summaryStrong = toolbar.querySelector("strong");
       summarySmall = toolbar.querySelector("small");
       summaryBar = toolbar.querySelector(".bar b");

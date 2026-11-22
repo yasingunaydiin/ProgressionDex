@@ -1,4 +1,49 @@
 /* Landing page: a console-style game menu */
+/* theme: dark by default; the button in the header switches to light (saved by theme.js) */
+:root {
+  --bg: #14161b;
+  --fg: #ffffff;
+  --fg-2: rgba(255, 255, 255, 0.8);
+  --fg-3: rgba(255, 255, 255, 0.58);
+  --line: rgba(255, 255, 255, 0.12);
+  --line-strong: rgba(255, 255, 255, 0.3);
+  --glass: rgba(255, 255, 255, 0.07);
+  --field: rgba(0, 0, 0, 0.3);
+  --track: rgba(255, 255, 255, 0.18);
+  --veil: 20, 22, 27;
+}
+
+:root[data-theme="light"] {
+  --bg: #f1f2f7;
+  --fg: #1c2233;
+  --fg-2: rgba(28, 34, 51, 0.82);
+  --fg-3: rgba(28, 34, 51, 0.6);
+  --line: rgba(28, 34, 51, 0.12);
+  --line-strong: rgba(28, 34, 51, 0.3);
+  --glass: rgba(255, 255, 255, 0.75);
+  --field: rgba(255, 255, 255, 0.9);
+  --track: rgba(28, 34, 51, 0.14);
+  --veil: 241, 242, 247;
+}
+
+.theme-btn {
+  height: 32px;
+  padding: 0 13px;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--fg-2);
+  font:
+    600 0.8rem system-ui,
+    sans-serif;
+  cursor: pointer;
+}
+
+.theme-btn:hover {
+  border-color: var(--fg);
+  color: var(--fg);
+}
+
 * {
   box-sizing: border-box;
 }
@@ -11,8 +56,8 @@ body {
 body {
   margin: 0;
   overflow: hidden;
-  background: #14161b;
-  color: #fff;
+  background: var(--bg);
+  color: var(--fg);
   font-family:
     system-ui,
     -apple-system,
@@ -31,7 +76,7 @@ a {
 .bg {
   position: fixed;
   inset: 0;
-  background-color: #14161b;
+  background-color: var(--bg);
   background-size: 500px 250px;
   opacity: 0;
   transition: opacity 0.5s ease;
@@ -45,7 +90,7 @@ a {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse 70% 60% at 50% 45%, color-mix(in srgb, var(--glow, #4f6bed) 55%, transparent), transparent 70%), linear-gradient(rgba(20, 22, 27, 0.72), rgba(20, 22, 27, 0.9));
+  background: radial-gradient(ellipse 70% 60% at 50% 45%, color-mix(in srgb, var(--glow, #4f6bed) 55%, transparent), transparent 70%), linear-gradient(rgba(var(--veil), 0.72), rgba(var(--veil), 0.9));
 }
 
 .screen {
@@ -81,11 +126,11 @@ a {
   gap: 24px;
   font-size: 0.9rem;
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.75);
+  color: var(--fg-2);
 }
 
 .top nav a:hover {
-  color: #fff;
+  color: var(--fg);
 }
 
 .home {
@@ -139,7 +184,7 @@ a {
 .tile.selected {
   transform: scale(1.18);
   box-shadow:
-    0 0 0 4px #fff,
+    0 0 0 4px var(--fg),
     0 0 34px 6px color-mix(in srgb, var(--c1) 70%, transparent),
     0 14px 30px rgba(0, 0, 0, 0.5);
   z-index: 2;
@@ -162,7 +207,7 @@ a {
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.65);
+  color: var(--fg-3);
 }
 
 .details h1 {
@@ -180,7 +225,7 @@ a {
   margin-bottom: 22px;
   font-size: 0.9rem;
   font-variant-numeric: tabular-nums;
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--fg-2);
 }
 
 .progress i {
@@ -188,7 +233,7 @@ a {
   width: min(260px, 40vw);
   height: 8px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.18);
+  background: var(--track);
   overflow: hidden;
 }
 
@@ -196,7 +241,7 @@ a {
   display: block;
   height: 100%;
   width: 0;
-  background: #fff;
+  background: var(--fg);
   transition: width 0.3s ease;
 }
 
@@ -209,8 +254,8 @@ a {
   display: inline-block;
   padding: 13px 34px;
   border-radius: 999px;
-  background: #fff;
-  color: #14161b;
+  background: var(--fg);
+  color: var(--bg);
   font-weight: 800;
   letter-spacing: 0.04em;
 }
@@ -225,7 +270,7 @@ a {
   gap: 28px;
   padding: 18px 16px 24px;
   font-size: 0.82rem;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--fg-3);
 }
 
 kbd {
@@ -233,7 +278,7 @@ kbd {
   min-width: 24px;
   margin-right: 4px;
   padding: 1px 6px;
-  border: 1px solid rgba(255, 255, 255, 0.35);
+  border: 1px solid var(--line-strong);
   border-radius: 6px;
   font:
     600 0.78rem system-ui,
