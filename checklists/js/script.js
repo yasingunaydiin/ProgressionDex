@@ -171,6 +171,7 @@
     "Mt. Ember": { x: 14.6, y: 10.0 },
     "Trainer Tower": { x: 27.0, y: 82.0 },
     "Tanoby Ruins": { x: 43.6, y: 93.1 },
+    "Navel Rock": { x: 65.8, y: 68.8 },
     "Birth Island": { x: 81.0, y: 94.4 },
     "Five Island": { x: 76.8, y: 80.2 },
   };
@@ -238,6 +239,8 @@
       alt: { sevii: { image: "maps/sevii.svg", title: "Sevii Islands (schematic)", places: SEVII_PLACES } },
       pins: {
         moltres: ["Mt. Ember", "Mt. Ember, on One Island", "sevii"],
+        lugia: ["Navel Rock", "Navel Rock (needs the MysticTicket). It stays hidden on the in-game map until your first visit, so this spot is approximate", "sevii"],
+        "ho-oh": ["Navel Rock", "Navel Rock (needs the MysticTicket). It stays hidden on the in-game map until your first visit, so this spot is approximate", "sevii"],
         deoxys: ["Birth Island", "Birth Island (needs the AuroraTicket)", "sevii"],
         togepi: ["Five Island", "Water Labyrinth, Five Island", "sevii"],
         unownA: ["Tanoby Ruins", "Tanoby Ruins, Monean Chamber.", "sevii"],
