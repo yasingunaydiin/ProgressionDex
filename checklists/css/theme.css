@@ -829,3 +829,27 @@ footer ul {
 .page-container .wide-panel > div:not(:has(.checkbox-item img)) {
   --cols: repeat(auto-fill, minmax(170px, 1fr));
 }
+
+/* pages with a single panel (Red/Blue, Yellow, Crystal): use the whole width, sections flow in columns */
+.page-container:not(:has(.page-container-right)) > .page-container-left,
+.page-container:not(:has(.page-container-right)) > .wide-panel {
+  grid-column: 1 / -1;
+}
+
+.page-container:not(:has(.page-container-right)) .wide-panel {
+  display: block;
+  column-width: 520px;
+  column-gap: 36px;
+}
+
+.page-container:not(:has(.page-container-right)) .wide-panel > .panel-label {
+  column-span: all;
+}
+
+.page-container:not(:has(.page-container-right)) .wide-panel > div {
+  break-inside: avoid;
+  border-top: 0;
+  margin-top: 6px;
+  padding-top: 14px;
+  padding-bottom: 10px;
+}
