@@ -59,6 +59,8 @@ search.addEventListener("input", () => {
   apply();
 });
 document.addEventListener("keydown", (e) => {
+  // do not hijack keys while typing elsewhere (for example in the sign-in dialog)
+  if (e.target !== search && (e.target.closest("input, textarea, select, dialog, [contenteditable]") || document.querySelector("dialog[open]"))) return;
   if (e.key === "/" && document.activeElement !== search) {
     e.preventDefault();
     search.focus();

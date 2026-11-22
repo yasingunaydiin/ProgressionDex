@@ -193,7 +193,7 @@
       // "/" jumps to the search box, Escape clears it (like pokedextracker.com)
       const search = toolbar.querySelector('input[type="search"]');
       document.addEventListener("keydown", (e) => {
-        const typing = /^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement?.tagName);
+        const typing = /^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement?.tagName) || document.querySelector("dialog[open]") !== null;
         if (e.key === "/" && !typing && !e.metaKey && !e.ctrlKey) {
           e.preventDefault();
           search.focus();
