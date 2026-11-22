@@ -29,6 +29,8 @@ By default nothing leaves your browser. If you want sign-in and syncing across d
 3. Under Project Settings > API copy the project URL and the publishable key (`sb_publishable_...`, or the older `anon` key) into [config.js](config.js).
 4. Under Authentication > URL Configuration add your site address (for example `http://localhost:8000` and your real domain) as the Site URL / redirect URLs so confirmation and password-reset emails come back to the site.
 
+Profile pictures (optional): run [supabase/avatars.sql](supabase/avatars.sql) once in the SQL editor. It creates a public `avatars` storage bucket where each user can only write inside their own folder. Without it the account dialog still works, but uploading a photo will fail.
+
 How it behaves: checkboxes always live in `localStorage` first, so the site works offline and for people without an account. When signed in, every change is also saved to the account. The first time a browser signs in, ticks from the browser and from the account are merged (nothing is lost); after that the most recent change wins per game.
 
 ## Development

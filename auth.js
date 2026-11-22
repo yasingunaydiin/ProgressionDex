@@ -180,13 +180,86 @@
     }, 700);
   }
 
+  // ---------- profile picture ----------
+  function avatarUrl() {
+    return session && session.user && session.user.user_metadata ? session.user.user_metadata.avatar_url || "" : "";
+  }
+
+  // square-crop to 256px JPEG so uploads stay tiny
+  function resizeImage(file) {
+    return new Promise(function (resolve, reject) {
+      var img = new Image();
+      var url = URL.createObjectURL(file);
+      img.onload = function () {
+        var size = 256;
+        var c = document.createElement("canvas");
+        c.width = c.height = size;
+        var m = Math.min(img.width, img.height);
+        c.getContext("2d").drawImage(img, (img.width - m) / 2, (img.height - m) / 2, m, m, 0, 0, size, size);
+        URL.revokeObjectURL(url);
+        c.toBlob(
+          function (b) {
+            if (b) resolve(b);
+            else reject(new Error("Could not process that image."));
+          },
+          "image/jpeg",
+          0.85,
+        );
+      };
+      img.onerror = function () {
+        URL.revokeObjectURL(url);
+        reject(new Error("That file is not an image I can read."));
+      };
+      img.src = url;
+    });
+  }
+
+  function uploadAvatar(file) {
+    if (!file || !/^image\//.test(file.type)) return Promise.reject(new Error("Please choose an image file."));
+    if (file.size > 8 * 1024 * 1024) return Promise.reject(new Error("That image is too large (max 8 MB)."));
+    var path = session.user.id + "/avatar.jpg";
+    return resizeImage(file)
+      .then(function (blob) {
+        return client.storage.from("avatars").upload(path, blob, { upsert: true, contentType: "image/jpeg", cacheControl: "3600" });
+      })
+      .then(function (r) {
+        if (r.error) throw r.error;
+        var url = client.storage.from("avatars").getPublicUrl(path).data.publicUrl + "?v=" + Date.now();
+        return client.auth.updateUser({ data: { avatar_url: url } });
+      })
+      .then(function (r) {
+        if (r.error) throw r.error;
+        session = Object.assign({}, session, { user: r.data.user });
+        buttons.forEach(paint);
+      });
+  }
+
+  function removeAvatar() {
+    return client.storage
+      .from("avatars")
+      .remove([session.user.id + "/avatar.jpg"])
+      .then(function () {
+        return client.auth.updateUser({ data: { avatar_url: "" } });
+      })
+      .then(function (r) {
+        if (r.error) throw r.error;
+        session = Object.assign({}, session, { user: r.data.user });
+        buttons.forEach(paint);
+      });
+  }
+
   // ---------- account button ----------
   var USER = '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>';
   function paint(b) {
     if (session && session.user && session.user.email) {
-      b.textContent = session.user.email.charAt(0).toUpperCase();
-      b.style.fontWeight = "800";
-      b.style.fontSize = "0.85rem";
+      var pic = avatarUrl();
+      if (pic) {
+        b.innerHTML = "<img class='pdex-pic' alt='' src='" + esc(pic) + "' />";
+      } else {
+        b.textContent = session.user.email.charAt(0).toUpperCase();
+        b.style.fontWeight = "800";
+        b.style.fontSize = "0.85rem";
+      }
       b.title = state === "synced" ? "Signed in - synced" : state === "syncing" ? "Signed in - syncing..." : state === "error" ? "Signed in - sync problem, will retry" : "Signed in";
     } else {
       b.innerHTML = USER;
@@ -210,6 +283,7 @@
   // ---------- dialog ----------
   var view = "signin"; // signin | signup | reset | recovery | account
   var message = "";
+  var messageBad = false;
   var busy = false;
 
   function injectStyle() {
@@ -217,7 +291,7 @@
     var s = document.createElement("style");
     s.id = "pdex-auth-style";
     s.textContent =
-      ".pdex-account{position:relative}" +
+      ".pdex-account{position:relative}.pdex-pic{width:calc(100% - 4px);height:calc(100% - 4px);border-radius:50%;object-fit:cover;display:block}.pdex-avatar{width:64px;height:64px;border-radius:50%;object-fit:cover;display:grid;place-items:center;flex:none;background:var(--accent,#4f6bed);color:#fff;font:800 1.5rem system-ui,sans-serif;overflow:hidden}.pdex-avatar-row{display:flex;align-items:center;gap:14px}.pdex-avatar-row .pdex-col{display:grid;gap:6px;justify-items:start}" +
       ".pdex-account[data-state=synced]::after,.pdex-account[data-state=syncing]::after,.pdex-account[data-state=error]::after{content:'';position:absolute;top:1px;right:1px;width:9px;height:9px;border-radius:50%;border:2px solid var(--card,var(--bg,#fff));background:#2ecf9c}" +
       ".pdex-account[data-state=syncing]::after{background:#f5a524}.pdex-account[data-state=error]::after{background:#e5484d}" +
       ".pdex-dialog{border:1px solid var(--line-strong,rgba(128,128,128,.5));border-radius:18px;padding:0;background:var(--card,var(--bg,#fff));color:var(--text,var(--fg,#111));width:min(380px,calc(100% - 32px));box-shadow:0 24px 60px rgba(0,0,0,.5);font:15px/1.5 system-ui,sans-serif}" +
@@ -256,13 +330,21 @@
     var email = session && session.user ? session.user.email : "";
     if (view === "account") {
       html =
-        "<h2>Your account</h2><p>Signed in as <b>" +
+        "<h2>Your account</h2><div class='pdex-avatar-row'>" +
+        (avatarUrl() ? "<img class='pdex-avatar' alt='' src='" + esc(avatarUrl()) + "' />" : "<span class='pdex-avatar'>" + esc(email.charAt(0).toUpperCase()) + "</span>") +
+        "<div class='pdex-col'><button type='button' data-act='photo'>" +
+        (avatarUrl() ? "Change photo" : "Add a photo") +
+        "</button>" +
+        (avatarUrl() ? "<button type='button' class='pdex-link' data-act='removephoto'>Remove photo</button>" : "") +
+        "</div></div><input type='file' accept='image/*' hidden data-file /><p>Signed in as <b>" +
         esc(email) +
         "</b>.</p>" +
         "<p>" +
         (state === "syncing" ? "Syncing..." : state === "error" ? "Last sync failed. It will retry on your next change." : "Your progress is synced on every device you sign in on.") +
         "</p>" +
-        "<div class='pdex-msg pdex-ok' data-msg>" +
+        "<div class='pdex-msg" +
+        (messageBad ? "" : " pdex-ok") +
+        "' data-msg>" +
         esc(message) +
         "</div>" +
         "<div class='pdex-row'>" +
@@ -311,13 +393,29 @@
     }
     dialog.innerHTML = "<form>" + html + "</form>";
     var form = dialog.querySelector("form");
+    var fileInput = dialog.querySelector("[data-file]");
+    if (fileInput)
+      fileInput.addEventListener("change", function () {
+        var file = fileInput.files && fileInput.files[0];
+        if (!file) return;
+        messageBad = false;
+        message = "Uploading...";
+        renderDialog();
+        uploadAvatar(file).then(done("Photo updated."), fail);
+      });
     form.addEventListener("submit", onSubmit);
     form.addEventListener("click", function (e) {
       var act = e.target.getAttribute && e.target.getAttribute("data-act");
       if (!act) return;
       e.preventDefault();
       if (act === "close") dialog.close();
-      else if (act === "sync")
+      else if (act === "photo") dialog.querySelector("[data-file]").click();
+      else if (act === "removephoto") {
+        messageBad = false;
+        message = "Removing photo...";
+        renderDialog();
+        removeAvatar().then(done("Photo removed."), fail);
+      } else if (act === "sync")
         syncAll().then(function (ch) {
           message = ch.length ? "Synced. Updated " + ch.length + " game(s) from your account." : "Everything is up to date.";
           renderDialog();
@@ -332,6 +430,19 @@
         renderDialog();
       }
     });
+  }
+
+  function done(text) {
+    return function () {
+      messageBad = false;
+      message = text;
+      if (dialog.open) renderDialog();
+    };
+  }
+  function fail(err) {
+    messageBad = true;
+    message = err && err.message ? err.message : "Something went wrong.";
+    if (dialog.open) renderDialog();
   }
 
   function esc(t) {
