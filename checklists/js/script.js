@@ -149,22 +149,22 @@
 
   // Schematic maps with pins. Positions are percentages of the picture and only as accurate as the guides they came from.
   const KANTO_PLACES = {
-    "Power Plant": { x: 94.4, y: 21.1 },
-    "Victory Road": { x: 4.4, y: 15.9 },
-    "Seafoam Islands": { x: 37.2, y: 95.4 },
-    "Cerulean Cave": { x: 72.8, y: 8.2 },
-    "Saffron City": { x: 69.4, y: 34.0 },
-    "Celadon City": { x: 50.0, y: 34.0 },
-    "Mt. Moon": { x: 40.9, y: 13.4 },
-    "Pewter City": { x: 16.7, y: 17.2 },
-    "Route 2": { x: 18.9, y: 34.0 },
-    "Route 5": { x: 71.3, y: 22.7 },
-    "Route 11": { x: 85.0, y: 53.0 },
-    "Route 18": { x: 43.1, y: 78.1 },
-    "Cerulean City": { x: 68.0, y: 13.4 },
-    "Vermilion City": { x: 68.3, y: 53.2 },
-    "Cinnabar Island": { x: 17.6, y: 98.3 },
-    "Route 24": { x: 69.4, y: 4.4 },
+    "Power Plant": { x: 81.2, y: 35.8 },
+    "Victory Road": { x: 14.5, y: 35.8 },
+    "Seafoam Islands": { x: 39.6, y: 91.3 },
+    "Cerulean Cave": { x: 68.2, y: 21.0 },
+    "Saffron City": { x: 64.3, y: 47.0 },
+    "Celadon City": { x: 52.0, y: 47.0 },
+    "Mt. Moon": { x: 43.5, y: 30.2 },
+    "Pewter City": { x: 22.7, y: 35.8 },
+    "Route 2": { x: 22.7, y: 47.0 },
+    "Route 5": { x: 64.3, y: 38.5 },
+    "Route 11": { x: 72.4, y: 63.9 },
+    "Route 18": { x: 43.5, y: 79.2 },
+    "Cerulean City": { x: 64.3, y: 30.2 },
+    "Vermilion City": { x: 64.3, y: 63.9 },
+    "Cinnabar Island": { x: 22.7, y: 91.3 },
+    "Route 24": { x: 66.7, y: 24.0 },
   };
 
   const SEVII_PLACES = {
