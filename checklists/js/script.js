@@ -198,8 +198,8 @@
 
   const PIN_MAPS = {
     redblue: {
-      image: "maps/redblue.svg",
-      title: "Kanto (schematic)",
+      image: "maps/kanto.png",
+      title: "Kanto",
       places: KANTO_PLACES,
       pins: {
         zapdos: ["Power Plant", "Power Plant, on the east side near Rock Tunnel"],
@@ -225,8 +225,8 @@
       },
     },
     yellow: {
-      image: "maps/redblue.svg",
-      title: "Kanto (schematic)",
+      image: "maps/kanto.png",
+      title: "Kanto",
       places: KANTO_PLACES,
       pins: {
         zapdos: ["Power Plant", "Power Plant, on the east side near Rock Tunnel"],
@@ -253,10 +253,10 @@
       },
     },
     fireredleafgreen: {
-      image: "maps/redblue.svg",
-      title: "Kanto (schematic)",
+      image: "maps/kanto.png",
+      title: "Kanto",
       places: KANTO_PLACES,
-      alt: { sevii: { image: "maps/sevii.svg", title: "Sevii Islands (schematic)", places: SEVII_PLACES } },
+      alt: { sevii: { image: "maps/sevii.png", title: "Sevii Islands", places: SEVII_PLACES } },
       pins: {
         moltres: ["Mt. Ember", "Mt. Ember, on One Island", "sevii"],
         lugia: ["Navel Rock", "Navel Rock (needs the MysticTicket). It stays hidden on the in-game map until your first visit, so this spot is approximate", "sevii"],
@@ -315,8 +315,8 @@
       },
     },
     goldsilver: {
-      image: "maps/goldsilver.svg",
-      title: "Johto (schematic)",
+      image: "maps/johto.png",
+      title: "Johto",
       places: JOHTO_PLACES,
       pins: {
         lugia: ["Whirl Islands", "Whirl Islands (with the Silver Wing)"],
@@ -383,7 +383,7 @@
     if (!pin) return "";
     return (
       `<h3>Map</h3><div class="pdex-map"><img alt="${map.title}" src="${map.image}" /><span class="pdex-pin" style="left:${pin.x}%;top:${pin.y}%"></span></div>` +
-      `<p class="pdex-map-note"><b>${pin.place}.</b><br />Schematic map, not to scale. The pin shows the area guides describe, not an exact spot.</p>`
+      `<p class="pdex-map-note"><b>${pin.place}.</b><br />The pin shows the area guides describe, not an exact spot.</p>`
     );
   }
 
