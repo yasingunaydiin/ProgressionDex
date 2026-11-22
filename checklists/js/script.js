@@ -395,7 +395,14 @@
       image: "maps/hoenn.png",
       title: "Hoenn",
       places: HOENN_PLACES,
+      alt: {
+        navelrock: { image: "maps/navelrock.png", title: "Navel Rock", places: { "Navel Rock": { x: 47.9, y: 57.6, w: 6.5, h: 8.7 } } },
+        birthisland: { image: "maps/birthisland.png", title: "Birth Island", places: { "Birth Island": { x: 80.7, y: 84.7, w: 6.5, h: 8.7 } } },
+      },
       pins: {
+        lugia: ["Navel Rock", "Navel Rock (needs the MysticTicket)", "navelrock"],
+        "ho-oh": ["Navel Rock", "Navel Rock (needs the MysticTicket)", "navelrock"],
+        deoxys: ["Birth Island", "Birth Island (needs the AuroraTicket)", "birthisland"],
         kyogre: ["Marine Cave", "Marine Cave, Route 127"],
         groudon: ["Terra Cave", "Terra Cave, Route 114"],
         rayquaza: ["Sky Pillar", "Sky Pillar, near Pacifidlog Town"],
