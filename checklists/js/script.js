@@ -144,34 +144,107 @@
   }
 
   // Games that have map links so far (the Pokemon's Bulbapedia location list, plus the region map)
-  const MAP_GAMES = { redblue: { region: "Kanto", url: "https://bulbapedia.bulbagarden.net/wiki/Kanto" } };
+  const KANTO_LINK = { region: "Kanto", url: "https://bulbapedia.bulbagarden.net/wiki/Kanto" };
+  const MAP_GAMES = { redblue: KANTO_LINK, yellow: KANTO_LINK, fireredleafgreen: KANTO_LINK };
 
   // Schematic maps with pins. Positions are percentages of the picture and only as accurate as the guides they came from.
+  const KANTO_PLACES = {
+    "Power Plant": { x: 94.4, y: 21.1 },
+    "Victory Road": { x: 4.4, y: 15.9 },
+    "Seafoam Islands": { x: 37.2, y: 95.4 },
+    "Cerulean Cave": { x: 72.8, y: 8.2 },
+    "Saffron City": { x: 69.4, y: 34.0 },
+    "Celadon City": { x: 50.0, y: 34.0 },
+    "Mt. Moon": { x: 40.9, y: 13.4 },
+    "Pewter City": { x: 16.7, y: 17.2 },
+    "Route 2": { x: 18.9, y: 34.0 },
+    "Route 5": { x: 71.3, y: 22.7 },
+    "Route 11": { x: 85.0, y: 53.0 },
+    "Route 18": { x: 43.1, y: 78.1 },
+    "Cerulean City": { x: 68.0, y: 13.4 },
+    "Vermilion City": { x: 68.3, y: 53.2 },
+    "Cinnabar Island": { x: 17.6, y: 98.3 },
+    "Route 24": { x: 69.4, y: 4.4 },
+  };
+
   const PIN_MAPS = {
     redblue: {
       image: "maps/redblue.svg",
       title: "Kanto (schematic)",
+      places: KANTO_PLACES,
       pins: {
-        zapdos: { x: 94.4, y: 21.1, place: "Power Plant, on the east side near Rock Tunnel" },
-        moltres: { x: 4.4, y: 15.9, place: "Victory Road, near the Indigo Plateau" },
-        articuno: { x: 37.2, y: 95.4, place: "Seafoam Islands, between Fuchsia City and Cinnabar Island" },
-        mewtwo: { x: 72.8, y: 8.2, place: "Cerulean Cave, near Cerulean City" },
-        hitmonlee: { x: 69.4, y: 34.0, place: "Fighting Dojo, Saffron City" },
-        hitmonchan: { x: 69.4, y: 34.0, place: "Fighting Dojo, Saffron City" },
-        lapras: { x: 69.4, y: 34.0, place: "Silph Co., Saffron City" },
-        eevee: { x: 50.0, y: 34.0, place: "Celadon Mansion roof, Celadon City" },
-        omanyte: { x: 40.9, y: 13.4, place: "Mt. Moon" },
-        kabuto: { x: 40.9, y: 13.4, place: "Mt. Moon" },
-        aerodactyl: { x: 16.7, y: 17.2, place: "Old Amber is in the Pewter City museum" },
-        "abra-mr-mime": { x: 18.9, y: 34.0, place: "Route 2, outside Diglett's Cave" },
-        "nidoran-m-f": { x: 71.3, y: 22.7, place: "Route 5, underground path north exit" },
-        "nidorino-nidorina": { x: 85.0, y: 53.0, place: "Route 11, inside the gatehouse" },
-        "slowbro-lickitung": { x: 43.1, y: 78.1, place: "Route 18, inside the gatehouse" },
-        "poliwhirl-jynx": { x: 68.0, y: 13.4, place: "Cerulean City, house next to the Pokémon Center" },
-        "spearow-farfetchd": { x: 68.3, y: 53.2, place: "Vermilion City" },
-        "ponyta-seel": { x: 17.6, y: 98.3, place: "Cinnabar Island, inside the Cinnabar Lab" },
-        "raichu-electrode": { x: 17.6, y: 98.3, place: "Cinnabar Island, inside the Cinnabar Lab" },
-        "venonat-tangela": { x: 17.6, y: 98.3, place: "Cinnabar Island, inside the Cinnabar Lab" },
+        zapdos: ["Power Plant", "Power Plant, on the east side near Rock Tunnel"],
+        moltres: ["Victory Road", "Victory Road, near the Indigo Plateau"],
+        articuno: ["Seafoam Islands", "Seafoam Islands, between Fuchsia City and Cinnabar Island"],
+        mewtwo: ["Cerulean Cave", "Cerulean Cave, near Cerulean City"],
+        lapras: ["Saffron City", "Silph Co., Saffron City"],
+        eevee: ["Celadon City", "Celadon Mansion roof, Celadon City"],
+        omanyte: ["Mt. Moon", "Mt. Moon"],
+        aerodactyl: ["Pewter City", "Old Amber is in the Pewter City museum"],
+        hitmonlee: ["Saffron City", "Fighting Dojo, Saffron City"],
+        hitmonchan: ["Saffron City", "Fighting Dojo, Saffron City"],
+        kabuto: ["Mt. Moon", "Mt. Moon"],
+        "abra-mr-mime": ["Route 2", "Route 2, outside Diglett's Cave"],
+        "nidoran-m-f": ["Route 5", "Route 5, underground path north exit"],
+        "nidorino-nidorina": ["Route 11", "Route 11, inside the gatehouse"],
+        "slowbro-lickitung": ["Route 18", "Route 18, inside the gatehouse"],
+        "poliwhirl-jynx": ["Cerulean City", "Cerulean City, house next to the Pokémon Center"],
+        "spearow-farfetchd": ["Vermilion City", "Vermilion City"],
+        "ponyta-seel": ["Cinnabar Island", "Cinnabar Island, inside the Cinnabar Lab"],
+        "raichu-electrode": ["Cinnabar Island", "Cinnabar Island, inside the Cinnabar Lab"],
+        "venonat-tangela": ["Cinnabar Island", "Cinnabar Island, inside the Cinnabar Lab"],
+      },
+    },
+    yellow: {
+      image: "maps/redblue.svg",
+      title: "Kanto (schematic)",
+      places: KANTO_PLACES,
+      pins: {
+        zapdos: ["Power Plant", "Power Plant, on the east side near Rock Tunnel"],
+        moltres: ["Victory Road", "Victory Road, near the Indigo Plateau"],
+        articuno: ["Seafoam Islands", "Seafoam Islands, between Fuchsia City and Cinnabar Island"],
+        mewtwo: ["Cerulean Cave", "Cerulean Cave, near Cerulean City"],
+        lapras: ["Saffron City", "Silph Co., Saffron City"],
+        eevee: ["Celadon City", "Celadon Mansion roof, Celadon City"],
+        omanyte: ["Mt. Moon", "Mt. Moon"],
+        aerodactyl: ["Pewter City", "Old Amber is in the Pewter City museum"],
+        hitmonlee: ["Saffron City", "Fighting Dojo, Saffron City"],
+        hitmonchan: ["Saffron City", "Fighting Dojo, Saffron City"],
+        kabuto: ["Mt. Moon", "Mt. Moon"],
+        bulbasaur: ["Cerulean City", "Cerulean City, from a girl if your Pikachu is happy"],
+        charmender: ["Route 24", "Route 24, from a trainer on the plateau"],
+        squirtle: ["Vermilion City", "Vermilion City, from Officer Jenny after the Thunder Badge"],
+        "clefairy-mrmime": ["Route 2", "Route 2, outside Diglett's Cave"],
+        "cubone-machoke": ["Route 5", "Route 5, underground path north exit"],
+        "lickitung-dugtrio": ["Route 11", "Route 11, inside the gatehouse"],
+        "tangela-parasect": ["Route 18", "Route 18, inside the gatehouse"],
+        "golduck-rhydon": ["Cinnabar Island", "Cinnabar Island, by the Pokémon Center"],
+        "growlithe-dewgong": ["Cinnabar Island", "Cinnabar Island, by the Pokémon Center"],
+        "kangaskhan-muk": ["Cinnabar Island", "Cinnabar Island, inside the laboratory"],
+      },
+    },
+    fireredleafgreen: {
+      image: "maps/redblue.svg",
+      title: "Kanto (schematic)",
+      places: KANTO_PLACES,
+      pins: {
+        zapdos: ["Power Plant", "Power Plant, on the east side near Rock Tunnel"],
+        articuno: ["Seafoam Islands", "Seafoam Islands, between Fuchsia City and Cinnabar Island"],
+        mewtwo: ["Cerulean Cave", "Cerulean Cave, near Cerulean City"],
+        lapras: ["Saffron City", "Silph Co., Saffron City"],
+        eevee: ["Celadon City", "Celadon Mansion roof, Celadon City"],
+        omanyte: ["Mt. Moon", "Mt. Moon (you may only choose one fossil)"],
+        aerodactyl: ["Pewter City", "Old Amber is in the Pewter City museum"],
+        "hitmonchan-hitmonlee": ["Saffron City", "Fighting Dojo, Saffron City"],
+        abra: ["Route 2", "Route 2"],
+        nidoran: ["Route 5", "Route 5"],
+        nidorino: ["Route 11", "Route 11"],
+        golduck: ["Route 18", "Route 18"],
+        poliwhirl: ["Cerulean City", "Cerulean City"],
+        spearow: ["Vermilion City", "Vermilion City"],
+        ponyta: ["Cinnabar Island", "Cinnabar Island"],
+        raichu: ["Cinnabar Island", "Cinnabar Island"],
+        venonat: ["Cinnabar Island", "Cinnabar Island"],
       },
     },
     thetealmask: {
@@ -189,7 +262,8 @@
     const game = document.querySelector(".page-container")?.dataset.game;
     const cfg = PIN_MAPS[game];
     const id = item.querySelector(':scope > input[type="checkbox"]')?.id || "";
-    const pin = cfg && cfg.pins[id.replace(`${game}-checkbox-`, "")];
+    let pin = cfg && cfg.pins[id.replace(`${game}-checkbox-`, "")];
+    if (pin && Array.isArray(pin)) pin = { ...cfg.places[pin[0]], place: pin[1] };
     if (!pin) return "";
     return (
       `<h3>Map</h3><div class="pdex-map"><img alt="${cfg.title}" src="${cfg.image}" /><span class="pdex-pin" style="left:${pin.x}%;top:${pin.y}%"></span></div>` +
