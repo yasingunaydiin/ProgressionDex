@@ -43,7 +43,10 @@
     document.querySelectorAll(".checkbox-item").forEach((item) => {
       const isHeading = item.querySelector(":scope > .title") !== null;
       const labels = isHeading ? [...item.querySelectorAll(".title label")] : [...item.querySelectorAll(":scope > label")];
-      const isPokemon = !isHeading && item.querySelector('img[src*="/icons/pokemon/"]') !== null;
+      const pinCfg = PIN_MAPS[document.querySelector(".page-container")?.dataset.game];
+      const itemId = item.querySelector(':scope > input[type="checkbox"]')?.id || "";
+      const hasPin = !isHeading && !!pinCfg && itemId.replace(`${document.querySelector(".page-container").dataset.game}-checkbox-`, "") in pinCfg.pins;
+      const isPokemon = !isHeading && (item.querySelector('img[src*="/icons/pokemon/"]') !== null || hasPin);
       const location = [];
       const other = [];
 
@@ -67,7 +70,7 @@
         }
         if (iconOnly && !hasText && label.querySelector("img.icon-small")) label.remove(); // old "more info" icon
         if (!tip || location.includes(tip) || other.includes(tip)) return;
-        (isPokemon && isLocationTip(tip) ? location : other).push(tip);
+        (isPokemon && (hasPin || isLocationTip(tip)) ? location : other).push(tip);
       });
 
       const add = (kind, tips, title) => {
@@ -720,6 +723,9 @@
         "poke-flute": ["Lavender Town", "Pokémon Tower, Lavender Town"],
         "secret-key": ["Cinnabar Island", "Pokémon Mansion, Cinnabar Island"],
         "card-key": ["Saffron City", "Silph Co., Saffron City"],
+        "rod-old": ["Vermilion City", "Vermilion City"],
+        "rod-good": ["Fuchsia City", "Fuchsia City"],
+        "rod-super": ["Route 12", "Route 12"],
         "oaks-aides": ["Route 11", "Route 11 gate (and Route 15 gate)"],
         "master-ball": ["Saffron City", "Silph Co., Saffron City"],
         zapdos: ["Power Plant", "Power Plant, on the east side near Rock Tunnel"],
