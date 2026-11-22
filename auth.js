@@ -225,11 +225,11 @@
       ".pdex-dialog p{margin:0;font-size:.88rem;opacity:.8}" +
       ".pdex-dialog input{padding:10px 12px;border-radius:10px;border:1px solid var(--line-strong,rgba(128,128,128,.5));background:transparent;color:inherit;font:inherit}" +
       ".pdex-dialog input:focus-visible,.pdex-dialog button:focus-visible{outline:2px solid var(--accent,#4f6bed);outline-offset:2px}" +
-      ".pdex-dialog .row{display:flex;gap:8px;flex-wrap:wrap}" +
+      ".pdex-dialog .pdex-row{display:flex;gap:8px;flex-wrap:wrap}" +
       ".pdex-dialog button{padding:10px 14px;border-radius:10px;border:1px solid var(--line-strong,rgba(128,128,128,.5));background:transparent;color:inherit;font:600 .9rem system-ui,sans-serif;cursor:pointer}" +
-      ".pdex-dialog button.primary{background:var(--accent,#4f6bed);border-color:var(--accent,#4f6bed);color:#fff}" +
-      ".pdex-dialog button.link{border:0;padding:2px 0;opacity:.8;text-decoration:underline;font-weight:500}" +
-      ".pdex-dialog .msg{min-height:1.2em;font-size:.85rem;color:#e5484d}.pdex-dialog .msg.ok{color:#2ecf9c}";
+      ".pdex-dialog button.pdex-primary{background:var(--accent,#4f6bed);border-color:var(--accent,#4f6bed);color:#fff}" +
+      ".pdex-dialog button.pdex-link{border:0;padding:2px 0;opacity:.8;text-decoration:underline;font-weight:500}" +
+      ".pdex-dialog .pdex-msg{min-height:1.2em;font-size:.85rem;color:#e5484d}.pdex-dialog .pdex-msg.pdex-ok{color:#2ecf9c}";
     document.head.appendChild(s);
   }
 
@@ -260,22 +260,22 @@
         "<p>" +
         (state === "syncing" ? "Syncing..." : state === "error" ? "Last sync failed. It will retry on your next change." : "Your progress is synced on every device you sign in on.") +
         "</p>" +
-        "<div class='msg ok' data-msg>" +
+        "<div class='pdex-msg pdex-ok' data-msg>" +
         esc(message) +
         "</div>" +
-        "<div class='row'><button type='button' class='primary' data-act='sync'>Sync now</button><button type='button' data-act='signout'>Sign out</button><button type='button' data-act='close'>Close</button></div>";
+        "<div class='pdex-row'><button type='button' class='pdex-primary' data-act='sync'>Sync now</button><button type='button' data-act='signout'>Sign out</button><button type='button' data-act='close'>Close</button></div>";
     } else if (view === "recovery") {
       html =
         "<h2>Choose a new password</h2><input type='password' name='password' placeholder='New password (6+ characters)' minlength='6' required autocomplete='new-password' />" +
-        "<div class='msg' data-msg>" +
+        "<div class='pdex-msg' data-msg>" +
         esc(message) +
-        "</div><div class='row'><button class='primary' type='submit'>Save password</button></div>";
+        "</div><div class='pdex-row'><button class='pdex-primary' type='submit'>Save password</button></div>";
     } else if (view === "reset") {
       html =
         "<h2>Reset password</h2><p>We will email you a link to choose a new one.</p><input type='email' name='email' placeholder='Email' required autocomplete='email' />" +
-        "<div class='msg' data-msg>" +
+        "<div class='pdex-msg' data-msg>" +
         esc(message) +
-        "</div><div class='row'><button class='primary' type='submit'>Send link</button><button type='button' data-act='signin'>Back</button></div>";
+        "</div><div class='pdex-row'><button class='pdex-primary' type='submit'>Send link</button><button type='button' data-act='signin'>Back</button></div>";
     } else {
       var up = view === "signup";
       html =
@@ -289,20 +289,20 @@
         "' minlength='6' required autocomplete='" +
         (up ? "new-password" : "current-password") +
         "' />" +
-        "<div class='msg' data-msg>" +
+        "<div class='pdex-msg' data-msg>" +
         esc(message) +
         "</div>" +
-        "<div class='row'><button class='primary' type='submit'" +
+        "<div class='pdex-row'><button class='pdex-primary' type='submit'" +
         (busy ? " disabled" : "") +
         ">" +
         (up ? "Create account" : "Sign in") +
         "</button><button type='button' data-act='close'>Not now</button></div>" +
-        "<div class='row'><button type='button' class='link' data-act='" +
+        "<div class='pdex-row'><button type='button' class='pdex-link' data-act='" +
         (up ? "signin" : "signup") +
         "'>" +
         (up ? "I already have an account" : "Create an account") +
         "</button>" +
-        (up ? "" : "<button type='button' class='link' data-act='reset'>Forgot password?</button>") +
+        (up ? "" : "<button type='button' class='pdex-link' data-act='reset'>Forgot password?</button>") +
         "</div>";
     }
     dialog.innerHTML = "<form>" + html + "</form>";
