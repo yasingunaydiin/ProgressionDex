@@ -12,6 +12,7 @@
   var buttons = [];
   var dialog = null;
   var timers = {};
+  var lastSync = 0;
 
   function get(k) {
     try {
@@ -98,6 +99,7 @@
 
   function syncAll() {
     if (!client || !session) return Promise.resolve([]);
+    lastSync = Date.now();
     setState("syncing");
     return client
       .from("progress")
@@ -263,7 +265,9 @@
         "<div class='pdex-msg pdex-ok' data-msg>" +
         esc(message) +
         "</div>" +
-        "<div class='pdex-row'><button type='button' class='pdex-primary' data-act='sync'>Sync now</button><button type='button' data-act='signout'>Sign out</button><button type='button' data-act='close'>Close</button></div>";
+        "<div class='pdex-row'>" +
+        (state === "error" ? "<button type='button' class='pdex-primary' data-act='sync'>Try again</button>" : "") +
+        "<button type='button' data-act='signout'>Sign out</button><button type='button' data-act='close'>Close</button></div>";
     } else if (view === "recovery") {
       html =
         "<h2>Choose a new password</h2><input type='password' name='password' placeholder='New password (6+ characters)' minlength='6' required autocomplete='new-password' />" +
@@ -412,6 +416,14 @@
     };
     document.head.appendChild(s);
   }
+
+  // pick up changes made on another device when this tab comes back or the connection returns
+  document.addEventListener("visibilitychange", function () {
+    if (!document.hidden && session && Date.now() - lastSync > 30000) syncAll();
+  });
+  window.addEventListener("online", function () {
+    if (session) syncAll();
+  });
 
   window.pdexAuth = { enabled: enabled, button: button };
   window.pdexSync = { changed: changed, syncAll: syncAll };
