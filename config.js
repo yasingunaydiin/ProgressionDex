@@ -3,6 +3,6 @@
 // supabaseAnonKey takes the project's "publishable" key (sb_publishable_...) or the older "anon" key. Never use the secret key here.
 // It is meant to be public; access is restricted by the row level security in supabase/schema.sql.
 window.PDEX_CONFIG = {
-  supabaseUrl: "",
-  supabaseAnonKey: "",
+  supabaseUrl: "https://cdsvdkpqcfsjrjmnrwrr.supabase.co",
+  supabaseAnonKey: "sb_publishable_s87_APJerYq7Cq-RQCvXwg_ptmd4FKW",
 };
