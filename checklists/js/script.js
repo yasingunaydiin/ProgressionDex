@@ -125,10 +125,65 @@
     document.addEventListener("focusout", (e) => target(e) && hide());
     document.addEventListener("click", (e) => {
       const btn = target(e);
-      if (btn) current === btn && balloon.classList.contains("show") && e.detail === 0 ? hide() : show(btn);
-      else hide();
+      hide();
+      if (btn) openDrawer(btn);
     });
     window.addEventListener("scroll", hide, { passive: true });
+  }
+
+  // ---------- side panel with the full info (opens when an info button is clicked) ----------
+  let drawer = null;
+  let drawerOpener = null;
+
+  function searchLinks(name) {
+    const q = encodeURIComponent(name);
+    return [
+      ["Bulbapedia", `https://bulbapedia.bulbagarden.net/w/index.php?search=${q}`],
+      ["Serebii", `https://www.google.com/search?q=${q}+site%3Aserebii.net`],
+    ];
+  }
+
+  function openDrawer(btn) {
+    const item = btn.closest(".checkbox-item");
+    if (!item) return;
+    const label = item.querySelector(":scope > label[for]") || item.querySelector(".title label");
+    const name = (label ? label.textContent : "").replace(/\s+/g, " ").trim();
+    // use only the name for lookups: drop leading verbs such as "Catch" or "Obtain"
+    const query = name.replace(/^(Catch|Obtain|Get|Trade|Complete|Defeat|Find|Collect)\s+(all\s+)?(the\s+)?/i, "") || name;
+    const img = item.querySelector(':scope > img[src*="/icons/"], :scope > label img');
+    const sections = [...item.querySelectorAll(".info-btn")].map((b) => ({ kind: b.classList.contains("loc") ? "Where to find it" : "More info", text: b.dataset.tip }));
+
+    if (!drawer) {
+      drawer = document.createElement("aside");
+      drawer.className = "pdex-drawer";
+      drawer.setAttribute("role", "dialog");
+      drawer.setAttribute("aria-label", "Details");
+      drawer.innerHTML = '<div class="pdex-drawer-bar"><span>Details</span><button type="button" class="pdex-drawer-close" aria-label="Close details">&times;</button></div><div class="pdex-drawer-body"></div>';
+      document.body.append(drawer);
+      drawer.querySelector(".pdex-drawer-close").addEventListener("click", closeDrawer);
+      document.addEventListener("keydown", (e) => e.key === "Escape" && drawer.classList.contains("open") && closeDrawer());
+      document.addEventListener("click", (e) => {
+        if (drawer.classList.contains("open") && !e.target.closest(".pdex-drawer, .info-btn")) closeDrawer();
+      });
+    }
+
+    const esc = (t) => String(t).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
+    drawer.querySelector(".pdex-drawer-body").innerHTML =
+      (img ? `<img class="pdex-drawer-img" alt="" src="${esc(img.getAttribute("src"))}" />` : "") +
+      `<h2>${esc(name)}</h2>` +
+      sections.map((x) => `<h3>${x.kind}</h3><p>${esc(x.text)}</p>`).join("") +
+      `<h3>Look it up</h3><div class="pdex-drawer-links">${searchLinks(query)
+        .map(([n, u]) => `<a href="${esc(u)}" target="_blank" rel="noopener noreferrer">${n} &#8599;</a>`)
+        .join("")}</div>`;
+    drawerOpener = btn;
+    drawer.classList.add("open");
+    document.body.classList.add("drawer-open");
+    drawer.querySelector(".pdex-drawer-close").focus({ preventScroll: true });
+  }
+
+  function closeDrawer() {
+    drawer.classList.remove("open");
+    document.body.classList.remove("drawer-open");
   }
 
   onReady(() => {

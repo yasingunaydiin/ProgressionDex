@@ -884,3 +884,120 @@ footer ul {
   border-radius: 8px;
   object-fit: contain;
 }
+
+/* ---------- details side panel ---------- */
+.pdex-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3000;
+  width: min(380px, 100%);
+  display: flex;
+  flex-direction: column;
+  background: var(--card);
+  color: var(--text);
+  border-left: 1px solid var(--line-strong);
+  box-shadow: -16px 0 40px rgba(0, 0, 0, 0.25);
+  transform: translateX(105%);
+  transition: transform 0.22s ease;
+  visibility: hidden;
+}
+
+.pdex-drawer.open {
+  transform: none;
+  visibility: visible;
+}
+
+.pdex-drawer-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.pdex-drawer-close {
+  appearance: none;
+  width: 34px;
+  height: 34px;
+  border: 1px solid var(--line-strong);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--text);
+  font-size: 1.3rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.pdex-drawer-close:hover {
+  border-color: var(--accent);
+}
+
+.pdex-drawer-body {
+  padding: 20px 18px 28px;
+  overflow-y: auto;
+}
+
+.pdex-drawer-img {
+  display: block;
+  width: 96px;
+  height: 96px;
+  margin: 0 0 12px;
+  object-fit: contain;
+}
+
+.pdex-drawer h2 {
+  margin: 0 0 14px;
+  font-size: 1.35rem;
+  line-height: 1.2;
+}
+
+.pdex-drawer h3 {
+  margin: 18px 0 6px;
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding-left: 8px;
+  border-left: 3px solid var(--accent);
+}
+
+.pdex-drawer p {
+  margin: 0;
+  line-height: 1.55;
+  white-space: pre-line;
+}
+
+.pdex-drawer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pdex-drawer-links a {
+  padding: 7px 14px;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  color: var(--text);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.pdex-drawer-links a:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pdex-drawer {
+    transition: none;
+  }
+}
